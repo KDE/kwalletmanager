@@ -46,12 +46,12 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
         _shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
-	_tray->setPixmap(KSystemTray::loadIcon("wallet_closed"));
+	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 	connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 		if (KWallet::Wallet::isOpen(*it)) {
-			_tray->setPixmap(KSystemTray::loadIcon("wallet_open"));
+			_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
 			break;
 		}
 	}
@@ -113,7 +113,7 @@ bool KWalletManager::queryClose() {
 }
 
 void KWalletManager::aWalletWasOpened() {
-	_tray->setPixmap(KSystemTray::loadIcon("wallet_open"));
+	_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
 	updateWalletDisplay();
 }
 
@@ -208,7 +208,7 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
-	_tray->setPixmap(KSystemTray::loadIcon("wallet_closed"));
+	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 	possiblyQuit();
 }
 
@@ -276,5 +276,18 @@ void KWalletManager::shuttingDown() {
 void KWalletManager::setupWallet() {
 	KApplication::startServiceByDesktopName("kwallet_config");
 }
+
+QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon)
+{
+#if KDE_IS_VERSION(3, 1, 90)
+	return KSystemTray::loadIcon(icon);
+#else
+	KConfig *appCfg = kapp->config();
+	KConfigGroupSaver configSaver(appCfg, "System Tray");
+	int iconWidth = appCfg->readNumEntry("systrayIconWidth", 22);
+	return kapp->iconLoader()->loadIcon( icon, KIcon::Panel, iconWidth );
+#endif
+}
+
 
 #include "kwalletmanager.moc"

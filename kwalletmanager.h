@@ -38,6 +38,8 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		KWalletManager(QWidget *parent = 0, const char* name = 0, WFlags f = 0);
 		virtual ~KWalletManager();
 
+                QPixmap loadSystemTrayIcon(const QString &icon);
+
 	public slots:
 		void createWallet();
 		void deleteWallet(const QString& walletName);
