@@ -55,6 +55,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_closeIdle, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_openPrompt, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_screensaverLock, SIGNAL(clicked()), this, SLOT(configChanged()));
+	connect(_wcw->_localWalletSelected, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_idleTime, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
 	connect(_wcw->_launch, SIGNAL(clicked()), this, SLOT(launchManager()));
 	connect(_wcw->_newWallet, SIGNAL(clicked()), this, SLOT(newNetworkWallet()));
