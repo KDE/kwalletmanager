@@ -38,6 +38,7 @@
 #include <ksystemtray.h>
 #include <kwallet.h>
 #include <kkeydialog.h>
+#include <qguardedptr.h>
 
 #include <qptrstack.h>
 #include <qregexp.h>
@@ -160,14 +161,14 @@ QPtrStack<QIconViewItem> trash;
 
 void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 	if (item) {
-		m_pPopupMenu = new KWalletPopup(item->text(), this);
-		connect(m_pPopupMenu, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
-		connect(m_pPopupMenu, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
-		connect(m_pPopupMenu, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
-		connect(m_pPopupMenu, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
-		connect(m_pPopupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
-		m_pPopupMenu->exec(pos);
-                delete m_pPopupMenu;
+		QGuardedPtr<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
+		connect(popupMenu, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
+		connect(popupMenu, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
+		connect(popupMenu, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
+		connect(popupMenu, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
+		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
+		popupMenu->exec(pos);
+                delete popupMenu;
 	}
 }
 

@@ -23,8 +23,6 @@
 #include <kmainwindow.h>
 #include <dcopobject.h>
 #include <qptrlist.h>
-#include <qguardedptr.h>
-#include <kwalletpopup.h>
 
 class KSystemTray;
 class KWalletIconView;
@@ -77,7 +75,6 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		KWalletIconView *_iconView;
 		DCOPRef *_dcopRef;
 		QPtrList<KMainWindow> _windows;
-    QGuardedPtr<KWalletPopup> m_pPopupMenu;
 };
 
 #endif
