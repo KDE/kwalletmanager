@@ -41,6 +41,10 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 			SLOT(openWallet()), ac, "wallet_open");
 	act->plug(this);
 
+	act = new KAction(i18n("Change &Password..."), 0, 0, this,
+			SLOT(changeWalletPassword()), ac, "wallet_password");
+	act->plug(this);
+
 	act = new KAction(i18n("&Close"), 0, 0, this,
 			SLOT(closeWallet()), ac, "wallet_close");
 	// FIXME: let's track this inside the manager so we don't need a dcop
@@ -70,6 +74,11 @@ void KWalletPopup::deleteWallet() {
 
 void KWalletPopup::closeWallet() {
 	emit walletClosed(_walletName);
+}
+
+
+void KWalletPopup::changeWalletPassword() {
+	emit walletChangePassword(_walletName);
 }
 
 

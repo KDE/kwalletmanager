@@ -35,12 +35,14 @@ class KWalletPopup : public KPopupMenu {
 		void deleteWallet();
 		void closeWallet();
 		void createWallet();
+		void changeWalletPassword();
 
 	signals:
 		void walletOpened(const QString& walletName);
 		void walletClosed(const QString& walletName);
 		void walletDeleted(const QString& walletName);
 		void walletCreated();
+		void walletChangePassword(const QString& walletName);
 
 	private:
 		QString _walletName;

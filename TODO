@@ -2,11 +2,16 @@ Things left:
 
 Client:
 - Wallet icons
+- ability to list usage of wallets?
+- Map editor is still buggy
 
 Backend:
-- Fix encryption
 - Possibly provide metadata (wallet comment, statistics, etc)
-- Move KWallet::Entry to the backend library?
+- allow unpassworded wallet?
+- test compatibility:
+	- 32 bit, 64 bit, zSeries
+	- big endian, little endian
+- fix blocking issues
 
 Integration:
 - KHTML
@@ -20,6 +25,8 @@ Future ideas:
 - Configuration panel
 	-> "Don't prompt when apps try to access an open wallet"
 	-> "Don't launch wallet manager on wallet open"
+	-> Leave wallet open when all apps are done with it
+	-> Don't close kwalletmanager when all wallets are closed
 	-> Crypto algorithm to use
 	-> Random source
 - File association of kwallet type to kwalletmanager

@@ -64,6 +64,8 @@ class KWalletEditor : public KMainWindow {
 		void restoreEntry();
 		void saveEntry();
 
+		void changePassword();
+
 		void mapEntryChanged(int id);
 		void newMapEntry();
 		void deleteMapEntry();
@@ -82,6 +84,7 @@ class KWalletEditor : public KMainWindow {
 		KWalletFolderIconView *_folderView;
 		KWalletEntryList *_entryList;
 		KAction *_newFolderAction, *_deleteFolderAction;
+		KAction *_passwordAction;
 		KHTMLPart *_details;
 		QStringList _entries;
 		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;

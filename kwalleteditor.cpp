@@ -171,6 +171,10 @@ void KWalletEditor::createActions() {
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_deleteFolderAction, SLOT(setEnabled(bool)));
 
+	_passwordAction = new KAction(i18n("Change &Password..."), 0, 0, this,
+			SLOT(changePassword()), actionCollection(),
+			"change_password");
+
 	KStdAction::close(this, SLOT(close()), actionCollection());
 
 	emit enableFolderActions(_w != 0L);
@@ -652,6 +656,10 @@ void KWalletEditor::mapEntryChanged(int id) {
 	_ww->_mapEntry->setCurrentItem(id);
 }
 
+
+void KWalletEditor::changePassword() {
+	KWallet::Wallet::changePassword(_walletName);
+}
 
 #include "kwalleteditor.moc"
 

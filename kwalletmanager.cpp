@@ -136,6 +136,7 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 		connect(p, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
 		connect(p, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
 		connect(p, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
+		connect(p, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
 		connect(p, SIGNAL(walletCreated()), this, SLOT(createWallet()));
 		p->popup(pos);
 	}
@@ -164,6 +165,11 @@ void KWalletManager::closeWallet(const QString& walletName) {
 	}
 
 	updateWalletDisplay();
+}
+
+
+void KWalletManager::changeWalletPassword(const QString& walletName) {
+	KWallet::Wallet::changePassword(walletName);
 }
 
 
