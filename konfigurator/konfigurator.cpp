@@ -221,7 +221,7 @@ void KWalletConfig::save() {
 		config.deleteEntry("Local Wallet");
 	}
 
-	if (_wcw->_defaultWallet->currentItem() != 0) {
+	if (_wcw->_defaultWallet->currentItem() != -1) {
 		config.writeEntry("Default Wallet", _wcw->_defaultWallet->currentText());
 	} else {
 		config.deleteEntry("Default Wallet");
