@@ -358,18 +358,18 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 
 
 void KWalletEditor::updateDetails() {
-	static const QString page = "<html><body>"
-			"<span style=\"text-align: center\">Folder: <b>%1</b>"
+	static const QString page = i18n("<html><body>"
+			"<span style=\"text-align: center\"><font size=\"+2\">Folder:</font> <b>%1</b>"
 			"</span><br/>"
 			"<ul>"
-			"<li>Contains %2 items.</li>"
+			"<li>%2</li>"
 			"</ul>"
-			"<br/>FIXME</body></html>";
+			"<br/></body></html>");
 
 	_details->begin();
 	_details->write(page
 			.arg(_ww->_folderView->currentItem()->text())
-			.arg(_entries.count()));
+			.arg(i18n("Contains one item.", "Contains %n items." ,_entries.count())));
 	_details->end();
 }
 
