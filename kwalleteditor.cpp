@@ -586,8 +586,11 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 void KWalletEditor::deleteEntry() {
 QListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
-		_w->removeEntry(item->text(0));
-		delete item;
+		int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)));
+		if (rc == KMessageBox::Yes) {
+			_w->removeEntry(item->text(0));
+			delete item;
+		}
 	}
 }
 

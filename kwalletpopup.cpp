@@ -25,7 +25,7 @@
 #include <kaction.h>
 #include <kdebug.h>
 #include <klocale.h>
-
+#include <kmessagebox.h>
 
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
 : KPopupMenu(parent, name), _walletName(wallet) {
@@ -68,7 +68,10 @@ void KWalletPopup::openWallet() {
 
 
 void KWalletPopup::deleteWallet() {
-	emit walletDeleted(_walletName);
+	int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(_walletName));
+	if (rc == KMessageBox::Yes) {
+		emit walletDeleted(_walletName);
+	}
 }
 
 
