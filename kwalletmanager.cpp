@@ -31,7 +31,7 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <kiconview.h>
-#include <klineeditdlg.h>
+#include <kinputdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstdaction.h>
@@ -45,7 +45,7 @@
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
-        _shuttingDown = false;
+	_shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
 	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 	connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
@@ -248,16 +248,17 @@ void KWalletManager::possiblyRescan(const QCString& app) {
 
 void KWalletManager::createWallet() {
 	QString n;
+	bool ok;
 	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
 
 	do {
-		n = KLineEditDlg::getText(i18n("New Wallet"),
+		n = KInputDialog::getText(i18n("New Wallet"),
 				i18n("Please choose a name for the new wallet:"),
 				QString::null,
-				0L,
+				&ok,
 				this);
 
-		if (n.isEmpty()) {
+		if (!ok) {
 			return;
 		}
 

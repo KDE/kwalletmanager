@@ -42,7 +42,7 @@ static KCmdLineOptions options[] = {
 	KCmdLineLastOption
 };
 
-KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
+KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.0",
 		I18N_NOOP("KDE Wallet Management Tool"),
 		KAboutData::License_GPL,
 		I18N_NOOP("(c) 2003 George Staikos"), 0,

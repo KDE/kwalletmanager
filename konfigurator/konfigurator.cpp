@@ -26,9 +26,10 @@
 #include <kconfig.h>
 #include <kdialog.h>
 #include <kgenericfactory.h>
-#include <klineeditdlg.h>
+#include <kinputdialog.h>
 #include <kpopupmenu.h>
 #include <kwallet.h>
+
 #include <qcheckbox.h>
 #include <qcombobox.h>
 #include <qlayout.h>
@@ -44,7 +45,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 
 	_cfg = new KConfig("kwalletrc", false, false);
 
-	QVBoxLayout *vbox = new QVBoxLayout(this, KDialog::marginHint(), KDialog::spacingHint());
+	QVBoxLayout *vbox = new QVBoxLayout(this, 0, KDialog::spacingHint());
 	vbox->add(_wcw = new WalletConfigWidget(this));
 
 	connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
@@ -98,13 +99,15 @@ void KWalletConfig::updateWalletLists() {
 
 
 QString KWalletConfig::newWallet() {
-	QString n = KLineEditDlg::getText(i18n("New Wallet"),
+	bool ok;
+
+	QString n = KInputDialog::getText(i18n("New Wallet"),
 			i18n("Please choose a name for the new wallet:"),
 			QString::null,
-			0L,
+			&ok,
 			this);
 
-	if (n.isEmpty()) {
+	if (!ok) {
 		return QString::null;
 	}
 
