@@ -662,10 +662,10 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 
 
 void KWalletEditor::exportXML() {
-KTempFile tf;
-tf.setAutoDelete(true);
-QTextStream& ts(*tf.textStream());
-QStringList fl = _w->folderList();
+	KTempFile tf;
+	tf.setAutoDelete(true);
+	QTextStream& ts(*tf.textStream());
+	QStringList fl = _w->folderList();
 
 	ts << "<wallet name=\"" << _walletName << "\">" << endl;
 	for (QStringList::Iterator i = fl.begin(); i != fl.end(); ++i) {
@@ -721,7 +721,11 @@ QStringList fl = _w->folderList();
 	KURL url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
 
 	if (!url.isEmpty()) {
-		KIO::NetAccess::upload(tf.name(), url, this);
+		if (!url.isLocalFile()) {
+			KIO::NetAccess::upload(tf.name(), url, this);
+		} else {
+			KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
+		}
 	}
 }
 
