@@ -399,7 +399,7 @@ void KWalletIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>
 	}
 
 	// FIXME: verify that it is a real wallet file first
-	KIO::NetAccess::file_copy(u, dest);
+	KIO::NetAccess::file_copy(u, KURL::fromPathOrURL(dest));
 	e->accept();
 }
 
