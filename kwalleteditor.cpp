@@ -18,6 +18,7 @@
 */
 
 
+#include "kbetterthankdialogbase.h"
 #include "kwalleteditor.h"
 #include "kwmapeditor.h"
 #include "allyourbase.h"
@@ -49,6 +50,7 @@
 #include <qlistview.h>
 #include <qptrstack.h>
 #include <qpushbutton.h>
+#include <qstylesheet.h>
 #include <qtextedit.h>
 #include <qwidgetstack.h>
 
@@ -717,6 +719,8 @@ void KWalletEditor::importXML() {
 	}
 
 	QDomNode n = top.firstChild();
+	enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
+	MergePlan mp = Prompt;
 	while (!n.isNull()) {
 		QDomElement e = n.toElement();
 		if (e.tagName().lower() != "folder") {
@@ -738,11 +742,29 @@ void KWalletEditor::importXML() {
 			e = enode.toElement();
 			QString type = e.tagName().lower();
 			QString ename = e.attribute("name");
-			if (_w->hasEntry(ename)) {
-				// FIXME: do conflict resolution
+			bool hasEntry = _w->hasEntry(ename);
+			if (hasEntry && mp == Prompt) {
+				KBetterThanKDialogBase *bd;
+				bd = new KBetterThanKDialogBase(this);
+				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(fname)).arg(QStyleSheet::escape(ename)));
+				mp = (MergePlan)bd->exec();
+				delete bd;
+				bool ok = false;
+				if (mp == Always || mp == Yes) {
+					ok = true;
+				}
+				if (mp == Yes || mp == No) { // reset mp
+					mp = Prompt;
+				}
+				if (!ok) {
+					enode = enode.nextSibling();
+					continue;
+				}
+			} else if (hasEntry && mp == Never) {
 				enode = enode.nextSibling();
 				continue;
 			}
+
 			if (type == "password") {
 				_w->writePassword(ename, e.text());
 			} else if (type == "stream") {

@@ -5,7 +5,8 @@ SUBDIRS=. icons konfigurator
 bin_PROGRAMS = kwalletmanager
 kwalletmanager_SOURCES = walletwidget.ui kwalletmanager.cpp \
 			kwalletmanager.skel main.cpp kwalletpopup.cpp \
-			kwalleteditor.cpp kwmapeditor.cpp allyourbase.cpp
+			kwalleteditor.cpp kwmapeditor.cpp allyourbase.cpp \
+			kbetterthankdialogbase.ui
 kwalletmanager_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kwalletmanager_LDADD   = $(LIB_KIO) -lkwalletclient
 METASOURCES = AUTO
@@ -21,3 +22,5 @@ rcdir = $(kde_datadir)/kwalletmanager
 
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/kwalletmanager.pot
+
+kbetterthankdialogbase.lo: kbetterthankdialogbase.ui kbetterthankdialogbase.ui.h
