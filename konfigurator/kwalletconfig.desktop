@@ -26,4 +26,4 @@ Keywords[hu]=digitális notesz,űrlapkitöltés,jelszavak,űrlapadatok
 Keywords[ru]=Wallet,Form Fill,Passwords,Form Data,Бумажник,Пароли,Формы
 Keywords[sv]=Plånbok,fyll i formulär,lösenord,formulärdata
 
-Categories=Qt;KDE;Settings;X-KDE-settings-security
+Categories=Qt;KDE;X-KDE-settings-security
