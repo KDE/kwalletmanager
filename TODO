@@ -9,6 +9,7 @@ Backend:
 - allow unpassworded wallet?
 - test 64 bit, zSeries
 - fix blocking issues
+- investigate timestamping
 
 Integration:
 - KHTML
