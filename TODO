@@ -10,16 +10,16 @@ Backend:
 - import testcases
 - races in kwalletd
 - refactor the hashes to make it efficient
+- first launch wizard
+- write non-zero byte file to disk if it doesn't exist already
 
 Integration:
 - Cookie jar
-- KHTML
 - KIO
 - KMail
 
 Configuration:
 	-> Implement idle timers
-	-> Implement wallet name settings
 	-> Ability to configure the accept list for applications
 
 Future ideas:

@@ -8,26 +8,18 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>669</width>
-            <height>417</height>
+            <width>695</width>
+            <height>518</height>
         </rect>
+    </property>
+    <property name="caption">
+        <string>WalletConfigWidget</string>
     </property>
     <grid>
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <widget class="QCheckBox" row="0" column="0">
-            <property name="name">
-                <cstring>_enabled</cstring>
-            </property>
-            <property name="text">
-                <string>Enable the KDE wallet subsystem</string>
-            </property>
-            <property name="checked">
-                <bool>true</bool>
-            </property>
-        </widget>
-        <widget class="QLayoutWidget" row="3" column="0">
+        <widget class="QLayoutWidget" row="1" column="0">
             <property name="name">
                 <cstring>layout5</cstring>
             </property>
@@ -57,261 +49,344 @@
                         <cstring>_launch</cstring>
                     </property>
                     <property name="text">
-                        <string>Launch Wallet Manager</string>
+                        <string>&amp;Launch Wallet Manager</string>
                     </property>
                 </widget>
             </hbox>
         </widget>
-        <spacer row="2" column="0">
+        <widget class="QTabWidget" row="0" column="0">
             <property name="name">
-                <cstring>spacer1</cstring>
+                <cstring>tabWidget2</cstring>
             </property>
-            <property name="orientation">
-                <enum>Vertical</enum>
-            </property>
-            <property name="sizeType">
-                <enum>Expanding</enum>
-            </property>
-            <property name="sizeHint">
-                <size>
-                    <width>31</width>
-                    <height>16</height>
-                </size>
-            </property>
-        </spacer>
-        <widget class="QGroupBox" row="1" column="0">
-            <property name="name">
-                <cstring>groupBox1</cstring>
-            </property>
-            <property name="title">
-                <string></string>
-            </property>
-            <grid>
+            <widget class="QWidget">
                 <property name="name">
-                    <cstring>unnamed</cstring>
+                    <cstring>tab</cstring>
                 </property>
-                <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                <attribute name="title">
+                    <string>Wallet Preferences</string>
+                </attribute>
+                <grid>
                     <property name="name">
-                        <cstring>_launchManager</cstring>
+                        <cstring>unnamed</cstring>
                     </property>
-                    <property name="text">
-                        <string>Launch wallet manager when a wallet is opened</string>
-                    </property>
-                    <property name="checked">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="3" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>_leaveManagerOpen</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Leave wallet manager open after all wallets are closed</string>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>_leaveOpen</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Leave wallets open when all applications are done with them</string>
-                    </property>
-                </widget>
-                <widget class="QLayoutWidget" row="1" column="1">
-                    <property name="name">
-                        <cstring>layout1</cstring>
-                    </property>
-                    <hbox>
+                    <widget class="QCheckBox" row="0" column="0">
                         <property name="name">
-                            <cstring>unnamed</cstring>
+                            <cstring>_enabled</cstring>
                         </property>
-                        <widget class="QLabel">
-                            <property name="name">
-                                <cstring>textLabel1</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>5</hsizetype>
-                                    <vsizetype>5</vsizetype>
-                                    <horstretch>1</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="text">
-                                <string>Idle timeout:</string>
-                            </property>
-                            <property name="buddy" stdset="0">
-                                <cstring>_idleTime</cstring>
-                            </property>
-                        </widget>
-                        <widget class="QSpinBox">
-                            <property name="name">
-                                <cstring>_idleTime</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>1</hsizetype>
-                                    <vsizetype>0</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="suffix">
-                                <string>min</string>
-                            </property>
-                            <property name="maxValue">
-                                <number>999</number>
-                            </property>
-                            <property name="minValue">
-                                <number>1</number>
-                            </property>
-                            <property name="lineStep">
-                                <number>5</number>
-                            </property>
-                            <property name="value">
-                                <number>10</number>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QCheckBox" row="1" column="0">
-                    <property name="name">
-                        <cstring>_closeIdle</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>2</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="text">
-                        <string>Automatically close idle wallets</string>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>_storeTogether</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Store local and network passwords in the same wallet.</string>
-                    </property>
-                    <property name="checked">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="QLayoutWidget" row="6" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>layout7</cstring>
-                    </property>
-                    <hbox>
+                        <property name="text">
+                            <string>&amp;Enable the KDE wallet subsystem</string>
+                        </property>
+                        <property name="checked">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <widget class="QGroupBox" row="1" column="0">
                         <property name="name">
-                            <cstring>unnamed</cstring>
+                            <cstring>groupBox1</cstring>
                         </property>
-                        <widget class="QLabel">
+                        <property name="title">
+                            <string></string>
+                        </property>
+                        <grid>
                             <property name="name">
-                                <cstring>textLabel1_2</cstring>
+                                <cstring>unnamed</cstring>
                             </property>
-                            <property name="text">
-                                <string>Default wallet:</string>
-                            </property>
-                            <property name="buddy" stdset="0">
-                                <cstring>_defaultWallet</cstring>
-                            </property>
-                        </widget>
-                        <widget class="QComboBox">
-                            <property name="name">
-                                <cstring>_defaultWallet</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>1</hsizetype>
-                                    <vsizetype>0</vsizetype>
-                                    <horstretch>1</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                        </widget>
-                        <widget class="QPushButton">
-                            <property name="name">
-                                <cstring>_newWallet</cstring>
-                            </property>
-                            <property name="text">
-                                <string></string>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QLayoutWidget" row="8" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>layout8</cstring>
-                    </property>
-                    <hbox>
+                            <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>_launchManager</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Launch wallet manager when a wallet is opened</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="3" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>_leaveManagerOpen</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Leave wallet manager open after all wallets are closed</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>_leaveOpen</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Leave wallets open when all applications are done with them</string>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget" row="1" column="1">
+                                <property name="name">
+                                    <cstring>layout1</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>textLabel1</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>5</hsizetype>
+                                                <vsizetype>5</vsizetype>
+                                                <horstretch>1</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>Idle timeout:</string>
+                                        </property>
+                                        <property name="buddy" stdset="0">
+                                            <cstring>_idleTime</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QSpinBox">
+                                        <property name="name">
+                                            <cstring>_idleTime</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="suffix">
+                                            <string>min</string>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>999</number>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>1</number>
+                                        </property>
+                                        <property name="lineStep">
+                                            <number>5</number>
+                                        </property>
+                                        <property name="value">
+                                            <number>10</number>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QCheckBox" row="1" column="0">
+                                <property name="name">
+                                    <cstring>_closeIdle</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>1</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>2</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Automatically close idle wallets</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>_storeTogether</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Store local and network passwords in the same wallet</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget" row="4" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>layout7</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>_defaultWalletSelected</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Alternate default wallet:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QComboBox">
+                                        <property name="name">
+                                            <cstring>_defaultWallet</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>1</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>_newWallet</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="text">
+                                            <string></string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QLayoutWidget" row="6" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>layout8</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>_localWalletSelected</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="text">
+                                            <string>Alternate wallet for local passwords:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QComboBox">
+                                        <property name="name">
+                                            <cstring>_localWallet</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>1</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>_newLocalWallet</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="text">
+                                            <string></string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer row="2" column="0">
                         <property name="name">
-                            <cstring>unnamed</cstring>
+                            <cstring>spacer4</cstring>
                         </property>
-                        <widget class="QLabel">
-                            <property name="name">
-                                <cstring>textLabel2_2</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="text">
-                                <string>Wallet for local passwords:</string>
-                            </property>
-                            <property name="buddy" stdset="0">
-                                <cstring>_localWallet</cstring>
-                            </property>
-                        </widget>
-                        <widget class="QComboBox">
-                            <property name="name">
-                                <cstring>_localWallet</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>1</hsizetype>
-                                    <vsizetype>0</vsizetype>
-                                    <horstretch>1</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                        </widget>
-                        <widget class="QPushButton">
-                            <property name="name">
-                                <cstring>_newLocalWallet</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="text">
-                                <string></string>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>31</width>
+                                <height>81</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Access Control</string>
+                </attribute>
+                <grid>
                     <property name="name">
-                        <cstring>_openPrompt</cstring>
+                        <cstring>unnamed</cstring>
                     </property>
-                    <property name="text">
-                        <string>Prompt when an application accesses an open wallet</string>
-                    </property>
-                    <property name="checked">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-            </grid>
+                    <widget class="QCheckBox" row="0" column="0">
+                        <property name="name">
+                            <cstring>_openPrompt</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Prompt when an application accesses an open wallet</string>
+                        </property>
+                        <property name="checked">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <widget class="QListView" row="1" column="0">
+                        <column>
+                            <property name="text">
+                                <string>Wallet</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Application</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Policy</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <property name="name">
+                            <cstring>_accessList</cstring>
+                        </property>
+                        <property name="rootIsDecorated">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
         </widget>
     </grid>
 </widget>
@@ -337,20 +412,32 @@
     <connection>
         <sender>_storeTogether</sender>
         <signal>toggled(bool)</signal>
-        <receiver>_localWallet</receiver>
+        <receiver>_localWalletSelected</receiver>
         <slot>setDisabled(bool)</slot>
     </connection>
     <connection>
-        <sender>_storeTogether</sender>
+        <sender>_defaultWalletSelected</sender>
         <signal>toggled(bool)</signal>
-        <receiver>textLabel2_2</receiver>
-        <slot>setDisabled(bool)</slot>
+        <receiver>_defaultWallet</receiver>
+        <slot>setEnabled(bool)</slot>
     </connection>
     <connection>
-        <sender>_storeTogether</sender>
+        <sender>_defaultWalletSelected</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>_newWallet</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>_localWalletSelected</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>_localWallet</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>_localWalletSelected</sender>
         <signal>toggled(bool)</signal>
         <receiver>_newLocalWallet</receiver>
-        <slot>setDisabled(bool)</slot>
+        <slot>setEnabled(bool)</slot>
     </connection>
 </connections>
 <tabstops>
@@ -367,5 +454,8 @@
     <tabstop>_newLocalWallet</tabstop>
     <tabstop>_launch</tabstop>
 </tabstops>
+<slots>
+    <slot>_storeTogether_toggled(bool)</slot>
+</slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

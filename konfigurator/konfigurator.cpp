@@ -31,6 +31,7 @@
 #include <qcheckbox.h>
 #include <qcombobox.h>
 #include <qlayout.h>
+#include <qlistview.h>
 #include <qpushbutton.h>
 #include <qspinbox.h>
 
@@ -58,6 +59,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
+	connect(_wcw->_storeTogether, SIGNAL(toggled(bool)), this, SLOT(fixupUI(bool)));
 
 	updateWalletLists();
 	load();
@@ -161,6 +163,28 @@ void KWalletConfig::load() {
 	_wcw->_closeIdle->setChecked(config.readBoolEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
 	_wcw->_storeTogether->setChecked(config.readBoolEntry("Use One Wallet", true));
+	if (config.hasKey("Default Wallet")) {
+		_wcw->_defaultWalletSelected->setChecked(true);
+		_wcw->_defaultWallet->setCurrentText(config.readEntry("Default Wallet"));
+	} else {
+		_wcw->_defaultWalletSelected->setChecked(false);
+	}
+	if (config.hasKey("Local Wallet")) {
+		_wcw->_localWalletSelected->setChecked(true);
+		_wcw->_localWallet->setCurrentText(config.readEntry("Local Wallet"));
+	} else {
+		_wcw->_localWalletSelected->setChecked(false);
+	}
+	_wcw->_accessList->clear();
+	_cfg->setGroup("Auto Allow");
+	QStringList keys = _cfg->entryMap("Auto Allow").keys();
+	for (QStringList::Iterator i = keys.begin(); i != keys.end(); ++i) {
+		QStringList apps = _cfg->readListEntry(*i);
+		QListViewItem *lvi = new QListViewItem(_wcw->_accessList, *i);
+		for (QStringList::Iterator j = apps.begin(); j != apps.end(); ++j) {
+			new QListViewItem(lvi, QString::null, *j, i18n("Always Allow"));
+		}
+	}
 	emit changed(false);
 }
 
@@ -175,6 +199,17 @@ void KWalletConfig::save() {
 	config.writeEntry("Use One Wallet", _wcw->_storeTogether->isChecked());
 	config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
 	config.writeEntry("Prompt on Open", _wcw->_openPrompt->isChecked());
+
+	if (_wcw->_localWalletSelected->isChecked()) {
+		config.writeEntry("Local Wallet", _wcw->_localWallet->currentText());
+	} else {
+		config.deleteEntry("Local Wallet");
+	}
+	if (_wcw->_defaultWalletSelected->isChecked()) {
+		config.writeEntry("Default Wallet", _wcw->_defaultWallet->currentText());
+	} else {
+		config.deleteEntry("Default Wallet");
+	}
 
 	_cfg->sync();
 	DCOPRef("kded", "kwalletd").call("reconfigure()");
@@ -192,6 +227,8 @@ void KWalletConfig::defaults() {
 	_wcw->_closeIdle->setChecked(false);
 	_wcw->_storeTogether->setChecked(true);
 	_wcw->_idleTime->setValue(10);
+	_wcw->_defaultWalletSelected->setChecked(false);
+	_wcw->_localWalletSelected->setChecked(false);
 	emit changed(true);
 }
 
@@ -211,6 +248,11 @@ KAboutData *about =
 return about;
 }
 
+
+void KWalletConfig::fixupUI(bool en) {
+	_wcw->_localWallet->setEnabled(!en && _wcw->_localWalletSelected->isChecked());
+	_wcw->_newLocalWallet->setEnabled(!en && _wcw->_localWalletSelected->isChecked());
+}
 
 #include "konfigurator.moc"
 

@@ -44,6 +44,7 @@ class KWalletConfig : public KCModule {
 		void newLocalWallet();
 		void newNetworkWallet();
 		void updateWalletLists();
+		void fixupUI(bool);
 		QString newWallet();
 
 	private:
