@@ -19,12 +19,82 @@
 
 #include "allyourbase.h"
 
+#include <kglobal.h>
+#include <kstddirs.h>
+
+#include <qstrlist.h>
+#include <qdragobject.h>
+
+
 KWalletEntryItem::KWalletEntryItem(QListViewItem* parent, const QString& ename)
 : QListViewItem(parent, ename), _oldName(ename) {
 	setRenameEnabled(0, true);
 }
 
 KWalletEntryItem::~KWalletEntryItem() {
+}
+
+
+KWalletItem::KWalletItem(QIconView *parent, const QString& walletName) 
+: QIconViewItem(parent, walletName) {
+}
+
+KWalletItem::~KWalletItem() {
+}
+
+
+
+class KWalletIconDrag : public QUriDrag {
+	public:
+		KWalletIconDrag(const QStringList& urllist, QWidget *dragSource, const char *name = 0L)
+			: QUriDrag(dragSource, name), _urls(urllist) {
+		}
+
+		virtual ~KWalletIconDrag() {}
+
+		virtual const char *format(int i = 0) const {
+			if (i == 0) {
+				return "application/x-qiconlist";
+			} else if (i == 1) {
+				return "text/uri-list";
+			}
+			return 0L;
+		}
+
+		QByteArray encodedData(const char *mime) const {
+			QByteArray a;
+			QCString mimetype(mime);
+			if (mimetype == "application/x-qiconlist") {
+				a = QUriDrag::encodedData(mime);
+			} else if (mimetype == "text/uri-list") {
+				QCString s = _urls.join("\r\n").latin1();
+				if(_urls.count() > 0) {
+					s.append("\r\n");
+				}
+				a.resize(s.length() + 1);
+				memcpy(a.data(), s.data(), s.length() + 1);
+			}
+			return a;
+		}
+
+	private:
+		QStringList _urls;
+};
+
+KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
+: KIconView(parent, name) {
+}
+
+KWalletIconView::~KWalletIconView() {
+}
+
+QDragObject *KWalletIconView::dragObject() {
+	QStringList urls;
+	QString path = "file:" + KGlobal::dirs()->saveLocation("kwallet");
+	for (QIconViewItem *item = firstItem(); item; item = item->nextItem()) {
+		urls.append(path + item->text() + ".kwl");
+	}
+	return new KWalletIconDrag(urls, this, "Kwallet Drag");
 }
 
 

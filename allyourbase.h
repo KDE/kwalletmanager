@@ -21,6 +21,7 @@
 #define ALLYOURBASE_H
 
 #include <qlistview.h>
+#include <kiconview.h>
 
 
 class KWalletEntryItem : public QListViewItem {
@@ -35,6 +36,27 @@ class KWalletEntryItem : public QListViewItem {
 
 	private:
 		QString _oldName;
+};
+
+
+//class KWalletFolderItem : public QIconViewItem {
+//};
+
+
+class KWalletItem : public QIconViewItem {
+	public:
+		KWalletItem(QIconView *parent, const QString& walletName);
+		virtual ~KWalletItem();
+};
+
+
+class KWalletIconView : public KIconView {
+	public:
+		KWalletIconView(QWidget *parent, const char *name = 0L);
+		virtual ~KWalletIconView();
+
+	protected:
+		QDragObject *dragObject();
 };
 
 #endif

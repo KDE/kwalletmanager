@@ -21,13 +21,14 @@
 #include "kwalletmanager.h"
 #include "kwalletpopup.h"
 #include "kwalleteditor.h"
+#include "allyourbase.h"
 
 #include <dcopref.h>
 #include <dcopclient.h>
 #include <kaction.h>
 #include <kapplication.h>
 #include <kiconview.h>
-#include <kinputdialog.h>
+#include <klineeditdlg.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstdaction.h>
@@ -44,7 +45,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_tray = new KSystemTray(this, "kwalletmanager tray");
 	_tray->show();
 
-	_iconView = new KIconView(this, "kwalletmanager icon view");
+	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
 	connect(_iconView, SIGNAL(executed(QIconViewItem*)), this, SLOT(openWallet(QIconViewItem*)));
 	connect(_iconView, SIGNAL(contextMenuRequested(QIconViewItem*, const QPoint&)), this, SLOT(contextMenu(QIconViewItem*, const QPoint&)));
 	updateWalletDisplay();
@@ -103,7 +104,7 @@ QPtrStack<QIconViewItem> trash;
 		if (!_iconView->findItem(*i)) {
 			// FIXME: if KWallet::Wallet::isOpen(*i) then show
 			//        a different icon!
-			new QIconViewItem(_iconView, *i);
+			new KWalletItem(_iconView, *i);
 		} else {
 			// FIXME: See if icon needs to be updated
 		}
@@ -198,7 +199,7 @@ void KWalletManager::createWallet() {
 	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
 
 	do {
-		n = KInputDialog::getText(i18n("New Wallet..."),
+		n = KLineEditDlg::getText(i18n("New Wallet..."),
 				i18n("Please choose a name for the new wallet..."),
 				QString::null,
 				0L,

@@ -26,7 +26,7 @@
 #include <kaction.h>
 #include <kapplication.h>
 #include <kiconview.h>
-#include <kinputdialog.h>
+#include <klineeditdlg.h>
 #include <khtml_part.h>
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -176,7 +176,7 @@ void KWalletEditor::createFolder() {
 		QString n;
 
 		do {
-			n = KInputDialog::getText(i18n("New Folder..."),
+			n = KLineEditDlg::getText(i18n("New Folder..."),
 					i18n("Please choose a name for the new folder..."),
 					QString::null,
 					0L,
@@ -329,7 +329,7 @@ QListViewItem *item = _ww->_entryList->selectedItem();
 QString n;
 
 	do {
-		n = KInputDialog::getText(i18n("New Entry..."),
+		n = KLineEditDlg::getText(i18n("New Entry..."),
 				i18n("Please choose a name for the new entry..."),
 				QString::null,
 				0L,

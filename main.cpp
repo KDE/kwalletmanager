@@ -18,9 +18,11 @@
  */
 
 #include <kaboutdata.h>
-#include <kuniqueapplication.h>
 #include <kcmdlineargs.h>
+#include <kglobal.h>
 #include <klocale.h>
+#include <kstddirs.h>
+#include <kuniqueapplication.h>
 
 #include "kwalletmanager.h"
 
@@ -57,6 +59,8 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 	wm.setCaption(i18n("KDE Wallet Manager"));
 
 	a.setMainWidget(&wm);
+
+	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 
 return a.exec();
 }
