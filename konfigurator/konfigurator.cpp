@@ -38,7 +38,7 @@
 #include <qspinbox.h>
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
-K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"));
+K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
 
 KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringList&)
 : KCModule(KWalletFactory::instance(), parent, name) {
