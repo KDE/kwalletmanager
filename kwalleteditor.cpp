@@ -45,6 +45,7 @@
 
 #include <qcheckbox.h>
 #include <qcombobox.h>
+#include <qclipboard.h>
 #include <qlabel.h>
 #include <qlayout.h>
 #include <qlineedit.h>
@@ -61,6 +62,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 : KMainWindow(parent, name), _walletName(wallet), _nonLocal(isPath) {
 	_newWallet = false;
 	_ww = new WalletWidget(this, "Wallet Widget");
+	_copyPassAction = KStdAction::copy(this, SLOT(copyPassword()), actionCollection());
 	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
 	_details = new QLabel(_ww->_folderDetails, "Folder Details");
         _details->setBackgroundMode(PaletteBase);
@@ -530,10 +532,25 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 		m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Key_Insert);
 		m->insertItem(i18n( "&Rename" ), this, SLOT(renameEntry()), Key_F2);
 		m->insertItem(i18n( "&Delete" ), this, SLOT(deleteEntry()), Key_Delete);
+		if (item->parent() == _passItems) {
+			m->insertSeparator();
+			_copyPassAction->plug(m);
+		}
 		m->popup(pos);
 	} else {
 		m->insertItem(i18n( "&New..." ), this, SLOT(newEntry()), Key_Insert);
 		m->popup(pos);
+	}
+}
+
+
+void KWalletEditor::copyPassword() {
+	QListViewItem *item = _entryList->selectedItem();
+	if (_w && item) {
+		QString pass;
+		if (_w->readPassword(item->text(0), pass) == 0) {
+			QApplication::clipboard()->setText(pass);
+		}
 	}
 }
 
@@ -587,7 +604,7 @@ void KWalletEditor::newEntry() {
 
 
 void KWalletEditor::renameEntry() {
-QListViewItem *item = _entryList->selectedItem();
+	QListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		item->startRename(0);
 	}
@@ -625,7 +642,7 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 
 
 void KWalletEditor::deleteEntry() {
-QListViewItem *item = _entryList->selectedItem();
+	QListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)),"",KStdGuiItem::del());
 		if (rc == KMessageBox::Continue) {
@@ -638,7 +655,7 @@ QListViewItem *item = _entryList->selectedItem();
 
 
 void KWalletEditor::updateEntries(const QString& folder) {
-QIconViewItem *ivi = _folderView->currentItem();
+	QIconViewItem *ivi = _folderView->currentItem();
 
 	if (ivi && ivi->text() == folder) {
 		_entries = _w->entryList();

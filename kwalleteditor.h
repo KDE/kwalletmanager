@@ -79,6 +79,8 @@ class KWalletEditor : public KMainWindow {
 		void importXML();
 		void importWallet();
 
+		void copyPassword();
+
 	signals:
 		void enableFolderActions(bool enable);
 		void enableContextFolderActions(bool enable);
@@ -96,6 +98,7 @@ class KWalletEditor : public KMainWindow {
 		KWalletEntryList *_entryList;
 		KAction *_newFolderAction, *_deleteFolderAction;
 		KAction *_passwordAction, *_exportAction, *_mergeAction, *_importAction;
+		KAction *_copyPassAction;
 		QLabel*_details;
 		QStringList _entries;
 		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;
