@@ -20,13 +20,13 @@
 #ifndef ALLYOURBASE_H
 #define ALLYOURBASE_H
 
-#include <qlistview.h>
 #include <kiconview.h>
-
+#include <klistview.h>
+#include <kwallet.h>
 
 class KWalletEntryItem : public QListViewItem {
 	public:
-		KWalletEntryItem(QListViewItem* parent, const QString& ename);
+		KWalletEntryItem(KWallet::Wallet *w, QListViewItem* parent, const QString& ename);
 		virtual ~KWalletEntryItem();
 
 		const QString& oldName() { return _oldName; }
@@ -36,11 +36,42 @@ class KWalletEntryItem : public QListViewItem {
 
 	private:
 		QString _oldName;
+	public:
+		KWallet::Wallet *_wallet;
+};
+
+inline QDataStream& operator<<(QDataStream& str, const KWalletEntryItem& w) {
+	QString name = w.text(0);
+	str << name;
+	KWallet::Wallet::EntryType et = w._wallet->entryType(name);
+	str << long(et);
+	QByteArray a;
+	w._wallet->readEntry(name, a);
+	str << a;
+	return str;
+}
+
+
+class KWalletEntryList : public KListView {
+	public:
+		KWalletEntryList(QWidget *parent, const char *name = 0L);
+		virtual ~KWalletEntryList();
+
+	protected:
+		QDragObject *dragObject();
 };
 
 
-//class KWalletFolderItem : public QIconViewItem {
-//};
+class KWalletFolderItem : public QIconViewItem {
+	public:
+		KWalletFolderItem(KWallet::Wallet *w, QIconView *parent, const QString& folderName);
+		virtual ~KWalletFolderItem();
+		virtual bool acceptDrop(const QMimeSource *mime) const;
+
+	protected:
+		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
+		KWallet::Wallet *_wallet;
+};
 
 
 class KWalletItem : public QIconViewItem {

@@ -36,7 +36,10 @@ class MyApp : public KUniqueApplication {
 };
 
 int main(int argc, char **argv) {
-static KCmdLineOptions options[] = { { 0, 0, 0 } };
+static KCmdLineOptions options[] = {
+	{"+name", I18N_NOOP("A wallet name."), 0},
+	KCmdLineLastOption
+};
 
 KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 		I18N_NOOP("KDE Wallet Management Tool"),
@@ -45,6 +48,7 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 		"http://www.kde.org/");
 
 	about.addAuthor("George Staikos", "Primary author and maintainer", "staikos@kde.org");
+
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions(options);
 
@@ -53,7 +57,6 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 	}
 
 	MyApp a;
-	//KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
 	KWalletManager wm;
 	wm.setCaption(i18n("KDE Wallet Manager"));
@@ -61,6 +64,11 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 	a.setMainWidget(&wm);
 
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
+
+	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+	for (unsigned i = 0; i < args->count(); ++i) {
+		wm.openWallet(args->arg(i));
+	}
 
 return a.exec();
 }

@@ -1,11 +1,11 @@
 Things left:
 
-- Drag and drop of folders between wallets, and of entries between folders
+- Drag and drop of folders between wallets
+- Add a generic "writeEntryType(name,value,type)" method to make the code
+  more extensible
 - File association of kwallet type to kwalletmanager
-- commandline to immediately open wallet on launch
+	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
 - Wallet icons
 - fix initial sizes, layouts
-- Add a note that binary can't be editted
 - Fix HTML
-- Bug: open a wallet twice, close one window -> closes the wallet
 - Bug: saved maps end up as binary type for some reason

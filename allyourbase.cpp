@@ -21,21 +21,30 @@
 
 #include <kdebug.h>
 #include <kglobal.h>
+#include <klocale.h>
 #include <kstddirs.h>
+#include <kwallet.h>
 
 #include <qstrlist.h>
 #include <qdragobject.h>
 
 
-KWalletEntryItem::KWalletEntryItem(QListViewItem* parent, const QString& ename)
-: QListViewItem(parent, ename), _oldName(ename) {
+/****************
+ *  KWalletEntryItem - ListView items to represent kwallet entries
+ */
+KWalletEntryItem::KWalletEntryItem(KWallet::Wallet *w, QListViewItem* parent, const QString& ename)
+: QListViewItem(parent, ename), _oldName(ename), _wallet(w) {
 	setRenameEnabled(0, true);
+	setDragEnabled(true);
 }
 
 KWalletEntryItem::~KWalletEntryItem() {
 }
 
 
+/****************
+ *  KWalletItem - IconView items to represent wallets
+ */
 KWalletItem::KWalletItem(QIconView *parent, const QString& walletName) 
 : QIconViewItem(parent, walletName) {
 }
@@ -45,6 +54,68 @@ KWalletItem::~KWalletItem() {
 
 
 
+/****************
+ *  KWalletFolderItem - IconView items to represent folders
+ */
+KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QIconView *parent, const QString& folderName) 
+: QIconViewItem(parent, folderName), _wallet(w) {
+}
+
+KWalletFolderItem::~KWalletFolderItem() {
+}
+
+bool KWalletFolderItem::acceptDrop(const QMimeSource *mime) const {
+	return mime->provides("application/x-kwallet-entry");
+}
+
+void KWalletFolderItem::dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
+	Q_UNUSED(lst)
+	if (!e->provides("application/x-kwallet-entry")) {
+		e->ignore();
+		return;
+	}
+
+	QByteArray data = e->encodedData("application/x-kwallet-entry");
+	if (data.isEmpty()) {
+		e->ignore();
+		return;
+	}
+	QString saveFolder = _wallet->currentFolder();
+	_wallet->setFolder(text());
+	QString name;
+	QByteArray value;
+	KWallet::Wallet::EntryType et;
+	QDataStream ds(data, IO_ReadOnly);
+	ds >> name;
+	long l;
+	ds >> l;
+	et = KWallet::Wallet::EntryType(l);
+	ds >> value;
+	if (et == KWallet::Wallet::Map) {
+		QMap<QString,QString> m;
+		if (!value.isEmpty()) {
+			QDataStream ds2(value, IO_ReadOnly);
+			ds2 >> m;
+		}
+		_wallet->writeMap(name, m);
+	} else if (et == KWallet::Wallet::Password) {
+		QString p;
+		if (!value.isEmpty()) {
+			QDataStream ds2(value, IO_ReadOnly);
+			ds2 >> p;
+		}
+		_wallet->writePassword(name, p);
+	} else {
+		_wallet->writeEntry(name, value);
+	}
+
+	_wallet->setFolder(saveFolder);
+	e->accept();
+}
+
+/****************
+ *  KWalletIconDrag - Stores the data for wallet drags
+ */
 class KWalletIconDrag : public QIconDrag {
 	public:
 		KWalletIconDrag(QWidget *dragSource, const char *name = 0L)
@@ -88,6 +159,10 @@ class KWalletIconDrag : public QIconDrag {
 		QStringList _urls;
 };
 
+
+/****************
+ *  KWalletIconView - An iconview to store wallets
+ */
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : KIconView(parent, name) {
 }
@@ -117,6 +192,53 @@ QDragObject *KWalletIconView::dragObject() {
 			pos - currentItem()->pixmapRect(false).topLeft());
 
 	return id;
+}
+
+
+
+/****************
+ *  KWalletEntryDrag - Stores data for wallet entry drags
+ */
+class KWalletEntryDrag : public QStoredDrag {
+	public:
+		KWalletEntryDrag(QWidget *dragSource, const char *name = 0L)
+			: QStoredDrag("application/x-kwallet-entry", dragSource, name) {
+		}
+
+		virtual ~KWalletEntryDrag() {}
+};
+
+
+/****************
+ *  KWalletEntryList - A listview to store wallet entries
+ */
+KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
+: KListView(parent, name) {
+	addColumn(i18n("Folder Entry"));
+	setRootIsDecorated(true);
+	setDefaultRenameAction(Reject);
+}
+
+KWalletEntryList::~KWalletEntryList() {
+}
+
+QDragObject *KWalletEntryList::dragObject() {
+	KWalletEntryDrag *ed = 0L;
+	QListViewItem *i = currentItem();
+
+	if (i) {
+		KWalletEntryItem *ei = dynamic_cast<KWalletEntryItem*>(i);
+		if (!ei) {
+			return 0L;
+		}
+		ed = new KWalletEntryDrag(viewport(), "KWallet Entry Drag");
+		QByteArray a;
+		QDataStream ds(a, IO_WriteOnly);
+		ds << *ei;
+		ed->setEncodedData(a);
+	}
+
+	return ed;
 }
 
 #include "allyourbase.moc"

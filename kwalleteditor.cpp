@@ -154,7 +154,7 @@ void KWalletEditor::walletClosed() {
 	folderSelectionChanged(0L);
 	_ww->setEnabled(false);
 	emit enableFolderActions(false);
-	// FIXME
+	KMessageBox::sorry(this, i18n("This wallet was forced closed.  You must reopen it to continue working with it."));
 }
 
 
@@ -173,21 +173,23 @@ QPtrStack<QIconViewItem> trash;
 
 	for (QStringList::Iterator i = fl.begin(); i != fl.end(); ++i) {
 		if (!_ww->_folderView->findItem(*i)) {
-			new QIconViewItem(_ww->_folderView, *i);
+			new KWalletFolderItem(_w, _ww->_folderView, *i);
 		}
 	}
 }
 
 
 void KWalletEditor::deleteFolder() {
-	// FIXME: prompt for confirmation!
 	if (_w) {
 		QIconViewItem *ivi = _ww->_folderView->currentItem();
 		if (ivi) {
-			// FIXME: error handling
-			_w->removeFolder(ivi->text());
-			updateFolderList();
-			folderSelectionChanged(0L); //_ww->_folderView->currentItem());
+			int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_ww->_folderView->currentItem()->text()));
+			if (rc == KMessageBox::Yes) {
+				// FIXME: error handling
+				_w->removeFolder(ivi->text());
+				updateFolderList();
+				folderSelectionChanged(0L);
+			}
 		}
 	}
 }
@@ -357,6 +359,7 @@ void KWalletEditor::updateDetails() {
 
 void KWalletEditor::updateEntries() {
 	_ww->_entryList->clear();
+	// FIXME: Move into KWalletEntryList
 	_passItems = new QListViewItem(_ww->_entryList, i18n("Passwords"));
 	_mapItems = new QListViewItem(_ww->_entryList, i18n("Maps"));
 	_binaryItems = new QListViewItem(_ww->_entryList, i18n("Binary Data"));
@@ -365,13 +368,13 @@ void KWalletEditor::updateEntries() {
 	for (QStringList::Iterator i = _entries.begin(); i != _entries.end(); ++i) {
 		switch (_w->entryType(*i)) {
 		case KWallet::Wallet::Password:
-			new KWalletEntryItem(_passItems, *i);
+			new KWalletEntryItem(_w, _passItems, *i);
 			break;
 		case KWallet::Wallet::Stream:
-			new KWalletEntryItem(_mapItems, *i);
+			new KWalletEntryItem(_w, _mapItems, *i);
 			break;
 		case KWallet::Wallet::Map:
-			new KWalletEntryItem(_binaryItems, *i);
+			new KWalletEntryItem(_w, _binaryItems, *i);
 			break;
 		case KWallet::Wallet::Unknown:
 		default:
@@ -450,7 +453,7 @@ QString n;
 			p = item->parent();
 		}
 
-		new KWalletEntryItem(p, n);
+		new KWalletEntryItem(_w, p, n);
 
 		if (p == _passItems) {
 			_w->writePassword(n, QString::null);
