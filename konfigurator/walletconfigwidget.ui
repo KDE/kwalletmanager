@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>585</width>
-            <height>446</height>
+            <height>450</height>
         </rect>
     </property>
     <property name="caption">
@@ -482,14 +482,21 @@
 </connections>
 <tabstops>
     <tabstop>_enabled</tabstop>
-    <tabstop>_launchManager</tabstop>
     <tabstop>_closeIdle</tabstop>
     <tabstop>_idleTime</tabstop>
+    <tabstop>_screensaverLock</tabstop>
+    <tabstop>_autoclose</tabstop>
     <tabstop>_defaultWallet</tabstop>
     <tabstop>_newWallet</tabstop>
     <tabstop>_localWallet</tabstop>
     <tabstop>_newLocalWallet</tabstop>
+    <tabstop>_launchManager</tabstop>
+    <tabstop>_autocloseManager</tabstop>
     <tabstop>_launch</tabstop>
+    <tabstop>_openPrompt</tabstop>
+    <tabstop>_accessList</tabstop>
+    <tabstop>tabWidget2</tabstop>
+    <tabstop>_localWalletSelected</tabstop>
 </tabstops>
 <slots>
     <slot>_storeTogether_toggled(bool)</slot>
