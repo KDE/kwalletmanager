@@ -4,12 +4,12 @@ Client:
 - Map editor can't handle multiline values
 
 Backend:
+- provide metadata (wallet comment, statistics, etc)
 - test 64 bit, zSeries
-- fix blocking issues
 - investigate timestamping
+- import testcases
 - Configuration panel
-	-> Implement idle timers
-	-> Implement wallet name settings
+- races in kwalletd
 
 Integration:
 - Cookie jar
@@ -17,11 +17,14 @@ Integration:
 - KIO
 - KMail
 
+Configuration:
+	-> Implement idle timers
+	-> Implement wallet name settings
+	-> Ability to configure the accept list for applications
 
 Future ideas:
 - Ability to hide entries and only show their values after clicking on an
   "expose" button.
-- Possibly provide metadata (wallet comment, statistics, etc)
 - Configurable crypto algorithm to use
 - File association of kwallet type to kwalletmanager
 	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
