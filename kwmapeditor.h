@@ -25,7 +25,7 @@
 #include <qtable.h>
 
 
-class KWMapEditor : private QTable {
+class KWMapEditor : public QTable {
 	Q_OBJECT
 
 	public:

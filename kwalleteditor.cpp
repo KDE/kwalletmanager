@@ -74,7 +74,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 
 	box = new QVBoxLayout(_ww->_entryStack->widget(2));
 	_mapEditor = new KWMapEditor(_currentMap, _ww->_entryStack->widget(2));
-	box->addWidget(static_cast<QWidget*>(_mapEditor));
+	box->addWidget(_mapEditor);
 
 	setCentralWidget(_ww);
 
@@ -114,7 +114,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 
 	connect(_ww->_passwordValue, SIGNAL(textChanged()),
 		this, SLOT(entryEditted()));
-	connect(_mapEditor->qObject(), SIGNAL(dirty()),
+	connect(_mapEditor, SIGNAL(dirty()),
 		this, SLOT(entryEditted()));
 
 	connect(_ww->_undoChanges, SIGNAL(clicked()),
