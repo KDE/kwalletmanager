@@ -125,7 +125,7 @@ void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 
 
 void KWMapEditor::copy() {
-	QApplication::clipboard()->setText(text(_contextRow, _contextCol));
+	QApplication::clipboard()->setText(text(_contextRow, 1));
 }
 
 
