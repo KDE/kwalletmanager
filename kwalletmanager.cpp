@@ -52,7 +52,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_shuttingDown = false;
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
-	if ( walletConfigGroup.readBoolEntry( "Launch Manager", true ) ) {
+	if (walletConfigGroup.readBoolEntry("Launch Manager", true)) {
 		_tray = new KSystemTray(this, "kwalletmanager tray");
 		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 		QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
@@ -89,11 +89,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 		this,
 		SLOT(possiblyRescan(const QCString&)));
 
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "aWalletWasOpened()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(QString)", "updateWalletDisplay()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletListDirty()", "updateWalletDisplay()", false);
+	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
+	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
+	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "aWalletWasOpened()", false);
+	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(QString)", "updateWalletDisplay()", false);
+	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletListDirty()", "updateWalletDisplay()", false);
 
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
@@ -119,10 +119,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 actionCollection());
 
 	createGUI("kwalletmanager.rc");
-        accel->connectItem(accel->insertItem(Key_Return),
-                           this, SLOT(openWallet()));
-        accel->connectItem(accel->insertItem(Key_Delete),
-                           this, SLOT(deleteWallet()));
+	accel->connectItem(accel->insertItem(Key_Return), this, SLOT(openWallet()));
+	accel->connectItem(accel->insertItem(Key_Delete), this, SLOT(deleteWallet()));
 
 	if (_tray) {
 		_tray->show();
@@ -194,21 +192,21 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 		connect(popupMenu, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
 		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
 		popupMenu->exec(pos);
-                delete popupMenu;
+		delete popupMenu;
 	}
 }
 
 
 void KWalletManager::deleteWallet(const QString& walletName) {
-    int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(walletName),"",KStdGuiItem::del());
-    if (rc != KMessageBox::Continue) {
-        return;
-    }
-    rc = KWallet::Wallet::deleteWallet(walletName);
-    if (rc != 0) {
-        KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.").arg(rc));
-    }
-    updateWalletDisplay();
+	int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(walletName),"",KStdGuiItem::del());
+	if (rc != KMessageBox::Continue) {
+		return;
+	}
+	rc = KWallet::Wallet::deleteWallet(walletName);
+	if (rc != 0) {
+		KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.").arg(rc));
+	}
+	updateWalletDisplay();
 }
 
 
