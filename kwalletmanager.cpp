@@ -47,7 +47,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
         _shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
-	_tray->setPixmap(SmallIcon("wallet_closed"));
+	_tray->setPixmap(BarIcon("wallet_closed"));
 	connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {

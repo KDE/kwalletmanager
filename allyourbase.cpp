@@ -25,6 +25,7 @@
 #include <kmessagebox.h>
 #include <kstddirs.h>
 #include <kwallet.h>
+#include <kiconloader.h>
 
 #include <qdragobject.h>
 #include <qptrlist.h>
@@ -46,8 +47,8 @@ KWalletEntryItem::~KWalletEntryItem() {
 /****************
  *  KWalletItem - IconView items to represent wallets
  */
-KWalletItem::KWalletItem(QIconView *parent, const QString& walletName) 
-: QIconViewItem(parent, walletName) {
+KWalletItem::KWalletItem(QIconView *parent, const QString& walletName)
+: QIconViewItem(parent, walletName, DesktopIcon("kwalletmanager")) {
 }
 
 KWalletItem::~KWalletItem() {
@@ -169,7 +170,7 @@ class KWalletFolderDrag : public QIconDrag {
 /****************
  *  KWalletFolderItem - IconView items to represent folders
  */
-KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QIconView *parent, const QString& folderName) 
+KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QIconView *parent, const QString& folderName)
 : QIconViewItem(parent, folderName), _wallet(w) {
 }
 
