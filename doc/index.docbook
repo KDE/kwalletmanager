@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kwallet "<application>KWallet</application>">
+  <!ENTITY kwalletmanager "<application>KWallet Manager</application>">
   <!ENTITY package "kdeutils">
   <!ENTITY kappname "&kwallet;">
   <!ENTITY % addindex "IGNORE">
@@ -13,49 +14,306 @@
 
 <authorgroup>
 <author>
-<firstname></firstname>
-<othername></othername>
-<surname></surname>
-<affiliation>
-<address><email></email></address>
-</affiliation>
+&George.Staikos; &George.Staikos.mail;
 </author>
+<author>
+&Lauri.Watts; &Lauri.Watts.mail;
+</author>
+<othercredit role="developer">
+<firstname>George</firstname><surname>Staikos</surname>
+<contrib>Developer</contrib>&George.Staikos.mail;
+</othercredit>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2003-08-30</date>
-<releaseinfo>0.00.00</releaseinfo>
-
-<!-- Abstract about this handbook -->
+<date>2004-02-02</date>
+<releaseinfo>1.0</releaseinfo>
 
 <abstract>
 <para>
-&kwallet; is part of the kdeutils package.
-</para>
+The wallet subsytem provides a convenient and secure way to manage all your
+passwords.</para>
+
 </abstract>
 
 
 <keywordset>
 <keyword>KDE</keyword>
-<keyword>Kapp</keyword>
+<keyword>Kwallet</keyword>
+<keyword>passwords</keyword>
+<keyword>forms</keyword>
 </keywordset>
 
 </bookinfo>
 
-<chapter id="introduction"> <title>Introduction</title> <para>Sorry,
-but the documentation for &kappname; was not finished when &kde; was
-installed on this computer.</para> <para>If you need help, please
-check &kde-http; for updates, or by submitting your question to <ulink
-url="mailto:kde-user@kde.org">The &kde; User Mailing
-list</ulink>.</para> <para><emphasis>The &kde; Team</emphasis></para>
+<chapter id="introduction">
+<title>Introduction</title>
 
-&underFDL;
+<para>Computer users have a very large amount of data to manage, some of
+which is sensitive.  In particular, you will typically have many passwords
+to manage.  Remembering them is difficult, writing them down on paper or in
+a text file is insecure, and using tools such at PGP is tedious and
+inconvenient.</para>
+
+<para>&kwallet; saves this sensitive data for you in a strongly encrypted
+file, accessible by all applications, and protected with a master
+password.</para>
+
+<tip>
+<para>For most secure operation, you should use one wallet for local
+passwords, and another for network passwords and form data.  You can
+configure this behavior in the &kwallet; &kcontrolcenter; module, however
+the default setting is to store everything in one wallet.</para>
+</tip>
 
 </chapter>
 
-&documentation.index; 
+<chapter id="kwalletmanager">
+<title>&kwalletmanager;</title>
+
+<para>&kwalletmanager; serves two functions.  Firstly it allows you to see if
+any wallets are open, which wallets those are, and which applications are
+using each wallet.  You can disconnect an application's access to a wallet
+from within the &kwalletmanager;.</para>
+
+<para>You may also manage the wallets installed on the system, creating and
+deleting wallets and manipulating their contents.</para>
+
+<para>When a wallet is opened, the &kwalletmanager; application is
+launched.  A system tray icon indicates that a wallet is open.  When all
+wallets are closed, the icon will reflect this by showing a closed
+wallet.</para>
+
+<para>Click on the wallet icon to display a window showing all available
+wallets as icons which reflect their current status, either open or
+closed.</para>
+
+<sect1 id="kwalletmanager-context-menu">
+<title>The &kwalletmanager; Context Menu</title>
+
+<para><mousebutton>Right</mousebutton> clicking on a wallet offers the following functions:</para>
+
+<variablelist>
+<varlistentry>
+<term><guimenuitem>New Wallet</guimenuitem></term>
+<listitem>
+<para>Create a new wallet.  A dialog will open requesting a name for the new
+wallet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice><shortcut>&Enter;</shortcut>
+<guisubmenu>Open...</guisubmenu></menuchoice></term>
+<listitem>
+<para>Open the wallet. The contents of the wallet will display in a new
+window.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guimenuitem>Change Password</guimenuitem></term>
+<listitem>
+<para>Change the master password for the wallet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guisubmenu>Disconnect</guisubmenu></term>
+<listitem><para>Disconnect an application from the wallet. Currently
+connected applications will appear in a submenu.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guimenuitem>Close</guimenuitem></term>
+<listitem><para>Force the wallet closed.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guimenuitem>Delete</guimenuitem></term>
+<listitem>
+<para>Delete the wallet</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="kwalletmanager-wallet-window">
+<title>The Wallet Window</title>
+
+<para>Clicking on a wallet in the &kwalletmanager; window will open a new
+window displaying that wallet's contents.</para>
+
+<para>The window contains four panes:</para>
+
+<!-- FIXME: Called out screenshot here -->
+
+<itemizedlist>
+<listitem><para>A summary of the contents of the current
+folder</para></listitem>
+<listitem><para>The folders contained in the wallet</para></listitem>
+<listitem><para>The entries in the currently selected
+folder</para></listitem>
+<listitem><para>The contents of the selected folder entry</para></listitem>
+</itemizedlist>
+
+<para>Folders may be added or deleted, and selecting a folder will update
+the folder entry list and the summary display.  Selecting a folder entry
+will update the entry contents pane, and allow you to edit that
+entry.</para>
+
+<para>Entries may also be created or deleted via the context menu for the
+folder contents.</para>
+
+<para>All folders and entries may be dragged and dropped into other wallets
+or folders respectively.  This allows a user to easily package up a new
+wallet for transfer to another environment.  For instance, a new wallet
+could be created and copied onto a removable flash memory device.  Important
+passwords could be transferred there, so you have them available in other
+locations.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="kwallet-kcontrol-module">
+<title>Configuring &kwallet;</title>
+
+<sect1 id="wallet-preferences">
+<title><guilabel>Wallet Preferences</guilabel></title>
+
+<para>&kwallet; contains a small configuration panel with several options
+that allow you to tune &kwallet; to your individual preferences.  The
+default settings for &kwallet; are sufficient for most users.</para>
+
+<para>Check the box to enable or disable the &kde; wallet subsystem
+entirely.  If this box is unchecked, then &kwallet; is entirely disabled and
+none of the other options here have any effect, nor will &kwallet; record
+any information, or offer to fill in forms for you.</para>
+
+<variablelist>
+<title><guilabel>Close Wallet</guilabel></title>
+<varlistentry>
+<term><guilabel>Close when unused for:</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Close when screen saver starts</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Close when last application stops using it</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title><guilabel>Automatic Wallet Selection</guilabel></title>
+<varlistentry>
+<term><guilabel>Select wallet to use as default:</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Different wallet for local passwords:</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title><guilabel>Wallet Manager</guilabel></title>
+<varlistentry>
+<term><guilabel>Show manager in system tray</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Hide System tray icon when last wallet
+closes</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>Finally, there is a button labelled <guibutton>Launch Wallet
+Manager</guibutton>, which does precisely that.</para>
+</sect1>
+
+<sect1 id="wallet-access-control">
+<title><guilabel>Access Control</guilabel></title>
+
+<para>There is only one option on this page:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Prompt when an application accesses an open wallet</guilabel></term>
+<listitem>
+<para></para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>Next there is a tree style view of the access controls for your wallets.</para>
+
+<para>&LMB; click on the <guiicon>+</guiicon> symbol beside a wallet name to
+expand the tree. You will see the name of each application that has asked
+for access to the wallet, and the policy you set for it.  You cannot edit
+policies here, or add them, but it is possible to delete an entry by &RMB;
+clicking on it and choosing <guimenuitem>Delete</guimenuitem> From the
+context menu that appears, or by simply selecting it and pressing the
+<keycap>Delete</keycap> key.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="advanced-features">
+<title>Advanced Features</title>
+
+<para>Wallets can be dragged from the &kwalletmanager; window.  This allows
+you to drag the wallet to a file browser window, where you can choose to
+copy, move, or link the wallet, as desired.</para>
+
+<para>You might use this to save a wallet to portable media, such as a
+USB keychain, so that you can take your passwords with you to work or
+on a vacation, and still have easy access to important sites.</para>
+
+<para>Future versions will have built-in functions for easy export or
+copying of data to portable devices.</para>
+
+</chapter>
+
+<chapter id="credits-and-licenses">
+<title>Credits and Licenses</title>
+
+<para>&kwallet; &copy; 2003 &George.Staikos;</para>
+<para>Documentation &copy; &Lauri.Watts; and &George.Staikos;</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;
+&underGPL;
+
+</chapter>
+
+&documentation.index;
 
 </book>
 
