@@ -160,14 +160,14 @@ QPtrStack<QIconViewItem> trash;
 
 void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 	if (item) {
-		KWalletPopup *p = new KWalletPopup(item->text(), this);
-		connect(p, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
-		connect(p, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
-		connect(p, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
-		connect(p, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
-		connect(p, SIGNAL(walletCreated()), this, SLOT(createWallet()));
-		p->exec(pos);
-                delete p;
+		m_pPopupMenu = new KWalletPopup(item->text(), this);
+		connect(m_pPopupMenu, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
+		connect(m_pPopupMenu, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
+		connect(m_pPopupMenu, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
+		connect(m_pPopupMenu, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
+		connect(m_pPopupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
+		m_pPopupMenu->exec(pos);
+                delete m_pPopupMenu;
 	}
 }
 
