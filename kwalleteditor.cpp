@@ -38,6 +38,7 @@
 #include <kpopupmenu.h>
 #include <ksqueezedtextlabel.h>
 #include <kstdaction.h>
+#include <kstringhandler.h>
 #include <ktempfile.h>
 
 #include <qcheckbox.h>
@@ -505,7 +506,10 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 	}
 
 	KPopupMenu *m = new KPopupMenu(this);
-	m->insertTitle(item->text(0));
+	QString title = item->text(0);
+	// I think 200 pixels is wide enough for a title
+	title = KStringHandler::cPixelSqueeze(title, m->fontMetrics(), 200);
+	m->insertTitle(title);
 	if (item->parent()) {
 		m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Key_Insert);
 		m->insertItem(i18n( "&Rename" ), this, SLOT(renameEntry()), Key_F2);
