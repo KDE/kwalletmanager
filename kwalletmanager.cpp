@@ -114,7 +114,7 @@ bool KWalletManager::queryClose() {
 }
 
 void KWalletManager::aWalletWasOpened() {
-	_tray->setPixmap(SmallIcon("wallet_open"));
+	_tray->setPixmap(BarIcon("wallet_open"));
 	updateWalletDisplay();
 }
 
@@ -209,7 +209,7 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
-	_tray->setPixmap(SmallIcon("wallet_closed"));
+	_tray->setPixmap(BarIcon("wallet_closed"));
 	possiblyQuit();
 }
 
