@@ -14,6 +14,8 @@ noinst_HEADERS = kwalletmanager.h kwalletpopup.h walletwidget.h kwalleteditor.h\
 
 xdg_apps_DATA = kwalletmanager.desktop
 
+KDE_ICON = kwalletmanager
+
 rc_DATA = kwalletmanager.rc kwalleteditor.rc
 rcdir = $(kde_datadir)/kwalletmanager
 
