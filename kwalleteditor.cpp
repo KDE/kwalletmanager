@@ -420,10 +420,13 @@ void KWalletEditor::updateDetails() {
 			"</ul>"
 			"</qt>");
 
-	_details->setText(page
-                        .arg(i18n("Folder:"))
-			.arg(_folderView->currentItem()->text())
-			.arg(i18n("Contains one item.", "Contains %n items." ,_entries.count())));
+	if (_folderView->currentItem())
+		_details->setText(page
+                	        .arg(i18n("Folder:"))
+				.arg(_folderView->currentItem()->text())
+				.arg(i18n("Contains one item.", "Contains %n items." ,_entries.count())));
+	else
+		_details->setText(QString::null);
 }
 
 
@@ -690,7 +693,7 @@ void KWalletEditor::importWallet() {
 	}
 
 	QString tmpFile;
-	if (!KIO::NetAccess::download(url, tmpFile)) {
+	if (!KIO::NetAccess::download(url, tmpFile, this)) {
 		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.").arg(url.prettyURL()));
 		return;
 	}
@@ -819,7 +822,7 @@ void KWalletEditor::importXML() {
 	}
 
 	QString tmpFile;
-	if (!KIO::NetAccess::download(url, tmpFile)) {
+	if (!KIO::NetAccess::download(url, tmpFile, this)) {
 		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.").arg(url.prettyURL()));
 		return;
 	}
