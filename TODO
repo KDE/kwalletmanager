@@ -3,12 +3,9 @@ Things left:
 Backend:
 - test 64 bit, zSeries
 - refactor the hashes to make it efficient
-- rename the wallet "mywallet"
-- make the password prompt go on top
 
 Integration:
 - Cookie jar
-- KIO
 - KMail
 
 Future ideas:
