@@ -29,8 +29,9 @@
 #include <kdebug.h>
 #include <kfiledialog.h>
 #include <kiconview.h>
-#include <kio/netaccess.h>
 #include <kinputdialog.h>
+#include <kio/netaccess.h>
+#include <klistviewsearchline.h>
 #include <klocale.h>
 #include <kmdcodec.h>
 #include <kmessagebox.h>
@@ -64,6 +65,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 
 	box = new QVBoxLayout(_ww->_entryListFrame);
 	_entryList = new KWalletEntryList(_ww->_entryListFrame, "Wallet Entry List");
+	box->addWidget(new KListViewSearchLine(_ww->_entryListFrame, _entryList));
 	box->addWidget(_entryList);
 
 	_entryList->setEnabled(false);
