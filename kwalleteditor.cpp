@@ -302,7 +302,6 @@ void KWalletEditor::entryEditted() {
 
 
 void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
-
 	if (item && _w && item->parent()) {
 		if (item->parent() == _passItems) {
 			QString pass;
@@ -413,24 +412,36 @@ QPtrStack<QListViewItem> trash;
 	// Remove deleted entries
 	for (QListViewItem *i = _passItems->firstChild(); i; i = i->nextSibling()) {
 		if (!_entries.contains(i->text(0))) {
+			if (i == _entryList->currentItem()) {
+				entrySelectionChanged(0L);
+			}
 			trash.push(i);
 		}
 	}
 
 	for (QListViewItem *i = _mapItems->firstChild(); i; i = i->nextSibling()) {
 		if (!_entries.contains(i->text(0))) {
+			if (i == _entryList->currentItem()) {
+				entrySelectionChanged(0L);
+			}
 			trash.push(i);
 		}
 	}
 
 	for (QListViewItem *i = _binaryItems->firstChild(); i; i = i->nextSibling()) {
 		if (!_entries.contains(i->text(0))) {
+			if (i == _entryList->currentItem()) {
+				entrySelectionChanged(0L);
+			}
 			trash.push(i);
 		}
 	}
 
 	for (QListViewItem *i = _unknownItems->firstChild(); i; i = i->nextSibling()) {
 		if (!_entries.contains(i->text(0))) {
+			if (i == _entryList->currentItem()) {
+				entrySelectionChanged(0L);
+			}
 			trash.push(i);
 		}
 	}
@@ -592,6 +603,7 @@ QListViewItem *item = _entryList->selectedItem();
 		if (rc == KMessageBox::Yes) {
 			_w->removeEntry(item->text(0));
 			delete item;
+			entrySelectionChanged(_entryList->currentItem());
 		}
 	}
 }
