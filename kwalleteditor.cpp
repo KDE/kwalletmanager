@@ -254,9 +254,9 @@ void KWalletEditor::deleteFolder() {
 		if (ivi) {
 			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_folderView->currentItem()->text()),"",KStdGuiItem::del());
 			if (rc == KMessageBox::Continue) {
-				int rc = _w->removeFolder(ivi->text());
-				if (rc != 0) {
-					KMessageBox::sorry(this, i18n("Error deleting folder.  Error code=%1").arg(rc));
+				bool rc = _w->removeFolder(ivi->text());
+				if (!rc) {
+					KMessageBox::sorry(this, i18n("Error deleting folder."));
 					return;
 				}
 				updateFolderList();
