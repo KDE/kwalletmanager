@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Wallet Management Tool
+Exec=kwalletmanager
+TerminalOptions=
+Icon=password
+Type=Application
+Terminal=0
+X-KDE-StartupNotify=false
+Categories=Qt;KDE;Settings
