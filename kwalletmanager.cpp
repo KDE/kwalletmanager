@@ -31,7 +31,6 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <kiconview.h>
-#include <kkeydialog.h>
 #include <kinputdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -106,7 +105,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 			"close_all_wallets");
 	act->plug(_tray->contextMenu());
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
-        KStdAction::keyBindings(this, SLOT(slotConfigureKeys()), actionCollection());
+          KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), 
+actionCollection());
 
 	createGUI("kwalletmanager.rc");
         accel->connectItem(accel->insertItem(Key_Return),
@@ -122,11 +122,6 @@ KWalletManager::~KWalletManager() {
 	_tray = 0L;
 	delete _dcopRef;
 	_dcopRef = 0L;
-}
-
-void KWalletManager::slotConfigureKeys()
-{
-  KKeyDialog::configure( actionCollection(), this );
 }
 
 bool KWalletManager::queryClose() {
