@@ -43,6 +43,14 @@ K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
 KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringList&)
 : KCModule(KWalletFactory::instance(), parent, name) {
 
+	KAboutData *about =
+		new KAboutData(I18N_NOOP("kcmkwallet"),
+				I18N_NOOP("KDE Wallet Control Module"),
+				0, 0, KAboutData::License_GPL,
+				I18N_NOOP("(c) 2003 George Staikos"));
+		about->addAuthor("George Staikos", 0, "staikos@kde.org");
+	setAboutData( about );
+
 	_cfg = new KConfig("kwalletrc", false, false);
 
 	QVBoxLayout *vbox = new QVBoxLayout(this, 0, KDialog::spacingHint());
@@ -264,17 +272,6 @@ void KWalletConfig::defaults() {
 
 QString KWalletConfig::quickHelp() const {
 	return i18n("This configuration module allows you to configure the KDE wallet system.");
-}
-
-
-const KAboutData *KWalletConfig::aboutData() const {
-KAboutData *about =
-	new KAboutData(I18N_NOOP("kcmkwallet"),
-			I18N_NOOP("KDE Wallet Control Module"),
-			0, 0, KAboutData::License_GPL,
-			I18N_NOOP("(c) 2003 George Staikos"));
-	about->addAuthor("George Staikos", 0, "staikos@kde.org");
-return about;
 }
 
 
