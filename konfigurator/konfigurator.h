@@ -45,7 +45,6 @@ class KWalletConfig : public KCModule {
 		void newLocalWallet();
 		void newNetworkWallet();
 		void updateWalletLists();
-		void fixupUI(bool);
 		QString newWallet();
 		void deleteEntry();
 		void contextMenuRequested(QListViewItem *item, const QPoint& pos, int col);

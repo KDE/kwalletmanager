@@ -50,11 +50,10 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 
 	connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_launchManager, SIGNAL(clicked()), this, SLOT(configChanged()));
-	connect(_wcw->_leaveManagerOpen, SIGNAL(clicked()), this, SLOT(configChanged()));
-	connect(_wcw->_leaveOpen, SIGNAL(clicked()), this, SLOT(configChanged()));
+	connect(_wcw->_autocloseManager, SIGNAL(clicked()), this, SLOT(configChanged()));
+	connect(_wcw->_autoclose, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_closeIdle, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_openPrompt, SIGNAL(clicked()), this, SLOT(configChanged()));
-	connect(_wcw->_storeTogether, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_screensaverLock, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_idleTime, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
 	connect(_wcw->_launch, SIGNAL(clicked()), this, SLOT(launchManager()));
@@ -62,7 +61,6 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-	connect(_wcw->_storeTogether, SIGNAL(toggled(bool)), this, SLOT(fixupUI(bool)));
 	connect(_wcw->_accessList, SIGNAL(contextMenuRequested(QListViewItem*, const QPoint&, int)), this, SLOT(contextMenuRequested(QListViewItem*, const QPoint&, int)));
 
 	updateWalletLists();
@@ -170,20 +168,18 @@ void KWalletConfig::load() {
 	_wcw->_enabled->setChecked(config.readBoolEntry("Enabled", true));
 	_wcw->_openPrompt->setChecked(config.readBoolEntry("Prompt on Open", true));
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
-	_wcw->_leaveManagerOpen->setChecked(config.readBoolEntry("Leave Manager Open", false));
+	_wcw->_autocloseManager->setChecked(! config.readBoolEntry("Leave Manager Open", false));
 	_wcw->_screensaverLock->setChecked(config.readBoolEntry("Close on Screensaver", false));
-	_wcw->_leaveOpen->setChecked(config.readBoolEntry("Leave Open", false));
+	_wcw->_autoclose->setChecked(!config.readBoolEntry("Leave Open", true));
 	_wcw->_closeIdle->setChecked(config.readBoolEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
-	_wcw->_storeTogether->setChecked(config.readBoolEntry("Use One Wallet", true));
 	if (config.hasKey("Default Wallet")) {
-		_wcw->_defaultWalletSelected->setChecked(true);
 		_wcw->_defaultWallet->setCurrentText(config.readEntry("Default Wallet"));
 	} else {
-		_wcw->_defaultWalletSelected->setChecked(false);
+		_wcw->_defaultWallet->setCurrentItem(0);
 	}
 	if (config.hasKey("Local Wallet")) {
-		_wcw->_localWalletSelected->setChecked(true);
+		_wcw->_localWalletSelected->setChecked( !config.readBoolEntry("Use One Wallet") );
 		_wcw->_localWallet->setCurrentText(config.readEntry("Local Wallet"));
 	} else {
 		_wcw->_localWalletSelected->setChecked(false);
@@ -206,21 +202,21 @@ void KWalletConfig::save() {
 	KConfigGroup config(_cfg, "Wallet");
 	config.writeEntry("Enabled", _wcw->_enabled->isChecked());
 	config.writeEntry("Launch Manager", _wcw->_launchManager->isChecked());
-	config.writeEntry("Leave Manager Open", _wcw->_leaveManagerOpen->isChecked());
-	config.writeEntry("Leave Open", _wcw->_leaveOpen->isChecked());
+	config.writeEntry("Leave Manager Open", !_wcw->_autocloseManager->isChecked());
+	config.writeEntry("Leave Open", !_wcw->_autoclose->isChecked());
 	config.writeEntry("Close When Idle", _wcw->_closeIdle->isChecked());
-	config.writeEntry("Use One Wallet", _wcw->_storeTogether->isChecked());
 	config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
 	config.writeEntry("Prompt on Open", _wcw->_openPrompt->isChecked());
 	config.writeEntry("Close on Screensaver", _wcw->_screensaverLock->isChecked());
 
+	config.writeEntry("Use One Wallet", !_wcw->_localWalletSelected->isChecked());
 	if (_wcw->_localWalletSelected->isChecked()) {
 		config.writeEntry("Local Wallet", _wcw->_localWallet->currentText());
 	} else {
 		config.deleteEntry("Local Wallet");
 	}
 
-	if (_wcw->_defaultWalletSelected->isChecked()) {
+	if (_wcw->_defaultWallet->currentItem() != 0) {
 		config.writeEntry("Default Wallet", _wcw->_defaultWallet->currentText());
 	} else {
 		config.deleteEntry("Default Wallet");
@@ -247,13 +243,12 @@ void KWalletConfig::defaults() {
 	_wcw->_enabled->setChecked(true);
 	_wcw->_openPrompt->setChecked(true);
 	_wcw->_launchManager->setChecked(true);
-	_wcw->_leaveManagerOpen->setChecked(false);
+	_wcw->_autocloseManager->setChecked(false);
 	_wcw->_screensaverLock->setChecked(false);
-	_wcw->_leaveOpen->setChecked(false);
+	_wcw->_autoclose->setChecked(true);
 	_wcw->_closeIdle->setChecked(false);
-	_wcw->_storeTogether->setChecked(true);
 	_wcw->_idleTime->setValue(10);
-	_wcw->_defaultWalletSelected->setChecked(false);
+	_wcw->_defaultWallet->setCurrentItem(0);
 	_wcw->_localWalletSelected->setChecked(false);
 	_wcw->_accessList->clear();
 	emit changed(true);
@@ -273,12 +268,6 @@ KAboutData *about =
 			I18N_NOOP("(c) 2003 George Staikos"));
 	about->addAuthor("George Staikos", 0, "staikos@kde.org");
 return about;
-}
-
-
-void KWalletConfig::fixupUI(bool en) {
-	_wcw->_localWallet->setEnabled(!en && _wcw->_localWalletSelected->isChecked());
-	_wcw->_newLocalWallet->setEnabled(!en && _wcw->_localWalletSelected->isChecked());
 }
 
 
