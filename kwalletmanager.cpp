@@ -50,6 +50,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
+	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
+	KConfigGroup walletConfigGroup(&cfg, "Wallet");
+	if ( walletConfigGroup.readBoolEntry( "Launch Manager", true ) ) {
 	_tray = new KSystemTray(this, "kwalletmanager tray");
 	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 	QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
@@ -62,6 +65,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 			QToolTip::add(_tray, i18n("KDE Wallet: A wallet is open."));
 			break;
 		}
+	}
+	} else {
+		_tray = 0;
 	}
 
 	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
@@ -99,10 +105,12 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	KAction *act = new KAction(i18n("Configure &Wallet..."), "configure",
 			0, this, SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
+	if ( _tray )
 	act->plug(_tray->contextMenu());
 	act = new KAction(i18n("Close &All Wallets"), 0, 0, this,
 			SLOT(closeAllWallets()), actionCollection(),
 			"close_all_wallets");
+	if ( _tray )
 	act->plug(_tray->contextMenu());
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
           KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
@@ -114,7 +122,12 @@ actionCollection());
         accel->connectItem(accel->insertItem(Key_Delete),
                            this, SLOT(deleteWallet()));
 
+	if ( _tray )
 	_tray->show();
+	else
+		show();
+
+	kapp->setName("kwallet");
 }
 
 
@@ -126,6 +139,9 @@ KWalletManager::~KWalletManager() {
 
 bool KWalletManager::queryClose() {
 	if (!_shuttingDown && !kapp->sessionSaving()) {
+		if ( !_tray )
+			kapp->quit();
+		else
 		hide();
 		return false;
 	}
@@ -133,9 +149,11 @@ bool KWalletManager::queryClose() {
 }
 
 void KWalletManager::aWalletWasOpened() {
+	if ( _tray ) {
 	_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
 	QToolTip::remove(_tray);
 	QToolTip::add(_tray, i18n("KDE Wallet: A wallet is open."));
+	}
 	updateWalletDisplay();
 }
 
@@ -271,9 +289,11 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
+	if ( _tray ) {
 	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 	QToolTip::remove(_tray);
 	QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
+	}
 	possiblyQuit();
 }
 
