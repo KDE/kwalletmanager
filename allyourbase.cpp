@@ -219,9 +219,14 @@ KWalletFolderIconView::KWalletFolderIconView(QWidget *parent, const char *name)
 KWalletFolderIconView::~KWalletFolderIconView() {
 }
 
+void KWalletFolderIconView::contentsMousePressEvent(QMouseEvent *e) {
+	_mousePos = e->pos();
+	KIconView::contentsMousePressEvent( e );
+}
+
 QDragObject *KWalletFolderIconView::dragObject() {
 	KWalletFolderDrag *id = new KWalletFolderDrag(viewport(), "KWallet Folder Drag");
-	QPoint pos = mapFromGlobal(QCursor::pos());
+	QPoint pos = _mousePos;
 	for (QIconViewItem *item = firstItem(); item; item = item->nextItem()) {
 		if (item->isSelected()) {
 			QIconDragItem idi;
@@ -338,10 +343,15 @@ KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 KWalletIconView::~KWalletIconView() {
 }
 
+void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
+	_mousePos = e->pos();
+	KIconView::contentsMousePressEvent( e );
+}
+
 QDragObject *KWalletIconView::dragObject() {
 	KWalletIconDrag *id = new KWalletIconDrag(viewport(), "KWallet Drag");
 	QString path = "file:" + KGlobal::dirs()->saveLocation("kwallet");
-	QPoint pos = mapFromGlobal(QCursor::pos());
+	QPoint pos = _mousePos;
 	for (QIconViewItem *item = firstItem(); item; item = item->nextItem()) {
 		if (item->isSelected()) {
 			QString url = path + item->text() + ".kwl";

@@ -76,6 +76,8 @@ class KWalletFolderIconView : public KIconView {
 		void slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
 	protected:
 		virtual QDragObject *dragObject();
+		virtual void contentsMousePressEvent(QMouseEvent *e);
+		QPoint _mousePos;
 };
 
 
@@ -99,6 +101,8 @@ class KWalletIconView : public KIconView {
 
 	protected:
 		virtual QDragObject *dragObject();
+		virtual void contentsMousePressEvent(QMouseEvent *e);
+		QPoint _mousePos;
 };
 
 
