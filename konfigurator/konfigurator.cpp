@@ -27,6 +27,7 @@
 #include <kdialog.h>
 #include <kgenericfactory.h>
 #include <klineeditdlg.h>
+#include <kpopupmenu.h>
 #include <kwallet.h>
 #include <qcheckbox.h>
 #include <qcombobox.h>
@@ -60,6 +61,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_storeTogether, SIGNAL(toggled(bool)), this, SLOT(fixupUI(bool)));
+	connect(_wcw->_accessList, SIGNAL(contextMenuRequested(QListViewItem*, const QPoint&, int)), this, SLOT(contextMenuRequested(QListViewItem*, const QPoint&, int)));
 
 	updateWalletLists();
 	load();
@@ -205,10 +207,21 @@ void KWalletConfig::save() {
 	} else {
 		config.deleteEntry("Local Wallet");
 	}
+
 	if (_wcw->_defaultWalletSelected->isChecked()) {
 		config.writeEntry("Default Wallet", _wcw->_defaultWallet->currentText());
 	} else {
 		config.deleteEntry("Default Wallet");
+	}
+
+	_cfg->deleteGroup("Auto Allow");
+	_cfg->setGroup("Auto Allow");
+	for (QListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
+		QStringList al;
+		for (QListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
+			al << j->text(1);
+		}
+		_cfg->writeEntry(i->text(0), al);
 	}
 
 	_cfg->sync();
@@ -229,6 +242,7 @@ void KWalletConfig::defaults() {
 	_wcw->_idleTime->setValue(10);
 	_wcw->_defaultWalletSelected->setChecked(false);
 	_wcw->_localWalletSelected->setChecked(false);
+	_wcw->_accessList->clear();
 	emit changed(true);
 }
 
@@ -252,6 +266,26 @@ return about;
 void KWalletConfig::fixupUI(bool en) {
 	_wcw->_localWallet->setEnabled(!en && _wcw->_localWalletSelected->isChecked());
 	_wcw->_newLocalWallet->setEnabled(!en && _wcw->_localWalletSelected->isChecked());
+}
+
+
+void KWalletConfig::contextMenuRequested(QListViewItem *item, const QPoint& pos, int col) {
+	Q_UNUSED(col)
+	if (item && item->parent()) {
+		KPopupMenu *m = new KPopupMenu(this);
+		m->insertTitle(item->parent()->text(0));
+		m->insertItem("&Delete", this, SLOT(deleteEntry()), Key_Delete);
+		m->popup(pos);
+	}
+}
+
+
+void KWalletConfig::deleteEntry() {
+	QListViewItem *item = _wcw->_accessList->selectedItem();
+	if (item) {
+		delete item;
+		emit changed(true);
+	}
 }
 
 #include "konfigurator.moc"

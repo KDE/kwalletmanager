@@ -1,8 +1,5 @@
 Things left:
 
-Client:
-- Map editor can't handle multiline values
-
 Backend:
 - provide metadata (wallet comment, entry comments, etc)
 - test 64 bit, zSeries
@@ -12,9 +9,6 @@ Integration:
 - Cookie jar
 - KIO
 - KMail
-
-Configuration:
-	-> Ability to configure the accept list for applications
 
 Future ideas:
 - File association of kwallet type to kwalletmanager

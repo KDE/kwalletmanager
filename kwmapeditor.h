@@ -39,6 +39,9 @@ class KWMapEditor : public QTable {
 		void contextMenu(int row, int col, const QPoint& pos);
 		void addEntry();
 
+	protected:
+		virtual QWidget *beginEdit(int row, int col, bool replace);
+
 	signals:
 		void dirty();
 

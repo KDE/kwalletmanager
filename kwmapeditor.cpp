@@ -19,9 +19,12 @@
 
 #include "kwmapeditor.h"
 
+#include <kdebug.h>
 #include <klocale.h>
 #include <kpopupmenu.h>
+#include <kwin.h>
 #include <qpushbutton.h>
+#include <qtextedit.h>
 
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
 : QTable(0, 3, parent, name), _map(map) {
@@ -107,5 +110,42 @@ void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 	m->insertItem(i18n("&New Entry"), this, SLOT(addEntry()));
 	m->popup(pos);
 }
+
+
+class InlineEditor : public QTextEdit {
+	public:
+		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { setWFlags(WStyle_NoBorder | WDestructiveClose); KWin::setType(winId(), NET::Override); }
+		virtual ~InlineEditor() { _p->setText(row, col, text()); }
+
+	protected:
+		virtual void focusOutEvent(QFocusEvent*) { close(); }
+		virtual void keyPressEvent(QKeyEvent *e) {
+			if (e->key() == Qt::Key_Escape) {
+				e->accept();
+				close();
+			} else {
+				e->ignore();
+				QTextEdit::keyPressEvent(e);
+			}
+		}
+		KWMapEditor *_p;
+		int row, col;
+};
+
+QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
+	kdDebug() << "EDIT COLUMN " << col << endl;
+	if (col != 2) {
+		return QTable::beginEdit(row, col, replace);
+	}
+
+	QRect geo = cellGeometry(row, col);
+	QTextEdit *e = new InlineEditor(this, row, col);
+	e->setText(text(row, col));
+	e->move(mapToGlobal(geo.topLeft()));
+	e->resize(geo.width() * 2, geo.height() * 3);
+	e->show();
+	return e;
+}
+
 
 #include "kwmapeditor.moc"
