@@ -10,9 +10,6 @@ Integration:
 - KIO
 - KMail
 
-Misc:
-- Add statusbar extension to konqi
-
 Future ideas:
 - File association of kwallet type to kwalletmanager
 	-> requires support in kwalletd for opening URLs as wallets.  Tedious.

@@ -146,7 +146,13 @@ void KWalletConfig::newNetworkWallet() {
 
 
 void KWalletConfig::launchManager() {
-	KApplication::startServiceByDesktopName("kwalletmanager_show");
+	if (!DCOPClient::mainClient()->isApplicationRegistered("kwalletmanager")) {
+		KApplication::startServiceByDesktopName("kwalletmanager_show");
+	} else {
+		DCOPRef r("kwalletmanager", "kwalletmanager-mainwindow#1");
+		r.send("show");
+		r.send("raise");
+	}
 }
 
 
