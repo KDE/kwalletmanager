@@ -238,6 +238,9 @@ KWalletFolderIconView::~KWalletFolderIconView() {
 
 void KWalletFolderIconView::contentsMousePressEvent(QMouseEvent *e) {
 	_mousePos = e->pos();
+	if (!findItem(_mousePos)) {
+		clearSelection();
+	}
 	KIconView::contentsMousePressEvent( e );
 }
 
@@ -402,6 +405,9 @@ void KWalletIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>
 
 void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
 	_mousePos = e->pos();
+	if (!findItem(_mousePos)) {
+		clearSelection();
+	}
 	KIconView::contentsMousePressEvent( e );
 }
 
