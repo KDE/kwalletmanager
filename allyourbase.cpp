@@ -96,6 +96,7 @@ void KWalletItem::dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
 	}
 
 	// FIXME: don't allow the drop if the wallet name is the same
+
 	KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(text());
 	if (!_wallet) {
 		e->ignore();

@@ -127,8 +127,9 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 	_binaryItems = new QListViewItem(_entryList, i18n("Binary Data"));
 	_unknownItems = new QListViewItem(_entryList, i18n("Unknown"));
 
-	_w = KWallet::Wallet::openWallet(wallet);
+	_w = KWallet::Wallet::openWallet(wallet, KWallet::Wallet::Asynchronous);
 	if (_w) {
+		connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
 		connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
 		connect(_w, SIGNAL(folderUpdated(const QString&)), this, SLOT(updateEntries(const QString&)));
 		connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
@@ -221,8 +222,11 @@ void KWalletEditor::deleteFolder() {
 		if (ivi) {
 			int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_folderView->currentItem()->text()));
 			if (rc == KMessageBox::Yes) {
-				// FIXME: error handling
-				_w->removeFolder(ivi->text());
+				int rc = _w->removeFolder(ivi->text());
+				if (rc != 0) {
+					KMessageBox::sorry(this, i18n("Error creating folder.  Error code=%1").arg(rc));
+					return;
+				}
 				updateFolderList();
 				folderSelectionChanged(0L);
 			}
@@ -609,6 +613,16 @@ QIconViewItem *ivi = _folderView->currentItem();
 void KWalletEditor::changePassword() {
 	KWallet::Wallet::changePassword(_walletName);
 }
+
+
+void KWalletEditor::walletOpened(bool success) {
+	if (success) {
+		updateFolderList();
+	} else {
+		KMessageBox::sorry(this, i18n("Unable to open the wallet."));
+	}
+}
+
 
 #include "kwalleteditor.moc"
 
