@@ -24,6 +24,8 @@
 #include <qstring.h>
 #include <qtable.h>
 
+class KAction;
+class KActionCollection;
 
 class KWMapEditor : public QTable {
 	Q_OBJECT
@@ -40,6 +42,9 @@ class KWMapEditor : public QTable {
 		void addEntry();
 		void emitDirty();
 
+	private slots:
+		void copy();
+
 	protected:
 		virtual QWidget *beginEdit(int row, int col, bool replace);
 
@@ -48,6 +53,9 @@ class KWMapEditor : public QTable {
 
 	private:
 		QMap<QString,QString>& _map;
+		int _contextRow, _contextCol;
+		KActionCollection *_ac;
+		KAction *_copyAct;
 };
 
 #endif

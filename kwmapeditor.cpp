@@ -19,21 +19,27 @@
 
 #include "kwmapeditor.h"
 
+#include <kaction.h>
 #include <kdebug.h>
 #include <klocale.h>
 #include <kpopupmenu.h>
+#include <kstdaction.h>
 #include <kwin.h>
+
+#include <qapplication.h>
+#include <qclipboard.h>
 #include <qpushbutton.h>
 #include <qtextedit.h>
-#include <qapplication.h>
 
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
 : QTable(0, 3, parent, name), _map(map) {
+	_ac = new KActionCollection(this);
+	_copyAct = KStdAction::copy(this, SLOT(copy()), _ac);
 	connect(this, SIGNAL(valueChanged(int,int)), this, SIGNAL(dirty()));
 	connect(this, SIGNAL(contextMenuRequested(int,int,const QPoint&)),
 		this, SLOT(contextMenu(int,int,const QPoint&)));
 	setSelectionMode(QTable::NoSelection);
-	horizontalHeader()->setLabel(0, "");
+	horizontalHeader()->setLabel(0, QString::null);
 	horizontalHeader()->setLabel(1, i18n("Key"));
 	horizontalHeader()->setLabel(2, i18n("Value"));
 	setColumnWidth(0, 20); // FIXME: this is arbitrary
@@ -109,12 +115,17 @@ void KWMapEditor::emitDirty() {
 
 
 void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
-	Q_UNUSED(row)
-	Q_UNUSED(col)
-
+	_contextRow = row;
+	_contextCol = col;
 	KPopupMenu *m = new KPopupMenu(this);
 	m->insertItem(i18n("&New Entry"), this, SLOT(addEntry()));
+	_copyAct->plug(m);
 	m->popup(pos);
+}
+
+
+void KWMapEditor::copy() {
+	QApplication::clipboard()->setText(text(_contextRow, _contextCol));
 }
 
 
@@ -150,6 +161,7 @@ class InlineEditor : public QTextEdit {
 		int row, col;
 		QGuardedPtr<QPopupMenu> popup;
 };
+
 
 QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
 	//kdDebug(2300) << "EDIT COLUMN " << col << endl;
