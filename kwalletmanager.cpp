@@ -93,7 +93,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	new KAction(i18n("&Wallet Settings..."), 0, 0, this,
 			SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
-	KStdAction::quit(qApp, SLOT(shuttingDown()), actionCollection());
+	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
 
 	createGUI("kwalletmanager.rc");
 }
@@ -106,7 +106,7 @@ KWalletManager::~KWalletManager() {
 }
 
 bool KWalletManager::queryClose() {
-	if ( !_shuttingDown ) {
+	if (!_shuttingDown) {
 		hide();
 		return false;
 	}
