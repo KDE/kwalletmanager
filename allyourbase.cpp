@@ -386,12 +386,12 @@ void KWalletIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>
 	}
 
 	KURL u(ul.first());
-	if (u.filename().isEmpty()) {
+	if (u.fileName().isEmpty()) {
 		e->ignore();
 		return;
 	}
 
-	QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.filename();
+	QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.fileName();
 	if (QFile::exists(dest)) {
 		KMessageBox::sorry(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
 		e->ignore();
