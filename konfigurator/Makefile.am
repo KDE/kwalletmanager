@@ -9,8 +9,7 @@ kcm_kwallet_la_LIBADD = $(LIB_KDEUI) -lkwalletclient
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/kcmkwallet.pot
 
-data_DATA = kwalletconfig.desktop
-datadir = $(kde_appsdir)/Settings/Security
+xdg_apps_DATA = kwalletconfig.desktop
 
 kde_services_DATA = kwallet_config.desktop kwalletmanager_show.desktop
 

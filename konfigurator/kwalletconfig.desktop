@@ -9,5 +9,21 @@ X-KDE-Library=kwallet
 X-KDE-ParentApp=kcontrol
 
 Name=KDE Wallet
+Name[de]=KDE Geheimfach
+Name[hu]=KDE digitális notesz
+Name[ru]=Бумажник KDE
+Name[sv]=KDE-plånbok
 Comment=KDE Wallet Configuration
+Comment[ca]=Configuració de carteres KDE
+Comment[de]=Einrichten des KDE Geheimfachs
+Comment[hu]=A KDE digitális notesz beállításai
+Comment[ru]=Настройка бумажника KDE
+Comment[sv]=Inställning av KDE-plånbok
 Keywords=Wallet,Form Fill,Passwords,Form Data
+Keywords[ca]=Cartera,Ompliment de formularis,Contrasentes,Dades de formularis
+Keywords[de]=Geheimfach,Formular,Passwort, wallet
+Keywords[hu]=digitális notesz,űrlapkitöltés,jelszavak,űrlapadatok
+Keywords[ru]=Wallet,Form Fill,Passwords,Form Data,Бумажник,Пароли,Формы
+Keywords[sv]=Plånbok,fyll i formulär,lösenord,formulärdata
+
+Categories=Qt;KDE;Settings;X-KDE-settings-security
