@@ -21,6 +21,7 @@
 #define KWALLETPOPUP_H
 
 #include <kpopupmenu.h>
+#include <qmap.h>
 #include <qstring.h>
 
 class KWalletPopup : public KPopupMenu {
@@ -36,6 +37,7 @@ class KWalletPopup : public KPopupMenu {
 		void closeWallet();
 		void createWallet();
 		void changeWalletPassword();
+		void disconnectApp(int);
 
 	signals:
 		void walletOpened(const QString& walletName);
@@ -46,6 +48,7 @@ class KWalletPopup : public KPopupMenu {
 
 	private:
 		QString _walletName;
+		QMap<int,QString> _appMap;
 };
 
 #endif

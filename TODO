@@ -2,8 +2,8 @@ Things left:
 
 Client:
 - Wallet icons
-- ability to list usage of wallets?
 - Map editor is still really broken - maybe needs to be redesigned
+- Document it
 
 Backend:
 - allow unpassworded wallet?
@@ -17,6 +17,7 @@ Integration:
 
 
 Future ideas:
+- Timeout for KWallet::Wallet to close the wallet automatically.
 - Ability to hide entries and only show their values after clicking on an
   "expose" button.
 - Possibly provide metadata (wallet comment, statistics, etc)

@@ -20,12 +20,12 @@
 
 #include "kwalletpopup.h"
 
-#include <kiconview.h>
-#include <kwallet.h>
 #include <kaction.h>
 #include <kdebug.h>
+#include <kiconview.h>
 #include <klocale.h>
 #include <kmessagebox.h>
+#include <kwallet.h>
 
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
 : KPopupMenu(parent, name), _walletName(wallet) {
@@ -44,6 +44,20 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	act = new KAction(i18n("Change &Password..."), 0, 0, this,
 			SLOT(changeWalletPassword()), ac, "wallet_password");
 	act->plug(this);
+
+	QStringList ul = KWallet::Wallet::users(wallet);
+	if (!ul.isEmpty()) {
+		KPopupMenu *pm = new KPopupMenu(this, "Disconnect Apps");
+		int id = 7000;
+		for (QStringList::Iterator it = ul.begin(); it != ul.end(); ++it) {
+			_appMap[id] = *it;
+			pm->insertItem(*it, this, SLOT(disconnectApp(int)), 0, id);
+			pm->setItemParameter(id, id);
+			id++;
+		}
+
+		insertItem(i18n("Disconnec&t"), pm);
+	}
 
 	act = new KAction(i18n("&Close"), 0, 0, this,
 			SLOT(closeWallet()), ac, "wallet_close");
@@ -89,6 +103,10 @@ void KWalletPopup::createWallet() {
 	emit walletCreated();
 }
 
+
+void KWalletPopup::disconnectApp(int id) {
+	KWallet::Wallet::disconnectApplication(_walletName, _appMap[id].latin1());
+}
 
 #include "kwalletpopup.moc"
 
