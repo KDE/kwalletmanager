@@ -195,11 +195,9 @@ void KWalletEditor::createActions() {
 			SLOT(changePassword()), actionCollection(),
 			"change_password");
 
-	/*
 	_mergeAction = new KAction(i18n("&Merge Wallet..."), 0, 0, this,
 			SLOT(importWallet()), actionCollection(),
 			"merge");
-			*/
 
 	_importAction = new KAction(i18n("&Import XML..."), 0, 0, this,
 			SLOT(importXML()), actionCollection(),
@@ -683,11 +681,134 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 }
 
 
+enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
+
 void KWalletEditor::importWallet() {
 	KURL url = KFileDialog::getOpenURL(QString::null, "*.kwl", this);
 	if (url.isEmpty()) {
 		return;
 	}
+
+	QString tmpFile;
+	if (!KIO::NetAccess::download(url, tmpFile)) {
+		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.").arg(url.prettyURL()));
+		return;
+	}
+
+	KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile, winId(), KWallet::Wallet::Path);
+	if (w && w->isOpen()) {
+		MergePlan mp = Prompt;
+		QStringList fl = w->folderList();
+		for (QStringList::ConstIterator f = fl.constBegin(); f != fl.constEnd(); ++f) {
+			if (!w->setFolder(*f)) {
+				continue;
+			}
+
+			if (!_w->hasFolder(*f)) {
+				_w->createFolder(*f);
+			}
+
+			_w->setFolder(*f);
+			
+			QMap<QString, QMap<QString, QString> > map;
+			int rc;
+			rc = w->readMapList("*", map);
+			if (rc == 0) {
+				QMap<QString, QMap<QString, QString> >::ConstIterator me;
+				for (me = map.constBegin(); me != map.constEnd(); ++me) {
+					bool hasEntry = _w->hasEntry(me.key());
+					if (hasEntry && mp == Prompt) {
+						KBetterThanKDialogBase *bd;
+						bd = new KBetterThanKDialogBase(this);
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(me.key())));
+						mp = (MergePlan)bd->exec();
+						delete bd;
+						bool ok = false;
+						if (mp == Always || mp == Yes) {
+							ok = true;
+						}
+						if (mp == Yes || mp == No) {
+						       	// reset mp
+							mp = Prompt;
+						}
+						if (!ok) {
+							continue;
+						}
+					} else if (hasEntry && mp == Never) {
+						continue;
+					}
+					_w->writeMap(me.key(), me.data());
+				}
+			}
+
+			QMap<QString, QString> pwd;
+			rc = w->readPasswordList("*", pwd);
+			if (rc == 0) {
+				QMap<QString, QString>::ConstIterator pe;
+				for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
+					bool hasEntry = _w->hasEntry(pe.key());
+					if (hasEntry && mp == Prompt) {
+						KBetterThanKDialogBase *bd;
+						bd = new KBetterThanKDialogBase(this);
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(pe.key())));
+						mp = (MergePlan)bd->exec();
+						delete bd;
+						bool ok = false;
+						if (mp == Always || mp == Yes) {
+							ok = true;
+						}
+						if (mp == Yes || mp == No) {
+						       	// reset mp
+							mp = Prompt;
+						}
+						if (!ok) {
+							continue;
+						}
+					} else if (hasEntry && mp == Never) {
+						continue;
+					}
+					_w->writePassword(pe.key(), pe.data());
+				}
+			}
+
+			QMap<QString, QByteArray> ent;
+			rc = w->readEntryList("*", ent);
+			if (rc == 0) {
+				QMap<QString, QByteArray>::ConstIterator ee;
+				for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
+					bool hasEntry = _w->hasEntry(ee.key());
+					if (hasEntry && mp == Prompt) {
+						KBetterThanKDialogBase *bd;
+						bd = new KBetterThanKDialogBase(this);
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(ee.key())));
+						mp = (MergePlan)bd->exec();
+						delete bd;
+						bool ok = false;
+						if (mp == Always || mp == Yes) {
+							ok = true;
+						}
+						if (mp == Yes || mp == No) {
+						       	// reset mp
+							mp = Prompt;
+						}
+						if (!ok) {
+							continue;
+						}
+					} else if (hasEntry && mp == Never) {
+						continue;
+					}
+					_w->writeEntry(ee.key(), ee.data());
+				}
+			}
+		}
+	}
+
+	delete w;
+
+	KIO::NetAccess::removeTempFile(tmpFile);
+	updateDetails();
+	updateEntries();
+	restoreEntry();
 }
 
 
@@ -725,7 +846,6 @@ void KWalletEditor::importXML() {
 	}
 
 	QDomNode n = top.firstChild();
-	enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
 	MergePlan mp = Prompt;
 	while (!n.isNull()) {
 		QDomElement e = n.toElement();
