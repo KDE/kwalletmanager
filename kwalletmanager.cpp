@@ -45,12 +45,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_tray = new KSystemTray(this, "kwalletmanager tray");
-	setIcon(SmallIcon("wallet_closed"));
 	_tray->setPixmap(SmallIcon("wallet_closed"));
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 		if (KWallet::Wallet::isOpen(*it)) {
-			setIcon(SmallIcon("wallet_open"));
 			_tray->setPixmap(SmallIcon("wallet_open"));
 			break;
 		}
@@ -101,7 +99,6 @@ KWalletManager::~KWalletManager() {
 
 
 void KWalletManager::aWalletWasOpened() {
-	setIcon(SmallIcon("wallet_open"));
 	_tray->setPixmap(SmallIcon("wallet_open"));
 	updateWalletDisplay();
 }
@@ -191,7 +188,6 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
-	setIcon(SmallIcon("wallet_closed"));
 	_tray->setPixmap(SmallIcon("wallet_closed"));
 	possiblyQuit();
 }

@@ -1,9 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Wallet Management Tool
+Name[es]=Herramienta de gestión de cartera
+Name[pt_BR]=Ferramenta de Gerenciamento Wallet
+Name[sv]=Hanteringsverktyg för plånbok
+Name[xx]=xxWallet Management Toolxx
 Exec=kwalletmanager
 TerminalOptions=
-Icon=password
+Icon=kwallet
 Type=Application
 Terminal=0
 X-KDE-StartupNotify=false

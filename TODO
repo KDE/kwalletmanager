@@ -2,10 +2,8 @@ Things left:
 
 Client:
 - Wallet icons
-- Bug: Application icon doesn't work
 - fix initial sizes, layouts
 - Fix HTML
-- Install icons, .desktop file
 
 Backend:
 - Fix encryption
