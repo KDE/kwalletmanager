@@ -38,6 +38,7 @@ class KWMapEditor : public QTable {
 		void erase();
 		void contextMenu(int row, int col, const QPoint& pos);
 		void addEntry();
+		void emitDirty();
 
 	protected:
 		virtual QWidget *beginEdit(int row, int col, bool replace);
