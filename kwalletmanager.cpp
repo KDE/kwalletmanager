@@ -61,6 +61,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 
 	updateWalletDisplay();
 	setCentralWidget(_iconView);
+	_iconView->setMinimumSize(320, 200);
 
 	_dcopRef = new DCOPRef("kded", "kwalletd");
 	_dcopRef->dcopClient()->setNotifications(true);

@@ -29,6 +29,8 @@ class KAction;
 class QIconViewItem;
 class QListViewItem;
 class KHTMLPart;
+class KWalletFolderIconView;
+class KWalletEntryList;
 
 class KWalletEditor : public KMainWindow {
 	Q_OBJECT
@@ -77,6 +79,8 @@ class KWalletEditor : public KMainWindow {
 		QString _walletName;
 		KWallet::Wallet *_w;
 		WalletWidget *_ww;
+		KWalletFolderIconView *_folderView;
+		KWalletEntryList *_entryList;
 		KAction *_newFolderAction, *_deleteFolderAction;
 		KHTMLPart *_details;
 		QStringList _entries;

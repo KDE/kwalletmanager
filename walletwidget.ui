@@ -24,14 +24,14 @@
         </property>
         <widget class="QSplitter" row="0" column="0">
             <property name="name">
-                <cstring>splitter7</cstring>
+                <cstring>_midSplitter</cstring>
             </property>
             <property name="orientation">
                 <enum>Vertical</enum>
             </property>
             <widget class="QSplitter">
                 <property name="name">
-                    <cstring>splitter1</cstring>
+                    <cstring>_topSplitter</cstring>
                 </property>
                 <property name="orientation">
                     <enum>Horizontal</enum>
@@ -47,22 +47,34 @@
                         <enum>Plain</enum>
                     </property>
                 </widget>
-                <widget class="KWalletFolderIconView">
+                <widget class="QFrame">
                     <property name="name">
-                        <cstring>_folderView</cstring>
+                        <cstring>_folderViewFrame</cstring>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Plain</enum>
                     </property>
                 </widget>
             </widget>
             <widget class="QSplitter">
                 <property name="name">
-                    <cstring>splitter6</cstring>
+                    <cstring>_bottomSplitter</cstring>
                 </property>
                 <property name="orientation">
                     <enum>Horizontal</enum>
                 </property>
-                <widget class="KWalletEntryList">
+                <widget class="QFrame">
                     <property name="name">
-                        <cstring>_entryList</cstring>
+                        <cstring>_entryListFrame</cstring>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Plain</enum>
                     </property>
                 </widget>
                 <widget class="QLayoutWidget">
@@ -410,8 +422,5 @@
         </widget>
     </grid>
 </widget>
-<includes>
-    <include location="local" impldecl="in declaration">allyourbase.h</include>
-</includes>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

@@ -48,22 +48,60 @@
 KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char *name)
 : KMainWindow(parent, name), _walletName(wallet) {
 	_ww = new WalletWidget(this, "Wallet Widget");
-	_ww->_folderView->_walletName = wallet;
+	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
+	_details = new KHTMLPart(_ww->_folderDetails, "Folder Details");
+	box->addWidget(_details->widget());
+	_details->setJScriptEnabled(false);
+	_details->setJavaEnabled(false);
+	_details->setMetaRefreshEnabled(false);
+	_details->setPluginsEnabled(false);
+	_details->setOnlyLocalReferences(true);
+
+	box = new QVBoxLayout(_ww->_entryListFrame);
+	_entryList = new KWalletEntryList(_ww->_entryListFrame, "Wallet Entry List");
+	box->addWidget(_entryList);
+
+	_entryList->setEnabled(false);
+	_ww->_folderDetails->setEnabled(false);
+	_ww->_entryStack->setEnabled(false);
+
+	box = new QVBoxLayout(_ww->_folderViewFrame);
+	_folderView = new KWalletFolderIconView(_ww->_folderViewFrame, "Wallet Folder View");
+	box->addWidget(_folderView);
+	_folderView->_walletName = wallet;
+
 	setCentralWidget(_ww);
 
-	connect(_ww->_folderView, SIGNAL(selectionChanged(QIconViewItem*)),
+	// Try to make it look nice
+	resize(600, 600);
+	QValueList<int> sz = _ww->_topSplitter->sizes();
+	int sum = sz[0] + sz[1];
+	sz[0] = sum/2;
+	sz[1] = sum/2;
+	_ww->_topSplitter->setSizes(sz);
+	sz[0] = sum*2/5;
+	sz[1] = sum*3/5;
+	_ww->_bottomSplitter->setSizes(sz);
+
+	sz = _ww->_midSplitter->sizes();
+	sum = sz[0] + sz[1];
+	sz[0] = sum/3;
+	sz[1] = sum*2/3;
+	_ww->_midSplitter->setSizes(sz);
+
+	connect(_folderView, SIGNAL(selectionChanged(QIconViewItem*)),
 		this, SLOT(folderSelectionChanged(QIconViewItem*)));
-	connect(_ww->_entryList, SIGNAL(selectionChanged(QListViewItem*)),
+	connect(_entryList, SIGNAL(selectionChanged(QListViewItem*)),
 		this, SLOT(entrySelectionChanged(QListViewItem*)));
-	connect(_ww->_entryList,
+	connect(_entryList,
 		SIGNAL(contextMenuRequested(QListViewItem*,const QPoint&,int)),
 		this,
 		SLOT(listContextMenuRequested(QListViewItem*,const QPoint&,int)));
-	connect(_ww->_entryList,
+	connect(_entryList,
 		SIGNAL(itemRenamed(QListViewItem*, int, const QString&)),
 		this,
 		SLOT(listItemRenamed(QListViewItem*, int, const QString&)));
-	connect(_ww->_folderView,
+	connect(_folderView,
 		SIGNAL(contextMenuRequested(QIconViewItem*,const QPoint&)),
 		this,
 		SLOT(iconContextMenuRequested(QIconViewItem*,const QPoint&)));
@@ -87,10 +125,10 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 	connect(_ww->_mapEntry, SIGNAL(activated(int)),
 		this, SLOT(mapEntryChanged(int)));
 
-	_passItems = new QListViewItem(_ww->_entryList, i18n("Passwords"));
-	_mapItems = new QListViewItem(_ww->_entryList, i18n("Maps"));
-	_binaryItems = new QListViewItem(_ww->_entryList, i18n("Binary Data"));
-	_unknownItems = new QListViewItem(_ww->_entryList, i18n("Unknown"));
+	_passItems = new QListViewItem(_entryList, i18n("Passwords"));
+	_mapItems = new QListViewItem(_entryList, i18n("Maps"));
+	_binaryItems = new QListViewItem(_entryList, i18n("Binary Data"));
+	_unknownItems = new QListViewItem(_entryList, i18n("Unknown"));
 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
@@ -99,19 +137,6 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 		connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
 		updateFolderList();
 	}
-
-	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
-	_details = new KHTMLPart(_ww->_folderDetails, "Folder Details");
-	box->addWidget(_details->widget());
-	_details->setJScriptEnabled(false);
-	_details->setJavaEnabled(false);
-	_details->setMetaRefreshEnabled(false);
-	_details->setPluginsEnabled(false);
-	_details->setOnlyLocalReferences(true);
-
-	_ww->_entryList->setEnabled(false);
-	_ww->_folderDetails->setEnabled(false);
-	_ww->_entryStack->setEnabled(false);
 
 	createActions();
 	createGUI("kwalleteditor.rc");
@@ -156,7 +181,7 @@ void KWalletEditor::createActions() {
 void KWalletEditor::walletClosed() {
 	delete _w;
 	_w = 0L;
-	_ww->_folderView->clear();
+	_folderView->clear();
 	folderSelectionChanged(0L);
 	_ww->setEnabled(false);
 	emit enableFolderActions(false);
@@ -168,7 +193,7 @@ void KWalletEditor::updateFolderList() {
 QStringList fl = _w->folderList();
 QPtrStack<QIconViewItem> trash;
 
-	for (QIconViewItem *item = _ww->_folderView->firstItem(); item; item = item->nextItem()) {
+	for (QIconViewItem *item = _folderView->firstItem(); item; item = item->nextItem()) {
 		if (!fl.contains(item->text())) {
 			trash.push(item);
 		}
@@ -178,8 +203,8 @@ QPtrStack<QIconViewItem> trash;
 	trash.clear();
 
 	for (QStringList::Iterator i = fl.begin(); i != fl.end(); ++i) {
-		if (!_ww->_folderView->findItem(*i)) {
-			new KWalletFolderItem(_w, _ww->_folderView, *i);
+		if (!_folderView->findItem(*i)) {
+			new KWalletFolderItem(_w, _folderView, *i);
 		}
 	}
 }
@@ -187,9 +212,9 @@ QPtrStack<QIconViewItem> trash;
 
 void KWalletEditor::deleteFolder() {
 	if (_w) {
-		QIconViewItem *ivi = _ww->_folderView->currentItem();
+		QIconViewItem *ivi = _folderView->currentItem();
 		if (ivi) {
-			int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_ww->_folderView->currentItem()->text()));
+			int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_folderView->currentItem()->text()));
 			if (rc == KMessageBox::Yes) {
 				// FIXME: error handling
 				_w->removeFolder(ivi->text());
@@ -216,7 +241,7 @@ void KWalletEditor::createFolder() {
 				return;
 			}
 
-			if (_ww->_folderView->findItem(n)) {
+			if (_folderView->findItem(n)) {
 				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"));
 				if (rc == KMessageBox::Yes) {
 					continue;
@@ -234,7 +259,7 @@ void KWalletEditor::createFolder() {
 
 void KWalletEditor::saveEntry() {
 	int rc = 1;
-	QListViewItem *item = _ww->_entryList->currentItem();
+	QListViewItem *item = _entryList->currentItem();
 	_ww->_saveChanges->setEnabled(false);
 	_ww->_undoChanges->setEnabled(false);
 
@@ -258,7 +283,7 @@ void KWalletEditor::saveEntry() {
 
 
 void KWalletEditor::restoreEntry() {
-	entrySelectionChanged(_ww->_entryList->currentItem());
+	entrySelectionChanged(_entryList->currentItem());
 }
 
 
@@ -349,7 +374,7 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 		}
 		entrySelectionChanged(0L);
 	}
-	_ww->_entryList->setEnabled(item && _w);
+	_entryList->setEnabled(item && _w);
 	_ww->_folderDetails->setEnabled(item && _w);
 	_ww->_entryName->setText(QString::null);
 	_ww->_entryStack->raiseWidget(int(0));
@@ -368,7 +393,7 @@ void KWalletEditor::updateDetails() {
 
 	_details->begin();
 	_details->write(page
-			.arg(_ww->_folderView->currentItem()->text())
+			.arg(_folderView->currentItem()->text())
 			.arg(i18n("Contains one item.", "Contains %n items." ,_entries.count())));
 	_details->end();
 }
@@ -407,7 +432,7 @@ QPtrStack<QListViewItem> trash;
 
 	// Add new entries
 	for (QStringList::Iterator i = _entries.begin(); i != _entries.end(); ++i) {
-		QListViewItem *si = _ww->_entryList->findItem(*i, 0);
+		QListViewItem *si = _entryList->findItem(*i, 0);
 		if (si && si->parent()) {
 			continue;
 		}
@@ -429,7 +454,7 @@ QPtrStack<QListViewItem> trash;
 		}
 	}
 
-	entrySelectionChanged(_ww->_entryList->currentItem());
+	entrySelectionChanged(_entryList->currentItem());
 }
 
 
@@ -470,7 +495,7 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 
 
 void KWalletEditor::newEntry() {
-QListViewItem *item = _ww->_entryList->selectedItem();
+QListViewItem *item = _entryList->selectedItem();
 QString n;
 
 	do {
@@ -485,7 +510,7 @@ QString n;
 		}
 
 		// FIXME: prohibits the use of the subheadings
-		if (_ww->_entryList->findItem(n, 0)) {
+		if (_entryList->findItem(n, 0)) {
 			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"));
 			if (rc == KMessageBox::Yes) {
 				continue;
@@ -517,7 +542,7 @@ QString n;
 
 
 void KWalletEditor::renameEntry() {
-QListViewItem *item = _ww->_entryList->selectedItem();
+QListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		item->startRename(0);
 	}
@@ -555,7 +580,7 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 
 
 void KWalletEditor::deleteEntry() {
-QListViewItem *item = _ww->_entryList->selectedItem();
+QListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		_w->removeEntry(item->text(0));
 		delete item;
@@ -564,7 +589,7 @@ QListViewItem *item = _ww->_entryList->selectedItem();
 
 
 void KWalletEditor::updateEntries(const QString& folder) {
-QIconViewItem *ivi = _ww->_folderView->currentItem();
+QIconViewItem *ivi = _folderView->currentItem();
 
 	if (ivi && ivi->text() == folder) {
 		_entries = _w->entryList();
