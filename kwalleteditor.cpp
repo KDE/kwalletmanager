@@ -561,7 +561,7 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 			return;
 		}
 
-		if (!_w) {
+		if (!_w || t.isEmpty()) {
 			i->setText(0, i->oldName());
 			return;
 		}
