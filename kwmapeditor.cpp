@@ -103,6 +103,11 @@ void KWMapEditor::addEntry() {
 }
 
 
+void KWMapEditor::emitDirty() {
+	emit dirty();
+}
+
+
 void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 	Q_UNUSED(row)
 	Q_UNUSED(col)
@@ -116,7 +121,7 @@ void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 class InlineEditor : public QTextEdit {
 	public:
 		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { setWFlags(WStyle_NoBorder | WDestructiveClose); KWin::setType(winId(), NET::Override); }
-		virtual ~InlineEditor() { _p->setText(row, col, text()); }
+		virtual ~InlineEditor() { _p->setText(row, col, text()); _p->emitDirty(); }
 
 	protected:
 		virtual void focusOutEvent(QFocusEvent*) { 
