@@ -40,6 +40,8 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 
                 QPixmap loadSystemTrayIcon(const QString &icon);
 
+		void kwalletdLaunch();
+
 	public slots:
 		void createWallet();
 		void deleteWallet(const QString& walletName);
@@ -75,6 +77,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		KWalletIconView *_iconView;
 		DCOPRef *_dcopRef;
 		QPtrList<KMainWindow> _windows;
+		bool _kwalletdLaunch;
 };
 
 #endif

@@ -12,7 +12,7 @@ METASOURCES = AUTO
 noinst_HEADERS = kwalletmanager.h kwalletpopup.h walletwidget.h kwalleteditor.h\
 		allyourbase.h kwmapeditor.h
 
-xdg_apps_DATA = kwalletmanager.desktop
+xdg_apps_DATA = kwalletmanager.desktop kwalletmanager-kwalletd.desktop
 
 KDE_ICON = kwalletmanager
 

@@ -46,6 +46,7 @@
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
+	_kwalletdLaunch = false;
 	QAccel *accel = new QAccel(this, "kwalletmanager");
 
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
@@ -138,6 +139,12 @@ KWalletManager::~KWalletManager() {
 	_dcopRef = 0L;
 }
 
+
+void KWalletManager::kwalletdLaunch() {
+	_kwalletdLaunch = true;
+}
+
+
 bool KWalletManager::queryClose() {
 	if (!_shuttingDown && !kapp->sessionSaving()) {
 		if (!_tray) {
@@ -149,6 +156,7 @@ bool KWalletManager::queryClose() {
 	}
 	return true;
 }
+
 
 void KWalletManager::aWalletWasOpened() {
 	if (_tray) {
@@ -289,7 +297,7 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
-	if ( _tray ) {
+	if (_tray) {
 		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 		QToolTip::remove(_tray);
 		QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
@@ -303,7 +311,8 @@ void KWalletManager::possiblyQuit() {
 	cfg.setGroup("Wallet");
 	if (_windows.isEmpty() &&
 			!isVisible() &&
-			!cfg.readBoolEntry("Leave Manager Open", false)) {
+			!cfg.readBoolEntry("Leave Manager Open", false) &&
+			_kwalletdLaunch) {
 		kapp->quit();
 	}
 }
@@ -358,18 +367,22 @@ void KWalletManager::createWallet() {
 	}
 }
 
+
 void KWalletManager::shuttingDown() {
 	_shuttingDown = true;
 	kapp->quit();
 }
 
+
 void KWalletManager::setupWallet() {
 	KApplication::startServiceByDesktopName("kwallet_config");
 }
 
+
 void KWalletManager::closeAllWallets() {
 	_dcopRef->call("closeAllWallets");
 }
+
 
 QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon) {
 #if KDE_IS_VERSION(3, 1, 90)

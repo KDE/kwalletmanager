@@ -34,23 +34,24 @@
 
 class MyApp : public KUniqueApplication {
 	public:
-		MyApp() : KUniqueApplication() {}
+		MyApp() : KUniqueApplication() { ref(); }
 		virtual ~MyApp() {}
 
 		virtual int newInstance() { return 0; }
 };
 
 int main(int argc, char **argv) {
-static KCmdLineOptions options[] = {
-	{"show", I18N_NOOP("Show window on startup"), 0},
-	{"+name", I18N_NOOP("A wallet name"), 0},
-	KCmdLineLastOption
-};
+	static KCmdLineOptions options[] = {
+		{"show", I18N_NOOP("Show window on startup"), 0},
+		{"kwalletd", I18N_NOOP("For use by kwalletd only"), 0},
+		{"+name", I18N_NOOP("A wallet name"), 0},
+		KCmdLineLastOption
+	};
 
 	KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.0",
 		I18N_NOOP("KDE Wallet Management Tool"),
 		KAboutData::License_GPL,
-		I18N_NOOP("(c) 2003 George Staikos"), 0,
+		I18N_NOOP("(c) 2003,2004 George Staikos"), 0,
 		"http://www.kde.org/");
 
 	about.addAuthor("George Staikos", I18N_NOOP("Primary author and maintainer"), "staikos@kde.org");
@@ -75,6 +76,10 @@ static KCmdLineOptions options[] = {
 
 	if (args->isSet("show")) {
 		wm.show();
+	}
+
+	if (args->isSet("kwalletd")) {
+		wm.kwalletdLaunch();
 	}
 
 	for (int i = 0; i < args->count(); ++i) {
