@@ -33,6 +33,9 @@ K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"));
 
 KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringList&)
 : KCModule(KWalletFactory::instance(), parent, name) {
+
+	_cfg = new KConfig("kwalletrc", false, false);
+
 	QVBoxLayout *vbox = new QVBoxLayout(this, KDialog::marginHint(), KDialog::spacingHint());
 	vbox->add(_wcw = new WalletConfigWidget(this));
 	connect(_wcw->_launchManager, SIGNAL(clicked()), this, SLOT(configChanged()));
@@ -45,6 +48,8 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 
 
 KWalletConfig::~KWalletConfig() {
+	delete _cfg;
+	_cfg = 0L;
 }
 
 
@@ -54,7 +59,7 @@ void KWalletConfig::configChanged() {
 
 
 void KWalletConfig::load() {
-	KConfigGroup config(kapp->config(), "Wallet");
+	KConfigGroup config(_cfg, "Wallet");
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
 	_wcw->_leaveManagerOpen->setChecked(config.readBoolEntry("Leave Manager Open", false));
 	_wcw->_leaveOpen->setChecked(config.readBoolEntry("Leave Open", false));
@@ -65,7 +70,7 @@ void KWalletConfig::load() {
 
 
 void KWalletConfig::save() {
-	KConfigGroup config(kapp->config(), "Wallet");
+	KConfigGroup config(_cfg, "Wallet");
 	config.writeEntry("Launch Manager", _wcw->_launchManager->isChecked());
 	config.writeEntry("Leave Manager Open", _wcw->_leaveManagerOpen->isChecked());
 	config.writeEntry("Leave Open", _wcw->_leaveOpen->isChecked());

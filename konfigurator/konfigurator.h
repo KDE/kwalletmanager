@@ -22,6 +22,7 @@
 
 #include <kcmodule.h>
 
+class KConfig;
 class WalletConfigWidget;
 
 class KWalletConfig : public KCModule {
@@ -42,6 +43,7 @@ class KWalletConfig : public KCModule {
 
 	private:
 		WalletConfigWidget *_wcw;
+		KConfig *_cfg;
 };
 
 #endif
