@@ -50,6 +50,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_leaveManagerOpen, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_leaveOpen, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_closeIdle, SIGNAL(clicked()), this, SLOT(configChanged()));
+	connect(_wcw->_openPrompt, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_storeTogether, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_idleTime, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
 	connect(_wcw->_launch, SIGNAL(clicked()), this, SLOT(launchManager()));
@@ -153,6 +154,7 @@ void KWalletConfig::configChanged() {
 void KWalletConfig::load() {
 	KConfigGroup config(_cfg, "Wallet");
 	_wcw->_enabled->setChecked(config.readBoolEntry("Enabled", true));
+	_wcw->_openPrompt->setChecked(config.readBoolEntry("Prompt on Open", true));
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
 	_wcw->_leaveManagerOpen->setChecked(config.readBoolEntry("Leave Manager Open", false));
 	_wcw->_leaveOpen->setChecked(config.readBoolEntry("Leave Open", false));
@@ -172,6 +174,7 @@ void KWalletConfig::save() {
 	config.writeEntry("Close When Idle", _wcw->_closeIdle->isChecked());
 	config.writeEntry("Use One Wallet", _wcw->_storeTogether->isChecked());
 	config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
+	config.writeEntry("Prompt on Open", _wcw->_openPrompt->isChecked());
 
 	_cfg->sync();
 	DCOPRef("kded", "kwalletd").call("reconfigure()");
@@ -182,6 +185,7 @@ void KWalletConfig::save() {
 
 void KWalletConfig::defaults() {
 	_wcw->_enabled->setChecked(true);
+	_wcw->_openPrompt->setChecked(true);
 	_wcw->_launchManager->setChecked(true);
 	_wcw->_leaveManagerOpen->setChecked(false);
 	_wcw->_leaveOpen->setChecked(false);

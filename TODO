@@ -5,10 +5,12 @@ Client:
 - Map editor can't handle multiline values
 
 Backend:
-- allow unpassworded wallet?
 - test 64 bit, zSeries
 - fix blocking issues
 - investigate timestamping
+- Configuration panel
+	-> Implement idle timers
+	-> Implement wallet name settings
 
 Integration:
 - Cookie jar
@@ -18,17 +20,10 @@ Integration:
 
 
 Future ideas:
-- Timeout for KWallet::Wallet to close the wallet automatically.
 - Ability to hide entries and only show their values after clicking on an
   "expose" button.
 - Possibly provide metadata (wallet comment, statistics, etc)
-- Configuration panel
-	-> "Don't prompt when apps try to access an open wallet"
-	-> "Don't launch wallet manager on wallet open"
-	-> Leave wallet open when all apps are done with it
-	-> Don't close kwalletmanager when all wallets are closed
-	-> Crypto algorithm to use
-	-> Random source
+- Configurable crypto algorithm to use
 - File association of kwallet type to kwalletmanager
 	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
 - Make it a kpart

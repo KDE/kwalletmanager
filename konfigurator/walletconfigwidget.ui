@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>525</width>
-            <height>378</height>
+            <height>368</height>
         </rect>
     </property>
     <property name="caption">
@@ -19,6 +19,17 @@
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
+        <widget class="QCheckBox" row="0" column="0">
+            <property name="name">
+                <cstring>_enabled</cstring>
+            </property>
+            <property name="text">
+                <string>Enable the KDE wallet subsystem.</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
         <widget class="QLayoutWidget" row="3" column="0">
             <property name="name">
                 <cstring>layout5</cstring>
@@ -54,17 +65,6 @@
                 </widget>
             </hbox>
         </widget>
-        <widget class="QCheckBox" row="0" column="0">
-            <property name="name">
-                <cstring>_enabled</cstring>
-            </property>
-            <property name="text">
-                <string>Enable the KDE wallet subsystem.</string>
-            </property>
-            <property name="checked">
-                <bool>true</bool>
-            </property>
-        </widget>
         <spacer row="2" column="0">
             <property name="name">
                 <cstring>spacer1</cstring>
@@ -78,7 +78,7 @@
             <property name="sizeHint">
                 <size>
                     <width>31</width>
-                    <height>30</height>
+                    <height>16</height>
                 </size>
             </property>
         </spacer>
@@ -199,41 +199,18 @@
                         <string>Automatically close idle wallets.</string>
                     </property>
                 </widget>
-                <widget class="QLayoutWidget" row="4" column="0" rowspan="1" colspan="2">
+                <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
                     <property name="name">
-                        <cstring>layout2</cstring>
+                        <cstring>_storeTogether</cstring>
                     </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="QLabel">
-                            <property name="name">
-                                <cstring>textLabel2</cstring>
-                            </property>
-                            <property name="text">
-                                <string>Preferred Random Source:</string>
-                            </property>
-                            <property name="buddy" stdset="0">
-                                <cstring>_randomSource</cstring>
-                            </property>
-                        </widget>
-                        <widget class="QComboBox">
-                            <property name="name">
-                                <cstring>_randomSource</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>1</hsizetype>
-                                    <vsizetype>0</vsizetype>
-                                    <horstretch>1</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                        </widget>
-                    </hbox>
+                    <property name="text">
+                        <string>Store local and network passwords in the same wallet.</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
                 </widget>
-                <widget class="QLayoutWidget" row="5" column="0" rowspan="1" colspan="2">
+                <widget class="QLayoutWidget" row="6" column="0" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>layout7</cstring>
                     </property>
@@ -275,18 +252,7 @@
                         </widget>
                     </hbox>
                 </widget>
-                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>_storeTogether</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Store local and network passwords in the same wallet.</string>
-                    </property>
-                    <property name="checked">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="QLayoutWidget" row="7" column="0" rowspan="1" colspan="2">
+                <widget class="QLayoutWidget" row="8" column="0" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>layout8</cstring>
                     </property>
@@ -337,6 +303,17 @@
                         </widget>
                     </hbox>
                 </widget>
+                <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>_openPrompt</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Prompt when an application accesses an open wallet.</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                </widget>
             </grid>
         </widget>
     </grid>
@@ -386,7 +363,6 @@
     <tabstop>_idleTime</tabstop>
     <tabstop>_leaveOpen</tabstop>
     <tabstop>_leaveManagerOpen</tabstop>
-    <tabstop>_randomSource</tabstop>
     <tabstop>_defaultWallet</tabstop>
     <tabstop>_newWallet</tabstop>
     <tabstop>_storeTogether</tabstop>
