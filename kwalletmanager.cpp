@@ -159,7 +159,8 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 		connect(p, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
 		connect(p, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
 		connect(p, SIGNAL(walletCreated()), this, SLOT(createWallet()));
-		p->popup(pos);
+		p->exec(pos);
+                delete p;
 	}
 }
 
