@@ -721,11 +721,7 @@ void KWalletEditor::exportXML() {
 	KURL url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
 
 	if (!url.isEmpty()) {
-		if (!url.isLocalFile()) {
-			KIO::NetAccess::upload(tf.name(), url, this);
-		} else {
-			KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
-		}
+		KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
 	}
 }
 
