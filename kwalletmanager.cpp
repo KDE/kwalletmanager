@@ -288,8 +288,8 @@ void KWalletManager::possiblyQuit() {
 	cfg.setGroup("Wallet");
 	if (_windows.isEmpty() &&
 			!isVisible() &&
-			cfg.readBoolEntry("Leave Manager Open", false)) {
-		close();
+			!cfg.readBoolEntry("Leave Manager Open", false)) {
+		kapp->quit();
 	}
 }
 
