@@ -126,7 +126,7 @@ void KWalletConfig::newLocalWallet() {
 	}
 
 	updateWalletLists();
-	
+
 	_wcw->_localWallet->setCurrentText(n);
 
 	emit changed(true);
@@ -140,7 +140,7 @@ void KWalletConfig::newNetworkWallet() {
 	}
 
 	updateWalletLists();
-	
+
 	_wcw->_defaultWallet->setCurrentText(n);
 
 	emit changed(true);
@@ -250,6 +250,7 @@ void KWalletConfig::defaults() {
 	_wcw->_idleTime->setValue(10);
 	_wcw->_defaultWallet->setCurrentItem(0);
 	_wcw->_localWalletSelected->setChecked(false);
+        _wcw->_localWallet->setCurrentItem( 0 );
 	_wcw->_accessList->clear();
 	emit changed(true);
 }
