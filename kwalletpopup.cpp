@@ -60,7 +60,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 		insertItem(i18n("Disconnec&t"), pm);
 	}
 
-	act = new KAction(KStdGuiItem::close().text(), 0, 0, this,
+	act = KStdAction::close( this,
 			SLOT(closeWallet()), ac, "wallet_close");
 	// FIXME: let's track this inside the manager so we don't need a dcop
 	//        roundtrip here.
