@@ -26,7 +26,7 @@
 #include <kconfig.h>
 #include <kdialog.h>
 #include <kgenericfactory.h>
-#include <kinputdialog.h>
+#include <klineeditdlg.h>
 #include <kpopupmenu.h>
 #include <kwallet.h>
 
@@ -101,7 +101,7 @@ void KWalletConfig::updateWalletLists() {
 QString KWalletConfig::newWallet() {
 	bool ok;
 
-	QString n = KInputDialog::getText(i18n("New Wallet"),
+	QString n = KLineEditDlg::getText(i18n("New Wallet"),
 			i18n("Please choose a name for the new wallet:"),
 			QString::null,
 			&ok,

@@ -31,7 +31,7 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <kiconview.h>
-#include <kinputdialog.h>
+#include <klineeditdlg.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstdaction.h>
@@ -252,7 +252,7 @@ void KWalletManager::createWallet() {
 	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
 
 	do {
-		n = KInputDialog::getText(i18n("New Wallet"),
+		n = KLineEditDlg::getText(i18n("New Wallet"),
 				i18n("Please choose a name for the new wallet:"),
 				QString::null,
 				&ok,

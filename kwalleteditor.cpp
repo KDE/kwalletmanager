@@ -169,8 +169,8 @@ void KWalletEditor::slotConfigureKeys()
 }
 
 void KWalletEditor::createActions() {
-	_newFolderAction = new KAction(i18n("&New Folder..."), 0, 0, this,
-			SLOT(createFolder()), actionCollection(),
+	_newFolderAction = new KAction(i18n("&New Folder..."), "folder_new",
+			0, this, SLOT(createFolder()), actionCollection(),
 			"create_folder");
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
@@ -234,7 +234,7 @@ void KWalletEditor::deleteFolder() {
 			if (rc == KMessageBox::Yes) {
 				int rc = _w->removeFolder(ivi->text());
 				if (rc != 0) {
-					KMessageBox::sorry(this, i18n("Error creating folder.  Error code=%1").arg(rc));
+					KMessageBox::sorry(this, i18n("Error deleting folder.  Error code=%1").arg(rc));
 					return;
 				}
 				updateFolderList();
@@ -248,15 +248,16 @@ void KWalletEditor::deleteFolder() {
 void KWalletEditor::createFolder() {
 	if (_w) {
 		QString n;
+		bool ok;
 
 		do {
 			n = KLineEditDlg::getText(i18n("New Folder"),
 					i18n("Please choose a name for the new folder:"),
 					QString::null,
-					0L,
+					&ok,
 					this);
 
-			if (n.isEmpty()) {
+			if (!ok) {
 				return;
 			}
 
@@ -514,17 +515,18 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 
 
 void KWalletEditor::newEntry() {
-QListViewItem *item = _entryList->selectedItem();
-QString n;
+	QListViewItem *item = _entryList->selectedItem();
+	QString n;
+	bool ok;
 
 	do {
 		n = KLineEditDlg::getText(i18n("New Entry"),
 				i18n("Please choose a name for the new entry:"),
 				QString::null,
-				0L,
+				&ok,
 				this);
 
-		if (n.isEmpty()) {
+		if (!ok) {
 			return;
 		}
 
@@ -631,7 +633,7 @@ void KWalletEditor::walletOpened(bool success) {
 	if (success) {
 		updateFolderList();
 	} else {
-		KMessageBox::sorry(this, i18n("Unable to open the wallet."));
+		KMessageBox::sorry(this, i18n("Unable to open the requested wallet."));
 	}
 }
 
