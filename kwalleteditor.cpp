@@ -371,10 +371,10 @@ void KWalletEditor::updateEntries() {
 			new KWalletEntryItem(_w, _passItems, *i);
 			break;
 		case KWallet::Wallet::Stream:
-			new KWalletEntryItem(_w, _mapItems, *i);
+			new KWalletEntryItem(_w, _binaryItems, *i);
 			break;
 		case KWallet::Wallet::Map:
-			new KWalletEntryItem(_w, _binaryItems, *i);
+			new KWalletEntryItem(_w, _mapItems, *i);
 			break;
 		case KWallet::Wallet::Unknown:
 		default:

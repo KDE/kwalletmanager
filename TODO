@@ -1,11 +1,39 @@
 Things left:
 
+Client:
 - Drag and drop of folders between wallets
-- Add a generic "writeEntryType(name,value,type)" method to make the code
-  more extensible
-- File association of kwallet type to kwalletmanager
-	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
 - Wallet icons
 - fix initial sizes, layouts
 - Fix HTML
-- Bug: saved maps end up as binary type for some reason
+- Install icons, .desktop file
+
+Backend:
+- Fix encryption
+- Possibly provide metadata (wallet comment, statistics, etc)
+- Ability to support different crypto backends
+- Move KWallet::Entry to the backend library?
+
+
+KWalletD:
+- Add a generic "writeEntryType(name,value,type)" method to make the code
+  more extensible
+
+
+Integration:
+- KHTML
+- KIO
+- KMail
+
+
+
+Future ideas:
+- Ability to hide entries and only show their values after clicking on an
+  "expose" button.
+- Configuration panel
+	-> "Don't prompt when apps try to access an open wallet"
+	-> "Don't launch wallet manager on wallet open"
+	-> Crypto algorithm to use
+	-> Random source
+- File association of kwallet type to kwalletmanager
+	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
+
