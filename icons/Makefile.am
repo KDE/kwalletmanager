@@ -1,5 +1,5 @@
 KDE_ICON = kwalletmanager
 
-pics_ICON = wallet_closed wallet_open
+pics_ICON = AUTO
 picsdir = $(kde_datadir)/kwalletmanager/icons
 

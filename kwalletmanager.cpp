@@ -30,7 +30,6 @@
 #include <kconfig.h>
 #include <kdebug.h>
 #include <kiconview.h>
-#include <kiconloader.h>
 #include <klineeditdlg.h>
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -47,12 +46,12 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
         _shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
-	_tray->setPixmap(BarIcon("wallet_closed"));
+	_tray->setPixmap(KSystemTray::loadIcon("wallet_closed"));
 	connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 		if (KWallet::Wallet::isOpen(*it)) {
-			_tray->setPixmap(BarIcon("wallet_open"));
+			_tray->setPixmap(KSystemTray::loadIcon("wallet_open"));
 			break;
 		}
 	}
@@ -114,7 +113,7 @@ bool KWalletManager::queryClose() {
 }
 
 void KWalletManager::aWalletWasOpened() {
-	_tray->setPixmap(BarIcon("wallet_open"));
+	_tray->setPixmap(KSystemTray::loadIcon("wallet_open"));
 	updateWalletDisplay();
 }
 
@@ -209,7 +208,7 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
-	_tray->setPixmap(BarIcon("wallet_closed"));
+	_tray->setPixmap(KSystemTray::loadIcon("wallet_closed"));
 	possiblyQuit();
 }
 
