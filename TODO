@@ -6,7 +6,6 @@ Client:
 - Map editor is still buggy
 
 Backend:
-- Possibly provide metadata (wallet comment, statistics, etc)
 - allow unpassworded wallet?
 - test compatibility:
 	- 32 bit, 64 bit, zSeries
@@ -22,6 +21,7 @@ Integration:
 Future ideas:
 - Ability to hide entries and only show their values after clicking on an
   "expose" button.
+- Possibly provide metadata (wallet comment, statistics, etc)
 - Configuration panel
 	-> "Don't prompt when apps try to access an open wallet"
 	-> "Don't launch wallet manager on wallet open"

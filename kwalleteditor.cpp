@@ -294,13 +294,14 @@ void KWalletEditor::restoreEntry() {
 void KWalletEditor::entryEditted() {
 	_ww->_saveChanges->setEnabled(true);
 	_ww->_undoChanges->setEnabled(true);
-	_mapEntryDirty = true;
+	QListViewItem *i = _entryList->currentItem();
+	if (i && i->parent() == _mapItems) {
+		_mapEntryDirty = true;
+	}
 }
 
 
 void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
-	_ww->_saveChanges->setEnabled(false);
-	_ww->_undoChanges->setEnabled(false);
 
 	if (item && _w && item->parent()) {
 		if (item->parent() == _passItems) {
@@ -318,8 +319,6 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 			_ww->_entryStack->raiseWidget(int(2));
 			if (_w->readMap(item->text(0), _currentMap) == 0) {
 				_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
-				_ww->_saveChanges->setEnabled(false);
-				_ww->_undoChanges->setEnabled(false);
 				_ww->_mapEntry->clear();
 				_ww->_mapEntry->insertStringList(_currentMap.keys());
 				_ww->_mapNew->setEnabled(true);
@@ -332,6 +331,8 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 				_currentMapValue = QString::null;
 				_newMapEntry = false;
 				_mapEntryDirty = false;
+				_ww->_saveChanges->setEnabled(false);
+				_ww->_undoChanges->setEnabled(false);
 				return;
 			}
 		} else if (item->parent() == _binaryItems) {
@@ -388,8 +389,11 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 
 void KWalletEditor::updateDetails() {
 	static const QString page = i18n("<html><body>"
-			"<span style=\"text-align: center\"><font size=\"+2\">Folder:</font> <b>%1</b>"
-			"</span><br/>"
+			"<div style=\"margin-left: 3%; margin-right: 3%; background-color: #99ccff\">"
+			"<font size=\"+2\">&nbsp;Folder:</font>"
+			"&nbsp;&nbsp;<font size=\"+1\"><b>%1</b></font>"
+			"</div>"
+			"<br/>"
 			"<ul>"
 			"<li>%2</li>"
 			"</ul>"
@@ -457,8 +461,6 @@ QPtrStack<QListViewItem> trash;
 			break;
 		}
 	}
-
-	entrySelectionChanged(_entryList->currentItem());
 }
 
 
@@ -607,6 +609,7 @@ QIconViewItem *ivi = _folderView->currentItem();
 
 
 void KWalletEditor::saveMapEntry() {
+kdDebug() <<"SAVE MAP ENTRY" << endl;
 	if (_mapEntryDirty) {
 		_currentMap.remove(_currentMapKey);
 		_currentMap[_ww->_mapKey->text()] = _ww->_mapValue->text();
@@ -648,14 +651,19 @@ void KWalletEditor::deleteMapEntry() {
 
 
 void KWalletEditor::mapEntryChanged(int id) {
+kdDebug() << "MAP ENTRY CHANGED " << id << endl;
 	QString entry = _ww->_mapEntry->text(id);
 	saveMapEntry();
 	_ww->_mapKey->setEnabled(true);
 	_ww->_mapValue->setEnabled(true);
 	_currentMapKey = entry;
 	_currentMapValue = _currentMap[entry];
+	_ww->_mapKey->blockSignals(true);
+	_ww->_mapValue->blockSignals(true);
 	_ww->_mapKey->setText(_currentMapKey);
 	_ww->_mapValue->setText(_currentMapValue);
+	_ww->_mapKey->blockSignals(false);
+	_ww->_mapValue->blockSignals(false);
 	_ww->_mapEntry->setCurrentItem(id);
 }
 
