@@ -9,8 +9,11 @@
             <x>0</x>
             <y>0</y>
             <width>614</width>
-            <height>505</height>
+            <height>507</height>
         </rect>
+    </property>
+    <property name="caption">
+        <string></string>
     </property>
     <grid>
         <property name="name">
@@ -82,7 +85,7 @@
                         <property name="name">
                             <cstring>unnamed</cstring>
                         </property>
-                        <widget class="Line" row="2" column="0" rowspan="1" colspan="3">
+                        <widget class="Line" row="2" column="0" rowspan="2" colspan="3">
                             <property name="name">
                                 <cstring>line1</cstring>
                             </property>
@@ -96,7 +99,7 @@
                                 <enum>Horizontal</enum>
                             </property>
                         </widget>
-                        <spacer row="3" column="0">
+                        <spacer row="4" column="0">
                             <property name="name">
                                 <cstring>spacer1</cstring>
                             </property>
@@ -108,12 +111,12 @@
                             </property>
                             <property name="sizeHint">
                                 <size>
-                                    <width>169</width>
+                                    <width>268</width>
                                     <height>21</height>
                                 </size>
                             </property>
                         </spacer>
-                        <widget class="QPushButton" row="3" column="2">
+                        <widget class="QPushButton" row="3" column="2" rowspan="2" colspan="1">
                             <property name="name">
                                 <cstring>_saveChanges</cstring>
                             </property>
@@ -123,8 +126,14 @@
                             <property name="text">
                                 <string>&amp;Save</string>
                             </property>
+                            <property name="accel">
+                                <string>Alt+S</string>
+                            </property>
+                            <property name="iconSet">
+                                <iconset>"filesave"</iconset>
+                            </property>
                         </widget>
-                        <widget class="QPushButton" row="3" column="1">
+                        <widget class="QPushButton" row="3" column="1" rowspan="2" colspan="1">
                             <property name="name">
                                 <cstring>_undoChanges</cstring>
                             </property>
@@ -133,6 +142,12 @@
                             </property>
                             <property name="text">
                                 <string>&amp;Undo</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+U</string>
+                            </property>
+                            <property name="iconSet">
+                                <iconset>"undo"</iconset>
                             </property>
                         </widget>
                         <widget class="QWidgetStack" row="1" column="0" rowspan="1" colspan="3">
@@ -319,6 +334,9 @@
                                         <property name="text">
                                             <string>Show &amp;Contents</string>
                                         </property>
+                                        <property name="accel">
+                                            <string>Alt+C</string>
+                                        </property>
                                     </widget>
                                     <spacer row="1" column="0">
                                         <property name="name">
@@ -382,7 +400,15 @@
         </widget>
     </grid>
 </widget>
+<customwidgets>
+</customwidgets>
+<includes>
+    <include location="global" impldecl="in implementation">kdialog.h</include>
+    <include location="global" impldecl="in implementation">kiconloader.h</include>
+</includes>
+<pixmapfunction>SmallIconSet</pixmapfunction>
 <layoutdefaults spacing="6" margin="11"/>
+<layoutfunctions spacing="KDialog::spacingHint" margin="KDialog::marginHint"/>
 <includehints>
     <includehint>ksqueezedtextlabel.h</includehint>
 </includehints>
