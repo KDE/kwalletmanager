@@ -3,7 +3,6 @@ Things left:
 Client:
 - Wallet icons
 - ability to list usage of wallets?
-- Map editor is still buggy
 
 Backend:
 - allow unpassworded wallet?
