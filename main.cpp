@@ -42,8 +42,8 @@ class MyApp : public KUniqueApplication {
 
 int main(int argc, char **argv) {
 static KCmdLineOptions options[] = {
-	{"show", I18N_NOOP("Show window on startup."), 0},
-	{"+name", I18N_NOOP("A wallet name."), 0},
+	{"show", I18N_NOOP("Show window on startup"), 0},
+	{"+name", I18N_NOOP("A wallet name"), 0},
 	KCmdLineLastOption
 };
 
