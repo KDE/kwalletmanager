@@ -20,5 +20,4 @@ rc_DATA = kwalletmanager.rc kwalleteditor.rc
 rcdir = $(kde_datadir)/kwalletmanager
 
 messages: rc.cpp
-        $(XGETTEXT) *.cpp -o $(podir)/kwallet.pot
-
+	$(XGETTEXT) *.cpp -o $(podir)/kwallet.pot
