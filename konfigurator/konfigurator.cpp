@@ -65,6 +65,11 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 
 	updateWalletLists();
 	load();
+
+	if (DCOPClient::mainClient()->isApplicationRegistered("kwalletmanager")) {
+		_wcw->_launch->hide();
+	}
+
 }
 
 
