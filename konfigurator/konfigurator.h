@@ -43,6 +43,8 @@ class KWalletConfig : public KCModule {
 		void launchManager();
 		void newLocalWallet();
 		void newNetworkWallet();
+		void updateWalletLists();
+		QString newWallet();
 
 	private:
 		WalletConfigWidget *_wcw;

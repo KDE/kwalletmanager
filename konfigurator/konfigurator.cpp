@@ -25,6 +25,8 @@
 #include <kconfig.h>
 #include <kdialog.h>
 #include <kgenericfactory.h>
+#include <klineeditdlg.h>
+#include <kwallet.h>
 #include <qcheckbox.h>
 #include <qcombobox.h>
 #include <qlayout.h>
@@ -54,6 +56,8 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
+
+	updateWalletLists();
 	load();
 }
 
@@ -64,11 +68,74 @@ KWalletConfig::~KWalletConfig() {
 }
 
 
+void KWalletConfig::updateWalletLists() {
+	QString p1, p2;
+	p1 = _wcw->_localWallet->currentText();
+	p2 = _wcw->_defaultWallet->currentText();
+
+	_wcw->_localWallet->clear();
+	_wcw->_defaultWallet->clear();
+
+	QStringList wl = KWallet::Wallet::walletList();
+	_wcw->_localWallet->insertStringList(wl);
+	_wcw->_defaultWallet->insertStringList(wl);
+
+	if (wl.contains(p1)) {
+		_wcw->_localWallet->setCurrentText(p1);
+	}
+
+	if (wl.contains(p2)) {
+		_wcw->_defaultWallet->setCurrentText(p2);
+	}
+}
+
+
+QString KWalletConfig::newWallet() {
+	QString n = KLineEditDlg::getText(i18n("New Wallet"),
+			i18n("Please choose a name for the new wallet:"),
+			QString::null,
+			0L,
+			this);
+
+	if (n.isEmpty()) {
+		return QString::null;
+	}
+
+	KWallet::Wallet *w = KWallet::Wallet::openWallet(n);
+	if (!w) {
+		return QString::null;
+	}
+
+	delete w;
+	return n;
+}
+
+
 void KWalletConfig::newLocalWallet() {
+	QString n = newWallet();
+	if (n.isEmpty()) {
+		return;
+	}
+
+	updateWalletLists();
+	
+	_wcw->_localWallet->setCurrentText(n);
+
+	emit changed(true);
 }
 
 
 void KWalletConfig::newNetworkWallet() {
+	QString n = newWallet();
+	if (n.isEmpty()) {
+		return;
+	}
+
+	updateWalletLists();
+	
+	_wcw->_defaultWallet->setCurrentText(n);
+
+	emit changed(true);
 }
 
 
