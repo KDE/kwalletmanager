@@ -101,6 +101,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 			0, this, SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
 	act->plug(_tray->contextMenu());
+	act = new KAction(i18n("Close &All Wallets"), 0, 0, this,
+			SLOT(closeAllWallets()), actionCollection(),
+			"close_all_wallets");
+	act->plug(_tray->contextMenu());
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
         KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
 
@@ -229,16 +233,18 @@ void KWalletManager::openWalletFile(const QString& path) {
 
 void KWalletManager::openWallet()
 {
-    QIconViewItem *item = _iconView->currentItem();
-    if ( item )
-        openWallet(item->text() );
+	QIconViewItem *item = _iconView->currentItem();
+	if (item) {
+		openWallet(item->text());
+	}
 }
 
 void KWalletManager::deleteWallet()
 {
-    QIconViewItem *item = _iconView->currentItem();
-    if ( item )
-        deleteWallet(item->text() );
+	QIconViewItem *item = _iconView->currentItem();
+	if (item) {
+		deleteWallet(item->text());
+	}
 }
 
 void KWalletManager::openWallet(const QString& walletName) {
@@ -342,6 +348,10 @@ void KWalletManager::shuttingDown() {
 
 void KWalletManager::setupWallet() {
 	KApplication::startServiceByDesktopName("kwallet_config");
+}
+
+void KWalletManager::closeAllWallets() {
+	_dcopRef->call("closeAllWallets");
 }
 
 QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon)

@@ -1,8 +1,9 @@
 <!DOCTYPE kpartgui>
-<kpartgui name="kwalletmanager" version="2">
+<kpartgui name="kwalletmanager" version="3">
   <MenuBar>
     <Menu name="file"><text>&amp;File</text>
       <Action name="wallet_create"/>
+      <Action name="close_all_wallets"/>
     </Menu>
     <Menu name="settings"><text>&amp;Settings</text>
       <Action name="wallet_settings" append="configure_merge"/>
