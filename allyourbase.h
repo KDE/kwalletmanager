@@ -99,6 +99,9 @@ class KWalletIconView : public KIconView {
 		KWalletIconView(QWidget *parent, const char *name = 0L);
 		virtual ~KWalletIconView();
 
+	protected slots:
+		virtual void slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst);
+
 	protected:
 		virtual QDragObject *dragObject();
 		virtual void contentsMousePressEvent(QMouseEvent *e);

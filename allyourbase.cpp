@@ -21,14 +21,16 @@
 
 #include <kdebug.h>
 #include <kglobal.h>
+#include <kiconloader.h>
+#include <kicontheme.h>
+#include <kio/netaccess.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstddirs.h>
 #include <kwallet.h>
-#include <kiconloader.h>
-#include <kicontheme.h>
 
 #include <qdragobject.h>
+#include <qfile.h>
 #include <qptrlist.h>
 
 
@@ -353,9 +355,49 @@ class KWalletIconDrag : public QIconDrag {
  */
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : KIconView(parent, name) {
+	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
+	connect(this, SIGNAL(dropped(QDropEvent*, const QValueList<QIconDragItem>&)), SLOT(slotDropped(QDropEvent*, const QValueList<QIconDragItem>&)));
 }
 
 KWalletIconView::~KWalletIconView() {
+}
+
+void KWalletIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
+	if (e->source() == viewport()) {
+		e->ignore();
+		return;
+	}
+
+	if (!e->provides("text/uri-list")) {
+		e->ignore();
+		return;
+	}
+
+	QByteArray edata = e->encodedData("text/uri-list");
+	QCString urls = edata.data();
+
+	QStringList ul = QStringList::split("\r\n", urls);
+	if (ul.isEmpty() || ul.first().isEmpty()) {
+		e->ignore();
+		return;
+	}
+
+	KURL u(ul.first());
+	if (u.filename().isEmpty()) {
+		e->ignore();
+		return;
+	}
+
+	QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.filename();
+	if (QFile::exists(dest)) {
+		KMessageBox::sorry(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
+		e->ignore();
+		return;
+	}
+
+	// FIXME: verify that it is a real wallet file first
+	KIO::NetAccess::file_copy(u, dest);
+	e->accept();
 }
 
 void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
