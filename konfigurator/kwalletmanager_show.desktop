@@ -1,7 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Wallet Management Tool
+Name[ar]=أداة إدارة المحفظة
 Name[bg]=Портфейл
+Name[br]=Mererezh ar restroù
 Name[bs]=Alat za upravljanje novčanikom
 Name[ca]=Eina de gestió de carteres
 Name[cs]=Nástroj pro správu úschovny
@@ -18,7 +20,8 @@ Name[hi]= बटुआ प्रबंधन औज़ार
 Name[hu]=Kezelőprogram a KDE digitális noteszeihez
 Name[is]=Tól til að stýra eiginleikum veskisins
 Name[it]=Strumento per la gestione dei portafogli
-Name[ja]=ワレット管理ツール
+Name[ja]=ウォレット管理ツール
+Name[mk]=Алатка за менаџирање на паричници
 Name[nb]=Wallet administrasjonsverktøy
 Name[nl]=Portefeuillebeheer
 Name[nn]=Wallet-administrasjonsverktøy
