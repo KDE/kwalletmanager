@@ -53,7 +53,7 @@ KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.0",
 		I18N_NOOP("(c) 2003 George Staikos"), 0,
 		"http://www.kde.org/");
 
-	about.addAuthor("George Staikos", "Primary author and maintainer", "staikos@kde.org");
+	about.addAuthor("George Staikos", I18N_NOOP("Primary author and maintainer"), "staikos@kde.org");
 
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions(options);
