@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>525</width>
-            <height>368</height>
+            <width>669</width>
+            <height>417</height>
         </rect>
     </property>
     <grid>
@@ -21,7 +21,7 @@
                 <cstring>_enabled</cstring>
             </property>
             <property name="text">
-                <string>Enable the KDE wallet subsystem.</string>
+                <string>Enable the KDE wallet subsystem</string>
             </property>
             <property name="checked">
                 <bool>true</bool>
@@ -57,7 +57,7 @@
                         <cstring>_launch</cstring>
                     </property>
                     <property name="text">
-                        <string>Launch Wallet Manager...</string>
+                        <string>Launch Wallet Manager</string>
                     </property>
                 </widget>
             </hbox>
@@ -95,7 +95,7 @@
                         <cstring>_launchManager</cstring>
                     </property>
                     <property name="text">
-                        <string>Launch wallet manager when a wallet is opened.</string>
+                        <string>Launch wallet manager when a wallet is opened</string>
                     </property>
                     <property name="checked">
                         <bool>true</bool>
@@ -106,7 +106,7 @@
                         <cstring>_leaveManagerOpen</cstring>
                     </property>
                     <property name="text">
-                        <string>Leave wallet manager open after all wallets are closed.</string>
+                        <string>Leave wallet manager open after all wallets are closed</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
@@ -114,7 +114,7 @@
                         <cstring>_leaveOpen</cstring>
                     </property>
                     <property name="text">
-                        <string>Leave wallets open when all applications are done with them.</string>
+                        <string>Leave wallets open when all applications are done with them</string>
                     </property>
                 </widget>
                 <widget class="QLayoutWidget" row="1" column="1">
@@ -141,7 +141,7 @@
                                 </sizepolicy>
                             </property>
                             <property name="text">
-                                <string>Idle Timeout:</string>
+                                <string>Idle timeout:</string>
                             </property>
                             <property name="buddy" stdset="0">
                                 <cstring>_idleTime</cstring>
@@ -193,7 +193,7 @@
                         </sizepolicy>
                     </property>
                     <property name="text">
-                        <string>Automatically close idle wallets.</string>
+                        <string>Automatically close idle wallets</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
@@ -220,7 +220,7 @@
                                 <cstring>textLabel1_2</cstring>
                             </property>
                             <property name="text">
-                                <string>Default Wallet:</string>
+                                <string>Default wallet:</string>
                             </property>
                             <property name="buddy" stdset="0">
                                 <cstring>_defaultWallet</cstring>
@@ -265,7 +265,7 @@
                                 <bool>false</bool>
                             </property>
                             <property name="text">
-                                <string>Wallet For Local Passwords:</string>
+                                <string>Wallet for local passwords:</string>
                             </property>
                             <property name="buddy" stdset="0">
                                 <cstring>_localWallet</cstring>
@@ -305,7 +305,7 @@
                         <cstring>_openPrompt</cstring>
                     </property>
                     <property name="text">
-                        <string>Prompt when an application accesses an open wallet.</string>
+                        <string>Prompt when an application accesses an open wallet</string>
                     </property>
                     <property name="checked">
                         <bool>true</bool>
