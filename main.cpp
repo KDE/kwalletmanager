@@ -23,7 +23,7 @@
 #include <kglobal.h>
 #include <klocale.h>
 #include <kmimetype.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 #include <kuniqueapplication.h>
 
 #include <qfile.h>

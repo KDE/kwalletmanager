@@ -26,7 +26,7 @@
 #include <kio/netaccess.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 #include <kwallet.h>
 
 #include <qdragobject.h>
