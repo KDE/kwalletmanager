@@ -20,6 +20,7 @@
 
 #include "kwalletmanager.h"
 #include "kwalletpopup.h"
+#include "kwalleteditor.h"
 
 #include <dcopref.h>
 #include <dcopclient.h>
@@ -132,7 +133,16 @@ void KWalletManager::closeWallet(const QString& walletName) {
 
 
 void KWalletManager::openWallet(const QString& walletName) {
-	// FIXME: open in kwallet kpart
+	KWalletEditor *we = new KWalletEditor(walletName, this, "Wallet Editor");
+	if (we->isOpen()) {
+		connect(we, SIGNAL(editorClosed(KMainWindow*)),
+			this, SLOT(editorClosed(KMainWindow*)));
+		we->show();
+		_windows.append(we);
+	} else {
+		KMessageBox::sorry(this, i18n("Error opening wallet %1.").arg(walletName));
+		delete we;
+	}
 }
 
 
@@ -144,7 +154,19 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
-	close();
+	possiblyQuit();
+}
+
+
+void KWalletManager::possiblyQuit() {
+	if (_windows.isEmpty() && !isVisible()) {
+		close();
+	}
+}
+
+
+void KWalletManager::editorClosed(KMainWindow* e) {
+	_windows.remove(e);
 }
 
 // TODO: - ability to see who is using which wallets?

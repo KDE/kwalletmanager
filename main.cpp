@@ -18,11 +18,20 @@
  */
 
 #include <kaboutdata.h>
-#include <kapplication.h>
+#include <kuniqueapplication.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
 
 #include "kwalletmanager.h"
+
+
+class MyApp : public KUniqueApplication {
+	public:
+		MyApp() : KUniqueApplication() {}
+		virtual ~MyApp() {}
+
+		virtual int newInstance() { return 0; }
+};
 
 int main(int argc, char **argv) {
 static KCmdLineOptions options[] = { { 0, 0, 0 } };
@@ -36,7 +45,12 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 	about.addAuthor("George Staikos", "Primary author and maintainer", "staikos@kde.org");
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions(options);
-	KApplication a;
+
+	if (!KUniqueApplication::start()) {
+		return 0;
+	}
+
+	MyApp a;
 	//KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
 	KWalletManager wm;

@@ -17,50 +17,51 @@
    Boston, MA 02111-1307, USA.
 */
 
-#ifndef KWALLETMANAGER_H
-#define KWALLETMANAGER_H
+#ifndef KWALLETEDITOR_H
+#define KWALLETEDITOR_H
 
+#include "walletwidget.h"
+#include <kwallet.h>
 #include <kmainwindow.h>
-#include <dcopobject.h>
-#include <qptrlist.h>
+#include <qstringlist.h>
 
-class KSystemTray;
-class KIconView;
+class KAction;
 class QIconViewItem;
-class DCOPRef;
+class KHTMLPart;
 
-
-class KWalletManager : public KMainWindow, public DCOPObject {
+class KWalletEditor : public KMainWindow {
 	Q_OBJECT
-	K_DCOP
 
 	public:
-		KWalletManager(QWidget *parent = 0, const char* name = 0, WFlags f = 0);
-		virtual ~KWalletManager();
+		KWalletEditor(const QString& wallet, QWidget *parent = 0, const char* name = 0);
+		virtual ~KWalletEditor();
 
-	k_dcop:
-		ASYNC updateWalletDisplay();
+		bool isOpen() const { return _w != 0L; }
 
 	public slots:
-		void deleteWallet(const QString& walletName);
-		void closeWallet(const QString& walletName);
-		void openWallet(const QString& walletName);
-		void openWallet(QIconViewItem *item);
-		void contextMenu(QIconViewItem *item, const QPoint& pos);
-
-	private:
-	k_dcop:
-		ASYNC allWalletsClosed();
+		void walletClosed();
+		void createFolder();
+		void deleteFolder();
 
 	private slots:
-		void possiblyQuit();
-		void editorClosed(KMainWindow* e);
+		void updateFolderList();
+		void folderSelectionChanged(QIconViewItem *item);
+		void updateEntries();
+		void updateDetails();
+
+	signals:
+		void enableFolderActions(bool enable);
+		void enableContextFolderActions(bool enable);
+		void editorClosed(KMainWindow*);
 
 	private:
-		KSystemTray *_tray;
-		KIconView *_iconView;
-		DCOPRef *_dcopRef;
-		QPtrList<KMainWindow> _windows;
+		void createActions();
+		QString _walletName;
+		KWallet::Wallet *_w;
+		WalletWidget *_ww;
+		KAction *_newFolderAction, *_deleteFolderAction;
+		KHTMLPart *_details;
+		QStringList _entries;
 };
 
 #endif
