@@ -21,7 +21,8 @@
 </author>
 <othercredit role="developer">
 <firstname>George</firstname><surname>Staikos</surname>
-<contrib>Developer</contrib>&George.Staikos.mail;
+<affiliation><address><email>staikos@kde.org</email></address></affiliation>
+<contrib>Developer</contrib>
 </othercredit>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
