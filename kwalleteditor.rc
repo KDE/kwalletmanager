@@ -7,6 +7,8 @@
       <Separator/>
       <Action name="change_password"/>
       <Separator/>
+      <Action name="merge"/>
+      <Action name="import"/>
       <Action name="export"/>
     </Menu>
     <Menu name="help"><text>&amp;Help</text>

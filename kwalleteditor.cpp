@@ -191,6 +191,16 @@ void KWalletEditor::createActions() {
 			SLOT(changePassword()), actionCollection(),
 			"change_password");
 
+	/*
+	_mergeAction = new KAction(i18n("&Merge Wallet..."), 0, 0, this,
+			SLOT(importWallet()), actionCollection(),
+			"merge");
+			*/
+
+	_importAction = new KAction(i18n("&Import XML..."), 0, 0, this,
+			SLOT(importXML()), actionCollection(),
+			"import");
+
 	_exportAction = new KAction(i18n("&Export..."), 0, 0, this,
 			SLOT(exportXML()), actionCollection(),
 			"export");
@@ -662,6 +672,95 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 	} else {
 		_mapEditor->hideColumn(2);
 	}
+}
+
+
+void KWalletEditor::importWallet() {
+	KURL url = KFileDialog::getOpenURL(QString::null, "*.kwl", this);
+	if (url.isEmpty()) {
+		return;
+	}
+}
+
+
+void KWalletEditor::importXML() {
+	KURL url = KFileDialog::getOpenURL(QString::null, "*.xml", this);
+	if (url.isEmpty()) {
+		return;
+	}
+
+	QString tmpFile;
+	if (!KIO::NetAccess::download(url, tmpFile)) {
+		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.").arg(url.prettyURL()));
+		return;
+	}
+
+	QFile qf(tmpFile);
+	if (!qf.open(IO_ReadOnly)) {
+		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.").arg(url.prettyURL()));
+		KIO::NetAccess::removeTempFile(tmpFile);
+		return;
+	}
+
+	QDomDocument doc(tmpFile);
+	if (!doc.setContent(&qf)) {
+		KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.").arg(url.prettyURL()));
+		KIO::NetAccess::removeTempFile(tmpFile);
+		return;
+	}
+
+	QDomElement top = doc.documentElement();
+	if (top.tagName().lower() != "wallet") {
+		KMessageBox::sorry(this, i18n("Error: XML file does not contain a wallet."));
+		KIO::NetAccess::removeTempFile(tmpFile);
+		return;
+	}
+
+	QDomNode n = top.firstChild();
+	while (!n.isNull()) {
+		QDomElement e = n.toElement();
+		if (e.tagName().lower() != "folder") {
+			n = n.nextSibling();
+			continue;
+		}
+
+		QString fname = e.attribute("name");
+		if (fname.isEmpty()) {
+			n = n.nextSibling();
+			continue;
+		}
+		if (!_w->hasFolder(fname)) {
+			_w->createFolder(fname);
+		}
+		_w->setFolder(fname);
+		QDomNode enode = e.firstChild();
+		while (!enode.isNull()) {
+			e = enode.toElement();
+			QString type = e.tagName().lower();
+			// FIXME: do conflict resolution
+			if (type == "password") {
+				_w->writePassword(e.attribute("name"), e.text());
+			} else if (type == "stream") {
+				_w->writeEntry(e.attribute("name"), KCodecs::base64Decode(e.text().latin1()));
+			} else if (type == "map") {
+				QMap<QString,QString> map;
+				QDomNode mapNode = e.firstChild();
+				while (!mapNode.isNull()) {
+					QDomElement mape = mapNode.toElement();
+					if (mape.tagName().lower() == "mapentry") {
+						map[mape.attribute("name")] = mape.text();
+					}
+					mapNode = mapNode.nextSibling();
+				}
+				_w->writeMap(e.attribute("name"), map);
+			}
+			enode = enode.nextSibling();
+		}
+		n = n.nextSibling();
+	}
+
+	updateEntries();
+	KIO::NetAccess::removeTempFile(tmpFile);
 }
 
 
