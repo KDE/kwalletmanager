@@ -83,10 +83,7 @@ void KWalletPopup::openWallet() {
 
 
 void KWalletPopup::deleteWallet() {
-	int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(_walletName));
-	if (rc == KMessageBox::Yes) {
-		emit walletDeleted(_walletName);
-	}
+        emit walletDeleted(_walletName);
 }
 
 

@@ -41,10 +41,12 @@
 
 #include <qptrstack.h>
 #include <qregexp.h>
-
+#include <qaccel.h>
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
+    QAccel *accel = new QAccel(this, "kwalletmanager");
+
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
@@ -98,6 +100,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
         KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
 
 	createGUI("kwalletmanager.rc");
+        accel->connectItem(accel->insertItem(Key_Return),
+                           this, SLOT(openWallet()) );
+        accel->connectItem(accel->insertItem(Key_Delete),
+                           this, SLOT(deleteWallet()) );
+
 }
 
 
@@ -166,11 +173,15 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 
 
 void KWalletManager::deleteWallet(const QString& walletName) {
-	int rc = KWallet::Wallet::deleteWallet(walletName);
-	if (rc != 0) {
-		KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.").arg(rc));
-	}
-	updateWalletDisplay();
+    int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(walletName));
+    if (rc != KMessageBox::Yes) {
+        return;
+    }
+    rc = KWallet::Wallet::deleteWallet(walletName);
+    if (rc != 0) {
+        KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.").arg(rc));
+    }
+    updateWalletDisplay();
 }
 
 
@@ -207,6 +218,20 @@ void KWalletManager::openWalletFile(const QString& path) {
 	}
 }
 
+
+void KWalletManager::openWallet()
+{
+    QIconViewItem *item = _iconView->currentItem();
+    if ( item )
+        openWallet(item->text() );
+}
+
+void KWalletManager::deleteWallet()
+{
+    QIconViewItem *item = _iconView->currentItem();
+    if ( item )
+        deleteWallet(item->text() );
+}
 
 void KWalletManager::openWallet(const QString& walletName) {
 	// Don't allow a wallet to open in two windows
