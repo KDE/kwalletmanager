@@ -27,6 +27,7 @@
 #include <dcopclient.h>
 #include <kaction.h>
 #include <kapplication.h>
+#include <kconfig.h>
 #include <kdebug.h>
 #include <kiconview.h>
 #include <kiconloader.h>
@@ -87,6 +88,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	new KAction(i18n("&New Wallet..."), 0, 0, this,
 			SLOT(createWallet()), actionCollection(),
 			"wallet_create");
+	new KAction(i18n("&Wallet Settings..."), 0, 0, this,
+			SLOT(setupWallet()), actionCollection(),
+			"wallet_settings");
 	KStdAction::quit(qApp, SLOT(quit()), actionCollection());
 	createGUI("kwalletmanager.rc");
 }
@@ -201,7 +205,11 @@ void KWalletManager::allWalletsClosed() {
 
 
 void KWalletManager::possiblyQuit() {
-	if (_windows.isEmpty() && !isVisible()) {
+	KConfig cfg("kwalletrc");
+	cfg.setGroup("Wallet");
+	if (_windows.isEmpty() &&
+			!isVisible() &&
+			cfg.readBoolEntry("Leave Manager Open", false)) {
 		close();
 	}
 }
@@ -251,10 +259,10 @@ void KWalletManager::createWallet() {
 	}
 }
 
-// TODO: - ability to see who is using which wallets?
-//       - icons
-//       - statusbar
-//       - drop of wallet into the app
+
+void KWalletManager::setupWallet() {
+	KApplication::startServiceByDesktopName("kwallet_config");
+}
+
 
 #include "kwalletmanager.moc"
-

@@ -12,3 +12,5 @@ messages: rc.cpp
 data_DATA = kwalletconfig.desktop
 datadir = $(kde_appsdir)/Settings/Security
 
+kde_services_DATA = kwallet_config.desktop kwalletmanager_show.desktop
+

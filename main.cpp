@@ -37,6 +37,7 @@ class MyApp : public KUniqueApplication {
 
 int main(int argc, char **argv) {
 static KCmdLineOptions options[] = {
+	{"show", I18N_NOOP("Show window on startup."), 0},
 	{"+name", I18N_NOOP("A wallet name."), 0},
 	KCmdLineLastOption
 };
@@ -66,6 +67,11 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+
+	if (args->isSet("show")) {
+		wm.show();
+	}
+
 	for (int i = 0; i < args->count(); ++i) {
 		wm.openWallet(args->arg(i));
 	}

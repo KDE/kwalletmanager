@@ -19,13 +19,16 @@
 
 #include "konfigurator.h"
 #include "walletconfigwidget.h"
+#include <dcopclient.h>
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kconfig.h>
 #include <kdialog.h>
 #include <kgenericfactory.h>
 #include <qcheckbox.h>
+#include <qcombobox.h>
 #include <qlayout.h>
+#include <qpushbutton.h>
 #include <qspinbox.h>
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
@@ -38,11 +41,19 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 
 	QVBoxLayout *vbox = new QVBoxLayout(this, KDialog::marginHint(), KDialog::spacingHint());
 	vbox->add(_wcw = new WalletConfigWidget(this));
+
+	connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_launchManager, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_leaveManagerOpen, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_leaveOpen, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_closeIdle, SIGNAL(clicked()), this, SLOT(configChanged()));
+	connect(_wcw->_storeTogether, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_idleTime, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
+	connect(_wcw->_launch, SIGNAL(clicked()), this, SLOT(launchManager()));
+	connect(_wcw->_newWallet, SIGNAL(clicked()), this, SLOT(newNetworkWallet()));
+	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
+	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
+	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	load();
 }
 
@@ -53,45 +64,65 @@ KWalletConfig::~KWalletConfig() {
 }
 
 
+void KWalletConfig::newLocalWallet() {
+}
+
+
+void KWalletConfig::newNetworkWallet() {
+}
+
+
+void KWalletConfig::launchManager() {
+	KApplication::startServiceByDesktopName("kwalletmanager_show");
+}
+
+
 void KWalletConfig::configChanged() {
-    emit changed(true);
+	emit changed(true);
 }
 
 
 void KWalletConfig::load() {
 	KConfigGroup config(_cfg, "Wallet");
+	_wcw->_enabled->setChecked(config.readBoolEntry("Enabled", true));
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
 	_wcw->_leaveManagerOpen->setChecked(config.readBoolEntry("Leave Manager Open", false));
 	_wcw->_leaveOpen->setChecked(config.readBoolEntry("Leave Open", false));
 	_wcw->_closeIdle->setChecked(config.readBoolEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
+	_wcw->_storeTogether->setChecked(config.readBoolEntry("Use One Wallet", true));
 	emit changed(false);
 }
 
 
 void KWalletConfig::save() {
 	KConfigGroup config(_cfg, "Wallet");
+	config.writeEntry("Enabled", _wcw->_enabled->isChecked());
 	config.writeEntry("Launch Manager", _wcw->_launchManager->isChecked());
 	config.writeEntry("Leave Manager Open", _wcw->_leaveManagerOpen->isChecked());
 	config.writeEntry("Leave Open", _wcw->_leaveOpen->isChecked());
 	config.writeEntry("Close When Idle", _wcw->_closeIdle->isChecked());
+	config.writeEntry("Use One Wallet", _wcw->_storeTogether->isChecked());
 	config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
+	kapp->dcopClient()->send("kded", "kwalletd", "reconfigure()", QByteArray());
 	emit changed(false);
 }
 
 
 void KWalletConfig::defaults() {
+	_wcw->_enabled->setChecked(true);
 	_wcw->_launchManager->setChecked(true);
 	_wcw->_leaveManagerOpen->setChecked(false);
 	_wcw->_leaveOpen->setChecked(false);
 	_wcw->_closeIdle->setChecked(false);
+	_wcw->_storeTogether->setChecked(true);
 	_wcw->_idleTime->setValue(10);
 	emit changed(true);
 }
 
 
 QString KWalletConfig::quickHelp() const {
-	return "FIXME";
+	return i18n("This configuration module allows you to configure the KDE wallet system.");
 }
 
 

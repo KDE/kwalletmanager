@@ -40,6 +40,9 @@ class KWalletConfig : public KCModule {
 
 	public slots:
 		void configChanged();
+		void launchManager();
+		void newLocalWallet();
+		void newNetworkWallet();
 
 	private:
 		WalletConfigWidget *_wcw;

@@ -57,6 +57,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		void possiblyQuit();
 		void editorClosed(KMainWindow* e);
 		void possiblyRescan(const QCString& app);
+		void setupWallet();
 
 	private:
 		KSystemTray *_tray;
