@@ -266,7 +266,13 @@ void KWalletManager::deleteWallet() {
 	}
 }
 
+
 void KWalletManager::openWallet(const QString& walletName) {
+	openWallet(walletName, false);
+}
+
+
+void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
 	// Don't allow a wallet to open in two windows
 	for (KMainWindow *w = _windows.first(); w; w = _windows.next()) {
 		KWalletEditor *e = static_cast<KWalletEditor*>(w);
@@ -277,12 +283,13 @@ void KWalletManager::openWallet(const QString& walletName) {
 	}
 
 	KWalletEditor *we = new KWalletEditor(walletName, false, this, "Wallet Editor");
+	we->setNewWallet(newWallet);
 	if (we->isOpen()) {
 		connect(we, SIGNAL(editorClosed(KMainWindow*)),
 			this, SLOT(editorClosed(KMainWindow*)));
 		we->show();
 		_windows.append(we);
-	} else {
+	} else if (!newWallet) {
 		KMessageBox::sorry(this, i18n("Error opening wallet %1.").arg(walletName));
 		delete we;
 	}
@@ -363,7 +370,7 @@ void KWalletManager::createWallet() {
 
 	// Small race here - the wallet could be created on us already.
 	if (!n.isEmpty()) {
-		openWallet(n);
+		openWallet(n, true);
 	}
 }
 

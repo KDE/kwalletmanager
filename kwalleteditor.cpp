@@ -58,6 +58,7 @@
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
 : KMainWindow(parent, name), _walletName(wallet), _nonLocal(isPath) {
+	_newWallet = false;
 	_ww = new WalletWidget(this, "Wallet Widget");
 	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
 	_details = new QLabel(_ww->_folderDetails, "Folder Details");
@@ -653,7 +654,10 @@ void KWalletEditor::walletOpened(bool success) {
 	if (success) {
 		updateFolderList();
 	} else {
-		KMessageBox::sorry(this, i18n("Unable to open the requested wallet."));
+		if (!_newWallet) {
+			KMessageBox::sorry(this, i18n("Unable to open the requested wallet."));
+		}
+		close();
 	}
 }
 
@@ -857,6 +861,10 @@ void KWalletEditor::exportXML() {
 	}
 }
 
+
+void KWalletEditor::setNewWallet(bool x) {
+	_newWallet = x;
+}
 
 #include "kwalleteditor.moc"
 

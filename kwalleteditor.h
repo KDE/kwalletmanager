@@ -42,6 +42,8 @@ class KWalletEditor : public KMainWindow {
 
 		bool isOpen() const { return _w != 0L; }
 
+		void setNewWallet(bool newWallet);
+
 	public slots:
 		void walletClosed();
 		void createFolder();
@@ -100,6 +102,7 @@ class KWalletEditor : public KMainWindow {
 						   // only the most recent map.
 		KWMapEditor *_mapEditor;
 		QCheckBox *_mapEditorShowHide;
+		bool _newWallet;
 };
 
 #endif
