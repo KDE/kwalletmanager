@@ -56,7 +56,7 @@
                             <string>Close Wallet</string>
                         </property>
                         <property name="whatsThis" stdset="0">
-                            <string>It is wise to close your wallets when you don't use them anymore so not everyone can look in them or use them.</string>
+                            <string>It is best to close your wallets when you are not using them to prevent others from viewing or using them.</string>
                         </property>
                         <vbox>
                             <property name="name">
