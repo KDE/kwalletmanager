@@ -479,15 +479,15 @@
     <tabstop>_autoclose</tabstop>
     <tabstop>_defaultWallet</tabstop>
     <tabstop>_newWallet</tabstop>
+    <tabstop>_localWalletSelected</tabstop>
     <tabstop>_localWallet</tabstop>
     <tabstop>_newLocalWallet</tabstop>
     <tabstop>_launchManager</tabstop>
     <tabstop>_autocloseManager</tabstop>
-    <tabstop>_launch</tabstop>
+    <tabstop>tabWidget2</tabstop>
     <tabstop>_openPrompt</tabstop>
     <tabstop>_accessList</tabstop>
-    <tabstop>tabWidget2</tabstop>
-    <tabstop>_localWalletSelected</tabstop>
+    <tabstop>_launch</tabstop>
 </tabstops>
 <slots>
     <slot>_storeTogether_toggled(bool)</slot>
