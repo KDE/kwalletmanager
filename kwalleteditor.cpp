@@ -32,6 +32,7 @@
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
 #include <kstdaction.h>
+#include <kkeydialog.h>
 
 #include <qcombobox.h>
 #include <qlabel.h>
@@ -155,6 +156,10 @@ KWalletEditor::~KWalletEditor() {
 	_w = 0L;
 }
 
+void KWalletEditor::slotConfigureKeys()
+{
+  KKeyDialog::configure( actionCollection(), this );
+}
 
 void KWalletEditor::createActions() {
 	_newFolderAction = new KAction(i18n("&New Folder..."), 0, 0, this,
@@ -176,7 +181,7 @@ void KWalletEditor::createActions() {
 			"change_password");
 
 	KStdAction::close(this, SLOT(close()), actionCollection());
-
+        KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
 	emit enableFolderActions(_w != 0L);
 	emit enableContextFolderActions(false);
 }

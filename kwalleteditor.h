@@ -70,6 +70,7 @@ class KWalletEditor : public KMainWindow {
 		void newMapEntry();
 		void deleteMapEntry();
 		void saveMapEntry();
+    void slotConfigureKeys();
 
 	signals:
 		void enableFolderActions(bool enable);
