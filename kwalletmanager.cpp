@@ -37,6 +37,7 @@
 #include <kstdaction.h>
 #include <ksystemtray.h>
 #include <kwallet.h>
+#include <kkeydialog.h>
 
 #include <qptrstack.h>
 #include <qregexp.h>
@@ -94,6 +95,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 			SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
+        KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
 
 	createGUI("kwalletmanager.rc");
 }
@@ -103,6 +105,11 @@ KWalletManager::~KWalletManager() {
 	_tray = 0L;
 	delete _dcopRef;
 	_dcopRef = 0L;
+}
+
+void KWalletManager::slotConfigureKeys()
+{
+  KKeyDialog::configure( actionCollection(), this );
 }
 
 bool KWalletManager::queryClose() {
