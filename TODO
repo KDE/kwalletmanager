@@ -3,12 +3,11 @@ Things left:
 Client:
 - Wallet icons
 - ability to list usage of wallets?
+- Map editor is still really broken - maybe needs to be redesigned
 
 Backend:
 - allow unpassworded wallet?
-- test compatibility:
-	- 32 bit, 64 bit, zSeries
-	- big endian, little endian
+- test 64 bit, zSeries
 - fix blocking issues
 
 Integration:
