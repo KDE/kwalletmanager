@@ -180,7 +180,7 @@ void KWalletEditor::createActions() {
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
 
-	_deleteFolderAction = new KAction(i18n("&Delete Folder"), 0, Key_Delete,
+	_deleteFolderAction = new KAction(i18n("&Delete Folder"), 0, 0,
 			this, SLOT(deleteFolder()), actionCollection(),
 			"delete_folder");
 	connect(this, SIGNAL(enableContextFolderActions(bool)),
