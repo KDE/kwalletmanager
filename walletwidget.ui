@@ -12,6 +12,9 @@
             <height>505</height>
         </rect>
     </property>
+    <property name="caption">
+        <string>WalletWidget</string>
+    </property>
     <grid>
         <property name="name">
             <cstring>unnamed</cstring>
@@ -166,12 +169,37 @@
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <widget class="QTextEdit" row="0" column="0">
+                                    <widget class="QTextEdit" row="1" column="0" rowspan="1" colspan="2">
                                         <property name="name">
                                             <cstring>_passwordValue</cstring>
                                         </property>
                                         <property name="textFormat">
                                             <enum>PlainText</enum>
+                                        </property>
+                                    </widget>
+                                    <spacer row="0" column="1">
+                                        <property name="name">
+                                            <cstring>spacer8</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>271</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <widget class="QPushButton" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>_hideContents</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Hide &amp;Contents</string>
                                         </property>
                                     </widget>
                                 </grid>
@@ -270,6 +298,61 @@
                                         <property name="sizeHint">
                                             <size>
                                                 <width>41</width>
+                                                <height>21</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </grid>
+                            </widget>
+                            <widget class="QWidget">
+                                <property name="name">
+                                    <cstring>page</cstring>
+                                </property>
+                                <attribute name="id">
+                                    <number>4</number>
+                                </attribute>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QPushButton" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>_showContents</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Show &amp;Contents</string>
+                                        </property>
+                                    </widget>
+                                    <spacer row="1" column="0">
+                                        <property name="name">
+                                            <cstring>spacer6_2</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>31</width>
+                                                <height>170</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <spacer row="0" column="1">
+                                        <property name="name">
+                                            <cstring>spacer7</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>241</width>
                                                 <height>21</height>
                                             </size>
                                         </property>

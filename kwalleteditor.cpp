@@ -122,6 +122,11 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 	connect(_ww->_saveChanges, SIGNAL(clicked()),
 		this, SLOT(saveEntry()));
 
+	connect(_ww->_showContents, SIGNAL(clicked()),
+		this, SLOT(showPasswordContents()));
+	connect(_ww->_hideContents, SIGNAL(clicked()),
+		this, SLOT(hidePasswordContents()));
+
 	_passItems = new QListViewItem(_entryList, i18n("Passwords"));
 	_mapItems = new QListViewItem(_entryList, i18n("Maps"));
 	_binaryItems = new QListViewItem(_entryList, i18n("Binary Data"));
@@ -307,7 +312,7 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 		if (item->parent() == _passItems) {
 			QString pass;
 			if (_w->readPassword(item->text(0), pass) == 0) {
-				_ww->_entryStack->raiseWidget(int(1));
+				_ww->_entryStack->raiseWidget(int(4));
 				_ww->_entryName->setText(i18n("Password: %1")
 							.arg(item->text(0)));
 				_ww->_passwordValue->setText(pass);
@@ -621,6 +626,16 @@ void KWalletEditor::walletOpened(bool success) {
 	} else {
 		KMessageBox::sorry(this, i18n("Unable to open the wallet."));
 	}
+}
+
+
+void KWalletEditor::hidePasswordContents() {
+	_ww->_entryStack->raiseWidget(int(4));
+}
+
+
+void KWalletEditor::showPasswordContents() {
+	_ww->_entryStack->raiseWidget(int(1));
 }
 
 

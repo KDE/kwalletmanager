@@ -69,6 +69,8 @@ class KWalletEditor : public KMainWindow {
 		void slotConfigureKeys();
 
 		void walletOpened(bool success);
+		void hidePasswordContents();
+		void showPasswordContents();
 
 	signals:
 		void enableFolderActions(bool enable);

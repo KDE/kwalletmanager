@@ -8,8 +8,8 @@ Backend:
 - test 64 bit, zSeries
 - investigate timestamping
 - import testcases
-- Configuration panel
 - races in kwalletd
+- refactor the hashes to make it efficient
 
 Integration:
 - Cookie jar
@@ -25,7 +25,6 @@ Configuration:
 Future ideas:
 - Ability to hide entries and only show their values after clicking on an
   "expose" button.
-- Configurable crypto algorithm to use
 - File association of kwallet type to kwalletmanager
 	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
 - Make it a kpart
