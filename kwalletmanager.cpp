@@ -129,7 +129,7 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 void KWalletManager::deleteWallet(const QString& walletName) {
 	int rc = KWallet::Wallet::deleteWallet(walletName);
 	if (rc != 0) {
-		KMessageBox::sorry(this, i18n("Unable to delete the wallet.  Error code was %1.").arg(rc));
+		KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.").arg(rc));
 	}
 	updateWalletDisplay();
 }
@@ -138,11 +138,11 @@ void KWalletManager::deleteWallet(const QString& walletName) {
 void KWalletManager::closeWallet(const QString& walletName) {
 	int rc = KWallet::Wallet::closeWallet(walletName, false);
 	if (rc != 0) {
-		rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly.  It is probably in use by other applications.  Do you wish to force it closed?"));
+		rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"));
 		if (rc == KMessageBox::Yes) {
 			rc = KWallet::Wallet::closeWallet(walletName, true);
 			if (rc != 0) {
-				KMessageBox::sorry(this, i18n("Unable to force the wallet closed.  Error code was %1.").arg(rc));
+				KMessageBox::sorry(this, i18n("Unable to force the wallet closed. Error code was %1.").arg(rc));
 			}
 		}
 	}
@@ -201,8 +201,8 @@ void KWalletManager::createWallet() {
 	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
 
 	do {
-		n = KLineEditDlg::getText(i18n("New Wallet..."),
-				i18n("Please choose a name for the new wallet..."),
+		n = KLineEditDlg::getText(i18n("New Wallet"),
+				i18n("Please choose a name for the new wallet:"),
 				QString::null,
 				0L,
 				this);
@@ -212,7 +212,7 @@ void KWalletManager::createWallet() {
 		}
 
 		if (_iconView->findItem(n)) {
-			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists.  Try a new name?"));
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"));
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}

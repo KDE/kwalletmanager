@@ -185,8 +185,8 @@ void KWalletEditor::createFolder() {
 		QString n;
 
 		do {
-			n = KLineEditDlg::getText(i18n("New Folder..."),
-					i18n("Please choose a name for the new folder..."),
+			n = KLineEditDlg::getText(i18n("New Folder"),
+					i18n("Please choose a name for the new folder:"),
 					QString::null,
 					0L,
 					this);
@@ -196,7 +196,7 @@ void KWalletEditor::createFolder() {
 			}
 
 			if (_ww->_folderView->findItem(n)) {
-				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use.  Try again?"));
+				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"));
 				if (rc == KMessageBox::Yes) {
 					continue;
 				}
@@ -228,7 +228,7 @@ void KWalletEditor::saveEntry() {
 		}
 	}
 
-	KMessageBox::sorry(this, i18n("Error saving entry.  Error code: %1").arg(rc));
+	KMessageBox::sorry(this, i18n("Error saving entry. Error code: %1").arg(rc));
 }
 
 
@@ -390,8 +390,8 @@ QListViewItem *item = _ww->_entryList->selectedItem();
 QString n;
 
 	do {
-		n = KLineEditDlg::getText(i18n("New Entry..."),
-				i18n("Please choose a name for the new entry..."),
+		n = KLineEditDlg::getText(i18n("New Entry"),
+				i18n("Please choose a name for the new entry:"),
 				QString::null,
 				0L,
 				this);
@@ -402,7 +402,7 @@ QString n;
 
 		// FIXME: prohibits the use of the subheadings
 		if (_ww->_entryList->findItem(n, 0)) {
-			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists.  Try again?"));
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"));
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}
