@@ -72,6 +72,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_accessList, SIGNAL(contextMenuRequested(QListViewItem*, const QPoint&, int)), this, SLOT(contextMenuRequested(QListViewItem*, const QPoint&, int)));
 
+	_wcw->_accessList->setAllColumnsShowFocus(true);
 	updateWalletLists();
 	load();
 
@@ -199,13 +200,30 @@ void KWalletConfig::load() {
 		_wcw->_localWalletSelected->setChecked(false);
 	}
 	_wcw->_accessList->clear();
+	_cfg->setGroup("Auto Deny");
+	QStringList denykeys = _cfg->entryMap("Auto Deny").keys();
 	_cfg->setGroup("Auto Allow");
 	QStringList keys = _cfg->entryMap("Auto Allow").keys();
 	for (QStringList::Iterator i = keys.begin(); i != keys.end(); ++i) {
+		_cfg->setGroup("Auto Allow");
 		QStringList apps = _cfg->readListEntry(*i);
+		_cfg->setGroup("Auto Deny");
+		QStringList denyapps = _cfg->readListEntry(*i);
+		denykeys.remove(*i);
 		QListViewItem *lvi = new QListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = apps.begin(); j != apps.end(); ++j) {
 			new QListViewItem(lvi, QString::null, *j, i18n("Always Allow"));
+		}
+		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
+			new QListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
+		}
+	}
+	_cfg->setGroup("Auto Deny");
+	for (QStringList::Iterator i = denykeys.begin(); i != denykeys.end(); ++i) {
+		QStringList denyapps = _cfg->readListEntry(*i);
+		QListViewItem *lvi = new QListViewItem(_wcw->_accessList, *i);
+		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
+			new QListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
 		}
 	}
 	emit changed(false);
@@ -236,12 +254,27 @@ void KWalletConfig::save() {
 		config.deleteEntry("Default Wallet");
 	}
 
+	// FIXME: won't survive a language change
 	_cfg->deleteGroup("Auto Allow");
+	_cfg->deleteGroup("Auto Deny");
 	_cfg->setGroup("Auto Allow");
 	for (QListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
 		QStringList al;
 		for (QListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
-			al << j->text(1);
+			if (j->text(2) == i18n("Always Allow")) {
+				al << j->text(1);
+			}
+		}
+		_cfg->writeEntry(i->text(0), al);
+	}
+
+	_cfg->setGroup("Auto Deny");
+	for (QListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
+		QStringList al;
+		for (QListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
+			if (j->text(2) == i18n("Always Deny")) {
+				al << j->text(1);
+			}
 		}
 		_cfg->writeEntry(i->text(0), al);
 	}
