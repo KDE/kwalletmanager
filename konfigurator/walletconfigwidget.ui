@@ -44,9 +44,6 @@
                         <property name="text">
                             <string>&amp;Enable the KDE wallet subsystem</string>
                         </property>
-                        <property name="accel">
-                            <string>Alt+E</string>
-                        </property>
                         <property name="checked">
                             <bool>true</bool>
                         </property>
@@ -351,9 +348,6 @@
                         </property>
                         <property name="text">
                             <string>&amp;Prompt when an application accesses an open wallet</string>
-                        </property>
-                        <property name="accel">
-                            <string>Alt+P</string>
                         </property>
                         <property name="checked">
                             <bool>true</bool>

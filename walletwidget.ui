@@ -126,9 +126,6 @@
                             <property name="text">
                                 <string>&amp;Save</string>
                             </property>
-                            <property name="accel">
-                                <string>Alt+S</string>
-                            </property>
                             <property name="iconSet">
                                 <iconset>"filesave"</iconset>
                             </property>
@@ -142,9 +139,6 @@
                             </property>
                             <property name="text">
                                 <string>&amp;Undo</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+U</string>
                             </property>
                             <property name="iconSet">
                                 <iconset>"undo"</iconset>
@@ -333,9 +327,6 @@
                                         </property>
                                         <property name="text">
                                             <string>Show &amp;Contents</string>
-                                        </property>
-                                        <property name="accel">
-                                            <string>Alt+C</string>
                                         </property>
                                     </widget>
                                     <spacer row="1" column="0">
