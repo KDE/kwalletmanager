@@ -6,7 +6,6 @@ Client:
 Backend:
 - Fix encryption
 - Possibly provide metadata (wallet comment, statistics, etc)
-- Ability to support different crypto backends
 - Move KWallet::Entry to the backend library?
 
 Integration:
