@@ -23,8 +23,6 @@ Configuration:
 	-> Ability to configure the accept list for applications
 
 Future ideas:
-- Ability to hide entries and only show their values after clicking on an
-  "expose" button.
 - File association of kwallet type to kwalletmanager
 	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
 - Make it a kpart

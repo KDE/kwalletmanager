@@ -79,9 +79,11 @@ class KWalletEditor : public KMainWindow {
 		void enableContextFolderActions(bool enable);
 		void editorClosed(KMainWindow*);
 
+	public:
+		QString _walletName;
+
 	private:
 		void createActions();
-		QString _walletName;
 		KWallet::Wallet *_w;
 		WalletWidget *_ww;
 		KWalletFolderIconView *_folderView;

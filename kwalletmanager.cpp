@@ -188,6 +188,15 @@ void KWalletManager::changeWalletPassword(const QString& walletName) {
 
 
 void KWalletManager::openWallet(const QString& walletName) {
+	// Don't allow a wallet to open in two windows
+	for (KMainWindow *w = _windows.first(); w; w = _windows.next()) {
+		KWalletEditor *e = static_cast<KWalletEditor*>(w);
+		if (e->isOpen() && e->_walletName == walletName) {
+			w->raise();
+			return;
+		}
+	}
+
 	KWalletEditor *we = new KWalletEditor(walletName, this, "Wallet Editor");
 	if (we->isOpen()) {
 		connect(we, SIGNAL(editorClosed(KMainWindow*)),
