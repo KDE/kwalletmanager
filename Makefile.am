@@ -1,6 +1,6 @@
 INCLUDES= $(all_includes)
 
-SUBDIRS=. icons
+SUBDIRS=. icons konfigurator
 
 bin_PROGRAMS = kwalletmanager
 kwalletmanager_SOURCES = walletwidget.ui kwalletmanager.cpp \

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Icon=kwallet
+Type=Application
+Exec=kcmshell kwallet
+DocPath=kcontrol/kwallet/index.html
+X-KDE-ModuleType=Library
+X-KDE-Library=kwallet
+X-KDE-ParentApp=kcontrol
+
+Name=KDE Wallet
+Comment=KDE Wallet Configuration
+Keywords=Wallet,Form Fill,Passwords,Form Data
