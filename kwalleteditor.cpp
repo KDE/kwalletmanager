@@ -137,7 +137,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	_binaryItems = new QListViewItem(_entryList, i18n("Binary Data"));
 	_unknownItems = new QListViewItem(_entryList, i18n("Unknown"));
 
-	_w = KWallet::Wallet::openWallet(wallet, isPath ? KWallet::Wallet::Path : KWallet::Wallet::Asynchronous);
+	_w = KWallet::Wallet::openWallet(wallet, winId(), isPath ? KWallet::Wallet::Path : KWallet::Wallet::Asynchronous);
 	if (_w) {
 		connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
 		connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
