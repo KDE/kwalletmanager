@@ -26,6 +26,7 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kwallet.h>
+#include <kstdguiitem.h>
 
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
 : KPopupMenu(parent, name), _walletName(wallet) {
@@ -59,7 +60,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 		insertItem(i18n("Disconnec&t"), pm);
 	}
 
-	act = new KAction(i18n("&Close"), 0, 0, this,
+	act = new KAction(KStdGuiItem::close().text(), 0, 0, this,
 			SLOT(closeWallet()), ac, "wallet_close");
 	// FIXME: let's track this inside the manager so we don't need a dcop
 	//        roundtrip here.
