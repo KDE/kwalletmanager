@@ -4,4 +4,4 @@ Type=Service
 Exec=kcmshell --caption %c kwalletconfig
 Icon=kwallet
 DocPath=kwallet/index.html
-Name=Configure KWallet
+Name=KDE Wallet
