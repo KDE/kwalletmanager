@@ -52,6 +52,7 @@ class KWalletEditor : public KMainWindow {
 		void listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col);
 		void iconContextMenuRequested(QIconViewItem *item, const QPoint& pos);
 		void updateEntries();
+		void updateEntries(const QString& folder);
 		void updateDetails();
 
 		void newEntry();

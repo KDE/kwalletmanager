@@ -67,6 +67,8 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
 		connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
+		connect(_w, SIGNAL(folderUpdated(const QString&)), this, SLOT(updateEntries(const QString&)));
+		connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
 		updateFolderList();
 	}
 
@@ -163,6 +165,7 @@ void KWalletEditor::deleteFolder() {
 			// FIXME: error handling
 			_w->removeFolder(ivi->text());
 			updateFolderList();
+			folderSelectionChanged(0L); //_ww->_folderView->currentItem());
 		}
 	}
 }
@@ -406,6 +409,15 @@ QListViewItem *item = _ww->_entryList->selectedItem();
 	}
 }
 
+
+void KWalletEditor::updateEntries(const QString& folder) {
+QIconViewItem *ivi = _ww->_folderView->currentItem();
+
+	if (ivi && ivi->text() == folder) {
+		// FIXME - this is sort of destructive
+		updateEntries();
+	}
+}
 
 #include "kwalleteditor.moc"
 
