@@ -47,7 +47,7 @@ class KWalletEntryList : public KListView {
 		virtual ~KWalletEntryList();
 
 	protected:
-		QDragObject *dragObject();
+		virtual QDragObject *dragObject();
 };
 
 
@@ -72,9 +72,10 @@ class KWalletFolderIconView : public KIconView {
 		virtual ~KWalletFolderIconView();
 		QString _walletName;
 
+	protected slots:
+		void slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
 	protected:
-		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
-		QDragObject *dragObject();
+		virtual QDragObject *dragObject();
 };
 
 
@@ -97,7 +98,7 @@ class KWalletIconView : public KIconView {
 		virtual ~KWalletIconView();
 
 	protected:
-		QDragObject *dragObject();
+		virtual QDragObject *dragObject();
 };
 
 

@@ -6,7 +6,6 @@ Client:
 - fix initial sizes, layouts
 - Fix HTML
 - Install icons, .desktop file
-- Bug: DnD of folders to foldericonview doesn't work for some reason
 
 Backend:
 - Fix encryption

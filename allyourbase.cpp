@@ -213,6 +213,7 @@ void KWalletFolderItem::dropped(QDropEvent *e, const QValueList<QIconDragItem>& 
  */
 KWalletFolderIconView::KWalletFolderIconView(QWidget *parent, const char *name)
 : KIconView(parent, name) {
+	connect(this, SIGNAL(dropped(QDropEvent*, const QValueList<QIconDragItem>&)), SLOT(slotDropped(QDropEvent*, const QValueList<QIconDragItem>&)));
 }
 
 KWalletFolderIconView::~KWalletFolderIconView() {
@@ -246,7 +247,7 @@ QDragObject *KWalletFolderIconView::dragObject() {
 }
 
 
-void KWalletFolderIconView::dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
+void KWalletFolderIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
 	if (!e->provides("application/x-kwallet-folder")) {
 		e->ignore();
 		return;
