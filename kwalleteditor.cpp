@@ -34,6 +34,7 @@
 #include <kpopupmenu.h>
 #include <ksqueezedtextlabel.h>
 #include <kstdaction.h>
+#include <kdebug.h>
 
 #include <qcheckbox.h>
 #include <qcombobox.h>
@@ -54,7 +55,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
 	_details = new QLabel(_ww->_folderDetails, "Folder Details");
         _details->setBackgroundMode(PaletteBase);
-        _details->setAlignment((_details->alignment() & ~AlignVertical_Mask)|AlignTop); 
+        _details->setAlignment((_details->alignment() & ~AlignVertical_Mask)|AlignTop);
         _details->setFrameStyle(QFrame::Sunken | QFrame::Panel);
 	box->addWidget(_details);
 
