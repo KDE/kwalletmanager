@@ -4,14 +4,9 @@ Client:
 - Map editor can't handle multiline values
 
 Backend:
-- provide metadata (wallet comment, statistics, etc)
+- provide metadata (wallet comment, entry comments, etc)
 - test 64 bit, zSeries
-- investigate timestamping
-- import testcases
-- races in kwalletd
 - refactor the hashes to make it efficient
-- first launch wizard
-- write non-zero byte file to disk if it doesn't exist already
 
 Integration:
 - Cookie jar
@@ -19,7 +14,6 @@ Integration:
 - KMail
 
 Configuration:
-	-> Implement idle timers
 	-> Ability to configure the accept list for applications
 
 Future ideas:
