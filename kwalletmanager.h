@@ -46,6 +46,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		void closeWallet(const QString& walletName);
 		void changeWalletPassword(const QString& walletName);
 		void openWallet(const QString& walletName);
+		void openWalletFile(const QString& path);
 		void openWallet(QIconViewItem *item);
 		void contextMenu(QIconViewItem *item, const QPoint& pos);
 

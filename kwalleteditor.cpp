@@ -49,8 +49,8 @@
 
 #include <assert.h>
 
-KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char *name)
-: KMainWindow(parent, name), _walletName(wallet) {
+KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
+: KMainWindow(parent, name), _walletName(wallet), _nonLocal(isPath) {
 	_ww = new WalletWidget(this, "Wallet Widget");
 	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
 	_details = new KHTMLPart(_ww->_folderDetails, "Folder Details");
@@ -137,13 +137,15 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 	_binaryItems = new QListViewItem(_entryList, i18n("Binary Data"));
 	_unknownItems = new QListViewItem(_entryList, i18n("Unknown"));
 
-	_w = KWallet::Wallet::openWallet(wallet, KWallet::Wallet::Asynchronous);
+	_w = KWallet::Wallet::openWallet(wallet, isPath ? KWallet::Wallet::Path : KWallet::Wallet::Asynchronous);
 	if (_w) {
 		connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
 		connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
 		connect(_w, SIGNAL(folderUpdated(const QString&)), this, SLOT(updateEntries(const QString&)));
 		connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
 		updateFolderList();
+	} else {
+		kdDebug() << "Wallet open failed!" << endl;
 	}
 
 	createActions();
@@ -161,6 +163,9 @@ KWalletEditor::~KWalletEditor() {
 	_deleteFolderAction = 0L;
 	delete _w;
 	_w = 0L;
+	if (_nonLocal) {
+		KWallet::Wallet::closeWallet(_walletName, true);
+	}
 }
 
 void KWalletEditor::slotConfigureKeys()

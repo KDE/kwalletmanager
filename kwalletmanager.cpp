@@ -187,6 +187,19 @@ void KWalletManager::changeWalletPassword(const QString& walletName) {
 }
 
 
+void KWalletManager::openWalletFile(const QString& path) {
+	KWalletEditor *we = new KWalletEditor(path, true, this, "Wallet Editor");
+	if (we->isOpen()) {
+		connect(we, SIGNAL(editorClosed(KMainWindow*)),
+			this, SLOT(editorClosed(KMainWindow*)));
+		we->show();
+	} else {
+		KMessageBox::sorry(this, i18n("Error opening wallet %1.").arg(path));
+		delete we;
+	}
+}
+
+
 void KWalletManager::openWallet(const QString& walletName) {
 	// Don't allow a wallet to open in two windows
 	for (KMainWindow *w = _windows.first(); w; w = _windows.next()) {
@@ -197,7 +210,7 @@ void KWalletManager::openWallet(const QString& walletName) {
 		}
 	}
 
-	KWalletEditor *we = new KWalletEditor(walletName, this, "Wallet Editor");
+	KWalletEditor *we = new KWalletEditor(walletName, false, this, "Wallet Editor");
 	if (we->isOpen()) {
 		connect(we, SIGNAL(editorClosed(KMainWindow*)),
 			this, SLOT(editorClosed(KMainWindow*)));

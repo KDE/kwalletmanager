@@ -1,14 +1,20 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Wallet Management Tool
-Name[de]=Wallet Verwaltungswerkzeug
+Name[bg]=Управление на Портфейла
+Name[ca]=Eina de gestió de carteres
+Name[da]=Håndteringsværktøj for tegnebog
+Name[de]=Geheimfach-Verwaltungswerkzeug
 Name[es]=Herramienta de gestión de cartera
 Name[fr]=Outils de gestion de portefeuille
+Name[hu]=Kezelőprogram a KDE digitális noteszéhez
 Name[pt_BR]=Ferramenta de Gerenciamento Wallet
 Name[ru]=Управление бумажником KDE
 Name[sv]=Hanteringsverktyg för plånbok
 Name[xx]=xxWallet Management Toolxx
-Exec=kwalletmanager --show
+Exec=kwalletmanager --show %u
+MimeType=application/x-kde-wallet
+InitialPreference=6
 Icon=kwallet
 Type=Service
 X-KDE-StartupNotify=true

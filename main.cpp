@@ -19,10 +19,15 @@
 
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
+#include <kdebug.h>
 #include <kglobal.h>
 #include <klocale.h>
+#include <kmimetype.h>
 #include <kstddirs.h>
 #include <kuniqueapplication.h>
+
+#include <qfile.h>
+#include <qfileinfo.h>
 
 #include "kwalletmanager.h"
 
@@ -73,7 +78,15 @@ KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.0",
 	}
 
 	for (int i = 0; i < args->count(); ++i) {
-		wm.openWallet(args->arg(i));
+		QString fn = QFileInfo(args->arg(i)).absFilePath();
+		KMimeType::Ptr ptr;
+		if (QFile::exists(fn) &&
+			(ptr = KMimeType::findByFileContent(fn)) &&
+			ptr->is("application/x-kde-wallet")) {
+			wm.openWalletFile(fn);
+		} else {
+			wm.openWallet(args->arg(i));
+		}
 	}
 
 return a.exec();

@@ -11,7 +11,5 @@ Integration:
 - KMail
 
 Future ideas:
-- File association of kwallet type to kwalletmanager
-	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
 - Make it a kpart
 

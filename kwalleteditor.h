@@ -38,7 +38,7 @@ class KWalletEditor : public KMainWindow {
 	Q_OBJECT
 
 	public:
-		KWalletEditor(const QString& wallet, QWidget *parent = 0, const char* name = 0);
+		KWalletEditor(const QString& wallet, bool isPath, QWidget *parent = 0, const char* name = 0);
 		virtual ~KWalletEditor();
 
 		bool isOpen() const { return _w != 0L; }
@@ -84,6 +84,7 @@ class KWalletEditor : public KMainWindow {
 
 	private:
 		void createActions();
+		bool _nonLocal;
 		KWallet::Wallet *_w;
 		WalletWidget *_ww;
 		KWalletFolderIconView *_folderView;
