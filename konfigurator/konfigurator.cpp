@@ -54,6 +54,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_closeIdle, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_openPrompt, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_storeTogether, SIGNAL(clicked()), this, SLOT(configChanged()));
+	connect(_wcw->_screensaverLock, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_idleTime, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
 	connect(_wcw->_launch, SIGNAL(clicked()), this, SLOT(launchManager()));
 	connect(_wcw->_newWallet, SIGNAL(clicked()), this, SLOT(newNetworkWallet()));
@@ -167,6 +168,7 @@ void KWalletConfig::load() {
 	_wcw->_openPrompt->setChecked(config.readBoolEntry("Prompt on Open", true));
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
 	_wcw->_leaveManagerOpen->setChecked(config.readBoolEntry("Leave Manager Open", false));
+	_wcw->_screensaverLock->setChecked(config.readBoolEntry("Close on Screensaver", false));
 	_wcw->_leaveOpen->setChecked(config.readBoolEntry("Leave Open", false));
 	_wcw->_closeIdle->setChecked(config.readBoolEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
@@ -207,6 +209,7 @@ void KWalletConfig::save() {
 	config.writeEntry("Use One Wallet", _wcw->_storeTogether->isChecked());
 	config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
 	config.writeEntry("Prompt on Open", _wcw->_openPrompt->isChecked());
+	config.writeEntry("Close on Screensaver", _wcw->_screensaverLock->isChecked());
 
 	if (_wcw->_localWalletSelected->isChecked()) {
 		config.writeEntry("Local Wallet", _wcw->_localWallet->currentText());
@@ -242,6 +245,7 @@ void KWalletConfig::defaults() {
 	_wcw->_openPrompt->setChecked(true);
 	_wcw->_launchManager->setChecked(true);
 	_wcw->_leaveManagerOpen->setChecked(false);
+	_wcw->_screensaverLock->setChecked(false);
 	_wcw->_leaveOpen->setChecked(false);
 	_wcw->_closeIdle->setChecked(false);
 	_wcw->_storeTogether->setChecked(true);
