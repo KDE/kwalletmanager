@@ -63,17 +63,6 @@
                 <widget class="QListView">
                     <column>
                         <property name="text">
-                            <string>Entry Type</string>
-                        </property>
-                        <property name="clickable">
-                            <bool>true</bool>
-                        </property>
-                        <property name="resizable">
-                            <bool>true</bool>
-                        </property>
-                    </column>
-                    <column>
-                        <property name="text">
                             <string>Folder Entry</string>
                         </property>
                         <property name="clickable">
@@ -119,6 +108,9 @@
                             <widget class="QTextEdit" row="1" column="0">
                                 <property name="name">
                                     <cstring>_passwordValue</cstring>
+                                </property>
+                                <property name="textFormat">
+                                    <enum>PlainText</enum>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="0" column="0">

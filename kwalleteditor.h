@@ -27,6 +27,7 @@
 
 class KAction;
 class QIconViewItem;
+class QListViewItem;
 class KHTMLPart;
 
 class KWalletEditor : public KMainWindow {
@@ -46,8 +47,14 @@ class KWalletEditor : public KMainWindow {
 	private slots:
 		void updateFolderList();
 		void folderSelectionChanged(QIconViewItem *item);
+		void entrySelectionChanged(QListViewItem *item);
+		void listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col);
 		void updateEntries();
 		void updateDetails();
+
+		void newEntry();
+		void renameEntry();
+		void deleteEntry();
 
 	signals:
 		void enableFolderActions(bool enable);
@@ -62,6 +69,7 @@ class KWalletEditor : public KMainWindow {
 		KAction *_newFolderAction, *_deleteFolderAction;
 		KHTMLPart *_details;
 		QStringList _entries;
+		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;
 };
 
 #endif

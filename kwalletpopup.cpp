@@ -39,6 +39,8 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 	act = new KAction(i18n("&Close"), 0, 0, this,
 			SLOT(closeWallet()), ac, "wallet_close");
+	// FIXME: let's track this inside the manager so we don't need a dcop
+	//        roundtrip here.
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
 	act->plug(this);
 

@@ -20,22 +20,26 @@
 
 #include "kwalleteditor.h"
 
-#include <dcopref.h>
 #include <dcopclient.h>
+#include <dcopref.h>
 #include <kaction.h>
 #include <kapplication.h>
-#include <klocale.h>
 #include <kiconview.h>
 #include <kinputdialog.h>
-#include <kstdaction.h>
-#include <kmessagebox.h>
 #include <khtml_part.h>
+#include <klocale.h>
+#include <kmessagebox.h>
+#include <kpopupmenu.h>
+#include <kstdaction.h>
 
-#include <qwidgetstack.h>
+#include <qlabel.h>
 #include <qlayout.h>
 #include <qlistview.h>
 #include <qptrstack.h>
+#include <qtextedit.h>
+#include <qwidgetstack.h>
 
+#include <assert.h>
 
 KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char *name)
 : KMainWindow(parent, name), _walletName(wallet) {
@@ -44,6 +48,10 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 
 	connect(_ww->_folderView, SIGNAL(selectionChanged(QIconViewItem*)),
 		this, SLOT(folderSelectionChanged(QIconViewItem*)));
+	connect(_ww->_entryList, SIGNAL(selectionChanged(QListViewItem*)),
+		this, SLOT(entrySelectionChanged(QListViewItem*)));
+	connect(_ww->_entryList, SIGNAL(contextMenuRequested(QListViewItem*, const QPoint&, int)),
+		this, SLOT(listContextMenuRequested(QListViewItem*, const QPoint&, int)));
 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
@@ -66,6 +74,8 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 
 	createActions();
 	createGUI("kwalleteditor.rc");
+
+	setCaption(wallet);
 }
 
 
@@ -163,12 +173,35 @@ void KWalletEditor::createFolder() {
 				if (rc == KMessageBox::Yes) {
 					continue;
 				}
+				n = QString::null;
 			}
-		} while (false);
+			break;
+		} while (true);
 
 		_w->createFolder(n);
 		updateFolderList();
 	}
+}
+
+
+void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
+	if (item && _w && item->parent()) {
+		if (item->parent() == _passItems) {
+			QString pass;
+			if (_w->readPassword(item->text(0), pass) == 0) {
+				_ww->_entryStack->raiseWidget(int(1));
+				_ww->_passwordName->setText(i18n("Password: %1")
+							.arg(item->text(0)));
+				_ww->_passwordValue->setText(pass);
+				return;
+			}
+		} else if (item->parent() == _mapItems) {
+			_ww->_entryStack->raiseWidget(int(2));
+		} else if (item->parent() == _binaryItems) {
+			_ww->_entryStack->raiseWidget(int(3));
+		}
+	}
+	_ww->_entryStack->raiseWidget(int(0));
 }
 
 
@@ -182,6 +215,7 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 		updateEntries();
 	} else {
 		_details->begin();
+		_details->write(QString::null);
 		_details->end();
 		_ww->_entryList->clear();
 	}
@@ -210,28 +244,106 @@ void KWalletEditor::updateDetails() {
 
 void KWalletEditor::updateEntries() {
 	_ww->_entryList->clear();
-	QListViewItem *passItems, *mapItems, *binaryItems, *unknownItems;
-	passItems = new QListViewItem(_ww->_entryList, i18n("Passwords"));
-	mapItems = new QListViewItem(_ww->_entryList, i18n("Maps"));
-	binaryItems = new QListViewItem(_ww->_entryList, i18n("Binary Data"));
-	unknownItems = new QListViewItem(_ww->_entryList, i18n("Unknown"));
+	_passItems = new QListViewItem(_ww->_entryList, i18n("Passwords"));
+	_mapItems = new QListViewItem(_ww->_entryList, i18n("Maps"));
+	_binaryItems = new QListViewItem(_ww->_entryList, i18n("Binary Data"));
+	_unknownItems = new QListViewItem(_ww->_entryList, i18n("Unknown"));
 	
 	for (QStringList::Iterator i = _entries.begin(); i != _entries.end(); ++i) {
 		switch (_w->entryType(*i)) {
 		case KWallet::Wallet::Password:
-			new QListViewItem(passItems, *i);
+			new QListViewItem(_passItems, *i);
 			break;
 		case KWallet::Wallet::Stream:
-			new QListViewItem(mapItems, *i);
+			new QListViewItem(_mapItems, *i);
 			break;
 		case KWallet::Wallet::Map:
-			new QListViewItem(binaryItems, *i);
+			new QListViewItem(_binaryItems, *i);
 			break;
 		case KWallet::Wallet::Unknown:
 		default:
-			new QListViewItem(unknownItems, *i);
+			new QListViewItem(_unknownItems, *i);
 			break;
 		}
+	}
+}
+
+
+void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col) {
+	Q_UNUSED(col)
+
+	if (!item || item == _unknownItems ||
+			(item->parent() && item->parent() == _unknownItems)) {
+		return;
+	}
+
+	KPopupMenu *m = new KPopupMenu(this);
+	m->insertTitle(item->text(0));
+	if (item->parent()) {
+		m->insertItem("&New...", this, SLOT(newEntry()), Key_Insert);
+		m->insertItem("&Rename", this, SLOT(renameEntry()), Key_F2);
+		m->insertItem("&Delete", this, SLOT(deleteEntry()), Key_Delete);
+		m->popup(pos);
+	} else {
+		m->insertItem("&New...", this, SLOT(newEntry()), Key_Insert);
+		m->popup(pos);
+	}
+}
+
+
+void KWalletEditor::newEntry() {
+QListViewItem *item = _ww->_entryList->selectedItem();
+QString n;
+
+	do {
+		n = KInputDialog::getText(i18n("New Entry..."),
+				i18n("Please choose a name for the new entry..."));
+
+		if (n.isEmpty()) {
+			return;
+		}
+
+		// FIXME: prohibits the use of the subheadings
+		if (_ww->_entryList->findItem(n, 0)) {
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists.  Try again?"));
+			if (rc == KMessageBox::Yes) {
+				continue;
+			}
+			n = QString::null;
+		}
+		break;
+	} while (true);
+
+	if (_w && item && !n.isEmpty()) {
+		QListViewItem *p = item;
+		if (item->parent()) {
+			p = item->parent();
+		}
+
+		new QListViewItem(p, n);
+
+		if (p == _passItems) {
+			_w->writePassword(n, QString::null);
+		} else if (p == _mapItems) {
+			_w->writeMap(n, QMap<QString,QString>());
+		} else if (p == _binaryItems) {
+			_w->writeEntry(n, QByteArray());
+		} else {
+			assert(0);
+		}
+	}
+}
+
+
+void KWalletEditor::renameEntry() {
+}
+
+
+void KWalletEditor::deleteEntry() {
+QListViewItem *item = _ww->_entryList->selectedItem();
+	if (_w && item) {
+		_w->removeEntry(item->text(0));
+		delete item;
 	}
 }
 
