@@ -26,15 +26,19 @@
 #include <dcopref.h>
 #include <kaction.h>
 #include <kapplication.h>
+#include <kdebug.h>
+#include <kfiledialog.h>
 #include <kiconview.h>
-#include <kkeydialog.h>
+#include <kio/netaccess.h>
 #include <kinputdialog.h>
+#include <kkeydialog.h>
 #include <klocale.h>
+#include <kmdcodec.h>
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
 #include <ksqueezedtextlabel.h>
 #include <kstdaction.h>
-#include <kdebug.h>
+#include <ktempfile.h>
 
 #include <qcheckbox.h>
 #include <qcombobox.h>
@@ -189,6 +193,10 @@ void KWalletEditor::createActions() {
 	_passwordAction = new KAction(i18n("Change &Password..."), 0, 0, this,
 			SLOT(changePassword()), actionCollection(),
 			"change_password");
+
+	_exportAction = new KAction(i18n("&Export..."), 0, 0, this,
+			SLOT(exportXML()), actionCollection(),
+			"export");
 
 	KStdAction::close(this, SLOT(close()), actionCollection());
         KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
@@ -652,6 +660,71 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 		_mapEditor->showColumn(2);
 	} else {
 		_mapEditor->hideColumn(2);
+	}
+}
+
+
+void KWalletEditor::exportXML() {
+KTempFile tf;
+tf.setAutoDelete(true);
+QTextStream& ts(*tf.textStream());
+QStringList fl = _w->folderList();
+
+	ts << "<wallet name=\"" << _walletName << "\">" << endl;
+	for (QStringList::Iterator i = fl.begin(); i != fl.end(); ++i) {
+		ts << "  <folder name=\"" << *i << "\">" << endl;
+		_w->setFolder(*i);
+		QStringList entries = _w->entryList();
+		for (QStringList::Iterator j = entries.begin(); j != entries.end(); ++j) {
+			switch (_w->entryType(*j)) {
+				case KWallet::Wallet::Password:
+					{
+						QString pass;
+						if (_w->readPassword(*j, pass) == 0) {
+							ts << "    <password name=\"" << QStyleSheet::escape(*j) << "\">";
+							ts << QStyleSheet::escape(pass);
+							ts << "</password>" << endl;
+						}
+						break;
+					}
+				case KWallet::Wallet::Stream:
+					{
+						QByteArray ba;
+						if (_w->readEntry(*j, ba) == 0) {
+							ts << "    <stream name=\"" << QStyleSheet::escape(*j) << "\">";
+							ts << KCodecs::base64Encode(ba);
+
+							ts << "</stream>" << endl;
+						}
+						break;
+					}
+				case KWallet::Wallet::Map:
+					{
+						QMap<QString,QString> map;
+						if (_w->readMap(*j, map) == 0) {
+							ts << "    <map name=\"" << QStyleSheet::escape(*j) << "\">" << endl;
+							for (QMap<QString,QString>::ConstIterator k = map.begin(); k != map.end(); ++k) {
+								ts << "      <mapentry name=\"" << QStyleSheet::escape(k.key()) << "\">" << QStyleSheet::escape(k.data()) << "</mapentry>" << endl;
+							}
+							ts << "    </map>" << endl;
+						}
+						break;
+					}
+				case KWallet::Wallet::Unknown:
+				default:
+					break;
+			}
+		}
+		ts << "  </folder>" << endl;
+	}
+
+	ts << "</wallet>" << endl;
+	tf.close();
+
+	KURL url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
+
+	if (!url.isEmpty()) {
+		KIO::NetAccess::upload(tf.name(), url, this);
 	}
 }
 

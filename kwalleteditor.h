@@ -73,6 +73,8 @@ class KWalletEditor : public KMainWindow {
 		void showPasswordContents();
 		void showHideMapEditorValue(bool show);
 
+		void exportXML();
+
 	signals:
 		void enableFolderActions(bool enable);
 		void enableContextFolderActions(bool enable);
@@ -89,7 +91,7 @@ class KWalletEditor : public KMainWindow {
 		KWalletFolderIconView *_folderView;
 		KWalletEntryList *_entryList;
 		KAction *_newFolderAction, *_deleteFolderAction;
-		KAction *_passwordAction;
+		KAction *_passwordAction, *_exportAction;
 		QLabel*_details;
 		QStringList _entries;
 		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;

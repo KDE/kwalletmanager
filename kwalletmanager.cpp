@@ -106,13 +106,13 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 			"close_all_wallets");
 	act->plug(_tray->contextMenu());
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
-        KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
+        KStdAction::keyBindings(this, SLOT(slotConfigureKeys()), actionCollection());
 
 	createGUI("kwalletmanager.rc");
         accel->connectItem(accel->insertItem(Key_Return),
-                           this, SLOT(openWallet()) );
+                           this, SLOT(openWallet()));
         accel->connectItem(accel->insertItem(Key_Delete),
-                           this, SLOT(deleteWallet()) );
+                           this, SLOT(deleteWallet()));
 
 	_tray->show();
 }
@@ -234,9 +234,7 @@ void KWalletManager::openWalletFile(const QString& path) {
 void KWalletManager::openWallet()
 {
 	QIconViewItem *item = _iconView->currentItem();
-	if (item) {
-		openWallet(item->text());
-	}
+	openWallet(item);
 }
 
 void KWalletManager::deleteWallet()
@@ -311,11 +309,13 @@ void KWalletManager::possiblyRescan(const QCString& app) {
 void KWalletManager::createWallet() {
 	QString n;
 	bool ok;
+	// FIXME: support international names
 	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
+	QString txt = i18n("Please choose a name for the new wallet:");
 
 	do {
 		n = KInputDialog::getText(i18n("New Wallet"),
-				i18n("Please choose a name for the new wallet:"),
+				txt,
 				QString::null,
 				&ok,
 				this);
@@ -331,8 +331,10 @@ void KWalletManager::createWallet() {
 			}
 			n = QString::null;
 		} else if (regexp.exactMatch(n)) {
+			break;
+		} else {
+			txt = i18n("Please choose a name that contains only alphanumeric characters:");
 		}
-		break;
 	} while (true);
 
 	// Small race here - the wallet could be created on us already.
