@@ -74,6 +74,7 @@ class KWalletEditor : public KMainWindow {
 		void showPasswordContents();
 		void showHideMapEditorValue(bool show);
 
+		void saveAs();
 		void exportXML();
 		void importXML();
 		void importWallet();

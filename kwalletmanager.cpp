@@ -34,6 +34,7 @@
 #include <kinputdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
+#include <kstandarddirs.h>
 #include <kstdaction.h>
 #include <ksystemtray.h>
 #include <kwallet.h>
@@ -46,6 +47,7 @@
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
+	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
 	QAccel *accel = new QAccel(this, "kwalletmanager");
 

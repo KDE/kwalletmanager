@@ -38,6 +38,7 @@
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
 #include <ksqueezedtextlabel.h>
+#include <kstandarddirs.h>
 #include <kstdaction.h>
 #include <kstringhandler.h>
 #include <ktempfile.h>
@@ -208,6 +209,7 @@ void KWalletEditor::createActions() {
 			SLOT(exportXML()), actionCollection(),
 			"export");
 
+	KStdAction::saveAs(this, SLOT(saveAs()), actionCollection());
 	KStdAction::quit(this, SLOT(close()), actionCollection());
 	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
@@ -865,6 +867,21 @@ void KWalletEditor::exportXML() {
 void KWalletEditor::setNewWallet(bool x) {
 	_newWallet = x;
 }
+
+
+void KWalletEditor::saveAs() {
+	KURL url = KFileDialog::getSaveURL(QString::null, "*.kwl", this);
+	if (!url.isEmpty()) {
+		// Sync() kwalletd
+		if (_nonLocal) {
+			KIO::NetAccess::file_copy(_walletName, url, 0600, false, false, this);
+		} else {
+			QString path = KGlobal::dirs()->saveLocation("kwallet") + "/" + _walletName + ".kwl";
+			KIO::NetAccess::file_copy(path, url, 0600, false, false, this);
+		}
+	}
+}
+
 
 #include "kwalleteditor.moc"
 
