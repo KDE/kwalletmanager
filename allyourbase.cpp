@@ -26,6 +26,7 @@
 #include <kstddirs.h>
 #include <kwallet.h>
 #include <kiconloader.h>
+#include <kicontheme.h>
 
 #include <qdragobject.h>
 #include <qptrlist.h>
@@ -173,6 +174,18 @@ class KWalletFolderDrag : public QIconDrag {
  */
 KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QIconView *parent, const QString& folderName)
 : QIconViewItem(parent, folderName), _wallet(w) {
+	KIconLoader *loader = KGlobal::instance()->iconLoader();
+
+	QPixmap pix = loader->loadIcon( folderName, KIcon::Desktop,
+		KIcon::SizeMedium, KIcon::DefaultState, 0, true );
+	if ( pix.isNull() )
+		pix = loader->loadIcon( folderName.lower(), KIcon::Desktop,
+			KIcon::SizeMedium, KIcon::DefaultState, 0, true );
+	if ( pix.isNull() )
+		pix = loader->loadIcon( "folder_red", KIcon::Desktop,
+			KIcon::SizeMedium, KIcon::DefaultState, 0, true );
+
+	setPixmap( pix );
 }
 
 KWalletFolderItem::~KWalletFolderItem() {
