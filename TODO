@@ -2,8 +2,7 @@ Things left:
 
 Client:
 - Wallet icons
-- Map editor is still really broken - maybe needs to be redesigned
-- Document it
+- Map editor can't handle multiline values
 
 Backend:
 - allow unpassworded wallet?
