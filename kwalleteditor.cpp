@@ -609,7 +609,6 @@ QIconViewItem *ivi = _folderView->currentItem();
 
 
 void KWalletEditor::saveMapEntry() {
-kdDebug() <<"SAVE MAP ENTRY" << endl;
 	if (_mapEntryDirty) {
 		_currentMap.remove(_currentMapKey);
 		_currentMap[_ww->_mapKey->text()] = _ww->_mapValue->text();
@@ -651,7 +650,6 @@ void KWalletEditor::deleteMapEntry() {
 
 
 void KWalletEditor::mapEntryChanged(int id) {
-kdDebug() << "MAP ENTRY CHANGED " << id << endl;
 	QString entry = _ww->_mapEntry->text(id);
 	saveMapEntry();
 	_ww->_mapKey->setEnabled(true);
