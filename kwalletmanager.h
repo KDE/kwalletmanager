@@ -38,9 +38,6 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		KWalletManager(QWidget *parent = 0, const char* name = 0, WFlags f = 0);
 		virtual ~KWalletManager();
 
-	k_dcop:
-		ASYNC updateWalletDisplay();
-
 	public slots:
 		void createWallet();
 		void deleteWallet(const QString& walletName);
@@ -52,6 +49,8 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 	private:
 	k_dcop:
 		ASYNC allWalletsClosed();
+		ASYNC updateWalletDisplay();
+		ASYNC aWalletWasOpened();
 
 	private slots:
 		void possiblyQuit();

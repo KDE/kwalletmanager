@@ -29,6 +29,7 @@
 #include <kapplication.h>
 #include <kdebug.h>
 #include <kiconview.h>
+#include <kiconloader.h>
 #include <klineeditdlg.h>
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -44,6 +45,14 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_tray = new KSystemTray(this, "kwalletmanager tray");
+	_tray->setPixmap(SmallIcon("wallet_closed"));
+	QStringList wl = KWallet::Wallet::walletList();
+	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
+		if (KWallet::Wallet::isOpen(*it)) {
+			_tray->setPixmap(SmallIcon("wallet_open"));
+			break;
+		}
+	}
 	_tray->show();
 
 	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
@@ -66,7 +75,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "updateWalletDisplay()", false);
+        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "aWalletWasOpened()", false);
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(QString)", "updateWalletDisplay()", false);
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletListDirty()", "updateWalletDisplay()", false);
 
@@ -86,6 +95,12 @@ KWalletManager::~KWalletManager() {
 	_tray = 0L;
 	delete _dcopRef;
 	_dcopRef = 0L;
+}
+
+
+void KWalletManager::aWalletWasOpened() {
+	_tray->setPixmap(SmallIcon("wallet_open"));
+	updateWalletDisplay();
 }
 
 
@@ -173,6 +188,7 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 
 void KWalletManager::allWalletsClosed() {
+	_tray->setPixmap(SmallIcon("wallet_closed"));
 	possiblyQuit();
 }
 
