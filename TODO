@@ -4,11 +4,15 @@ Backend:
 - provide metadata (wallet comment, entry comments, etc)
 - test 64 bit, zSeries
 - refactor the hashes to make it efficient
+- check out valgrind log
 
 Integration:
 - Cookie jar
 - KIO
 - KMail
+
+Misc:
+- Add statusbar extension to konqi
 
 Future ideas:
 - File association of kwallet type to kwalletmanager
