@@ -60,9 +60,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 		SLOT(possiblyRescan(const QCString&)));
 
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(const QString&)", "updateWalletDisplay()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(const QString&)", "updateWalletDisplay()", false);
-        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(const QString&)", "updateWalletDisplay()", false);
+        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
+        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "updateWalletDisplay()", false);
+        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(QString)", "updateWalletDisplay()", false);
 
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay

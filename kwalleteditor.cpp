@@ -415,6 +415,7 @@ QIconViewItem *ivi = _ww->_folderView->currentItem();
 
 	if (ivi && ivi->text() == folder) {
 		// FIXME - this is sort of destructive
+		_entries = _w->entryList();
 		updateEntries();
 	}
 }
