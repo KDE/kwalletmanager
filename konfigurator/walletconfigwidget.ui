@@ -177,7 +177,7 @@
                             <cstring>groupBox4</cstring>
                         </property>
                         <property name="title">
-                            <string>Automatic wallet selection</string>
+                            <string>Automatic Wallet Selection</string>
                         </property>
                         <grid>
                             <property name="name">
