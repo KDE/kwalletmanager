@@ -27,13 +27,14 @@
 #include <kaction.h>
 #include <kapplication.h>
 #include <kiconview.h>
-#include <klineeditdlg.h>
 #include <khtml_part.h>
+#include <kkeydialog.h>
+#include <klineeditdlg.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
+#include <ksqueezedtextlabel.h>
 #include <kstdaction.h>
-#include <kkeydialog.h>
 
 #include <qcheckbox.h>
 #include <qcombobox.h>

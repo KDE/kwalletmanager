@@ -357,7 +357,7 @@
                                 </grid>
                             </widget>
                         </widget>
-                        <widget class="QLabel" row="0" column="0" rowspan="1" colspan="3">
+                        <widget class="KSqueezedTextLabel" row="0" column="0" rowspan="1" colspan="3">
                             <property name="name">
                                 <cstring>_entryName</cstring>
                             </property>
@@ -383,4 +383,7 @@
     </grid>
 </widget>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>ksqueezedtextlabel.h</includehint>
+</includehints>
 </UI>
