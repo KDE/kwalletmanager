@@ -737,11 +737,16 @@ void KWalletEditor::importXML() {
 		while (!enode.isNull()) {
 			e = enode.toElement();
 			QString type = e.tagName().lower();
-			// FIXME: do conflict resolution
+			QString ename = e.attribute("name");
+			if (_w->hasEntry(ename)) {
+				// FIXME: do conflict resolution
+				enode = enode.nextSibling();
+				continue;
+			}
 			if (type == "password") {
-				_w->writePassword(e.attribute("name"), e.text());
+				_w->writePassword(ename, e.text());
 			} else if (type == "stream") {
-				_w->writeEntry(e.attribute("name"), KCodecs::base64Decode(e.text().latin1()));
+				_w->writeEntry(ename, KCodecs::base64Decode(e.text().latin1()));
 			} else if (type == "map") {
 				QMap<QString,QString> map;
 				QDomNode mapNode = e.firstChild();
@@ -752,7 +757,7 @@ void KWalletEditor::importXML() {
 					}
 					mapNode = mapNode.nextSibling();
 				}
-				_w->writeMap(e.attribute("name"), map);
+				_w->writeMap(ename, map);
 			}
 			enode = enode.nextSibling();
 		}
