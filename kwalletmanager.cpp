@@ -31,18 +31,19 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <kiconview.h>
+#include <kkeydialog.h>
 #include <klineeditdlg.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstdaction.h>
 #include <ksystemtray.h>
 #include <kwallet.h>
-#include <kkeydialog.h>
-#include <qguardedptr.h>
 
+#include <qaccel.h>
+#include <qguardedptr.h>
 #include <qptrstack.h>
 #include <qregexp.h>
-#include <qaccel.h>
+#include <qtooltip.h>
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
@@ -52,6 +53,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
 	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
+	QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
 	connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
@@ -130,6 +132,8 @@ bool KWalletManager::queryClose() {
 
 void KWalletManager::aWalletWasOpened() {
 	_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
+	QToolTip::remove(_tray);
+	QToolTip::add(_tray, i18n("KDE Wallet: A wallet is open."));
 	updateWalletDisplay();
 }
 
@@ -266,6 +270,8 @@ void KWalletManager::openWallet(QIconViewItem *item) {
 
 void KWalletManager::allWalletsClosed() {
 	_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
+	QToolTip::remove(_tray);
+	QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
 	possiblyQuit();
 }
 
