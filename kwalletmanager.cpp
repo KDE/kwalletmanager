@@ -23,8 +23,8 @@
 #include "kwalleteditor.h"
 #include "allyourbase.h"
 
-#include <dcopref.h>
 #include <dcopclient.h>
+#include <dcopref.h>
 #include <kaction.h>
 #include <kapplication.h>
 #include <kconfig.h>
@@ -127,6 +127,8 @@ actionCollection());
 	} else {
 		show();
 	}
+
+	kapp->setName("kwallet"); // hack to fix docs
 }
 
 
