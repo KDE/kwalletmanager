@@ -19,6 +19,7 @@
 
 
 #include "kwalleteditor.h"
+#include "allyourbase.h"
 
 #include <dcopclient.h>
 #include <dcopref.h>
@@ -50,8 +51,18 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 		this, SLOT(folderSelectionChanged(QIconViewItem*)));
 	connect(_ww->_entryList, SIGNAL(selectionChanged(QListViewItem*)),
 		this, SLOT(entrySelectionChanged(QListViewItem*)));
-	connect(_ww->_entryList, SIGNAL(contextMenuRequested(QListViewItem*, const QPoint&, int)),
-		this, SLOT(listContextMenuRequested(QListViewItem*, const QPoint&, int)));
+	connect(_ww->_entryList,
+		SIGNAL(contextMenuRequested(QListViewItem*,const QPoint&,int)),
+		this,
+		SLOT(listContextMenuRequested(QListViewItem*,const QPoint&,int)));
+	connect(_ww->_entryList,
+		SIGNAL(itemRenamed(QListViewItem*, int, const QString&)),
+		this,
+		SLOT(listItemRenamed(QListViewItem*, int, const QString&)));
+	connect(_ww->_folderView,
+		SIGNAL(contextMenuRequested(QIconViewItem*,const QPoint&)),
+		this,
+		SLOT(iconContextMenuRequested(QIconViewItem*,const QPoint&)));
 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
@@ -91,13 +102,13 @@ KWalletEditor::~KWalletEditor() {
 
 
 void KWalletEditor::createActions() {
-	_newFolderAction = new KAction(i18n("New &Folder..."), 0, 0, this,
+	_newFolderAction = new KAction(i18n("&New Folder..."), 0, 0, this,
 			SLOT(createFolder()), actionCollection(),
 			"create_folder");
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
 
-	_deleteFolderAction = new KAction(i18n("Delete &Folder"), 0, Key_Delete,
+	_deleteFolderAction = new KAction(i18n("&Delete Folder"), 0, Key_Delete,
 			this, SLOT(deleteFolder()), actionCollection(),
 			"delete_folder");
 	connect(this, SIGNAL(enableContextFolderActions(bool)),
@@ -116,6 +127,7 @@ void KWalletEditor::walletClosed() {
 	delete _w;
 	_w = 0L;
 	_ww->_folderView->clear();
+	folderSelectionChanged(0L);
 	_ww->setEnabled(false);
 	emit enableFolderActions(false);
 	// FIXME
@@ -162,7 +174,10 @@ void KWalletEditor::createFolder() {
 
 		do {
 			n = KInputDialog::getText(i18n("New Folder..."),
-					i18n("Please choose a name for the new folder..."));
+					i18n("Please choose a name for the new folder..."),
+					QString::null,
+					0L,
+					this);
 
 			if (n.isEmpty()) {
 				return;
@@ -218,6 +233,7 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 		_details->write(QString::null);
 		_details->end();
 		_ww->_entryList->clear();
+		entrySelectionChanged(0L);
 	}
 	_ww->_entryList->setEnabled(item && _w);
 	_ww->_folderDetails->setEnabled(item && _w);
@@ -252,19 +268,33 @@ void KWalletEditor::updateEntries() {
 	for (QStringList::Iterator i = _entries.begin(); i != _entries.end(); ++i) {
 		switch (_w->entryType(*i)) {
 		case KWallet::Wallet::Password:
-			new QListViewItem(_passItems, *i);
+			new KWalletEntryItem(_passItems, *i);
 			break;
 		case KWallet::Wallet::Stream:
-			new QListViewItem(_mapItems, *i);
+			new KWalletEntryItem(_mapItems, *i);
 			break;
 		case KWallet::Wallet::Map:
-			new QListViewItem(_binaryItems, *i);
+			new KWalletEntryItem(_binaryItems, *i);
 			break;
 		case KWallet::Wallet::Unknown:
 		default:
 			new QListViewItem(_unknownItems, *i);
 			break;
 		}
+	}
+}
+
+
+void KWalletEditor::iconContextMenuRequested(QIconViewItem *item, const QPoint& pos) {
+	KPopupMenu *m = new KPopupMenu(this);
+	if (item) {
+		m->insertTitle(item->text());
+		_newFolderAction->plug(m);
+		_deleteFolderAction->plug(m);
+		m->popup(pos);
+	} else {
+		_newFolderAction->plug(m);
+		m->popup(pos);
 	}
 }
 
@@ -297,7 +327,10 @@ QString n;
 
 	do {
 		n = KInputDialog::getText(i18n("New Entry..."),
-				i18n("Please choose a name for the new entry..."));
+				i18n("Please choose a name for the new entry..."),
+				QString::null,
+				0L,
+				this);
 
 		if (n.isEmpty()) {
 			return;
@@ -320,7 +353,7 @@ QString n;
 			p = item->parent();
 		}
 
-		new QListViewItem(p, n);
+		new KWalletEntryItem(p, n);
 
 		if (p == _passItems) {
 			_w->writePassword(n, QString::null);
@@ -336,6 +369,32 @@ QString n;
 
 
 void KWalletEditor::renameEntry() {
+QListViewItem *item = _ww->_entryList->selectedItem();
+	if (_w && item) {
+		item->startRename(0);
+	}
+}
+
+
+// Only supports renaming of KWalletEntryItem derived classes.
+void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) {
+	if (item) {
+		KWalletEntryItem *i = dynamic_cast<KWalletEntryItem*>(item);
+		if (!i) {
+			return;
+		}
+
+		if (!_w) {
+			i->setText(0, i->oldName());
+			return;
+		}
+
+		if (_w->renameEntry(i->oldName(), t) == 0) {
+			i->clearOldName();
+		} else {
+			i->setText(0, i->oldName());
+		}
+	}
 }
 
 

@@ -37,6 +37,7 @@
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
+	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_tray = new KSystemTray(this, "kwalletmanager tray");
 	_tray->show();
 
@@ -48,6 +49,15 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_iconView->arrangeItemsInGrid();
 
 	_dcopRef = new DCOPRef("kded", "kwalletd");
+	_dcopRef->dcopClient()->setNotifications(true);
+	connect(_dcopRef->dcopClient(),
+		SIGNAL(applicationRemoved(const QCString&)),
+		this,
+		SLOT(possiblyRescan(const QCString&)));
+	connect(_dcopRef->dcopClient(),
+		SIGNAL(applicationRegistered(const QCString&)),
+		this,
+		SLOT(possiblyRescan(const QCString&)));
 
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(const QString&)", "updateWalletDisplay()", false);
@@ -167,6 +177,13 @@ void KWalletManager::possiblyQuit() {
 
 void KWalletManager::editorClosed(KMainWindow* e) {
 	_windows.remove(e);
+}
+
+
+void KWalletManager::possiblyRescan(const QCString& app) {
+	if (app == "kded") {
+		updateWalletDisplay();
+	}
 }
 
 // TODO: - ability to see who is using which wallets?
