@@ -365,7 +365,7 @@ KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 KWalletIconView::~KWalletIconView() {
 }
 
-void KWalletIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
+void KWalletIconView::slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& /*lst*/) {
 	if (e->source() == viewport()) {
 		e->ignore();
 		return;

@@ -28,7 +28,7 @@
 #include <kapplication.h>
 #include <kiconview.h>
 #include <kkeydialog.h>
-#include <klineeditdlg.h>
+#include <kinputdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
@@ -254,7 +254,7 @@ void KWalletEditor::createFolder() {
 		bool ok;
 
 		do {
-			n = KLineEditDlg::getText(i18n("New Folder"),
+			n = KInputDialog::getText(i18n("New Folder"),
 					i18n("Please choose a name for the new folder:"),
 					QString::null,
 					&ok,
@@ -519,7 +519,7 @@ void KWalletEditor::newEntry() {
 	bool ok;
 
 	do {
-		n = KLineEditDlg::getText(i18n("New Entry"),
+		n = KInputDialog::getText(i18n("New Entry"),
 				i18n("Please choose a name for the new entry:"),
 				QString::null,
 				&ok,
