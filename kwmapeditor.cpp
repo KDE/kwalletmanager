@@ -25,6 +25,7 @@
 #include <kwin.h>
 #include <qpushbutton.h>
 #include <qtextedit.h>
+#include <qapplication.h>
 
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
 : QTable(0, 3, parent, name), _map(map) {
@@ -118,7 +119,14 @@ class InlineEditor : public QTextEdit {
 		virtual ~InlineEditor() { _p->setText(row, col, text()); }
 
 	protected:
-		virtual void focusOutEvent(QFocusEvent*) { close(); }
+		virtual void focusOutEvent(QFocusEvent*) { 
+		    if (QFocusEvent::reason() == QFocusEvent::Popup) {
+			QWidget *focusW = qApp->focusWidget();
+			if (focusW && focusW == popup)
+			    return;
+		    }
+		    close(); 
+		}
 		virtual void keyPressEvent(QKeyEvent *e) {
 			if (e->key() == Qt::Key_Escape) {
 				e->accept();
@@ -128,8 +136,13 @@ class InlineEditor : public QTextEdit {
 				QTextEdit::keyPressEvent(e);
 			}
 		}
+		virtual QPopupMenu *createPopupMenu(const QPoint &p) {
+		    popup = QTextEdit::createPopupMenu(p);
+		    return popup;
+		}
 		KWMapEditor *_p;
 		int row, col;
+		QGuardedPtr<QPopupMenu> popup;
 };
 
 QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
