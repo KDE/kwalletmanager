@@ -47,3 +47,4 @@ Type=Application
 Terminal=false
 X-KDE-StartupNotify=false
 Categories=Qt;KDE;Settings;
+DocPath=kwallet/index.html

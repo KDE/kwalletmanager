@@ -105,15 +105,17 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	KAction *act = new KAction(i18n("Configure &Wallet..."), "configure",
 			0, this, SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
-	if ( _tray )
+	if (_tray) {
 		act->plug(_tray->contextMenu());
+	}
 	act = new KAction(i18n("Close &All Wallets"), 0, 0, this,
 			SLOT(closeAllWallets()), actionCollection(),
 			"close_all_wallets");
-	if ( _tray )
+	if (_tray) {
 		act->plug(_tray->contextMenu());
+	}
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
-          KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
+	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 
 	createGUI("kwalletmanager.rc");
@@ -122,10 +124,11 @@ actionCollection());
         accel->connectItem(accel->insertItem(Key_Delete),
                            this, SLOT(deleteWallet()));
 
-	if ( _tray )
+	if (_tray) {
 		_tray->show();
-	else
+	} else {
 		show();
+	}
 }
 
 
@@ -137,17 +140,18 @@ KWalletManager::~KWalletManager() {
 
 bool KWalletManager::queryClose() {
 	if (!_shuttingDown && !kapp->sessionSaving()) {
-		if ( !_tray )
+		if (!_tray) {
 			kapp->quit();
-		else
+		} else {
 			hide();
+		}
 		return false;
 	}
 	return true;
 }
 
 void KWalletManager::aWalletWasOpened() {
-	if ( _tray ) {
+	if (_tray) {
 		_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
 		QToolTip::remove(_tray);
 		QToolTip::add(_tray, i18n("KDE Wallet: A wallet is open."));
@@ -242,14 +246,12 @@ void KWalletManager::openWalletFile(const QString& path) {
 }
 
 
-void KWalletManager::openWallet()
-{
+void KWalletManager::openWallet() {
 	QIconViewItem *item = _iconView->currentItem();
 	openWallet(item);
 }
 
-void KWalletManager::deleteWallet()
-{
+void KWalletManager::deleteWallet() {
 	QIconViewItem *item = _iconView->currentItem();
 	if (item) {
 		deleteWallet(item->text());
@@ -369,8 +371,7 @@ void KWalletManager::closeAllWallets() {
 	_dcopRef->call("closeAllWallets");
 }
 
-QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon)
-{
+QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon) {
 #if KDE_IS_VERSION(3, 1, 90)
 	return KSystemTray::loadIcon(icon);
 #else
