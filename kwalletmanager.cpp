@@ -24,15 +24,18 @@
 
 #include <dcopref.h>
 #include <dcopclient.h>
+#include <kaction.h>
+#include <kapplication.h>
 #include <kiconview.h>
+#include <kinputdialog.h>
+#include <klocale.h>
+#include <kmessagebox.h>
+#include <kstdaction.h>
 #include <ksystemtray.h>
 #include <kwallet.h>
-#include <kstdaction.h>
-#include <kmessagebox.h>
-#include <kapplication.h>
-#include <klocale.h>
 
 #include <qptrstack.h>
+#include <qregexp.h>
 
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
@@ -68,9 +71,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
 
+	new KAction(i18n("&New Wallet..."), 0, 0, this,
+			SLOT(createWallet()), actionCollection(),
+			"wallet_create");
 	KStdAction::quit(qApp, SLOT(quit()), actionCollection());
-	setXMLFile("kwalletmanager.rc");
-	createGUI();
+	createGUI("kwalletmanager.rc");
 }
 
 
@@ -112,6 +117,7 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 		connect(p, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
 		connect(p, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
 		connect(p, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
+		connect(p, SIGNAL(walletCreated()), this, SLOT(createWallet()));
 		p->popup(pos);
 	}
 }
@@ -186,10 +192,42 @@ void KWalletManager::possiblyRescan(const QCString& app) {
 	}
 }
 
+
+void KWalletManager::createWallet() {
+	QString n;
+	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
+
+	do {
+		n = KInputDialog::getText(i18n("New Wallet..."),
+				i18n("Please choose a name for the new wallet..."),
+				QString::null,
+				0L,
+				this);
+
+		if (n.isEmpty()) {
+			return;
+		}
+
+		if (_iconView->findItem(n)) {
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists.  Try a new name?"));
+			if (rc == KMessageBox::Yes) {
+				continue;
+			}
+			n = QString::null;
+		} else if (regexp.exactMatch(n)) {
+		}
+		break;
+	} while (true);
+
+	// Small race here - the wallet could be created on us already.
+	if (!n.isEmpty()) {
+		openWallet(n);
+	}
+}
+
 // TODO: - ability to see who is using which wallets?
 //       - icons
 //       - statusbar
-//       - create wallet
 //       - copy wallet (DnD)
 //       - move wallet (DnD)
 //       - drop of wallet into the app

@@ -33,7 +33,11 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	KActionCollection *ac = new KActionCollection(this, "kwallet context actions");
 	KAction *act;
 
-	act = new KAction(i18n("&Open..."), 0, 0, this,
+	act = new KAction(i18n("&New Wallet..."), 0, 0, this,
+			SLOT(createWallet()), ac, "wallet_create");
+	act->plug(this);
+
+	act = new KAction(i18n("&Open..."), 0, Key_Enter, this,
 			SLOT(openWallet()), ac, "wallet_open");
 	act->plug(this);
 
@@ -44,7 +48,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
 	act->plug(this);
 
-	act = new KAction(i18n("&Delete"), 0, 0, this,
+	act = new KAction(i18n("&Delete"), 0, Key_Delete, this,
 			SLOT(deleteWallet()), ac, "wallet_delete");
 	act->plug(this);
 }
@@ -66,6 +70,11 @@ void KWalletPopup::deleteWallet() {
 
 void KWalletPopup::closeWallet() {
 	emit walletClosed(_walletName);
+}
+
+
+void KWalletPopup::createWallet() {
+	emit walletCreated();
 }
 
 

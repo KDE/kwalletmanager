@@ -42,6 +42,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		ASYNC updateWalletDisplay();
 
 	public slots:
+		void createWallet();
 		void deleteWallet(const QString& walletName);
 		void closeWallet(const QString& walletName);
 		void openWallet(const QString& walletName);

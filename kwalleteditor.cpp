@@ -417,6 +417,7 @@ QIconViewItem *ivi = _ww->_folderView->currentItem();
 		// FIXME - this is sort of destructive
 		_entries = _w->entryList();
 		updateEntries();
+		updateDetails();
 	}
 }
 
