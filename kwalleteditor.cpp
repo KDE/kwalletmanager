@@ -37,6 +37,7 @@
 #include <qlayout.h>
 #include <qlistview.h>
 #include <qptrstack.h>
+#include <qpushbutton.h>
 #include <qtextedit.h>
 #include <qwidgetstack.h>
 
@@ -63,6 +64,14 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 		SIGNAL(contextMenuRequested(QIconViewItem*,const QPoint&)),
 		this,
 		SLOT(iconContextMenuRequested(QIconViewItem*,const QPoint&)));
+
+	connect(_ww->_passwordValue, SIGNAL(textChanged()),
+		this, SLOT(entryEditted()));
+
+	connect(_ww->_undoChanges, SIGNAL(clicked()),
+		this, SLOT(restoreEntry()));
+	connect(_ww->_saveChanges, SIGNAL(clicked()),
+		this, SLOT(saveEntry()));
 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
@@ -202,23 +211,75 @@ void KWalletEditor::createFolder() {
 }
 
 
+void KWalletEditor::saveEntry() {
+	int rc = 1;
+	QListViewItem *item = _ww->_entryList->currentItem();
+	_ww->_saveChanges->setEnabled(false);
+	_ww->_undoChanges->setEnabled(false);
+
+	if (item && _w && item->parent()) {
+		if (item->parent() == _passItems) {
+			rc = _w->writePassword(item->text(0), _ww->_passwordValue->text());
+			if (rc == 0) {
+				return;
+			}
+		} else {
+			return;
+		}
+	}
+
+	KMessageBox::sorry(this, i18n("Error saving entry.  Error code: %1").arg(rc));
+}
+
+
+void KWalletEditor::restoreEntry() {
+	entrySelectionChanged(_ww->_entryList->currentItem());
+}
+
+
+void KWalletEditor::entryEditted() {
+	_ww->_saveChanges->setEnabled(true);
+	_ww->_undoChanges->setEnabled(true);
+}
+
+
 void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
+	_ww->_saveChanges->setEnabled(false);
+	_ww->_undoChanges->setEnabled(false);
+
 	if (item && _w && item->parent()) {
 		if (item->parent() == _passItems) {
 			QString pass;
 			if (_w->readPassword(item->text(0), pass) == 0) {
 				_ww->_entryStack->raiseWidget(int(1));
-				_ww->_passwordName->setText(i18n("Password: %1")
+				_ww->_entryName->setText(i18n("Password: %1")
 							.arg(item->text(0)));
 				_ww->_passwordValue->setText(pass);
+				_ww->_saveChanges->setEnabled(false);
+				_ww->_undoChanges->setEnabled(false);
 				return;
 			}
 		} else if (item->parent() == _mapItems) {
 			_ww->_entryStack->raiseWidget(int(2));
+			QMap<QString,QString> map;
+			if (_w->readMap(item->text(0), map) == 0) {
+				_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
+				_ww->_saveChanges->setEnabled(false);
+				_ww->_undoChanges->setEnabled(false);
+			}
 		} else if (item->parent() == _binaryItems) {
 			_ww->_entryStack->raiseWidget(int(3));
+			QByteArray ba;
+			if (_w->readEntry(item->text(0), ba) == 0) {
+				_ww->_entryName->setText(i18n("Binary Data: %1")
+							.arg(item->text(0)));
+				_ww->_saveChanges->setEnabled(false);
+				_ww->_undoChanges->setEnabled(false);
+			}
 		}
 	}
+
+	_ww->_entryName->clear();
 	_ww->_entryStack->raiseWidget(int(0));
 }
 

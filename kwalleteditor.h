@@ -58,6 +58,9 @@ class KWalletEditor : public KMainWindow {
 		void newEntry();
 		void renameEntry();
 		void deleteEntry();
+		void entryEditted();
+		void restoreEntry();
+		void saveEntry();
 
 	signals:
 		void enableFolderActions(bool enable);

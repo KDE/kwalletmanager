@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>714</width>
-            <height>510</height>
+            <height>526</height>
         </rect>
     </property>
     <property name="caption">
@@ -24,7 +24,7 @@
         </property>
         <widget class="QSplitter" row="0" column="0">
             <property name="name">
-                <cstring>splitter6</cstring>
+                <cstring>splitter5</cstring>
             </property>
             <property name="orientation">
                 <enum>Vertical</enum>
@@ -55,7 +55,7 @@
             </widget>
             <widget class="QSplitter">
                 <property name="name">
-                    <cstring>splitter5</cstring>
+                    <cstring>splitter4</cstring>
                 </property>
                 <property name="orientation">
                     <enum>Horizontal</enum>
@@ -82,55 +82,107 @@
                         <enum>Reject</enum>
                     </property>
                 </widget>
-                <widget class="QWidgetStack">
+                <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>_entryStack</cstring>
+                        <cstring>layout2</cstring>
                     </property>
-                    <widget class="QWidget">
+                    <grid>
                         <property name="name">
-                            <cstring>page</cstring>
+                            <cstring>unnamed</cstring>
                         </property>
-                        <attribute name="id">
-                            <number>0</number>
-                        </attribute>
-                    </widget>
-                    <widget class="QWidget">
-                        <property name="name">
-                            <cstring>page</cstring>
-                        </property>
-                        <attribute name="id">
-                            <number>1</number>
-                        </attribute>
-                        <grid>
+                        <spacer row="2" column="0">
                             <property name="name">
-                                <cstring>unnamed</cstring>
+                                <cstring>spacer1</cstring>
                             </property>
-                            <widget class="QTextEdit" row="1" column="0">
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>141</width>
+                                    <height>21</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton" row="2" column="2">
+                            <property name="name">
+                                <cstring>_saveChanges</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Save</string>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton" row="2" column="1">
+                            <property name="name">
+                                <cstring>_undoChanges</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Undo</string>
+                            </property>
+                        </widget>
+                        <widget class="QWidgetStack" row="1" column="0" rowspan="1" colspan="3">
+                            <property name="name">
+                                <cstring>_entryStack</cstring>
+                            </property>
+                            <widget class="QWidget">
                                 <property name="name">
-                                    <cstring>_passwordValue</cstring>
+                                    <cstring>page</cstring>
                                 </property>
-                                <property name="textFormat">
-                                    <enum>PlainText</enum>
-                                </property>
+                                <attribute name="id">
+                                    <number>0</number>
+                                </attribute>
                             </widget>
-                            <widget class="QLabel" row="0" column="0">
+                            <widget class="QWidget">
                                 <property name="name">
-                                    <cstring>_passwordName</cstring>
+                                    <cstring>page</cstring>
                                 </property>
-                                <property name="text">
-                                    <string></string>
-                                </property>
+                                <attribute name="id">
+                                    <number>1</number>
+                                </attribute>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QTextEdit" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>_passwordValue</cstring>
+                                        </property>
+                                        <property name="textFormat">
+                                            <enum>PlainText</enum>
+                                        </property>
+                                    </widget>
+                                </grid>
                             </widget>
-                        </grid>
-                    </widget>
-                    <widget class="QWidget">
-                        <property name="name">
-                            <cstring>page</cstring>
-                        </property>
-                        <attribute name="id">
-                            <number>2</number>
-                        </attribute>
-                    </widget>
+                            <widget class="QWidget">
+                                <property name="name">
+                                    <cstring>page</cstring>
+                                </property>
+                                <attribute name="id">
+                                    <number>2</number>
+                                </attribute>
+                            </widget>
+                        </widget>
+                        <widget class="QLabel" row="0" column="0" rowspan="1" colspan="3">
+                            <property name="name">
+                                <cstring>_entryName</cstring>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="textFormat">
+                                <enum>PlainText</enum>
+                            </property>
+                        </widget>
+                    </grid>
                 </widget>
             </widget>
         </widget>
