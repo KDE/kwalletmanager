@@ -48,9 +48,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
 	connect(_iconView, SIGNAL(executed(QIconViewItem*)), this, SLOT(openWallet(QIconViewItem*)));
 	connect(_iconView, SIGNAL(contextMenuRequested(QIconViewItem*, const QPoint&)), this, SLOT(contextMenu(QIconViewItem*, const QPoint&)));
+	//connect(_iconView, SIGNAL(shouldRescan()), this, SLOT(updateWalletDisplay()));
 	updateWalletDisplay();
 	setCentralWidget(_iconView);
-	_iconView->arrangeItemsInGrid();
+	//_iconView->arrangeItemsInGrid();
 
 	_dcopRef = new DCOPRef("kded", "kwalletd");
 	_dcopRef->dcopClient()->setNotifications(true);
@@ -229,8 +230,6 @@ void KWalletManager::createWallet() {
 // TODO: - ability to see who is using which wallets?
 //       - icons
 //       - statusbar
-//       - copy wallet (DnD)
-//       - move wallet (DnD)
 //       - drop of wallet into the app
 
 #include "kwalletmanager.moc"

@@ -25,7 +25,7 @@
 #include <qptrlist.h>
 
 class KSystemTray;
-class KIconView;
+class KWalletIconView;
 class QIconViewItem;
 class DCOPRef;
 
@@ -60,7 +60,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 
 	private:
 		KSystemTray *_tray;
-		KIconView *_iconView;
+		KWalletIconView *_iconView;
 		DCOPRef *_dcopRef;
 		QPtrList<KMainWindow> _windows;
 };

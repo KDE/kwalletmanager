@@ -51,6 +51,7 @@ class KWalletItem : public QIconViewItem {
 
 
 class KWalletIconView : public KIconView {
+	Q_OBJECT
 	public:
 		KWalletIconView(QWidget *parent, const char *name = 0L);
 		virtual ~KWalletIconView();

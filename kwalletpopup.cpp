@@ -37,7 +37,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 			SLOT(createWallet()), ac, "wallet_create");
 	act->plug(this);
 
-	act = new KAction(i18n("&Open..."), 0, Key_Enter, this,
+	act = new KAction(i18n("&Open..."), 0, Key_Return, this,
 			SLOT(openWallet()), ac, "wallet_open");
 	act->plug(this);
 

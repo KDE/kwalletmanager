@@ -19,6 +19,7 @@
 
 #include "allyourbase.h"
 
+#include <kdebug.h>
 #include <kglobal.h>
 #include <kstddirs.h>
 
@@ -44,10 +45,10 @@ KWalletItem::~KWalletItem() {
 
 
 
-class KWalletIconDrag : public QUriDrag {
+class KWalletIconDrag : public QIconDrag {
 	public:
-		KWalletIconDrag(const QStringList& urllist, QWidget *dragSource, const char *name = 0L)
-			: QUriDrag(dragSource, name), _urls(urllist) {
+		KWalletIconDrag(QWidget *dragSource, const char *name = 0L)
+			: QIconDrag(dragSource, name) {
 		}
 
 		virtual ~KWalletIconDrag() {}
@@ -65,7 +66,7 @@ class KWalletIconDrag : public QUriDrag {
 			QByteArray a;
 			QCString mimetype(mime);
 			if (mimetype == "application/x-qiconlist") {
-				a = QUriDrag::encodedData(mime);
+				return QIconDrag::encodedData(mime);
 			} else if (mimetype == "text/uri-list") {
 				QCString s = _urls.join("\r\n").latin1();
 				if(_urls.count() > 0) {
@@ -75,6 +76,12 @@ class KWalletIconDrag : public QUriDrag {
 				memcpy(a.data(), s.data(), s.length() + 1);
 			}
 			return a;
+		}
+
+		void append(const QIconDragItem &item, const QRect &pr,
+				const QRect &tr, const QString &url) {
+			QIconDrag::append(item, pr, tr);
+			_urls.append(url);
 		}
 
 	private:
@@ -89,12 +96,27 @@ KWalletIconView::~KWalletIconView() {
 }
 
 QDragObject *KWalletIconView::dragObject() {
-	QStringList urls;
+	KWalletIconDrag *id = new KWalletIconDrag(viewport(), "KWallet Drag");
 	QString path = "file:" + KGlobal::dirs()->saveLocation("kwallet");
+	QPoint pos = mapFromGlobal(QCursor::pos());
 	for (QIconViewItem *item = firstItem(); item; item = item->nextItem()) {
-		urls.append(path + item->text() + ".kwl");
+		if (item->isSelected()) {
+			QString url = path + item->text() + ".kwl";
+			QIconDragItem idi;
+			idi.setData(url.local8Bit());
+			id->append(idi,
+				QRect(item->pixmapRect(false).topLeft() - pos,
+					item->pixmapRect(false).size()),
+				QRect(item->textRect(false).topLeft() - pos,
+					item->textRect(false).size()),
+				url);
+		}
 	}
-	return new KWalletIconDrag(urls, this, "Kwallet Drag");
+
+	id->setPixmap(*currentItem()->pixmap(),
+			pos - currentItem()->pixmapRect(false).topLeft());
+
+	return id;
 }
 
-
+#include "allyourbase.moc"
