@@ -87,10 +87,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
 
-	new KAction(i18n("&New Wallet..."), 0, 0, this,
+	new KAction(i18n("&New Wallet..."), "kwalletmanager", 0, this,
 			SLOT(createWallet()), actionCollection(),
 			"wallet_create");
-	new KAction(i18n("&Wallet Settings..."), 0, 0, this,
+	new KAction(i18n("&Wallet Settings..."), "configure", 0, this,
 			SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
