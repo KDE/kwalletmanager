@@ -412,7 +412,7 @@ void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
 }
 
 QDragObject *KWalletIconView::dragObject() {
-	KWalletIconDrag *id = new KWalletIconDrag(viewport(), "KWallet Drag");
+	KWalletIconDrag* id = new KWalletIconDrag(viewport(), "KWallet Drag");
 	QString path = "file:" + KGlobal::dirs()->saveLocation("kwallet");
 	QPoint pos = _mousePos;
 	for (QIconViewItem *item = firstItem(); item; item = item->nextItem()) {

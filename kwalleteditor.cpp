@@ -27,7 +27,6 @@
 #include <kaction.h>
 #include <kapplication.h>
 #include <kiconview.h>
-#include <khtml_part.h>
 #include <kkeydialog.h>
 #include <klineeditdlg.h>
 #include <klocale.h>
@@ -53,13 +52,11 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 : KMainWindow(parent, name), _walletName(wallet), _nonLocal(isPath) {
 	_ww = new WalletWidget(this, "Wallet Widget");
 	QVBoxLayout *box = new QVBoxLayout(_ww->_folderDetails);
-	_details = new KHTMLPart(_ww->_folderDetails, "Folder Details");
-	box->addWidget(_details->widget());
-	_details->setJScriptEnabled(false);
-	_details->setJavaEnabled(false);
-	_details->setMetaRefreshEnabled(false);
-	_details->setPluginsEnabled(false);
-	_details->setOnlyLocalReferences(true);
+	_details = new QLabel(_ww->_folderDetails, "Folder Details");
+        _details->setBackgroundMode(PaletteBase);
+        _details->setAlignment((_details->alignment() & ~AlignVertical_Mask)|AlignTop); 
+        _details->setFrameStyle(QFrame::Sunken | QFrame::Panel);
+	box->addWidget(_details);
 
 	box = new QVBoxLayout(_ww->_entryListFrame);
 	_entryList = new KWalletEntryList(_ww->_entryListFrame, "Wallet Entry List");
@@ -369,9 +366,7 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 		updateDetails();
 		updateEntries();
 	} else {
-		_details->begin();
-		_details->write(QString::null);
-		_details->end();
+		_details->setText(QString::null);
 		while (_passItems->firstChild()) {
 			delete _passItems->firstChild();
 		}
@@ -395,22 +390,20 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 
 
 void KWalletEditor::updateDetails() {
-	static const QString page = i18n("<html><body>"
-			"<div style=\"margin-left: 3%; margin-right: 3%; background-color: #99ccff\">"
-			"<font size=\"+2\">&nbsp;Folder:</font>"
-			"&nbsp;&nbsp;<font size=\"+1\"><b>%1</b></font>"
-			"</div>"
-			"<br/>"
+	static const QString page = i18n("<qt><br /><center>"
+			"<table width=\"90%\"><tr><td bgcolor=\"#99ccff\">"
+			"<font size=\"+2\">&nbsp;%1</font>"
+			"&nbsp;&nbsp;<font size=\"+1\"><b>%2</b>"
+                        "</font></td></tr></table></center>"
 			"<ul>"
-			"<li>%2</li>"
+			"<li>%3</li>"
 			"</ul>"
-			"<br/></body></html>");
+			"</qt>");
 
-	_details->begin();
-	_details->write(page
+	_details->setText(page
+                        .arg(i18n("Folder:"))
 			.arg(_folderView->currentItem()->text())
 			.arg(i18n("Contains one item.", "Contains %n items." ,_entries.count())));
-	_details->end();
 }
 
 

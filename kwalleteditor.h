@@ -29,7 +29,6 @@ class KAction;
 class QIconViewItem;
 class QListViewItem;
 class QCheckBox;
-class KHTMLPart;
 class KWalletFolderIconView;
 class KWalletEntryList;
 class KWMapEditor;
@@ -91,7 +90,7 @@ class KWalletEditor : public KMainWindow {
 		KWalletEntryList *_entryList;
 		KAction *_newFolderAction, *_deleteFolderAction;
 		KAction *_passwordAction;
-		KHTMLPart *_details;
+		QLabel*_details;
 		QStringList _entries;
 		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;
 		QMap<QString,QString> _currentMap; // save memory by storing
