@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2003 George Staikos <staikos@kde.org>
+   Copyright (C) 2003,2004 George Staikos <staikos@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 		KCmdLineLastOption
 	};
 
-	KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.0",
+	KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.1",
 		I18N_NOOP("KDE Wallet Management Tool"),
 		KAboutData::License_GPL,
 		I18N_NOOP("(c) 2003,2004 George Staikos"), 0,

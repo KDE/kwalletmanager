@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2003 George Staikos <staikos@kde.org>
+   Copyright (C) 2003,2004 George Staikos <staikos@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
