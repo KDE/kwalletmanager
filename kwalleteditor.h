@@ -28,6 +28,7 @@
 class KAction;
 class QIconViewItem;
 class QListViewItem;
+class QCheckBox;
 class KHTMLPart;
 class KWalletFolderIconView;
 class KWalletEntryList;
@@ -71,6 +72,7 @@ class KWalletEditor : public KMainWindow {
 		void walletOpened(bool success);
 		void hidePasswordContents();
 		void showPasswordContents();
+		void showHideMapEditorValue(bool show);
 
 	signals:
 		void enableFolderActions(bool enable);
@@ -92,6 +94,7 @@ class KWalletEditor : public KMainWindow {
 		QMap<QString,QString> _currentMap; // save memory by storing
 						   // only the most recent map.
 		KWMapEditor *_mapEditor;
+		QCheckBox *_mapEditorShowHide;
 };
 
 #endif

@@ -1,6 +1,6 @@
 INCLUDES= $(all_includes)
 
-SUBDIRS=. icons konfigurator
+SUBDIRS=. konfigurator
 
 bin_PROGRAMS = kwalletmanager
 kwalletmanager_SOURCES = walletwidget.ui kwalletmanager.cpp \
@@ -12,7 +12,7 @@ METASOURCES = AUTO
 noinst_HEADERS = kwalletmanager.h kwalletpopup.h walletwidget.h kwalleteditor.h\
 		allyourbase.h kwmapeditor.h
 
-xdg_apps_DATA = kwalletmanager.desktop
+#xdg_apps_DATA = kwalletmanager.desktop
 
 rc_DATA = kwalletmanager.rc kwalleteditor.rc
 rcdir = $(kde_datadir)/kwalletmanager

@@ -35,6 +35,7 @@
 #include <kstdaction.h>
 #include <kkeydialog.h>
 
+#include <qcheckbox.h>
 #include <qcombobox.h>
 #include <qlabel.h>
 #include <qlayout.h>
@@ -73,7 +74,10 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 	_folderView->_walletName = wallet;
 
 	box = new QVBoxLayout(_ww->_entryStack->widget(2));
+	_mapEditorShowHide = new QCheckBox(i18n("&Show values"), _ww->_entryStack->widget(2));
+	connect(_mapEditorShowHide, SIGNAL(toggled(bool)), this, SLOT(showHideMapEditorValue(bool)));
 	_mapEditor = new KWMapEditor(_currentMap, _ww->_entryStack->widget(2));
+	box->addWidget(_mapEditorShowHide);
 	box->addWidget(_mapEditor);
 
 	setCentralWidget(_ww);
@@ -322,6 +326,8 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 			}
 		} else if (item->parent() == _mapItems) {
 			_ww->_entryStack->raiseWidget(int(2));
+			_mapEditorShowHide->setChecked(false);
+			showHideMapEditorValue(false);
 			if (_w->readMap(item->text(0), _currentMap) == 0) {
 				_mapEditor->reload();
 				_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
@@ -636,6 +642,15 @@ void KWalletEditor::hidePasswordContents() {
 
 void KWalletEditor::showPasswordContents() {
 	_ww->_entryStack->raiseWidget(int(1));
+}
+
+
+void KWalletEditor::showHideMapEditorValue(bool show) {
+	if (show) {
+		_mapEditor->showColumn(2);
+	} else {
+		_mapEditor->hideColumn(2);
+	}
 }
 
 
