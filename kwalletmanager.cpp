@@ -105,7 +105,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 			"close_all_wallets");
 	act->plug(_tray->contextMenu());
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
-          KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), 
+          KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 
 	createGUI("kwalletmanager.rc");
@@ -180,8 +180,8 @@ void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
 
 
 void KWalletManager::deleteWallet(const QString& walletName) {
-    int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(walletName));
-    if (rc != KMessageBox::Yes) {
+    int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?").arg(walletName),"",KStdGuiItem::del());
+    if (rc != KMessageBox::Continue) {
         return;
     }
     rc = KWallet::Wallet::deleteWallet(walletName);

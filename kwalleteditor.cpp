@@ -193,7 +193,7 @@ void KWalletEditor::createActions() {
 			"export");
 
 	KStdAction::close(this, SLOT(close()), actionCollection());
-         KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), 
+         KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 	emit enableFolderActions(_w != 0L);
 	emit enableContextFolderActions(false);
@@ -236,8 +236,8 @@ void KWalletEditor::deleteFolder() {
 	if (_w) {
 		QIconViewItem *ivi = _folderView->currentItem();
 		if (ivi) {
-			int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_folderView->currentItem()->text()));
-			if (rc == KMessageBox::Yes) {
+			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(_folderView->currentItem()->text()),"",KStdGuiItem::del());
+			if (rc == KMessageBox::Continue) {
 				int rc = _w->removeFolder(ivi->text());
 				if (rc != 0) {
 					KMessageBox::sorry(this, i18n("Error deleting folder.  Error code=%1").arg(rc));
@@ -605,8 +605,8 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 void KWalletEditor::deleteEntry() {
 QListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
-		int rc = KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)));
-		if (rc == KMessageBox::Yes) {
+		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)),"",KStdGuiItem::del());
+		if (rc == KMessageBox::Continue) {
 			_w->removeEntry(item->text(0));
 			delete item;
 			entrySelectionChanged(_entryList->currentItem());
