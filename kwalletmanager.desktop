@@ -1,7 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Wallet Management Tool
+Name[ar]=أداة إدارة المحفظة
 Name[bg]=Портфейл
+Name[br]=Mererezh ar restroù
 Name[bs]=Alat za upravljanje novčanikom
 Name[ca]=Eina de gestió de carteres
 Name[cs]=Nástroj pro správu úschovny
@@ -46,3 +48,4 @@ Type=Application
 Terminal=0
 X-KDE-StartupNotify=false
 Categories=Qt;KDE;Settings
+DocPath=kwallet/index.html

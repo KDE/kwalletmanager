@@ -126,6 +126,8 @@ actionCollection());
 	_tray->show();
 	else
 		show();
+
+	kapp->setName("kwallet");
 }
 
 
