@@ -73,7 +73,6 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 
 KWalletPopup::~KWalletPopup() {
-    kdDebug()<<"KWalletPopup::~KWalletPopup() {********************\n";
 }
 
 
