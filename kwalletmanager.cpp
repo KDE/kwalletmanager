@@ -27,6 +27,7 @@
 #include <dcopclient.h>
 #include <kaction.h>
 #include <kapplication.h>
+#include <kdebug.h>
 #include <kiconview.h>
 #include <klineeditdlg.h>
 #include <klocale.h>
@@ -48,10 +49,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
 	connect(_iconView, SIGNAL(executed(QIconViewItem*)), this, SLOT(openWallet(QIconViewItem*)));
 	connect(_iconView, SIGNAL(contextMenuRequested(QIconViewItem*, const QPoint&)), this, SLOT(contextMenu(QIconViewItem*, const QPoint&)));
-	//connect(_iconView, SIGNAL(shouldRescan()), this, SLOT(updateWalletDisplay()));
+
 	updateWalletDisplay();
 	setCentralWidget(_iconView);
-	//_iconView->arrangeItemsInGrid();
 
 	_dcopRef = new DCOPRef("kded", "kwalletd");
 	_dcopRef->dcopClient()->setNotifications(true);
@@ -68,6 +68,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "updateWalletDisplay()", false);
         connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(QString)", "updateWalletDisplay()", false);
+        connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletListDirty()", "updateWalletDisplay()", false);
 
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
