@@ -269,8 +269,7 @@ void KWalletManager::createWallet() {
 	}
 }
 
-void KWalletManager::shuttingDown()
-{
+void KWalletManager::shuttingDown() {
 	_shuttingDown = true;
 	kapp->quit();
 }
