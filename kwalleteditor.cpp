@@ -508,12 +508,12 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 	KPopupMenu *m = new KPopupMenu(this);
 	m->insertTitle(item->text(0));
 	if (item->parent()) {
-		m->insertItem("&New...", this, SLOT(newEntry()), Key_Insert);
-		m->insertItem("&Rename", this, SLOT(renameEntry()), Key_F2);
-		m->insertItem("&Delete", this, SLOT(deleteEntry()), Key_Delete);
+		m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Key_Insert);
+		m->insertItem(i18n( "&Rename" ), this, SLOT(renameEntry()), Key_F2);
+		m->insertItem(i18n( "&Delete" ), this, SLOT(deleteEntry()), Key_Delete);
 		m->popup(pos);
 	} else {
-		m->insertItem("&New...", this, SLOT(newEntry()), Key_Insert);
+		m->insertItem(i18n( "&New..." ), this, SLOT(newEntry()), Key_Insert);
 		m->popup(pos);
 	}
 }
