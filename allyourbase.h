@@ -40,17 +40,6 @@ class KWalletEntryItem : public QListViewItem {
 		KWallet::Wallet *_wallet;
 };
 
-inline QDataStream& operator<<(QDataStream& str, const KWalletEntryItem& w) {
-	QString name = w.text(0);
-	str << name;
-	KWallet::Wallet::EntryType et = w._wallet->entryType(name);
-	str << long(et);
-	QByteArray a;
-	w._wallet->readEntry(name, a);
-	str << a;
-	return str;
-}
-
 
 class KWalletEntryList : public KListView {
 	public:
@@ -70,7 +59,22 @@ class KWalletFolderItem : public QIconViewItem {
 
 	protected:
 		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
+
+	public:
 		KWallet::Wallet *_wallet;
+};
+
+
+class KWalletFolderIconView : public KIconView {
+	Q_OBJECT
+	public:
+		KWalletFolderIconView(QWidget *parent, const char *name = 0L);
+		virtual ~KWalletFolderIconView();
+		QString _walletName;
+
+	protected:
+		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
+		QDragObject *dragObject();
 };
 
 
@@ -78,6 +82,11 @@ class KWalletItem : public QIconViewItem {
 	public:
 		KWalletItem(QIconView *parent, const QString& walletName);
 		virtual ~KWalletItem();
+
+		virtual bool acceptDrop(const QMimeSource *mime) const;
+
+	protected:
+		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
 };
 
 
@@ -90,5 +99,34 @@ class KWalletIconView : public KIconView {
 	protected:
 		QDragObject *dragObject();
 };
+
+
+inline QDataStream& operator<<(QDataStream& str, const KWalletEntryItem& w) {
+	QString name = w.text(0);
+	str << name;
+	KWallet::Wallet::EntryType et = w._wallet->entryType(name);
+	str << long(et);
+	QByteArray a;
+	w._wallet->readEntry(name, a);
+	str << a;
+	return str;
+}
+
+inline QDataStream& operator<<(QDataStream& str, const KWalletFolderItem& w) {
+	QString oldFolder = w._wallet->currentFolder();
+	str << w.text();
+	w._wallet->setFolder(w.text());
+	QStringList entries = w._wallet->entryList();
+	for (QStringList::Iterator it = entries.begin(); it != entries.end(); ++it) {
+		str << *it;
+		KWallet::Wallet::EntryType et = w._wallet->entryType(*it);
+		str << long(et);
+		QByteArray a;
+		w._wallet->readEntry(*it, a);
+		str << a;
+	}
+	w._wallet->setFolder(oldFolder);
+	return str;
+}
 
 #endif

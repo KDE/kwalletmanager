@@ -22,11 +22,12 @@
 #include <kdebug.h>
 #include <kglobal.h>
 #include <klocale.h>
+#include <kmessagebox.h>
 #include <kstddirs.h>
 #include <kwallet.h>
 
-#include <qstrlist.h>
 #include <qdragobject.h>
+#include <qptrlist.h>
 
 
 /****************
@@ -52,6 +53,117 @@ KWalletItem::KWalletItem(QIconView *parent, const QString& walletName)
 KWalletItem::~KWalletItem() {
 }
 
+bool KWalletItem::acceptDrop(const QMimeSource *mime) const {
+	return mime->provides("application/x-kwallet-folder");
+}
+
+static void decodeFolder(KWallet::Wallet *_wallet, const QByteArray& a) {
+	QDataStream ds(a, IO_ReadOnly);
+	QString folder;
+	ds >> folder;
+	if (_wallet->hasFolder(folder)) {
+		int rc = KMessageBox::warningYesNoCancel(0L, i18n("A folder by the name '%1' already exists.  What would you like to do?").arg(folder), QString::null, i18n("Continue"), i18n("Replace"));
+		if (rc == KMessageBox::Cancel) {
+			return;
+		}
+		if (rc == KMessageBox::No) {
+			_wallet->removeFolder(folder);
+			_wallet->createFolder(folder);
+		}
+	} else {
+		_wallet->createFolder(folder);
+	}
+
+	_wallet->setFolder(folder);
+	while (!ds.atEnd()) {
+		QString name;
+		QByteArray value;
+		KWallet::Wallet::EntryType et;
+		ds >> name;
+		long l;
+		ds >> l;
+		et = KWallet::Wallet::EntryType(l);
+		ds >> value;
+		_wallet->writeEntry(name, value, et);
+	}
+}
+
+void KWalletItem::dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
+	if (!e->provides("application/x-kwallet-folder")) {
+		e->ignore();
+		return;
+	}
+
+	// FIXME: don't allow the drop if the wallet name is the same
+	KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(text());
+	if (!_wallet) {
+		e->ignore();
+		return;
+	}
+
+	QString saveFolder = _wallet->currentFolder();
+
+	QByteArray edata = e->encodedData("application/x-kwallet-folder");
+	if (!edata.isEmpty()) {
+		decodeFolder(_wallet, edata);
+	}
+
+	for (QValueList<QIconDragItem>::ConstIterator it = lst.begin();
+							it != lst.end();
+								++it) {
+		decodeFolder(_wallet, (*it).data());
+	}
+
+	_wallet->setFolder(saveFolder);
+	delete _wallet;
+	e->accept();
+}
+
+
+/****************
+ *  KWalletIconDrag - Stores the data for wallet drags
+ */
+class KWalletFolderDrag : public QIconDrag {
+	public:
+		KWalletFolderDrag(QWidget *dragSource, const char *name = 0L)
+			: QIconDrag(dragSource, name) {
+		}
+
+		virtual ~KWalletFolderDrag() {}
+
+		virtual const char *format(int i = 0) const {
+			if (i == 0) {
+				return "application/x-qiconlist";
+			} else if (i == 1) {
+				return "application/x-kwallet-folder";
+			}
+			return 0L;
+		}
+
+		QByteArray encodedData(const char *mime) const {
+			QByteArray a;
+			QCString mimetype(mime);
+			if (mimetype == "application/x-qiconlist") {
+				return QIconDrag::encodedData(mime);
+			} else if (mimetype == "application/x-kwallet-folder") {
+				QDataStream ds(a, IO_WriteOnly);
+				for (KWalletFolderItem *fi = _fi.first(); fi;
+							fi = _fi.next()) {
+					ds << *fi;
+				}
+			}
+			return a;
+		}
+
+		void append(const QIconDragItem &item, const QRect &pr,
+				const QRect &tr, KWalletFolderItem *fi) {
+			QIconDrag::append(item, pr, tr);
+			_fi.append(fi);
+		}
+
+	private:
+		mutable QPtrList<KWalletFolderItem> _fi;
+};
 
 
 /****************
@@ -91,27 +203,82 @@ void KWalletFolderItem::dropped(QDropEvent *e, const QValueList<QIconDragItem>& 
 	ds >> l;
 	et = KWallet::Wallet::EntryType(l);
 	ds >> value;
-	if (et == KWallet::Wallet::Map) {
-		QMap<QString,QString> m;
-		if (!value.isEmpty()) {
-			QDataStream ds2(value, IO_ReadOnly);
-			ds2 >> m;
-		}
-		_wallet->writeMap(name, m);
-	} else if (et == KWallet::Wallet::Password) {
-		QString p;
-		if (!value.isEmpty()) {
-			QDataStream ds2(value, IO_ReadOnly);
-			ds2 >> p;
-		}
-		_wallet->writePassword(name, p);
-	} else {
-		_wallet->writeEntry(name, value);
-	}
-
+	_wallet->writeEntry(name, value, et);
 	_wallet->setFolder(saveFolder);
 	e->accept();
 }
+
+/****************
+ *  KWalletFolderIconView - An iconview to store wallet folders
+ */
+KWalletFolderIconView::KWalletFolderIconView(QWidget *parent, const char *name)
+: KIconView(parent, name) {
+}
+
+KWalletFolderIconView::~KWalletFolderIconView() {
+}
+
+QDragObject *KWalletFolderIconView::dragObject() {
+	KWalletFolderDrag *id = new KWalletFolderDrag(viewport(), "KWallet Folder Drag");
+	QPoint pos = mapFromGlobal(QCursor::pos());
+	for (QIconViewItem *item = firstItem(); item; item = item->nextItem()) {
+		if (item->isSelected()) {
+			QIconDragItem idi;
+			KWalletFolderItem *fi = static_cast<KWalletFolderItem*>(item);
+
+			QByteArray a;
+			QDataStream ds(a, IO_WriteOnly);
+			ds << *fi;
+			idi.setData(a);
+			id->append(idi,
+				QRect(item->pixmapRect(false).topLeft() - pos,
+					item->pixmapRect(false).size()),
+				QRect(item->textRect(false).topLeft() - pos,
+					item->textRect(false).size()),
+				fi);
+		}
+	}
+
+	id->setPixmap(*currentItem()->pixmap(),
+			pos - currentItem()->pixmapRect(false).topLeft());
+
+	return id;
+}
+
+
+void KWalletFolderIconView::dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
+	if (!e->provides("application/x-kwallet-folder")) {
+		e->ignore();
+		return;
+	}
+
+	// FIXME: ignore the drop if the wallet name is the same
+	KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(_walletName);
+	if (!_wallet) {
+		e->ignore();
+		return;
+	}
+
+	QString saveFolder = _wallet->currentFolder();
+
+	QByteArray edata = e->encodedData("application/x-kwallet-folder");
+	if (!edata.isEmpty()) {
+		decodeFolder(_wallet, edata);
+	}
+
+	for (QValueList<QIconDragItem>::ConstIterator it = lst.begin();
+							it != lst.end();
+								++it) {
+		decodeFolder(_wallet, (*it).data());
+	}
+
+	_wallet->setFolder(saveFolder);
+	delete _wallet;
+	e->accept();
+}
+
+
+
 
 /****************
  *  KWalletIconDrag - Stores the data for wallet drags

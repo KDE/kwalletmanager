@@ -66,7 +66,7 @@ KAboutData about("kwalletmanager", I18N_NOOP("kwalletmanager"), "1.0",
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-	for (unsigned i = 0; i < args->count(); ++i) {
+	for (int i = 0; i < args->count(); ++i) {
 		wm.openWallet(args->arg(i));
 	}
 

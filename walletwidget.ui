@@ -47,7 +47,7 @@
                         <enum>Plain</enum>
                     </property>
                 </widget>
-                <widget class="QIconView">
+                <widget class="KWalletFolderIconView">
                     <property name="name">
                         <cstring>_folderView</cstring>
                     </property>

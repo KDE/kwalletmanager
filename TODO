@@ -1,11 +1,12 @@
 Things left:
 
 Client:
-- Drag and drop of folders between wallets
 - Wallet icons
+- Bug: Application icon doesn't work
 - fix initial sizes, layouts
 - Fix HTML
 - Install icons, .desktop file
+- Bug: DnD of folders to foldericonview doesn't work for some reason
 
 Backend:
 - Fix encryption
@@ -13,17 +14,10 @@ Backend:
 - Ability to support different crypto backends
 - Move KWallet::Entry to the backend library?
 
-
-KWalletD:
-- Add a generic "writeEntryType(name,value,type)" method to make the code
-  more extensible
-
-
 Integration:
 - KHTML
 - KIO
 - KMail
-
 
 
 Future ideas:
@@ -36,4 +30,5 @@ Future ideas:
 	-> Random source
 - File association of kwallet type to kwalletmanager
 	-> requires support in kwalletd for opening URLs as wallets.  Tedious.
+- Make it a kpart
 

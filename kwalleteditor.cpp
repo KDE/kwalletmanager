@@ -48,6 +48,7 @@
 KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char *name)
 : KMainWindow(parent, name), _walletName(wallet) {
 	_ww = new WalletWidget(this, "Wallet Widget");
+	_ww->_folderView->_walletName = wallet;
 	setCentralWidget(_ww);
 
 	connect(_ww->_folderView, SIGNAL(selectionChanged(QIconViewItem*)),
@@ -85,6 +86,11 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 		this, SLOT(deleteMapEntry()));
 	connect(_ww->_mapEntry, SIGNAL(activated(int)),
 		this, SLOT(mapEntryChanged(int)));
+
+	_passItems = new QListViewItem(_ww->_entryList, i18n("Passwords"));
+	_mapItems = new QListViewItem(_ww->_entryList, i18n("Maps"));
+	_binaryItems = new QListViewItem(_ww->_entryList, i18n("Binary Data"));
+	_unknownItems = new QListViewItem(_ww->_entryList, i18n("Unknown"));
 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
@@ -329,7 +335,18 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 		_details->begin();
 		_details->write(QString::null);
 		_details->end();
-		_ww->_entryList->clear();
+		while (_passItems->firstChild()) {
+			delete _passItems->firstChild();
+		}
+		while (_mapItems->firstChild()) {
+			delete _mapItems->firstChild();
+		}
+		while (_binaryItems->firstChild()) {
+			delete _binaryItems->firstChild();
+		}
+		while (_unknownItems->firstChild()) {
+			delete _unknownItems->firstChild();
+		}
 		entrySelectionChanged(0L);
 	}
 	_ww->_entryList->setEnabled(item && _w);
@@ -358,14 +375,43 @@ void KWalletEditor::updateDetails() {
 
 
 void KWalletEditor::updateEntries() {
-	_ww->_entryList->clear();
-	// FIXME: Move into KWalletEntryList
-	_passItems = new QListViewItem(_ww->_entryList, i18n("Passwords"));
-	_mapItems = new QListViewItem(_ww->_entryList, i18n("Maps"));
-	_binaryItems = new QListViewItem(_ww->_entryList, i18n("Binary Data"));
-	_unknownItems = new QListViewItem(_ww->_entryList, i18n("Unknown"));
-	
+QPtrStack<QListViewItem> trash;
+
+	// Remove deleted entries
+	for (QListViewItem *i = _passItems->firstChild(); i; i = i->nextSibling()) {
+		if (!_entries.contains(i->text(0))) {
+			trash.push(i);
+		}
+	}
+
+	for (QListViewItem *i = _mapItems->firstChild(); i; i = i->nextSibling()) {
+		if (!_entries.contains(i->text(0))) {
+			trash.push(i);
+		}
+	}
+
+	for (QListViewItem *i = _binaryItems->firstChild(); i; i = i->nextSibling()) {
+		if (!_entries.contains(i->text(0))) {
+			trash.push(i);
+		}
+	}
+
+	for (QListViewItem *i = _unknownItems->firstChild(); i; i = i->nextSibling()) {
+		if (!_entries.contains(i->text(0))) {
+			trash.push(i);
+		}
+	}
+
+	trash.setAutoDelete(true);
+	trash.clear();
+
+	// Add new entries
 	for (QStringList::Iterator i = _entries.begin(); i != _entries.end(); ++i) {
+		QListViewItem *si = _ww->_entryList->findItem(*i, 0);
+		if (si && si->parent()) {
+			continue;
+		}
+
 		switch (_w->entryType(*i)) {
 		case KWallet::Wallet::Password:
 			new KWalletEntryItem(_w, _passItems, *i);
@@ -382,6 +428,8 @@ void KWalletEditor::updateEntries() {
 			break;
 		}
 	}
+
+	entrySelectionChanged(_ww->_entryList->currentItem());
 }
 
 
@@ -519,7 +567,6 @@ void KWalletEditor::updateEntries(const QString& folder) {
 QIconViewItem *ivi = _ww->_folderView->currentItem();
 
 	if (ivi && ivi->text() == folder) {
-		// FIXME - this is sort of destructive
 		_entries = _w->entryList();
 		updateEntries();
 		updateDetails();
