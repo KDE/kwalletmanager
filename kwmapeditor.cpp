@@ -120,12 +120,13 @@ class InlineEditor : public QTextEdit {
 
 	protected:
 		virtual void focusOutEvent(QFocusEvent*) { 
-		    if (QFocusEvent::reason() == QFocusEvent::Popup) {
-			QWidget *focusW = qApp->focusWidget();
-			if (focusW && focusW == popup)
-			    return;
-		    }
-		    close(); 
+			if (QFocusEvent::reason() == QFocusEvent::Popup) {
+				QWidget *focusW = qApp->focusWidget();
+				if (focusW && focusW == popup) {
+					return;
+				}
+			}
+			close(); 
 		}
 		virtual void keyPressEvent(QKeyEvent *e) {
 			if (e->key() == Qt::Key_Escape) {
@@ -137,8 +138,8 @@ class InlineEditor : public QTextEdit {
 			}
 		}
 		virtual QPopupMenu *createPopupMenu(const QPoint &p) {
-		    popup = QTextEdit::createPopupMenu(p);
-		    return popup;
+			popup = QTextEdit::createPopupMenu(p);
+			return popup;
 		}
 		KWMapEditor *_p;
 		int row, col;
@@ -146,7 +147,7 @@ class InlineEditor : public QTextEdit {
 };
 
 QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
-	kdDebug(2300) << "EDIT COLUMN " << col << endl;
+	//kdDebug(2300) << "EDIT COLUMN " << col << endl;
 	if (col != 2) {
 		return QTable::beginEdit(row, col, replace);
 	}
