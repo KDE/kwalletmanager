@@ -33,8 +33,10 @@
 #include <kpopupmenu.h>
 #include <kstdaction.h>
 
+#include <qcombobox.h>
 #include <qlabel.h>
 #include <qlayout.h>
+#include <qlineedit.h>
 #include <qlistview.h>
 #include <qptrstack.h>
 #include <qpushbutton.h>
@@ -67,11 +69,22 @@ KWalletEditor::KWalletEditor(const QString& wallet, QWidget *parent, const char 
 
 	connect(_ww->_passwordValue, SIGNAL(textChanged()),
 		this, SLOT(entryEditted()));
+	connect(_ww->_mapKey, SIGNAL(textChanged(const QString&)),
+		this, SLOT(entryEditted()));
+	connect(_ww->_mapValue, SIGNAL(textChanged()),
+		this, SLOT(entryEditted()));
 
 	connect(_ww->_undoChanges, SIGNAL(clicked()),
 		this, SLOT(restoreEntry()));
 	connect(_ww->_saveChanges, SIGNAL(clicked()),
 		this, SLOT(saveEntry()));
+
+	connect(_ww->_mapNew, SIGNAL(clicked()),
+		this, SLOT(newMapEntry()));
+	connect(_ww->_mapDelete, SIGNAL(clicked()),
+		this, SLOT(deleteMapEntry()));
+	connect(_ww->_mapEntry, SIGNAL(activated(int)),
+		this, SLOT(mapEntryChanged(int)));
 
 	_w = KWallet::Wallet::openWallet(wallet);
 	if (_w) {
@@ -220,10 +233,14 @@ void KWalletEditor::saveEntry() {
 	if (item && _w && item->parent()) {
 		if (item->parent() == _passItems) {
 			rc = _w->writePassword(item->text(0), _ww->_passwordValue->text());
-			if (rc == 0) {
-				return;
-			}
+		} else if (item->parent() == _mapItems) {
+			saveMapEntry();
+			rc = _w->writeMap(item->text(0), _currentMap);
 		} else {
+			return;
+		}
+
+		if (rc == 0) {
 			return;
 		}
 	}
@@ -240,6 +257,7 @@ void KWalletEditor::restoreEntry() {
 void KWalletEditor::entryEditted() {
 	_ww->_saveChanges->setEnabled(true);
 	_ww->_undoChanges->setEnabled(true);
+	_mapEntryDirty = true;
 }
 
 
@@ -261,11 +279,23 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 			}
 		} else if (item->parent() == _mapItems) {
 			_ww->_entryStack->raiseWidget(int(2));
-			QMap<QString,QString> map;
-			if (_w->readMap(item->text(0), map) == 0) {
+			if (_w->readMap(item->text(0), _currentMap) == 0) {
 				_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
 				_ww->_saveChanges->setEnabled(false);
 				_ww->_undoChanges->setEnabled(false);
+				_ww->_mapEntry->clear();
+				_ww->_mapEntry->insertStringList(_currentMap.keys());
+				_ww->_mapNew->setEnabled(true);
+				_ww->_mapDelete->setEnabled(!_currentMap.isEmpty());
+				_ww->_mapKey->setEnabled(false);
+				_ww->_mapValue->setEnabled(false);
+				_ww->_mapKey->clear();
+				_ww->_mapValue->clear();
+				_currentMapKey = QString::null;
+				_currentMapValue = QString::null;
+				_newMapEntry = false;
+				_mapEntryDirty = false;
+				return;
 			}
 		} else if (item->parent() == _binaryItems) {
 			_ww->_entryStack->raiseWidget(int(3));
@@ -275,6 +305,7 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 							.arg(item->text(0)));
 				_ww->_saveChanges->setEnabled(false);
 				_ww->_undoChanges->setEnabled(false);
+				return;
 			}
 		}
 	}
@@ -301,6 +332,8 @@ void KWalletEditor::folderSelectionChanged(QIconViewItem *item) {
 	}
 	_ww->_entryList->setEnabled(item && _w);
 	_ww->_folderDetails->setEnabled(item && _w);
+	_ww->_entryName->setText(QString::null);
+	_ww->_entryStack->raiseWidget(int(0));
 	_ww->_entryStack->setEnabled(item && _w);
 }
 
@@ -455,6 +488,14 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 
 		if (_w->renameEntry(i->oldName(), t) == 0) {
 			i->clearOldName();
+			QListViewItem *p = item->parent();
+			if (p == _passItems) {
+				_ww->_entryName->setText(i18n("Password: %1").arg(item->text(0)));
+			} else if (p == _mapItems) {
+				_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
+			} else if (p == _binaryItems) {
+				_ww->_entryName->setText(i18n("Binary Data: %1").arg(item->text(0)));
+			}
 		} else {
 			i->setText(0, i->oldName());
 		}
@@ -481,6 +522,61 @@ QIconViewItem *ivi = _ww->_folderView->currentItem();
 		updateDetails();
 	}
 }
+
+
+void KWalletEditor::saveMapEntry() {
+	if (_mapEntryDirty) {
+		_currentMap.remove(_currentMapKey);
+		_currentMap[_ww->_mapKey->text()] = _ww->_mapValue->text();
+		_ww->_mapEntry->setCurrentText(_ww->_mapKey->text());
+	} else if (_newMapEntry) {
+		_currentMap[_ww->_mapKey->text()] = _ww->_mapValue->text();
+		_ww->_mapEntry->insertItem(_ww->_mapKey->text());
+	}
+	_newMapEntry = false;
+	_mapEntryDirty = false;
+}
+
+
+void KWalletEditor::newMapEntry() {
+	saveMapEntry();
+	_ww->_mapKey->clear();
+	_ww->_mapValue->clear();
+	_currentMapKey = QString::null;
+	_currentMapValue = QString::null;
+	_ww->_mapKey->setEnabled(true);
+	_ww->_mapValue->setEnabled(true);
+	_newMapEntry = true;
+	_ww->_mapKey->setFocus();
+}
+
+
+void KWalletEditor::deleteMapEntry() {
+	_currentMap.remove(_currentMapKey);
+	_ww->_mapKey->setEnabled(true);
+	_ww->_mapValue->setEnabled(true);
+	_ww->_mapKey->clear();
+	_ww->_mapValue->clear();
+	_ww->_mapEntry->removeItem(_ww->_mapEntry->currentItem());
+	_ww->_mapEntry->setFocus();
+	_ww->_mapDelete->setDisabled(_currentMap.isEmpty());
+	_mapEntryDirty = false;
+	_newMapEntry = false;
+}
+
+
+void KWalletEditor::mapEntryChanged(int id) {
+	QString entry = _ww->_mapEntry->text(id);
+	saveMapEntry();
+	_ww->_mapKey->setEnabled(true);
+	_ww->_mapValue->setEnabled(true);
+	_currentMapKey = entry;
+	_currentMapValue = _currentMap[entry];
+	_ww->_mapKey->setText(_currentMapKey);
+	_ww->_mapValue->setText(_currentMapValue);
+	_ww->_mapEntry->setCurrentItem(id);
+}
+
 
 #include "kwalleteditor.moc"
 

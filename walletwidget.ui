@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>714</width>
-            <height>526</height>
+            <width>614</width>
+            <height>505</height>
         </rect>
     </property>
     <property name="caption">
@@ -24,7 +24,7 @@
         </property>
         <widget class="QSplitter" row="0" column="0">
             <property name="name">
-                <cstring>splitter5</cstring>
+                <cstring>splitter7</cstring>
             </property>
             <property name="orientation">
                 <enum>Vertical</enum>
@@ -55,7 +55,7 @@
             </widget>
             <widget class="QSplitter">
                 <property name="name">
-                    <cstring>splitter4</cstring>
+                    <cstring>splitter6</cstring>
                 </property>
                 <property name="orientation">
                     <enum>Horizontal</enum>
@@ -84,13 +84,27 @@
                 </widget>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout2</cstring>
+                        <cstring>layout9</cstring>
                     </property>
                     <grid>
                         <property name="name">
                             <cstring>unnamed</cstring>
                         </property>
-                        <spacer row="2" column="0">
+                        <widget class="Line" row="2" column="0" rowspan="1" colspan="3">
+                            <property name="name">
+                                <cstring>line1</cstring>
+                            </property>
+                            <property name="frameShape">
+                                <enum>HLine</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Sunken</enum>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                        <spacer row="3" column="0">
                             <property name="name">
                                 <cstring>spacer1</cstring>
                             </property>
@@ -102,12 +116,12 @@
                             </property>
                             <property name="sizeHint">
                                 <size>
-                                    <width>141</width>
+                                    <width>169</width>
                                     <height>21</height>
                                 </size>
                             </property>
                         </spacer>
-                        <widget class="QPushButton" row="2" column="2">
+                        <widget class="QPushButton" row="3" column="2">
                             <property name="name">
                                 <cstring>_saveChanges</cstring>
                             </property>
@@ -118,7 +132,7 @@
                                 <string>&amp;Save</string>
                             </property>
                         </widget>
-                        <widget class="QPushButton" row="2" column="1">
+                        <widget class="QPushButton" row="3" column="1">
                             <property name="name">
                                 <cstring>_undoChanges</cstring>
                             </property>
@@ -132,6 +146,14 @@
                         <widget class="QWidgetStack" row="1" column="0" rowspan="1" colspan="3">
                             <property name="name">
                                 <cstring>_entryStack</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>1</verstretch>
+                                </sizepolicy>
                             </property>
                             <widget class="QWidget">
                                 <property name="name">
@@ -169,11 +191,144 @@
                                 <attribute name="id">
                                     <number>2</number>
                                 </attribute>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <spacer row="2" column="0">
+                                        <property name="name">
+                                            <cstring>spacer2</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>141</width>
+                                                <height>21</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="3">
+                                        <property name="name">
+                                            <cstring>layout3</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel1</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Entries:</string>
+                                                </property>
+                                                <property name="buddy" stdset="0">
+                                                    <cstring>comboBox1</cstring>
+                                                </property>
+                                            </widget>
+                                            <widget class="QComboBox">
+                                                <property name="name">
+                                                    <cstring>_mapEntry</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>1</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>1</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QLayoutWidget" row="1" column="0" rowspan="1" colspan="3">
+                                        <property name="name">
+                                            <cstring>layout6</cstring>
+                                        </property>
+                                        <grid>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLineEdit" row="0" column="1" rowspan="1" colspan="2">
+                                                <property name="name">
+                                                    <cstring>_mapKey</cstring>
+                                                </property>
+                                            </widget>
+                                            <widget class="QTextEdit" row="1" column="2">
+                                                <property name="name">
+                                                    <cstring>_mapValue</cstring>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel" row="0" column="0">
+                                                <property name="name">
+                                                    <cstring>textLabel2</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Key:</string>
+                                                </property>
+                                                <property name="buddy" stdset="0">
+                                                    <cstring>lineEdit1</cstring>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel" row="1" column="0" rowspan="1" colspan="2">
+                                                <property name="name">
+                                                    <cstring>textLabel3</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Value:</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>AlignTop</set>
+                                                </property>
+                                                <property name="buddy" stdset="0">
+                                                    <cstring>textEdit2</cstring>
+                                                </property>
+                                            </widget>
+                                        </grid>
+                                    </widget>
+                                    <widget class="QPushButton" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>_mapNew</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>&amp;New</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton" row="2" column="2">
+                                        <property name="name">
+                                            <cstring>_mapDelete</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>&amp;Delete</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QWidget">
+                                <property name="name">
+                                    <cstring>page</cstring>
+                                </property>
+                                <attribute name="id">
+                                    <number>3</number>
+                                </attribute>
                             </widget>
                         </widget>
                         <widget class="QLabel" row="0" column="0" rowspan="1" colspan="3">
                             <property name="name">
                                 <cstring>_entryName</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>1</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
                             </property>
                             <property name="text">
                                 <string></string>

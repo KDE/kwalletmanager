@@ -1,0 +1,10 @@
+Things left:
+
+- Drag and drop of folders between wallets, and of entries between folders
+- File association of kwallet type to kwalletmanager
+- commandline to immediately open wallet on launch
+- Icons
+- fix initial sizes, layouts
+- Add a note that binary can't be editted
+- Fix HTML
+

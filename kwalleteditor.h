@@ -62,6 +62,11 @@ class KWalletEditor : public KMainWindow {
 		void restoreEntry();
 		void saveEntry();
 
+		void mapEntryChanged(int id);
+		void newMapEntry();
+		void deleteMapEntry();
+		void saveMapEntry();
+
 	signals:
 		void enableFolderActions(bool enable);
 		void enableContextFolderActions(bool enable);
@@ -76,6 +81,11 @@ class KWalletEditor : public KMainWindow {
 		KHTMLPart *_details;
 		QStringList _entries;
 		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;
+		QMap<QString,QString> _currentMap; // save memory by storing
+						   // only the most recent map.
+		QString _currentMapKey, _currentMapValue;
+		bool _newMapEntry:1;
+		bool _mapEntryDirty:1;
 };
 
 #endif
