@@ -20,6 +20,7 @@
 #include "konfigurator.h"
 #include "walletconfigwidget.h"
 #include <dcopclient.h>
+#include <dcopref.h>
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kconfig.h>
@@ -171,7 +172,10 @@ void KWalletConfig::save() {
 	config.writeEntry("Close When Idle", _wcw->_closeIdle->isChecked());
 	config.writeEntry("Use One Wallet", _wcw->_storeTogether->isChecked());
 	config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
-	kapp->dcopClient()->send("kded", "kwalletd", "reconfigure()", QByteArray());
+
+	_cfg->sync();
+	DCOPRef("kded", "kwalletd").call("reconfigure()");
+
 	emit changed(false);
 }
 
