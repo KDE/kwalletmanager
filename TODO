@@ -1,9 +1,10 @@
 Things left:
 
 Backend:
-- provide metadata (wallet comment, entry comments, etc)
 - test 64 bit, zSeries
 - refactor the hashes to make it efficient
+- rename the wallet "mywallet"
+- make the password prompt go on top
 
 Integration:
 - Cookie jar
