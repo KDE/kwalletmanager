@@ -121,7 +121,7 @@ void KWalletManager::slotConfigureKeys()
 }
 
 bool KWalletManager::queryClose() {
-	if (!_shuttingDown) {
+	if (!_shuttingDown && !kapp->sessionSaving()) {
 		hide();
 		return false;
 	}
