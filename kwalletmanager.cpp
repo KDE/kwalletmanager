@@ -45,8 +45,10 @@
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
+        _shuttingDown = false;
 	_tray = new KSystemTray(this, "kwalletmanager tray");
 	_tray->setPixmap(SmallIcon("wallet_closed"));
+	connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 		if (KWallet::Wallet::isOpen(*it)) {
@@ -91,7 +93,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	new KAction(i18n("&Wallet Settings..."), 0, 0, this,
 			SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
-	KStdAction::quit(qApp, SLOT(quit()), actionCollection());
+	KStdAction::quit(qApp, SLOT(shuttingDown()), actionCollection());
+
 	createGUI("kwalletmanager.rc");
 }
 
@@ -102,6 +105,13 @@ KWalletManager::~KWalletManager() {
 	_dcopRef = 0L;
 }
 
+bool KWalletManager::queryClose() {
+	if ( !_shuttingDown ) {
+		hide();
+		return false;
+	}
+	return true;
+}
 
 void KWalletManager::aWalletWasOpened() {
 	_tray->setPixmap(SmallIcon("wallet_open"));
@@ -259,10 +269,14 @@ void KWalletManager::createWallet() {
 	}
 }
 
+void KWalletManager::shuttingDown()
+{
+	_shuttingDown = true;
+	kapp->quit();
+}
 
 void KWalletManager::setupWallet() {
 	KApplication::startServiceByDesktopName("kwallet_config");
 }
-
 
 #include "kwalletmanager.moc"

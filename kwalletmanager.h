@@ -47,6 +47,9 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		void openWallet(QIconViewItem *item);
 		void contextMenu(QIconViewItem *item, const QPoint& pos);
 
+	protected:
+		virtual bool queryClose();
+
 	private:
 	k_dcop:
 		ASYNC allWalletsClosed();
@@ -54,6 +57,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		ASYNC aWalletWasOpened();
 
 	private slots:
+		void shuttingDown();
 		void possiblyQuit();
 		void editorClosed(KMainWindow* e);
 		void possiblyRescan(const QCString& app);
@@ -61,6 +65,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 
 	private:
 		KSystemTray *_tray;
+		bool _shuttingDown;
 		KWalletIconView *_iconView;
 		DCOPRef *_dcopRef;
 		QPtrList<KMainWindow> _windows;
