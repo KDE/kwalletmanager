@@ -52,7 +52,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	QStringList wl = KWallet::Wallet::walletList();
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 		if (KWallet::Wallet::isOpen(*it)) {
-			_tray->setPixmap(SmallIcon("wallet_open"));
+			_tray->setPixmap(BarIcon("wallet_open"));
 			break;
 		}
 	}
