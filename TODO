@@ -4,7 +4,6 @@ Backend:
 - provide metadata (wallet comment, entry comments, etc)
 - test 64 bit, zSeries
 - refactor the hashes to make it efficient
-- check out valgrind log
 
 Integration:
 - Cookie jar
