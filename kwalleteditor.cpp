@@ -192,8 +192,8 @@ void KWalletEditor::createActions() {
 			SLOT(exportXML()), actionCollection(),
 			"export");
 
-	KStdAction::close(this, SLOT(close()), actionCollection());
-         KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
+	KStdAction::quit(this, SLOT(close()), actionCollection());
+	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 	emit enableFolderActions(_w != 0L);
 	emit enableContextFolderActions(false);
