@@ -47,7 +47,7 @@
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
-    QAccel *accel = new QAccel(this, "kwalletmanager");
+	QAccel *accel = new QAccel(this, "kwalletmanager");
 
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
@@ -59,10 +59,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 		if (KWallet::Wallet::isOpen(*it)) {
 			_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
+			QToolTip::remove(_tray);
+			QToolTip::add(_tray, i18n("KDE Wallet: A wallet is open."));
 			break;
 		}
 	}
-	_tray->show();
 
 	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
 	connect(_iconView, SIGNAL(executed(QIconViewItem*)), this, SLOT(openWallet(QIconViewItem*)));
@@ -96,9 +97,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	new KAction(i18n("&New Wallet..."), "kwalletmanager", 0, this,
 			SLOT(createWallet()), actionCollection(),
 			"wallet_create");
-	new KAction(i18n("Configure &Wallet..."), "configure", 0, this,
-			SLOT(setupWallet()), actionCollection(),
+	KAction *act = new KAction(i18n("Configure &Wallet..."), "configure",
+			0, this, SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
+	act->plug(_tray->contextMenu());
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
         KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
 
@@ -108,6 +110,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
         accel->connectItem(accel->insertItem(Key_Delete),
                            this, SLOT(deleteWallet()) );
 
+	_tray->show();
 }
 
 
