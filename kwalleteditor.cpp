@@ -31,7 +31,6 @@
 #include <kiconview.h>
 #include <kio/netaccess.h>
 #include <kinputdialog.h>
-#include <kkeydialog.h>
 #include <klocale.h>
 #include <kmdcodec.h>
 #include <kmessagebox.h>
@@ -170,11 +169,6 @@ KWalletEditor::~KWalletEditor() {
 	}
 }
 
-void KWalletEditor::slotConfigureKeys()
-{
-  KKeyDialog::configure( actionCollection(), this );
-}
-
 void KWalletEditor::createActions() {
 	_newFolderAction = new KAction(i18n("&New Folder..."), "folder_new",
 			0, this, SLOT(createFolder()), actionCollection(),
@@ -199,7 +193,8 @@ void KWalletEditor::createActions() {
 			"export");
 
 	KStdAction::close(this, SLOT(close()), actionCollection());
-        KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
+         KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), 
+actionCollection());
 	emit enableFolderActions(_w != 0L);
 	emit enableContextFolderActions(false);
 }
