@@ -786,8 +786,10 @@ void KWalletEditor::importXML() {
 		n = n.nextSibling();
 	}
 
-	updateEntries();
 	KIO::NetAccess::removeTempFile(tmpFile);
+	updateDetails();
+	updateEntries();
+	restoreEntry();
 }
 
 
