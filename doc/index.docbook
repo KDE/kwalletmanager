@@ -29,7 +29,7 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2004-02-02</date>
+<date>2005-04-25</date>
 <releaseinfo>1.0</releaseinfo>
 
 <abstract>
@@ -60,41 +60,68 @@ inconvenient.</para>
 
 <para>&kwallet; saves this sensitive data for you in a strongly encrypted
 file, accessible by all applications, and protected with a master
-password.</para>
+password that you define.</para>
 
 <tip>
-<para>For most secure operation, you should use one wallet for local
+<para>&kwallet; supports multiple wallets, so 
+for the most secure operation, you should use one wallet for local
 passwords, and another for network passwords and form data.  You can
 configure this behavior in the &kwallet; &kcontrolcenter; module, however
 the default setting is to store everything in one wallet.</para>
 </tip>
+
+<para>A wallet is by default closed, which means that you must supply
+a password to open it. Once the wallet is opened, the contents can
+be accessed.</para>
 
 </chapter>
 
 <chapter id="kwalletmanager">
 <title>&kwalletmanager;</title>
 
-<para>&kwalletmanager; serves two functions.  Firstly it allows you to see if
+<para>&kwalletmanager; serves a number of functions.  Firstly it allows you to see if
 any wallets are open, which wallets those are, and which applications are
 using each wallet.  You can disconnect an application's access to a wallet
 from within the &kwalletmanager;.</para>
 
 <para>You may also manage the wallets installed on the system, creating and
-deleting wallets and manipulating their contents.</para>
+deleting wallets and manipulating their contents (changing keys, ...).</para>
 
-<para>When a wallet is opened, the &kwalletmanager; application is
-launched.  A system tray icon indicates that a wallet is open.  When all
+<para>Normally the &kwalletmanager; application is launched when
+&kde; starts and remains in iconic form in the system tray. Alternatively, 
+when a wallet is opened, the &kwalletmanager; application will be
+launched.  A system tray icon indicates that a wallet is open
+(<mediaobject>
+   <imageobject>
+     <imagedata fileref="cr22-action-wallet_closed.png" depth="22" width="22"/>
+   </imageobject>
+ </mediaobject>).
+When all
 wallets are closed, the icon will reflect this by showing a closed
-wallet.</para>
+wallet
+(<mediaobject>
+   <imageobject>
+     <imagedata fileref="cr22-action-wallet_open.png" depth="22" width="22"/>
+   </imageobject>
+ </mediaobject>).</para>
 
-<para>Click on the wallet icon to display a window showing all available
-wallets as icons which reflect their current status, either open or
-closed.</para>
+<para>Click once on the system tray wallet icon to display the &kwalletmanager;
+window showing all available wallets as icons which reflect their
+current status, either open or closed.</para>
+<para>
+<mediaobject>
+   <imageobject>
+     <imagedata fileref="kwalletmanager.png" depth="328" width="258"/>
+   </imageobject>
+ </mediaobject></para>
+
 
 <sect1 id="kwalletmanager-context-menu">
 <title>The &kwalletmanager; Context Menu</title>
 
-<para><mousebutton>Right</mousebutton> clicking on a wallet offers the following functions:</para>
+<para><mousebutton>Right</mousebutton> clicking on a wallet in the
+&kwalletmanager; window offers 
+the following functions:</para>
 
 <variablelist>
 <varlistentry>
@@ -106,13 +133,33 @@ wallet.</para>
 </varlistentry>
 
 <varlistentry>
+<term><guimenuitem>New Wallet...</guimenuitem></term>
+<listitem>
+<para>Create a new wallet. A dialog box will ask you
+for the name of the new wallet that you want to create.
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term><menuchoice><shortcut>&Enter;</shortcut>
 <guisubmenu>Open...</guisubmenu></menuchoice></term>
 <listitem>
-<para>Open the wallet. The contents of the wallet will display in a new
-window.</para>
+<para>Open the wallet. Opening the wallet causes the contents 
+of the wallet to be displayed in a new window where you can
+add, delete, or modify the contents of the wallet. You may also 
+double click the wallet icon to cause it to open. If the wallet
+is not already open, you will be requested to enter the password.
+See below for details of using the wallet window.
+</para>
+<para>
+<mediaobject>
+   <imageobject>
+     <imagedata fileref="edit1.png" depth="459" width="375"/>
+   </imageobject>
+ </mediaobject></para>
+
 </listitem>
-</varlistentry>
+</varlistentry></para>
 
 <varlistentry>
 <term><guimenuitem>Change Password</guimenuitem></term>
@@ -129,7 +176,7 @@ connected applications will appear in a submenu.</para></listitem>
 
 <varlistentry>
 <term><guimenuitem>Close</guimenuitem></term>
-<listitem><para>Force the wallet closed.</para></listitem>
+<listitem><para>Force the wallet to be closed.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -144,12 +191,20 @@ connected applications will appear in a submenu.</para></listitem>
 <sect1 id="kwalletmanager-wallet-window">
 <title>The Wallet Window</title>
 
-<para>Clicking on a wallet in the &kwalletmanager; window will open a new
-window displaying that wallet's contents.</para>
+<para>Double clicking on a wallet in the &kwalletmanager; window will open a new
+window displaying that wallet's contents. A wallet may contain any number
+of folders, which allow storing of password information. By default a wallet
+will contain folders named <term>Form Data</term> and <term>Passwords</term>.
+</para>
 
 <para>The window contains four panes:</para>
+<para>
+<mediaobject>
+   <imageobject>
+     <imagedata fileref="edit1.png" depth="459" width="375"/>
+   </imageobject>
+ </mediaobject></para>
 
-<!-- FIXME: Called out screenshot here -->
 
 <itemizedlist>
 <listitem><para>A summary of the contents of the current
@@ -164,6 +219,13 @@ folder</para></listitem>
 the folder entry list and the summary display.  Selecting a folder entry
 will update the entry contents pane, and allow you to edit that
 entry.</para>
+<para>
+<mediaobject>
+   <imageobject>
+     <imagedata fileref="edit2.png" depth="448" width="419"/>
+   </imageobject>
+ </mediaobject></para>
+
 
 <para>Entries may also be created or deleted via the context menu for the
 folder contents.</para>
@@ -186,7 +248,7 @@ locations.</para>
 <title><guilabel>Wallet Preferences</guilabel></title>
 
 <para>&kwallet; contains a small configuration panel with several options
-that allow you to tune &kwallet; to your individual preferences.  The
+that allow you to tune &kwallet; to your personal preferences.  The
 default settings for &kwallet; are sufficient for most users.</para>
 
 <para>Check the box to enable or disable the &kde; wallet subsystem
