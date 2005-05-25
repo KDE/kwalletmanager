@@ -136,7 +136,7 @@ wallet.</para>
 <term><guimenuitem>New Wallet...</guimenuitem></term>
 <listitem>
 <para>Create a new wallet. A dialog box will ask you
-for the name of the new wallet that you want to create.
+for the name of the new wallet that you want to create.</para>
 </listitem>
 </varlistentry>
 
@@ -159,7 +159,7 @@ See below for details of using the wallet window.
  </mediaobject></para>
 
 </listitem>
-</varlistentry></para>
+</varlistentry>
 
 <varlistentry>
 <term><guimenuitem>Change Password</guimenuitem></term>
@@ -194,7 +194,7 @@ connected applications will appear in a submenu.</para></listitem>
 <para>Double clicking on a wallet in the &kwalletmanager; window will open a new
 window displaying that wallet's contents. A wallet may contain any number
 of folders, which allow storing of password information. By default a wallet
-will contain folders named <term>Form Data</term> and <term>Passwords</term>.
+will contain folders named Form Data and Passwords.
 </para>
 
 <para>The window contains four panes:</para>
