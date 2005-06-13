@@ -1,5 +1,6 @@
 /*
-   Copyright (C) 2003 George Staikos <staikos@kde.org>
+   Copyright (C) 2003-2005 George Staikos <staikos@kde.org>
+   Copyright (C) 2005 Isaac Clerencia <isaac@warp.es>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -23,8 +24,20 @@
 #include <kiconview.h>
 #include <klistview.h>
 #include <kwallet.h>
+#include <kiconloader.h>
+#include <kicontheme.h>
 
-class KWalletEntryItem : public QListViewItem {
+#define KWALLETENTRYMAGIC ((Q_UINT32) 0x6B776C65)
+#define KWALLETFOLDERMAGIC ((Q_UINT32) 0x6B776C66)
+
+enum KWalletListItemClasses {
+	KWalletFolderItemClass = 1000,
+	KWalletContainerItemClass,
+	KWalletEntryItemClass,
+	KWalletUnknownClass = 2000
+};
+
+class KWalletEntryItem : public KListViewItem {
 	public:
 		KWalletEntryItem(KWallet::Wallet *w, QListViewItem* parent, const QString& ename);
 		virtual ~KWalletEntryItem();
@@ -33,53 +46,78 @@ class KWalletEntryItem : public QListViewItem {
 		QString currentName() { return text(0); }
 
 		void clearOldName() { _oldName = text(0); }
+		virtual int rtti() const;
+
+	public:
+		KWallet::Wallet *_wallet;
 
 	private:
 		QString _oldName;
-	public:
-		KWallet::Wallet *_wallet;
 };
 
+class KWalletContainerItem : public KListViewItem {
+	public:
+		KWalletContainerItem(QListViewItem* parent, const QString& name,
+		    KWallet::Wallet::EntryType type);
+		virtual ~KWalletContainerItem();
+
+	public:
+		virtual int rtti() const;
+		KWallet::Wallet::EntryType type();
+		bool contains(const QString& itemKey);
+		QListViewItem* getItem(const QString& itemKey);
+
+	private:
+		KWallet::Wallet::EntryType _type;
+};
+
+class KWalletFolderItem : public KListViewItem {
+	public:
+		KWalletFolderItem(KWallet::Wallet *w, QListView* parent, 
+			const QString& name, int entries);
+		virtual ~KWalletFolderItem();
+
+		virtual bool acceptDrop(const QMimeSource *mime) const;
+		virtual int rtti() const;
+
+		QString name() const;
+		void refresh();
+		KWalletContainerItem* getContainer(KWallet::Wallet::EntryType type);
+		QPixmap getFolderIcon(KIcon::Group group);
+		bool contains(const QString& itemKey);
+		QListViewItem* getItem(const QString& itemKey);
+
+	public:
+		KWallet::Wallet *_wallet;
+
+	private:
+		QString _name;
+		int _entries;
+};
 
 class KWalletEntryList : public KListView {
+	Q_OBJECT
 	public:
 		KWalletEntryList(QWidget *parent, const char *name = 0L);
 		virtual ~KWalletEntryList();
 
+		bool existsFolder(const QString& name);
+		KWalletFolderItem* getFolder(const QString& name);
+		void contentsDropEvent(QDropEvent *e);
+		void contentsDragEnterEvent(QDragEnterEvent *e);
+		void setWallet(KWallet::Wallet *w);
+
 	protected:
+		void itemDropped(QDropEvent *e, QListViewItem *item);
 		virtual QDragObject *dragObject();
-};
+		virtual bool acceptDrag (QDropEvent* event) const;
 
-
-class KWalletFolderItem : public QIconViewItem {
-	public:
-		KWalletFolderItem(KWallet::Wallet *w, QIconView *parent, const QString& folderName);
-		virtual ~KWalletFolderItem();
-		virtual bool acceptDrop(const QMimeSource *mime) const;
-
-	protected:
-		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
-
+	private:
+		static KWalletFolderItem *getItemFolder(QListViewItem *item);
+	
 	public:
 		KWallet::Wallet *_wallet;
 };
-
-
-class KWalletFolderIconView : public KIconView {
-	Q_OBJECT
-	public:
-		KWalletFolderIconView(QWidget *parent, const char *name = 0L);
-		virtual ~KWalletFolderIconView();
-		QString _walletName;
-
-	protected slots:
-		void slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
-	protected:
-		virtual QDragObject *dragObject();
-		virtual void contentsMousePressEvent(QMouseEvent *e);
-		QPoint _mousePos;
-};
-
 
 class KWalletItem : public QIconViewItem {
 	public:
@@ -122,8 +160,8 @@ inline QDataStream& operator<<(QDataStream& str, const KWalletEntryItem& w) {
 
 inline QDataStream& operator<<(QDataStream& str, const KWalletFolderItem& w) {
 	QString oldFolder = w._wallet->currentFolder();
-	str << w.text();
-	w._wallet->setFolder(w.text());
+	str << w.name();
+	w._wallet->setFolder(w.name());
 	QStringList entries = w._wallet->entryList();
 	for (QStringList::Iterator it = entries.begin(); it != entries.end(); ++it) {
 		str << *it;

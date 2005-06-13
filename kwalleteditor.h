@@ -1,5 +1,6 @@
 /*
-   Copyright (C) 2003 George Staikos <staikos@kde.org>
+   Copyright (C) 2003-2005 George Staikos <staikos@kde.org>
+   Copyright (C) 2005 Isaac Clerencia <isaac@warp.es>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -50,15 +51,12 @@ class KWalletEditor : public KMainWindow {
 		void deleteFolder();
 
 	private slots:
-		void updateFolderList();
-		void folderSelectionChanged(QIconViewItem *item);
+		void layout();
+		void updateFolderList(bool checkEntries = false);
 		void entrySelectionChanged(QListViewItem *item);
 		void listItemRenamed(QListViewItem *, int, const QString&);
 		void listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col);
-		void iconContextMenuRequested(QIconViewItem *item, const QPoint& pos);
-		void updateEntries();
 		void updateEntries(const QString& folder);
-		void updateDetails();
 
 		void newEntry();
 		void renameEntry();
@@ -82,6 +80,7 @@ class KWalletEditor : public KMainWindow {
 		void copyPassword();
 
 	signals:
+		void enableWalletActions(bool enable);
 		void enableFolderActions(bool enable);
 		void enableContextFolderActions(bool enable);
 		void editorClosed(KMainWindow*);
@@ -94,14 +93,13 @@ class KWalletEditor : public KMainWindow {
 		bool _nonLocal;
 		KWallet::Wallet *_w;
 		WalletWidget *_ww;
-		KWalletFolderIconView *_folderView;
 		KWalletEntryList *_entryList;
+		bool _walletIsOpen;
 		KAction *_newFolderAction, *_deleteFolderAction;
-		KAction *_passwordAction, *_exportAction, *_mergeAction, *_importAction;
+		KAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
 		KAction *_copyPassAction;
 		QLabel*_details;
-		QStringList _entries;
-		QListViewItem *_passItems, *_mapItems, *_binaryItems, *_unknownItems;
+		QString _currentFolder;
 		QMap<QString,QString> _currentMap; // save memory by storing
 						   // only the most recent map.
 		KWMapEditor *_mapEditor;
