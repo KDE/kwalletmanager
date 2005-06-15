@@ -29,7 +29,7 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-04-25</date>
+<date>2005-06-15</date>
 <releaseinfo>1.0</releaseinfo>
 
 <abstract>
@@ -90,20 +90,23 @@ deleting wallets and manipulating their contents (changing keys, ...).</para>
 <para>Normally the &kwalletmanager; application is launched when
 &kde; starts and remains in iconic form in the system tray. Alternatively, 
 when a wallet is opened, the &kwalletmanager; application will be
-launched.  A system tray icon indicates that a wallet is open
-(<mediaobject>
+launched.  A system tray icon indicates that a wallet is open:
+ <mediaobject>
    <imageobject>
-     <imagedata fileref="cr22-action-wallet_closed.png" depth="22" width="22"/>
+     <imagedata fileref="cr22-action-wallet_open.png"/>
    </imageobject>
- </mediaobject>).
+ </mediaobject>
+
 When all
 wallets are closed, the icon will reflect this by showing a closed
-wallet
-(<mediaobject>
-   <imageobject>
-     <imagedata fileref="cr22-action-wallet_open.png" depth="22" width="22"/>
-   </imageobject>
- </mediaobject>).</para>
+wallet:
+<mediaobject>
+ <imageobject>
+     <imagedata fileref="cr22-action-wallet_closed.png"/>
+  </imageobject>
+ </mediaobject> 
+
+</para>
 
 <para>Click once on the system tray wallet icon to display the &kwalletmanager;
 window showing all available wallets as icons which reflect their
@@ -111,7 +114,7 @@ current status, either open or closed.</para>
 <para>
 <mediaobject>
    <imageobject>
-     <imagedata fileref="kwalletmanager.png" depth="328" width="258"/>
+     <imagedata fileref="kwalletmanager.png"/>
    </imageobject>
  </mediaobject></para>
 
@@ -124,13 +127,6 @@ current status, either open or closed.</para>
 the following functions:</para>
 
 <variablelist>
-<varlistentry>
-<term><guimenuitem>New Wallet</guimenuitem></term>
-<listitem>
-<para>Create a new wallet.  A dialog will open requesting a name for the new
-wallet.</para>
-</listitem>
-</varlistentry>
 
 <varlistentry>
 <term><guimenuitem>New Wallet...</guimenuitem></term>
@@ -154,7 +150,7 @@ See below for details of using the wallet window.
 <para>
 <mediaobject>
    <imageobject>
-     <imagedata fileref="edit1.png" depth="459" width="375"/>
+     <imagedata fileref="edit1.png"/>
    </imageobject>
  </mediaobject></para>
 
@@ -197,11 +193,11 @@ of folders, which allow storing of password information. By default a wallet
 will contain folders named Form Data and Passwords.
 </para>
 
-<para>The window contains four panes:</para>
+<para>The window has four panes:</para>
 <para>
 <mediaobject>
    <imageobject>
-     <imagedata fileref="edit1.png" depth="459" width="375"/>
+     <imagedata fileref="edit1.png"/>
    </imageobject>
  </mediaobject></para>
 
@@ -222,7 +218,7 @@ entry.</para>
 <para>
 <mediaobject>
    <imageobject>
-     <imagedata fileref="edit2.png" depth="448" width="419"/>
+     <imagedata fileref="edit2.png"/>
    </imageobject>
  </mediaobject></para>
 
