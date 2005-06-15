@@ -394,7 +394,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QListViewItem *item) {
 
 		el = dynamic_cast<KWalletEntryList*>(e->source()->parent());
 		if (!el) {
-			KMessageBox::error(this, i18n("An unexpected error ocurred trying to drop the item"));
+			KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the item"));
 		}
 		sel = el->selectedItem();
 	}
@@ -476,7 +476,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QListViewItem *item) {
 		}
 		KWalletFolderItem *fi = KWalletEntryList::getItemFolder(item);
 		if (!fi) {
-			KMessageBox::error(this, i18n("An unexpected error ocurred trying to drop the entry"));
+			KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the entry"));
 			delete(ds);
 			e->accept();
 			return;
@@ -505,7 +505,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QListViewItem *item) {
 				el->_wallet->removeFolder(fi->name());
 				delete sel;
 			} else {
-				KMessageBox::error(this, i18n("An unexpected error ocurred trying to delete the original folder, but the folder has been copied successfully"));
+				KMessageBox::error(this, i18n("An unexpected error occurred trying to delete the original folder, but the folder has been copied successfully"));
 			}
 		}
 		e->accept();

@@ -672,7 +672,7 @@ void KWalletEditor::newEntry() {
 
 		KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(p->parent());
 		if (!fi) {
-			KMessageBox::error(this, i18n("An unexpected error ocurred trying to add the new entry"));
+			KMessageBox::error(this, i18n("An unexpected error occurred trying to add the new entry"));
 			return;
 		}
 		_w->setFolder(fi->name());
@@ -683,7 +683,7 @@ void KWalletEditor::newEntry() {
 
 		KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(p);
 		if (!ci) {
-			KMessageBox::error(this, i18n("An unexpected error ocurred trying to add the new entry"));
+			KMessageBox::error(this, i18n("An unexpected error occurred trying to add the new entry"));
 			return;
 		}
 		if (ci->type() == KWallet::Wallet::Password) {
@@ -726,7 +726,7 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 			i->clearOldName();
 			KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(item->parent());
 			if (!ci) {
-				KMessageBox::error(this, i18n("An unexpected error ocurred trying to rename the entry"));
+				KMessageBox::error(this, i18n("An unexpected error occurred trying to rename the entry"));
 				return;
 			}
 			if (ci->type() == KWallet::Wallet::Password) {
@@ -750,7 +750,7 @@ void KWalletEditor::deleteEntry() {
 		if (rc == KMessageBox::Continue) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
 			if (!fi) {
-				KMessageBox::error(this, i18n("An unexpected error ocurred trying to delete the entry"));
+				KMessageBox::error(this, i18n("An unexpected error occurred trying to delete the entry"));
 				return;
 			}
 			_w->removeEntry(item->text(0));
