@@ -55,9 +55,9 @@ class KWalletEditor : public KMainWindow {
 	private slots:
 		void layout();
 		void updateFolderList(bool checkEntries = false);
-		void entrySelectionChanged(QListViewItem *item);
-		void listItemRenamed(QListViewItem *, int, const QString&);
-		void listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col);
+		void entrySelectionChanged(Q3ListViewItem *item);
+		void listItemRenamed(Q3ListViewItem *, int, const QString&);
+		void listContextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col);
 		void updateEntries(const QString& folder);
 
 		void newEntry();

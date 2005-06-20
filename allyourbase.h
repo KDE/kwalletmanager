@@ -26,6 +26,12 @@
 #include <kwallet.h>
 #include <kiconloader.h>
 #include <kicontheme.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <QDropEvent>
+#include <Q3ValueList>
+#include <QDragEnterEvent>
+#include <QMouseEvent>
 
 #define KWALLETENTRYMAGIC ((Q_UINT32) 0x6B776C65)
 #define KWALLETFOLDERMAGIC ((Q_UINT32) 0x6B776C66)
@@ -39,7 +45,7 @@ enum KWalletListItemClasses {
 
 class KWalletEntryItem : public KListViewItem {
 	public:
-		KWalletEntryItem(KWallet::Wallet *w, QListViewItem* parent, const QString& ename);
+		KWalletEntryItem(KWallet::Wallet *w, Q3ListViewItem* parent, const QString& ename);
 		virtual ~KWalletEntryItem();
 
 		const QString& oldName() { return _oldName; }
@@ -57,7 +63,7 @@ class KWalletEntryItem : public KListViewItem {
 
 class KWalletContainerItem : public KListViewItem {
 	public:
-		KWalletContainerItem(QListViewItem* parent, const QString& name,
+		KWalletContainerItem(Q3ListViewItem* parent, const QString& name,
 		    KWallet::Wallet::EntryType type);
 		virtual ~KWalletContainerItem();
 
@@ -65,7 +71,7 @@ class KWalletContainerItem : public KListViewItem {
 		virtual int rtti() const;
 		KWallet::Wallet::EntryType type();
 		bool contains(const QString& itemKey);
-		QListViewItem* getItem(const QString& itemKey);
+		Q3ListViewItem* getItem(const QString& itemKey);
 
 	private:
 		KWallet::Wallet::EntryType _type;
@@ -73,7 +79,7 @@ class KWalletContainerItem : public KListViewItem {
 
 class KWalletFolderItem : public KListViewItem {
 	public:
-		KWalletFolderItem(KWallet::Wallet *w, QListView* parent, 
+		KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, 
 			const QString& name, int entries);
 		virtual ~KWalletFolderItem();
 
@@ -85,7 +91,7 @@ class KWalletFolderItem : public KListViewItem {
 		KWalletContainerItem* getContainer(KWallet::Wallet::EntryType type);
 		QPixmap getFolderIcon(KIcon::Group group);
 		bool contains(const QString& itemKey);
-		QListViewItem* getItem(const QString& itemKey);
+		Q3ListViewItem* getItem(const QString& itemKey);
 
 	public:
 		KWallet::Wallet *_wallet;
@@ -108,26 +114,26 @@ class KWalletEntryList : public KListView {
 		void setWallet(KWallet::Wallet *w);
 
 	protected:
-		void itemDropped(QDropEvent *e, QListViewItem *item);
-		virtual QDragObject *dragObject();
+		void itemDropped(QDropEvent *e, Q3ListViewItem *item);
+		virtual Q3DragObject *dragObject();
 		virtual bool acceptDrag (QDropEvent* event) const;
 
 	private:
-		static KWalletFolderItem *getItemFolder(QListViewItem *item);
+		static KWalletFolderItem *getItemFolder(Q3ListViewItem *item);
 	
 	public:
 		KWallet::Wallet *_wallet;
 };
 
-class KWalletItem : public QIconViewItem {
+class KWalletItem : public Q3IconViewItem {
 	public:
-		KWalletItem(QIconView *parent, const QString& walletName);
+		KWalletItem(Q3IconView *parent, const QString& walletName);
 		virtual ~KWalletItem();
 
 		virtual bool acceptDrop(const QMimeSource *mime) const;
 
 	protected:
-		virtual void dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst); 
+		virtual void dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst); 
 };
 
 
