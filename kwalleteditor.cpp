@@ -29,6 +29,7 @@
 #include <kaction.h>
 #include <kapplication.h>
 #include <kdebug.h>
+#include <kdialog.h>
 #include <kfiledialog.h>
 #include <kiconview.h>
 #include <kinputdialog.h>
@@ -67,6 +68,8 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	_copyPassAction = KStdAction::copy(this, SLOT(copyPassword()), actionCollection());
 
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
+	box->setSpacing( KDialog::spacingHint() );
+	box->setMargin( KDialog::marginHint() );
 	_entryList = new KWalletEntryList(_ww->_entryListFrame, "Wallet Entry List");
 	box->addWidget(new KListViewSearchLineWidget(_entryList, _ww->_entryListFrame));
 	box->addWidget(_entryList);
