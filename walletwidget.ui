@@ -412,10 +412,9 @@
 <customwidgets>
 </customwidgets>
 <includes>
-    <include location="global" impldecl="in implementation">kdialog.h</include>
+    <include location="global" impldecl="in declaration">kdialog.h</include>
     <include location="global" impldecl="in implementation">kiconloader.h</include>
 </includes>
-<pixmapfunction>SmallIconSet</pixmapfunction>
 <layoutdefaults spacing="6" margin="11"/>
 <layoutfunctions spacing="KDialog::spacingHint" margin="KDialog::marginHint"/>
 <includehints>

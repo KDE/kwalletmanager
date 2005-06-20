@@ -340,7 +340,7 @@ void KWalletEditor::createFolder() {
 
 void KWalletEditor::saveEntry() {
 	int rc = 1;
-	QListViewItem *item = _entryList->currentItem();
+	Q3ListViewItem *item = _entryList->currentItem();
 	_ww->_saveChanges->setEnabled(false);
 	_ww->_undoChanges->setEnabled(false);
 
@@ -544,7 +544,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	}
 }
 
-void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col) {
+void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
 	Q_UNUSED(col)
 
 	if (!_walletIsOpen) {
@@ -620,7 +620,7 @@ void KWalletEditor::copyPassword() {
 
 
 void KWalletEditor::newEntry() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	QString n;
 	bool ok;
 
@@ -702,7 +702,7 @@ void KWalletEditor::newEntry() {
 
 
 void KWalletEditor::renameEntry() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		item->startRename(0);
 	}
@@ -710,7 +710,7 @@ void KWalletEditor::renameEntry() {
 
 
 // Only supports renaming of KWalletEntryItem derived classes.
-void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) {
+void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t) {
 	if (item) {
 		KWalletEntryItem *i = dynamic_cast<KWalletEntryItem*>(item);
 		if (!i) {
@@ -744,7 +744,7 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 
 
 void KWalletEditor::deleteEntry() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)),"",KStdGuiItem::del());
 		if (rc == KMessageBox::Continue) {
@@ -843,7 +843,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(me.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(me.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -873,7 +873,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(pe.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(pe.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -903,7 +903,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(ee.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(ee.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -947,7 +947,7 @@ void KWalletEditor::importXML() {
 	}
 
 	QFile qf(tmpFile);
-	if (!qf.open(IO_ReadOnly)) {
+	if (!qf.open(QIODevice::ReadOnly)) {
 		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.").arg(url.prettyURL()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
@@ -994,7 +994,7 @@ void KWalletEditor::importXML() {
 			if (hasEntry && mp == Prompt) {
 				KBetterThanKDialogBase *bd;
 				bd = new KBetterThanKDialogBase(this);
-				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(fname)).arg(QStyleSheet::escape(ename)));
+				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(fname)).arg(Q3StyleSheet::escape(ename)));
 				mp = (MergePlan)bd->exec();
 				delete bd;
 				bool ok = false;
@@ -1057,8 +1057,8 @@ void KWalletEditor::exportXML() {
 					{
 						QString pass;
 						if (_w->readPassword(*j, pass) == 0) {
-							ts << "    <password name=\"" << QStyleSheet::escape(*j) << "\">";
-							ts << QStyleSheet::escape(pass);
+							ts << "    <password name=\"" << Q3StyleSheet::escape(*j) << "\">";
+							ts << Q3StyleSheet::escape(pass);
 							ts << "</password>" << endl;
 						}
 						break;
@@ -1067,7 +1067,7 @@ void KWalletEditor::exportXML() {
 					{
 						QByteArray ba;
 						if (_w->readEntry(*j, ba) == 0) {
-							ts << "    <stream name=\"" << QStyleSheet::escape(*j) << "\">";
+							ts << "    <stream name=\"" << Q3StyleSheet::escape(*j) << "\">";
 							ts << KCodecs::base64Encode(ba);
 
 							ts << "</stream>" << endl;
@@ -1078,9 +1078,9 @@ void KWalletEditor::exportXML() {
 					{
 						QMap<QString,QString> map;
 						if (_w->readMap(*j, map) == 0) {
-							ts << "    <map name=\"" << QStyleSheet::escape(*j) << "\">" << endl;
+							ts << "    <map name=\"" << Q3StyleSheet::escape(*j) << "\">" << endl;
 							for (QMap<QString,QString>::ConstIterator k = map.begin(); k != map.end(); ++k) {
-								ts << "      <mapentry name=\"" << QStyleSheet::escape(k.key()) << "\">" << QStyleSheet::escape(k.data()) << "</mapentry>" << endl;
+								ts << "      <mapentry name=\"" << Q3StyleSheet::escape(k.key()) << "\">" << Q3StyleSheet::escape(k.data()) << "</mapentry>" << endl;
 							}
 							ts << "    </map>" << endl;
 						}

@@ -24,7 +24,7 @@
 
 class KConfig;
 class WalletConfigWidget;
-class QListViewItem;
+class Q3ListViewItem;
 
 class KWalletConfig : public KCModule {
 	Q_OBJECT
@@ -46,7 +46,7 @@ class KWalletConfig : public KCModule {
 		void updateWalletLists();
 		QString newWallet();
 		void deleteEntry();
-		void contextMenuRequested(QListViewItem *item, const QPoint& pos, int col);
+		void contextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col);
 
 	private:
 		WalletConfigWidget *_wcw;

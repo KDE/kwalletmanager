@@ -39,17 +39,20 @@
 #include <ksystemtray.h>
 #include <kwallet.h>
 
-#include <qaccel.h>
-#include <qguardedptr.h>
-#include <qptrstack.h>
+#include <q3accel.h>
+#include <qpointer.h>
+#include <q3ptrstack.h>
 #include <qregexp.h>
 #include <qtooltip.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3CString>
 
-KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
+KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
-	QAccel *accel = new QAccel(this, "kwalletmanager");
+	Q3Accel *accel = new Q3Accel(this, "kwalletmanager");
 
 	KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
@@ -74,8 +77,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	}
 
 	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
-	connect(_iconView, SIGNAL(executed(QIconViewItem*)), this, SLOT(openWallet(QIconViewItem*)));
-	connect(_iconView, SIGNAL(contextMenuRequested(QIconViewItem*, const QPoint&)), this, SLOT(contextMenu(QIconViewItem*, const QPoint&)));
+	connect(_iconView, SIGNAL(executed(Q3IconViewItem*)), this, SLOT(openWallet(Q3IconViewItem*)));
+	connect(_iconView, SIGNAL(contextMenuRequested(Q3IconViewItem*, const QPoint&)), this, SLOT(contextMenu(Q3IconViewItem*, const QPoint&)));
 
 	updateWalletDisplay();
 	setCentralWidget(_iconView);
@@ -84,13 +87,13 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 	_dcopRef = new DCOPRef("kded", "kwalletd");
 	_dcopRef->dcopClient()->setNotifications(true);
 	connect(_dcopRef->dcopClient(),
-		SIGNAL(applicationRemoved(const QCString&)),
+		SIGNAL(applicationRemoved(const Q3CString&)),
 		this,
-		SLOT(possiblyRescan(const QCString&)));
+		SLOT(possiblyRescan(const Q3CString&)));
 	connect(_dcopRef->dcopClient(),
-		SIGNAL(applicationRegistered(const QCString&)),
+		SIGNAL(applicationRegistered(const Q3CString&)),
 		this,
-		SLOT(possiblyRescan(const QCString&)));
+		SLOT(possiblyRescan(const Q3CString&)));
 
 	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
 	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
@@ -122,8 +125,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 actionCollection());
 
 	createGUI("kwalletmanager.rc");
-	accel->connectItem(accel->insertItem(Key_Return), this, SLOT(openWallet()));
-	accel->connectItem(accel->insertItem(Key_Delete), this, SLOT(deleteWallet()));
+	accel->connectItem(accel->insertItem(Qt::Key_Return), this, SLOT(openWallet()));
+	accel->connectItem(accel->insertItem(Qt::Key_Delete), this, SLOT(deleteWallet()));
 
 	if (_tray) {
 		_tray->show();
@@ -172,9 +175,9 @@ void KWalletManager::aWalletWasOpened() {
 
 void KWalletManager::updateWalletDisplay() {
 QStringList wl = KWallet::Wallet::walletList();
-QPtrStack<QIconViewItem> trash;
+Q3PtrStack<Q3IconViewItem> trash;
 
-	for (QIconViewItem *item = _iconView->firstItem(); item; item = item->nextItem()) {
+	for (Q3IconViewItem *item = _iconView->firstItem(); item; item = item->nextItem()) {
 		if (!wl.contains(item->text())) {
 			trash.push(item);
 		}
@@ -195,9 +198,9 @@ QPtrStack<QIconViewItem> trash;
 }
 
 
-void KWalletManager::contextMenu(QIconViewItem *item, const QPoint& pos) {
+void KWalletManager::contextMenu(Q3IconViewItem *item, const QPoint& pos) {
 	if (item) {
-		QGuardedPtr<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
+		QPointer<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
 		connect(popupMenu, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
 		connect(popupMenu, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
 		connect(popupMenu, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
@@ -257,12 +260,12 @@ void KWalletManager::openWalletFile(const QString& path) {
 
 
 void KWalletManager::openWallet() {
-	QIconViewItem *item = _iconView->currentItem();
+	Q3IconViewItem *item = _iconView->currentItem();
 	openWallet(item);
 }
 
 void KWalletManager::deleteWallet() {
-	QIconViewItem *item = _iconView->currentItem();
+	Q3IconViewItem *item = _iconView->currentItem();
 	if (item) {
 		deleteWallet(item->text());
 	}
@@ -298,7 +301,7 @@ void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
 }
 
 
-void KWalletManager::openWallet(QIconViewItem *item) {
+void KWalletManager::openWallet(Q3IconViewItem *item) {
 	if (item) {
 		openWallet(item->text());
 	}
@@ -332,7 +335,7 @@ void KWalletManager::editorClosed(KMainWindow* e) {
 }
 
 
-void KWalletManager::possiblyRescan(const QCString& app) {
+void KWalletManager::possiblyRescan(const Q3CString& app) {
 	if (app == "kded") {
 		updateWalletDisplay();
 	}

@@ -22,12 +22,12 @@
 
 #include <qmap.h>
 #include <qstring.h>
-#include <qtable.h>
+#include <q3table.h>
 
 class KAction;
 class KActionCollection;
 
-class KWMapEditor : public QTable {
+class KWMapEditor : public Q3Table {
 	Q_OBJECT
 
 	public:

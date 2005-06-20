@@ -138,10 +138,10 @@ class KWalletIconView : public KIconView {
 		virtual ~KWalletIconView();
 
 	protected slots:
-		virtual void slotDropped(QDropEvent *e, const QValueList<QIconDragItem>& lst);
+		virtual void slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst);
 
 	protected:
-		virtual QDragObject *dragObject();
+		virtual Q3DragObject *dragObject();
 		virtual void contentsMousePressEvent(QMouseEvent *e);
 		QPoint _mousePos;
 };
