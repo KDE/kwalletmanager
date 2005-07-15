@@ -313,7 +313,7 @@ void KWalletConfig::contextMenuRequested(QListViewItem *item, const QPoint& pos,
 	if (item && item->parent()) {
 		KPopupMenu *m = new KPopupMenu(this);
 		m->insertTitle(item->parent()->text(0));
-		m->insertItem("&Delete", this, SLOT(deleteEntry()), Key_Delete);
+		m->insertItem(i18n("&Delete"), this, SLOT(deleteEntry()), Key_Delete);
 		m->popup(pos);
 	}
 }
