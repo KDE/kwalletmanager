@@ -719,6 +719,8 @@ Q3DragObject *KWalletEntryList::dragObject() {
 		sd = new KWalletEntryDrag(viewport(), "KWallet Entry Drag");
 		QByteArray a;
 		QDataStream ds(&a, QIODevice::WriteOnly);
+
+		ds.setVersion(QDataStream::Qt_3_1);
 		ds << KWALLETENTRYMAGIC;
 		ds << *ei;
 		sd->setEncodedData(a);
@@ -730,6 +732,8 @@ Q3DragObject *KWalletEntryList::dragObject() {
 		sd = new KWalletFolderDrag(viewport(), "KWallet Folder Drag");
 		QByteArray a;
 		QDataStream ds(&a, QIODevice::WriteOnly);
+
+		ds.setVersion(QDataStream::Qt_3_1);
 
 		ds << KWALLETFOLDERMAGIC;
 		ds << *fi;
