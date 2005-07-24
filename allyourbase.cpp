@@ -202,8 +202,8 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
 	KWallet::Wallet::EntryType et;
 	ds >> name;
 	if (_wallet->hasEntry(name)) {
-		int rc = KMessageBox::warningYesNo(0L, i18n("An entry by the name '%1' already exists. Would you like to continue?").arg(name));
-		if (rc == KMessageBox::No) {
+		int rc = KMessageBox::warningContinueCancel(0L, i18n("An entry by the name '%1' already exists. Would you like to continue?").arg(name));
+		if (rc == KMessageBox::Cancel) {
 			return false;
 		}
 	}
