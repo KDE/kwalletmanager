@@ -22,11 +22,14 @@
 
 #include <kmainwindow.h>
 #include <dcopobject.h>
-#include <qptrlist.h>
+#include <q3ptrlist.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3CString>
 
 class KSystemTray;
 class KWalletIconView;
-class QIconViewItem;
+class Q3IconViewItem;
 class DCOPRef;
 
 
@@ -35,7 +38,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 	K_DCOP
 
 	public:
-		KWalletManager(QWidget *parent = 0, const char* name = 0, WFlags f = 0);
+		KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
 		virtual ~KWalletManager();
 
                 QPixmap loadSystemTrayIcon(const QString &icon);
@@ -50,8 +53,8 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		void openWallet(const QString& walletName);
 		void openWallet(const QString& walletName, bool newWallet);
 		void openWalletFile(const QString& path);
-		void openWallet(QIconViewItem *item);
-		void contextMenu(QIconViewItem *item, const QPoint& pos);
+		void openWallet(Q3IconViewItem *item);
+		void contextMenu(Q3IconViewItem *item, const QPoint& pos);
 
 	protected:
 		virtual bool queryClose();
@@ -66,7 +69,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		void shuttingDown();
 		void possiblyQuit();
 		void editorClosed(KMainWindow* e);
-		void possiblyRescan(const QCString& app);
+		void possiblyRescan(const Q3CString& app);
 		void setupWallet();
 		void openWallet();
 		void deleteWallet();
@@ -77,7 +80,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
 		DCOPRef *_dcopRef;
-		QPtrList<KMainWindow> _windows;
+		Q3PtrList<KMainWindow> _windows;
 		bool _kwalletdLaunch;
 };
 

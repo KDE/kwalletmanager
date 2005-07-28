@@ -51,13 +51,17 @@
 #include <qlabel.h>
 #include <qlayout.h>
 #include <qlineedit.h>
-#include <qlistview.h>
-#include <qptrstack.h>
+#include <q3listview.h>
+#include <q3ptrstack.h>
 #include <qpushbutton.h>
-#include <qstylesheet.h>
-#include <qtextedit.h>
+#include <q3stylesheet.h>
+#include <q3textedit.h>
 #include <qtimer.h>
-#include <qwidgetstack.h>
+#include <q3widgetstack.h>
+//Added by qt3to4:
+#include <QTextStream>
+#include <Q3ValueList>
+#include <QVBoxLayout>
 
 #include <assert.h>
 
@@ -87,16 +91,16 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 
 	resize(600, 400);
 
-	connect(_entryList, SIGNAL(selectionChanged(QListViewItem*)),
-		this, SLOT(entrySelectionChanged(QListViewItem*)));
+	connect(_entryList, SIGNAL(selectionChanged(Q3ListViewItem*)),
+		this, SLOT(entrySelectionChanged(Q3ListViewItem*)));
 	connect(_entryList,
-		SIGNAL(contextMenuRequested(QListViewItem*,const QPoint&,int)),
+		SIGNAL(contextMenuRequested(Q3ListViewItem*,const QPoint&,int)),
 		this,
-		SLOT(listContextMenuRequested(QListViewItem*,const QPoint&,int)));
+		SLOT(listContextMenuRequested(Q3ListViewItem*,const QPoint&,int)));
 	connect(_entryList,
-		SIGNAL(itemRenamed(QListViewItem*, int, const QString&)),
+		SIGNAL(itemRenamed(Q3ListViewItem*, int, const QString&)),
 		this,
-		SLOT(listItemRenamed(QListViewItem*, int, const QString&)));
+		SLOT(listItemRenamed(Q3ListViewItem*, int, const QString&)));
 
 	connect(_ww->_passwordValue, SIGNAL(textChanged()),
 		this, SLOT(entryEditted()));
@@ -149,7 +153,7 @@ KWalletEditor::~KWalletEditor() {
 }
 
 void KWalletEditor::layout() {
-	QValueList<int> sz = _ww->_splitter->sizes();
+	Q3ValueList<int> sz = _ww->_splitter->sizes();
 	int sum = sz[0] + sz[1];
 	sz[0] = sum/2;
 	sz[1] = sum/2;
@@ -222,9 +226,9 @@ void KWalletEditor::walletClosed() {
 
 void KWalletEditor::updateFolderList(bool checkEntries) {
 	QStringList fl = _w->folderList();
-	QPtrStack<QListViewItem> trash;
+	Q3PtrStack<Q3ListViewItem> trash;
 
-	for (QListViewItem *i = _entryList->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = _entryList->firstChild(); i; i = i->nextSibling()) {
 		KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(i);
 		if (!fi) {
 			continue;
@@ -268,7 +272,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 					break;
 				case KWallet::Wallet::Unknown:
 				default:
-					new QListViewItem(ui, *j);
+					new Q3ListViewItem(ui, *j);
 					break;
 			}
 		}
@@ -285,7 +289,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 
 void KWalletEditor::deleteFolder() {
 	if (_w) {
-		QListViewItem *i = _entryList->currentItem();
+		Q3ListViewItem *i = _entryList->currentItem();
 		if (i) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(i);
 			if (!fi) {
@@ -343,7 +347,7 @@ void KWalletEditor::createFolder() {
 
 void KWalletEditor::saveEntry() {
 	int rc = 1;
-	QListViewItem *item = _entryList->currentItem();
+	Q3ListViewItem *item = _entryList->currentItem();
 	_ww->_saveChanges->setEnabled(false);
 	_ww->_undoChanges->setEnabled(false);
 
@@ -380,7 +384,7 @@ void KWalletEditor::entryEditted() {
 }
 
 
-void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
+void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 	KWalletContainerItem *ci = 0L;
 	KWalletFolderItem *fi = 0L;
 
@@ -459,7 +463,7 @@ void KWalletEditor::entrySelectionChanged(QListViewItem *item) {
 }
 
 void KWalletEditor::updateEntries(const QString& folder) {
-	QPtrStack<QListViewItem> trash;
+	Q3PtrStack<Q3ListViewItem> trash;
 
 	_w->setFolder(folder);
 	QStringList entries = _w->entryList();
@@ -476,7 +480,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	KWalletContainerItem *ui = fi->getContainer(KWallet::Wallet::Unknown);
 
 	// Remove deleted entries
-	for (QListViewItem *i = pi->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = pi->firstChild(); i; i = i->nextSibling()) {
 		if (!entries.contains(i->text(0))) {
 			if (i == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
@@ -485,7 +489,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 		}
 	}
 
-	for (QListViewItem *i = mi->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = mi->firstChild(); i; i = i->nextSibling()) {
 		if (!entries.contains(i->text(0))) {
 			if (i == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
@@ -494,7 +498,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 		}
 	}
 
-	for (QListViewItem *i = bi->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = bi->firstChild(); i; i = i->nextSibling()) {
 		if (!entries.contains(i->text(0))) {
 			if (i == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
@@ -503,7 +507,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 		}
 	}
 
-	for (QListViewItem *i = ui->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = ui->firstChild(); i; i = i->nextSibling()) {
 		if (!entries.contains(i->text(0))) {
 			if (i == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
@@ -533,7 +537,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 				break;
 			case KWallet::Wallet::Unknown:
 			default:
-				new QListViewItem(ui, *i);
+				new Q3ListViewItem(ui, *i);
 				break;
 		}
 	}
@@ -547,7 +551,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	}
 }
 
-void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& pos, int col) {
+void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
 	Q_UNUSED(col)
 
 	if (!_walletIsOpen) {
@@ -584,9 +588,9 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 		m->insertTitle(title);
 		switch (menuClass) {
 			case KWalletEntryItemClass:
-				m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Key_Insert);
-				m->insertItem(i18n( "&Rename" ), this, SLOT(renameEntry()), Key_F2);
-				m->insertItem(i18n( "&Delete" ), this, SLOT(deleteEntry()), Key_Delete);
+				m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
+				m->insertItem(i18n( "&Rename" ), this, SLOT(renameEntry()), Qt::Key_F2);
+				m->insertItem(i18n( "&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
 				if (ci && ci->type() == KWallet::Wallet::Password) {
 					m->insertSeparator();
 					_copyPassAction->plug(m);
@@ -594,7 +598,7 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 				break;
 
 			case KWalletContainerItemClass:
-				m->insertItem(i18n( "&New..." ), this, SLOT(newEntry()), Key_Insert);
+				m->insertItem(i18n( "&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
 				break;
 
 			case KWalletFolderItemClass:
@@ -612,7 +616,7 @@ void KWalletEditor::listContextMenuRequested(QListViewItem *item, const QPoint& 
 
 
 void KWalletEditor::copyPassword() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		QString pass;
 		if (_w->readPassword(item->text(0), pass) == 0) {
@@ -623,11 +627,11 @@ void KWalletEditor::copyPassword() {
 
 
 void KWalletEditor::newEntry() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	QString n;
 	bool ok;
 
-	QListViewItem *p;
+	Q3ListViewItem *p;
 	KWalletFolderItem *fi;
 
 	//set the folder where we're trying to create the new entry
@@ -668,7 +672,7 @@ void KWalletEditor::newEntry() {
 	} while (true);
 
 	if (_w && item && !n.isEmpty()) {
-		QListViewItem *p = item;
+		Q3ListViewItem *p = item;
 		if (p->rtti() == KWalletEntryItemClass) {
 			p = item->parent();
 		}
@@ -705,7 +709,7 @@ void KWalletEditor::newEntry() {
 
 
 void KWalletEditor::renameEntry() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		item->startRename(0);
 	}
@@ -713,7 +717,7 @@ void KWalletEditor::renameEntry() {
 
 
 // Only supports renaming of KWalletEntryItem derived classes.
-void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) {
+void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t) {
 	if (item) {
 		KWalletEntryItem *i = dynamic_cast<KWalletEntryItem*>(item);
 		if (!i) {
@@ -747,7 +751,7 @@ void KWalletEditor::listItemRenamed(QListViewItem* item, int, const QString& t) 
 
 
 void KWalletEditor::deleteEntry() {
-	QListViewItem *item = _entryList->selectedItem();
+	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
 		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)),"",KStdGuiItem::del());
 		if (rc == KMessageBox::Continue) {
@@ -846,7 +850,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(me.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(me.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -876,7 +880,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(pe.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(pe.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -906,7 +910,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(*f)).arg(QStyleSheet::escape(ee.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(ee.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -950,7 +954,7 @@ void KWalletEditor::importXML() {
 	}
 
 	QFile qf(tmpFile);
-	if (!qf.open(IO_ReadOnly)) {
+	if (!qf.open(QIODevice::ReadOnly)) {
 		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.").arg(url.prettyURL()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
@@ -997,7 +1001,7 @@ void KWalletEditor::importXML() {
 			if (hasEntry && mp == Prompt) {
 				KBetterThanKDialogBase *bd;
 				bd = new KBetterThanKDialogBase(this);
-				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(QStyleSheet::escape(fname)).arg(QStyleSheet::escape(ename)));
+				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(fname)).arg(Q3StyleSheet::escape(ename)));
 				mp = (MergePlan)bd->exec();
 				delete bd;
 				bool ok = false;
@@ -1060,8 +1064,8 @@ void KWalletEditor::exportXML() {
 					{
 						QString pass;
 						if (_w->readPassword(*j, pass) == 0) {
-							ts << "    <password name=\"" << QStyleSheet::escape(*j) << "\">";
-							ts << QStyleSheet::escape(pass);
+							ts << "    <password name=\"" << Q3StyleSheet::escape(*j) << "\">";
+							ts << Q3StyleSheet::escape(pass);
 							ts << "</password>" << endl;
 						}
 						break;
@@ -1070,7 +1074,7 @@ void KWalletEditor::exportXML() {
 					{
 						QByteArray ba;
 						if (_w->readEntry(*j, ba) == 0) {
-							ts << "    <stream name=\"" << QStyleSheet::escape(*j) << "\">";
+							ts << "    <stream name=\"" << Q3StyleSheet::escape(*j) << "\">";
 							ts << KCodecs::base64Encode(ba);
 
 							ts << "</stream>" << endl;
@@ -1081,9 +1085,9 @@ void KWalletEditor::exportXML() {
 					{
 						QMap<QString,QString> map;
 						if (_w->readMap(*j, map) == 0) {
-							ts << "    <map name=\"" << QStyleSheet::escape(*j) << "\">" << endl;
+							ts << "    <map name=\"" << Q3StyleSheet::escape(*j) << "\">" << endl;
 							for (QMap<QString,QString>::ConstIterator k = map.begin(); k != map.end(); ++k) {
-								ts << "      <mapentry name=\"" << QStyleSheet::escape(k.key()) << "\">" << QStyleSheet::escape(k.data()) << "</mapentry>" << endl;
+								ts << "      <mapentry name=\"" << Q3StyleSheet::escape(k.key()) << "\">" << Q3StyleSheet::escape(k.data()) << "</mapentry>" << endl;
 							}
 							ts << "    </map>" << endl;
 						}

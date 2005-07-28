@@ -33,15 +33,17 @@
 #include <qcheckbox.h>
 #include <qcombobox.h>
 #include <qlayout.h>
-#include <qlistview.h>
+#include <q3listview.h>
 #include <qpushbutton.h>
 #include <qspinbox.h>
+//Added by qt3to4:
+#include <QVBoxLayout>
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
 K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
 
 KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringList&)
-: KCModule(KWalletFactory::instance(), parent, name) {
+: KCModule(KWalletFactory::instance(), parent/*, name*/) {
 
 	KAboutData *about =
 		new KAboutData(I18N_NOOP("kcmkwallet"),
@@ -70,7 +72,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const char *name, const QStringLis
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-	connect(_wcw->_accessList, SIGNAL(contextMenuRequested(QListViewItem*, const QPoint&, int)), this, SLOT(contextMenuRequested(QListViewItem*, const QPoint&, int)));
+	connect(_wcw->_accessList, SIGNAL(contextMenuRequested(Q3ListViewItem*, const QPoint&, int)), this, SLOT(contextMenuRequested(Q3ListViewItem*, const QPoint&, int)));
 
 	_wcw->_accessList->setAllColumnsShowFocus(true);
 	updateWalletLists();
@@ -210,20 +212,20 @@ void KWalletConfig::load() {
 		_cfg->setGroup("Auto Deny");
 		QStringList denyapps = _cfg->readListEntry(*i);
 		denykeys.remove(*i);
-		QListViewItem *lvi = new QListViewItem(_wcw->_accessList, *i);
+		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = apps.begin(); j != apps.end(); ++j) {
-			new QListViewItem(lvi, QString::null, *j, i18n("Always Allow"));
+			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Allow"));
 		}
 		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
-			new QListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
+			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
 		}
 	}
 	_cfg->setGroup("Auto Deny");
 	for (QStringList::Iterator i = denykeys.begin(); i != denykeys.end(); ++i) {
 		QStringList denyapps = _cfg->readListEntry(*i);
-		QListViewItem *lvi = new QListViewItem(_wcw->_accessList, *i);
+		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
-			new QListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
+			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
 		}
 	}
 	emit changed(false);
@@ -258,9 +260,9 @@ void KWalletConfig::save() {
 	_cfg->deleteGroup("Auto Allow");
 	_cfg->deleteGroup("Auto Deny");
 	_cfg->setGroup("Auto Allow");
-	for (QListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
 		QStringList al;
-		for (QListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
+		for (Q3ListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
 			if (j->text(2) == i18n("Always Allow")) {
 				al << j->text(1);
 			}
@@ -269,9 +271,9 @@ void KWalletConfig::save() {
 	}
 
 	_cfg->setGroup("Auto Deny");
-	for (QListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
+	for (Q3ListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
 		QStringList al;
-		for (QListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
+		for (Q3ListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
 			if (j->text(2) == i18n("Always Deny")) {
 				al << j->text(1);
 			}
@@ -308,19 +310,19 @@ QString KWalletConfig::quickHelp() const {
 }
 
 
-void KWalletConfig::contextMenuRequested(QListViewItem *item, const QPoint& pos, int col) {
+void KWalletConfig::contextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
 	Q_UNUSED(col)
 	if (item && item->parent()) {
 		KPopupMenu *m = new KPopupMenu(this);
 		m->insertTitle(item->parent()->text(0));
-		m->insertItem(i18n("&Delete"), this, SLOT(deleteEntry()), Key_Delete);
+		m->insertItem(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
 		m->popup(pos);
 	}
 }
 
 
 void KWalletConfig::deleteEntry() {
-	QListViewItem *item = _wcw->_accessList->selectedItem();
+	Q3ListViewItem *item = _wcw->_accessList->selectedItem();
 	if (item) {
 		delete item;
 		emit changed(true);

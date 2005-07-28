@@ -29,16 +29,19 @@
 #include <qapplication.h>
 #include <qclipboard.h>
 #include <qpushbutton.h>
-#include <qtextedit.h>
-
+#include <q3textedit.h>
+//Added by qt3to4:
+#include <QFocusEvent>
+#include <QKeyEvent>
+#include <Q3PopupMenu>
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
-: QTable(0, 3, parent, name), _map(map) {
+: Q3Table(0, 3, parent, name), _map(map) {
 	_ac = new KActionCollection(this);
 	_copyAct = KStdAction::copy(this, SLOT(copy()), _ac);
 	connect(this, SIGNAL(valueChanged(int,int)), this, SIGNAL(dirty()));
 	connect(this, SIGNAL(contextMenuRequested(int,int,const QPoint&)),
 		this, SLOT(contextMenu(int,int,const QPoint&)));
-	setSelectionMode(QTable::NoSelection);
+	setSelectionMode(Q3Table::NoSelection);
 	horizontalHeader()->setLabel(0, QString::null);
 	horizontalHeader()->setLabel(1, i18n("Key"));
 	horizontalHeader()->setLabel(2, i18n("Value"));
@@ -47,7 +50,7 @@ KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char
 }
 
 void KWMapEditor::reload() {
-	unsigned row = 0;
+	int row = 0;
 
 	while ((row = numRows()) > _map.count()) {
 		removeRow(row - 1);
@@ -129,19 +132,22 @@ void KWMapEditor::copy() {
 }
 
 
-class InlineEditor : public QTextEdit {
+class InlineEditor : public Q3TextEdit {
 	public:
-		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { setWFlags(WStyle_NoBorder | WDestructiveClose); KWin::setType(winId(), NET::Override); }
+		InlineEditor(KWMapEditor *p, int row, int col) : Q3TextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ KWin::setType(winId(), NET::Override); }
 		virtual ~InlineEditor() { _p->setText(row, col, text()); _p->emitDirty(); }
 
 	protected:
-		virtual void focusOutEvent(QFocusEvent*) { 
-			if (QFocusEvent::reason() == QFocusEvent::Popup) {
+		virtual void focusOutEvent(QFocusEvent*) {
+#warning "Port to kde 4.0"				
+#if 0				
+			if (Q3FocusEvent::reason() == QFocusEvent::Popup) {
 				QWidget *focusW = qApp->focusWidget();
 				if (focusW && focusW == popup) {
 					return;
 				}
 			}
+#endif			
 			close(); 
 		}
 		virtual void keyPressEvent(QKeyEvent *e) {
@@ -150,27 +156,27 @@ class InlineEditor : public QTextEdit {
 				close();
 			} else {
 				e->ignore();
-				QTextEdit::keyPressEvent(e);
+				Q3TextEdit::keyPressEvent(e);
 			}
 		}
-		virtual QPopupMenu *createPopupMenu(const QPoint &p) {
-			popup = QTextEdit::createPopupMenu(p);
+		virtual Q3PopupMenu *createPopupMenu(const QPoint &p) {
+			popup = Q3TextEdit::createPopupMenu(p);
 			return popup;
 		}
 		KWMapEditor *_p;
 		int row, col;
-		QGuardedPtr<QPopupMenu> popup;
+		QPointer<Q3PopupMenu> popup;
 };
 
 
 QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
 	//kdDebug(2300) << "EDIT COLUMN " << col << endl;
 	if (col != 2) {
-		return QTable::beginEdit(row, col, replace);
+		return Q3Table::beginEdit(row, col, replace);
 	}
 
 	QRect geo = cellGeometry(row, col);
-	QTextEdit *e = new InlineEditor(this, row, col);
+	Q3TextEdit *e = new InlineEditor(this, row, col);
 	e->setText(text(row, col));
 	e->move(mapToGlobal(geo.topLeft()));
 	e->resize(geo.width() * 2, geo.height() * 3);

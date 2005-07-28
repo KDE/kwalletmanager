@@ -38,7 +38,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 			SLOT(createWallet()), ac, "wallet_create");
 	act->plug(this);
 
-	act = new KAction(i18n("&Open..."), 0, Key_Return, this,
+	act = new KAction(i18n("&Open..."), 0, Qt::Key_Return, this,
 			SLOT(openWallet()), ac, "wallet_open");
 	act->plug(this);
 
@@ -67,7 +67,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
 	act->plug(this);
 
-	act = new KAction(i18n("&Delete"), 0, Key_Delete, this,
+	act = new KAction(i18n("&Delete"), 0, Qt::Key_Delete, this,
 			SLOT(deleteWallet()), ac, "wallet_delete");
 	act->plug(this);
 }
