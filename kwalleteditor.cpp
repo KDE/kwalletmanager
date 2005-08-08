@@ -36,7 +36,7 @@
 #include <kio/netaccess.h>
 #include <klistviewsearchline.h>
 #include <klocale.h>
-#include <kmdcodec.h>
+#include <kcodecs.h>
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
 #include <ksqueezedtextlabel.h>
