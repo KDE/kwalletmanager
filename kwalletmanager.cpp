@@ -402,14 +402,7 @@ void KWalletManager::closeAllWallets() {
 
 
 QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon) {
-#if KDE_IS_VERSION(3, 1, 90)
 	return KSystemTray::loadIcon(icon);
-#else
-	KConfig *appCfg = kapp->config();
-	KConfigGroupSaver configSaver(appCfg, "System Tray");
-	int iconWidth = appCfg->readNumEntry("systrayIconWidth", 22);
-	return kapp->iconLoader()->loadIcon( icon, KIcon::Panel, iconWidth );
-#endif
 }
 
 
