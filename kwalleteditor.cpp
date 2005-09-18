@@ -606,7 +606,9 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 				_deleteFolderAction->plug(m);
 				break;
 			default:
-				abort();
+#warning "KDE4: abort() ????? how to port it ? ";				
+				//abort();
+				;
 		}
 	} else {
 		_newFolderAction->plug(m);
@@ -700,7 +702,8 @@ void KWalletEditor::newEntry() {
 		} else if (ci->type() == KWallet::Wallet::Stream) {
 			_w->writeEntry(n, QByteArray());
 		} else {
-			abort();
+#warning "kde4: abort() ???? how to port it ?";				
+			//abort();
 		}
 		fi->refresh();
 		_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
