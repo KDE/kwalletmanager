@@ -29,7 +29,7 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <QDropEvent>
-#include <Q3ValueList>
+#include <QList>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
 
@@ -133,7 +133,7 @@ class KWalletItem : public Q3IconViewItem {
 		virtual bool acceptDrop(const QMimeSource *mime) const;
 
 	protected:
-		virtual void dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst); 
+		virtual void dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst); 
 };
 
 
@@ -144,7 +144,7 @@ class KWalletIconView : public KIconView {
 		virtual ~KWalletIconView();
 
 	protected slots:
-		virtual void slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst);
+		virtual void slotDropped(QDropEvent *e, const QList<Q3IconDragItem>& lst);
 
 	protected:
 		virtual Q3DragObject *dragObject();

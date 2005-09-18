@@ -60,7 +60,7 @@
 #include <q3widgetstack.h>
 //Added by qt3to4:
 #include <QTextStream>
-#include <Q3ValueList>
+#include <QList>
 #include <QVBoxLayout>
 
 #include <assert.h>
@@ -153,7 +153,7 @@ KWalletEditor::~KWalletEditor() {
 }
 
 void KWalletEditor::layout() {
-	Q3ValueList<int> sz = _ww->_splitter->sizes();
+	QList<int> sz = _ww->_splitter->sizes();
 	int sum = sz[0] + sz[1];
 	sz[0] = sum/2;
 	sz[1] = sum/2;

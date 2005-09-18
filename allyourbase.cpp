@@ -36,10 +36,9 @@
 #include <q3ptrlist.h>
 //Added by qt3to4:
 #include <QPixmap>
-#include <Q3CString>
 #include <Q3StrList>
 #include <QDropEvent>
-#include <Q3ValueList>
+#include <QList>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
 
@@ -252,7 +251,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 	return true;
 }
 
-void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst) {
+void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
 	Q_UNUSED(lst);
 	if (e->provides("application/x-kwallet-folder") || 
 			e->provides("text/uri-list")) {
@@ -599,11 +598,11 @@ class KWalletIconDrag : public Q3IconDrag {
 
 		QByteArray encodedData(const char *mime) const {
 			QByteArray a;
-			Q3CString mimetype(mime);
+			QByteArray mimetype(mime);
 			if (mimetype == "application/x-qiconlist") {
 				return Q3IconDrag::encodedData(mime);
 			} else if (mimetype == "text/uri-list") {
-				Q3CString s = _urls.join("\r\n").latin1();
+				QByteArray s = _urls.join("\r\n").latin1();
 				if (_urls.count() > 0) {
 					s.append("\r\n");
 				}
@@ -629,13 +628,13 @@ class KWalletIconDrag : public Q3IconDrag {
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : KIconView(parent, name) {
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
-	connect(this, SIGNAL(dropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
+	connect(this, SIGNAL(dropped(QDropEvent*, const QList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
 }
 
 KWalletIconView::~KWalletIconView() {
 }
 
-void KWalletIconView::slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& /*lst*/) {
+void KWalletIconView::slotDropped(QDropEvent *e, const QList<Q3IconDragItem>& /*lst*/) {
 	if (e->source() == viewport()) {
 		e->ignore();
 		return;
@@ -647,7 +646,7 @@ void KWalletIconView::slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragIte
 	}
 
 	QByteArray edata = e->encodedData("text/uri-list");
-	Q3CString urls = edata.data();
+	QByteArray urls = edata.data();
 
 	QStringList ul = QStringList::split("\r\n", urls);
 	if (ul.isEmpty() || ul.first().isEmpty()) {
