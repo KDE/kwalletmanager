@@ -24,6 +24,8 @@
 #include "kwmapeditor.h"
 #include "allyourbase.h"
 
+#include <stdlib.h>
+
 #include <dcopclient.h>
 #include <dcopref.h>
 #include <kaction.h>
@@ -606,8 +608,7 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 				_deleteFolderAction->plug(m);
 				break;
 			default:
-#warning "KDE4: abort() ????? how to port it ? ";				
-				//abort();
+				abort();
 				;
 		}
 	} else {
@@ -702,8 +703,7 @@ void KWalletEditor::newEntry() {
 		} else if (ci->type() == KWallet::Wallet::Stream) {
 			_w->writeEntry(n, QByteArray());
 		} else {
-#warning "kde4: abort() ???? how to port it ?";				
-			//abort();
+			abort();
 		}
 		fi->refresh();
 		_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
