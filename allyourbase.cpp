@@ -689,7 +689,7 @@ Q3DragObject *KWalletIconView::dragObject() {
 		if (item->isSelected()) {
 			QString url = path + item->text() + ".kwl";
 			Q3IconDragItem idi;
-			idi.setData(url.local8Bit());
+			idi.setData(url.toLocal8Bit());
 			id->append(idi,
 			QRect(item->pixmapRect(false).topLeft() - pos,
 			item->pixmapRect(false).size()),
