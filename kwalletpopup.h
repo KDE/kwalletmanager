@@ -20,11 +20,11 @@
 #ifndef KWALLETPOPUP_H
 #define KWALLETPOPUP_H
 
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <qmap.h>
 #include <qstring.h>
 
-class KWalletPopup : public KPopupMenu {
+class KWalletPopup : public KMenu {
 	Q_OBJECT
 
 	public:

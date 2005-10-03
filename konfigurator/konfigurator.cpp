@@ -27,7 +27,7 @@
 #include <kdialog.h>
 #include <kgenericfactory.h>
 #include <kinputdialog.h>
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <kwallet.h>
 
 #include <qcheckbox.h>
@@ -38,6 +38,7 @@
 #include <qspinbox.h>
 //Added by qt3to4:
 #include <QVBoxLayout>
+#include <ktoolinvocation.h>
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
 K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
@@ -166,7 +167,7 @@ void KWalletConfig::newNetworkWallet() {
 
 void KWalletConfig::launchManager() {
 	if (!DCOPClient::mainClient()->isApplicationRegistered("kwalletmanager")) {
-		KApplication::startServiceByDesktopName("kwalletmanager_show");
+		KToolInvocation::startServiceByDesktopName("kwalletmanager_show");
 	} else {
 		DCOPRef r("kwalletmanager", "kwalletmanager-mainwindow#1");
 		r.send("show");
@@ -313,8 +314,8 @@ QString KWalletConfig::quickHelp() const {
 void KWalletConfig::contextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
 	Q_UNUSED(col)
 	if (item && item->parent()) {
-		KPopupMenu *m = new KPopupMenu(this);
-		m->insertTitle(item->parent()->text(0));
+		KMenu *m = new KMenu(this);
+		m->addTitle(item->parent()->text(0));
 		m->insertItem(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
 		m->popup(pos);
 	}

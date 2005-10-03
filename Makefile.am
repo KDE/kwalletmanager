@@ -8,7 +8,7 @@ kwalletmanager_SOURCES = walletwidget.ui kwalletmanager.cpp \
 			kwalleteditor.cpp kwmapeditor.cpp allyourbase.cpp \
 			kbetterthankdialogbase.ui
 kwalletmanager_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-kwalletmanager_LDADD   = $(LIB_KIO) -lkwalletclient
+kwalletmanager_LDADD   = $(LIB_KDECORE) $(LIB_KIO) -lkwalletclient
 METASOURCES = AUTO
 noinst_HEADERS = kwalletmanager.h kwalletpopup.h walletwidget.h kwalleteditor.h\
 		allyourbase.h kwmapeditor.h

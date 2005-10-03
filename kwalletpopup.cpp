@@ -29,9 +29,11 @@
 #include <kstdguiitem.h>
 
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
-: KPopupMenu(parent, name), _walletName(wallet) {
-	insertTitle(wallet);
-	KActionCollection *ac = new KActionCollection(this, "kwallet context actions");
+: KMenu(parent), _walletName(wallet) {
+	addTitle(wallet);
+	setObjectName(name);
+	KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
+	ac->setObjectName("kwallet context actions");
 	KAction *act;
 
 	act = new KAction(i18n("&New Wallet..."), 0, 0, this,
@@ -48,7 +50,8 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 	QStringList ul = KWallet::Wallet::users(wallet);
 	if (!ul.isEmpty()) {
-		KPopupMenu *pm = new KPopupMenu(this, "Disconnect Apps");
+		KMenu *pm = new KMenu(this);
+		pm->setObjectName("Disconnect Apps");
 		int id = 7000;
 		for (QStringList::Iterator it = ul.begin(); it != ul.end(); ++it) {
 			_appMap[id] = *it;

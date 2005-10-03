@@ -28,7 +28,7 @@
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
-#include <kurldrag.h>
+#include <k3urldrag.h>
 #include <kwallet.h>
 
 #include <q3dragobject.h>
@@ -356,7 +356,8 @@ class KWalletFolderDrag : public Q3StoredDrag {
  *  KWalletEntryList - A listview to store wallet entries
  */
 KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
-: KListView(parent, name) {
+: KListView(parent) {
+	setObjectName(name);
 	addColumn(i18n("Folders"));
 	setRootIsDecorated(true);
 	setDefaultRenameAction(Reject);

@@ -40,13 +40,13 @@
 #include <klocale.h>
 #include <kcodecs.h>
 #include <kmessagebox.h>
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <ksqueezedtextlabel.h>
 #include <kstandarddirs.h>
 #include <kstdaction.h>
 #include <kstringhandler.h>
 #include <ktempfile.h>
-
+#include <kxmlguifactory.h>
 #include <qcheckbox.h>
 #include <qcombobox.h>
 #include <qclipboard.h>
@@ -582,12 +582,12 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 		menuClass = static_cast<KWalletListItemClasses>(item->rtti());
 	}
 
-	KPopupMenu *m = new KPopupMenu(this);
+	KMenu *m = new KMenu(this);
 	if (item) {
 		QString title = item->text(0);
 		// I think 200 pixels is wide enough for a title
 		title = KStringHandler::cPixelSqueeze(title, m->fontMetrics(), 200);
-		m->insertTitle(title);
+		m->addTitle(title);
 		switch (menuClass) {
 			case KWalletEntryItemClass:
 				m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);

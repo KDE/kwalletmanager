@@ -22,7 +22,7 @@
 #include <kaction.h>
 #include <kdebug.h>
 #include <klocale.h>
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <kstdaction.h>
 #include <kwin.h>
 
@@ -120,7 +120,7 @@ void KWMapEditor::emitDirty() {
 void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 	_contextRow = row;
 	_contextCol = col;
-	KPopupMenu *m = new KPopupMenu(this);
+	KMenu *m = new KMenu(this);
 	m->insertItem(i18n("&New Entry"), this, SLOT(addEntry()));
 	_copyAct->plug(m);
 	m->popup(pos);

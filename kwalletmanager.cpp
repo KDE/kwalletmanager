@@ -38,7 +38,7 @@
 #include <kstdaction.h>
 #include <ksystemtray.h>
 #include <kwallet.h>
-
+#include <kxmlguifactory.h>
 #include <q3accel.h>
 #include <qpointer.h>
 #include <q3ptrstack.h>
@@ -47,6 +47,7 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <Q3CString>
+#include <ktoolinvocation.h>
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 : KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
@@ -392,7 +393,7 @@ void KWalletManager::shuttingDown() {
 
 
 void KWalletManager::setupWallet() {
-	KApplication::startServiceByDesktopName("kwallet_config");
+	KToolInvocation::startServiceByDesktopName("kwallet_config");
 }
 
 
