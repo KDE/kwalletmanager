@@ -62,7 +62,7 @@ QPixmap KWalletFolderItem::getFolderIcon(KIcon::Group group){
 	QPixmap pix = loader->loadIcon( _name, group, 0,
 			KIcon::DefaultState, 0, true );
 	if (pix.isNull())
-		pix = loader->loadIcon( _name.lower(), group, 0,
+		pix = loader->loadIcon( _name.toLower(), group, 0,
 			KIcon::DefaultState, 0, true);
 	if (pix.isNull())
 		pix = loader->loadIcon( "folder_red", group, 0,
@@ -190,7 +190,7 @@ bool KWalletItem::acceptDrop(const QMimeSource *mime) const {
 }
 
 static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
-	Q_UINT32 magic;
+	quint32 magic;
 	ds >> magic;
 	if (magic != KWALLETENTRYMAGIC) {
 		kdDebug() << "bad magic" << endl;
@@ -215,7 +215,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
 }
 
 static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
-	Q_UINT32 magic;
+	quint32 magic;
 	ds >> magic;
 	if (magic != KWALLETFOLDERMAGIC) {
 		kdDebug() << "bad magic" << endl;
@@ -452,7 +452,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 			file.open(QIODevice::ReadOnly);
 			ds = new QDataStream(&file);
 			//check magic to discover mime type
-			Q_UINT32 magic;
+			quint32 magic;
 			(*ds) >> magic;
 			if (magic == KWALLETENTRYMAGIC) {
 				isEntry = true;

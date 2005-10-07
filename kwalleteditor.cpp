@@ -971,7 +971,7 @@ void KWalletEditor::importXML() {
 	}
 
 	QDomElement top = doc.documentElement();
-	if (top.tagName().lower() != "wallet") {
+	if (top.tagName().toLower() != "wallet") {
 		KMessageBox::sorry(this, i18n("Error: XML file does not contain a wallet."));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
@@ -981,7 +981,7 @@ void KWalletEditor::importXML() {
 	MergePlan mp = Prompt;
 	while (!n.isNull()) {
 		QDomElement e = n.toElement();
-		if (e.tagName().lower() != "folder") {
+		if (e.tagName().toLower() != "folder") {
 			n = n.nextSibling();
 			continue;
 		}
@@ -998,7 +998,7 @@ void KWalletEditor::importXML() {
 		QDomNode enode = e.firstChild();
 		while (!enode.isNull()) {
 			e = enode.toElement();
-			QString type = e.tagName().lower();
+			QString type = e.tagName().toLower();
 			QString ename = e.attribute("name");
 			bool hasEntry = _w->hasEntry(ename);
 			if (hasEntry && mp == Prompt) {
@@ -1032,7 +1032,7 @@ void KWalletEditor::importXML() {
 				QDomNode mapNode = e.firstChild();
 				while (!mapNode.isNull()) {
 					QDomElement mape = mapNode.toElement();
-					if (mape.tagName().lower() == "mapentry") {
+					if (mape.tagName().toLower() == "mapentry") {
 						map[mape.attribute("name")] = mape.text();
 					}
 					mapNode = mapNode.nextSibling();

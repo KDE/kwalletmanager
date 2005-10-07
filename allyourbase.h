@@ -33,8 +33,8 @@
 #include <QDragEnterEvent>
 #include <QMouseEvent>
 
-#define KWALLETENTRYMAGIC ((Q_UINT32) 0x6B776C65)
-#define KWALLETFOLDERMAGIC ((Q_UINT32) 0x6B776C66)
+#define KWALLETENTRYMAGIC ((quint32) 0x6B776C65)
+#define KWALLETFOLDERMAGIC ((quint32) 0x6B776C66)
 
 enum KWalletListItemClasses {
 	KWalletFolderItemClass = 1000,
