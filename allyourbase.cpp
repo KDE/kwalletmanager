@@ -306,7 +306,7 @@ void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
 		delete _wallet;
 
 		//delete the folder from the source if we were moving
-		Qt::ButtonState state = kapp->keyboardMouseState();
+		Qt::ButtonState state = QApplication::mouseButtons();
 		if (e->source() && e->source()->parent() &&
 			e->source()->parent()->className() == "KWalletEntryList" && 
 			!(state & Qt::ControlButton)) {
@@ -476,7 +476,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 		e->ignore();
 		return;
 	}
-	Qt::ButtonState state = kapp->keyboardMouseState();
+	Qt::ButtonState state = QApplication::mouseButtons();
 	if (isEntry) {
 		if (!item) {
 			e->ignore();
