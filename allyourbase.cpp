@@ -309,7 +309,7 @@ void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
 		Qt::ButtonState state = QApplication::mouseButtons();
 		if (e->source() && e->source()->parent() &&
 			e->source()->parent()->className() == "KWalletEntryList" && 
-			!(state & Qt::ControlButton)) {
+			!(state & Qt::ControlModifier)) {
 		
 			KWalletEntryList *el =
 				dynamic_cast<KWalletEntryList*>(e->source()->parent());
@@ -497,7 +497,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 		delete(ds);
 		//delete source if we were moving, i.e., we are dragging
 		//from kwalletmanager and Control is not pressed
-		if (ok && el && !(state & Qt::ControlButton) && sel) {
+		if (ok && el && !(state & Qt::ControlModifier) && sel) {
 			el->_wallet->removeEntry(sel->text(0));
 			delete sel;
 		}
@@ -507,7 +507,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 		delete ds;
 		//delete source if we were moving, i.e., we are dragging
 		//from kwalletmanager and Control is not pressed
-		if (ok && el && !(state & Qt::ControlButton) && sel) {
+		if (ok && el && !(state & Qt::ControlModifier) && sel) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(sel);
 			if (fi) {
 				el->_wallet->removeFolder(fi->name());
