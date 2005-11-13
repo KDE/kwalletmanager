@@ -46,7 +46,6 @@
 #include <qtooltip.h>
 //Added by qt3to4:
 #include <QPixmap>
-#include <Q3CString>
 #include <ktoolinvocation.h>
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
@@ -88,13 +87,13 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	_dcopRef = new DCOPRef("kded", "kwalletd");
 	_dcopRef->dcopClient()->setNotifications(true);
 	connect(_dcopRef->dcopClient(),
-		SIGNAL(applicationRemoved(const Q3CString&)),
+		SIGNAL(applicationRemoved(const QByteArray&)),
 		this,
-		SLOT(possiblyRescan(const Q3CString&)));
+		SLOT(possiblyRescan(const QByteArray&)));
 	connect(_dcopRef->dcopClient(),
-		SIGNAL(applicationRegistered(const Q3CString&)),
+		SIGNAL(applicationRegistered(const QByteArray&)),
 		this,
-		SLOT(possiblyRescan(const Q3CString&)));
+		SLOT(possiblyRescan(const QByteArray&)));
 
 	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
 	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
@@ -336,7 +335,7 @@ void KWalletManager::editorClosed(KMainWindow* e) {
 }
 
 
-void KWalletManager::possiblyRescan(const Q3CString& app) {
+void KWalletManager::possiblyRescan(const QByteArray& app) {
 	if (app == "kded") {
 		updateWalletDisplay();
 	}

@@ -25,7 +25,6 @@
 #include <q3ptrlist.h>
 //Added by qt3to4:
 #include <QPixmap>
-#include <Q3CString>
 
 class KSystemTray;
 class KWalletIconView;
@@ -69,7 +68,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		void shuttingDown();
 		void possiblyQuit();
 		void editorClosed(KMainWindow* e);
-		void possiblyRescan(const Q3CString& app);
+		void possiblyRescan(const QByteArray& app);
 		void setupWallet();
 		void openWallet();
 		void deleteWallet();
