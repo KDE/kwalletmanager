@@ -42,7 +42,6 @@ Name[ta]=வாலட் மேலாண்மை கருவி
 Name[tg]=Асбоби Идоракунии Ҳамён
 Name[tr]=Cüzdan Yönetim Aracı
 Name[uk]=Засіб керування торбинками
-Name[xx]=xxWallet Management Toolxx
 Name[zh_CN]=钱包管理工具
 Exec=kwalletmanager --kwalletd
 Icon=kwalletmanager
