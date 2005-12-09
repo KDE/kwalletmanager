@@ -629,7 +629,7 @@ class KWalletIconDrag : public Q3IconDrag {
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : KIconView(parent, name) {
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
-	connect(this, SIGNAL(dropped(QDropEvent*, const QList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
+	connect(this, SIGNAL(dropped(QDropEvent*, const QList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const QList<Q3IconDragItem>&)));
 }
 
 KWalletIconView::~KWalletIconView() {
