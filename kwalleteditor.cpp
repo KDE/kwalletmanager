@@ -56,7 +56,7 @@
 #include <q3listview.h>
 #include <q3ptrstack.h>
 #include <qpushbutton.h>
-#include <q3stylesheet.h>
+#include <QTextDocument>
 #include <q3textedit.h>
 #include <qtimer.h>
 #include <q3widgetstack.h>
@@ -853,7 +853,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(me.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(*f)).arg(Qt::escape(me.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -883,7 +883,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(pe.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(*f)).arg(Qt::escape(pe.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -913,7 +913,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(*f)).arg(Q3StyleSheet::escape(ee.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(*f)).arg(Qt::escape(ee.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -1004,7 +1004,7 @@ void KWalletEditor::importXML() {
 			if (hasEntry && mp == Prompt) {
 				KBetterThanKDialogBase *bd;
 				bd = new KBetterThanKDialogBase(this);
-				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Q3StyleSheet::escape(fname)).arg(Q3StyleSheet::escape(ename)));
+				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(fname)).arg(Qt::escape(ename)));
 				mp = (MergePlan)bd->exec();
 				delete bd;
 				bool ok = false;
@@ -1067,8 +1067,8 @@ void KWalletEditor::exportXML() {
 					{
 						QString pass;
 						if (_w->readPassword(*j, pass) == 0) {
-							ts << "    <password name=\"" << Q3StyleSheet::escape(*j) << "\">";
-							ts << Q3StyleSheet::escape(pass);
+							ts << "    <password name=\"" << Qt::escape(*j) << "\">";
+							ts << Qt::escape(pass);
 							ts << "</password>" << endl;
 						}
 						break;
@@ -1077,7 +1077,7 @@ void KWalletEditor::exportXML() {
 					{
 						QByteArray ba;
 						if (_w->readEntry(*j, ba) == 0) {
-							ts << "    <stream name=\"" << Q3StyleSheet::escape(*j) << "\">";
+							ts << "    <stream name=\"" << Qt::escape(*j) << "\">";
 							ts << KCodecs::base64Encode(ba);
 
 							ts << "</stream>" << endl;
@@ -1088,9 +1088,9 @@ void KWalletEditor::exportXML() {
 					{
 						QMap<QString,QString> map;
 						if (_w->readMap(*j, map) == 0) {
-							ts << "    <map name=\"" << Q3StyleSheet::escape(*j) << "\">" << endl;
+							ts << "    <map name=\"" << Qt::escape(*j) << "\">" << endl;
 							for (QMap<QString,QString>::ConstIterator k = map.begin(); k != map.end(); ++k) {
-								ts << "      <mapentry name=\"" << Q3StyleSheet::escape(k.key()) << "\">" << Q3StyleSheet::escape(k.data()) << "</mapentry>" << endl;
+								ts << "      <mapentry name=\"" << Qt::escape(k.key()) << "\">" << Qt::escape(k.data()) << "</mapentry>" << endl;
 							}
 							ts << "    </map>" << endl;
 						}
