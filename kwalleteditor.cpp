@@ -405,7 +405,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 			if (ci->type() == KWallet::Wallet::Password) {
 				QString pass;
 				if (_w->readPassword(item->text(0), pass) == 0) {
-					_ww->_entryStack->raiseWidget(int(4));
+					_ww->_entryStack->setCurrentIndex(4);
 					_ww->_entryName->setText(i18n("Password: %1")
 							.arg(item->text(0)));
 					_ww->_passwordValue->setText(pass);
@@ -413,7 +413,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 					_ww->_undoChanges->setEnabled(false);
 				}
 			} else if (ci->type() == KWallet::Wallet::Map) {
-				_ww->_entryStack->raiseWidget(int(2));
+				_ww->_entryStack->setCurrentIndex(2);
 				_mapEditorShowHide->setChecked(false);
 				showHideMapEditorValue(false);
 				if (_w->readMap(item->text(0), _currentMap) == 0) {
@@ -423,7 +423,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 					_ww->_undoChanges->setEnabled(false);
 				}
 			} else if (ci->type() == KWallet::Wallet::Stream) {
-				_ww->_entryStack->raiseWidget(int(3));
+				_ww->_entryStack->setCurrentIndex(3);
 				QByteArray ba;
 				if (_w->readEntry(item->text(0), ba) == 0) {
 					_ww->_entryName->setText(i18n("Binary Data: %1")
@@ -442,7 +442,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 			_w->setFolder(fi->name());
 			_deleteFolderAction->setEnabled(false);
 			_ww->_entryName->clear();
-			_ww->_entryStack->raiseWidget(int(0));
+			_ww->_entryStack->setCurrentIndex(0);
 			break;
 
 		case KWalletFolderItemClass:
@@ -453,7 +453,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 			_w->setFolder(fi->name());
 			_deleteFolderAction->setEnabled(true);
 			_ww->_entryName->clear();
-			_ww->_entryStack->raiseWidget(int(0));
+			_ww->_entryStack->setCurrentIndex(0);
 			break;
 	}	
 
@@ -549,7 +549,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	}
 	if (!_entryList->selectedItem()) {
 		_ww->_entryName->clear();
-		_ww->_entryStack->raiseWidget(int(0));
+		_ww->_entryStack->setCurrentIndex(0);
 	}
 }
 
@@ -796,12 +796,12 @@ void KWalletEditor::walletOpened(bool success) {
 
 
 void KWalletEditor::hidePasswordContents() {
-	_ww->_entryStack->raiseWidget(int(4));
+	_ww->_entryStack->setCurrentIndex(4);
 }
 
 
 void KWalletEditor::showPasswordContents() {
-	_ww->_entryStack->raiseWidget(int(1));
+	_ww->_entryStack->setCurrentIndex(1);
 }
 
 

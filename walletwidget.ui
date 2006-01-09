@@ -170,7 +170,7 @@
                             <iconset>"filesave"</iconset>
                         </property>
                     </widget>
-                    <widget class="QWidgetStack" row="2" column="0" rowspan="1" colspan="3">
+                    <widget class="QStackedWidget" row="2" column="0" rowspan="1" colspan="3">
                         <property name="name">
                             <cstring>_entryStack</cstring>
                         </property>
