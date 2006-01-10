@@ -59,7 +59,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
 	if (walletConfigGroup.readBoolEntry("Launch Manager", true)) {
-		_tray = new KSystemTray(this, "kwalletmanager tray");
+		_tray = new KSystemTray(this);
+		_tray->setObjectName("kwalletmanager tray");
 		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 		QToolTip::add(_tray, i18n("KDE Wallet: No wallets open."));
 		connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
