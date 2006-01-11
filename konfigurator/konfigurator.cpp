@@ -183,13 +183,13 @@ void KWalletConfig::configChanged() {
 
 void KWalletConfig::load() {
 	KConfigGroup config(_cfg, "Wallet");
-	_wcw->_enabled->setChecked(config.readBoolEntry("Enabled", true));
-	_wcw->_openPrompt->setChecked(config.readBoolEntry("Prompt on Open", true));
-	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
-	_wcw->_autocloseManager->setChecked(! config.readBoolEntry("Leave Manager Open", false));
-	_wcw->_screensaverLock->setChecked(config.readBoolEntry("Close on Screensaver", false));
-	_wcw->_autoclose->setChecked(!config.readBoolEntry("Leave Open", true));
-	_wcw->_closeIdle->setChecked(config.readBoolEntry("Close When Idle", false));
+	_wcw->_enabled->setChecked(config.readEntry("Enabled", true));
+	_wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", true));
+	_wcw->_launchManager->setChecked(config.readEntry("Launch Manager", true));
+	_wcw->_autocloseManager->setChecked(! config.readEntry("Leave Manager Open", false));
+	_wcw->_screensaverLock->setChecked(config.readEntry("Close on Screensaver", false));
+	_wcw->_autoclose->setChecked(!config.readEntry("Leave Open", true));
+	_wcw->_closeIdle->setChecked(config.readEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
 	if (config.hasKey("Default Wallet")) {
 		_wcw->_defaultWallet->setCurrentText(config.readEntry("Default Wallet"));
@@ -197,7 +197,7 @@ void KWalletConfig::load() {
 		_wcw->_defaultWallet->setCurrentItem(0);
 	}
 	if (config.hasKey("Local Wallet")) {
-		_wcw->_localWalletSelected->setChecked( !config.readBoolEntry("Use One Wallet") );
+		_wcw->_localWalletSelected->setChecked( !config.readEntry("Use One Wallet", false) );
 		_wcw->_localWallet->setCurrentText(config.readEntry("Local Wallet"));
 	} else {
 		_wcw->_localWalletSelected->setChecked(false);

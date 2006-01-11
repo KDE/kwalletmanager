@@ -58,7 +58,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	_shuttingDown = false;
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
-	if (walletConfigGroup.readBoolEntry("Launch Manager", true)) {
+	if (walletConfigGroup.readEntry("Launch Manager", true)) {
 		_tray = new KSystemTray(this);
 		_tray->setObjectName("kwalletmanager tray");
 		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
@@ -324,7 +324,7 @@ void KWalletManager::possiblyQuit() {
 	cfg.setGroup("Wallet");
 	if (_windows.isEmpty() &&
 			!isVisible() &&
-			!cfg.readBoolEntry("Leave Manager Open", false) &&
+			!cfg.readEntry("Leave Manager Open", false) &&
 			_kwalletdLaunch) {
 		kapp->quit();
 	}
