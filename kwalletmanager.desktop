@@ -43,6 +43,7 @@ Name[ta]=வாலட் மேலாண்மை கருவி
 Name[tg]=Асбоби Идоракунии Ҳамён
 Name[tr]=Cüzdan Yönetim Aracı
 Name[uk]=Засіб керування торбинками
+Name[uz]=Қопчиқ бошқариш воситаси
 Name[zh_CN]=钱包管理工具
 Exec=kwalletmanager %u
 MimeType=application/x-kde-wallet
