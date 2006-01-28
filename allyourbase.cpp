@@ -283,7 +283,7 @@ void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
 				return;
 			}
 
-			KURL u(urls.first());
+			KUrl u(urls.first());
 			if (u.fileName().isEmpty()) {
 				e->ignore();
 				return;
@@ -441,7 +441,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 			e->ignore();
 			return;
 		}
-		KURL u(urls.first());
+		KUrl u(urls.first());
 		if (u.fileName().isEmpty()) {
 			e->ignore();
 			return;
@@ -655,7 +655,7 @@ void KWalletIconView::slotDropped(QDropEvent *e, const QList<Q3IconDragItem>& /*
 		return;
 	}
 
-	KURL u(ul.first());
+	KUrl u(ul.first());
 
 	if (u.fileName().isEmpty()) {
 		e->ignore();
@@ -670,7 +670,7 @@ void KWalletIconView::slotDropped(QDropEvent *e, const QList<Q3IconDragItem>& /*
 	}
 
 	// FIXME: verify that it is a real wallet file first
-	KIO::NetAccess::file_copy(u, KURL::fromPathOrURL(dest));
+	KIO::NetAccess::file_copy(u, KUrl::fromPathOrURL(dest));
 	e->accept();
 }
 

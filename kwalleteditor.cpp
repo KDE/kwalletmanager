@@ -817,7 +817,7 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
 
 void KWalletEditor::importWallet() {
-	KURL url = KFileDialog::getOpenURL(QString::null, "*.kwl", this);
+	KUrl url = KFileDialog::getOpenURL(QString::null, "*.kwl", this);
 	if (url.isEmpty()) {
 		return;
 	}
@@ -945,7 +945,7 @@ void KWalletEditor::importWallet() {
 
 
 void KWalletEditor::importXML() {
-	KURL url = KFileDialog::getOpenURL(QString::null, "*.xml", this);
+	KUrl url = KFileDialog::getOpenURL(QString::null, "*.xml", this);
 	if (url.isEmpty()) {
 		return;
 	}
@@ -1107,7 +1107,7 @@ void KWalletEditor::exportXML() {
 	ts << "</wallet>" << endl;
 	tf.close();
 
-	KURL url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
+	KUrl url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
 
 	if (!url.isEmpty()) {
 		KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
@@ -1121,7 +1121,7 @@ void KWalletEditor::setNewWallet(bool x) {
 
 
 void KWalletEditor::saveAs() {
-	KURL url = KFileDialog::getSaveURL(QString::null, "*.kwl", this);
+	KUrl url = KFileDialog::getSaveURL(QString::null, "*.kwl", this);
 	if (!url.isEmpty()) {
 		// Sync() kwalletd
 		if (_nonLocal) {
