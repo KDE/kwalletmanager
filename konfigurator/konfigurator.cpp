@@ -190,7 +190,7 @@ void KWalletConfig::load() {
 	_wcw->_screensaverLock->setChecked(config.readEntry("Close on Screensaver", false));
 	_wcw->_autoclose->setChecked(!config.readEntry("Leave Open", true));
 	_wcw->_closeIdle->setChecked(config.readEntry("Close When Idle", false));
-	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
+	_wcw->_idleTime->setValue(config.readEntry("Idle Timeout", 10));
 	if (config.hasKey("Default Wallet")) {
 		_wcw->_defaultWallet->setCurrentText(config.readEntry("Default Wallet"));
 	} else {
@@ -209,9 +209,9 @@ void KWalletConfig::load() {
 	QStringList keys = _cfg->entryMap("Auto Allow").keys();
 	for (QStringList::Iterator i = keys.begin(); i != keys.end(); ++i) {
 		_cfg->setGroup("Auto Allow");
-		QStringList apps = _cfg->readListEntry(*i);
+		QStringList apps = _cfg->readEntry(*i,QStringList());
 		_cfg->setGroup("Auto Deny");
-		QStringList denyapps = _cfg->readListEntry(*i);
+		QStringList denyapps = _cfg->readEntry(*i, QStringList());
 		denykeys.remove(*i);
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = apps.begin(); j != apps.end(); ++j) {
@@ -223,7 +223,7 @@ void KWalletConfig::load() {
 	}
 	_cfg->setGroup("Auto Deny");
 	for (QStringList::Iterator i = denykeys.begin(); i != denykeys.end(); ++i) {
-		QStringList denyapps = _cfg->readListEntry(*i);
+		QStringList denyapps = _cfg->readEntry(*i,QStringList());
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
 			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
