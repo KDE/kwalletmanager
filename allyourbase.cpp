@@ -193,7 +193,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
 	quint32 magic;
 	ds >> magic;
 	if (magic != KWALLETENTRYMAGIC) {
-		kdDebug() << "bad magic" << endl;
+		kDebug() << "bad magic" << endl;
 		return false;
 	}
 	QString name;
@@ -218,7 +218,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 	quint32 magic;
 	ds >> magic;
 	if (magic != KWALLETFOLDERMAGIC) {
-		kdDebug() << "bad magic" << endl;
+		kDebug() << "bad magic" << endl;
 		return false;
 	}
 	QString folder;
@@ -459,7 +459,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 			} else if (magic == KWALLETFOLDERMAGIC) {
 				isEntry = false;
 			} else {
-				kdDebug() << "bad magic" << endl;
+				kDebug() << "bad magic" << endl;
 				e->ignore();
 				return;
 			}
