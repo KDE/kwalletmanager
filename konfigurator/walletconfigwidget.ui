@@ -107,10 +107,10 @@
                                         <property name="suffix">
                                             <string> min</string>
                                         </property>
-                                        <property name="maxValue">
+                                        <property name="maximum">
                                             <number>999</number>
                                         </property>
-                                        <property name="minValue">
+                                        <property name="minimum">
                                             <number>1</number>
                                         </property>
                                         <property name="lineStep">
