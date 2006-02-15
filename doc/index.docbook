@@ -257,21 +257,27 @@ any information, or offer to fill in forms for you.</para>
 <varlistentry>
 <term><guilabel>Close when unused for:</guilabel></term>
 <listitem>
-<para></para>
+<para>Close the current wallet after a period of inactivity. If you check this
+option, set the period in the box, default is 10 minutes. When a wallet is
+closed, the password is needed to access it again.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Close when screen saver starts</guilabel></term>
 <listitem>
-<para></para>
+<para>Close the wallet as soon as the screensaver starts. When a wallet is
+closed, the password is needed to access it again.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Close when last application stops using it</guilabel></term>
 <listitem>
-<para></para>
+<para>Close the wallet as soon as applications that use it have stopped. Note
+that your wallets will only be closed when all the applications that use it have
+stopped. When a wallet is closed, the password is needed to access it
+again.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -281,14 +287,14 @@ any information, or offer to fill in forms for you.</para>
 <varlistentry>
 <term><guilabel>Select wallet to use as default:</guilabel></term>
 <listitem>
-<para></para>
+<para>Select which wallet you want to use as default wallet.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Different wallet for local passwords:</guilabel></term>
 <listitem>
-<para></para>
+<para>If checked, choose a different wallet for local passwords.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -298,7 +304,7 @@ any information, or offer to fill in forms for you.</para>
 <varlistentry>
 <term><guilabel>Show manager in system tray</guilabel></term>
 <listitem>
-<para></para>
+<para>Enable the wallet manager to have its icon in the system tray.</para>
 </listitem>
 </varlistentry>
 
@@ -306,7 +312,8 @@ any information, or offer to fill in forms for you.</para>
 <term><guilabel>Hide System tray icon when last wallet
 closes</guilabel></term>
 <listitem>
-<para></para>
+<para>When there is no wallet in use anymore, remove the wallet icon from the
+system tray.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -324,7 +331,7 @@ Manager</guibutton>, which does precisely that.</para>
 <varlistentry>
 <term><guilabel>Prompt when an application accesses an open wallet</guilabel></term>
 <listitem>
-<para></para>
+<para>Signal you when an application gains access to an open wallet.</para>
 </listitem>
 </varlistentry>
 </variablelist>
