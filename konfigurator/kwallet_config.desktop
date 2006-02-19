@@ -5,4 +5,5 @@ Exec=kcmshell --caption %c kwalletconfig
 Icon=kwalletmanager
 DocPath=kwallet/index.html
 Name=KDE Wallet
+Name[fr]=Gestionnaire de comptes de KDE
 Name[x-test]=xxKDE Walletxx

@@ -9,10 +9,13 @@ X-KDE-Library=kwallet
 X-KDE-ParentApp=kcontrol
 
 Name=KDE Wallet
+Name[fr]=Gestionnaire de comptes de KDE
 Name[x-test]=xxKDE Walletxx
 Comment=KDE Wallet Configuration
+Comment[fr]=Configuration du gestionnaire de comptes de KDE
 Comment[x-test]=xxKDE Wallet Configurationxx
 Keywords=Wallet,Form Fill,Passwords,Form Data
+Keywords[fr]=gestionnaire de comptes,remplissage de formulaire,Mots de passe,Données de formulaire
 Keywords[x-test]=xxWallet,Form Fill,Passwords,Form Dataxx
 
 Categories=Qt;KDE;X-KDE-settings-security;
