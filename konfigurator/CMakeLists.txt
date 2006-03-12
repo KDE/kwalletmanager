@@ -9,13 +9,13 @@ set(kcm_kwallet_PART_SRCS konfigurator.cpp )
 
 kde4_automoc(${kcm_kwallet_PART_SRCS})
 
-kde4_add_ui_files(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
+kde4_add_ui3_files(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
 
 kde4_add_plugin(kcm_kwallet ${kcm_kwallet_PART_SRCS})
 
 kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kwallet )
 
-target_link_libraries(kcm_kwallet  ${QT_AND_KDECORE_LIBS} kdeui kwalletclient )
+target_link_libraries(kcm_kwallet  ${LIB_KDE3SUPPORT} kwalletclient )
 
 install_targets(${LIB_INSTALL_DIR}/kde4 kcm_kwallet )
 
