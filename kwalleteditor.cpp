@@ -77,7 +77,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	box->setSpacing( KDialog::spacingHint() );
 	box->setMargin( KDialog::marginHint() );
 	_entryList = new KWalletEntryList(_ww->_entryListFrame, "Wallet Entry List");
-	box->addWidget(new KListViewSearchLineWidget(_entryList, _ww->_entryListFrame));
+	box->addWidget(new K3ListViewSearchLineWidget(_entryList, _ww->_entryListFrame));
 	box->addWidget(_entryList);
 
 	_ww->_entryStack->setEnabled(true);
