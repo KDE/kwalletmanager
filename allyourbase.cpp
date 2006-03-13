@@ -46,7 +46,7 @@
  *  KWalletFolderItem - ListView items to represent kwallet folders
  */
 KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, const QString &name, int entries)
-: KListViewItem(parent),_wallet(w),_name(name),_entries(entries) {
+: K3ListViewItem(parent),_wallet(w),_name(name),_entries(entries) {
 	setText(0, QString("%1 (%2)").arg(_name).arg(_entries));
 	setRenameEnabled(0, false);
 	setDragEnabled(true);
@@ -129,7 +129,7 @@ KWalletFolderItem::~KWalletFolderItem() {
  *  passwords, maps, ...
  */
 KWalletContainerItem::KWalletContainerItem(Q3ListViewItem* parent, const QString &name, KWallet::Wallet::EntryType type)
-: KListViewItem(parent, name), _type(type) {
+: K3ListViewItem(parent, name), _type(type) {
 	setRenameEnabled(0, false);
 	setDragEnabled(true);
 }
@@ -162,7 +162,7 @@ Q3ListViewItem *KWalletContainerItem::getItem(const QString& key) {
  *  KWalletEntryItem - ListView items to represent kwallet entries
  */
 KWalletEntryItem::KWalletEntryItem(KWallet::Wallet *w, Q3ListViewItem* parent, const QString& ename)
-: KListViewItem(parent, ename), _wallet(w), _oldName(ename) {
+: K3ListViewItem(parent, ename), _wallet(w), _oldName(ename) {
 	setRenameEnabled(0, true);
 	setDragEnabled(true);
 }
@@ -356,7 +356,7 @@ class KWalletFolderDrag : public Q3StoredDrag {
  *  KWalletEntryList - A listview to store wallet entries
  */
 KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
-: KListView(parent) {
+: K3ListView(parent) {
 	setObjectName(name);
 	addColumn(i18n("Folders"));
 	setRootIsDecorated(true);
@@ -627,7 +627,7 @@ class KWalletIconDrag : public Q3IconDrag {
 *  *  KWalletIconView - An iconview to store wallets
 *   */
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
-: KIconView(parent, name) {
+: K3IconView(parent, name) {
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	connect(this, SIGNAL(dropped(QDropEvent*, const QList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const QList<Q3IconDragItem>&)));
 }
@@ -679,7 +679,7 @@ void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
 	if (!findItem(_mousePos)) {
 		clearSelection();
 	}
-	KIconView::contentsMousePressEvent( e );
+	K3IconView::contentsMousePressEvent( e );
 }
 
 Q3DragObject *KWalletIconView::dragObject() {

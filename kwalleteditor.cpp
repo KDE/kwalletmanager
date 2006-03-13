@@ -33,10 +33,10 @@
 #include <kdebug.h>
 #include <kdialog.h>
 #include <kfiledialog.h>
-#include <kiconview.h>
+#include <k3iconview.h>
 #include <kinputdialog.h>
 #include <kio/netaccess.h>
-#include <klistviewsearchline.h>
+#include <k3listviewsearchline.h>
 #include <klocale.h>
 #include <kcodecs.h>
 #include <kmessagebox.h>

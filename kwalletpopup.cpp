@@ -22,7 +22,7 @@
 
 #include <kaction.h>
 #include <kdebug.h>
-#include <kiconview.h>
+#include <k3iconview.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kwallet.h>

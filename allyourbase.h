@@ -21,8 +21,8 @@
 #ifndef ALLYOURBASE_H
 #define ALLYOURBASE_H
 
-#include <kiconview.h>
-#include <klistview.h>
+#include <k3iconview.h>
+#include <k3listview.h>
 #include <kwallet.h>
 #include <kiconloader.h>
 #include <kicontheme.h>
@@ -43,7 +43,7 @@ enum KWalletListItemClasses {
 	KWalletUnknownClass = 2000
 };
 
-class KWalletEntryItem : public KListViewItem {
+class KWalletEntryItem : public K3ListViewItem {
 	public:
 		KWalletEntryItem(KWallet::Wallet *w, Q3ListViewItem* parent, const QString& ename);
 		virtual ~KWalletEntryItem();
@@ -61,7 +61,7 @@ class KWalletEntryItem : public KListViewItem {
 		QString _oldName;
 };
 
-class KWalletContainerItem : public KListViewItem {
+class KWalletContainerItem : public K3ListViewItem {
 	public:
 		KWalletContainerItem(Q3ListViewItem* parent, const QString& name,
 		    KWallet::Wallet::EntryType type);
@@ -77,7 +77,7 @@ class KWalletContainerItem : public KListViewItem {
 		KWallet::Wallet::EntryType _type;
 };
 
-class KWalletFolderItem : public KListViewItem {
+class KWalletFolderItem : public K3ListViewItem {
 	public:
 		KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, 
 			const QString& name, int entries);
@@ -101,7 +101,7 @@ class KWalletFolderItem : public KListViewItem {
 		int _entries;
 };
 
-class KWalletEntryList : public KListView {
+class KWalletEntryList : public K3ListView {
 	Q_OBJECT
 	public:
 		KWalletEntryList(QWidget *parent, const char *name = 0L);
@@ -137,7 +137,7 @@ class KWalletItem : public Q3IconViewItem {
 };
 
 
-class KWalletIconView : public KIconView {
+class KWalletIconView : public K3IconView {
 	Q_OBJECT
 	public:
 		KWalletIconView(QWidget *parent, const char *name = 0L);
