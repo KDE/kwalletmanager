@@ -52,21 +52,21 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, con
 	setDragEnabled(true);
 	setDropEnabled(true);
 
-	QPixmap pix = getFolderIcon(KIcon::Small);
+	QPixmap pix = getFolderIcon(K3Icon::Small);
 	
 	setPixmap(0,pix);
 }
 
-QPixmap KWalletFolderItem::getFolderIcon(KIcon::Group group){
+QPixmap KWalletFolderItem::getFolderIcon(K3Icon::Group group){
 	KIconLoader *loader = KGlobal::instance()->iconLoader();
 	QPixmap pix = loader->loadIcon( _name, group, 0,
-			KIcon::DefaultState, 0, true );
+			K3Icon::DefaultState, 0, true );
 	if (pix.isNull())
 		pix = loader->loadIcon( _name.toLower(), group, 0,
-			KIcon::DefaultState, 0, true);
+			K3Icon::DefaultState, 0, true);
 	if (pix.isNull())
 		pix = loader->loadIcon( "folder_red", group, 0,
-			KIcon::DefaultState, 0, true);
+			K3Icon::DefaultState, 0, true);
 	return pix;
 }
 

@@ -89,7 +89,7 @@ class KWalletFolderItem : public K3ListViewItem {
 		QString name() const;
 		void refresh();
 		KWalletContainerItem* getContainer(KWallet::Wallet::EntryType type);
-		QPixmap getFolderIcon(KIcon::Group group);
+		QPixmap getFolderIcon(K3Icon::Group group);
 		bool contains(const QString& itemKey);
 		Q3ListViewItem* getItem(const QString& itemKey);
 
