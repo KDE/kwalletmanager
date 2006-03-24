@@ -24,7 +24,7 @@ kde4_add_dcop_skels(kwalletmanager_SRCS kwalletmanager.h )
 
 kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
-target_link_libraries(kwalletmanager  ${KDE4_KDECORE_LIBS} kio kwalletclient )
+target_link_libraries(kwalletmanager  ${KDE4_KIO_LIBS} kwalletclient )
 
 install_targets(/bin kwalletmanager )
 
