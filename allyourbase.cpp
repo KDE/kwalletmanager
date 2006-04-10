@@ -201,7 +201,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
 	KWallet::Wallet::EntryType et;
 	ds >> name;
 	if (_wallet->hasEntry(name)) {
-		int rc = KMessageBox::warningContinueCancel(0L, i18n("An entry by the name '%1' already exists. Would you like to continue?").arg(name));
+		int rc = KMessageBox::warningContinueCancel(0L, i18n("An entry by the name '%1' already exists. Would you like to continue?", name));
 		if (rc == KMessageBox::Cancel) {
 			return false;
 		}
@@ -224,7 +224,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 	QString folder;
 	ds >> folder;
 	if (_wallet->hasFolder(folder)) {
-		int rc = KMessageBox::warningYesNoCancel(0L, i18n("A folder by the name '%1' already exists.  What would you like to do?").arg(folder), QString::null, KStdGuiItem::cont(), i18n("Replace"));
+		int rc = KMessageBox::warningYesNoCancel(0L, i18n("A folder by the name '%1' already exists.  What would you like to do?", folder), QString::null, KStdGuiItem::cont(), i18n("Replace"));
 		if (rc == KMessageBox::Cancel) {
 			return false;
 		}

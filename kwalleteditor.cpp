@@ -298,7 +298,7 @@ void KWalletEditor::deleteFolder() {
 				return;
 			}
 
-			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?").arg(fi->name()),"",KStdGuiItem::del());
+			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()),"",KStdGuiItem::del());
 			if (rc == KMessageBox::Continue) {
 				bool rc = _w->removeFolder(fi->name());
 				if (!rc) {
@@ -371,7 +371,7 @@ void KWalletEditor::saveEntry() {
 		}
 	}
 
-	KMessageBox::sorry(this, i18n("Error saving entry. Error code: %1").arg(rc));
+	KMessageBox::sorry(this, i18n("Error saving entry. Error code: %1", rc));
 }
 
 
@@ -406,8 +406,8 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				QString pass;
 				if (_w->readPassword(item->text(0), pass) == 0) {
 					_ww->_entryStack->setCurrentIndex(4);
-					_ww->_entryName->setText(i18n("Password: %1")
-							.arg(item->text(0)));
+					_ww->_entryName->setText(i18n("Password: %1",
+							 item->text(0)));
 					_ww->_passwordValue->setText(pass);
 					_ww->_saveChanges->setEnabled(false);
 					_ww->_undoChanges->setEnabled(false);
@@ -418,7 +418,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				showHideMapEditorValue(false);
 				if (_w->readMap(item->text(0), _currentMap) == 0) {
 					_mapEditor->reload();
-					_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
+					_ww->_entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
 					_ww->_saveChanges->setEnabled(false);
 					_ww->_undoChanges->setEnabled(false);
 				}
@@ -426,8 +426,8 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_ww->_entryStack->setCurrentIndex(3);
 				QByteArray ba;
 				if (_w->readEntry(item->text(0), ba) == 0) {
-					_ww->_entryName->setText(i18n("Binary Data: %1")
-							.arg(item->text(0)));
+					_ww->_entryName->setText(i18n("Binary Data: %1",
+							 item->text(0)));
 					_ww->_saveChanges->setEnabled(false);
 					_ww->_undoChanges->setEnabled(false);
 				}
@@ -740,11 +740,11 @@ void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t)
 				return;
 			}
 			if (ci->type() == KWallet::Wallet::Password) {
-				_ww->_entryName->setText(i18n("Password: %1").arg(item->text(0)));
+				_ww->_entryName->setText(i18n("Password: %1", item->text(0)));
 			} else if (ci->type() == KWallet::Wallet::Map) {
-				_ww->_entryName->setText(i18n("Name-Value Map: %1").arg(item->text(0)));
+				_ww->_entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
 			} else if (ci->type() == KWallet::Wallet::Stream) {
-				_ww->_entryName->setText(i18n("Binary Data: %1").arg(item->text(0)));
+				_ww->_entryName->setText(i18n("Binary Data: %1", item->text(0)));
 			}
 		} else {
 			i->setText(0, i->oldName());
@@ -756,7 +756,7 @@ void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t)
 void KWalletEditor::deleteEntry() {
 	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
-		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?").arg(item->text(0)),"",KStdGuiItem::del());
+		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)),"",KStdGuiItem::del());
 		if (rc == KMessageBox::Continue) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
 			if (!fi) {
@@ -824,7 +824,7 @@ void KWalletEditor::importWallet() {
 
 	QString tmpFile;
 	if (!KIO::NetAccess::download(url, tmpFile, this)) {
-		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.").arg(url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.prettyURL()));
 		return;
 	}
 
@@ -853,7 +853,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(*f)).arg(Qt::escape(me.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(*f), Qt::escape(me.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -883,7 +883,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(*f)).arg(Qt::escape(pe.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(*f), Qt::escape(pe.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -913,7 +913,7 @@ void KWalletEditor::importWallet() {
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
 						bd = new KBetterThanKDialogBase(this);
-						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(*f)).arg(Qt::escape(ee.key())));
+						bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(*f), Qt::escape(ee.key())));
 						mp = (MergePlan)bd->exec();
 						delete bd;
 						bool ok = false;
@@ -952,20 +952,20 @@ void KWalletEditor::importXML() {
 
 	QString tmpFile;
 	if (!KIO::NetAccess::download(url, tmpFile, this)) {
-		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.").arg(url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.prettyURL()));
 		return;
 	}
 
 	QFile qf(tmpFile);
 	if (!qf.open(QIODevice::ReadOnly)) {
-		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.").arg(url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.", url.prettyURL()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
 	}
 
 	QDomDocument doc(tmpFile);
 	if (!doc.setContent(&qf)) {
-		KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.").arg(url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.prettyURL()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
 	}
@@ -1004,7 +1004,7 @@ void KWalletEditor::importXML() {
 			if (hasEntry && mp == Prompt) {
 				KBetterThanKDialogBase *bd;
 				bd = new KBetterThanKDialogBase(this);
-				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?").arg(Qt::escape(fname)).arg(Qt::escape(ename)));
+				bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(fname), Qt::escape(ename)));
 				mp = (MergePlan)bd->exec();
 				delete bd;
 				bool ok = false;
