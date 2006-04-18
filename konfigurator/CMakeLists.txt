@@ -17,7 +17,7 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kwallet )
 
 target_link_libraries(kcm_kwallet  ${KDE4_KDE3SUPPORT_LIBS} kwalletclient )
 
-install_targets(${LIB_INSTALL_DIR}/kde4 kcm_kwallet )
+install_targets(${PLUGIN_INSTALL_DIR} kcm_kwallet )
 
 
 ########### install files ###############
