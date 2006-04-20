@@ -21,7 +21,7 @@
 </author>
 <othercredit role="developer">
 <firstname>George</firstname><surname>Staikos</surname>
-<affiliation><address><email>staikos@kde.org</email></address></affiliation>
+<affiliation><address>&George.Staikos.mail;</address></affiliation>
 <contrib>Developer</contrib>
 </othercredit>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
@@ -266,7 +266,7 @@ closed, the password is needed to access it again.</para>
 <varlistentry>
 <term><guilabel>Close when screen saver starts</guilabel></term>
 <listitem>
-<para>Close the wallet as soon as the screensaver starts. When a wallet is
+<para>Close the wallet as soon as the screen saver starts. When a wallet is
 closed, the password is needed to access it again.</para>
 </listitem>
 </varlistentry>
