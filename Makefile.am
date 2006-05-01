@@ -20,7 +20,5 @@ KDE_ICON = kwalletmanager
 rc_DATA = kwalletmanager.rc kwalleteditor.rc
 rcdir = $(kde_datadir)/kwalletmanager
 
-messages: rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/kwalletmanager.pot
 
 kbetterthankdialogbase.lo: kbetterthankdialogbase.ui kbetterthankdialogbase.ui.h
