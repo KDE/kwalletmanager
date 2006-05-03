@@ -403,8 +403,8 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 		el = dynamic_cast<KWalletEntryList*>(e->source()->parent());
 		if (!el) {
 			KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the item"));
-		}
-		sel = el->selectedItem();
+		} else
+			sel = el->selectedItem();
 	}
 
 	if (e->provides("application/x-kwallet-entry")) {
