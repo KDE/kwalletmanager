@@ -480,6 +480,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 	if (isEntry) {
 		if (!item) {
 			e->ignore();
+			delete(ds);
 			return;
 		}
 		KWalletFolderItem *fi = KWalletEntryList::getItemFolder(item);
