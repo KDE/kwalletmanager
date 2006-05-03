@@ -454,6 +454,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 			//check magic to discover mime type
 			quint32 magic;
 			(*ds) >> magic;
+			delete ds;
 			if (magic == KWALLETENTRYMAGIC) {
 				isEntry = true;
 			} else if (magic == KWALLETFOLDERMAGIC) {
@@ -463,7 +464,6 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 				e->ignore();
 				return;
 			}
-			delete ds;
 			//set the file back to the beginning
 			file.reset();
 			ds = new QDataStream(&file);
