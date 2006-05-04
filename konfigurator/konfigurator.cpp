@@ -185,7 +185,7 @@ void KWalletConfig::load() {
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
 	_wcw->_autocloseManager->setChecked(! config.readBoolEntry("Leave Manager Open", false));
 	_wcw->_screensaverLock->setChecked(config.readBoolEntry("Close on Screensaver", false));
-	_wcw->_autoclose->setChecked(!config.readBoolEntry("Leave Open", true));
+	_wcw->_autoclose->setChecked(!config.readBoolEntry("Leave Open", false));
 	_wcw->_closeIdle->setChecked(config.readBoolEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readNumEntry("Idle Timeout", 10));
 	if (config.hasKey("Default Wallet")) {
