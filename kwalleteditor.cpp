@@ -163,41 +163,35 @@ void KWalletEditor::layout() {
 }
 
 void KWalletEditor::createActions() {
-	_newFolderAction = new KAction(i18n("&New Folder..."), "folder_new",
-			0, this, SLOT(createFolder()), actionCollection(),
-			"create_folder");
+	_newFolderAction = new KAction(KIcon("folder_new"), i18n("&New Folder..."), actionCollection(), "create_folder");
+	connect(_newFolderAction, SIGNAL(triggered(bool) ), SLOT(createFolder()));
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
 
-	_deleteFolderAction = new KAction(i18n("&Delete Folder"), 0, 0,
-			this, SLOT(deleteFolder()), actionCollection(),
-			"delete_folder");
+	_deleteFolderAction = new KAction(i18n("&Delete Folder"), actionCollection(), "delete_folder");
+	connect(_deleteFolderAction, SIGNAL(triggered(bool) ), SLOT(deleteFolder()));
 	connect(this, SIGNAL(enableContextFolderActions(bool)),
 		_deleteFolderAction, SLOT(setEnabled(bool)));
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_deleteFolderAction, SLOT(setEnabled(bool)));
 
-	_passwordAction = new KAction(i18n("Change &Password..."), 0, 0, this,
-			SLOT(changePassword()), actionCollection(),
-			"change_password");
+	_passwordAction = new KAction(i18n("Change &Password..."), actionCollection(), "change_password");
+	connect(_passwordAction, SIGNAL(triggered(bool) ), SLOT(changePassword()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_passwordAction, SLOT(setEnabled(bool)));
 
-	_mergeAction = new KAction(i18n("&Merge Wallet..."), 0, 0, this,
-			SLOT(importWallet()), actionCollection(),
-			"merge");
+	_mergeAction = new KAction(i18n("&Merge Wallet..."), actionCollection(), "merge");
+	connect(_mergeAction, SIGNAL(triggered(bool) ), SLOT(importWallet()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_mergeAction, SLOT(setEnabled(bool)));
 
-	_importAction = new KAction(i18n("&Import XML..."), 0, 0, this,
-			SLOT(importXML()), actionCollection(),
-			"import");
+	_importAction = new KAction(i18n("&Import XML..."), actionCollection(), "import");
+	connect(_importAction, SIGNAL(triggered(bool) ), SLOT(importXML()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_importAction, SLOT(setEnabled(bool)));
 
-	_exportAction = new KAction(i18n("&Export..."), 0, 0, this,
-			SLOT(exportXML()), actionCollection(),
-			"export");
+	_exportAction = new KAction(i18n("&Export..."), actionCollection(), "export");
+	connect(_exportAction, SIGNAL(triggered(bool) ), SLOT(exportXML()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_exportAction, SLOT(setEnabled(bool)));
 

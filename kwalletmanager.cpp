@@ -106,18 +106,15 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
 
-	new KAction(i18n("&New Wallet..."), "kwalletmanager", 0, this,
-			SLOT(createWallet()), actionCollection(),
-			"wallet_create");
-	KAction *act = new KAction(i18n("Configure &Wallet..."), "configure",
-			0, this, SLOT(setupWallet()), actionCollection(),
-			"wallet_settings");
+	KAction *action = new KAction(KIcon("kwalletmanager"), i18n("&New Wallet..."), actionCollection(), "wallet_create");
+	connect(action, SIGNAL(triggered(bool) ), SLOT(createWallet()));
+	KAction *act = new KAction(KIcon("configure"), i18n("Configure &Wallet..."), actionCollection(), "wallet_settings");
+	connect(act, SIGNAL(triggered(bool) ), SLOT(setupWallet()));
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
 	}
-	act = new KAction(i18n("Close &All Wallets"), 0, 0, this,
-			SLOT(closeAllWallets()), actionCollection(),
-			"close_all_wallets");
+	act = new KAction(i18n("Close &All Wallets"), actionCollection(), "close_all_wallets");
+	connect(act, SIGNAL(triggered(bool) ), SLOT(closeAllWallets()));
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
 	}
