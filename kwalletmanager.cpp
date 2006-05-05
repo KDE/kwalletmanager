@@ -113,13 +113,13 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 			0, this, SLOT(setupWallet()), actionCollection(),
 			"wallet_settings");
 	if (_tray) {
-		act->plug(_tray->contextMenu());
+		_tray->contextMenu()->addAction( act );
 	}
 	act = new KAction(i18n("Close &All Wallets"), 0, 0, this,
 			SLOT(closeAllWallets()), actionCollection(),
 			"close_all_wallets");
 	if (_tray) {
-		act->plug(_tray->contextMenu());
+		_tray->contextMenu()->addAction( act );
 	}
 	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
 	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
