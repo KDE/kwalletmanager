@@ -36,16 +36,17 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	ac->setObjectName("kwallet context actions");
 	KAction *act;
 
-	act = new KAction(i18n("&New Wallet..."), 0, 0, this,
-			SLOT(createWallet()), ac, "wallet_create");
+	act = new KAction(i18n("&New Wallet..."), ac, "wallet_create");
+	connect(act, SIGNAL(triggered(bool)), SLOT(createWallet()));
 	addAction( act );
 
-	act = new KAction(i18n("&Open..."), 0, Qt::Key_Return, this,
-			SLOT(openWallet()), ac, "wallet_open");
+	act = new KAction(i18n("&Open..."), ac, "wallet_open");
+	connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
+	act->setShortcut(Qt::Key_Return);
 	addAction( act );
 
-	act = new KAction(i18n("Change &Password..."), 0, 0, this,
-			SLOT(changeWalletPassword()), ac, "wallet_password");
+	act = new KAction(i18n("Change &Password..."), ac, "wallet_password");
+	connect(act, SIGNAL(triggered(bool)), SLOT(changeWalletPassword()));
 	addAction( act );
 
 	QStringList ul = KWallet::Wallet::users(wallet);
@@ -70,8 +71,9 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
 	addAction( act );
 
-	act = new KAction(i18n("&Delete"), 0, Qt::Key_Delete, this,
-			SLOT(deleteWallet()), ac, "wallet_delete");
+	act = new KAction(i18n("&Delete"), ac, "wallet_delete");
+	connect(act, SIGNAL(triggered(bool)), SLOT(deleteWallet()));
+	act->setShortcut(Qt::Key_Delete);
 	addAction( act );
 }
 
