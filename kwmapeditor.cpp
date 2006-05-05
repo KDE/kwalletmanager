@@ -122,7 +122,7 @@ void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 	_contextCol = col;
 	KMenu *m = new KMenu(this);
 	m->insertItem(i18n("&New Entry"), this, SLOT(addEntry()));
-	_copyAct->plug(m);
+	m->addAction( _copyAct );
 	m->popup(pos);
 }
 

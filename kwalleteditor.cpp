@@ -595,7 +595,7 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 				m->insertItem(i18n( "&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
 				if (ci && ci->type() == KWallet::Wallet::Password) {
 					m->insertSeparator();
-					_copyPassAction->plug(m);
+					m->addAction( _copyPassAction );
 				}
 				break;
 
@@ -604,15 +604,15 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 				break;
 
 			case KWalletFolderItemClass:
-				_newFolderAction->plug(m);
-				_deleteFolderAction->plug(m);
+				m->addAction( _newFolderAction );
+				m->addAction( _deleteFolderAction );
 				break;
 			default:
 				abort();
 				;
 		}
 	} else {
-		_newFolderAction->plug(m);
+		m->addAction( _newFolderAction );
 	}
 	m->popup(pos);
 }

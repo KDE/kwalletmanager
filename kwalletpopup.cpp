@@ -38,15 +38,15 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 	act = new KAction(i18n("&New Wallet..."), 0, 0, this,
 			SLOT(createWallet()), ac, "wallet_create");
-	act->plug(this);
+	addAction( act );
 
 	act = new KAction(i18n("&Open..."), 0, Qt::Key_Return, this,
 			SLOT(openWallet()), ac, "wallet_open");
-	act->plug(this);
+	addAction( act );
 
 	act = new KAction(i18n("Change &Password..."), 0, 0, this,
 			SLOT(changeWalletPassword()), ac, "wallet_password");
-	act->plug(this);
+	addAction( act );
 
 	QStringList ul = KWallet::Wallet::users(wallet);
 	if (!ul.isEmpty()) {
@@ -68,11 +68,11 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	// FIXME: let's track this inside the manager so we don't need a dcop
 	//        roundtrip here.
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
-	act->plug(this);
+	addAction( act );
 
 	act = new KAction(i18n("&Delete"), 0, Qt::Key_Delete, this,
 			SLOT(deleteWallet()), ac, "wallet_delete");
-	act->plug(this);
+	addAction( act );
 }
 
 
