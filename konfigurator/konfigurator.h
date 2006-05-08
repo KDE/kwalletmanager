@@ -29,7 +29,7 @@ class Q3ListViewItem;
 class KWalletConfig : public KCModule {
 	Q_OBJECT
 	public:
-		KWalletConfig(QWidget *parent = 0L, const char *name = 0L, const QStringList& = QStringList());
+		KWalletConfig(QWidget *parent = 0L, const QStringList& = QStringList());
 		virtual ~KWalletConfig();
 
 		void load();

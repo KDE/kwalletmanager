@@ -19,7 +19,8 @@
 
 
 #include "kwalletpopup.h"
-
+#include <kstdaction.h>
+#include <kactioncollection.h>
 #include <kaction.h>
 #include <kdebug.h>
 #include <k3iconview.h>
