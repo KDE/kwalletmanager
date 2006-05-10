@@ -30,12 +30,12 @@
 #include <kmenu.h>
 #include <kwallet.h>
 
-#include <qcheckbox.h>
-#include <qcombobox.h>
-#include <qlayout.h>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QLayout>
 #include <q3listview.h>
-#include <qpushbutton.h>
-#include <qspinbox.h>
+#include <QPushButton>
+#include <QSpinBox>
 //Added by qt3to4:
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>

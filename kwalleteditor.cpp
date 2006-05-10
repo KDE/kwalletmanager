@@ -47,18 +47,18 @@
 #include <kstringhandler.h>
 #include <ktempfile.h>
 #include <kxmlguifactory.h>
-#include <qcheckbox.h>
-#include <qcombobox.h>
+#include <QCheckBox>
+#include <QComboBox>
 #include <qclipboard.h>
-#include <qlabel.h>
-#include <qlayout.h>
-#include <qlineedit.h>
+#include <QLabel>
+#include <QLayout>
+#include <QLineEdit>
 #include <q3listview.h>
 #include <q3ptrstack.h>
-#include <qpushbutton.h>
+#include <QPushButton>
 #include <QTextDocument>
 #include <q3textedit.h>
-#include <qtimer.h>
+#include <QTimer>
 #include <q3widgetstack.h>
 //Added by qt3to4:
 #include <QTextStream>

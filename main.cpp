@@ -26,7 +26,7 @@
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
 
-#include <qfile.h>
+#include <QFile>
 #include <qfileinfo.h>
 
 #include "kwalletmanager.h"

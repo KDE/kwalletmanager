@@ -42,8 +42,8 @@
 #include <q3accel.h>
 #include <qpointer.h>
 #include <q3ptrstack.h>
-#include <qregexp.h>
-#include <qtooltip.h>
+#include <QRegExp>
+#include <QToolTip>
 //Added by qt3to4:
 #include <QPixmap>
 #include <ktoolinvocation.h>

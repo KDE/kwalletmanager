@@ -21,8 +21,8 @@
 #define KWALLETPOPUP_H
 
 #include <kmenu.h>
-#include <qmap.h>
-#include <qstring.h>
+#include <QMap>
+#include <QString>
 
 class KWalletPopup : public KMenu {
 	Q_OBJECT

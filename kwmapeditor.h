@@ -20,8 +20,8 @@
 #ifndef KWMAPEDITOR_H
 #define KWMAPEDITOR_H
 
-#include <qmap.h>
-#include <qstring.h>
+#include <QMap>
+#include <QString>
 #include <q3table.h>
 
 class KAction;
