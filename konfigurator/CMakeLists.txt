@@ -1,4 +1,3 @@
-kde4_header()
 
 
 
@@ -25,7 +24,6 @@ install_targets(${PLUGIN_INSTALL_DIR} kcm_kwallet )
 install_files( ${XDG_APPS_DIR} FILES kwalletconfig.desktop )
 install_files( ${SERVICES_INSTALL_DIR} FILES kwallet_config.desktop kwalletmanager_show.desktop )
 
-kde4_footer()
 
 
 

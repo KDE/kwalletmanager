@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( icons ) 
 add_subdirectory( konfigurator ) 
@@ -36,7 +35,6 @@ install_files( ${DATA_INSTALL_DIR}/kwalletmanager FILES kwalletmanager.rc kwalle
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 
-kde4_footer()
 
 
 
