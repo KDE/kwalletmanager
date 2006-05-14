@@ -68,7 +68,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
 			if (KWallet::Wallet::isOpen(*it)) {
 				_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
-				QToolTip::remove(_tray);
 				_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
 				break;
 			}
@@ -164,7 +163,6 @@ bool KWalletManager::queryClose() {
 void KWalletManager::aWalletWasOpened() {
 	if (_tray) {
 		_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
-		QToolTip::remove(_tray);
 		_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
 	}
 	updateWalletDisplay();
@@ -309,7 +307,6 @@ void KWalletManager::openWallet(Q3IconViewItem *item) {
 void KWalletManager::allWalletsClosed() {
 	if (_tray) {
 		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
-		QToolTip::remove(_tray);
 		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
 	}
 	possiblyQuit();
