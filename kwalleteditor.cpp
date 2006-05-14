@@ -66,6 +66,7 @@
 #include <QVBoxLayout>
 
 #include <assert.h>
+#include <ktoolbar.h>
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
 : KMainWindow(parent, name), _walletName(wallet), _nonLocal(isPath) {
