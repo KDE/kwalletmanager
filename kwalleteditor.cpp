@@ -819,7 +819,7 @@ void KWalletEditor::importWallet() {
 
 	QString tmpFile;
 	if (!KIO::NetAccess::download(url, tmpFile, this)) {
-		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.prettyUrl()));
 		return;
 	}
 
@@ -947,20 +947,20 @@ void KWalletEditor::importXML() {
 
 	QString tmpFile;
 	if (!KIO::NetAccess::download(url, tmpFile, this)) {
-		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.prettyUrl()));
 		return;
 	}
 
 	QFile qf(tmpFile);
 	if (!qf.open(QIODevice::ReadOnly)) {
-		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.", url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.", url.prettyUrl()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
 	}
 
 	QDomDocument doc(tmpFile);
 	if (!doc.setContent(&qf)) {
-		KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.prettyURL()));
+		KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.prettyUrl()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
 	}
