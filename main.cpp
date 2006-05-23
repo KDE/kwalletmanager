@@ -34,7 +34,7 @@
 
 class MyApp : public KUniqueApplication {
 	public:
-		MyApp() : KUniqueApplication() { ref(); }
+		MyApp() : KUniqueApplication() { KGlobal::ref(); }
 		virtual ~MyApp() {}
 
 		virtual int newInstance() { return 0; }
