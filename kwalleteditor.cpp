@@ -29,7 +29,6 @@
 #include <dcopclient.h>
 #include <dcopref.h>
 #include <kaction.h>
-#include <kapplication.h>
 #include <kdebug.h>
 #include <kdialog.h>
 #include <kfiledialog.h>

@@ -74,10 +74,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 				break;
 			}
 		}
-		if (!isOpen && kapp->isRestored()) {
+		if (!isOpen && qApp->isSessionRestored()) {
 			delete _tray;
 			_tray = 0;
-			kapp->exit();
+			qApp->exit();
 			return;
 		}
 	} else {
@@ -139,7 +139,7 @@ actionCollection());
 		show();
 	}
 
-	kapp->setName("kwallet"); // hack to fix docs
+	qApp->setObjectName("kwallet"); // hack to fix docs
 }
 
 
@@ -158,7 +158,7 @@ void KWalletManager::kwalletdLaunch() {
 bool KWalletManager::queryClose() {
 	if (!_shuttingDown && !kapp->sessionSaving()) {
 		if (!_tray) {
-			kapp->quit();
+			qApp->quit();
 		} else {
 			hide();
 		}
@@ -328,7 +328,7 @@ void KWalletManager::possiblyQuit() {
 			!isVisible() &&
 			!cfg.readEntry("Leave Manager Open", false) &&
 			_kwalletdLaunch) {
-		kapp->quit();
+		qApp->quit();
 	}
 }
 
@@ -390,7 +390,7 @@ void KWalletManager::createWallet() {
 
 void KWalletManager::shuttingDown() {
 	_shuttingDown = true;
-	kapp->quit();
+	qApp->quit();
 }
 
 

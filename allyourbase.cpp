@@ -20,8 +20,8 @@
 
 #include "allyourbase.h"
 
-#include <kapplication.h>
 #include <kdebug.h>
+#include <kinstance.h>
 #include <kglobal.h>
 #include <kio/netaccess.h>
 #include <klocale.h>
@@ -33,6 +33,7 @@
 
 #include <q3dragobject.h>
 #include <QFile>
+#include <QApplication>
 #include <q3ptrlist.h>
 //Added by qt3to4:
 #include <QPixmap>
