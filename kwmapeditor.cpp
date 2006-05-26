@@ -131,8 +131,13 @@ void KWMapEditor::copy() {
 
 class InlineEditor : public QTextEdit {
 	public:
-		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { setWFlags(WStyle_NoBorder | WDestructiveClose); KWin::setType(winId(), NET::Override); }
-		virtual ~InlineEditor() { _p->setText(row, col, text()); _p->emitDirty(); }
+		InlineEditor(KWMapEditor *p, int row, int col) 
+		  : QTextEdit(), _p(p), row(row), col(col) { 
+			setWFlags(WStyle_NoBorder | WDestructiveClose); 
+			KWin::setType(winId(), NET::Override);
+			connect(p, SIGNAL(destroyed()), SLOT(close()));
+ 		}
+		virtual ~InlineEditor() { if (!_p) return; _p->setText(row, col, text()); _p->emitDirty(); }
 
 	protected:
 		virtual void focusOutEvent(QFocusEvent*) { 
@@ -157,7 +162,7 @@ class InlineEditor : public QTextEdit {
 			popup = QTextEdit::createPopupMenu(p);
 			return popup;
 		}
-		KWMapEditor *_p;
+		QGuardedPtr<KWMapEditor> _p;
 		int row, col;
 		QGuardedPtr<QPopupMenu> popup;
 };
