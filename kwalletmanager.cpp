@@ -63,14 +63,22 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		_tray->setObjectName("kwalletmanager tray");
 		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
 		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
-		connect(_tray,SIGNAL(quitSelected()),SLOT(shuttingDown()));
-		QStringList wl = KWallet::Wallet::walletList();
-		for (QStringList::Iterator it = wl.begin(); it != wl.end(); ++it) {
+		connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
+		const QStringList wl = KWallet::Wallet::walletList();
+		bool isOpen = false;
+		for (QStringList::ConstIterator it = wl.begin(); it != wl.end(); ++it) {
 			if (KWallet::Wallet::isOpen(*it)) {
 				_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
 				_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
+				isOpen = true;
 				break;
 			}
+		}
+		if (!isOpen && kapp->isRestored()) {
+			delete _tray;
+			_tray = 0;
+			kapp->exit();
+			return;
 		}
 	} else {
 		_tray = 0;
