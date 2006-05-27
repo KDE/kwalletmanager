@@ -18,7 +18,6 @@
 */
 
 #include "kwmapeditor.h"
-
 #include <kaction.h>
 #include <kactioncollection.h>
 #include <kdebug.h>
@@ -164,7 +163,7 @@ class InlineEditor : public Q3TextEdit {
 			popup = Q3TextEdit::createPopupMenu(p);
 			return popup;
 		}
-		QGuardedPtr<KWMapEditor> _p;
+		QPointer<KWMapEditor> _p;
 		int row, col;
 		QPointer<Q3PopupMenu> popup;
 };
