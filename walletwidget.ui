@@ -269,7 +269,10 @@
                                         <string>This is a binary data entry.  It cannot be editted as its format is unknown and application specific.</string>
                                     </property>
                                     <property name="alignment">
-                                        <set>WordBreak|AlignVCenter</set>
+                                        <set>AlignVCenter</set>
+                                    </property>
+                                   <property name="wordWrap">
+                                        <bool>true</bool>
                                     </property>
                                 </widget>
                                 <spacer row="0" column="1">
