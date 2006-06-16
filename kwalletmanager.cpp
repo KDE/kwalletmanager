@@ -58,6 +58,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	_shuttingDown = false;
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
+	_dcopRef = 0L;
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
 		_tray = new KSystemTray(this);
 		_tray->setObjectName("kwalletmanager tray");
