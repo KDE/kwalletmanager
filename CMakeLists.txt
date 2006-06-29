@@ -19,7 +19,6 @@ kde4_automoc(${kwalletmanager_SRCS})
 
 kde4_add_ui3_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui )
 
-kde4_add_dcop_skels(kwalletmanager_SRCS kwalletmanager.h )
 
 kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 

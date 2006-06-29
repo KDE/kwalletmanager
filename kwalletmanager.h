@@ -19,9 +19,8 @@
 
 #ifndef KWALLETMANAGER_H
 #define KWALLETMANAGER_H
-
+#include <QtCore/QObject>
 #include <kmainwindow.h>
-#include <dcopobject.h>
 #include <q3ptrlist.h>
 //Added by qt3to4:
 #include <QPixmap>
@@ -29,12 +28,11 @@
 class KSystemTray;
 class KWalletIconView;
 class Q3IconViewItem;
-class DCOPRef;
+class QDBusInterface;
 
-
-class KWalletManager : public KMainWindow, public DCOPObject {
+class KWalletManager : public KMainWindow {
 	Q_OBJECT
-	K_DCOP
+	    Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
 
 	public:
 		KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
@@ -59,10 +57,10 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		virtual bool queryClose();
 
 	private:
-	k_dcop:
-		ASYNC allWalletsClosed();
-		ASYNC updateWalletDisplay();
-		ASYNC aWalletWasOpened();
+	public Q_SLOTS: //dbus
+		Q_SCRIPTABLE void allWalletsClosed();
+		Q_SCRIPTABLE void updateWalletDisplay();
+		Q_SCRIPTABLE void aWalletWasOpened();
 
 	private slots:
 		void shuttingDown();
@@ -78,7 +76,7 @@ class KWalletManager : public KMainWindow, public DCOPObject {
 		KSystemTray *_tray;
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
-		DCOPRef *_dcopRef;
+		QDBusInterface *m_kwalletdModule;
 		Q3PtrList<KMainWindow> _windows;
 		bool _kwalletdLaunch;
 };

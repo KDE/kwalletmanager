@@ -22,9 +22,8 @@
 #include "kwalletpopup.h"
 #include "kwalleteditor.h"
 #include "allyourbase.h"
+#include <dbus/qdbus.h>
 
-#include <dcopclient.h>
-#include <dcopref.h>
 #include <kaction.h>
 #include <kapplication.h>
 #include <kconfig.h>
@@ -47,18 +46,22 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <ktoolinvocation.h>
+#include <dbus/qdbusconnection.h>
+
+#define KWALLETMANAGERINTERFACE "org.kde.KWalletD"
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
-: KMainWindow(parent, name, f), DCOPObject("KWalletManager") {
+    : KMainWindow(parent, name, f)
+{
+    QDBus::sessionBus().registerObject("/KWalletManager", this, QDBusConnection::ExportSlots);
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
 	Q3Accel *accel = new Q3Accel(this, "kwalletmanager");
-
-	KApplication::dcopClient()->setQtBridgeEnabled(false);
+#warning "kde4: dbus port how ?"
+	//KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
-	_dcopRef = 0L;
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
 		_tray = new KSystemTray(this);
 		_tray->setObjectName("kwalletmanager tray");
@@ -93,8 +96,13 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	setCentralWidget(_iconView);
 	_iconView->setMinimumSize(320, 200);
 
-	_dcopRef = new DCOPRef("kded", "kwalletd");
-	_dcopRef->dcopClient()->setNotifications(true);
+        m_kwalletdModule = QDBus::sessionBus().findInterface("org.kde.kded", "/modules/kwallet", KWALLETMANAGERINTERFACE);
+        if ( !m_kwalletdModule->isValid() )
+            kWarning() << "kded not running?" << endl;
+        else
+        {
+#warning "kde4: port to dbus"
+#if 0
 	connect(_dcopRef->dcopClient(),
 		SIGNAL(applicationRemoved(const QByteArray&)),
 		this,
@@ -103,13 +111,18 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		SIGNAL(applicationRegistered(const QByteArray&)),
 		this,
 		SLOT(possiblyRescan(const QByteArray&)));
-
-	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "allWalletsClosed()", "allWalletsClosed()", false);
-	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletClosed(QString)", "updateWalletDisplay()", false);
-	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletOpened(QString)", "aWalletWasOpened()", false);
-	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletDeleted(QString)", "updateWalletDisplay()", false);
-	connectDCOPSignal(_dcopRef->app(), _dcopRef->obj(), "walletListDirty()", "updateWalletDisplay()", false);
-
+#endif
+        connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
+                  this, SLOT(allWalletsClosed()));
+        connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
+                  this, SLOT(updateWalletDisplay());
+        connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
+                  this, SLOT(aWalletWasOpened());
+        connect( m_kwalletdModule, SIGNAL(walletDeleted(QString)),
+                  this, SLOT(updateWalletDisplay());
+        connect( m_kwalletdModule, SIGNAL(walletListDirty()),
+                  this, SLOT(updateWalletDisplay());
+        }
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
@@ -146,8 +159,8 @@ actionCollection());
 
 KWalletManager::~KWalletManager() {
 	_tray = 0L;
-	delete _dcopRef;
-	_dcopRef = 0L;
+        delete m_kwalletdModule;
+        m_kwalletdModule=0L;
 }
 
 
@@ -401,7 +414,7 @@ void KWalletManager::setupWallet() {
 
 
 void KWalletManager::closeAllWallets() {
-	_dcopRef->call("closeAllWallets");
+    m_kwalletdModule->call( "closeAllWallets");
 }
 
 
