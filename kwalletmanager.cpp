@@ -22,7 +22,7 @@
 #include "kwalletpopup.h"
 #include "kwalleteditor.h"
 #include "allyourbase.h"
-#include <dbus/qdbus.h>
+#include <QtDBus>
 
 #include <kaction.h>
 #include <kapplication.h>
@@ -113,7 +113,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		SLOT(possiblyRescan(const QByteArray&)));
 #endif
         connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
-                  this, SLOT(allWalletsClosed()));
+                  this, SLOT(allWalletsClosed() ) );
         connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
                   this, SLOT(updateWalletDisplay());
         connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
