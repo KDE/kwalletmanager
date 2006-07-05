@@ -4,7 +4,7 @@
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/kwalletmanager/icons FILES  )
+install( FILES   DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager/icons)
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 

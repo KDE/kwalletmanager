@@ -24,13 +24,13 @@ kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
 target_link_libraries(kwalletmanager  ${KDE4_KIO_LIBS} kwalletclient )
 
-install_targets(/bin kwalletmanager )
+install(TARGETS kwalletmanager  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES kwalletmanager.desktop kwalletmanager-kwalletd.desktop )
-install_files( ${DATA_INSTALL_DIR}/kwalletmanager FILES kwalletmanager.rc kwalleteditor.rc )
+install( FILES kwalletmanager.desktop kwalletmanager-kwalletd.desktop  DESTINATION ${XDG_APPS_DIR})
+install( FILES kwalletmanager.rc kwalleteditor.rc  DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 

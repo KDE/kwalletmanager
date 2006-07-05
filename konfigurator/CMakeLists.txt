@@ -16,13 +16,13 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kwallet )
 
 target_link_libraries(kcm_kwallet  ${KDE4_KDE3SUPPORT_LIBS} kwalletclient )
 
-install_targets(${PLUGIN_INSTALL_DIR} kcm_kwallet )
+install(TARGETS kcm_kwallet  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES kwalletconfig.desktop )
-install_files( ${SERVICES_INSTALL_DIR} FILES kwallet_config.desktop kwalletmanager_show.desktop )
+install( FILES kwalletconfig.desktop  DESTINATION ${XDG_APPS_DIR})
+install( FILES kwallet_config.desktop kwalletmanager_show.desktop  DESTINATION ${SERVICES_INSTALL_DIR})
 
 
 
