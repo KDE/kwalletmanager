@@ -157,7 +157,7 @@ inline QDataStream& operator<<(QDataStream& str, const KWalletEntryItem& w) {
 	QString name = w.text(0);
 	str << name;
 	KWallet::Wallet::EntryType et = w._wallet->entryType(name);
-	str << long(et);
+	str << qint64(et);
 	QByteArray a;
 	w._wallet->readEntry(name, a);
 	str << a;
