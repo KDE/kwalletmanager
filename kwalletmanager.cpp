@@ -46,7 +46,7 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <ktoolinvocation.h>
-#include <dbus/qdbusconnection.h>
+#include <qdbusconnection.h>
 
 #define KWALLETMANAGERINTERFACE "org.kde.KWalletD"
 
