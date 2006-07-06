@@ -25,9 +25,9 @@
 #include "allyourbase.h"
 
 #include <stdlib.h>
-
-#include <dcopclient.h>
-#include <dcopref.h>
+#include <QDomElement>
+#include <QDomNode>
+#include <QDomDocument>
 #include <kaction.h>
 #include <kdebug.h>
 #include <kdialog.h>
@@ -449,7 +449,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 			_ww->_entryName->clear();
 			_ww->_entryStack->setCurrentIndex(0);
 			break;
-	}	
+	}
 
 	if (fi) {
 		_currentFolder = fi->name();
@@ -811,7 +811,7 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
 
 void KWalletEditor::importWallet() {
-	KUrl url = KFileDialog::getOpenURL(QString::null, "*.kwl", this);
+	KUrl url = KFileDialog::getOpenUrl(KUrl(), "*.kwl", this);
 	if (url.isEmpty()) {
 		return;
 	}
@@ -836,7 +836,7 @@ void KWalletEditor::importWallet() {
 			}
 
 			_w->setFolder(*f);
-			
+
 			QMap<QString, QMap<QString, QString> > map;
 			int rc;
 			rc = w->readMapList("*", map);
@@ -939,7 +939,7 @@ void KWalletEditor::importWallet() {
 
 
 void KWalletEditor::importXML() {
-	KUrl url = KFileDialog::getOpenURL(QString::null, "*.xml", this);
+	KUrl url = KFileDialog::getOpenUrl( KUrl(), "*.xml", this);
 	if (url.isEmpty()) {
 		return;
 	}
@@ -1101,7 +1101,7 @@ void KWalletEditor::exportXML() {
 	ts << "</wallet>" << endl;
 	tf.close();
 
-	KUrl url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
+	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.xml", this);
 
 	if (!url.isEmpty()) {
 		KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
@@ -1115,7 +1115,7 @@ void KWalletEditor::setNewWallet(bool x) {
 
 
 void KWalletEditor::saveAs() {
-	KUrl url = KFileDialog::getSaveURL(QString::null, "*.kwl", this);
+	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.kwl", this);
 	if (!url.isEmpty()) {
 		// Sync() kwalletd
 		if (_nonLocal) {

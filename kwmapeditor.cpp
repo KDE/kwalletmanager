@@ -25,7 +25,7 @@
 #include <kmenu.h>
 #include <kstdaction.h>
 #include <kwin.h>
-
+#include <QPointer>
 #include <qapplication.h>
 #include <qclipboard.h>
 #include <QPushButton>
@@ -139,16 +139,16 @@ class InlineEditor : public Q3TextEdit {
 
 	protected:
 		virtual void focusOutEvent(QFocusEvent*) {
-#warning "Port to kde 4.0"				
-#if 0				
+#warning "Port to kde 4.0"
+#if 0
 			if (Q3FocusEvent::reason() == QFocusEvent::Popup) {
 				QWidget *focusW = qApp->focusWidget();
 				if (focusW && focusW == popup) {
 					return;
 				}
 			}
-#endif			
-			close(); 
+#endif
+			close();
 		}
 		virtual void keyPressEvent(QKeyEvent *e) {
 			if (e->key() == Qt::Key_Escape) {

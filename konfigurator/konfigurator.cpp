@@ -16,11 +16,9 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
  */
-
+#include <QtDBus>
 #include "konfigurator.h"
 #include "walletconfigwidget.h"
-#include <dcopclient.h>
-#include <dcopref.h>
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kconfig.h>
@@ -39,6 +37,7 @@
 //Added by qt3to4:
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>
+#define KWALLETMANAGERINTERFACE "org.kde.KWalletD"
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
 K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
@@ -81,7 +80,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QStringList&)
 	updateWalletLists();
 	load();
 
-	if (DCOPClient::mainClient()->isApplicationRegistered("kwalletmanager")) {
+	if (QDBus::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
 		_wcw->_launch->hide();
 	}
 
@@ -168,12 +167,13 @@ void KWalletConfig::newNetworkWallet() {
 
 
 void KWalletConfig::launchManager() {
-	if (!DCOPClient::mainClient()->isApplicationRegistered("kwalletmanager")) {
+	if (!QDBus::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
 		KToolInvocation::startServiceByDesktopName("kwalletmanager_show");
 	} else {
-		DCOPRef r("kwalletmanager", "kwalletmanager-mainwindow#1");
-		r.send("show");
-		r.send("raise");
+            #warning "kde4: need to test it"
+             QDBusInterface kwalletd("org.kde.kwallet.kwalletmanager", "kwalletmanager-mainwindow_1");
+             kwalletd.call( "show");
+             kwalletd.call( "raise" );
 	}
 }
 
@@ -285,8 +285,8 @@ void KWalletConfig::save() {
 	}
 
 	_cfg->sync();
-	DCOPRef("kded", "kwalletd").call("reconfigure()");
-
+        QDBusInterface kwalletd("org.kde.kded", "/modules/kwallet", KWALLETMANAGERINTERFACE);
+        kwalletd.call( "reconfigure" );
 	emit changed(false);
 }
 

@@ -172,7 +172,7 @@ inline QDataStream& operator<<(QDataStream& str, const KWalletFolderItem& w) {
 	for (QStringList::Iterator it = entries.begin(); it != entries.end(); ++it) {
 		str << *it;
 		KWallet::Wallet::EntryType et = w._wallet->entryType(*it);
-		str << long(et);
+		str << (qint32)et;
 		QByteArray a;
 		w._wallet->readEntry(*it, a);
 		str << a;

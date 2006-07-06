@@ -101,27 +101,27 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
             kWarning() << "kded not running?" << endl;
         else
         {
-#warning "kde4: port to dbus"
+#warning "kde4: port to dbus";
 #if 0
-	connect(_dcopRef->dcopClient(),
-		SIGNAL(applicationRemoved(const QByteArray&)),
-		this,
-		SLOT(possiblyRescan(const QByteArray&)));
-	connect(_dcopRef->dcopClient(),
-		SIGNAL(applicationRegistered(const QByteArray&)),
-		this,
-		SLOT(possiblyRescan(const QByteArray&)));
+            connect(_dcopRef->dcopClient(),
+                    SIGNAL(applicationRemoved(const QByteArray&)),
+                    this,
+                    SLOT(possiblyRescan(const QByteArray&)));
+            connect(_dcopRef->dcopClient(),
+                    SIGNAL(applicationRegistered(const QByteArray&)),
+                    this,
+                    SLOT(possiblyRescan(const QByteArray&)));
 #endif
-        connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
-                  this, SLOT(allWalletsClosed() ) );
-        connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
-                  this, SLOT(updateWalletDisplay());
-        connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
-                  this, SLOT(aWalletWasOpened());
-        connect( m_kwalletdModule, SIGNAL(walletDeleted(QString)),
-                  this, SLOT(updateWalletDisplay());
-        connect( m_kwalletdModule, SIGNAL(walletListDirty()),
-                  this, SLOT(updateWalletDisplay());
+            connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
+                     this, SLOT(allWalletsClosed() ) );
+            connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
+                     this, SLOT(updateWalletDisplay()) );
+            connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
+                     this, SLOT(aWalletWasOpened()) );
+            connect( m_kwalletdModule, SIGNAL(walletDeleted(QString)),
+                  this, SLOT(updateWalletDisplay()) );
+            connect( m_kwalletdModule, SIGNAL(walletListDirty()),
+                  this, SLOT(updateWalletDisplay()) );
         }
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay

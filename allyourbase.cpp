@@ -207,7 +207,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
 			return false;
 		}
 	}
-	long l;
+	qint32 l;
 	ds >> l;
 	et = KWallet::Wallet::EntryType(l);
 	ds >> value;
@@ -243,7 +243,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 		QByteArray value;
 		KWallet::Wallet::EntryType et;
 		ds >> name;
-		long l;
+		qint32 l;
 		ds >> l;
 		et = KWallet::Wallet::EntryType(l);
 		ds >> value;
