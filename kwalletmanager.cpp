@@ -96,7 +96,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	setCentralWidget(_iconView);
 	_iconView->setMinimumSize(320, 200);
 
-        m_kwalletdModule = QDBus::sessionBus().findInterface("org.kde.kded", "/modules/kwallet", KWALLETMANAGERINTERFACE);
+        m_kwalletdModule = new QDBusInterface("org.kde.kded", "/modules/kwallet", KWALLETMANAGERINTERFACE);
         if ( !m_kwalletdModule->isValid() )
             kWarning() << "kded not running?" << endl;
         else
