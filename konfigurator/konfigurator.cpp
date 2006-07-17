@@ -102,8 +102,8 @@ void KWalletConfig::updateWalletLists() {
 	_wcw->_defaultWallet->clear();
 
 	QStringList wl = KWallet::Wallet::walletList();
-	_wcw->_localWallet->insertStringList(wl);
-	_wcw->_defaultWallet->insertStringList(wl);
+	_wcw->_localWallet->addItems(wl);
+	_wcw->_defaultWallet->addItems(wl);
 
 	if (wl.contains(p1)) {
 		_wcw->_localWallet->setCurrentText(p1);
