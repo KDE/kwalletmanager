@@ -196,7 +196,7 @@ void KWalletConfig::load() {
 	if (config.hasKey("Default Wallet")) {
 		_wcw->_defaultWallet->setCurrentText(config.readEntry("Default Wallet"));
 	} else {
-		_wcw->_defaultWallet->setCurrentItem(0);
+		_wcw->_defaultWallet->setCurrentIndex(0);
 	}
 	if (config.hasKey("Local Wallet")) {
 		_wcw->_localWalletSelected->setChecked( !config.readEntry("Use One Wallet", false) );
@@ -253,7 +253,7 @@ void KWalletConfig::save() {
 		config.deleteEntry("Local Wallet");
 	}
 
-	if (_wcw->_defaultWallet->currentItem() != -1) {
+	if (_wcw->_defaultWallet->currentIndex() != -1) {
 		config.writeEntry("Default Wallet", _wcw->_defaultWallet->currentText());
 	} else {
 		config.deleteEntry("Default Wallet");
@@ -300,9 +300,9 @@ void KWalletConfig::defaults() {
 	_wcw->_autoclose->setChecked(true);
 	_wcw->_closeIdle->setChecked(false);
 	_wcw->_idleTime->setValue(10);
-	_wcw->_defaultWallet->setCurrentItem(0);
+	_wcw->_defaultWallet->setCurrentIndex(0);
 	_wcw->_localWalletSelected->setChecked(false);
-        _wcw->_localWallet->setCurrentItem( 0 );
+        _wcw->_localWallet->setCurrentIndex( 0 );
 	_wcw->_accessList->clear();
 	emit changed(true);
 }
