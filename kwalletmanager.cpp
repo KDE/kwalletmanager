@@ -65,14 +65,14 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
 		_tray = new KSystemTray(this);
 		_tray->setObjectName("kwalletmanager tray");
-		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
+		_tray->setIcon(loadSystemTrayIcon("wallet_closed"));
 		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
 		connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
 		const QStringList wl = KWallet::Wallet::walletList();
 		bool isOpen = false;
 		for (QStringList::ConstIterator it = wl.begin(); it != wl.end(); ++it) {
 			if (KWallet::Wallet::isOpen(*it)) {
-				_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
+				_tray->setIcon(loadSystemTrayIcon("wallet_open"));
 				_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
 				isOpen = true;
 				break;
@@ -184,7 +184,7 @@ bool KWalletManager::queryClose() {
 
 void KWalletManager::aWalletWasOpened() {
 	if (_tray) {
-		_tray->setPixmap(loadSystemTrayIcon("wallet_open"));
+		_tray->setIcon(loadSystemTrayIcon("wallet_open"));
 		_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
 	}
 	updateWalletDisplay();
@@ -328,7 +328,7 @@ void KWalletManager::openWallet(Q3IconViewItem *item) {
 
 void KWalletManager::allWalletsClosed() {
 	if (_tray) {
-		_tray->setPixmap(loadSystemTrayIcon("wallet_closed"));
+		_tray->setIcon(loadSystemTrayIcon("wallet_closed"));
 		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
 	}
 	possiblyQuit();
@@ -418,7 +418,7 @@ void KWalletManager::closeAllWallets() {
 }
 
 
-QPixmap KWalletManager::loadSystemTrayIcon(const QString &icon) {
+QIcon KWalletManager::loadSystemTrayIcon(const QString &icon) {
 	return KSystemTray::loadIcon(icon);
 }
 
