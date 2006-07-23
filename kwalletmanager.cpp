@@ -35,7 +35,7 @@
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kstdaction.h>
-#include <ksystemtray.h>
+#include <ksystemtrayicon.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
 #include <q3accel.h>
@@ -63,7 +63,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
-		_tray = new KSystemTray(this);
+		_tray = new KSystemTrayIcon(this);
 		_tray->setObjectName("kwalletmanager tray");
 		_tray->setIcon(loadSystemTrayIcon("wallet_closed"));
 		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
@@ -419,7 +419,7 @@ void KWalletManager::closeAllWallets() {
 
 
 QIcon KWalletManager::loadSystemTrayIcon(const QString &icon) {
-	return KSystemTray::loadIcon(icon);
+	return KSystemTrayIcon::loadIcon(icon);
 }
 
 
