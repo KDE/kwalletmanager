@@ -24,8 +24,9 @@
 #include <q3ptrlist.h>
 //Added by qt3to4:
 #include <QPixmap>
+#include <QIcon>
 
-class KSystemTray;
+class KSystemTrayIcon;
 class KWalletIconView;
 class Q3IconViewItem;
 class QDBusInterface;
@@ -38,7 +39,7 @@ class KWalletManager : public KMainWindow {
 		KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
 		virtual ~KWalletManager();
 
-                QPixmap loadSystemTrayIcon(const QString &icon);
+                QIcon loadSystemTrayIcon(const QString &icon);
 
 		void kwalletdLaunch();
 
@@ -73,7 +74,7 @@ class KWalletManager : public KMainWindow {
 		void closeAllWallets();
 
 	private:
-		KSystemTray *_tray;
+		KSystemTrayIcon *_tray;
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
 		QDBusInterface *m_kwalletdModule;
