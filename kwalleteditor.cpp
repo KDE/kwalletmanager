@@ -1104,7 +1104,16 @@ void KWalletEditor::exportXML() {
 	KURL url = KFileDialog::getSaveURL(QString::null, "*.xml", this);
 
 	if (!url.isEmpty()) {
-		KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
+		bool ok = true;
+		if (KIO::NetAccess::exists(url, false, this)) {
+			int rc = KMessageBox::warningContinueCancel(this, i18n("The file '%1' already exists. Would you like to overwrite this file?").arg(url.prettyURL()), i18n("Overwrite"));
+			if (rc == KMessageBox::Cancel) {
+				ok = false;
+			}
+		}
+		if (ok) {
+			KIO::NetAccess::file_copy(tf.name(), url, 0600, true, false, this);
+		}
 	}
 }
 
