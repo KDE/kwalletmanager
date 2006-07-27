@@ -1104,7 +1104,7 @@ void KWalletEditor::exportXML() {
 	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.xml", this);
 
 	if (!url.isEmpty()) {
-		KIO::NetAccess::file_copy(tf.name(), url, 0600, false, false, this);
+		KIO::NetAccess::dircopy(KUrl::fromPath(tf.name()), url, this);
 	}
 }
 
@@ -1119,10 +1119,10 @@ void KWalletEditor::saveAs() {
 	if (!url.isEmpty()) {
 		// Sync() kwalletd
 		if (_nonLocal) {
-			KIO::NetAccess::file_copy(_walletName, url, 0600, false, false, this);
+			KIO::NetAccess::dircopy(_walletName, url, this);
 		} else {
 			QString path = KGlobal::dirs()->saveLocation("kwallet") + "/" + _walletName + ".kwl";
-			KIO::NetAccess::file_copy(path, url, 0600, false, false, this);
+			KIO::NetAccess::dircopy(KUrl::fromPath(path), url, this);
 		}
 	}
 }
