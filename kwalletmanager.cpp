@@ -47,7 +47,7 @@
 #include <QPixmap>
 #include <ktoolinvocation.h>
 #include <qdbusconnection.h>
-
+#include <kicon.h>
 #define KWALLETMANAGERINTERFACE "org.kde.KWalletD"
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
