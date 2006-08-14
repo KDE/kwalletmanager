@@ -32,7 +32,7 @@ install(TARGETS kwalletmanager  DESTINATION ${BIN_INSTALL_DIR} )
 install( FILES kwalletmanager.desktop kwalletmanager-kwalletd.desktop  DESTINATION ${XDG_APPS_DIR})
 install( FILES kwalletmanager.rc kwalleteditor.rc  DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
 
-kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
+kde4_install_icons( ${ICON_INSTALL_DIR}   )
 
 
 
