@@ -53,7 +53,7 @@
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KMainWindow(parent, name, f)
 {
-    QDBusConnection::sessionBus().registerObject("/KWalletManager", this, QDBusConnection::ExportSlots);
+    QDBusConnection::sessionBus().registerObject("/KWalletManager", this, QDBusConnection::ExportScriptableSlots);
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
 	Q3Accel *accel = new Q3Accel(this, "kwalletmanager");
