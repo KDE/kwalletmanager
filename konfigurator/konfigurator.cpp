@@ -80,7 +80,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QStringList&)
 	updateWalletLists();
 	load();
 
-	if (QDBus::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
+	if (QDBusConnection::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
 		_wcw->_launch->hide();
 	}
 
@@ -167,7 +167,7 @@ void KWalletConfig::newNetworkWallet() {
 
 
 void KWalletConfig::launchManager() {
-	if (!QDBus::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
+	if (!QDBusConnection::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
 		KToolInvocation::startServiceByDesktopName("kwalletmanager_show");
 	} else {
             #warning "kde4: need to test it"
