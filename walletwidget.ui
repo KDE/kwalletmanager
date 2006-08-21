@@ -69,7 +69,7 @@
                             <string></string>
                         </property>
                         <property name="textFormat">
-                            <enum>PlainText</enum>
+                            <enum>Qt::PlainText</enum>
                         </property>
                     </widget>
                     <spacer row="3" column="0">
@@ -209,7 +209,7 @@
                                         <cstring>_passwordValue</cstring>
                                     </property>
                                     <property name="textFormat">
-                                        <enum>PlainText</enum>
+                                        <enum>Qt::PlainText</enum>
                                     </property>
                                 </widget>
                                 <spacer row="0" column="1">
