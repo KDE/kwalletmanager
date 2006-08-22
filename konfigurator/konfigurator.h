@@ -33,6 +33,7 @@ class KWalletConfig : public KCModule {
 		virtual ~KWalletConfig();
 
 		void load();
+		void load( bool useDefaults );
 		void save();
 		void defaults();
 

@@ -177,9 +177,13 @@ void KWalletConfig::configChanged() {
 	emit changed(true);
 }
 
-
 void KWalletConfig::load() {
+	load( false );
+}
+
+void KWalletConfig::load(bool useDefaults) {
 	KConfigGroup config(_cfg, "Wallet");
+	config.setReadDefaults( useDefaults );
 	_wcw->_enabled->setChecked(config.readBoolEntry("Enabled", true));
 	_wcw->_openPrompt->setChecked(config.readBoolEntry("Prompt on Open", true));
 	_wcw->_launchManager->setChecked(config.readBoolEntry("Launch Manager", true));
@@ -226,7 +230,7 @@ void KWalletConfig::load() {
 			new QListViewItem(lvi, QString::null, *j, i18n("Always Deny"));
 		}
 	}
-	emit changed(false);
+	emit changed(useDefaults);
 }
 
 
@@ -287,19 +291,7 @@ void KWalletConfig::save() {
 
 
 void KWalletConfig::defaults() {
-	_wcw->_enabled->setChecked(true);
-	_wcw->_openPrompt->setChecked(true);
-	_wcw->_launchManager->setChecked(true);
-	_wcw->_autocloseManager->setChecked(false);
-	_wcw->_screensaverLock->setChecked(false);
-	_wcw->_autoclose->setChecked(true);
-	_wcw->_closeIdle->setChecked(false);
-	_wcw->_idleTime->setValue(10);
-	_wcw->_defaultWallet->setCurrentItem(0);
-	_wcw->_localWalletSelected->setChecked(false);
-        _wcw->_localWallet->setCurrentItem( 0 );
-	_wcw->_accessList->clear();
-	emit changed(true);
+	load( true );
 }
 
 
