@@ -291,7 +291,7 @@ void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
 			}
 			QString tmpFile;
 			if (KIO::NetAccess::download(u, tmpFile, 0L)) {
-				file.setName(tmpFile);
+				file.setFileName(tmpFile);
 				file.open(QIODevice::ReadOnly);
 				ds = new QDataStream(&file);
 				KIO::NetAccess::removeTempFile(tmpFile);
@@ -309,7 +309,7 @@ void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
 		//delete the folder from the source if we were moving
 		Qt::ButtonState state = QApplication::mouseButtons();
 		if (e->source() && e->source()->parent() &&
-			!strcmp(e->source()->parent()->className(), "KWalletEntryList") &&
+		    !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList") &&
 			!(state & Qt::ControlModifier)) {
 		
 			KWalletEntryList *el =
@@ -399,8 +399,8 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 
 	//detect if we are dragging from kwallet itself
 	if (e->source() && e->source()->parent() &&
-		!strcmp(e->source()->parent()->className(), "KWalletEntryList")) {
-
+	    !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList")) {
+	  
 		el = dynamic_cast<KWalletEntryList*>(e->source()->parent());
 		if (!el) {
 			KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the item"));
@@ -449,7 +449,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 		}
 		QString tmpFile;
 		if (KIO::NetAccess::download(u, tmpFile, 0L)) {
-			file.setName(tmpFile);
+			file.setFileName(tmpFile);
 			file.open(QIODevice::ReadOnly);
 			ds = new QDataStream(&file);
 			//check magic to discover mime type
@@ -605,7 +605,7 @@ class KWalletIconDrag : public Q3IconDrag {
 			if (mimetype == "application/x-qiconlist") {
 				return Q3IconDrag::encodedData(mime);
 			} else if (mimetype == "text/uri-list") {
-				QByteArray s = _urls.join("\r\n").latin1();
+				QByteArray s = _urls.join("\r\n").toLatin1();
 				if (_urls.count() > 0) {
 					s.append("\r\n");
 				}
