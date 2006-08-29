@@ -69,7 +69,8 @@
 #include <kicon.h>
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
-: KMainWindow(parent, name), _walletName(wallet), _nonLocal(isPath) {
+: KMainWindow(parent), _walletName(wallet), _nonLocal(isPath) {
+	setObjectName(name);
 	_newWallet = false;
 	_ww = new WalletWidget(this, "Wallet Widget");
 	_copyPassAction = KStdAction::copy(this, SLOT(copyPassword()), actionCollection());
@@ -865,7 +866,7 @@ void KWalletEditor::importWallet() {
 					} else if (hasEntry && mp == Never) {
 						continue;
 					}
-					_w->writeMap(me.key(), me.data());
+					_w->writeMap(me.key(), me.value());
 				}
 			}
 
@@ -895,7 +896,7 @@ void KWalletEditor::importWallet() {
 					} else if (hasEntry && mp == Never) {
 						continue;
 					}
-					_w->writePassword(pe.key(), pe.data());
+					_w->writePassword(pe.key(), pe.value());
 				}
 			}
 
@@ -925,7 +926,7 @@ void KWalletEditor::importWallet() {
 					} else if (hasEntry && mp == Never) {
 						continue;
 					}
-					_w->writeEntry(ee.key(), ee.data());
+					_w->writeEntry(ee.key(), ee.value());
 				}
 			}
 		}
@@ -1021,7 +1022,7 @@ void KWalletEditor::importXML() {
 			if (type == "password") {
 				_w->writePassword(ename, e.text());
 			} else if (type == "stream") {
-				_w->writeEntry(ename, KCodecs::base64Decode(e.text().latin1()));
+				_w->writeEntry(ename, KCodecs::base64Decode(e.text().toLatin1()));
 			} else if (type == "map") {
 				QMap<QString,QString> map;
 				QDomNode mapNode = e.firstChild();
@@ -1085,7 +1086,7 @@ void KWalletEditor::exportXML() {
 						if (_w->readMap(*j, map) == 0) {
 							ts << "    <map name=\"" << Qt::escape(*j) << "\">" << endl;
 							for (QMap<QString,QString>::ConstIterator k = map.begin(); k != map.end(); ++k) {
-								ts << "      <mapentry name=\"" << Qt::escape(k.key()) << "\">" << Qt::escape(k.data()) << "</mapentry>" << endl;
+								ts << "      <mapentry name=\"" << Qt::escape(k.key()) << "\">" << Qt::escape(k.value()) << "</mapentry>" << endl;
 							}
 							ts << "    </map>" << endl;
 						}
