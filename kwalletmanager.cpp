@@ -43,6 +43,7 @@
 #include <q3ptrstack.h>
 #include <QRegExp>
 #include <QToolTip>
+#include <qtimer.h>
 //Added by qt3to4:
 #include <QPixmap>
 #include <ktoolinvocation.h>
@@ -81,7 +82,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		if (!isOpen && qApp->isSessionRestored()) {
 			delete _tray;
 			_tray = 0;
-			qApp->exit();
+			QTimer::singleShot( 0, qApp, SLOT( quit()));
 			return;
 		}
 	} else {
