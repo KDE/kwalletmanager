@@ -68,7 +68,7 @@ void KWMapEditor::reload() {
 	row = 0;
 	for (QMap<QString,QString>::Iterator it = _map.begin(); it != _map.end(); ++it) {
 		setText(row, 1, it.key());
-		setText(row, 2, it.data());
+		setText(row, 2, it.value());
 		row++;
 	}
 }
