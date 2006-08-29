@@ -43,6 +43,7 @@
 #include <qguardedptr.h>
 #include <qptrstack.h>
 #include <qregexp.h>
+#include <qtimer.h>
 #include <qtooltip.h>
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
@@ -75,7 +76,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, WFlags f)
 		if (!isOpen && kapp->isRestored()) {
 			delete _tray;
 			_tray = 0L;
-			kapp->exit();
+			QTimer::singleShot( 0, kapp, SLOT( quit()));
 			return;
 		}
 	} else {
