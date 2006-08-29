@@ -109,7 +109,7 @@ void KWalletPopup::createWallet() {
 
 
 void KWalletPopup::disconnectApp(int id) {
-	KWallet::Wallet::disconnectApplication(_walletName, _appMap[id].latin1());
+	KWallet::Wallet::disconnectApplication(_walletName, _appMap[id].toLatin1());
 }
 
 #include "kwalletpopup.moc"
