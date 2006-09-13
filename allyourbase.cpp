@@ -225,7 +225,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 	QString folder;
 	ds >> folder;
 	if (_wallet->hasFolder(folder)) {
-		int rc = KMessageBox::warningYesNoCancel(0L, i18n("A folder by the name '%1' already exists.  What would you like to do?", folder), QString::null, KStdGuiItem::cont(), i18n("Replace"));
+		int rc = KMessageBox::warningYesNoCancel(0L, i18n("A folder by the name '%1' already exists.  What would you like to do?", folder), QString::null, KStdGuiItem::cont(), KGuiItem(i18n("Replace")));
 		if (rc == KMessageBox::Cancel) {
 			return false;
 		}

@@ -247,7 +247,7 @@ void KWalletManager::deleteWallet(const QString& walletName) {
 void KWalletManager::closeWallet(const QString& walletName) {
 	int rc = KWallet::Wallet::closeWallet(walletName, false);
 	if (rc != 0) {
-		rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString::null, i18n("Force Closure"), i18n("Do Not Force"));
+		rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString::null, KGuiItem(i18n("Force Closure")), KGuiItem(i18n("Do Not Force")));
 		if (rc == KMessageBox::Yes) {
 			rc = KWallet::Wallet::closeWallet(walletName, true);
 			if (rc != 0) {
@@ -384,7 +384,7 @@ void KWalletManager::createWallet() {
 		}
 
 		if (_iconView->findItem(n)) {
-			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString::null, i18n("Try New"), i18n("Do Not Try"));
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString::null, KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}

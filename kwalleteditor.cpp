@@ -328,7 +328,7 @@ void KWalletEditor::createFolder() {
 			}
 
 			if (_entryList->existsFolder(n)) {
-				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"), QString::null, i18n("Try Again"), i18n("Do Not Try"));
+				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"), QString::null, KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));
 				if (rc == KMessageBox::Yes) {
 					continue;
 				}
@@ -661,7 +661,7 @@ void KWalletEditor::newEntry() {
 
 		// FIXME: prohibits the use of the subheadings
 		if (fi->contains(n)) {
-			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"), QString::null, i18n("Try Again"), i18n("Do Not Try"));
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"), QString::null, KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}
