@@ -1,4 +1,4 @@
-
+project(kwallet)
 add_subdirectory( icons ) 
 add_subdirectory( konfigurator ) 
 
