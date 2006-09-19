@@ -37,7 +37,7 @@
 //Added by qt3to4:
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>
-#define KWALLETMANAGERINTERFACE "org.kde.KWalletD"
+#define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
 K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
