@@ -1,9 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Icon=kwalletmanager
-Type=Application
+
+Type=Service
+ServiceTypes=KCModule
+
 Exec=kcmshell kwalletconfig
 DocPath=kwallet/index.html
+
 X-KDE-ModuleType=Library
 X-KDE-Library=kwallet
 X-KDE-ParentApp=kcontrol
