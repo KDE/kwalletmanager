@@ -100,7 +100,7 @@
                             <string>&amp;Undo</string>
                         </property>
                         <property name="iconSet">
-                            <iconset>"undo"</iconset>
+                            <iconset>undo</iconset>
                         </property>
                     </widget>
                     <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="3">
@@ -167,7 +167,7 @@
                             <string>&amp;Save</string>
                         </property>
                         <property name="iconSet">
-                            <iconset>"filesave"</iconset>
+                            <iconset>filesave</iconset>
                         </property>
                     </widget>
                     <widget class="QStackedWidget" row="2" column="0" rowspan="1" colspan="3">
