@@ -1101,6 +1101,7 @@ void KWalletEditor::exportXML() {
 	}
 
 	ts << "</wallet>" << endl;
+	ts.flush();
 
 	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.xml", this);
 
