@@ -44,7 +44,7 @@
 #include <kstandarddirs.h>
 #include <kstdaction.h>
 #include <kstringhandler.h>
-#include <ktempfile.h>
+#include <ktemporaryfile.h>
 #include <kxmlguifactory.h>
 #include <QCheckBox>
 #include <QComboBox>
@@ -1047,9 +1047,9 @@ void KWalletEditor::importXML() {
 
 
 void KWalletEditor::exportXML() {
-	KTempFile tf;
-	tf.setAutoDelete(true);
-	QTextStream& ts(*tf.textStream());
+	KTemporaryFile tf;
+	tf.open();
+	QTextStream ts(&tf);
 	QStringList fl = _w->folderList();
 
 	ts << "<wallet name=\"" << _walletName << "\">" << endl;
@@ -1101,12 +1101,11 @@ void KWalletEditor::exportXML() {
 	}
 
 	ts << "</wallet>" << endl;
-	tf.close();
 
 	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.xml", this);
 
 	if (!url.isEmpty()) {
-		KIO::NetAccess::dircopy(KUrl::fromPath(tf.name()), url, this);
+		KIO::NetAccess::dircopy(KUrl::fromPath(tf.fileName()), url, this);
 	}
 }
 
