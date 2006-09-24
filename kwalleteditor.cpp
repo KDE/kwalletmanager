@@ -1123,7 +1123,7 @@ void KWalletEditor::saveAs() {
 		if (_nonLocal) {
 			KIO::NetAccess::dircopy(_walletName, url, this);
 		} else {
-			QString path = KGlobal::dirs()->saveLocation("kwallet") + "/" + _walletName + ".kwl";
+			QString path = KGlobal::dirs()->saveLocation("kwallet") + '/' + _walletName + ".kwl";
 			KIO::NetAccess::dircopy(KUrl::fromPath(path), url, this);
 		}
 	}

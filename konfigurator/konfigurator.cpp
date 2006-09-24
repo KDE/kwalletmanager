@@ -125,12 +125,12 @@ QString KWalletConfig::newWallet() {
 			this);
 
 	if (!ok) {
-		return QString::null;
+		return QString();
 	}
 
 	KWallet::Wallet *w = KWallet::Wallet::openWallet(n);
 	if (!w) {
-		return QString::null;
+		return QString();
 	}
 
 	delete w;
