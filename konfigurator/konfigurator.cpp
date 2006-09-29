@@ -58,7 +58,8 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QStringList&)
 	QVBoxLayout *vbox = new QVBoxLayout(this);
 	vbox->setSpacing(KDialog::spacingHint());
 	vbox->setMargin(0);
-	vbox->add(_wcw = new WalletConfigWidget(this));
+        _wcw = new WalletConfigWidget(this);
+	vbox->addWidget(_wcw);
 
 	connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_launchManager, SIGNAL(clicked()), this, SLOT(configChanged()));
