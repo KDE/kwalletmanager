@@ -72,7 +72,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 : KMainWindow(parent), _walletName(wallet), _nonLocal(isPath) {
 	setObjectName(name);
 	_newWallet = false;
-	_ww = new WalletWidget(this, "Wallet Widget");
+	_ww = new WalletWidget(this);
 	_copyPassAction = KStdAction::copy(this, SLOT(copyPassword()), actionCollection());
 
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
