@@ -21,7 +21,7 @@
           <property name="orientation" >
             <enum>Qt::Horizontal</enum>
           </property>
-          <widget class="Q3Frame" name="_entryListFrame" >
+          <widget class="QFrame" name="_entryListFrame" >
             <property name="sizePolicy" >
               <sizepolicy>
                 <hsizetype>5</hsizetype>
