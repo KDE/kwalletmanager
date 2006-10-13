@@ -15,7 +15,7 @@ set(kwalletmanager_SRCS
    kwmapeditor.cpp 
    allyourbase.cpp )
 
-kde4_automoc(${kwalletmanager_SRCS})
+kde4_automoc(kwalletmanager ${kwalletmanager_SRCS})
 
 kde4_add_ui3_files(kwalletmanager_SRCS kbetterthankdialogbase.ui )
 
