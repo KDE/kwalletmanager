@@ -6,7 +6,7 @@
 
 set(kcm_kwallet_PART_SRCS konfigurator.cpp )
 
-kde4_automoc(kcm_kwallet ${kcm_kwallet_PART_SRCS})
+kde4_automoc(${kcm_kwallet_PART_SRCS})
 
 kde4_add_ui3_files(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
 
