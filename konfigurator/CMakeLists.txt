@@ -12,7 +12,6 @@ kde4_add_ui3_files(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
 
 kde4_add_plugin(kcm_kwallet ${kcm_kwallet_PART_SRCS})
 
-kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kwallet )
 
 target_link_libraries(kcm_kwallet  ${KDE4_KDE3SUPPORT_LIBS} kwalletclient )
 
