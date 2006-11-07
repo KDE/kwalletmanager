@@ -58,7 +58,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
 	Q3Accel *accel = new Q3Accel(this, "kwalletmanager");
+#ifdef __GNUC__
 #warning "kde4: dbus port how ?"
+#endif	
 	//KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
@@ -102,7 +104,9 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
             kWarning() << "kded not running?" << endl;
         else
         {
+#ifdef __GNUC__
 #warning "kde4: port to dbus";
+#endif		
 #if 0
             connect(_dcopRef->dcopClient(),
                     SIGNAL(applicationRemoved(const QByteArray&)),

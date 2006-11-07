@@ -139,7 +139,9 @@ class InlineEditor : public Q3TextEdit {
 
 	protected:
 		virtual void focusOutEvent(QFocusEvent*) {
+#ifdef __GNUC__
 #warning "Port to kde 4.0"
+#endif			
 #if 0
 			if (Q3FocusEvent::reason() == QFocusEvent::Popup) {
 				QWidget *focusW = qApp->focusWidget();

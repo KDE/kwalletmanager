@@ -171,7 +171,9 @@ void KWalletConfig::launchManager() {
 	if (!QDBusConnection::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
 		KToolInvocation::startServiceByDesktopName("kwalletmanager_show");
 	} else {
-            #warning "kde4: need to test it"
+#ifdef __GNUC__		
+	#warning "kde4: need to test it"
+#endif		
              QDBusInterface kwalletd("org.kde.kwallet.kwalletmanager", "kwalletmanager-mainwindow_1");
              kwalletd.call( "show");
              kwalletd.call( "raise" );
