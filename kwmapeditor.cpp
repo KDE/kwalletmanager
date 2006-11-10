@@ -134,7 +134,11 @@ void KWMapEditor::copy() {
 
 class InlineEditor : public Q3TextEdit {
 	public:
-		InlineEditor(KWMapEditor *p, int row, int col) : Q3TextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ KWin::setType(winId(), NET::Override);  connect(p, SIGNAL(destroyed()), SLOT(closed()));}
+		InlineEditor(KWMapEditor *p, int row, int col) : Q3TextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ 
+#ifndef Q_OS_WIN			
+			KWin::setType(winId(), NET::Override);  
+#endif			
+			connect(p, SIGNAL(destroyed()), SLOT(closed()));}
 		virtual ~InlineEditor() { if (!_p) return; _p->setText(row, col, text()); _p->emitDirty(); }
 
 	protected:
