@@ -18,7 +18,6 @@
  */
 #include <QtDBus>
 #include "konfigurator.h"
-#include "walletconfigwidget.h"
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kconfig.h>

@@ -21,10 +21,18 @@
 #define _KWALLETKONFIGURATOR_H
 
 #include <kcmodule.h>
-
+#include "ui_walletconfigwidget.h"
 class KConfig;
-class WalletConfigWidget;
 class Q3ListViewItem;
+
+class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
+{
+public:
+  WalletConfigWidget( QWidget *parent ) : QWidget( parent ) {
+    setupUi( this );
+  }
+};
+
 
 class KWalletConfig : public KCModule {
 	Q_OBJECT
