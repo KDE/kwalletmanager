@@ -13,13 +13,12 @@ set(kwalletmanager_SRCS
    kwalletpopup.cpp 
    kwalleteditor.cpp 
    kwmapeditor.cpp 
-   allyourbase.cpp )
+   allyourbase.cpp 
+   kbetterthankdialogbase.cpp )
 
 kde4_automoc(${kwalletmanager_SRCS})
 
-kde4_add_ui3_files(kwalletmanager_SRCS kbetterthankdialogbase.ui )
-
-kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui)
+kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui)
 
 kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
