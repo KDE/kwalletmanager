@@ -43,7 +43,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 	act = new KAction(i18n("&Open..."), ac, "wallet_open");
 	connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
-	act->setShortcut(Qt::Key_Return);
+	act->setShortcut(QKeySequence(Qt::Key_Return));
 	addAction( act );
 
 	act = new KAction(i18n("Change &Password..."), ac, "wallet_password");
@@ -74,7 +74,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 	act = new KAction(i18n("&Delete"), ac, "wallet_delete");
 	connect(act, SIGNAL(triggered(bool)), SLOT(deleteWallet()));
-	act->setShortcut(Qt::Key_Delete);
+	act->setShortcut(QKeySequence(Qt::Key_Delete));
 	addAction( act );
 }
 
