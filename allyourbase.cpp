@@ -301,7 +301,7 @@ void KWalletItem::dropped(QDropEvent *e, const QValueList<QIconDragItem>& lst) {
 		//delete the folder from the source if we were moving
 		Qt::ButtonState state = kapp->keyboardMouseState();
 		if (e->source() && e->source()->parent() &&
-			e->source()->parent()->className() == "KWalletEntryList" && 
+			!strcmp(e->source()->parent()->className(), "KWalletEntryList") &&
 			!(state & Qt::ControlButton)) {
 		
 			KWalletEntryList *el =
@@ -390,7 +390,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QListViewItem *item) {
 
 	//detect if we are dragging from kwallet itself
 	if (e->source() && e->source()->parent() &&
-		e->source()->parent()->className() == "KWalletEntryList") {
+		!strcmp(e->source()->parent()->className(), "KWalletEntryList")) {
 
 		el = dynamic_cast<KWalletEntryList*>(e->source()->parent());
 		if (!el) {
