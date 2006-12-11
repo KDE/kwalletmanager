@@ -20,7 +20,7 @@
         <enum>Fixed</enum>
       </property>
       <item rowspan="1" row="0" column="0" colspan="3" >
-        <widget class="KActiveLabel" name="_label" />
+        <widget class="K3ActiveLabel" name="_label" />
       </item>
       <item row="1" column="2" >
         <spacer name="spacer1" >
@@ -97,7 +97,7 @@
   <layoutdefault spacing="6" margin="11" />
   <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
   <includes>
-    <include location="global" >kactivelabel.h</include>
-    <include location="local" >kactivelabel.h</include>
+    <include location="global" >k3activelabel.h</include>
+    <include location="local" >k3activelabel.h</include>
   </includes>
 </ui>
