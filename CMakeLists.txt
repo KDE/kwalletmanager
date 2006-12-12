@@ -22,7 +22,7 @@ kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui)
 
 kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
-target_link_libraries(kwalletmanager  ${KDE4_KIO_LIBS} kwalletclient kde3support)
+target_link_libraries(kwalletmanager  ${KDE4_KIO_LIBS} kwalletclient ${KDE4_KDE3SUPPORT_LIBS})
 
 install(TARGETS kwalletmanager  DESTINATION ${BIN_INSTALL_DIR} )
 
