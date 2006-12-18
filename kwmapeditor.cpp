@@ -169,6 +169,8 @@ class InlineEditor : public QTextEdit {
 		{
 		   QMenu *menu = createStandardContextMenu();
 		   popup = menu;
+		   popup->exec( event->globalPos() );
+		   delete popup;
 		}
 		QPointer<KWMapEditor> _p;
 		int row, col;

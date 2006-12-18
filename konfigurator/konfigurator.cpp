@@ -80,7 +80,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QStringList&)
 	updateWalletLists();
 	load();
 
-	if (QDBusConnection::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
+	if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.kwalletmanager")) {
 		_wcw->_launch->hide();
 	}
 
@@ -167,13 +167,10 @@ void KWalletConfig::newNetworkWallet() {
 
 
 void KWalletConfig::launchManager() {
-	if (!QDBusConnection::sessionBus().interface()->isServiceRegistered("kwalletmanager")) {
+	if (!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.kwalletmanager")) {
 		KToolInvocation::startServiceByDesktopName("kwalletmanager_show");
 	} else {
-#ifdef __GNUC__		
-	#warning "kde4: need to test it"
-#endif		
-             QDBusInterface kwalletd("org.kde.kwallet.kwalletmanager", "kwalletmanager-mainwindow_1");
+             QDBusInterface kwalletd("org.kde.kwalletmanager", "/kwalletmanager/MainWindow_1");
              kwalletd.call( "show");
              kwalletd.call( "raise" );
 	}
@@ -320,7 +317,7 @@ void KWalletConfig::contextMenuRequested(Q3ListViewItem *item, const QPoint& pos
 	if (item && item->parent()) {
 		KMenu *m = new KMenu(this);
 		m->addTitle(item->parent()->text(0));
-		m->insertItem(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
+		m->addAction(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
 		m->popup(pos);
 	}
 }
