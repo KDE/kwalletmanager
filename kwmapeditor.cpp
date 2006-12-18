@@ -29,7 +29,7 @@
 #include <qapplication.h>
 #include <qclipboard.h>
 #include <QPushButton>
-#include <q3textedit.h>
+#include <qtextedit.h>
 //Added by qt3to4:
 #include <QFocusEvent>
 #include <QKeyEvent>
@@ -121,7 +121,7 @@ void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 	_contextRow = row;
 	_contextCol = col;
 	KMenu *m = new KMenu(this);
-	m->insertItem(i18n("&New Entry"), this, SLOT(addEntry()));
+	m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
 	m->addAction( _copyAct );
 	m->popup(pos);
 }
@@ -132,14 +132,14 @@ void KWMapEditor::copy() {
 }
 
 
-class InlineEditor : public Q3TextEdit {
+class InlineEditor : public QTextEdit {
 	public:
-		InlineEditor(KWMapEditor *p, int row, int col) : Q3TextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ 
+		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ 
 #ifndef Q_OS_WIN			
 			KWin::setType(winId(), NET::Override);  
 #endif			
 			connect(p, SIGNAL(destroyed()), SLOT(closed()));}
-		virtual ~InlineEditor() { if (!_p) return; _p->setText(row, col, text()); _p->emitDirty(); }
+		virtual ~InlineEditor() { if (!_p) return; _p->setText(row, col, toPlainText()); _p->emitDirty(); }
 
 	protected:
 		virtual void focusOutEvent(QFocusEvent*) {
@@ -162,16 +162,17 @@ class InlineEditor : public Q3TextEdit {
 				close();
 			} else {
 				e->ignore();
-				Q3TextEdit::keyPressEvent(e);
+				QTextEdit::keyPressEvent(e);
 			}
 		}
-		virtual Q3PopupMenu *createPopupMenu(const QPoint &p) {
-			popup = Q3TextEdit::createPopupMenu(p);
-			return popup;
+		virtual void contextMenuEvent( QContextMenuEvent *event )
+		{
+		   QMenu *menu = createStandardContextMenu();
+		   popup = menu;
 		}
 		QPointer<KWMapEditor> _p;
 		int row, col;
-		QPointer<Q3PopupMenu> popup;
+		QPointer<QMenu> popup;
 };
 
 
@@ -182,7 +183,7 @@ QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
 	}
 
 	QRect geo = cellGeometry(row, col);
-	Q3TextEdit *e = new InlineEditor(this, row, col);
+	QTextEdit *e = new InlineEditor(this, row, col);
 	e->setText(text(row, col));
 	e->move(mapToGlobal(geo.topLeft()));
 	e->resize(geo.width() * 2, geo.height() * 3);
