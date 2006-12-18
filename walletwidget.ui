@@ -180,7 +180,7 @@
                         <number>0</number>
                       </property>
                       <item rowspan="1" row="1" column="0" colspan="2" >
-                        <widget class="Q3TextEdit" name="_passwordValue" >
+                        <widget class="QTextEdit" name="_passwordValue" >
                           <property name="textFormat" >
                             <enum>Qt::PlainText</enum>
                           </property>
