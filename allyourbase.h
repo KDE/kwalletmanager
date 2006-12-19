@@ -144,7 +144,7 @@ class KWalletIconView : public K3IconView {
 		virtual ~KWalletIconView();
 
 	protected slots:
-		virtual void slotDropped(QDropEvent *e, const QList<Q3IconDragItem>& lst);
+		virtual void slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst);
 
 	protected:
 		virtual Q3DragObject *dragObject();
