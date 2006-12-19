@@ -42,7 +42,7 @@
 #include <kmenu.h>
 #include <ksqueezedtextlabel.h>
 #include <kstandarddirs.h>
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <kstringhandler.h>
 #include <ktemporaryfile.h>
 #include <kxmlguifactory.h>
@@ -73,7 +73,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	setObjectName(name);
 	_newWallet = false;
 	_ww = new WalletWidget(this);
-	_copyPassAction = KStdAction::copy(this, SLOT(copyPassword()), actionCollection());
+	_copyPassAction = KStandardAction::copy(this, SLOT(copyPassword()), actionCollection());
 
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
 	box->setSpacing( KDialog::spacingHint() );
@@ -197,12 +197,12 @@ void KWalletEditor::createActions() {
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_exportAction, SLOT(setEnabled(bool)));
 
-	_saveAsAction = KStdAction::saveAs(this, SLOT(saveAs()), actionCollection());
+	_saveAsAction = KStandardAction::saveAs(this, SLOT(saveAs()), actionCollection());
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_saveAsAction, SLOT(setEnabled(bool)));
 
-	KStdAction::quit(this, SLOT(close()), actionCollection());
-	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
+	KStandardAction::quit(this, SLOT(close()), actionCollection());
+	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 	emit enableWalletActions(false);
 	emit enableFolderActions(false);

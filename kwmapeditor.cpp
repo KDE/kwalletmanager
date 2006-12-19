@@ -23,7 +23,7 @@
 #include <kdebug.h>
 #include <klocale.h>
 #include <kmenu.h>
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <kwin.h>
 #include <QPointer>
 #include <qapplication.h>
@@ -37,7 +37,7 @@
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
 : Q3Table(0, 3, parent, name), _map(map) {
 	_ac = new KActionCollection(this);
-	_copyAct = KStdAction::copy(this, SLOT(copy()), _ac);
+	_copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
 	connect(this, SIGNAL(valueChanged(int,int)), this, SIGNAL(dirty()));
 	connect(this, SIGNAL(contextMenuRequested(int,int,const QPoint&)),
 		this, SLOT(contextMenu(int,int,const QPoint&)));

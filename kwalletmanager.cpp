@@ -34,7 +34,7 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <ksystemtrayicon.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
@@ -144,8 +144,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
 	}
-	KStdAction::quit(this, SLOT(shuttingDown()), actionCollection());
-	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
+	KStandardAction::quit(this, SLOT(shuttingDown()), actionCollection());
+	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 
 	createGUI("kwalletmanager.rc");

@@ -19,7 +19,7 @@
 
 
 #include "kwalletpopup.h"
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <kactioncollection.h>
 #include <kaction.h>
 #include <kdebug.h>
@@ -65,7 +65,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 		insertItem(i18n("Disconnec&t"), pm);
 	}
 
-	act = KStdAction::close( this,
+	act = KStandardAction::close( this,
 			SLOT(closeWallet()), ac, "wallet_close");
 	// FIXME: let's track this inside the manager so we don't need a dcop
 	//        roundtrip here.
