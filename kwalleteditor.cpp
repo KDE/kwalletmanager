@@ -294,7 +294,7 @@ void KWalletEditor::deleteFolder() {
 				return;
 			}
 
-			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()),"",KStdGuiItem::del());
+			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()),"",KStandardGuiItem::del());
 			if (rc == KMessageBox::Continue) {
 				bool rc = _w->removeFolder(fi->name());
 				if (!rc) {
@@ -752,7 +752,7 @@ void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t)
 void KWalletEditor::deleteEntry() {
 	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
-		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)),"",KStdGuiItem::del());
+		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)),"",KStandardGuiItem::del());
 		if (rc == KMessageBox::Continue) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
 			if (!fi) {

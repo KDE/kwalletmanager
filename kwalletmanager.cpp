@@ -236,7 +236,7 @@ void KWalletManager::contextMenu(Q3IconViewItem *item, const QPoint& pos) {
 
 
 void KWalletManager::deleteWallet(const QString& walletName) {
-	int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?", walletName),"",KStdGuiItem::del());
+	int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?", walletName),"",KStandardGuiItem::del());
 	if (rc != KMessageBox::Continue) {
 		return;
 	}
