@@ -20,7 +20,6 @@
 
 #include "allyourbase.h"
 
-#include <kapplication.h>
 #include <kdebug.h>
 #include <kinstance.h>
 #include <kglobal.h>
@@ -60,7 +59,7 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, con
 }
 
 QPixmap KWalletFolderItem::getFolderIcon(K3Icon::Group group){
-	KIconLoader *loader = kapp->iconLoader();
+	KIconLoader *loader = KIconLoader::global();
 	QPixmap pix = loader->loadIcon( _name, group, 0,
 			K3Icon::DefaultState, 0, true );
 	if (pix.isNull())
