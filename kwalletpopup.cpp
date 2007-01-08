@@ -35,18 +35,21 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	setObjectName(name);
 	KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
 	ac->setObjectName("kwallet context actions");
-	KAction *act;
+	QAction *act;
 
-	act = new KAction(i18n("&New Wallet..."), ac, "wallet_create");
+	act = ac->addAction("wallet_create");
+	act->setText(i18n("&New Wallet..."));
 	connect(act, SIGNAL(triggered(bool)), SLOT(createWallet()));
 	addAction( act );
 
-	act = new KAction(i18n("&Open..."), ac, "wallet_open");
+        act= ac->addAction( "wallet_open" );
+        act->setText( i18n( "&Open..." ) );
 	connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
 	act->setShortcut(QKeySequence(Qt::Key_Return));
 	addAction( act );
 
-	act = new KAction(i18n("Change &Password..."), ac, "wallet_password");
+        act=ac->addAction( "wallet_password" );
+        act->setText( i18n("Change &Password...") );
 	connect(act, SIGNAL(triggered(bool)), SLOT(changeWalletPassword()));
 	addAction( act );
 
@@ -66,13 +69,16 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	}
 
 	act = KStandardAction::close( this,
-			SLOT(closeWallet()), ac, "wallet_close");
+			SLOT(closeWallet()), ac);
+        ac->addAction("wallet_close", act);
 	// FIXME: let's track this inside the manager so we don't need a dcop
 	//        roundtrip here.
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
 	addAction( act );
 
-	act = new KAction(i18n("&Delete"), ac, "wallet_delete");
+        act = ac->addAction( "wallet_delete" );
+        act->setText( i18n( "&Delete") );
+
 	connect(act, SIGNAL(triggered(bool)), SLOT(deleteWallet()));
 	act->setShortcut(QKeySequence(Qt::Key_Delete));
 	addAction( act );
