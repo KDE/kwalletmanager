@@ -106,9 +106,9 @@ class KWalletEditor : public KMainWindow {
 		WalletWidget *_ww;
 		KWalletEntryList *_entryList;
 		bool _walletIsOpen;
-		KAction *_newFolderAction, *_deleteFolderAction;
-		KAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
-		KAction *_copyPassAction;
+		QAction *_newFolderAction, *_deleteFolderAction;
+		QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
+		QAction *_copyPassAction;
 		QLabel*_details;
 		QString _currentFolder;
 		QMap<QString,QString> _currentMap; // save memory by storing
