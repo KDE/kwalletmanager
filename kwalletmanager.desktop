@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Wallet Management Tool
+Name[el]=Εργαλείο διαχείρισης πορτοφολιού
 Name[fr]=Outil de gestion de comptes
 Name[x-test]=xxWallet Management Toolxx
 Exec=kwalletmanager %u

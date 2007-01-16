@@ -13,12 +13,15 @@ X-KDE-Library=kwallet
 X-KDE-ParentApp=kcontrol
 
 Name=KDE Wallet
+Name[el]=Πορτοφόλι του KDE
 Name[fr]=Gestionnaire de comptes de KDE
 Name[x-test]=xxKDE Walletxx
 Comment=KDE Wallet Configuration
+Comment[el]=Ρύθμιση του πορτοφολιού του KDE
 Comment[fr]=Configuration du gestionnaire de comptes de KDE
 Comment[x-test]=xxKDE Wallet Configurationxx
 Keywords=Wallet,Form Fill,Passwords,Form Data
+Keywords[el]=Πορτοφόλι,Συμπλήρωση φόρμας,Κωδικοί πρόσβασης,Δεδομένα φόρμας
 Keywords[fr]=gestionnaire de comptes,remplissage de formulaire,Mots de passe,Données de formulaire
 Keywords[x-test]=xxWallet,Form Fill,Passwords,Form Dataxx
 
