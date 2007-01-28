@@ -41,8 +41,8 @@
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
 K_EXPORT_COMPONENT_FACTORY(kwallet, KWalletFactory("kcmkwallet"))
 
-KWalletConfig::KWalletConfig(QWidget *parent, const QStringList&)
-: KCModule(KWalletFactory::instance(), parent/*, name*/) {
+KWalletConfig::KWalletConfig(QWidget *parent, const QStringList& args)
+: KCModule(KWalletFactory::instance(), parent, args) {
 
 	KAboutData *about =
 		new KAboutData(I18N_NOOP("kcmkwallet"),
