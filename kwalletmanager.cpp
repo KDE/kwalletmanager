@@ -421,7 +421,7 @@ void KWalletManager::shuttingDown() {
 
 
 void KWalletManager::setupWallet() {
-	KToolInvocation::startServiceByDesktopName("kwallet_config");
+	KToolInvocation::startServiceByDesktopName("kwalletconfig");
 }
 
 

@@ -20,6 +20,4 @@ install(TARGETS kcm_kwallet  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 ########### install files ###############
 
-install( FILES kwalletconfig.desktop  DESTINATION ${SERVICES_INSTALL_DIR})
-install( FILES kwallet_config.desktop kwalletmanager_show.desktop  DESTINATION ${SERVICES_INSTALL_DIR})
-
+install( FILES kwalletconfig.desktop kwalletmanager_show.desktop  DESTINATION ${SERVICES_INSTALL_DIR})

@@ -8,8 +8,8 @@ ServiceTypes=KCModule
 Exec=kcmshell kwalletconfig
 DocPath=kwallet/index.html
 
-X-KDE-ModuleType=Library
-X-KDE-Library=kwallet
+X-KDE-Library=kcm_kwallet
+X-KDE-FactoryName=kcm_kwallet
 X-KDE-ParentApp=kcontrol
 
 Name=KDE Wallet
@@ -24,5 +24,3 @@ Keywords=Wallet,Form Fill,Passwords,Form Data
 Keywords[el]=Πορτοφόλι,Συμπλήρωση φόρμας,Κωδικοί πρόσβασης,Δεδομένα φόρμας
 Keywords[fr]=gestionnaire de comptes,remplissage de formulaire,Mots de passe,Données de formulaire
 Keywords[x-test]=xxWallet,Form Fill,Passwords,Form Dataxx
-
-Categories=Qt;KDE;X-KDE-settings-security;
