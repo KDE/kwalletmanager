@@ -50,6 +50,7 @@
 #include <qdbusconnection.h>
 #include <kicon.h>
 #include <kactioncollection.h>
+#include <kconfiggroup.h>
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)

@@ -21,7 +21,7 @@
 #include "allyourbase.h"
 
 #include <kdebug.h>
-#include <kinstance.h>
+#include <kcomponentdata.h>
 #include <kglobal.h>
 #include <kio/netaccess.h>
 #include <klocale.h>
