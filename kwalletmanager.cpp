@@ -349,8 +349,8 @@ void KWalletManager::allWalletsClosed() {
 
 
 void KWalletManager::possiblyQuit() {
-	KConfig cfg("kwalletrc");
-	cfg.setGroup("Wallet");
+	KConfig _cfg( "kwalletrc" );
+	KConfigGroup cfg(&_cfg, "Wallet");
 	if (_windows.isEmpty() &&
 			!isVisible() &&
 			!cfg.readEntry("Leave Manager Open", false) &&
