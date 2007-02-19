@@ -53,7 +53,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QStringList& args)
 		about->addAuthor("George Staikos", 0, "staikos@kde.org");
 	setAboutData( about );
 
-	_cfg = new KConfig("kwalletrc", false, false);
+	_cfg = new KConfig("kwalletrc", KConfig::NoGlobals);
 
 	QVBoxLayout *vbox = new QVBoxLayout(this);
 	vbox->setSpacing(KDialog::spacingHint());
