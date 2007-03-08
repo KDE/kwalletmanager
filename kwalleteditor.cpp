@@ -168,7 +168,7 @@ void KWalletEditor::layout() {
 void KWalletEditor::createActions() {
         _newFolderAction = actionCollection()->addAction( "create_folder" );
         _newFolderAction->setText( i18n("&New Folder...") );
-        _newFolderAction->setIcon( KIcon("folder_new") );
+        _newFolderAction->setIcon( KIcon("folder-new") );
 	connect(_newFolderAction, SIGNAL(triggered(bool) ), SLOT(createFolder()));
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
