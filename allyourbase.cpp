@@ -651,7 +651,12 @@ void KWalletIconView::slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragIte
 	QByteArray edata = e->encodedData("text/uri-list");
 	QByteArray urls = edata.data();
 
-	QStringList ul = QStringList::split("\r\n", urls);
+	if (urls.isEmpty()) {
+		e->ignore();
+		return;
+	}
+
+	QStringList ul = QString(urls).split("\r\n", QString::SkipEmptyParts);
 	if (ul.isEmpty() || ul.first().isEmpty()) {
 		e->ignore();
 		return;
