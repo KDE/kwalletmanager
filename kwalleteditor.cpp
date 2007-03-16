@@ -44,7 +44,7 @@
 #include <ksqueezedtextlabel.h>
 #include <kstandarddirs.h>
 #include <kstandardaction.h>
-#include <kstringhandler.h>
+
 #include <ktemporaryfile.h>
 #include <kxmlguifactory.h>
 #include <QCheckBox>
@@ -590,7 +590,7 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 	if (item) {
 		QString title = item->text(0);
 		// I think 200 pixels is wide enough for a title
-		title = KStringHandler::cPixelSqueeze(title, m->fontMetrics(), 200);
+		title = m->fontMetrics().elidedText( title, Qt::ElideMiddle, 200 );
 		m->addTitle(title);
 		switch (menuClass) {
 			case KWalletEntryItemClass:
