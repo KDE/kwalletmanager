@@ -33,7 +33,6 @@
 //Added by qt3to4:
 #include <QFocusEvent>
 #include <QKeyEvent>
-#include <Q3PopupMenu>
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
 : Q3Table(0, 3, parent, name), _map(map) {
 	_ac = new KActionCollection(this);
