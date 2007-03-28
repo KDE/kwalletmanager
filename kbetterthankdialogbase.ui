@@ -20,7 +20,7 @@
         <enum>Fixed</enum>
       </property>
       <item rowspan="1" row="0" column="0" colspan="3" >
-        <widget class="K3ActiveLabel" name="_label" />
+        <widget class="QLabel" name="_label" />
       </item>
       <item row="1" column="2" >
         <spacer name="spacer1" >

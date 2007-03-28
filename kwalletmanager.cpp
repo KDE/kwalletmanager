@@ -54,8 +54,9 @@
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
-    : KMainWindow(parent, name, f)
+    : KMainWindow(parent, f)
 {
+    setObjectName( name );
     QDBusConnection::sessionBus().registerObject("/KWalletManager", this, QDBusConnection::ExportScriptableSlots);
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
