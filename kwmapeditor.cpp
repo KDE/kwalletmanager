@@ -24,7 +24,7 @@
 #include <klocale.h>
 #include <kmenu.h>
 #include <kstandardaction.h>
-#include <kwin.h>
+#include <kwm.h>
 #include <QPointer>
 #include <qapplication.h>
 #include <qclipboard.h>
@@ -135,7 +135,7 @@ class InlineEditor : public QTextEdit {
 	public:
 		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ 
 #ifndef Q_OS_WIN			
-			KWin::setType(winId(), NET::Override);  
+			KWM::setType(winId(), NET::Override);  
 #endif			
 			connect(p, SIGNAL(destroyed()), SLOT(closed()));}
 		virtual ~InlineEditor() { if (!_p) return; _p->setText(row, col, toPlainText()); _p->emitDirty(); }
