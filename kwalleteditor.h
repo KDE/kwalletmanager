@@ -23,7 +23,7 @@
 
 #include "ui_walletwidget.h"
 #include <kwallet.h>
-#include <kmainwindow.h>
+#include <kxmlguiwindow.h>
 #include <qstringlist.h>
 //Added by qt3to4:
 #include <QLabel>
@@ -45,7 +45,7 @@ public:
 };
 
 
-class KWalletEditor : public KMainWindow {
+class KWalletEditor : public KXmlGuiWindow {
 	Q_OBJECT
 
 	public:
@@ -94,7 +94,7 @@ class KWalletEditor : public KMainWindow {
 		void enableWalletActions(bool enable);
 		void enableFolderActions(bool enable);
 		void enableContextFolderActions(bool enable);
-		void editorClosed(KMainWindow*);
+		void editorClosed(KXmlGuiWindow*);
 
 	public:
 		QString _walletName;

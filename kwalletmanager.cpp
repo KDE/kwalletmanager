@@ -54,7 +54,7 @@
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
-    : KMainWindow(parent, f)
+    : KXmlGuiWindow(parent, f)
 {
     setObjectName( name );
     QDBusConnection::sessionBus().registerObject("/KWalletManager", this, QDBusConnection::ExportScriptableSlots);
@@ -281,8 +281,8 @@ void KWalletManager::changeWalletPassword(const QString& walletName) {
 void KWalletManager::openWalletFile(const QString& path) {
 	KWalletEditor *we = new KWalletEditor(path, true, this, "Wallet Editor");
 	if (we->isOpen()) {
-		connect(we, SIGNAL(editorClosed(KMainWindow*)),
-			this, SLOT(editorClosed(KMainWindow*)));
+		connect(we, SIGNAL(editorClosed(KXmlGuiWindow*)),
+			this, SLOT(editorClosed(KXmlGuiWindow*)));
 		we->show();
 	} else {
 		KMessageBox::sorry(this, i18n("Error opening wallet %1.", path));
@@ -311,7 +311,7 @@ void KWalletManager::openWallet(const QString& walletName) {
 
 void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
 	// Don't allow a wallet to open in two windows
-	for (KMainWindow *w = _windows.first(); w; w = _windows.next()) {
+	for (KXmlGuiWindow *w = _windows.first(); w; w = _windows.next()) {
 		KWalletEditor *e = static_cast<KWalletEditor*>(w);
 		if (e->isOpen() && e->_walletName == walletName) {
 			w->raise();
@@ -322,8 +322,8 @@ void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
 	KWalletEditor *we = new KWalletEditor(walletName, false, this, "Wallet Editor");
 	we->setNewWallet(newWallet);
 	if (we->isOpen()) {
-		connect(we, SIGNAL(editorClosed(KMainWindow*)),
-			this, SLOT(editorClosed(KMainWindow*)));
+		connect(we, SIGNAL(editorClosed(KXmlGuiWindow*)),
+			this, SLOT(editorClosed(KXmlGuiWindow*)));
 		we->show();
 		_windows.append(we);
 	} else if (!newWallet) {
@@ -361,7 +361,7 @@ void KWalletManager::possiblyQuit() {
 }
 
 
-void KWalletManager::editorClosed(KMainWindow* e) {
+void KWalletManager::editorClosed(KXmlGuiWindow* e) {
 	_windows.remove(e);
 }
 

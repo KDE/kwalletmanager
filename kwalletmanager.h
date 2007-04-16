@@ -20,7 +20,7 @@
 #ifndef KWALLETMANAGER_H
 #define KWALLETMANAGER_H
 #include <QtCore/QObject>
-#include <kmainwindow.h>
+#include <kxmlguiwindow.h>
 #include <q3ptrlist.h>
 //Added by qt3to4:
 #include <QPixmap>
@@ -31,7 +31,7 @@ class KWalletIconView;
 class Q3IconViewItem;
 class QDBusInterface;
 
-class KWalletManager : public KMainWindow {
+class KWalletManager : public KXmlGuiWindow {
 	Q_OBJECT
 	    Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
 
@@ -66,7 +66,7 @@ class KWalletManager : public KMainWindow {
 	private slots:
 		void shuttingDown();
 		void possiblyQuit();
-		void editorClosed(KMainWindow* e);
+		void editorClosed(KXmlGuiWindow* e);
 		void possiblyRescan(const QByteArray& app);
 		void setupWallet();
 		void openWallet();
@@ -78,7 +78,7 @@ class KWalletManager : public KMainWindow {
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
 		QDBusInterface *m_kwalletdModule;
-		Q3PtrList<KMainWindow> _windows;
+		Q3PtrList<KXmlGuiWindow> _windows;
 		bool _kwalletdLaunch;
 };
 

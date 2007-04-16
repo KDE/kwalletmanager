@@ -70,7 +70,7 @@
 #include <kicon.h>
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
-: KMainWindow(parent), _walletName(wallet), _nonLocal(isPath) {
+: KXmlGuiWindow(parent), _walletName(wallet), _nonLocal(isPath) {
 	setObjectName(name);
 	_newWallet = false;
 	_ww = new WalletWidget(this);
