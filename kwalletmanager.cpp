@@ -42,7 +42,7 @@
 #include <qpointer.h>
 #include <q3ptrstack.h>
 #include <QRegExp>
-#include <QToolTip>
+
 #include <qtimer.h>
 //Added by qt3to4:
 #include <QPixmap>
