@@ -22,7 +22,7 @@
 
 #include <kmenu.h>
 #include <QMap>
-#include <QString>
+
 
 class KWalletPopup : public KMenu {
 	Q_OBJECT

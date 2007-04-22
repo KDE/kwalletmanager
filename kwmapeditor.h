@@ -21,7 +21,7 @@
 #define KWMAPEDITOR_H
 
 #include <QMap>
-#include <QString>
+
 #include <q3table.h>
 
 class KAction;
