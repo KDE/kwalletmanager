@@ -129,7 +129,7 @@ QString KWalletConfig::newWallet() {
 		return QString();
 	}
 
-	KWallet::Wallet *w = KWallet::Wallet::openWallet(n);
+	KWallet::Wallet *w = KWallet::Wallet::openWallet(n, topLevelWidget()->winId());
 	if (!w) {
 		return QString();
 	}

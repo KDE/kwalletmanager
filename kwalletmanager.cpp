@@ -274,7 +274,7 @@ void KWalletManager::closeWallet(const QString& walletName) {
 
 
 void KWalletManager::changeWalletPassword(const QString& walletName) {
-	KWallet::Wallet::changePassword(walletName);
+	KWallet::Wallet::changePassword(walletName, winId());
 }
 
 

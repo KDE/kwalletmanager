@@ -777,7 +777,7 @@ void KWalletEditor::deleteEntry() {
 }
 
 void KWalletEditor::changePassword() {
-	KWallet::Wallet::changePassword(_walletName);
+	KWallet::Wallet::changePassword(_walletName, winId());
 }
 
 
