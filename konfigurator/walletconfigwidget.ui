@@ -40,7 +40,7 @@
                 </widget>
               </item>
               <item>
-                <widget class="Q3GroupBox" name="groupBox2" >
+                <widget class="QGroupBox" name="groupBox2" >
                   <property name="title" >
                     <string>Close Wallet</string>
                   </property>
@@ -149,7 +149,7 @@
                 </widget>
               </item>
               <item>
-                <widget class="Q3GroupBox" name="groupBox4" >
+                <widget class="QGroupBox" name="groupBox4" >
                   <property name="title" >
                     <string>Automatic Wallet Selection</string>
                   </property>
@@ -238,7 +238,7 @@
                 </widget>
               </item>
               <item>
-                <widget class="Q3GroupBox" name="groupBox3" >
+                <widget class="QGroupBox" name="groupBox3" >
                   <property name="title" >
                     <string>Wallet Manager</string>
                   </property>
