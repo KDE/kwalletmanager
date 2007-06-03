@@ -28,11 +28,8 @@
 //Added by qt3to4:
 #include <QLabel>
 
-class KAction;
-class Q3IconViewItem;
 class Q3ListViewItem;
 class QCheckBox;
-class KWalletFolderIconView;
 class KWalletEntryList;
 class KWMapEditor;
 
