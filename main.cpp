@@ -94,7 +94,7 @@ int main(int argc, char **argv) {
 			wm.openWallet(args->arg(i));
 		}
 	}
-
+	args->clear();
 	return a.exec();
 }
 
