@@ -262,7 +262,7 @@ void KWalletConfig::save() {
 	// FIXME: won't survive a language change
 	_cfg->deleteGroup("Auto Allow");
 	_cfg->deleteGroup("Auto Deny");
-	_cfg->setGroup("Auto Allow");
+	config  = _cfg->group("Auto Allow");
 	for (Q3ListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
 		QStringList al;
 		for (Q3ListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
@@ -270,10 +270,10 @@ void KWalletConfig::save() {
 				al << j->text(1);
 			}
 		}
-		_cfg->writeEntry(i->text(0), al);
+		config.writeEntry(i->text(0), al);
 	}
 
-	_cfg->setGroup("Auto Deny");
+	config = _cfg->group("Auto Deny");
 	for (Q3ListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
 		QStringList al;
 		for (Q3ListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
@@ -281,7 +281,7 @@ void KWalletConfig::save() {
 				al << j->text(1);
 			}
 		}
-		_cfg->writeEntry(i->text(0), al);
+		config.writeEntry(i->text(0), al);
 	}
 
 	_cfg->sync();
