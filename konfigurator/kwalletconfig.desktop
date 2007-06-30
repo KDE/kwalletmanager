@@ -12,7 +12,6 @@ X-KDE-Library=kwallet
 X-KDE-ParentApp=kcontrol
 
 Name=KDE Wallet
-Name[ar]=محفظة كدى
 Name[br]=Doug-paperoù KDE
 Name[cs]=Úschovna KDE
 Name[cy]=Waled KDE
@@ -50,7 +49,6 @@ Name[uz]=KDE қопчиқ
 Name[x-test]=xxKDE Walletxx
 Name[zh_TW]=KDE 錢包
 Comment=KDE Wallet Configuration
-Comment[ar]=إعداد محفظة كدى
 Comment[bg]=Comment=Настройване на системата Портфейл
 Comment[br]=Kefluniadur Doug-paperoù KDE
 Comment[ca]=Configuració de carteres KDE
@@ -98,7 +96,6 @@ Comment[uz]=KDE қопчиқ хизматини мослаш
 Comment[x-test]=xxKDE Wallet Configurationxx
 Comment[zh_TW]=KDE 錢包設定
 Keywords=Wallet,Form Fill,Passwords,Form Data
-Keywords[ar]=محفظة،ملأ نموذج،كلمات السرّ،بيانات نموذج
 Keywords[ca]=Cartera,Ompliment de formularis,Contrasentes,Dades de formularis
 Keywords[cs]=úschovna,vyplnění formuláře,hesla,data formuláře
 Keywords[cy]=Waled,Llenwi Ffurflen,Cyfrineiriau,Data Ffurflenni
