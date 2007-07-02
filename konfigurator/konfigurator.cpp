@@ -46,11 +46,11 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QStringList& args)
 : KCModule(KWalletFactory::componentData(), parent, args) {
 
 	KAboutData *about =
-		new KAboutData(I18N_NOOP("kcmkwallet"),
-				I18N_NOOP("KDE Wallet Control Module"),
-				0, 0, KAboutData::License_GPL,
-				I18N_NOOP("(c) 2003 George Staikos"));
-		about->addAuthor("George Staikos", 0, "staikos@kde.org");
+		new KAboutData(I18N_NOOP("kcmkwallet"), 0,
+				ki18n("KDE Wallet Control Module"),
+				0, KLocalizedString(), KAboutData::License_GPL,
+				ki18n("(c) 2003 George Staikos"));
+		about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
 	setAboutData( about );
 
 	_cfg = new KConfig("kwalletrc", KConfig::NoGlobals);

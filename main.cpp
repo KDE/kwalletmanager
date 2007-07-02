@@ -41,23 +41,21 @@ class MyApp : public KUniqueApplication {
 };
 
 int main(int argc, char **argv) {
-	static KCmdLineOptions options[] = {
-		{"show", I18N_NOOP("Show window on startup"), 0},
-		{"kwalletd", I18N_NOOP("For use by kwalletd only"), 0},
-		{"+name", I18N_NOOP("A wallet name"), 0},
-		KCmdLineLastOption
-	};
-
-	KAboutData about("kwalletmanager", I18N_NOOP("KDE Wallet Manager"), "1.1",
-		I18N_NOOP("KDE Wallet Management Tool"),
+	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "1.1",
+		ki18n("KDE Wallet Management Tool"),
 		KAboutData::License_GPL,
-		I18N_NOOP("(c) 2003,2004 George Staikos"), 0,
+		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
 		"http://www.kde.org/");
 
-	about.addAuthor("George Staikos", I18N_NOOP("Primary author and maintainer"), "staikos@kde.org");
-	about.addAuthor("Isaac Clerencia", I18N_NOOP("Developer"), "isaac@warp.es");
+	about.addAuthor(ki18n("George Staikos"), ki18n("Primary author and maintainer"), "staikos@kde.org");
+	about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
 
 	KCmdLineArgs::init(argc, argv, &about);
+
+	KCmdLineOptions options;
+	options.add("show", ki18n("Show window on startup"));
+	options.add("kwalletd", ki18n("For use by kwalletd only"));
+	options.add("+name", ki18n("A wallet name"));
 	KCmdLineArgs::addCmdLineOptions(options);
 
 	if (!KUniqueApplication::start()) {
