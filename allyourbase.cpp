@@ -61,13 +61,13 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, con
 QPixmap KWalletFolderItem::getFolderIcon(K3Icon::Group group){
 	KIconLoader *loader = KIconLoader::global();
 	QPixmap pix = loader->loadIcon( _name, group, 0,
-			K3Icon::DefaultState, 0, true );
+			K3Icon::DefaultState, QStringList(),0, true );
 	if (pix.isNull())
 		pix = loader->loadIcon( _name.toLower(), group, 0,
-			K3Icon::DefaultState, 0, true);
+			K3Icon::DefaultState, QStringList(),0, true);
 	if (pix.isNull())
 		pix = loader->loadIcon( "folder_red", group, 0,
-			K3Icon::DefaultState, 0, true);
+			K3Icon::DefaultState, QStringList(),0, true);
 	return pix;
 }
 
