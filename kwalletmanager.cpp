@@ -104,7 +104,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 
         m_kwalletdModule = new QDBusInterface("org.kde.kded", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
         if ( !m_kwalletdModule->isValid() )
-            kWarning() << "kded not running?" << endl;
+            kWarning() << "kded not running?" ;
         else
         {
 #ifdef __GNUC__
