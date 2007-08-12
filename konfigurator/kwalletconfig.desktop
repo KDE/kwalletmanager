@@ -8,7 +8,7 @@ ServiceTypes=KCModule
 Exec=kcmshell kwalletconfig
 DocPath=kwallet/index.html
 
-X-KDE-Library=kwallet
+X-KDE-Library=kcm_kwallet
 X-KDE-ParentApp=kcontrol
 
 Name=KDE Wallet

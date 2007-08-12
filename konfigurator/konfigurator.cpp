@@ -40,7 +40,7 @@
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
-K_EXPORT_COMPONENT_FACTORY(kwallet, KWalletFactory("kcmkwallet"))
+K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QStringList& args)
 : KCModule(KWalletFactory::componentData(), parent, args) {
