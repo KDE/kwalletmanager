@@ -260,7 +260,7 @@ void KWalletManager::deleteWallet(const QString& walletName) {
 void KWalletManager::closeWallet(const QString& walletName) {
 	int rc = KWallet::Wallet::closeWallet(walletName, false);
 	if (rc != 0) {
-		rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString::null, KGuiItem(i18n("Force Closure")), KGuiItem(i18n("Do Not Force")));
+		rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString::null, KGuiItem(i18n("Force Closure")), KGuiItem(i18n("Do Not Force")));	//krazy:exclude=nullstrassign for old broken gcc
 		if (rc == KMessageBox::Yes) {
 			rc = KWallet::Wallet::closeWallet(walletName, true);
 			if (rc != 0) {
@@ -381,14 +381,14 @@ void KWalletManager::createWallet() {
 	QString txt = i18n("Please choose a name for the new wallet:");
 
 	if (!KWallet::Wallet::isEnabled()) {
-		// FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString::null, i18n("Enable"), i18n("Keep Disabled"));
+		// FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString::null, i18n("Enable"), i18n("Keep Disabled"));	//krazy:exclude=nullstrassign for old broken gcc
 		return;
 	}
 
 	do {
 		n = KInputDialog::getText(i18n("New Wallet"),
 				txt,
-				QString::null,
+				QString::null,	//krazy:exclude=nullstrassign for old broken gcc
 				&ok,
 				this);
 
@@ -397,11 +397,11 @@ void KWalletManager::createWallet() {
 		}
 
 		if (_iconView->findItem(n)) {
-			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString::null, KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString::null, KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));	//krazy:exclude=nullstrassign for old broken gcc
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}
-			n = QString::null;
+			n = QString();
 		} else if (regexp.exactMatch(n)) {
 			break;
 		} else {

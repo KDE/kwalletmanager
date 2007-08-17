@@ -327,7 +327,7 @@ void KWalletEditor::createFolder() {
 		do {
 			n = KInputDialog::getText(i18n("New Folder"),
 					i18n("Please choose a name for the new folder:"),
-					QString::null,
+					QString::null,	//krazy:exclude=nullstrassign for old broken gcc
 					&ok,
 					this);
 
@@ -336,11 +336,11 @@ void KWalletEditor::createFolder() {
 			}
 
 			if (_entryList->existsFolder(n)) {
-				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"), QString::null, KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));
+				int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"), QString::null, KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));	//krazy:exclude=nullstrassign for old broken gcc
 				if (rc == KMessageBox::Yes) {
 					continue;
 				}
-				n = QString::null;
+				n = QString();
 			}
 			break;
 		} while (true);
@@ -659,7 +659,7 @@ void KWalletEditor::newEntry() {
 	do {
 		n = KInputDialog::getText(i18n("New Entry"),
 				i18n("Please choose a name for the new entry:"),
-				QString::null,
+				QString::null,	//krazy:exclude=nullstrassign for old broken gcc
 				&ok,
 				this);
 
@@ -669,11 +669,11 @@ void KWalletEditor::newEntry() {
 
 		// FIXME: prohibits the use of the subheadings
 		if (fi->contains(n)) {
-			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"), QString::null, KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));
+			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"), QString::null, KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));	//krazy:exclude=nullstrassign for old broken gcc
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}
-			n = QString::null;
+			n = QString();
 		}
 		break;
 	} while (true);
@@ -701,7 +701,7 @@ void KWalletEditor::newEntry() {
 			return;
 		}
 		if (ci->type() == KWallet::Wallet::Password) {
-			_w->writePassword(n, QString::null);
+			_w->writePassword(n, QString::null);	//krazy:exclude=nullstrassign for old broken gcc
 		} else if (ci->type() == KWallet::Wallet::Map) {
 			_w->writeMap(n, QMap<QString,QString>());
 		} else if (ci->type() == KWallet::Wallet::Stream) {
