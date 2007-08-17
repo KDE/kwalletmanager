@@ -121,7 +121,7 @@ QString KWalletConfig::newWallet() {
 
 	QString n = KInputDialog::getText(i18n("New Wallet"),
 			i18n("Please choose a name for the new wallet:"),
-			QString::null,	//krazy:exclude=nullstrassign for old broken gcc
+			QString(),
 			&ok,
 			this);
 
@@ -217,10 +217,10 @@ void KWalletConfig::load() {
 		denykeys.remove(*i);
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = apps.begin(); j != apps.end(); ++j) {
-			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Allow"));	//krazy:exclude=nullstrassign for old broken gcc
+			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Allow"));
 		}
 		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
-			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Deny"));	//krazy:exclude=nullstrassign for old broken gcc
+			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
 		}
 	}
 	_cfg->setGroup("Auto Deny");
@@ -228,7 +228,7 @@ void KWalletConfig::load() {
 		QStringList denyapps = _cfg->readEntry(*i,QStringList());
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
-			new Q3ListViewItem(lvi, QString::null, *j, i18n("Always Deny"));	//krazy:exclude=nullstrassign for old broken gcc
+			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
 		}
 	}
 	emit changed(false);

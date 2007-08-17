@@ -41,7 +41,7 @@ KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char
 	connect(this, SIGNAL(contextMenuRequested(int,int,const QPoint&)),
 		this, SLOT(contextMenu(int,int,const QPoint&)));
 	setSelectionMode(Q3Table::NoSelection);
-	horizontalHeader()->setLabel(0, QString::null);
+	horizontalHeader()->setLabel(0, QString());
 	horizontalHeader()->setLabel(1, i18n("Key"));
 	horizontalHeader()->setLabel(2, i18n("Value"));
 	setColumnWidth(0, 20); // FIXME: this is arbitrary
