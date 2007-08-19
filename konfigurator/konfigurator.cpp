@@ -16,8 +16,9 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
  */
-#include <QtDBus>
 #include "konfigurator.h"
+
+#include <QtDBus>
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kconfig.h>

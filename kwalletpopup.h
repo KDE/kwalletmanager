@@ -28,7 +28,7 @@ class KWalletPopup : public KMenu {
 	Q_OBJECT
 
 	public:
-		KWalletPopup(const QString& wallet, QWidget *parent = 0, const char* name = 0);
+		explicit KWalletPopup(const QString& wallet, QWidget *parent = 0, const char* name = 0);
 		virtual ~KWalletPopup();
 
 	public slots:

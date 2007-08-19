@@ -18,9 +18,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-
-#include "kbetterthankdialogbase.h"
 #include "kwalleteditor.h"
+#include "kbetterthankdialogbase.h"
 #include "kwmapeditor.h"
 #include "allyourbase.h"
 

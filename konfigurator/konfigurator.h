@@ -37,7 +37,7 @@ public:
 class KWalletConfig : public KCModule {
 	Q_OBJECT
 	public:
-		KWalletConfig(QWidget *parent = 0L, const QStringList& = QStringList());
+		explicit KWalletConfig(QWidget *parent = 0L, const QStringList& = QStringList());
 		virtual ~KWalletConfig();
 
 		void load();

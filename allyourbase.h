@@ -103,8 +103,9 @@ class KWalletFolderItem : public K3ListViewItem {
 
 class KWalletEntryList : public K3ListView {
 	Q_OBJECT
+
 	public:
-		KWalletEntryList(QWidget *parent, const char *name = 0L);
+		explicit KWalletEntryList(QWidget *parent, const char *name = 0L);
 		virtual ~KWalletEntryList();
 
 		bool existsFolder(const QString& name);
@@ -139,8 +140,9 @@ class KWalletItem : public Q3IconViewItem {
 
 class KWalletIconView : public K3IconView {
 	Q_OBJECT
+
 	public:
-		KWalletIconView(QWidget *parent, const char *name = 0L);
+		explicit KWalletIconView(QWidget *parent, const char *name = 0L);
 		virtual ~KWalletIconView();
 
 	protected slots:

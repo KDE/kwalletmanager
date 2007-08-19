@@ -33,10 +33,11 @@ class QDBusInterface;
 
 class KWalletManager : public KXmlGuiWindow {
 	Q_OBJECT
+
 	    Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
 
 	public:
-		KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
+		explicit KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
 		virtual ~KWalletManager();
 
                 QIcon loadSystemTrayIcon(const QString &icon);
