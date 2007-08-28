@@ -19,8 +19,9 @@
 
 #ifndef _KWALLETKONFIGURATOR_H
 #define _KWALLETKONFIGURATOR_H
-
+#define KDE3_SUPPORT
 #include <kcmodule.h>
+#undef KDE3_SUPPORT
 #include "ui_walletconfigwidget.h"
 class KConfig;
 class Q3ListViewItem;
