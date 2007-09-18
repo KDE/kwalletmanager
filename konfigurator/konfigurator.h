@@ -19,9 +19,7 @@
 
 #ifndef _KWALLETKONFIGURATOR_H
 #define _KWALLETKONFIGURATOR_H
-#define KDE3_SUPPORT
 #include <kcmodule.h>
-#undef KDE3_SUPPORT
 #include "ui_walletconfigwidget.h"
 class KConfig;
 class Q3ListViewItem;
@@ -38,7 +36,7 @@ public:
 class KWalletConfig : public KCModule {
 	Q_OBJECT
 	public:
-		explicit KWalletConfig(QWidget *parent = 0L, const QStringList& = QStringList());
+		explicit KWalletConfig(QWidget *parent = 0L, const QVariantList& = QVariantList());
 		virtual ~KWalletConfig();
 
 		void load();

@@ -23,7 +23,8 @@
 #include <kapplication.h>
 #include <kconfig.h>
 #include <kdialog.h>
-#include <kgenericfactory.h>
+#include <kpluginfactory.h>
+#include <kpluginloader.h>
 #include <kinputdialog.h>
 #include <kmenu.h>
 #include <kwallet.h>
@@ -40,10 +41,11 @@
 #include <kconfiggroup.h>
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
-typedef KGenericFactory<KWalletConfig, QWidget> KWalletFactory;
-K_EXPORT_COMPONENT_FACTORY(kcm_kwallet, KWalletFactory("kcmkwallet"))
+K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
+K_EXPORT_PLUGIN(KWalletFactory("kcmkwallet"))
 
-KWalletConfig::KWalletConfig(QWidget *parent, const QStringList& args)
+
+KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 : KCModule(KWalletFactory::componentData(), parent, args) {
 
 	KAboutData *about =
