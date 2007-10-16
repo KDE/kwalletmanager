@@ -393,71 +393,74 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 	KWalletContainerItem *ci = 0L;
 	KWalletFolderItem *fi = 0L;
 
-	switch (item && item->rtti()) {
-		case KWalletEntryItemClass:
-			ci = dynamic_cast<KWalletContainerItem*>(item->parent());
-			if (!ci) {
-				return;
-			}
-			fi = dynamic_cast<KWalletFolderItem*>(ci->parent());
-			if (!fi) {
-				return;
-			}
-			_w->setFolder(fi->name());
-			_deleteFolderAction->setEnabled(false);
-			if (ci->type() == KWallet::Wallet::Password) {
-				QString pass;
-				if (_w->readPassword(item->text(0), pass) == 0) {
-					_ww->_entryStack->setCurrentIndex(4);
-					_ww->_entryName->setText(i18n("Password: %1",
-							 item->text(0)));
-					_ww->_passwordValue->setText(pass);
-					_ww->_saveChanges->setEnabled(false);
-					_ww->_undoChanges->setEnabled(false);
+	if (item)
+	{
+		switch (item->rtti()) {
+			case KWalletEntryItemClass:
+				ci = dynamic_cast<KWalletContainerItem*>(item->parent());
+				if (!ci) {
+					return;
 				}
-			} else if (ci->type() == KWallet::Wallet::Map) {
-				_ww->_entryStack->setCurrentIndex(2);
-				_mapEditorShowHide->setChecked(false);
-				showHideMapEditorValue(false);
-				if (_w->readMap(item->text(0), _currentMap) == 0) {
-					_mapEditor->reload();
-					_ww->_entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
-					_ww->_saveChanges->setEnabled(false);
-					_ww->_undoChanges->setEnabled(false);
+				fi = dynamic_cast<KWalletFolderItem*>(ci->parent());
+				if (!fi) {
+					return;
 				}
-			} else if (ci->type() == KWallet::Wallet::Stream) {
-				_ww->_entryStack->setCurrentIndex(3);
-				QByteArray ba;
-				if (_w->readEntry(item->text(0), ba) == 0) {
-					_ww->_entryName->setText(i18n("Binary Data: %1",
-							 item->text(0)));
-					_ww->_saveChanges->setEnabled(false);
-					_ww->_undoChanges->setEnabled(false);
+				_w->setFolder(fi->name());
+				_deleteFolderAction->setEnabled(false);
+				if (ci->type() == KWallet::Wallet::Password) {
+					QString pass;
+					if (_w->readPassword(item->text(0), pass) == 0) {
+						_ww->_entryStack->setCurrentIndex(4);
+						_ww->_entryName->setText(i18n("Password: %1",
+								item->text(0)));
+						_ww->_passwordValue->setText(pass);
+						_ww->_saveChanges->setEnabled(false);
+						_ww->_undoChanges->setEnabled(false);
+					}
+				} else if (ci->type() == KWallet::Wallet::Map) {
+					_ww->_entryStack->setCurrentIndex(2);
+					_mapEditorShowHide->setChecked(false);
+					showHideMapEditorValue(false);
+					if (_w->readMap(item->text(0), _currentMap) == 0) {
+						_mapEditor->reload();
+						_ww->_entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
+						_ww->_saveChanges->setEnabled(false);
+						_ww->_undoChanges->setEnabled(false);
+					}
+				} else if (ci->type() == KWallet::Wallet::Stream) {
+					_ww->_entryStack->setCurrentIndex(3);
+					QByteArray ba;
+					if (_w->readEntry(item->text(0), ba) == 0) {
+						_ww->_entryName->setText(i18n("Binary Data: %1",
+								item->text(0)));
+						_ww->_saveChanges->setEnabled(false);
+						_ww->_undoChanges->setEnabled(false);
+					}
 				}
-			}
-			break;
-
-		case KWalletContainerItemClass:
-			fi = dynamic_cast<KWalletFolderItem*>(item->parent());
-			if (!fi) {
-				return;
-			}
-			_w->setFolder(fi->name());
-			_deleteFolderAction->setEnabled(false);
-			_ww->_entryName->clear();
-			_ww->_entryStack->setCurrentIndex(0);
-			break;
-
-		case KWalletFolderItemClass:
-			fi = dynamic_cast<KWalletFolderItem*>(item);
-			if (!fi) {
-				return;
-			}
-			_w->setFolder(fi->name());
-			_deleteFolderAction->setEnabled(true);
-			_ww->_entryName->clear();
-			_ww->_entryStack->setCurrentIndex(0);
-			break;
+				break;
+	
+			case KWalletContainerItemClass:
+				fi = dynamic_cast<KWalletFolderItem*>(item->parent());
+				if (!fi) {
+					return;
+				}
+				_w->setFolder(fi->name());
+				_deleteFolderAction->setEnabled(false);
+				_ww->_entryName->clear();
+				_ww->_entryStack->setCurrentIndex(0);
+				break;
+	
+			case KWalletFolderItemClass:
+				fi = dynamic_cast<KWalletFolderItem*>(item);
+				if (!fi) {
+					return;
+				}
+				_w->setFolder(fi->name());
+				_deleteFolderAction->setEnabled(true);
+				_ww->_entryName->clear();
+				_ww->_entryStack->setCurrentIndex(0);
+				break;
+		}
 	}
 
 	if (fi) {
