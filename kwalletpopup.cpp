@@ -64,8 +64,8 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 			pm->setItemParameter(id, id);
 			id++;
 		}
-
-		insertItem(i18n("Disconnec&t"), pm);
+                QAction *act = addMenu( pm);
+                act->setText(i18n("Disconnec&t"));
 	}
 
 	act = KStandardAction::close( this,

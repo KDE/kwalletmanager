@@ -593,17 +593,17 @@ void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint&
 		m->addTitle(title);
 		switch (menuClass) {
 			case KWalletEntryItemClass:
-				m->insertItem(i18n("&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
-				m->insertItem(i18n( "&Rename" ), this, SLOT(renameEntry()), Qt::Key_F2);
-				m->insertItem(i18n( "&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
+				m->addAction(i18n("&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
+				m->addAction(i18n( "&Rename" ), this, SLOT(renameEntry()), Qt::Key_F2);
+				m->addAction(i18n( "&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
 				if (ci && ci->type() == KWallet::Wallet::Password) {
-					m->insertSeparator();
+					m->addSeparator();
 					m->addAction( _copyPassAction );
 				}
 				break;
 
 			case KWalletContainerItemClass:
-				m->insertItem(i18n( "&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
+				m->addAction(i18n( "&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
 				break;
 
 			case KWalletFolderItemClass:
