@@ -393,7 +393,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 	KWalletContainerItem *ci = 0L;
 	KWalletFolderItem *fi = 0L;
 
-	switch (item->rtti()) {
+	switch (item && item->rtti()) {
 		case KWalletEntryItemClass:
 			ci = dynamic_cast<KWalletContainerItem*>(item->parent());
 			if (!ci) {
