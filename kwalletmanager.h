@@ -67,7 +67,7 @@ class KWalletManager : public KXmlGuiWindow {
 		void shuttingDown();
 		void possiblyQuit();
 		void editorClosed(KXmlGuiWindow* e);
-		void possiblyRescan(const QByteArray& app);
+		void possiblyRescan(const QString& app, const QString&, const QString&);
 		void setupWallet();
 		void openWallet();
 		void deleteWallet();

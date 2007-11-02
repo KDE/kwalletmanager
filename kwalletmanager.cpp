@@ -93,29 +93,20 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	_iconView->setMinimumSize(320, 200);
 
         m_kwalletdModule = new org::kde::KWallet("org.kde.kded", "/modules/kwalletd", QDBusConnection::sessionBus());
-#ifdef __GNUC__
-#warning "kde4: port to dbus";
-#endif
-#if 0
-            connect(_dcopRef->dcopClient(),
-                    SIGNAL(applicationRemoved(const QByteArray&)),
-                    this,
-                    SLOT(possiblyRescan(const QByteArray&)));
-            connect(_dcopRef->dcopClient(),
-                    SIGNAL(applicationRegistered(const QByteArray&)),
-                    this,
-                    SLOT(possiblyRescan(const QByteArray&)));
-#endif
-            connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
-                     this, SLOT(allWalletsClosed() ) );
-            connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
-                     this, SLOT(updateWalletDisplay()) );
-            connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
-                     this, SLOT(aWalletWasOpened()) );
-            connect( m_kwalletdModule, SIGNAL(walletDeleted(QString)),
-                  this, SLOT(updateWalletDisplay()) );
-            connect( m_kwalletdModule, SIGNAL(walletListDirty()),
-                  this, SLOT(updateWalletDisplay()) );
+        connect(QDBusConnection::sessionBus().interface(),
+                SIGNAL(serviceOwnerChanged(QString,QString,QString)),
+                this,
+                SLOT(possiblyRescan(QString,QString,QString)));
+        connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
+                 this, SLOT(allWalletsClosed() ) );
+        connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
+                 this, SLOT(updateWalletDisplay()) );
+        connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
+                 this, SLOT(aWalletWasOpened()) );
+        connect( m_kwalletdModule, SIGNAL(walletDeleted(QString)),
+                 this, SLOT(updateWalletDisplay()) );
+        connect( m_kwalletdModule, SIGNAL(walletListDirty()),
+                 this, SLOT(updateWalletDisplay()) );
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
@@ -357,8 +348,10 @@ void KWalletManager::editorClosed(KXmlGuiWindow* e) {
 }
 
 
-void KWalletManager::possiblyRescan(const QByteArray& app) {
-	if (app == "kded") {
+void KWalletManager::possiblyRescan(const QString& app, const QString& oldOwner, const QString& newOwner) {
+	Q_UNUSED( oldOwner );
+	Q_UNUSED( newOwner );
+	if (app == "org.kde.kded") {
 		updateWalletDisplay();
 	}
 }
