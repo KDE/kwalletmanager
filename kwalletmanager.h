@@ -22,14 +22,13 @@
 #include <QtCore/QObject>
 #include <kxmlguiwindow.h>
 #include <q3ptrlist.h>
-//Added by qt3to4:
-#include <QPixmap>
 #include <QIcon>
 
 class KSystemTrayIcon;
 class KWalletIconView;
 class Q3IconViewItem;
 class QDBusInterface;
+class OrgKdeKWalletInterface;
 
 class KWalletManager : public KXmlGuiWindow {
 	Q_OBJECT
@@ -78,7 +77,7 @@ class KWalletManager : public KXmlGuiWindow {
 		KSystemTrayIcon *_tray;
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
-		QDBusInterface *m_kwalletdModule;
+		OrgKdeKWalletInterface *m_kwalletdModule;
 		Q3PtrList<KXmlGuiWindow> _windows;
 		bool _kwalletdLaunch;
 };

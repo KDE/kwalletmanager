@@ -22,7 +22,7 @@
 #include "kwalletpopup.h"
 #include "kwalleteditor.h"
 #include "allyourbase.h"
-#include <QtDBus>
+#include "kwallet_interface.h"
 
 #include <kaction.h>
 #include <kapplication.h>
@@ -38,20 +38,15 @@
 #include <ksystemtrayicon.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
-#include <q3accel.h>
 #include <qpointer.h>
 #include <q3ptrstack.h>
 #include <QRegExp>
 
 #include <qtimer.h>
-//Added by qt3to4:
-#include <QPixmap>
 #include <ktoolinvocation.h>
-#include <qdbusconnection.h>
 #include <kicon.h>
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
-#define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KXmlGuiWindow(parent, f)
@@ -60,11 +55,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     QDBusConnection::sessionBus().registerObject("/KWalletManager", this, QDBusConnection::ExportScriptableSlots);
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	_kwalletdLaunch = false;
-	Q3Accel *accel = new Q3Accel(this, "kwalletmanager");
-#ifdef __GNUC__
-#warning "kde4: dbus port how ?"
-#endif	
-	//KApplication::dcopClient()->setQtBridgeEnabled(false);
 	_shuttingDown = false;
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
@@ -102,14 +92,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	setCentralWidget(_iconView);
 	_iconView->setMinimumSize(320, 200);
 
-        m_kwalletdModule = new QDBusInterface("org.kde.kded", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
-        if ( !m_kwalletdModule->isValid() )
-            kWarning() << "kded not running?" ;
-        else
-        {
+        m_kwalletdModule = new org::kde::KWallet("org.kde.kded", "/modules/kwalletd", QDBusConnection::sessionBus());
 #ifdef __GNUC__
 #warning "kde4: port to dbus";
-#endif		
+#endif
 #if 0
             connect(_dcopRef->dcopClient(),
                     SIGNAL(applicationRemoved(const QByteArray&)),
@@ -130,7 +116,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
                   this, SLOT(updateWalletDisplay()) );
             connect( m_kwalletdModule, SIGNAL(walletListDirty()),
                   this, SLOT(updateWalletDisplay()) );
-        }
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
@@ -138,18 +123,18 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	QAction *action = actionCollection()->addAction("wallet_create");
 	action->setText(i18n("&New Wallet..."));
 	action->setIcon(KIcon("kwalletmanager"));
-	connect(action, SIGNAL(triggered(bool) ), SLOT(createWallet()));
+	connect(action, SIGNAL(triggered()), SLOT(createWallet()));
 	QAction *act = actionCollection()->addAction("wallet_settings");
 	act->setText(i18n("Configure &Wallet..."));
 	act->setIcon(KIcon("configure"));
 
-	connect(act, SIGNAL(triggered(bool) ), SLOT(setupWallet()));
+	connect(act, SIGNAL(triggered()), SLOT(setupWallet()));
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
 	}
 	act = actionCollection()->addAction("close_all_wallets");
 	act->setText(i18n("Close &All Wallets"));
-	connect(act, SIGNAL(triggered(bool) ), SLOT(closeAllWallets()));
+	connect(act, SIGNAL(triggered()), SLOT(closeAllWallets()));
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
 	}
@@ -158,8 +143,14 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 actionCollection());
 
 	createGUI("kwalletmanager.rc");
-	accel->connectItem(accel->insertItem(Qt::Key_Return), this, SLOT(openWallet()));
-	accel->connectItem(accel->insertItem(Qt::Key_Delete), this, SLOT(deleteWallet()));
+
+        KAction* openWalletAction = new KAction(i18n("Open Wallet"), actionCollection());
+        openWalletAction->setShortcut(Qt::Key_Return);
+        connect(openWalletAction, SIGNAL(triggered()), this, SLOT(openWallet()));
+
+        KAction* deleteWalletAction = new KAction(i18n("Delete Wallet"), actionCollection());
+        deleteWalletAction->setShortcut(Qt::Key_Delete);
+        connect(deleteWalletAction, SIGNAL(triggered()), this, SLOT(deleteWallet()));
 
 	if (_tray) {
 		_tray->show();
@@ -206,8 +197,8 @@ void KWalletManager::aWalletWasOpened() {
 
 
 void KWalletManager::updateWalletDisplay() {
-QStringList wl = KWallet::Wallet::walletList();
-Q3PtrStack<Q3IconViewItem> trash;
+    QStringList wl = KWallet::Wallet::walletList();
+    Q3PtrStack<Q3IconViewItem> trash;
 
 	for (Q3IconViewItem *item = _iconView->firstItem(); item; item = item->nextItem()) {
 		if (!wl.contains(item->text())) {
@@ -428,7 +419,7 @@ void KWalletManager::setupWallet() {
 
 
 void KWalletManager::closeAllWallets() {
-    m_kwalletdModule->call( "closeAllWallets");
+    m_kwalletdModule->closeAllWallets();
 }
 
 
