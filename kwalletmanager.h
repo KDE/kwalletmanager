@@ -27,7 +27,6 @@
 class KSystemTrayIcon;
 class KWalletIconView;
 class Q3IconViewItem;
-class QDBusInterface;
 class OrgKdeKWalletInterface;
 
 class KWalletManager : public KXmlGuiWindow {
