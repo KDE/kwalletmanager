@@ -42,7 +42,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	connect(act, SIGNAL(triggered(bool)), SLOT(createWallet()));
 	addAction( act );
 
-        act= ac->addAction( "wallet_open" );
+        act= ac->addAction( "wallet-open" );
         act->setText( i18n( "&Open..." ) );
 	connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
 	act->setShortcut(QKeySequence(Qt::Key_Return));
