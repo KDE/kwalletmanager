@@ -252,7 +252,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 	return true;
 }
 
-void KWalletItem::dropped(QDropEvent *e, const QList<Q3IconDragItem>& lst) {
+void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst) {
 	Q_UNUSED(lst);
 	if (e->provides("application/x-kwallet-folder") || 
 			e->provides("text/uri-list")) {
