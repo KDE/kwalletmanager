@@ -1,0 +1,8 @@
+/** @mainpage kwallet
+
+The kwallet application
+
+*/
+
+// DOXYGEN_REFERENCES = kdecore
+// DOXYGEN_SET_PROJECT_NAME = kwallet
