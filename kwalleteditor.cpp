@@ -47,15 +47,10 @@
 #include <ktemporaryfile.h>
 #include <kxmlguifactory.h>
 #include <QCheckBox>
-#include <QComboBox>
 #include <qclipboard.h>
-#include <QLabel>
-#include <QLayout>
-#include <QLineEdit>
 #include <q3listview.h>
 #include <q3ptrstack.h>
 #include <QPushButton>
-#include <QTextDocument>
 #include <q3textedit.h>
 #include <QTimer>
 #include <q3widgetstack.h>

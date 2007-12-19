@@ -29,7 +29,6 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <QDropEvent>
-#include <QList>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
 

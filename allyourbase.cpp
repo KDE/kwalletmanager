@@ -39,7 +39,6 @@
 #include <QPixmap>
 #include <Q3StrList>
 #include <QDropEvent>
-#include <QList>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
 
