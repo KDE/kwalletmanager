@@ -9,6 +9,7 @@ X-DocPath=kwallet/index.html
 
 X-KDE-Library=kcm_kwallet
 X-KDE-ParentApp=kcontrol
+X-KDE-System-Settings-Parent-Category=advanced-user-settings
 
 Name=KDE Wallet
 Name[ar]=محفظة كدى
