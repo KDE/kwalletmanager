@@ -285,7 +285,7 @@ void KWalletConfig::save() {
 	}
 
 	_cfg->sync();
-        QDBusInterface kwalletd("org.kde.kded", "/modules/kwallet", KWALLETMANAGERINTERFACE);
+        QDBusInterface kwalletd("org.kde.kded", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
         kwalletd.call( "reconfigure" );
 	emit changed(false);
 }
