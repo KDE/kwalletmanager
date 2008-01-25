@@ -18,7 +18,7 @@
  */
 #include "konfigurator.h"
 
-#include <QtDBus>
+#include <QtDBus/QtDBus>
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kconfig.h>
