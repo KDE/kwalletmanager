@@ -19,7 +19,7 @@ set(kwalletmanager_SRCS
    allyourbase.cpp 
    kbetterthankdialogbase.cpp )
 
-qt4_add_dbus_interface(kwalletmanager_SRCS ${DBUS_INTERFACES_INSTALL_DIR}/org.kde.KWallet.xml kwallet_interface)
+qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
 
 kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui)
 
