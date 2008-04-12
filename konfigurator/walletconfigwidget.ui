@@ -45,7 +45,7 @@
                </sizepolicy>
               </property>
               <property name="whatsThis" >
-               <string>&lt;p>&lt;b>Close wallet after a period of inactivity&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
+               <string>&lt;p>&lt;b>Close wallet after a period of inactivity.&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
               </property>
               <property name="text" >
                <string>Close when unused for:</string>
@@ -64,7 +64,7 @@
                </sizepolicy>
               </property>
               <property name="whatsThis" >
-               <string>&lt;p>&lt;b>Close wallet after a period of inactivity&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
+               <string>&lt;p>&lt;b>Close wallet after a period of inactivity.&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
               </property>
               <property name="suffix" >
                <string> min</string>
