@@ -29,7 +29,7 @@
 #include <qapplication.h>
 #include <qclipboard.h>
 #include <QPushButton>
-#include <qtextedit.h>
+#include <ktextedit.h>
 //Added by qt3to4:
 #include <QFocusEvent>
 #include <QKeyEvent>
@@ -131,28 +131,27 @@ void KWMapEditor::copy() {
 }
 
 
-class InlineEditor : public QTextEdit {
+class InlineEditor : public KTextEdit {
 	public:
-		InlineEditor(KWMapEditor *p, int row, int col) : QTextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/ 
+	InlineEditor(KWMapEditor *p, int row, int col) : KTextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/
 #ifndef Q_OS_WIN			
 			KWindowSystem::setType(winId(), NET::Override);  
-#endif			
-			connect(p, SIGNAL(destroyed()), SLOT(closed()));}
-		virtual ~InlineEditor() { if (!_p) return; _p->setText(row, col, toPlainText()); _p->emitDirty(); }
+#endif
+		connect(p, SIGNAL(destroyed()), SLOT(close()));
+	}
+	virtual ~InlineEditor() {
+		if (!_p) return;
+		_p->setText(row, col, toPlainText()); _p->emitDirty();
+	}
 
 	protected:
-		virtual void focusOutEvent(QFocusEvent*) {
-#ifdef __GNUC__
-#warning "Port to kde 4.0"
-#endif			
-#if 0
-			if (Q3FocusEvent::reason() == QFocusEvent::Popup) {
-				QWidget *focusW = qApp->focusWidget();
-				if (focusW && focusW == popup) {
-					return;
-				}
+		virtual void focusOutEvent(QFocusEvent *e) {
+			if (e->reason() == Qt::PopupFocusReason) {
+				// TODO: It seems we only get here if we're disturbed
+				// by our own popup. this needs some clearance though.
+				return;
 			}
-#endif
+
 			close();
 		}
 		virtual void keyPressEvent(QKeyEvent *e) {
@@ -161,7 +160,7 @@ class InlineEditor : public QTextEdit {
 				close();
 			} else {
 				e->ignore();
-				QTextEdit::keyPressEvent(e);
+				KTextEdit::keyPressEvent(e);
 			}
 		}
 		virtual void contextMenuEvent( QContextMenuEvent *event )
@@ -176,7 +175,6 @@ class InlineEditor : public QTextEdit {
 		QPointer<QMenu> popup;
 };
 
-
 QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
 	//kDebug(2300) << "EDIT COLUMN " << col ;
 	if (col != 2) {
@@ -184,11 +182,14 @@ QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
 	}
 
 	QRect geo = cellGeometry(row, col);
-	QTextEdit *e = new InlineEditor(this, row, col);
+	KTextEdit *e = new InlineEditor(this, row, col);
+	e->setAttribute(Qt::WA_DeleteOnClose);
+	e->setCheckSpellingEnabled(false); // disable spell-checking
 	e->setText(text(row, col));
 	e->move(mapToGlobal(geo.topLeft()));
 	e->resize(geo.width() * 2, geo.height() * 3);
 	e->show();
+	e->setFocus(Qt::PopupFocusReason);
 	return e;
 }
 
