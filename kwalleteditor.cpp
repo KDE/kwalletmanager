@@ -689,12 +689,11 @@ void KWalletEditor::newEntry() {
 		_w->setFolder(fi->name());
 
 		KWalletEntryItem *ni = new KWalletEntryItem(_w, p, n);
-		_entryList->setSelected(ni,true);
-		_entryList->ensureItemVisible(ni);
 
 		KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(p);
 		if (!ci) {
 			KMessageBox::error(this, i18n("An unexpected error occurred trying to add the new entry"));
+			delete ni;
 			return;
 		}
 		if (ci->type() == KWallet::Wallet::Password) {
@@ -706,6 +705,10 @@ void KWalletEditor::newEntry() {
 		} else {
 			abort();
 		}
+
+		_entryList->setSelected(ni,true);
+		_entryList->ensureItemVisible(ni);
+
 		fi->refresh();
 		_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 	}
