@@ -65,7 +65,7 @@ QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group){
 		pix = loader->loadIcon( _name.toLower(), group, 0,
 			KIconLoader::DefaultState, QStringList(),0, true);
 	if (pix.isNull())
-		pix = loader->loadIcon( "folder_red", group, 0,
+		pix = loader->loadIcon( "folder-red", group, 0,
 			KIconLoader::DefaultState, QStringList(),0, true);
 	return pix;
 }

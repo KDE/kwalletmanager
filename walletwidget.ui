@@ -81,7 +81,7 @@
           <string>&amp;Undo</string>
          </property>
          <property name="icon" >
-          <iconset>undo</iconset>
+          <iconset>edit-undo</iconset>
          </property>
         </widget>
        </item>
@@ -154,7 +154,7 @@
           <string>&amp;Save</string>
          </property>
          <property name="icon" >
-          <iconset>filesave</iconset>
+          <iconset>document-save</iconset>
          </property>
         </widget>
        </item>
@@ -368,7 +368,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11" />
  <layoutfunction spacing="KDialog::spacingHint" margin="KDialog::marginHint" />
- <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <pixmapfunction>SmallIcon</pixmapfunction>
  <customwidgets>
   <customwidget>
    <class>KSqueezedTextLabel</class>
@@ -378,6 +378,7 @@
  </customwidgets>
  <includes>
   <include location="global" >kdialog.h</include>
+  <include location="global" >kiconloader.h</include>
  </includes>
  <resources/>
  <connections/>
