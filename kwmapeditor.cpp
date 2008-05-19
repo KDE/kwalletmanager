@@ -133,10 +133,9 @@ void KWMapEditor::copy() {
 
 class InlineEditor : public KTextEdit {
 	public:
-	InlineEditor(KWMapEditor *p, int row, int col) : KTextEdit(), _p(p), row(row), col(col) { /*setWFlags(Qt::WStyle_NoBorder | Qt::WDestructiveClose);*/
-#ifndef Q_OS_WIN			
-			KWindowSystem::setType(winId(), NET::Override);  
-#endif
+	InlineEditor(KWMapEditor *p, int row, int col) : KTextEdit(), _p(p), row(row), col(col) {
+		setAttribute(Qt::WA_DeleteOnClose);
+		setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
 		connect(p, SIGNAL(destroyed()), SLOT(close()));
 	}
 	virtual ~InlineEditor() {
@@ -183,7 +182,6 @@ QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
 
 	QRect geo = cellGeometry(row, col);
 	KTextEdit *e = new InlineEditor(this, row, col);
-	e->setAttribute(Qt::WA_DeleteOnClose);
 	e->setCheckSpellingEnabled(false); // disable spell-checking
 	e->setText(text(row, col));
 	e->move(mapToGlobal(geo.topLeft()));
