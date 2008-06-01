@@ -9,6 +9,7 @@ GenericName[km]=ឧបករណ៍​គ្រប់គ្រង​កាបូ�
 GenericName[pt]=Ferramenta de Gestão da Carteira
 GenericName[pt_BR]=Ferramenta de Gerenciamento de Carteira
 GenericName[sv]=Hanteringsverktyg för plånbok
+GenericName[uk]=Засіб керування торбинками
 GenericName[zh_TW]=錢包管理工具
 Exec=kwalletmanager %u
 MimeType=application/x-kde-wallet;
