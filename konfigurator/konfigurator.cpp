@@ -30,11 +30,8 @@
 #include <kwallet.h>
 
 #include <QCheckBox>
-#include <QComboBox>
-#include <QLayout>
 #include <q3listview.h>
 #include <QPushButton>
-#include <QSpinBox>
 //Added by qt3to4:
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>

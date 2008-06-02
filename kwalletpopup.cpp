@@ -27,7 +27,6 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kwallet.h>
-#include <KStandardGuiItem>
 
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
 : KMenu(parent), _walletName(wallet) {
