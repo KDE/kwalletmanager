@@ -1,11 +1,13 @@
 [Desktop Entry]
 Name=KWalletManager
+Name[nds]=KDE-Knippenpleger
 Name[sv]=Hanteringsverktyg för plånbok
 Name[zh_TW]=KDE 錢包管理員
 GenericName=Wallet Management Tool
 GenericName[fr]=Outil de gestion de portefeuilles de KDE
 GenericName[gl]=Ferramenta de xestión de carteiras
 GenericName[km]=ឧបករណ៍​គ្រប់គ្រង​កាបូប
+GenericName[nds]=Knippenpleger
 GenericName[pt]=Ferramenta de Gestão da Carteira
 GenericName[pt_BR]=Ferramenta de Gerenciamento de Carteira
 GenericName[sv]=Hanteringsverktyg för plånbok
