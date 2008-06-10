@@ -1,10 +1,15 @@
 [Desktop Entry]
 Name=KWalletManager
+Name[de]=Verwaltung für digitale Brieftasche
+Name[et]=Turvalaeka haldur
 Name[nds]=KDE-Knippenpleger
 Name[sv]=Hanteringsverktyg för plånbok
 Name[zh_TW]=KDE 錢包管理員
 GenericName=Wallet Management Tool
+GenericName[de]=Verwaltung für digitale Brieftasche
+GenericName[el]=Εργαλείο διαχείρισης πορτοφολιού
 GenericName[es]=Herramienta de gestión de carteras
+GenericName[et]=Turvalaeka haldur
 GenericName[fr]=Outil de gestion de portefeuilles de KDE
 GenericName[ga]=Uirlis Bhainisteoireachta Sparáin
 GenericName[gl]=Ferramenta de xestión de carteiras
