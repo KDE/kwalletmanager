@@ -54,6 +54,7 @@
 #include <q3textedit.h>
 #include <QTimer>
 #include <q3widgetstack.h>
+#include <QSet>
 //Added by qt3to4:
 #include <QTextStream>
 #include <QList>
@@ -848,6 +849,7 @@ void KWalletEditor::importWallet() {
 			_w->setFolder(*f);
 
 			QMap<QString, QMap<QString, QString> > map;
+			QSet<QString> mergedkeys; // prevents re-merging already merged entries.
 			int rc;
 			rc = w->readMapList("*", map);
 			if (rc == 0) {
@@ -875,6 +877,7 @@ void KWalletEditor::importWallet() {
 						continue;
 					}
 					_w->writeMap(me.key(), me.value());
+					mergedkeys.insert(me.key()); // remember this key has been merged
 				}
 			}
 
@@ -905,6 +908,7 @@ void KWalletEditor::importWallet() {
 						continue;
 					}
 					_w->writePassword(pe.key(), pe.value());
+					mergedkeys.insert(pe.key()); // remember this key has been merged
 				}
 			}
 
@@ -913,6 +917,10 @@ void KWalletEditor::importWallet() {
 			if (rc == 0) {
 				QMap<QString, QByteArray>::ConstIterator ee;
 				for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
+					// prevent re-merging already merged entries.
+					if (mergedkeys.contains(ee.key())) {
+						continue;
+					}
 					bool hasEntry = _w->hasEntry(ee.key());
 					if (hasEntry && mp == Prompt) {
 						KBetterThanKDialogBase *bd;
