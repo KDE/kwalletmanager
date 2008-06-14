@@ -202,12 +202,13 @@ void KWalletManager::updateWalletDisplay() {
 	trash.clear();
 
 	for (QStringList::Iterator i = wl.begin(); i != wl.end(); ++i) {
-		if (!_iconView->findItem(*i, Q3IconView::ExactMatch | Q3IconView::CaseSensitive)) {
-			// FIXME: if KWallet::Wallet::isOpen(*i) then show
-			//        a different icon!
-			new KWalletItem(_iconView, *i);
-		} else {
-			// FIXME: See if icon needs to be updated
+		Q3IconViewItem *itm = _iconView->findItem(*i, Q3IconView::ExactMatch | Q3IconView::CaseSensitive);
+		if (!itm) {
+			itm = new KWalletItem(_iconView, *i);
+		}
+		KWalletItem *wi = static_cast<KWalletItem*>(itm);
+		if (wi) {
+			wi->setOpen(KWallet::Wallet::isOpen(*i));
 		}
 	}
 }

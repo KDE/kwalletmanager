@@ -131,9 +131,14 @@ class KWalletItem : public Q3IconViewItem {
 		virtual ~KWalletItem();
 
 		virtual bool acceptDrop(const QMimeSource *mime) const;
+		
+		void setOpen(bool state);
 
 	protected:
 		virtual void dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst); 
+		
+	private:
+		bool _open;
 };
 
 

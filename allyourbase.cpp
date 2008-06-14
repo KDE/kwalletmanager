@@ -178,7 +178,7 @@ KWalletEntryItem::~KWalletEntryItem() {
  * KWalletItem - IconView items to represent wallets
  */
 KWalletItem::KWalletItem(Q3IconView *parent, const QString& walletName)
-: Q3IconViewItem(parent, walletName, DesktopIcon("kwalletmanager")) {
+: Q3IconViewItem(parent, walletName, DesktopIcon("wallet-closed")), _open(false) {
 }
 
 KWalletItem::~KWalletItem() {
@@ -187,6 +187,17 @@ KWalletItem::~KWalletItem() {
 bool KWalletItem::acceptDrop(const QMimeSource *mime) const {
 	return mime->provides("application/x-kwallet-folder") ||
 		mime->provides("text/uri-list");
+}
+
+void KWalletItem::setOpen(bool state) {
+	if (_open != state) {
+		_open = state;
+		if (_open) {
+			setPixmap( DesktopIcon("wallet-open") );
+		} else {
+			setPixmap( DesktopIcon("wallet-closed") );
+		}
+	}
 }
 
 static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream& ds) {
