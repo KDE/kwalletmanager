@@ -15,6 +15,12 @@
      <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
+     <property name="opaqueResize" >
+      <bool>true</bool>
+     </property>
+     <property name="childrenCollapsible" >
+      <bool>false</bool>
+     </property>
      <widget class="QFrame" name="_entryListFrame" >
       <property name="sizePolicy" >
        <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
@@ -31,19 +37,10 @@
      </widget>
      <widget class="QWidget" name="layout3" >
       <layout class="QGridLayout" >
-       <property name="leftMargin" >
+       <property name="margin" >
         <number>0</number>
        </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <item row="1" column="0" colspan="3" >
+       <item row="1" column="0" colspan="4" >
         <widget class="KSqueezedTextLabel" name="_entryName" >
          <property name="sizePolicy" >
           <sizepolicy vsizetype="Minimum" hsizetype="Preferred" >
@@ -64,15 +61,15 @@
          <property name="sizeType" >
           <enum>QSizePolicy::Expanding</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
-           <width>227</width>
+           <width>150</width>
            <height>21</height>
           </size>
          </property>
         </spacer>
        </item>
-       <item row="3" column="1" >
+       <item row="3" column="2" >
         <widget class="QPushButton" name="_undoChanges" >
          <property name="enabled" >
           <bool>false</bool>
@@ -81,22 +78,14 @@
           <string>&amp;Undo</string>
          </property>
          <property name="icon" >
-          <iconset>edit-undo</iconset>
+          <iconset>
+           <normaloff>edit-undo</normaloff>edit-undo</iconset>
          </property>
         </widget>
        </item>
-       <item row="0" column="0" colspan="3" >
+       <item row="0" column="0" colspan="4" >
         <layout class="QHBoxLayout" >
-         <property name="leftMargin" >
-          <number>0</number>
-         </property>
-         <property name="topMargin" >
-          <number>0</number>
-         </property>
-         <property name="rightMargin" >
-          <number>0</number>
-         </property>
-         <property name="bottomMargin" >
+         <property name="margin" >
           <number>0</number>
          </property>
          <item>
@@ -145,7 +134,7 @@
          </item>
         </layout>
        </item>
-       <item row="3" column="2" >
+       <item row="3" column="3" >
         <widget class="QPushButton" name="_saveChanges" >
          <property name="enabled" >
           <bool>false</bool>
@@ -154,11 +143,12 @@
           <string>&amp;Save</string>
          </property>
          <property name="icon" >
-          <iconset>document-save</iconset>
+          <iconset>
+           <normaloff>document-save</normaloff>document-save</iconset>
          </property>
         </widget>
        </item>
-       <item row="2" column="0" colspan="3" >
+       <item row="2" column="0" colspan="4" >
         <widget class="QStackedWidget" name="_entryStack" >
          <property name="sizePolicy" >
           <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
@@ -166,39 +156,34 @@
            <verstretch>1</verstretch>
           </sizepolicy>
          </property>
-         <widget class="QWidget" name="page" />
+         <property name="currentIndex" >
+          <number>1</number>
+         </property>
          <widget class="QWidget" name="page" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>406</width>
+            <height>391</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="page" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>384</width>
+            <height>391</height>
+           </rect>
+          </property>
           <layout class="QGridLayout" >
-           <property name="leftMargin" >
-            <number>0</number>
-           </property>
-           <property name="topMargin" >
-            <number>0</number>
-           </property>
-           <property name="rightMargin" >
-            <number>0</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>0</number>
            </property>
            <item row="1" column="0" colspan="2" >
             <widget class="QTextEdit" name="_passwordValue" />
-           </item>
-           <item row="0" column="1" >
-            <spacer>
-             <property name="orientation" >
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeType" >
-              <enum>QSizePolicy::Expanding</enum>
-             </property>
-             <property name="sizeHint" >
-              <size>
-               <width>271</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
            </item>
            <item row="0" column="0" >
             <widget class="QPushButton" name="_hideContents" >
@@ -209,19 +194,27 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="page" />
          <widget class="QWidget" name="page" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>406</width>
+            <height>391</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="page" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
           <layout class="QGridLayout" >
-           <property name="leftMargin" >
-            <number>0</number>
-           </property>
-           <property name="topMargin" >
-            <number>0</number>
-           </property>
-           <property name="rightMargin" >
-            <number>0</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>0</number>
            </property>
            <item row="1" column="1" >
@@ -245,7 +238,7 @@
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
              </property>
-             <property name="sizeHint" >
+             <property name="sizeHint" stdset="0" >
               <size>
                <width>31</width>
                <height>41</height>
@@ -261,7 +254,7 @@
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
              </property>
-             <property name="sizeHint" >
+             <property name="sizeHint" stdset="0" >
               <size>
                <width>31</width>
                <height>41</height>
@@ -277,7 +270,7 @@
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
              </property>
-             <property name="sizeHint" >
+             <property name="sizeHint" stdset="0" >
               <size>
                <width>61</width>
                <height>41</height>
@@ -293,7 +286,7 @@
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
              </property>
-             <property name="sizeHint" >
+             <property name="sizeHint" stdset="0" >
               <size>
                <width>41</width>
                <height>21</height>
@@ -304,17 +297,16 @@
           </layout>
          </widget>
          <widget class="QWidget" name="page" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
           <layout class="QGridLayout" >
-           <property name="leftMargin" >
-            <number>0</number>
-           </property>
-           <property name="topMargin" >
-            <number>0</number>
-           </property>
-           <property name="rightMargin" >
-            <number>0</number>
-           </property>
-           <property name="bottomMargin" >
+           <property name="margin" >
             <number>0</number>
            </property>
            <item row="0" column="1" >
@@ -325,7 +317,7 @@
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
              </property>
-             <property name="sizeHint" >
+             <property name="sizeHint" stdset="0" >
               <size>
                <width>236</width>
                <height>21</height>
@@ -341,7 +333,7 @@
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
              </property>
-             <property name="sizeHint" >
+             <property name="sizeHint" stdset="0" >
               <size>
                <width>31</width>
                <height>358</height>
@@ -359,6 +351,19 @@
           </layout>
          </widget>
         </widget>
+       </item>
+       <item row="3" column="1" >
+        <spacer name="horizontalSpacer" >
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
