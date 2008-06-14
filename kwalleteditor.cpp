@@ -436,7 +436,6 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_w->setFolder(fi->name());
 				_deleteFolderAction->setEnabled(false);
 				
-				
 				// add standard menu items
 				_contextMenu->addAction( _newEntryAction );
 				_contextMenu->addAction( _renameEntryAction );
@@ -477,9 +476,6 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 						_ww->_saveChanges->setEnabled(false);
 						_ww->_undoChanges->setEnabled(false);
 					}
-				} else if (ci->type() == KWallet::Wallet::Unknown) {
-					// disable the context menu on unknown items
-					_contextMenu->setEnabled(false);
 				}
 				break;
 	
@@ -520,6 +516,13 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_deleteFolderAction->setEnabled(true);
 				_ww->_entryName->clear();
 				_ww->_entryStack->setCurrentIndex(0);
+				break;
+				
+			default:
+				// all items but Unknown entries return have their
+				// rtti set. Unknown items can only be deleted.
+				_contextMenu->addAction( _deleteEntryAction );
+				_deleteEntryAction->setEnabled(true);
 				break;
 		}
 	} else {
