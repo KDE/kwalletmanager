@@ -69,7 +69,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	setObjectName(name);
 	_newWallet = false;
 	_ww = new WalletWidget(this);
-	_copyPassAction = KStandardAction::copy(this, SLOT(copyPassword()), actionCollection());
+	_contextMenu = new KMenu(this);
 
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
 	box->setSpacing( KDialog::spacingHint() );
@@ -203,6 +203,26 @@ void KWalletEditor::createActions() {
 	_saveAsAction = KStandardAction::saveAs(this, SLOT(saveAs()), actionCollection());
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_saveAsAction, SLOT(setEnabled(bool)));
+
+	_copyPassAction = KStandardAction::copy(this, SLOT(copyPassword()), actionCollection());
+	
+	_newEntryAction = actionCollection()->addAction( "new_entry" );
+	_newEntryAction->setText( i18n( "&New..." ) );
+	_newEntryAction->setShortcut( Qt::Key_Insert );
+	connect(_newEntryAction, SIGNAL(triggered(bool)), SLOT(newEntry()));
+	_newEntryAction->setEnabled(false);
+	
+	_renameEntryAction = actionCollection()->addAction( "rename_entry" );
+	_renameEntryAction->setText( i18n( "&Rename" ) );
+	_renameEntryAction->setShortcut( Qt::Key_F2 );
+	connect(_renameEntryAction, SIGNAL(triggered(bool)), SLOT(renameEntry()));
+	_renameEntryAction->setEnabled(false);
+	
+	_deleteEntryAction = actionCollection()->addAction( "delete_entry" );
+	_deleteEntryAction->setText( i18n( "&Delete" ) );
+	_deleteEntryAction->setShortcut( Qt::Key_Delete );
+	connect(_deleteEntryAction, SIGNAL(triggered(bool)), SLOT(deleteEntry()));
+	_deleteEntryAction->setEnabled(false);
 
 	KStandardAction::quit(this, SLOT(close()), actionCollection());
 	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
@@ -389,8 +409,20 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 	KWalletContainerItem *ci = 0L;
 	KWalletFolderItem *fi = 0L;
 
+	// clear the context menu
+	_contextMenu->clear();
+	_contextMenu->setEnabled(true);
+	// disable the entry actions (reenable them on adding)
+	_newEntryAction->setEnabled(false);
+	_renameEntryAction->setEnabled(false);
+	_deleteEntryAction->setEnabled(false);
+
 	if (item)
 	{
+		// set the context menu's title
+		_contextMenu->addTitle(_contextMenu->fontMetrics().elidedText(
+			item->text(0), Qt::ElideMiddle, 200 ) );
+	
 		switch (item->rtti()) {
 			case KWalletEntryItemClass:
 				ci = dynamic_cast<KWalletContainerItem*>(item->parent());
@@ -403,6 +435,16 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				}
 				_w->setFolder(fi->name());
 				_deleteFolderAction->setEnabled(false);
+				
+				
+				// add standard menu items
+				_contextMenu->addAction( _newEntryAction );
+				_contextMenu->addAction( _renameEntryAction );
+				_contextMenu->addAction( _deleteEntryAction );
+				_newEntryAction->setEnabled(true);
+				_renameEntryAction->setEnabled(true);
+				_deleteEntryAction->setEnabled(true);
+				
 				if (ci->type() == KWallet::Wallet::Password) {
 					QString pass;
 					if (_w->readPassword(item->text(0), pass) == 0) {
@@ -413,6 +455,9 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 						_ww->_saveChanges->setEnabled(false);
 						_ww->_undoChanges->setEnabled(false);
 					}
+					// add a context-menu action for copying passwords
+					_contextMenu->addSeparator();
+					_contextMenu->addAction( _copyPassAction );
 				} else if (ci->type() == KWallet::Wallet::Map) {
 					_ww->_entryStack->setCurrentIndex(2);
 					_mapEditorShowHide->setChecked(false);
@@ -432,10 +477,26 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 						_ww->_saveChanges->setEnabled(false);
 						_ww->_undoChanges->setEnabled(false);
 					}
+				} else if (ci->type() == KWallet::Wallet::Unknown) {
+					// disable the context menu on unknown items
+					_contextMenu->setEnabled(false);
 				}
 				break;
 	
 			case KWalletContainerItemClass:
+				ci = dynamic_cast<KWalletContainerItem*>(item);
+				if (!ci) {
+					return;
+				}
+				if (ci->type() == KWallet::Wallet::Unknown) {
+					// disable context menu on unknown items
+					_contextMenu->setEnabled(false);
+				} else {
+					// add the context menu action
+					_contextMenu->addAction( _newEntryAction );
+					_newEntryAction->setEnabled(true);
+				}
+			
 				fi = dynamic_cast<KWalletFolderItem*>(item->parent());
 				if (!fi) {
 					return;
@@ -447,6 +508,10 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				break;
 	
 			case KWalletFolderItemClass:
+				// add the context menu actions
+				_contextMenu->addAction( _newFolderAction );
+				_contextMenu->addAction( _deleteFolderAction );
+				
 				fi = dynamic_cast<KWalletFolderItem*>(item);
 				if (!fi) {
 					return;
@@ -457,6 +522,9 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_ww->_entryStack->setCurrentIndex(0);
 				break;
 		}
+	} else {
+		// no item selected. add the "new folder" action to the context menu
+		_contextMenu->addAction( _newFolderAction );
 	}
 
 	if (fi) {
@@ -556,67 +624,14 @@ void KWalletEditor::updateEntries(const QString& folder) {
 }
 
 void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
+	Q_UNUSED(item)
 	Q_UNUSED(col)
 
-	if (!_walletIsOpen) {
+	if (!_walletIsOpen || !_contextMenu->isEnabled()) {
 		return;
 	}
 
-	KWalletListItemClasses menuClass = KWalletUnknownClass;
-	KWalletContainerItem *ci = 0L;
-
-	if (item) {
-		if (item->rtti() == KWalletEntryItemClass) {
-			ci = dynamic_cast<KWalletContainerItem *>(item->parent());
-			if (!ci) {
-				return;
-			}
-		} else if (item->rtti() == KWalletContainerItemClass) {
-			ci = dynamic_cast<KWalletContainerItem *>(item);
-			if (!ci) {
-				return;
-			}
-		}
-
-		if (ci && ci->type() == KWallet::Wallet::Unknown) {
-			return;
-		}
-		menuClass = static_cast<KWalletListItemClasses>(item->rtti());
-	}
-
-	KMenu *m = new KMenu(this);
-	if (item) {
-		QString title = item->text(0);
-		// I think 200 pixels is wide enough for a title
-		title = m->fontMetrics().elidedText( title, Qt::ElideMiddle, 200 );
-		m->addTitle(title);
-		switch (menuClass) {
-			case KWalletEntryItemClass:
-				m->addAction(i18n("&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
-				m->addAction(i18n( "&Rename" ), this, SLOT(renameEntry()), Qt::Key_F2);
-				m->addAction(i18n( "&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
-				if (ci && ci->type() == KWallet::Wallet::Password) {
-					m->addSeparator();
-					m->addAction( _copyPassAction );
-				}
-				break;
-
-			case KWalletContainerItemClass:
-				m->addAction(i18n( "&New..." ), this, SLOT(newEntry()), Qt::Key_Insert);
-				break;
-
-			case KWalletFolderItemClass:
-				m->addAction( _newFolderAction );
-				m->addAction( _deleteFolderAction );
-				break;
-			default:
-				abort();
-				;
-		}
-	} else {
-		m->addAction( _newFolderAction );
-	}
-	m->popup(pos);
+	_contextMenu->popup(pos);
 }
 
 

@@ -105,6 +105,7 @@ class KWalletEditor : public KXmlGuiWindow {
 		bool _walletIsOpen;
 		QAction *_newFolderAction, *_deleteFolderAction;
 		QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
+		QAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
 		QAction *_copyPassAction;
 		QLabel*_details;
 		QString _currentFolder;
@@ -113,6 +114,7 @@ class KWalletEditor : public KXmlGuiWindow {
 		KWMapEditor *_mapEditor;
 		QCheckBox *_mapEditorShowHide;
 		bool _newWallet;
+		KMenu *_contextMenu;
 };
 
 #endif
