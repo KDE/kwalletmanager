@@ -722,13 +722,21 @@ Q3DragObject *KWalletEntryList::dragObject() {
 		if (!ei) {
 			return 0L;
 		}
+		KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(ei->parent());
+		if (!ci) {
+			return 0L;
+		}
 		sd = new KWalletEntryDrag(viewport(), "KWallet Entry Drag");
 		QByteArray a;
 		QDataStream ds(&a, QIODevice::WriteOnly);
 
 		ds.setVersion(QDataStream::Qt_3_1);
 		ds << KWALLETENTRYMAGIC;
-		ds << *ei;
+		ds << ei->text(0);
+		ds << ci->type();
+		QByteArray value;
+		ei->_wallet->readEntry(i->text(0), value);
+		ds << value;
 		sd->setEncodedData(a);
 	} else if (i->rtti() == KWalletFolderItemClass) {
 		KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem*>(i);
