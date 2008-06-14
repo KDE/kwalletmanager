@@ -240,6 +240,7 @@ void KWalletEditor::walletClosed() {
 	_ww->setEnabled(false);
 	emit enableWalletActions(false);
 	emit enableFolderActions(false);
+	this->hide();
 	KMessageBox::sorry(this, i18n("This wallet was forced closed.  You must reopen it to continue working with it."));
 	deleteLater();
 }
