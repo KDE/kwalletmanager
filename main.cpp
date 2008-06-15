@@ -27,7 +27,7 @@
 #include <kuniqueapplication.h>
 
 #include <QFile>
-#include <qfileinfo.h>
+#include <QFileInfo>
 
 #include "kwalletmanager.h"
 

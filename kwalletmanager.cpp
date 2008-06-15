@@ -38,11 +38,11 @@
 #include <ksystemtrayicon.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
-#include <qpointer.h>
-#include <q3ptrstack.h>
+#include <QPointer>
+#include <Q3PtrStack>
 #include <QRegExp>
 
-#include <qtimer.h>
+#include <QTimer>
 #include <ktoolinvocation.h>
 #include <kicon.h>
 #include <kactioncollection.h>

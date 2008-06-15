@@ -47,15 +47,14 @@
 #include <ktemporaryfile.h>
 #include <kxmlguifactory.h>
 #include <QCheckBox>
-#include <qclipboard.h>
-#include <q3listview.h>
-#include <q3ptrstack.h>
+#include <QClipboard>
+#include <Q3ListView>
+#include <Q3PtrStack>
 #include <QPushButton>
-#include <q3textedit.h>
+#include <Q3TextEdit>
 #include <QTimer>
-#include <q3widgetstack.h>
+#include <Q3WidgetStack>
 #include <QSet>
-//Added by qt3to4:
 #include <QTextStream>
 #include <QList>
 #include <QVBoxLayout>

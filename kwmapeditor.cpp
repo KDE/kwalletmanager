@@ -26,13 +26,13 @@
 #include <kstandardaction.h>
 #include <kwindowsystem.h>
 #include <QPointer>
-#include <qapplication.h>
-#include <qclipboard.h>
+#include <QApplication>
+#include <QClipboard>
 #include <QPushButton>
 #include <ktextedit.h>
-//Added by qt3to4:
 #include <QFocusEvent>
 #include <QKeyEvent>
+
 KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
 : Q3Table(0, 3, parent, name), _map(map) {
 	_ac = new KActionCollection(this);

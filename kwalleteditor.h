@@ -24,8 +24,7 @@
 #include "ui_walletwidget.h"
 #include <kwallet.h>
 #include <kxmlguiwindow.h>
-#include <qstringlist.h>
-//Added by qt3to4:
+#include <QStringList>
 #include <QLabel>
 
 class Q3ListViewItem;

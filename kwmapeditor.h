@@ -22,7 +22,7 @@
 
 #include <QMap>
 
-#include <q3table.h>
+#include <Q3Table>
 
 class KAction;
 class KActionCollection;

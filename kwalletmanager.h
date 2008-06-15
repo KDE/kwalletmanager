@@ -21,7 +21,7 @@
 #define KWALLETMANAGER_H
 #include <QtCore/QObject>
 #include <kxmlguiwindow.h>
-#include <q3ptrlist.h>
+#include <Q3PtrList>
 #include <QIcon>
 
 class KSystemTrayIcon;

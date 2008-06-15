@@ -31,10 +31,10 @@
 #include <k3urldrag.h>
 #include <kwallet.h>
 
-#include <q3dragobject.h>
+#include <Q3DragObject>
 #include <QFile>
 #include <QApplication>
-#include <q3ptrlist.h>
+#include <Q3PtrList>
 //Added by qt3to4:
 #include <QPixmap>
 #include <Q3StrList>
