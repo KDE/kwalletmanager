@@ -93,7 +93,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	setCentralWidget(_iconView);
 	_iconView->setMinimumSize(320, 200);
 
-        m_kwalletdModule = new org::kde::KWallet("org.kde.kded", "/modules/kwalletd", QDBusConnection::sessionBus());
+        m_kwalletdModule = new org::kde::KWallet("org.kde.kwalletd", "/modules/kwalletd", QDBusConnection::sessionBus());
         connect(QDBusConnection::sessionBus().interface(),
                 SIGNAL(serviceOwnerChanged(QString,QString,QString)),
                 this,
@@ -353,7 +353,7 @@ void KWalletManager::editorClosed(KXmlGuiWindow* e) {
 void KWalletManager::possiblyRescan(const QString& app, const QString& oldOwner, const QString& newOwner) {
 	Q_UNUSED( oldOwner );
 	Q_UNUSED( newOwner );
-	if (app == "org.kde.kded") {
+	if (app == "org.kde.kwalletd") {
 		updateWalletDisplay();
 	}
 }

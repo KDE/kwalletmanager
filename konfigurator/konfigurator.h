@@ -20,8 +20,8 @@
 #ifndef _KWALLETKONFIGURATOR_H
 #define _KWALLETKONFIGURATOR_H
 #include <kcmodule.h>
+#include <ksharedconfig.h>
 #include "ui_walletconfigwidget.h"
-class KConfig;
 class Q3ListViewItem;
 
 class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
@@ -57,7 +57,7 @@ class KWalletConfig : public KCModule {
 
 	private:
 		WalletConfigWidget *_wcw;
-		KConfig *_cfg;
+		KSharedConfig::Ptr _cfg;
 };
 
 #endif

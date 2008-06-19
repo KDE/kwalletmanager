@@ -21,7 +21,7 @@
 #include <QtDBus/QtDBus>
 #include <kaboutdata.h>
 #include <kapplication.h>
-#include <kconfig.h>
+#include <ksharedconfig.h>
 #include <kdialog.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
@@ -43,7 +43,8 @@ K_EXPORT_PLUGIN(KWalletFactory("kcmkwallet"))
 
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
-: KCModule(KWalletFactory::componentData(), parent, args) {
+: KCModule(KWalletFactory::componentData(), parent, args),
+  _cfg(KSharedConfig::openConfig("kwalletrc", KConfig::NoGlobals)) {
 
 	KAboutData *about =
 		new KAboutData(I18N_NOOP("kcmkwallet"), 0,
@@ -52,8 +53,6 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 				ki18n("(c) 2003 George Staikos"));
 		about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
 	setAboutData( about );
-
-	_cfg = new KConfig("kwalletrc", KConfig::NoGlobals);
 
 	QVBoxLayout *vbox = new QVBoxLayout(this);
 	vbox->setSpacing(KDialog::spacingHint());
@@ -89,8 +88,6 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 
 
 KWalletConfig::~KWalletConfig() {
-	delete _cfg;
-	_cfg = 0L;
 }
 
 
@@ -282,8 +279,12 @@ void KWalletConfig::save() {
 	}
 
 	_cfg->sync();
-        QDBusInterface kwalletd("org.kde.kded", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
-        kwalletd.call( "reconfigure" );
+	
+        // this restarts kwalletd if neccessary
+	if (KWallet::Wallet::isEnabled()) {
+            QDBusInterface kwalletd("org.kde.kwalletd", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
+            kwalletd.call( "reconfigure" );
+        }
 	emit changed(false);
 }
 
