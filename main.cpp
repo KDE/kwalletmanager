@@ -41,11 +41,11 @@ class MyApp : public KUniqueApplication {
 };
 
 int main(int argc, char **argv) {
-	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "1.1",
+	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "1.3",
 		ki18n("KDE Wallet Management Tool"),
 		KAboutData::License_GPL,
 		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
-		"http://www.kde.org/");
+		"http://utils.kde.org/projects/kwalletmanager");
 
 	about.addAuthor(ki18n("George Staikos"), ki18n("Primary author and maintainer"), "staikos@kde.org");
 	about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
