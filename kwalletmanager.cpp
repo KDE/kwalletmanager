@@ -201,7 +201,7 @@ void KWalletManager::updateWalletDisplay() {
 	trash.setAutoDelete(true);
 	trash.clear();
 
-	for (QStringList::Iterator i = wl.begin(); i != wl.end(); ++i) {
+	for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
 		Q3IconViewItem *itm = _iconView->findItem(*i, Q3IconView::ExactMatch | Q3IconView::CaseSensitive);
 		if (!itm) {
 			itm = new KWalletItem(_iconView, *i);

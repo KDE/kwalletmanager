@@ -262,7 +262,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 	trash.setAutoDelete(true);
 	trash.clear();
 
-	for (QStringList::Iterator i = fl.begin(); i != fl.end(); ++i) {
+	for (QStringList::const_iterator i = fl.begin(); i != fl.end(); ++i) {
 		if (_entryList->existsFolder(*i)) {
 			if (checkEntries) {
 				updateEntries(*i);
@@ -280,7 +280,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 		KWalletContainerItem *bi = new KWalletContainerItem(item, i18n("Binary Data"),KWallet::Wallet::Stream);
 		KWalletContainerItem *ui = new KWalletContainerItem(item, i18n("Unknown"),KWallet::Wallet::Unknown);
 
-		for (QStringList::Iterator j = entries.begin(); j != entries.end(); ++j) {
+		for (QStringList::const_iterator j = entries.begin(); j != entries.end(); ++j) {
 			switch (_w->entryType(*j)) {
 				case KWallet::Wallet::Password:
 					new KWalletEntryItem(_w, pi, *j);
@@ -595,7 +595,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	trash.clear();
 
 	// Add new entries
-	for (QStringList::Iterator i = entries.begin(); i != entries.end(); ++i) {
+	for (QStringList::const_iterator i = entries.begin(); i != entries.end(); ++i) {
 		if (fi->contains(*i)){
 			continue;
 		}
@@ -1087,11 +1087,11 @@ void KWalletEditor::exportXML() {
 	QStringList fl = _w->folderList();
 
 	ts << "<wallet name=\"" << _walletName << "\">" << endl;
-	for (QStringList::Iterator i = fl.begin(); i != fl.end(); ++i) {
+	for (QStringList::const_iterator i = fl.begin(); i != fl.end(); ++i) {
 		ts << "  <folder name=\"" << *i << "\">" << endl;
 		_w->setFolder(*i);
 		QStringList entries = _w->entryList();
-		for (QStringList::Iterator j = entries.begin(); j != entries.end(); ++j) {
+		for (QStringList::const_iterator j = entries.begin(); j != entries.end(); ++j) {
 			switch (_w->entryType(*j)) {
 				case KWallet::Wallet::Password:
 					{

@@ -206,22 +206,22 @@ void KWalletConfig::load() {
 	KConfigGroup aa(_cfg, "Auto Allow");
 	QStringList denykeys = ad.entryMap().keys();
 	QStringList keys = aa.entryMap().keys();
-	for (QStringList::Iterator i = keys.begin(); i != keys.end(); ++i) {
+	for (QStringList::const_iterator i = keys.begin(); i != keys.end(); ++i) {
 		QStringList apps = aa.readEntry(*i,QStringList());
 		QStringList denyapps = ad.readEntry(*i, QStringList());
 		denykeys.remove(*i);
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
-		for (QStringList::Iterator j = apps.begin(); j != apps.end(); ++j) {
+		for (QStringList::const_iterator j = apps.begin(); j != apps.end(); ++j) {
 			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Allow"));
 		}
-		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
+		for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
 			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
 		}
 	}
-	for (QStringList::Iterator i = denykeys.begin(); i != denykeys.end(); ++i) {
+	for (QStringList::const_iterator i = denykeys.begin(); i != denykeys.end(); ++i) {
 		QStringList denyapps = ad.readEntry(*i,QStringList());
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
-		for (QStringList::Iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
+		for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
 			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
 		}
 	}
