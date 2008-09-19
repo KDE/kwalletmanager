@@ -189,7 +189,7 @@ void KWalletManager::aWalletWasOpened() {
 
 
 void KWalletManager::updateWalletDisplay() {
-    QStringList wl = KWallet::Wallet::walletList();
+    const QStringList wl = KWallet::Wallet::walletList();
     Q3PtrStack<Q3IconViewItem> trash;
 
 	for (Q3IconViewItem *item = _iconView->firstItem(); item; item = item->nextItem()) {

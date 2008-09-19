@@ -246,7 +246,7 @@ void KWalletEditor::walletClosed() {
 
 
 void KWalletEditor::updateFolderList(bool checkEntries) {
-	QStringList fl = _w->folderList();
+	const QStringList fl = _w->folderList();
 	Q3PtrStack<Q3ListViewItem> trash;
 
 	for (Q3ListViewItem *i = _entryList->firstChild(); i; i = i->nextSibling()) {
@@ -271,7 +271,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 		}
 
 		_w->setFolder(*i);
-		QStringList entries = _w->entryList();
+		const QStringList entries = _w->entryList();
 		KWalletFolderItem *item = new KWalletFolderItem(_w,_entryList,
 			*i, entries.count());
 
@@ -541,7 +541,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	Q3PtrStack<Q3ListViewItem> trash;
 
 	_w->setFolder(folder);
-	QStringList entries = _w->entryList();
+	const QStringList entries = _w->entryList();
 
 	KWalletFolderItem *fi = _entryList->getFolder(folder);
 
@@ -1084,7 +1084,7 @@ void KWalletEditor::exportXML() {
 	KTemporaryFile tf;
 	tf.open();
 	QTextStream ts(&tf);
-	QStringList fl = _w->folderList();
+	const QStringList fl = _w->folderList();
 
 	ts << "<wallet name=\"" << _walletName << "\">" << endl;
 	for (QStringList::const_iterator i = fl.begin(); i != fl.end(); ++i) {

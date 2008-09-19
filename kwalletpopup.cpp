@@ -52,7 +52,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	connect(act, SIGNAL(triggered(bool)), SLOT(changeWalletPassword()));
 	addAction( act );
 
-	QStringList ul = KWallet::Wallet::users(wallet);
+	const QStringList ul = KWallet::Wallet::users(wallet);
 	if (!ul.isEmpty()) {
 		KMenu *pm = new KMenu(this);
 		pm->setObjectName("Disconnect Apps");
