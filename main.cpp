@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
 		KMimeType::Ptr ptr;
 		if (QFile::exists(fn) &&
 			(ptr = KMimeType::findByFileContent(fn)) &&
-			ptr->is("application/x-kde-wallet")) {
+			ptr->is("application/x-kwallet")) {
 			wm.openWalletFile(fn);
 		} else {
 			wm.openWallet(args->arg(i));
