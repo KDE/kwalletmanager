@@ -280,7 +280,7 @@ void KWalletConfig::save() {
 
 	_cfg->sync();
 	
-        // this restarts kwalletd if neccessary
+        // this restarts kwalletd if necessary
 	if (KWallet::Wallet::isEnabled()) {
             QDBusInterface kwalletd("org.kde.kwalletd", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
             kwalletd.call( "reconfigure" );
