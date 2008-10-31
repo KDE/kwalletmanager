@@ -62,6 +62,7 @@
 #include <assert.h>
 #include <ktoolbar.h>
 #include <kicon.h>
+#include <KAction>
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
 : KXmlGuiWindow(parent), _walletName(wallet), _nonLocal(isPath) {

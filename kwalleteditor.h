@@ -31,7 +31,7 @@ class Q3ListViewItem;
 class QCheckBox;
 class KWalletEntryList;
 class KWMapEditor;
-
+class KAction;
 class WalletWidget : public QWidget, public Ui::WalletWidget
 {
 public:
@@ -104,7 +104,7 @@ class KWalletEditor : public KXmlGuiWindow {
 		bool _walletIsOpen;
 		QAction *_newFolderAction, *_deleteFolderAction;
 		QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
-		QAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
+		KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
 		QAction *_copyPassAction;
 		QLabel*_details;
 		QString _currentFolder;
