@@ -384,8 +384,8 @@ void KWalletManager::createWallet() {
 
 		if (_iconView->findItem(n)) {
 			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString(), KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
-			if (rc == KMessageBox::Yes) {
-				continue;
+			if (rc == KMessageBox::No) {
+				return;
 			}
 			n = QString();
 		} else if (regexp.exactMatch(n)) {
