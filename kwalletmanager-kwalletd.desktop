@@ -58,3 +58,5 @@ Type=Application
 Terminal=false
 X-KDE-StartupNotify=false
 NoDisplay=true
+X-DocPath=kwallet/index.html
+
