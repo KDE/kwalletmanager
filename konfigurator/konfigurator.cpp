@@ -218,7 +218,7 @@ void KWalletConfig::load() {
 			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
 		}
 	}
-	for (QStringList::const_iterator i = denykeys.begin(); i != denykeys.end(); ++i) {
+	for (QStringList::const_iterator i = denykeys.constBegin(); i != denykeys.constEnd(); ++i) {
 		const QStringList denyapps = ad.readEntry(*i,QStringList());
 		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
 		for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {

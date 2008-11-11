@@ -1088,11 +1088,11 @@ void KWalletEditor::exportXML() {
 	const QStringList fl = _w->folderList();
 
 	ts << "<wallet name=\"" << _walletName << "\">" << endl;
-	for (QStringList::const_iterator i = fl.begin(); i != fl.end(); ++i) {
+	for (QStringList::const_iterator i = fl.constBegin(); i != fl.constEnd(); ++i) {
 		ts << "  <folder name=\"" << *i << "\">" << endl;
 		_w->setFolder(*i);
 		QStringList entries = _w->entryList();
-		for (QStringList::const_iterator j = entries.begin(); j != entries.end(); ++j) {
+		for (QStringList::const_iterator j = entries.constBegin(); j != entries.constEnd(); ++j) {
 			switch (_w->entryType(*j)) {
 				case KWallet::Wallet::Password:
 					{
@@ -1120,7 +1120,7 @@ void KWalletEditor::exportXML() {
 						QMap<QString,QString> map;
 						if (_w->readMap(*j, map) == 0) {
 							ts << "    <map name=\"" << Qt::escape(*j) << "\">" << endl;
-							for (QMap<QString,QString>::ConstIterator k = map.begin(); k != map.end(); ++k) {
+							for (QMap<QString,QString>::ConstIterator k = map.constBegin(); k != map.constEnd(); ++k) {
 								ts << "      <mapentry name=\"" << Qt::escape(k.key()) << "\">" << Qt::escape(k.value()) << "</mapentry>" << endl;
 							}
 							ts << "    </map>" << endl;
