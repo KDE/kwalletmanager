@@ -356,7 +356,7 @@ void KWalletEditor::createFolder() {
 				if (rc == KMessageBox::Yes) {
 					continue;
 				}
-				n = QString();
+				n.clear();
 			}
 			break;
 		} while (true);
@@ -690,7 +690,7 @@ void KWalletEditor::newEntry() {
 			if (rc == KMessageBox::Yes) {
 				continue;
 			}
-			n = QString();
+			n.clear();
 		}
 		break;
 	} while (true);

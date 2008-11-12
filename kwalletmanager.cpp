@@ -387,7 +387,7 @@ void KWalletManager::createWallet() {
 			if (rc == KMessageBox::No) {
 				return;
 			}
-			n = QString();
+			n.clear();
 		} else if (regexp.exactMatch(n)) {
 			break;
 		} else {
