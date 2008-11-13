@@ -47,7 +47,8 @@ int main(int argc, char **argv) {
 		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
 		"http://utils.kde.org/projects/kwalletmanager");
 
-	about.addAuthor(ki18n("George Staikos"), ki18n("Primary author and maintainer"), "staikos@kde.org");
+	about.addAuthor(ki18n("Michael Leupold"), ki18n("Maintainer"), "lemma@confuego.org");
+	about.addAuthor(ki18n("George Staikos"), ki18n("Original author and former maintainer"), "staikos@kde.org");
 	about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
 
 	KCmdLineArgs::init(argc, argv, &about);
