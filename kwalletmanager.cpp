@@ -42,6 +42,7 @@
 #include <Q3PtrStack>
 #include <QRegExp>
 
+#include <QRegExpValidator>
 #include <QTimer>
 #include <ktoolinvocation.h>
 #include <kicon.h>
@@ -358,13 +359,11 @@ void KWalletManager::possiblyRescan(const QString& app, const QString& oldOwner,
 	}
 }
 
-
 void KWalletManager::createWallet() {
 	QString n;
 	bool ok;
-	// FIXME: support international names
-	QRegExp regexp("^[A-Za-z0-9]+[A-Za-z0-9_\\s\\-]*$");
 	QString txt = i18n("Please choose a name for the new wallet:");
+	QRegExpValidator validator(QRegExp("^[\\w\\^\\&\\'\\@\\{\\}\\[\\]\\,\\$\\=\\!\\-\\#\\(\\)\\%\\.\\+\\_]+$"), this);
 
 	if (!KWallet::Wallet::isEnabled()) {
 		// FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString(), i18n("Enable"), i18n("Keep Disabled"));
@@ -372,11 +371,8 @@ void KWalletManager::createWallet() {
 	}
 
 	do {
-		n = KInputDialog::getText(i18n("New Wallet"),
-				txt,
-				QString(),
-				&ok,
-				this);
+		n = KInputDialog::getText(i18n("New Wallet"), txt, QString(), &ok, this,
+		                          &validator);
 
 		if (!ok) {
 			return;
@@ -388,13 +384,11 @@ void KWalletManager::createWallet() {
 				return;
 			}
 			n.clear();
-		} else if (regexp.exactMatch(n)) {
+		} else  {
 			break;
-		} else {
-			txt = i18n("Please choose a name that contains only alphanumeric characters:");
 		}
 	} while (true);
-
+	
 	// Small race here - the wallet could be created on us already.
 	if (!n.isEmpty()) {
 		openWallet(n, true);
