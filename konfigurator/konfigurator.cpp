@@ -78,7 +78,6 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 
 	_wcw->_accessList->setAllColumnsShowFocus(true);
 	updateWalletLists();
-	load();
 
 	if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.kwalletmanager")) {
 		_wcw->_launch->hide();
@@ -178,7 +177,6 @@ void KWalletConfig::launchManager() {
 void KWalletConfig::configChanged() {
 	emit changed(true);
 }
-
 
 void KWalletConfig::load() {
 	KConfigGroup config(_cfg, "Wallet");
