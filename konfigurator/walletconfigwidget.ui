@@ -1,97 +1,89 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>WalletConfigWidget</class>
- <widget class="QWidget" name="WalletConfigWidget" >
-  <layout class="QGridLayout" >
-   <item row="0" column="0" colspan="2" >
-    <widget class="QTabWidget" name="tabWidget2" >
-     <property name="currentIndex" >
+ <widget class="QWidget" name="WalletConfigWidget">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget2">
+     <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tab" >
-      <attribute name="title" >
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
        <string>Wallet Preferences</string>
       </attribute>
-      <layout class="QVBoxLayout" >
+      <layout class="QVBoxLayout">
        <item>
-        <widget class="QCheckBox" name="_enabled" >
-         <property name="whatsThis" >
-          <string>&lt;p>The wallet subsytem allows a convenient and secure way to manage all your passwords. You can decide if you want to use this system with this option.&lt;/p></string>
+        <widget class="QCheckBox" name="_enabled">
+         <property name="whatsThis">
+          <string>&lt;p&gt;The wallet subsytem allows a convenient and secure way to manage all your passwords. You can decide if you want to use this system with this option.&lt;/p&gt;</string>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>&amp;Enable the KDE wallet subsystem</string>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>true</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox2" >
-         <property name="whatsThis" >
+        <widget class="QGroupBox" name="groupBox2">
+         <property name="whatsThis">
           <string>It is best to close your wallets when you are not using them to prevent others from viewing or using them.</string>
          </property>
-         <property name="title" >
+         <property name="title">
           <string>Close Wallet</string>
          </property>
-         <layout class="QVBoxLayout" >
+         <layout class="QVBoxLayout">
           <item>
-           <layout class="QHBoxLayout" >
+           <layout class="QHBoxLayout">
             <item>
-             <widget class="QCheckBox" name="_closeIdle" >
-              <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
-                <horstretch>2</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+             <widget class="QCheckBox" name="_closeIdle">
+              <property name="whatsThis">
+               <string>&lt;p&gt;&lt;b&gt;Close wallet after a period of inactivity.&lt;/b&gt;&lt;br&gt;When a wallet is closed the password is needed to access it again.&lt;/p&gt;</string>
               </property>
-              <property name="whatsThis" >
-               <string>&lt;p>&lt;b>Close wallet after a period of inactivity.&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
-              </property>
-              <property name="text" >
+              <property name="text">
                <string>Close when unused for:</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QSpinBox" name="_idleTime" >
-              <property name="enabled" >
+             <widget class="QSpinBox" name="_idleTime">
+              <property name="enabled">
                <bool>false</bool>
               </property>
-              <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+              <property name="whatsThis">
+               <string>&lt;p&gt;&lt;b&gt;Close wallet after a period of inactivity.&lt;/b&gt;&lt;br&gt;When a wallet is closed the password is needed to access it again.&lt;/p&gt;</string>
               </property>
-              <property name="whatsThis" >
-               <string>&lt;p>&lt;b>Close wallet after a period of inactivity.&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
-              </property>
-              <property name="suffix" >
+              <property name="suffix">
                <string> min</string>
               </property>
-              <property name="minimum" >
+              <property name="minimum">
                <number>1</number>
               </property>
-              <property name="maximum" >
+              <property name="maximum">
                <number>999</number>
               </property>
-              <property name="singleStep" >
+              <property name="singleStep">
                <number>5</number>
               </property>
-              <property name="value" >
+              <property name="value">
                <number>10</number>
               </property>
              </widget>
             </item>
             <item>
              <spacer>
-              <property name="orientation" >
+              <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
-              <property name="sizeType" >
+              <property name="sizeType">
                <enum>QSizePolicy::Expanding</enum>
               </property>
-              <property name="sizeHint" >
+              <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
                 <height>20</height>
@@ -102,21 +94,21 @@
            </layout>
           </item>
           <item>
-           <widget class="QCheckBox" name="_screensaverLock" >
-            <property name="whatsThis" >
-             <string>&lt;p>&lt;b>Close wallet as soon as the screensaver starts.&lt;/b>&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
+           <widget class="QCheckBox" name="_screensaverLock">
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Close wallet as soon as the screensaver starts.&lt;/b&gt;&lt;br&gt;When a wallet is closed the password is needed to access it again.&lt;/p&gt;</string>
             </property>
-            <property name="text" >
+            <property name="text">
              <string>Close when screensaver starts</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="_autoclose" >
-            <property name="whatsThis" >
-             <string>&lt;p>&lt;b>Close wallet as soon as applications that use it have stopped.&lt;/b>&lt;br>Note that your wallets will only be closed when all applications that use it have stopped.&lt;br>When a wallet is closed the password is needed to access it again.&lt;/p></string>
+           <widget class="QCheckBox" name="_autoclose">
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Close wallet as soon as applications that use it have stopped.&lt;/b&gt;&lt;br&gt;Note that your wallets will only be closed when all applications that use it have stopped.&lt;br&gt;When a wallet is closed the password is needed to access it again.&lt;/p&gt;</string>
             </property>
-            <property name="text" >
+            <property name="text">
              <string>Close when last application stops using it</string>
             </property>
            </widget>
@@ -125,20 +117,27 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox4" >
-         <property name="title" >
+        <widget class="QGroupBox" name="groupBox4">
+         <property name="title">
           <string>Automatic Wallet Selection</string>
          </property>
-         <layout class="QGridLayout" >
-          <item rowspan="2" row="0" column="1" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="textLabel1_2">
+            <property name="text">
+             <string>Select wallet to use as default:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" rowspan="2">
            <spacer>
-            <property name="orientation" >
+            <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeType" >
+            <property name="sizeType">
              <enum>QSizePolicy::Expanding</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
               <height>20</height>
@@ -146,59 +145,49 @@
             </property>
            </spacer>
           </item>
-          <item row="0" column="0" >
-           <widget class="QLabel" name="textLabel1_2" >
-            <property name="text" >
-             <string>Select wallet to use as default:</string>
-            </property>
-            <property name="wordWrap" >
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0" >
-           <widget class="QCheckBox" name="_localWalletSelected" >
-            <property name="text" >
-             <string>Different wallet for local passwords:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2" >
-           <widget class="QComboBox" name="_defaultWallet" >
-            <property name="sizePolicy" >
-             <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+          <item row="0" column="2">
+           <widget class="QComboBox" name="_defaultWallet">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>1</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
            </widget>
           </item>
-          <item row="1" column="2" >
-           <widget class="QComboBox" name="_localWallet" >
-            <property name="enabled" >
-             <bool>false</bool>
-            </property>
-            <property name="sizePolicy" >
-             <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
-              <horstretch>1</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3" >
-           <widget class="QPushButton" name="_newLocalWallet" >
-            <property name="enabled" >
-             <bool>false</bool>
-            </property>
-            <property name="text" >
+          <item row="0" column="3">
+           <widget class="QPushButton" name="_newWallet">
+            <property name="text">
              <string>New...</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="3" >
-           <widget class="QPushButton" name="_newWallet" >
-            <property name="text" >
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="_localWalletSelected">
+            <property name="text">
+             <string>Different wallet for local passwords:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QComboBox" name="_localWallet">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="_newLocalWallet">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
              <string>New...</string>
             </property>
            </widget>
@@ -207,104 +196,136 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox3" >
-         <property name="title" >
+        <widget class="QGroupBox" name="groupBox3">
+         <property name="title">
           <string>Wallet Manager</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="1" column="0" >
-           <spacer>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType" >
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" >
-             <size>
-              <width>14</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="0" colspan="2" >
-           <widget class="QCheckBox" name="_launchManager" >
-            <property name="text" >
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="_launchManager">
+            <property name="text">
              <string>Show manager in system tray</string>
             </property>
-            <property name="checked" >
+            <property name="checked">
              <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item row="1" column="1" >
-           <widget class="QCheckBox" name="_autocloseManager" >
-            <property name="sizePolicy" >
-             <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>0</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="_autocloseManager">
+              <property name="text">
+               <string>Hide system tray icon when last wallet closes</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
-            <property name="text" >
-             <string>Hide system tray icon when last wallet closes</string>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
             </property>
-           </widget>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
        </item>
        <item>
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeType" >
+         <property name="sizeType">
           <enum>QSizePolicy::Expanding</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0">
           <size>
-           <width>31</width>
-           <height>16</height>
+           <width>20</width>
+           <height>20</height>
           </size>
          </property>
         </spacer>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab" >
-      <attribute name="title" >
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
        <string>Access Control</string>
       </attribute>
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QCheckBox" name="_openPrompt" >
-         <property name="text" >
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="_openPrompt">
+         <property name="text">
           <string>&amp;Prompt when an application accesses an open wallet</string>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="1" column="0" >
-        <widget class="Q3ListView" name="_accessList" >
-         <property name="rootIsDecorated" >
+       <item>
+        <widget class="Q3ListView" name="_accessList">
+         <property name="rootIsDecorated">
           <bool>true</bool>
          </property>
          <column>
-          <property name="text" >
+          <property name="text">
            <string>Wallet</string>
           </property>
-         </column>
-         <column>
-          <property name="text" >
-           <string>Application</string>
+          <property name="clickable">
+           <bool>true</bool>
+          </property>
+          <property name="resizable">
+           <bool>true</bool>
           </property>
          </column>
          <column>
-          <property name="text" >
+          <property name="text">
+           <string>Application</string>
+          </property>
+          <property name="clickable">
+           <bool>true</bool>
+          </property>
+          <property name="resizable">
+           <bool>true</bool>
+          </property>
+         </column>
+         <column>
+          <property name="text">
            <string>Policy</string>
+          </property>
+          <property name="clickable">
+           <bool>true</bool>
+          </property>
+          <property name="resizable">
+           <bool>true</bool>
           </property>
          </column>
         </widget>
@@ -313,58 +334,42 @@
      </widget>
     </widget>
    </item>
-   <item row="1" column="1" >
-    <widget class="QPushButton" name="_launch" >
-     <property name="text" >
-      <string>&amp;Launch Wallet Manager</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0" >
-    <spacer>
-     <property name="orientation" >
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType" >
-      <enum>QSizePolicy::Expanding</enum>
-     </property>
-     <property name="sizeHint" >
-      <size>
-       <width>369</width>
-       <height>21</height>
-      </size>
-     </property>
-    </spacer>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_launch">
+       <property name="text">
+        <string>&amp;Launch Wallet Manager</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="11" />
- <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
   <customwidget>
    <class>Q3ListView</class>
    <extends>Q3Frame</extends>
-   <header>q3listview.h</header>
+   <header location="global">q3listview.h</header>
   </customwidget>
  </customwidgets>
- <tabstops>
-  <tabstop>_enabled</tabstop>
-  <tabstop>_closeIdle</tabstop>
-  <tabstop>_idleTime</tabstop>
-  <tabstop>_screensaverLock</tabstop>
-  <tabstop>_autoclose</tabstop>
-  <tabstop>_defaultWallet</tabstop>
-  <tabstop>_newWallet</tabstop>
-  <tabstop>_localWalletSelected</tabstop>
-  <tabstop>_localWallet</tabstop>
-  <tabstop>_newLocalWallet</tabstop>
-  <tabstop>_launchManager</tabstop>
-  <tabstop>_autocloseManager</tabstop>
-  <tabstop>tabWidget2</tabstop>
-  <tabstop>_openPrompt</tabstop>
-  <tabstop>_accessList</tabstop>
-  <tabstop>_launch</tabstop>
- </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -373,11 +378,11 @@
    <receiver>_newLocalWallet</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -389,11 +394,11 @@
    <receiver>_localWallet</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -405,11 +410,11 @@
    <receiver>_idleTime</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -421,11 +426,11 @@
    <receiver>groupBox2</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -437,11 +442,11 @@
    <receiver>groupBox4</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -453,11 +458,11 @@
    <receiver>groupBox3</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -469,11 +474,11 @@
    <receiver>_idleTime</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
@@ -485,11 +490,11 @@
    <receiver>_autocloseManager</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>20</x>
      <y>20</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
     </hint>
