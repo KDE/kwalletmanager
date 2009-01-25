@@ -53,5 +53,5 @@ Icon=kwalletmanager
 Type=Application
 Terminal=false
 X-KDE-StartupNotify=false
-Categories=Qt;KDE;Settings;
+Categories=Qt;KDE;System;Security;
 X-DocPath=kwallet/index.html
