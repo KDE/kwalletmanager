@@ -363,7 +363,7 @@ void KWalletManager::createWallet() {
 	QString n;
 	bool ok;
 	QString txt = i18n("Please choose a name for the new wallet:");
-	QRegExpValidator validator(QRegExp("^[\\w\\^\\&\\'\\@\\{\\}\\[\\]\\,\\$\\=\\!\\-\\#\\(\\)\\%\\.\\+\\_]+$"), this);
+	QRegExpValidator validator(QRegExp("^[\\w\\^\\&\\'\\@\\{\\}\\[\\]\\,\\$\\=\\!\\-\\#\\(\\)\\%\\.\\+\\_\\s]+$"), this);
 
 	if (!KWallet::Wallet::isEnabled()) {
 		// FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString(), i18n("Enable"), i18n("Keep Disabled"));
