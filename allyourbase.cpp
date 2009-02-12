@@ -53,7 +53,7 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, con
 	setDropEnabled(true);
 
 	QPixmap pix = getFolderIcon(KIconLoader::Small);
-	
+
 	setPixmap(0,pix);
 }
 
@@ -264,7 +264,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 
 void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst) {
 	Q_UNUSED(lst);
-	if (e->provides("application/x-kwallet-folder") || 
+	if (e->provides("application/x-kwallet-folder") ||
 			e->provides("text/uri-list")) {
 
 		// FIXME: don't allow the drop if the wallet name is the same
@@ -321,14 +321,14 @@ void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst)
 		if (e->source() && e->source()->parent() &&
 		    !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList") &&
 			!(state & Qt::ControlModifier)) {
-		
+
 			KWalletEntryList *el =
 				dynamic_cast<KWalletEntryList*>(e->source()->parent());
 			if (el) {
-				KWalletFolderItem *fi = 
+				KWalletFolderItem *fi =
 					dynamic_cast<KWalletFolderItem*>(el->selectedItem());
 				if (fi) {
-					el->_wallet->removeFolder(fi->name());	
+					el->_wallet->removeFolder(fi->name());
 				}
 			}
 		}
@@ -390,7 +390,7 @@ bool KWalletEntryList::acceptDrag(QDropEvent* e) const {
 		}
 	}
 	if ((e->provides("application/x-kwallet-folder") &&
-			e->source() != viewport()) || 
+			e->source() != viewport()) ||
 			e->provides("text/uri-list")) {
 		return true;
 	}
@@ -410,7 +410,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 	//detect if we are dragging from kwallet itself
 	if (e->source() && e->source()->parent() &&
 	    !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList")) {
-	  
+
 		el = dynamic_cast<KWalletEntryList*>(e->source()->parent());
 		if (!el) {
 			KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the item"));
@@ -420,7 +420,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 
 	if (e->provides("application/x-kwallet-entry")) {
 		//do nothing if we are in the same folder
-		if (sel && sel->parent()->parent() == 
+		if (sel && sel->parent()->parent() ==
 				KWalletEntryList::getItemFolder(item)) {
 			e->ignore();
 			return;
@@ -642,6 +642,10 @@ KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : K3IconView(parent, name) {
 	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
 	connect(this, SIGNAL(dropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
+
+        // make Return execute() the icon
+        connect( this, SIGNAL( returnPressed(Q3IconViewItem *) ),
+                this, SIGNAL( executed(Q3IconViewItem *)) );
 }
 
 KWalletIconView::~KWalletIconView() {
@@ -726,7 +730,7 @@ Q3DragObject *KWalletIconView::dragObject() {
 Q3DragObject *KWalletEntryList::dragObject() {
 	Q3ListViewItem *i = currentItem();
 
-	Q3StoredDrag *sd = 0L;  
+	Q3StoredDrag *sd = 0L;
 
 	if (i->rtti() == KWalletEntryItemClass) {
 		KWalletEntryItem *ei = dynamic_cast<KWalletEntryItem*>(i);
