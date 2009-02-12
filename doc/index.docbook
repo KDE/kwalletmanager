@@ -29,12 +29,12 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-06-15</date>
-<releaseinfo>1.0</releaseinfo>
+<date>2009-01-12</date>
+<releaseinfo>1.4</releaseinfo>
 
 <abstract>
 <para>
-The wallet subsytem provides a convenient and secure way to manage all your
+The wallet subsystem provides a convenient and secure way to manage all your
 passwords.</para>
 
 </abstract>
@@ -66,13 +66,58 @@ password that you define.</para>
 <para>&kwallet; supports multiple wallets, so 
 for the most secure operation, you should use one wallet for local
 passwords, and another for network passwords and form data.  You can
-configure this behavior in the &kwallet; &kcontrolcenter; module, however
+configure this behavior in the &kwallet; &systemsettings; module, however
 the default setting is to store everything in one wallet.</para>
 </tip>
 
 <para>A wallet is by default closed, which means that you must supply
 a password to open it. Once the wallet is opened, the contents can
 be accessed.</para>
+
+<sect1 id="kwallet-using">
+<title>Using &kwallet;</title>
+
+<para>If you visit &eg; the &kde; bugtracker and enter the login data for 
+the first time, a dialog pops up offering to store the password in an 
+encrypted wallet:</para>
+
+<screenshot>
+<screeninfo>Request to save login information</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
+<textobject><phrase>Request to save login information</phrase></textobject>
+</mediaobject>
+</screenshot>
+
+<para>If you want to store this information, select <guibutton>Store</guibutton> 
+to proceed. In case you did not create a wallet so far, the next dialog asks for 
+the wallet password and creates a wallet named kdewallet.
+</para>
+
+<screenshot>
+<screeninfo>Create a wallet</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject><phrase>Create a wallet</phrase></textobject>
+</mediaobject>
+</screenshot>
+
+<para>Next time you visit the same website again, the application requests to open the wallet.
+Enter the wallet password and click the <guibutton>Open</guibutton> button.</para> 
+
+<screenshot>
+<screeninfo>Request to open a wallet</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
+<textobject><phrase>Request to open a wallet</phrase></textobject>
+</mediaobject>
+</screenshot>
+
+<para>This connects the application to the wallet, enables it to read the login data from the wallet
+and to restore the login information for this website. Once an application is connected to 
+the wallet, it can automatically restore any login information stored in the wallet.</para>
+
+</sect1>
 
 </chapter>
 
@@ -87,13 +132,18 @@ from within the &kwalletmanager;.</para>
 <para>You may also manage the wallets installed on the system, creating and
 deleting wallets and manipulating their contents (changing keys, ...).</para>
 
-<para>Normally the &kwalletmanager; application is launched when
-&kde; starts and remains in iconic form in the system tray. Alternatively, 
-when a wallet is opened, the &kwalletmanager; application will be
-launched.  A system tray icon indicates that a wallet is open:
+<para>The &kwalletmanager; application is launched with <menuchoice>
+<guimenu>Applications</guimenu><guisubmenu>Settings</guisubmenu>
+<guimenuitem>Wallet Management Tool</guimenuitem></menuchoice> from the
+application launcher. 
+Alternatively start &krunner; with <shortcut> <keycombo
+action="simul">&Alt;<keycap>F2</keycap></keycombo></shortcut> and enter
+<command>kwalletmanager</command>.</para>
+
+<para>A system tray icon indicates that a wallet is open:
  <mediaobject>
    <imageobject>
-     <imagedata fileref="cr22-action-wallet_open.png"/>
+     <imagedata fileref="oxygen48-status-wallet-open.png"/>
    </imageobject>
  </mediaobject>
 
@@ -102,7 +152,7 @@ wallets are closed, the icon will reflect this by showing a closed
 wallet:
 <mediaobject>
  <imageobject>
-     <imagedata fileref="cr22-action-wallet_closed.png"/>
+     <imagedata fileref="oxygen48-status-wallet-closed.png"/>
   </imageobject>
  </mediaobject> 
 
@@ -137,7 +187,7 @@ for the name of the new wallet that you want to create.</para>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut>&Enter;</shortcut>
+<term><menuchoice><shortcut><keycap>Return</keycap></shortcut>
 <guisubmenu>Open...</guisubmenu></menuchoice></term>
 <listitem>
 <para>Open the wallet. Opening the wallet causes the contents 
@@ -147,18 +197,11 @@ double click the wallet icon to cause it to open. If the wallet
 is not already open, you will be requested to enter the password.
 See below for details of using the wallet window.
 </para>
-<para>
-<mediaobject>
-   <imageobject>
-     <imagedata fileref="edit1.png"/>
-   </imageobject>
- </mediaobject></para>
-
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guimenuitem>Change Password</guimenuitem></term>
+<term><guimenuitem>Change Password...</guimenuitem></term>
 <listitem>
 <para>Change the master password for the wallet.</para>
 </listitem>
@@ -171,12 +214,14 @@ connected applications will appear in a submenu.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guimenuitem>Close</guimenuitem></term>
+<term><menuchoice><shortcut> <keycombo
+action="simul">&Ctrl;<keycap>W</keycap></keycombo></shortcut>
+<guimenuitem>Close</guimenuitem></menuchoice></term>
 <listitem><para>Force the wallet to be closed.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guimenuitem>Delete</guimenuitem></term>
+<term><menuchoice><shortcut><keycap>Del</keycap></shortcut><guimenuitem>Delete</guimenuitem></menuchoice></term>
 <listitem>
 <para>Delete the wallet</para>
 </listitem>
@@ -193,7 +238,7 @@ of folders, which allow storing of password information. By default a wallet
 will contain folders named Form Data and Passwords.
 </para>
 
-<para>The window has four panes:</para>
+<para>The window has three sections:</para>
 <para>
 <mediaobject>
    <imageobject>
@@ -203,15 +248,15 @@ will contain folders named Form Data and Passwords.
 
 
 <itemizedlist>
-<listitem><para>A summary of the contents of the current
-folder</para></listitem>
-<listitem><para>The folders contained in the wallet</para></listitem>
-<listitem><para>The entries in the currently selected
-folder</para></listitem>
-<listitem><para>The contents of the selected folder entry</para></listitem>
+<listitem><para>A search line to filter the items of the current
+wallet</para></listitem>
+<listitem><para>The tree view of the folders contained in the wallet. 
+Click the <guiicon>+</guiicon> / <guiicon>-</guiicon> symbols to expand or collapse 
+the tree view.</para></listitem>
+<listitem><para>The contents of the selected folder entry at the right side</para></listitem>
 </itemizedlist>
 
-<para>Folders may be added or deleted, and selecting a folder will update
+<para>Folders may be added or deleted via the context menu, and selecting a folder will update
 the folder entry list and the summary display.  Selecting a folder entry
 will update the entry contents pane, and allow you to edit that
 entry.</para>
@@ -318,7 +363,7 @@ system tray.</para>
 </varlistentry>
 </variablelist>
 
-<para>Finally, there is a button labelled <guibutton>Launch Wallet
+<para>Finally, there is a button labeled <guibutton>Launch Wallet
 Manager</guibutton>, which does precisely that.</para>
 </sect1>
 
@@ -338,13 +383,13 @@ Manager</guibutton>, which does precisely that.</para>
 
 <para>Next there is a tree style view of the access controls for your wallets.</para>
 
-<para>&LMB; click on the <guiicon>+</guiicon> symbol beside a wallet name to
+<para>Click with the &LMB; on the <guiicon>+</guiicon> symbol beside a wallet name to
 expand the tree. You will see the name of each application that has asked
 for access to the wallet, and the policy you set for it.  You cannot edit
 policies here, or add them, but it is possible to delete an entry by &RMB;
-clicking on it and choosing <guimenuitem>Delete</guimenuitem> From the
+clicking on it and choosing <guimenuitem>Delete</guimenuitem> from the
 context menu that appears, or by simply selecting it and pressing the
-<keycap>Delete</keycap> key.</para>
+<keysym>Del</keysym> key.</para>
 
 </sect1>
 
