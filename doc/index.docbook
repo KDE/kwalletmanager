@@ -136,8 +136,8 @@ deleting wallets and manipulating their contents (changing keys, ...).</para>
 <guimenu>Applications</guimenu><guisubmenu>Settings</guisubmenu>
 <guimenuitem>Wallet Management Tool</guimenuitem></menuchoice> from the
 application launcher. 
-Alternatively start &krunner; with <shortcut> <keycombo
-action="simul">&Alt;<keycap>F2</keycap></keycombo></shortcut> and enter
+Alternatively start &krunner; with shortcut <keycombo
+action="simul">&Alt;<keycap>F2</keycap></keycombo> and enter
 <command>kwalletmanager</command>.</para>
 
 <para>A system tray icon indicates that a wallet is open:
