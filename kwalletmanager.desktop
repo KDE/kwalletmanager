@@ -2,6 +2,7 @@
 Name=KWalletManager
 Name[de]=Verwaltung für digitale Brieftasche
 Name[et]=Turvalaeka haldur
+Name[hne]=के-वालेट-मैनेजर
 Name[is]=KVeskisStjóri
 Name[nds]=KDE-Knippenpleger
 Name[pa]=ਕੇਵਾਲਿਟ-ਮੈਨੇਜਰ
@@ -26,6 +27,7 @@ GenericName[eu]=Zorroa Kudeatzeko Tresna
 GenericName[fr]=Outil de gestion de portefeuilles de KDE
 GenericName[ga]=Uirlis Bhainisteoireachta Sparáin
 GenericName[gl]=Ferramenta de xestión de carteiras
+GenericName[hne]=बटुआ प्रबंधन औजार
 GenericName[is]=Tól til að stýra eiginleikum veskja
 GenericName[it]=Strumento per la gestione dei portafogli
 GenericName[ja]=ウォレット管理ツール
