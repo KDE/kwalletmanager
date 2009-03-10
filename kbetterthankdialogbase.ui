@@ -92,8 +92,7 @@
     </layout>
   </widget>
   <layoutdefault spacing="6" margin="11" />
-  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
-  <includes>
+    <includes>
     <include location="global" >k3activelabel.h</include>
     <include location="local" >k3activelabel.h</include>
   </includes>
