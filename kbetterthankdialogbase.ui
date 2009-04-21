@@ -1,7 +1,4 @@
 <ui version="4.0" stdsetdef="1" >
-  <author></author>
-  <comment></comment>
-  <exportmacro></exportmacro>
   <class>KBetterThanKDialogBase</class>
   <widget class="QDialog" name="KBetterThanKDialogBase" >
     <property name="geometry" >
@@ -91,7 +88,6 @@
       </item>
     </layout>
   </widget>
-  <layoutdefault spacing="6" margin="11" />
     <includes>
     <include location="global" >k3activelabel.h</include>
     <include location="local" >k3activelabel.h</include>
