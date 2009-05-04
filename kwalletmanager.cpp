@@ -35,7 +35,7 @@
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kstandardaction.h>
-#include <ksystemtrayicon.h>
+#include <knotificationitem-1/knotificationitem.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
 #include <QPointer>
@@ -61,17 +61,19 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
-		_tray = new KSystemTrayIcon(this);
+		_tray = new Experimental::KNotificationItem(this);
 		_tray->setObjectName("kwalletmanager tray");
-		_tray->setIcon(loadSystemTrayIcon("wallet-closed"));
-		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
+        _tray->setCategory( Experimental::KNotificationItem::SystemServices );
+        _tray->setStatus( Experimental::KNotificationItem::Passive );
+		_tray->setIcon("wallet-closed");
+		_tray->setToolTip( "wallet-closed", i18n("KDE Wallet"), i18n("No wallets open."));
 		connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
 		const QStringList wl = KWallet::Wallet::walletList();
 		bool isOpen = false;
 		for (QStringList::ConstIterator it = wl.begin(); it != wl.end(); ++it) {
 			if (KWallet::Wallet::isOpen(*it)) {
-				_tray->setIcon(loadSystemTrayIcon("wallet-open"));
-				_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
+				_tray->setIcon("wallet-open");
+				_tray->setToolTip( "wallet-open", i18n("KDE Wallet"), i18n("A wallet is open."));
 				isOpen = true;
 				break;
 			}
@@ -146,7 +148,7 @@ actionCollection());
         connect(deleteWalletAction, SIGNAL(triggered()), this, SLOT(deleteWallet()));
 
 	if (_tray) {
-		_tray->show();
+//		_tray->show();
 	} else {
 		show();
 	}
@@ -182,8 +184,8 @@ bool KWalletManager::queryClose() {
 
 void KWalletManager::aWalletWasOpened() {
 	if (_tray) {
-		_tray->setIcon(loadSystemTrayIcon("wallet-open"));
-		_tray->setToolTip( i18n("KDE Wallet: A wallet is open."));
+		_tray->setIcon("wallet-open");
+		_tray->setToolTip( "wallet-open", i18n("KDE Wallet"), i18n("A wallet is open."));
 	}
 	updateWalletDisplay();
 }
@@ -327,8 +329,8 @@ void KWalletManager::openWallet(Q3IconViewItem *item) {
 
 void KWalletManager::allWalletsClosed() {
 	if (_tray) {
-		_tray->setIcon(loadSystemTrayIcon("wallet-closed"));
-		_tray->setToolTip( i18n("KDE Wallet: No wallets open."));
+		_tray->setIcon("wallet-closed");
+		_tray->setToolTip( "wallet-closed", i18n("KDE Wallet"), i18n("No wallets open."));
 	}
 	possiblyQuit();
 }
@@ -410,11 +412,5 @@ void KWalletManager::setupWallet() {
 void KWalletManager::closeAllWallets() {
     m_kwalletdModule->closeAllWallets();
 }
-
-
-QIcon KWalletManager::loadSystemTrayIcon(const QString &icon) {
-	return KSystemTrayIcon::loadIcon(icon);
-}
-
 
 #include "kwalletmanager.moc"

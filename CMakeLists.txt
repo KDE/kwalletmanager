@@ -2,6 +2,8 @@ project(kwallet)
 
 add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
+find_package(LibKNotificationItem-1 REQUIRED)
+
 add_subdirectory( icons ) 
 add_subdirectory( konfigurator ) 
 
@@ -27,7 +29,7 @@ kde4_add_app_icon(kwalletmanager_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kwall
 
 kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
-target_link_libraries(kwalletmanager   ${KDE4_KDE3SUPPORT_LIBS})
+target_link_libraries(kwalletmanager knotificationitem-1 ${KDE4_KDE3SUPPORT_LIBS})
 
 install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

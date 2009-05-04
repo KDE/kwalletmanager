@@ -24,7 +24,11 @@
 #include <Q3PtrList>
 #include <QIcon>
 
-class KSystemTrayIcon;
+namespace Experimental
+{
+    class KNotificationItem;
+}
+
 class KWalletIconView;
 class Q3IconViewItem;
 class OrgKdeKWalletInterface;
@@ -37,8 +41,6 @@ class KWalletManager : public KXmlGuiWindow {
 	public:
 		explicit KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
 		virtual ~KWalletManager();
-
-                QIcon loadSystemTrayIcon(const QString &icon);
 
 		void kwalletdLaunch();
 
@@ -73,7 +75,7 @@ class KWalletManager : public KXmlGuiWindow {
 		void closeAllWallets();
 
 	private:
-		KSystemTrayIcon *_tray;
+		Experimental::KNotificationItem *_tray;
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
 		OrgKdeKWalletInterface *m_kwalletdModule;
