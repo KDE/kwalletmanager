@@ -35,7 +35,7 @@
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kstandardaction.h>
-#include <knotificationitem-1/knotificationitem.h>
+#include <knotificationitem.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
 #include <QPointer>
