@@ -27,6 +27,7 @@
 #include <QDomElement>
 #include <QDomNode>
 #include <QDomDocument>
+#include <QXmlStreamWriter>
 #include <kaction.h>
 #include <kdebug.h>
 #include <kdialog.h>
@@ -1084,12 +1085,16 @@ void KWalletEditor::importXML() {
 void KWalletEditor::exportXML() {
 	KTemporaryFile tf;
 	tf.open();
-	QTextStream ts(&tf);
+	QXmlStreamWriter xml(&tf);
+	xml.setAutoFormatting(true);
+	xml.writeStartDocument();
 	const QStringList fl = _w->folderList();
 
-	ts << "<wallet name=\"" << _walletName << "\">" << endl;
+	xml.writeStartElement("wallet");
+	xml.writeAttribute("name", _walletName);
 	for (QStringList::const_iterator i = fl.constBegin(); i != fl.constEnd(); ++i) {
-		ts << "  <folder name=\"" << *i << "\">" << endl;
+		xml.writeStartElement("folder");
+		xml.writeAttribute("name", *i);
 		_w->setFolder(*i);
 		QStringList entries = _w->entryList();
 		for (QStringList::const_iterator j = entries.constBegin(); j != entries.constEnd(); ++j) {
@@ -1098,9 +1103,10 @@ void KWalletEditor::exportXML() {
 					{
 						QString pass;
 						if (_w->readPassword(*j, pass) == 0) {
-							ts << "    <password name=\"" << Qt::escape(*j) << "\">";
-							ts << Qt::escape(pass);
-							ts << "</password>" << endl;
+							xml.writeStartElement("password");
+							xml.writeAttribute("name", *j);
+							xml.writeCharacters(pass);
+							xml.writeEndElement();
 						}
 						break;
 					}
@@ -1108,10 +1114,10 @@ void KWalletEditor::exportXML() {
 					{
 						QByteArray ba;
 						if (_w->readEntry(*j, ba) == 0) {
-							ts << "    <stream name=\"" << Qt::escape(*j) << "\">";
-							ts << KCodecs::base64Encode(ba);
-
-							ts << "</stream>" << endl;
+							xml.writeStartElement("stream");
+							xml.writeAttribute("name", *j);
+							xml.writeCharacters(KCodecs::base64Encode(ba));
+							xml.writeEndElement();
 						}
 						break;
 					}
@@ -1119,11 +1125,15 @@ void KWalletEditor::exportXML() {
 					{
 						QMap<QString,QString> map;
 						if (_w->readMap(*j, map) == 0) {
-							ts << "    <map name=\"" << Qt::escape(*j) << "\">" << endl;
+							xml.writeStartElement("map");
+							xml.writeAttribute("name", *j);
 							for (QMap<QString,QString>::ConstIterator k = map.constBegin(); k != map.constEnd(); ++k) {
-								ts << "      <mapentry name=\"" << Qt::escape(k.key()) << "\">" << Qt::escape(k.value()) << "</mapentry>" << endl;
+								xml.writeStartElement("mapentry");
+								xml.writeAttribute("name", k.key());
+								xml.writeCharacters(k.value());
+								xml.writeEndElement();
 							}
-							ts << "    </map>" << endl;
+							xml.writeEndElement();
 						}
 						break;
 					}
@@ -1132,11 +1142,12 @@ void KWalletEditor::exportXML() {
 					break;
 			}
 		}
-		ts << "  </folder>" << endl;
+		xml.writeEndElement();
 	}
 
-	ts << "</wallet>" << endl;
-	ts.flush();
+	xml.writeEndElement();
+	xml.writeEndDocument();
+	tf.flush();
 
 	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.xml", this);
 
