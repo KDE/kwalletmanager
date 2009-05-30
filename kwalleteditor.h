@@ -58,7 +58,6 @@ class KWalletEditor : public KXmlGuiWindow {
 		void deleteFolder();
 
 	private slots:
-		void layout();
 		void updateFolderList(bool checkEntries = false);
 		void entrySelectionChanged(Q3ListViewItem *item);
 		void listItemRenamed(Q3ListViewItem *, int, const QString&);

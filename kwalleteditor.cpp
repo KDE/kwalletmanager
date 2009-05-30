@@ -70,6 +70,8 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	setObjectName(name);
 	_newWallet = false;
 	_ww = new WalletWidget(this);
+	_ww->_splitter->setStretchFactor(0, 1);
+	_ww->_splitter->setStretchFactor(1, 2);
 	_contextMenu = new KMenu(this);
 
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
@@ -89,8 +91,17 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	box->addWidget(_mapEditor);
 
 	setCentralWidget(_ww);
+	setAutoSaveSettings(QLatin1String("WalletEditor"), true);
 
-	resize(600, 400);
+	// load splitter size
+	KConfigGroup cg(KGlobal::config(), "WalletEditor");
+	QList<int> splitterSize = cg.readEntry("SplitterSize", QList<int>());
+	if (splitterSize.size() != 2) {
+		splitterSize.clear();
+		splitterSize.append(_ww->_splitter->width()/2);
+		splitterSize.append(_ww->_splitter->width()/2);
+	}
+	_ww->_splitter->setSizes(splitterSize);
 
 	connect(_entryList, SIGNAL(selectionChanged(Q3ListViewItem*)),
 		this, SLOT(entrySelectionChanged(Q3ListViewItem*)));
@@ -136,11 +147,14 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	delete toolBar();
 
 	setCaption(wallet);
-
-	QTimer::singleShot(0, this, SLOT(layout()));
 }
 
 KWalletEditor::~KWalletEditor() {
+	// save splitter size
+	KConfigGroup cg(KGlobal::config(), "WalletEditor");
+	cg.writeEntry("SplitterSize", _ww->_splitter->sizes());
+	cg.sync();
+	
 	emit editorClosed(this);
 	delete _newFolderAction;
 	_newFolderAction = 0L;
@@ -151,14 +165,6 @@ KWalletEditor::~KWalletEditor() {
 	if (_nonLocal) {
 		KWallet::Wallet::closeWallet(_walletName, true);
 	}
-}
-
-void KWalletEditor::layout() {
-	QList<int> sz = _ww->_splitter->sizes();
-	int sum = sz[0] + sz[1];
-	sz[0] = sum/2;
-	sz[1] = sum/2;
-	_ww->_splitter->setSizes(sz);
 }
 
 void KWalletEditor::createActions() {
@@ -366,7 +372,6 @@ void KWalletEditor::createFolder() {
 		updateFolderList();
 	}
 }
-
 
 void KWalletEditor::saveEntry() {
 	int rc = 1;
