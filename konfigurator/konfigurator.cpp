@@ -91,14 +91,13 @@ KWalletConfig::~KWalletConfig() {
 
 
 void KWalletConfig::updateWalletLists() {
-	QString p1, p2;
-	p1 = _wcw->_localWallet->currentText();
-	p2 = _wcw->_defaultWallet->currentText();
+        const QString p1( _wcw->_localWallet->currentText() );
+	const QString p2( _wcw->_defaultWallet->currentText() );
 
 	_wcw->_localWallet->clear();
 	_wcw->_defaultWallet->clear();
 
-	QStringList wl = KWallet::Wallet::walletList();
+	const QStringList wl = KWallet::Wallet::walletList();
 	_wcw->_localWallet->addItems(wl);
 	_wcw->_defaultWallet->addItems(wl);
 
@@ -115,7 +114,7 @@ void KWalletConfig::updateWalletLists() {
 QString KWalletConfig::newWallet() {
 	bool ok;
 
-	QString n = KInputDialog::getText(i18n("New Wallet"),
+	const QString n = KInputDialog::getText(i18n("New Wallet"),
 			i18n("Please choose a name for the new wallet:"),
 			QString(),
 			&ok,
@@ -136,7 +135,7 @@ QString KWalletConfig::newWallet() {
 
 
 void KWalletConfig::newLocalWallet() {
-	QString n = newWallet();
+	const QString n = newWallet();
 	if (n.isEmpty()) {
 		return;
 	}
@@ -150,7 +149,7 @@ void KWalletConfig::newLocalWallet() {
 
 
 void KWalletConfig::newNetworkWallet() {
-	QString n = newWallet();
+	const QString n = newWallet();
 	if (n.isEmpty()) {
 		return;
 	}
@@ -277,7 +276,7 @@ void KWalletConfig::save() {
 	}
 
 	_cfg->sync();
-	
+
         // this restarts kwalletd if necessary
 	if (KWallet::Wallet::isEnabled()) {
             QDBusInterface kwalletd("org.kde.kwalletd", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
@@ -315,7 +314,8 @@ void KWalletConfig::contextMenuRequested(Q3ListViewItem *item, const QPoint& pos
 		KMenu *m = new KMenu(this);
 		m->addTitle(item->parent()->text(0));
 		m->addAction(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
-		m->popup(pos);
+		m->exec(pos);
+                delete m;
 	}
 }
 
