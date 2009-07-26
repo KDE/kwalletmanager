@@ -21,7 +21,6 @@
 #define KWALLETMANAGER_H
 #include <QtCore/QObject>
 #include <kxmlguiwindow.h>
-#include <Q3PtrList>
 #include <QIcon>
 
 namespace Experimental
@@ -79,7 +78,7 @@ class KWalletManager : public KXmlGuiWindow {
 		bool _shuttingDown;
 		KWalletIconView *_iconView;
 		OrgKdeKWalletInterface *m_kwalletdModule;
-		Q3PtrList<KXmlGuiWindow> _windows;
+		QList<KXmlGuiWindow*> _windows;
 		bool _kwalletdLaunch;
 };
 

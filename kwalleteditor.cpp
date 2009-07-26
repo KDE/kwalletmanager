@@ -50,7 +50,6 @@
 #include <QCheckBox>
 #include <QClipboard>
 #include <Q3ListView>
-#include <Q3PtrStack>
 #include <QPushButton>
 #include <Q3TextEdit>
 #include <QTimer>
@@ -59,6 +58,7 @@
 #include <QTextStream>
 #include <QList>
 #include <QVBoxLayout>
+#include <QStack>
 
 #include <assert.h>
 #include <ktoolbar.h>
@@ -255,7 +255,7 @@ void KWalletEditor::walletClosed() {
 
 void KWalletEditor::updateFolderList(bool checkEntries) {
 	const QStringList fl = _w->folderList();
-	Q3PtrStack<Q3ListViewItem> trash;
+	QStack<Q3ListViewItem*> trash;
 
 	for (Q3ListViewItem *i = _entryList->firstChild(); i; i = i->nextSibling()) {
 		KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(i);
@@ -267,7 +267,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 		}
 	}
 
-	trash.setAutoDelete(true);
+	qDeleteAll(trash);
 	trash.clear();
 
 	for (QStringList::const_iterator i = fl.begin(); i != fl.end(); ++i) {
@@ -545,7 +545,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 }
 
 void KWalletEditor::updateEntries(const QString& folder) {
-	Q3PtrStack<Q3ListViewItem> trash;
+	QStack<Q3ListViewItem*> trash;
 
 	_w->setFolder(folder);
 	const QStringList entries = _w->entryList();
@@ -598,7 +598,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 		}
 	}
 
-	trash.setAutoDelete(true);
+	qDeleteAll(trash);
 	trash.clear();
 
 	// Add new entries

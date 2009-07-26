@@ -39,7 +39,6 @@
 #include <kwallet.h>
 #include <kxmlguifactory.h>
 #include <QPointer>
-#include <Q3PtrStack>
 #include <QRegExp>
 
 #include <QRegExpValidator>
@@ -194,7 +193,7 @@ void KWalletManager::aWalletWasOpened() {
 
 void KWalletManager::updateWalletDisplay() {
     const QStringList wl = KWallet::Wallet::walletList();
-    Q3PtrStack<Q3IconViewItem> trash;
+    QStack<Q3IconViewItem*> trash;
 
 	for (Q3IconViewItem *item = _iconView->firstItem(); item; item = item->nextItem()) {
 		if (!wl.contains(item->text())) {
@@ -202,7 +201,7 @@ void KWalletManager::updateWalletDisplay() {
 		}
 	}
 
-	trash.setAutoDelete(true);
+	qDeleteAll(trash);
 	trash.clear();
 
 	for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
@@ -299,7 +298,7 @@ void KWalletManager::openWallet(const QString& walletName) {
 
 void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
 	// Don't allow a wallet to open in two windows
-	for (KXmlGuiWindow *w = _windows.first(); w; w = _windows.next()) {
+	foreach (KXmlGuiWindow *w, _windows) {
 		KWalletEditor *e = static_cast<KWalletEditor*>(w);
 		if (e->isOpen() && e->_walletName == walletName) {
 			w->raise();

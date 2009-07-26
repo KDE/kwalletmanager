@@ -34,10 +34,8 @@
 #include <Q3DragObject>
 #include <QFile>
 #include <QApplication>
-#include <Q3PtrList>
 //Added by qt3to4:
 #include <QPixmap>
-#include <Q3StrList>
 #include <QDropEvent>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
