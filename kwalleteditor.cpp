@@ -139,7 +139,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 		connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
 		updateFolderList();
 	} else {
-		kDebug(2300) << "Wallet open failed!" ;
+		kDebug() << "Wallet open failed!" ;
 	}
 
 	createActions();

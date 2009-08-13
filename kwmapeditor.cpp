@@ -175,7 +175,7 @@ class InlineEditor : public KTextEdit {
 };
 
 QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
-	//kDebug(2300) << "EDIT COLUMN " << col ;
+	//kDebug() << "EDIT COLUMN " << col ;
 	if (col != 2) {
 		return Q3Table::beginEdit(row, col, replace);
 	}
