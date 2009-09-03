@@ -60,10 +60,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
-		_tray = new Experimental::KNotificationItem(this);
+		_tray = new KNotificationItem(this);
 		_tray->setObjectName("kwalletmanager tray");
-        _tray->setCategory( Experimental::KNotificationItem::SystemServices );
-        _tray->setStatus( Experimental::KNotificationItem::Passive );
+        _tray->setCategory( KNotificationItem::SystemServices );
+        _tray->setStatus( KNotificationItem::Passive );
 		_tray->setIconByName("wallet-closed");
 		_tray->setToolTip( "wallet-closed", i18n("KDE Wallet"), i18n("No wallets open."));
 		//connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
