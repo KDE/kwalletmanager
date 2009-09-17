@@ -351,7 +351,7 @@ void KWalletManager::possiblyQuit() {
 
 
 void KWalletManager::editorClosed(KXmlGuiWindow* e) {
-	_windows.remove(e);
+	_windows.removeAll(e);
 }
 
 
