@@ -187,7 +187,7 @@ void KWalletManager::aWalletWasOpened() {
 	if (_tray) {
 		_tray->setIconByName("wallet-open");
 		_tray->setToolTip( "wallet-open", i18n("KDE Wallet"), i18n("A wallet is open."));
-		_tray->setStatus(KNotificationItem::Active);
+		_tray->setStatus(Experimental::KNotificationItem::Active);
 	}
 	updateWalletDisplay();
 }
@@ -333,7 +333,7 @@ void KWalletManager::allWalletsClosed() {
 	if (_tray) {
 		_tray->setIconByName("wallet-closed");
 		_tray->setToolTip( "wallet-closed", i18n("KDE Wallet"), i18n("No wallets open."));
-		_tray->setStatus(KNotificationItem::Passive);
+		_tray->setStatus(Experimental::KNotificationItem::Passive);
 	}
 	possiblyQuit();
 }
