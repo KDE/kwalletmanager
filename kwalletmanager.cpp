@@ -35,7 +35,7 @@
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kstandardaction.h>
-#include <knotificationitem.h>
+#include <kstatusnotifieritem.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
 #include <QPointer>
@@ -60,10 +60,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KConfig cfg("kwalletrc"); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
-		_tray = new KNotificationItem(this);
+		_tray = new KStatusNotifierItem(this);
 		_tray->setObjectName("kwalletmanager tray");
-        _tray->setCategory( KNotificationItem::SystemServices );
-        _tray->setStatus( KNotificationItem::Passive );
+        _tray->setCategory( KStatusNotifierItem::SystemServices );
+        _tray->setStatus( KStatusNotifierItem::Passive );
 		_tray->setIconByName("wallet-closed");
 		_tray->setToolTip( "wallet-closed", i18n("KDE Wallet"), i18n("No wallets open."));
 		//connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
@@ -186,7 +186,7 @@ void KWalletManager::aWalletWasOpened() {
 	if (_tray) {
 		_tray->setIconByName("wallet-open");
 		_tray->setToolTip( "wallet-open", i18n("KDE Wallet"), i18n("A wallet is open."));
-		_tray->setStatus(KNotificationItem::Active);
+		_tray->setStatus(KStatusNotifierItem::Active);
 	}
 	updateWalletDisplay();
 }
@@ -332,7 +332,7 @@ void KWalletManager::allWalletsClosed() {
 	if (_tray) {
 		_tray->setIconByName("wallet-closed");
 		_tray->setToolTip( "wallet-closed", i18n("KDE Wallet"), i18n("No wallets open."));
-		_tray->setStatus(KNotificationItem::Passive);
+		_tray->setStatus(KStatusNotifierItem::Passive);
 	}
 	possiblyQuit();
 }
