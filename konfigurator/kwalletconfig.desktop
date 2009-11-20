@@ -5,8 +5,7 @@ Type=Service
 X-KDE-ServiceTypes=KCModule
 
 Exec=kcmshell4 kwalletconfig
-X-DocPath=kwallet/index.html
-
+X-DocPath=kwallet/index.html#kwallet-kcontrol-module
 X-KDE-Library=kcm_kwallet
 X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=advanced-user-settings
