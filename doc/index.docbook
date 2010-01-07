@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2009-01-12</date>
-<releaseinfo>1.4</releaseinfo>
+<date>2010-02-12</date>
+<releaseinfo>1.5</releaseinfo>
 
 <abstract>
 <para>
@@ -59,11 +59,20 @@ a text file is insecure, and using tools such at PGP is tedious and
 inconvenient.</para>
 
 <para>&kwallet; saves this sensitive data for you in a strongly encrypted
+<footnote><para>
+The data is encrypted with the
+<ulink url="http://www.schneier.com/blowfish.html">Blowfish symmetric block cipher algorithm</ulink>,
+the algorithm key is derived from the
+<ulink url="http://www.ietf.org/rfc/rfc3174.txt">SHA-1 hash</ulink>
+of the password, with a key length of 156 bits (20 bytes).
+The data into the wallet file is also hashed with SHA-1 and checked
+before the data is deciphered and accesible by the applications.
+</para></footnote>
 file, accessible by all applications, and protected with a master
 password that you define.</para>
 
 <tip>
-<para>&kwallet; supports multiple wallets, so 
+<para>&kwallet; supports multiple wallets, so
 for the most secure operation, you should use one wallet for local
 passwords, and another for network passwords and form data.  You can
 configure this behavior in the &kwallet; &systemsettings; module, however
