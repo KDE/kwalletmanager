@@ -66,7 +66,7 @@ the algorithm key is derived from the
 <ulink url="http://www.ietf.org/rfc/rfc3174.txt">SHA-1 hash</ulink>
 of the password, with a key length of 156 bits (20 bytes).
 The data into the wallet file is also hashed with SHA-1 and checked
-before the data is deciphered and accesible by the applications.
+before the data is deciphered and accessible by the applications.
 </para></footnote>
 file, accessible by all applications, and protected with a master
 password that you define.</para>
