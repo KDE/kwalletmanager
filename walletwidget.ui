@@ -122,7 +122,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
-              <widget class="QPushButton" name="_hideContents">
+              <widget class="KPushButton" name="_hideContents">
                <property name="text">
                 <string>Hide &amp;Contents</string>
                </property>
@@ -227,7 +227,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <widget class="QPushButton" name="_showContents">
+              <widget class="KPushButton" name="_showContents">
                <property name="text">
                 <string>Show &amp;Contents</string>
                </property>
@@ -281,30 +281,22 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="_undoChanges">
+          <widget class="KPushButton" name="_undoChanges">
            <property name="enabled">
             <bool>false</bool>
            </property>
            <property name="text">
             <string>&amp;Undo</string>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>edit-undo</normaloff>edit-undo</iconset>
-           </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="_saveChanges">
+          <widget class="KPushButton" name="_saveChanges">
            <property name="enabled">
             <bool>false</bool>
            </property>
            <property name="text">
             <string>&amp;Save</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>document-save</normaloff>document-save</iconset>
            </property>
           </widget>
          </item>
@@ -317,6 +309,11 @@
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
   <customwidget>
    <class>KSqueezedTextLabel</class>
    <extends>QLabel</extends>

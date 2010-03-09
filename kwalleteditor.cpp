@@ -74,6 +74,9 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	_ww->_splitter->setStretchFactor(1, 2);
 	_contextMenu = new KMenu(this);
 
+	_ww->_undoChanges->setIcon(KIcon("edit-undo"));
+	_ww->_saveChanges->setIcon(KIcon("document-save"));
+
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
 	box->setSpacing( KDialog::spacingHint() );
 	box->setMargin( KDialog::marginHint() );
