@@ -400,6 +400,9 @@ clicking on it and choosing <guimenuitem>Delete</guimenuitem> from the
 context menu that appears, or by simply selecting it and pressing the
 <keysym>Del</keysym> key.</para>
 
+<para>An application that has been allowed access to a wallet is granted access to
+all passwords stored inside.</para>
+
 </sect1>
 
 </chapter>
