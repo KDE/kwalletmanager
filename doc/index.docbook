@@ -392,13 +392,16 @@ Manager</guibutton>, which does precisely that.</para>
 
 <para>Next there is a tree style view of the access controls for your wallets.</para>
 
-<para>Click with the &LMB; on the <guiicon>+</guiicon> symbol beside a wallet name to
+<para>Click with the &LMB; on the <guiicon>&gt;</guiicon> symbol beside a wallet name to
 expand the tree. You will see the name of each application that has asked
 for access to the wallet, and the policy you set for it.  You cannot edit
 policies here, or add them, but it is possible to delete an entry by &RMB;
 clicking on it and choosing <guimenuitem>Delete</guimenuitem> from the
 context menu that appears, or by simply selecting it and pressing the
 <keysym>Del</keysym> key.</para>
+
+<para>An application that has been allowed access to a wallet is granted access to
+all passwords stored inside.</para>
 
 </sect1>
 
