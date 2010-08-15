@@ -32,7 +32,6 @@
 #include <kdebug.h>
 #include <kdialog.h>
 #include <kfiledialog.h>
-#include <k3iconview.h>
 #include <kinputdialog.h>
 #include <kio/netaccess.h>
 #include <k3listviewsearchline.h>
