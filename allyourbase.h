@@ -175,12 +175,12 @@ inline QDataStream& operator<<(QDataStream& str, const KWalletFolderItem& w) {
 	str << w.name();
 	w._wallet->setFolder(w.name());
 	QStringList entries = w._wallet->entryList();
-	for (QStringList::Iterator it = entries.begin(); it != entries.end(); ++it) {
-		str << *it;
-		KWallet::Wallet::EntryType et = w._wallet->entryType(*it);
+	foreach (const QString &entry, entries) {
+		str << entry;
+		KWallet::Wallet::EntryType et = w._wallet->entryType(entry);
 		str << (qint32)et;
 		QByteArray a;
-		w._wallet->readEntry(*it, a);
+		w._wallet->readEntry(entry, a);
 		str << a;
 	}
 	w._wallet->setFolder(oldFolder);
