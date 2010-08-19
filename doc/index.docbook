@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2010-01-12</date>
-<releaseinfo>1.5</releaseinfo>
+<date>2010-08-19</date>
+<releaseinfo>1.6 (&kde; 4.5)</releaseinfo>
 
 <abstract>
 <para>
@@ -295,7 +295,7 @@ locations.</para>
 <title>Configuring &kwallet;</title>
 
 <sect1 id="wallet-preferences">
-<title><guilabel>Wallet Preferences</guilabel></title>
+<title>Wallet Preferences</title>
 
 <para>&kwallet; contains a small configuration panel with several options
 that allow you to tune &kwallet; to your personal preferences.  The
@@ -318,7 +318,7 @@ closed, the password is needed to access it again.</para>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Close when screen saver starts</guilabel></term>
+<term><guilabel>Close when screensaver starts</guilabel></term>
 <listitem>
 <para>Close the wallet as soon as the screen saver starts. When a wallet is
 closed, the password is needed to access it again.</para>
@@ -377,7 +377,7 @@ Manager</guibutton>, which does precisely that.</para>
 </sect1>
 
 <sect1 id="wallet-access-control">
-<title><guilabel>Access Control</guilabel></title>
+<title>Access Control</title>
 
 <para>There is only one option on this page:</para>
 
