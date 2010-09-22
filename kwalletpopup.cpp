@@ -33,7 +33,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	addTitle(wallet);
 	setObjectName(name);
 	KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
-	ac->setObjectName("kwallet context actions");
+	ac->setObjectName( QLatin1String("kwallet context actions" ));
 	QAction *act;
 
 	act = ac->addAction("wallet_create");
@@ -55,7 +55,7 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	const QStringList ul = KWallet::Wallet::users(wallet);
 	if (!ul.isEmpty()) {
 		KMenu *pm = new KMenu(this);
-		pm->setObjectName("Disconnect Apps");
+		pm->setObjectName( QLatin1String("Disconnect Apps" ));
 		int id = 7000;
 		for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
 			_appMap[id] = *it;

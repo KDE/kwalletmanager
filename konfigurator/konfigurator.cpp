@@ -32,7 +32,6 @@
 #include <QCheckBox>
 #include <q3listview.h>
 #include <QPushButton>
-//Added by qt3to4:
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>
 #include <kconfiggroup.h>

@@ -61,7 +61,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
 	if (walletConfigGroup.readEntry("Launch Manager", true)) {
 		_tray = new KStatusNotifierItem(this);
-		_tray->setObjectName("kwalletmanager tray");
+		_tray->setObjectName( QLatin1String("kwalletmanager tray" ));
         _tray->setCategory( KStatusNotifierItem::SystemServices );
         _tray->setStatus( KStatusNotifierItem::Passive );
 		_tray->setIconByName("wallet-closed");
@@ -153,7 +153,7 @@ actionCollection());
 		show();
 	}
 
-	qApp->setObjectName("kwallet"); // hack to fix docs
+	qApp->setObjectName( QLatin1String("kwallet" )); // hack to fix docs
 }
 
 
