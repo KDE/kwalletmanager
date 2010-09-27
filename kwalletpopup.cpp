@@ -31,7 +31,7 @@
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
 : KMenu(parent), _walletName(wallet) {
 	addTitle(wallet);
-	setObjectName(name);
+	setObjectName( QLatin1String( name ) );
 	KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
 	ac->setObjectName( QLatin1String("kwallet context actions" ));
 	QAction *act;

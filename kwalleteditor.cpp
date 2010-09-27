@@ -66,15 +66,15 @@
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
 : KXmlGuiWindow(parent), _walletName(wallet), _nonLocal(isPath) {
-	setObjectName(name);
+	setObjectName( QLatin1String( name ) );
 	_newWallet = false;
 	_ww = new WalletWidget(this);
 	_ww->_splitter->setStretchFactor(0, 1);
 	_ww->_splitter->setStretchFactor(1, 2);
 	_contextMenu = new KMenu(this);
 
-	_ww->_undoChanges->setIcon(KIcon("edit-undo"));
-	_ww->_saveChanges->setIcon(KIcon("document-save"));
+	_ww->_undoChanges->setIcon(KIcon( QLatin1String( "edit-undo" )));
+	_ww->_saveChanges->setIcon(KIcon( QLatin1String( "document-save" )));
 
 	QVBoxLayout *box = new QVBoxLayout(_ww->_entryListFrame);
 	box->setSpacing( KDialog::spacingHint() );
@@ -172,7 +172,7 @@ KWalletEditor::~KWalletEditor() {
 void KWalletEditor::createActions() {
         _newFolderAction = actionCollection()->addAction( "create_folder" );
         _newFolderAction->setText( i18n("&New Folder...") );
-        _newFolderAction->setIcon( KIcon("folder-new") );
+        _newFolderAction->setIcon( KIcon( QLatin1String( "folder-new" )) );
 	connect(_newFolderAction, SIGNAL(triggered(bool) ), SLOT(createFolder()));
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));

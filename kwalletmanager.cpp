@@ -117,11 +117,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 
 	QAction *action = actionCollection()->addAction("wallet_create");
 	action->setText(i18n("&New Wallet..."));
-	action->setIcon(KIcon("kwalletmanager"));
+	action->setIcon(KIcon( QLatin1String( "kwalletmanager" )));
 	connect(action, SIGNAL(triggered()), SLOT(createWallet()));
 	QAction *act = actionCollection()->addAction("wallet_settings");
 	act->setText(i18n("Configure &Wallet..."));
-	act->setIcon(KIcon("configure"));
+	act->setIcon(KIcon( QLatin1String( "configure" )));
 
 	connect(act, SIGNAL(triggered()), SLOT(setupWallet()));
 	if (_tray) {

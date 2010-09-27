@@ -366,7 +366,7 @@ class KWalletFolderDrag : public Q3StoredDrag {
  */
 KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
 : K3ListView(parent) {
-	setObjectName(name);
+	setObjectName( QLatin1String( name ) );
 	addColumn(i18n("Folders"));
 	setRootIsDecorated(true);
 	setDefaultRenameAction(Reject);
@@ -613,7 +613,7 @@ class KWalletIconDrag : public Q3IconDrag {
 			if (mimetype == "application/x-qiconlist") {
 				return Q3IconDrag::encodedData(mime);
 			} else if (mimetype == "text/uri-list") {
-				QByteArray s = _urls.join("\r\n").toLatin1();
+				QByteArray s = _urls.join( QLatin1String( "\r\n" )).toLatin1();
 				if (_urls.count() > 0) {
 					s.append("\r\n");
 				}
