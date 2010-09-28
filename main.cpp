@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
 	KWalletManager wm;
 	wm.setCaption(i18n("KDE Wallet Manager"));
 
-	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
+	KGlobal::dirs()->addResourceType("kwallet", QLatin1String( "share/apps/kwallet" ));
 
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
@@ -85,7 +85,7 @@ int main(int argc, char **argv) {
 		KMimeType::Ptr ptr;
 		if (QFile::exists(fn) &&
 			(ptr = KMimeType::findByFileContent(fn)) &&
-			ptr->is("application/x-kwallet")) {
+			ptr->is(QLatin1String( "application/x-kwallet" ))) {
 			wm.openWalletFile(fn);
 		} else {
 			wm.openWallet(args->arg(i));

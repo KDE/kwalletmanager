@@ -36,18 +36,18 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 	ac->setObjectName( QLatin1String("kwallet context actions" ));
 	QAction *act;
 
-	act = ac->addAction("wallet_create");
+	act = ac->addAction(QLatin1String( "wallet_create" ));
 	act->setText(i18n("&New Wallet..."));
 	connect(act, SIGNAL(triggered(bool)), SLOT(createWallet()));
 	addAction( act );
 
-        act= ac->addAction( "wallet-open" );
+        act= ac->addAction( QLatin1String( "wallet-open" ));
         act->setText( i18n( "&Open..." ) );
 	connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
 	act->setShortcut(QKeySequence(Qt::Key_Return));
 	addAction( act );
 
-        act=ac->addAction( "wallet_password" );
+        act=ac->addAction( QLatin1String( "wallet_password" ) );
         act->setText( i18n("Change &Password...") );
 	connect(act, SIGNAL(triggered(bool)), SLOT(changeWalletPassword()));
 	addAction( act );
@@ -69,13 +69,13 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 
 	act = KStandardAction::close( this,
 			SLOT(closeWallet()), ac);
-        ac->addAction("wallet_close", act);
+        ac->addAction(QLatin1String( "wallet_close" ), act);
 	// FIXME: let's track this inside the manager so we don't need a dcop
 	//        roundtrip here.
 	act->setEnabled(KWallet::Wallet::isOpen(wallet));
 	addAction( act );
 
-        act = ac->addAction( "wallet_delete" );
+        act = ac->addAction( QLatin1String( "wallet_delete" ) );
         act->setText( i18n( "&Delete") );
 
 	connect(act, SIGNAL(triggered(bool)), SLOT(deleteWallet()));
@@ -114,7 +114,7 @@ void KWalletPopup::createWallet() {
 
 
 void KWalletPopup::disconnectApp(int id) {
-	KWallet::Wallet::disconnectApplication(_walletName, _appMap[id].toLatin1());
+	KWallet::Wallet::disconnectApplication(_walletName,QLatin1String( _appMap[id].toLatin1() ));
 }
 
 #include "kwalletpopup.moc"

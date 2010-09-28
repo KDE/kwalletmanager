@@ -145,7 +145,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	}
 
 	createActions();
-	createGUI("kwalleteditor.rc");
+	createGUI( QLatin1String( "kwalleteditor.rc" ));
 	delete toolBar();
 
 	setCaption(wallet);
@@ -156,7 +156,7 @@ KWalletEditor::~KWalletEditor() {
 	KConfigGroup cg(KGlobal::config(), "WalletEditor");
 	cg.writeEntry("SplitterSize", _ww->_splitter->sizes());
 	cg.sync();
-	
+
 	emit editorClosed(this);
 	delete _newFolderAction;
 	_newFolderAction = 0L;
@@ -170,14 +170,14 @@ KWalletEditor::~KWalletEditor() {
 }
 
 void KWalletEditor::createActions() {
-        _newFolderAction = actionCollection()->addAction( "create_folder" );
+        _newFolderAction = actionCollection()->addAction( QLatin1String( "create_folder" ));
         _newFolderAction->setText( i18n("&New Folder...") );
         _newFolderAction->setIcon( KIcon( QLatin1String( "folder-new" )) );
 	connect(_newFolderAction, SIGNAL(triggered(bool) ), SLOT(createFolder()));
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
 
-        _deleteFolderAction = actionCollection()->addAction("delete_folder" );
+        _deleteFolderAction = actionCollection()->addAction( QLatin1String( "delete_folder" ) );
         _deleteFolderAction->setText( i18n("&Delete Folder") );
 	connect(_deleteFolderAction, SIGNAL(triggered(bool) ), SLOT(deleteFolder()));
 	connect(this, SIGNAL(enableContextFolderActions(bool)),
@@ -185,25 +185,25 @@ void KWalletEditor::createActions() {
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_deleteFolderAction, SLOT(setEnabled(bool)));
 
-        _passwordAction = actionCollection()->addAction( "change_password" );
+        _passwordAction = actionCollection()->addAction( QLatin1String(  "change_password" ) );
         _passwordAction->setText( i18n("Change &Password...") );
 	connect(_passwordAction, SIGNAL(triggered(bool) ), SLOT(changePassword()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_passwordAction, SLOT(setEnabled(bool)));
 
-        _mergeAction = actionCollection()->addAction( "merge");
+        _mergeAction = actionCollection()->addAction( QLatin1String(  "merge" ));
         _mergeAction->setText( i18n("&Merge Wallet...") );
 	connect(_mergeAction, SIGNAL(triggered(bool) ), SLOT(importWallet()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_mergeAction, SLOT(setEnabled(bool)));
 
-        _importAction= actionCollection()->addAction( "import" );
+        _importAction= actionCollection()->addAction( QLatin1String(  "import" ) );
         _importAction->setText( i18n("&Import XML...") );
 	connect(_importAction, SIGNAL(triggered(bool) ), SLOT(importXML()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_importAction, SLOT(setEnabled(bool)));
 
-        _exportAction = actionCollection()->addAction( "export" );
+        _exportAction = actionCollection()->addAction( QLatin1String(  "export" ) );
         _exportAction->setText( i18n("&Export...") );
 	connect(_exportAction, SIGNAL(triggered(bool) ), SLOT(exportXML()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
@@ -214,20 +214,20 @@ void KWalletEditor::createActions() {
 		_saveAsAction, SLOT(setEnabled(bool)));
 
 	_copyPassAction = KStandardAction::copy(this, SLOT(copyPassword()), actionCollection());
-	
-	_newEntryAction = actionCollection()->addAction( "new_entry" );
+
+	_newEntryAction = actionCollection()->addAction( QLatin1String(  "new_entry" ) );
 	_newEntryAction->setText( i18n( "&New..." ) );
 	_newEntryAction->setShortcut( Qt::Key_Insert );
 	connect(_newEntryAction, SIGNAL(triggered(bool)), SLOT(newEntry()));
 	_newEntryAction->setEnabled(false);
-	
-	_renameEntryAction = actionCollection()->addAction( "rename_entry" );
+
+	_renameEntryAction = actionCollection()->addAction( QLatin1String(  "rename_entry" ) );
 	_renameEntryAction->setText( i18n( "&Rename" ) );
 	_renameEntryAction->setShortcut( Qt::Key_F2 );
 	connect(_renameEntryAction, SIGNAL(triggered(bool)), SLOT(renameEntry()));
 	_renameEntryAction->setEnabled(false);
-	
-	_deleteEntryAction = actionCollection()->addAction( "delete_entry" );
+
+	_deleteEntryAction = actionCollection()->addAction( QLatin1String(  "delete_entry" ) );
 	_deleteEntryAction->setText( i18n( "&Delete" ) );
 	_deleteEntryAction->setShortcut( Qt::Key_Delete );
 	connect(_deleteEntryAction, SIGNAL(triggered(bool)), SLOT(deleteEntry()));
@@ -312,7 +312,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 
 	//check if the current folder has been removed
 	if (!fl.contains(_currentFolder)) {
-		_currentFolder = "";
+		_currentFolder.clear();
 		_ww->_entryTitle->clear();
 		_ww->_iconTitle->clear();
 	}
@@ -327,14 +327,14 @@ void KWalletEditor::deleteFolder() {
 				return;
 			}
 
-			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()),"",KStandardGuiItem::del());
+			int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()),QString(),KStandardGuiItem::del());
 			if (rc == KMessageBox::Continue) {
 				bool rc = _w->removeFolder(fi->name());
 				if (!rc) {
 					KMessageBox::sorry(this, i18n("Error deleting folder."));
 					return;
 				}
-				_currentFolder = "";
+				_currentFolder.clear();
 				_ww->_entryTitle->clear();
 				_ww->_iconTitle->clear();
 				updateFolderList();
@@ -431,7 +431,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 		// set the context menu's title
 		_contextMenu->addTitle(_contextMenu->fontMetrics().elidedText(
 			item->text(0), Qt::ElideMiddle, 200 ) );
-	
+
 		switch (item->rtti()) {
 			case KWalletEntryItemClass:
 				ci = dynamic_cast<KWalletContainerItem*>(item->parent());
@@ -444,7 +444,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				}
 				_w->setFolder(fi->name());
 				_deleteFolderAction->setEnabled(false);
-				
+
 				// add standard menu items
 				_contextMenu->addAction( _newEntryAction );
 				_contextMenu->addAction( _renameEntryAction );
@@ -452,7 +452,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_newEntryAction->setEnabled(true);
 				_renameEntryAction->setEnabled(true);
 				_deleteEntryAction->setEnabled(true);
-				
+
 				if (ci->type() == KWallet::Wallet::Password) {
 					QString pass;
 					if (_w->readPassword(item->text(0), pass) == 0) {
@@ -487,7 +487,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 					}
 				}
 				break;
-	
+
 			case KWalletContainerItemClass:
 				ci = dynamic_cast<KWalletContainerItem*>(item);
 				if (!ci) {
@@ -501,7 +501,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 					_contextMenu->addAction( _newEntryAction );
 					_newEntryAction->setEnabled(true);
 				}
-			
+
 				fi = dynamic_cast<KWalletFolderItem*>(item->parent());
 				if (!fi) {
 					return;
@@ -511,12 +511,12 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_ww->_entryName->clear();
 				_ww->_entryStack->setCurrentIndex(0);
 				break;
-	
+
 			case KWalletFolderItemClass:
 				// add the context menu actions
 				_contextMenu->addAction( _newFolderAction );
 				_contextMenu->addAction( _deleteFolderAction );
-				
+
 				fi = dynamic_cast<KWalletFolderItem*>(item);
 				if (!fi) {
 					return;
@@ -526,7 +526,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_ww->_entryName->clear();
 				_ww->_entryStack->setCurrentIndex(0);
 				break;
-				
+
 			default:
 				// all items but Unknown entries return have their
 				// rtti set. Unknown items can only be deleted.
@@ -541,7 +541,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 
 	if (fi) {
 		_currentFolder = fi->name();
-		_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
+		_ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 		_ww->_iconTitle->setPixmap(fi->getFolderIcon(KIconLoader::Toolbar));
 	}
 }
@@ -627,7 +627,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	}
 	fi->refresh();
 	if (fi->name() == _currentFolder) {
-		_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
+            _ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 	}
 	if (!_entryList->selectedItem()) {
 		_ww->_entryName->clear();
@@ -738,7 +738,7 @@ void KWalletEditor::newEntry() {
 		_entryList->ensureItemVisible(ni);
 
 		fi->refresh();
-		_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
+		_ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 	}
 }
 
@@ -788,7 +788,7 @@ void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t)
 void KWalletEditor::deleteEntry() {
 	Q3ListViewItem *item = _entryList->selectedItem();
 	if (_w && item) {
-		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)),"",KStandardGuiItem::del());
+		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)),QString(),KStandardGuiItem::del());
 		if (rc == KMessageBox::Continue) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
 			if (!fi) {
@@ -799,7 +799,7 @@ void KWalletEditor::deleteEntry() {
 			delete item;
 			entrySelectionChanged(_entryList->currentItem());
 			fi->refresh();
-			_ww->_entryTitle->setText(QString("<font size=\"+1\">%1</font>").arg(fi->text(0)));
+			_ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 		}
 	}
 }
@@ -849,7 +849,7 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
 
 void KWalletEditor::importWallet() {
-	KUrl url = KFileDialog::getOpenUrl(KUrl(), "*.kwl", this);
+	KUrl url = KFileDialog::getOpenUrl(KUrl(), QLatin1String( "*.kwl" ), this);
 	if (url.isEmpty()) {
 		return;
 	}
@@ -878,7 +878,7 @@ void KWalletEditor::importWallet() {
 			QMap<QString, QMap<QString, QString> > map;
 			QSet<QString> mergedkeys; // prevents re-merging already merged entries.
 			int rc;
-			rc = w->readMapList("*", map);
+			rc = w->readMapList(QLatin1String( "*" ), map);
 			if (rc == 0) {
 				QMap<QString, QMap<QString, QString> >::ConstIterator me;
 				for (me = map.constBegin(); me != map.constEnd(); ++me) {
@@ -909,7 +909,7 @@ void KWalletEditor::importWallet() {
 			}
 
 			QMap<QString, QString> pwd;
-			rc = w->readPasswordList("*", pwd);
+			rc = w->readPasswordList(QLatin1String( "*" ), pwd);
 			if (rc == 0) {
 				QMap<QString, QString>::ConstIterator pe;
 				for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
@@ -940,7 +940,7 @@ void KWalletEditor::importWallet() {
 			}
 
 			QMap<QString, QByteArray> ent;
-			rc = w->readEntryList("*", ent);
+			rc = w->readEntryList(QLatin1String( "*" ), ent);
 			if (rc == 0) {
 				QMap<QString, QByteArray>::ConstIterator ee;
 				for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
@@ -984,7 +984,7 @@ void KWalletEditor::importWallet() {
 
 
 void KWalletEditor::importXML() {
-	KUrl url = KFileDialog::getOpenUrl( KUrl(), "*.xml", this);
+	KUrl url = KFileDialog::getOpenUrl( KUrl(), QLatin1String( "*.xml" ), this);
 	if (url.isEmpty()) {
 		return;
 	}
@@ -1010,7 +1010,7 @@ void KWalletEditor::importXML() {
 	}
 
 	QDomElement top = doc.documentElement();
-	if (top.tagName().toLower() != "wallet") {
+	if (top.tagName().toLower() != QLatin1String( "wallet" )) {
 		KMessageBox::sorry(this, i18n("Error: XML file does not contain a wallet."));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
@@ -1020,12 +1020,12 @@ void KWalletEditor::importXML() {
 	MergePlan mp = Prompt;
 	while (!n.isNull()) {
 		QDomElement e = n.toElement();
-		if (e.tagName().toLower() != "folder") {
+		if (e.tagName().toLower() != QLatin1String( "folder" )) {
 			n = n.nextSibling();
 			continue;
 		}
 
-		QString fname = e.attribute("name");
+		QString fname = e.attribute(QLatin1String( "name" ));
 		if (fname.isEmpty()) {
 			n = n.nextSibling();
 			continue;
@@ -1038,7 +1038,7 @@ void KWalletEditor::importXML() {
 		while (!enode.isNull()) {
 			e = enode.toElement();
 			QString type = e.tagName().toLower();
-			QString ename = e.attribute("name");
+			QString ename = e.attribute(QLatin1String( "name" ));
 			bool hasEntry = _w->hasEntry(ename);
 			if (hasEntry && mp == Prompt) {
 				KBetterThanKDialogBase *bd;
@@ -1062,17 +1062,17 @@ void KWalletEditor::importXML() {
 				continue;
 			}
 
-			if (type == "password") {
+			if (type == QLatin1String( "password" )) {
 				_w->writePassword(ename, e.text());
-			} else if (type == "stream") {
+			} else if (type == QLatin1String( "stream" )) {
 				_w->writeEntry(ename, KCodecs::base64Decode(e.text().toLatin1()));
-			} else if (type == "map") {
+			} else if (type == QLatin1String( "map" )) {
 				QMap<QString,QString> map;
 				QDomNode mapNode = e.firstChild();
 				while (!mapNode.isNull()) {
 					QDomElement mape = mapNode.toElement();
-					if (mape.tagName().toLower() == "mapentry") {
-						map[mape.attribute("name")] = mape.text();
+					if (mape.tagName().toLower() == QLatin1String( "mapentry" )) {
+						map[mape.attribute(QLatin1String( "name" ))] = mape.text();
 					}
 					mapNode = mapNode.nextSibling();
 				}
@@ -1097,11 +1097,11 @@ void KWalletEditor::exportXML() {
 	xml.writeStartDocument();
 	const QStringList fl = _w->folderList();
 
-	xml.writeStartElement("wallet");
-	xml.writeAttribute("name", _walletName);
+	xml.writeStartElement(QLatin1String( "wallet" ));
+	xml.writeAttribute(QLatin1String( "name" ), _walletName);
 	for (QStringList::const_iterator i = fl.constBegin(); i != fl.constEnd(); ++i) {
-		xml.writeStartElement("folder");
-		xml.writeAttribute("name", *i);
+		xml.writeStartElement(QLatin1String( "folder" ));
+		xml.writeAttribute(QLatin1String( "name" ), *i);
 		_w->setFolder(*i);
 		QStringList entries = _w->entryList();
 		for (QStringList::const_iterator j = entries.constBegin(); j != entries.constEnd(); ++j) {
@@ -1110,8 +1110,8 @@ void KWalletEditor::exportXML() {
 					{
 						QString pass;
 						if (_w->readPassword(*j, pass) == 0) {
-							xml.writeStartElement("password");
-							xml.writeAttribute("name", *j);
+							xml.writeStartElement(QLatin1String( "password" ));
+							xml.writeAttribute(QLatin1String( "name" ), *j);
 							xml.writeCharacters(pass);
 							xml.writeEndElement();
 						}
@@ -1121,9 +1121,9 @@ void KWalletEditor::exportXML() {
 					{
 						QByteArray ba;
 						if (_w->readEntry(*j, ba) == 0) {
-							xml.writeStartElement("stream");
-							xml.writeAttribute("name", *j);
-							xml.writeCharacters(KCodecs::base64Encode(ba));
+							xml.writeStartElement(QLatin1String( "stream" ));
+							xml.writeAttribute(QLatin1String( "name" ), *j);
+							xml.writeCharacters(QLatin1String( KCodecs::base64Encode(ba) ));
 							xml.writeEndElement();
 						}
 						break;
@@ -1132,11 +1132,11 @@ void KWalletEditor::exportXML() {
 					{
 						QMap<QString,QString> map;
 						if (_w->readMap(*j, map) == 0) {
-							xml.writeStartElement("map");
-							xml.writeAttribute("name", *j);
+							xml.writeStartElement(QLatin1String( "map" ));
+							xml.writeAttribute(QLatin1String( "name" ), *j);
 							for (QMap<QString,QString>::ConstIterator k = map.constBegin(); k != map.constEnd(); ++k) {
-								xml.writeStartElement("mapentry");
-								xml.writeAttribute("name", k.key());
+								xml.writeStartElement(QLatin1String( "mapentry" ));
+								xml.writeAttribute(QLatin1String( "name" ), k.key());
 								xml.writeCharacters(k.value());
 								xml.writeEndElement();
 							}
@@ -1156,7 +1156,7 @@ void KWalletEditor::exportXML() {
 	xml.writeEndDocument();
 	tf.flush();
 
-	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.xml", this);
+	KUrl url = KFileDialog::getSaveUrl(KUrl(), QLatin1String( "*.xml" ), this);
 
 	if (!url.isEmpty()) {
 		KIO::NetAccess::dircopy(KUrl::fromPath(tf.fileName()), url, this);
@@ -1170,13 +1170,13 @@ void KWalletEditor::setNewWallet(bool x) {
 
 
 void KWalletEditor::saveAs() {
-	KUrl url = KFileDialog::getSaveUrl(KUrl(), "*.kwl", this);
+	KUrl url = KFileDialog::getSaveUrl(KUrl(), QLatin1String( "*.kwl" ), this);
 	if (!url.isEmpty()) {
 		// Sync() kwalletd
 		if (_nonLocal) {
 			KIO::NetAccess::dircopy(_walletName, url, this);
 		} else {
-			QString path = KGlobal::dirs()->saveLocation("kwallet") + '/' + _walletName + ".kwl";
+			QString path = KGlobal::dirs()->saveLocation("kwallet") + QLatin1Char( '/' ) + _walletName + QLatin1String( ".kwl" );
 			KIO::NetAccess::dircopy(KUrl::fromPath(path), url, this);
 		}
 	}

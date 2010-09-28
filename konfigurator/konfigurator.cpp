@@ -43,7 +43,7 @@ K_EXPORT_PLUGIN(KWalletFactory("kcmkwallet"))
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 : KCModule(KWalletFactory::componentData(), parent, args),
-  _cfg(KSharedConfig::openConfig("kwalletrc", KConfig::NoGlobals)) {
+  _cfg(KSharedConfig::openConfig(QLatin1String( "kwalletrc" ), KConfig::NoGlobals)) {
 
 	KAboutData *about =
 		new KAboutData(I18N_NOOP("kcmkwallet"), 0,
@@ -78,7 +78,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 	_wcw->_accessList->setAllColumnsShowFocus(true);
 	updateWalletLists();
 
-	if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.kwalletmanager")) {
+	if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String( "org.kde.kwalletmanager" ))) {
 		_wcw->_launch->hide();
 	}
 
@@ -162,12 +162,12 @@ void KWalletConfig::newNetworkWallet() {
 
 
 void KWalletConfig::launchManager() {
-	if (!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.kwalletmanager")) {
-		KToolInvocation::startServiceByDesktopName("kwalletmanager_show");
+	if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String( "org.kde.kwalletmanager" ))) {
+		KToolInvocation::startServiceByDesktopName( QLatin1String( "kwalletmanager_show" ));
 	} else {
-             QDBusInterface kwalletd("org.kde.kwalletmanager", "/kwalletmanager/MainWindow_1");
-             kwalletd.call( "show");
-             kwalletd.call( "raise" );
+             QDBusInterface kwalletd(QLatin1String( "org.kde.kwalletmanager" ), QLatin1String( "/kwalletmanager/MainWindow_1" ));
+             kwalletd.call( QLatin1String( "show" ));
+             kwalletd.call( QLatin1String( "raise" ) );
 	}
 }
 
@@ -278,8 +278,8 @@ void KWalletConfig::save() {
 
         // this restarts kwalletd if necessary
 	if (KWallet::Wallet::isEnabled()) {
-            QDBusInterface kwalletd("org.kde.kwalletd", "/modules/kwalletd", KWALLETMANAGERINTERFACE);
-            kwalletd.call( "reconfigure" );
+            QDBusInterface kwalletd(QLatin1String( "org.kde.kwalletd" ), QLatin1String( "/modules/kwalletd" ),QLatin1String( KWALLETMANAGERINTERFACE ));
+            kwalletd.call( QLatin1String( "reconfigure" ) );
         }
 	emit changed(false);
 }
@@ -312,7 +312,7 @@ void KWalletConfig::contextMenuRequested(Q3ListViewItem *item, const QPoint& pos
 	if (item && item->parent()) {
 		KMenu *m = new KMenu(this);
 		m->addTitle(item->parent()->text(0));
-		m->addAction(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
+		m->addAction( i18n("&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
 		m->exec(pos);
                 delete m;
 	}

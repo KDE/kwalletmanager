@@ -58,7 +58,7 @@ void KWMapEditor::reload() {
 	if ((row = numRows()) < _map.count()) {
 		insertRows(row, _map.count() - row);
 		for (int x = row; x < numRows(); ++x) {
-			QPushButton *b = new QPushButton("X", this);
+			QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
 			connect(b, SIGNAL(clicked()), this, SLOT(erase()));
 			setCellWidget(x, 0, b);
 		}
@@ -102,7 +102,7 @@ void KWMapEditor::saveMap() {
 void KWMapEditor::addEntry() {
 	int x = numRows();
 	insertRows(x, 1);
-	QPushButton *b = new QPushButton("X", this);
+	QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
 	connect(b, SIGNAL(clicked()), this, SLOT(erase()));
 	setCellWidget(x, 0, b);
 	ensureCellVisible(x, 1);
@@ -120,7 +120,7 @@ void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
 	_contextRow = row;
 	_contextCol = col;
 	KMenu *m = new KMenu(this);
-	m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
+	m->addAction( i18n("&New Entry" ), this, SLOT(addEntry()));
 	m->addAction( _copyAct );
 	m->popup(pos);
 }

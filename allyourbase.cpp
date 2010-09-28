@@ -45,7 +45,7 @@
  */
 KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, const QString &name, int entries)
 : K3ListViewItem(parent),_wallet(w),_name(name),_entries(entries) {
-	setText(0, QString("%1 (%2)").arg(_name).arg(_entries));
+    setText(0, QString::fromLatin1("%1 (%2)").arg(_name).arg(_entries));
 	setRenameEnabled(0, false);
 	setDragEnabled(true);
 	setDropEnabled(true);
@@ -63,7 +63,7 @@ QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group){
 		pix = loader->loadIcon( _name.toLower(), group, 0,
 			KIconLoader::DefaultState, QStringList(),0, true);
 	if (pix.isNull())
-		pix = loader->loadIcon( "folder-red", group, 0,
+		pix = loader->loadIcon( QLatin1String( "folder-red" ), group, 0,
 			KIconLoader::DefaultState, QStringList(),0, true);
 	return pix;
 }
@@ -71,7 +71,7 @@ QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group){
 void KWalletFolderItem::refresh() {
 	QString saveFolder = _wallet->currentFolder();
 	_wallet->setFolder(_name);
-	setText(0, QString("%1 (%2)").arg(_name).arg(_wallet->entryList().count()));
+	setText(0, QString::fromLatin1("%1 (%2)").arg(_name).arg(_wallet->entryList().count()));
 	_wallet->setFolder(saveFolder);
 }
 
@@ -176,7 +176,7 @@ KWalletEntryItem::~KWalletEntryItem() {
  * KWalletItem - IconView items to represent wallets
  */
 KWalletItem::KWalletItem(Q3IconView *parent, const QString& walletName)
-: Q3IconViewItem(parent, walletName, DesktopIcon("wallet-closed")), _open(false) {
+: Q3IconViewItem(parent, walletName, DesktopIcon(QLatin1String( "wallet-closed" ))), _open(false) {
 }
 
 KWalletItem::~KWalletItem() {
@@ -191,9 +191,9 @@ void KWalletItem::setOpen(bool state) {
 	if (_open != state) {
 		_open = state;
 		if (_open) {
-			setPixmap( DesktopIcon("wallet-open") );
+			setPixmap( DesktopIcon(QLatin1String( "wallet-open" )) );
 		} else {
-			setPixmap( DesktopIcon("wallet-closed") );
+			setPixmap( DesktopIcon(QLatin1String( "wallet-closed" )) );
 		}
 	}
 }
@@ -638,7 +638,7 @@ class KWalletIconDrag : public Q3IconDrag {
 *   */
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : K3IconView(parent, name) {
-	KGlobal::dirs()->addResourceType("kwallet", "share/apps/kwallet");
+	KGlobal::dirs()->addResourceType("kwallet", QLatin1String( "share/apps/kwallet" ));
 	connect(this, SIGNAL(dropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
 
         // make Return execute() the icon
@@ -668,7 +668,7 @@ void KWalletIconView::slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragIte
 		return;
 	}
 
-	QStringList ul = QString(urls).split("\r\n", QString::SkipEmptyParts);
+	QStringList ul = QString::fromLatin1(urls).split(QLatin1String( "\r\n" ), QString::SkipEmptyParts);
 	if (ul.isEmpty() || ul.first().isEmpty()) {
 		e->ignore();
 		return;
@@ -703,11 +703,11 @@ void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
 
 Q3DragObject *KWalletIconView::dragObject() {
 	KWalletIconDrag* id = new KWalletIconDrag(viewport(), "KWallet Drag");
-	QString path = "file:" + KGlobal::dirs()->saveLocation("kwallet");
+	QString path = QLatin1String( "file:" ) + KGlobal::dirs()->saveLocation("kwallet");
 	QPoint pos = _mousePos;
 	for (Q3IconViewItem *item = firstItem(); item; item = item->nextItem()) {
 		if (item->isSelected()) {
-			QString url = path + item->text() + ".kwl";
+			QString url = path + item->text() + QLatin1String( ".kwl" );
 			Q3IconDragItem idi;
 			idi.setData(url.toLocal8Bit());
 			id->append(idi,
