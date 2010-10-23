@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=KWalletManager
 Name[ar]=KWalletManager
+Name[ast]=KWalletManager
 Name[bg]=KWalletManager
 Name[ca]=KWalletManager
 Name[ca@valencia]=KWalletManager
@@ -51,6 +52,7 @@ Name[zh_CN]=KWalletManager
 Name[zh_TW]=KDE 錢包管理員
 GenericName=Wallet Management Tool
 GenericName[ar]=أداة إدارة المحفظة
+GenericName[ast]=Ferramienta pa xestionar cartera
 GenericName[bg]=Управление на "Портфейл"
 GenericName[ca]=Eina de gestió de carteres
 GenericName[ca@valencia]=Eina de gestió de carteres

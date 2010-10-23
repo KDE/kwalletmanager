@@ -12,6 +12,7 @@ X-KDE-System-Settings-Parent-Category=account-details
 
 Name=KDE Wallet
 Name[ar]=محفظة كدى
+Name[ast]=Cartera KDE
 Name[bg]=KDE Wallet
 Name[br]=Doug-paperoù KDE
 Name[ca]=Cartera del KDE
@@ -75,6 +76,7 @@ Name[zh_CN]=KDE 钱包
 Name[zh_TW]=KDE 錢包
 Comment=KDE Wallet Configuration
 Comment[ar]=إعداد محفظة كدى
+Comment[ast]=Configuración de la Cartera KDE
 Comment[bg]=Настройване на "Портфейл"
 Comment[br]=Kefluniadur Doug-paperoù KDE
 Comment[ca]=Configuració de la cartera del KDE
