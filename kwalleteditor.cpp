@@ -421,8 +421,6 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
                                             i18n("The contents of the current item has changed.\nDo you want to save changes?"))) {
             saveEntry();
         }
-        else
-            KMessageBox::information(this, "Canceled");
     }
 	KWalletContainerItem *ci = 0L;
 	KWalletFolderItem *fi = 0L;
