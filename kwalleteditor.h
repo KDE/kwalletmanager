@@ -113,6 +113,7 @@ class KWalletEditor : public KXmlGuiWindow {
 		QCheckBox *_mapEditorShowHide;
 		bool _newWallet;
 		KMenu *_contextMenu;
+        Q3ListViewItem *_displayedItem; // used to find old item when selection just changed
 };
 
 #endif

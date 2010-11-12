@@ -65,7 +65,7 @@
 #include <KAction>
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
-: KXmlGuiWindow(parent), _walletName(wallet), _nonLocal(isPath) {
+: KXmlGuiWindow(parent), _walletName(wallet), _nonLocal(isPath), _displayedItem(0)  {
 	setObjectName( QLatin1String( name ) );
 	_newWallet = false;
 	_ww = new WalletWidget(this);
@@ -377,7 +377,7 @@ void KWalletEditor::createFolder() {
 
 void KWalletEditor::saveEntry() {
 	int rc = 1;
-	Q3ListViewItem *item = _entryList->currentItem();
+	Q3ListViewItem *item = _displayedItem; //  _entryList->currentItem();
 	_ww->_saveChanges->setEnabled(false);
 	_ww->_undoChanges->setEnabled(false);
 
@@ -415,6 +415,15 @@ void KWalletEditor::entryEditted() {
 
 
 void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
+    // do not forget to save changes
+    if ( _ww->_saveChanges->isEnabled() && _displayedItem ){
+        if ( KMessageBox::Yes ==  KMessageBox::questionYesNo(this, 
+                                            i18n("The contents of the current item has changed.\nDo you want to save changes?"))) {
+            saveEntry();
+        }
+        else
+            KMessageBox::information(this, "Canceled");
+    }
 	KWalletContainerItem *ci = 0L;
 	KWalletFolderItem *fi = 0L;
 
@@ -544,6 +553,8 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 		_ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 		_ww->_iconTitle->setPixmap(fi->getFolderIcon(KIconLoader::Toolbar));
 	}
+	
+	_displayedItem = item;
 }
 
 void KWalletEditor::updateEntries(const QString& folder) {
