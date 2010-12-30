@@ -10,8 +10,8 @@
       </rect>
     </property>
     <layout class="QGridLayout" >
-      <property name="resizeMode" >
-        <enum>Fixed</enum>
+      <property name="sizeConstraint" >
+        <enum>SetFixedSize</enum>
       </property>
       <item rowspan="1" row="0" column="0" colspan="3" >
         <widget class="QLabel" name="_label" />

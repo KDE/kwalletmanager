@@ -385,7 +385,7 @@ void KWalletEditor::saveEntry() {
 		KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(item->parent());
 		if (ci) {
 			if (ci->type() == KWallet::Wallet::Password) {
-				rc = _w->writePassword(item->text(0), _ww->_passwordValue->text());
+				rc = _w->writePassword(item->text(0), _ww->_passwordValue->toPlainText());
 			} else if (ci->type() == KWallet::Wallet::Map) {
 				_mapEditor->saveMap();
 				rc = _w->writeMap(item->text(0), _currentMap);

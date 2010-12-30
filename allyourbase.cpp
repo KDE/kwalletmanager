@@ -315,7 +315,7 @@ void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst)
 		delete _wallet;
 
 		//delete the folder from the source if we were moving
-		Qt::ButtonState state = QApplication::mouseButtons();
+		Qt::MouseButtons state = QApplication::mouseButtons();
 		if (e->source() && e->source()->parent() &&
 		    !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList") &&
 			!(state & Qt::ControlModifier)) {
@@ -485,7 +485,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, Q3ListViewItem *item) {
 		e->ignore();
 		return;
 	}
-	Qt::ButtonState state = QApplication::mouseButtons();
+	Qt::MouseButtons state = QApplication::mouseButtons();
 	if (isEntry) {
 		if (!item) {
 			e->ignore();
@@ -638,7 +638,7 @@ class KWalletIconDrag : public Q3IconDrag {
 *   */
 KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
 : K3IconView(parent, name) {
-	KGlobal::dirs()->addResourceType("kwallet", QLatin1String( "share/apps/kwallet" ));
+	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
 	connect(this, SIGNAL(dropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
 
         // make Return execute() the icon
@@ -689,7 +689,7 @@ void KWalletIconView::slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragIte
 	}
 
 	// FIXME: verify that it is a real wallet file first
-	KIO::NetAccess::file_copy(u, KUrl::fromPathOrUrl(dest));
+	KIO::NetAccess::file_copy(u, KUrl(dest));
 	e->accept();
 }
 
