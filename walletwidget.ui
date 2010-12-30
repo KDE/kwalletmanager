@@ -116,8 +116,8 @@
          <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="page"/>
-         <widget class="QWidget" name="page">
+         <widget class="QWidget" name="page1"/>
+         <widget class="QWidget" name="page2">
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -148,8 +148,8 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="page"/>
-         <widget class="QWidget" name="page">
+         <widget class="QWidget" name="page3"/>
+         <widget class="QWidget" name="page4">
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
             <spacer name="verticalSpacer">
@@ -310,14 +310,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
-  <customwidget>
    <class>KSqueezedTextLabel</class>
    <extends>QLabel</extends>
    <header>ksqueezedtextlabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
   </customwidget>
  </customwidgets>
  <includes>
