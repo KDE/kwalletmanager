@@ -58,9 +58,8 @@ KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *n
 		pm->setObjectName( QLatin1String("Disconnect Apps" ));
 		int id = 7000;
 		for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
-			_appMap[id] = *it;
-			pm->insertItem(*it, this, SLOT(disconnectApp(int)), 0, id);
-			pm->setItemParameter(id, id);
+			QAction *a = pm->addAction(*it, this, SLOT(disconnectApp()));
+			a->setData(*it);
 			id++;
 		}
                 QAction *act = addMenu( pm);
@@ -113,8 +112,12 @@ void KWalletPopup::createWallet() {
 }
 
 
-void KWalletPopup::disconnectApp(int id) {
-	KWallet::Wallet::disconnectApplication(_walletName,QLatin1String( _appMap[id].toLatin1() ));
+void KWalletPopup::disconnectApp() {
+	QAction *a = qobject_cast<QAction *>(sender());
+	Q_ASSERT(a);
+	if (a) 	{
+		KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
+	}
 }
 
 #include "kwalletpopup.moc"

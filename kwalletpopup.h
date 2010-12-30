@@ -37,7 +37,7 @@ class KWalletPopup : public KMenu {
 		void closeWallet();
 		void createWallet();
 		void changeWalletPassword();
-		void disconnectApp(int);
+		void disconnectApp();
 
 	signals:
 		void walletOpened(const QString& walletName);
@@ -48,7 +48,6 @@ class KWalletPopup : public KMenu {
 
 	private:
 		QString _walletName;
-		QMap<int,QString> _appMap;
 };
 
 #endif
