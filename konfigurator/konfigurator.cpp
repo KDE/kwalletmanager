@@ -30,7 +30,6 @@
 #include <kwallet.h>
 
 #include <QCheckBox>
-#include <q3listview.h>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>
@@ -73,9 +72,10 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-	connect(_wcw->_accessList, SIGNAL(contextMenuRequested(Q3ListViewItem*, const QPoint&, int)), this, SLOT(contextMenuRequested(Q3ListViewItem*, const QPoint&, int)));
+	connect(_wcw->_accessList, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(customContextMenuRequested(const QPoint&)));
 
 	_wcw->_accessList->setAllColumnsShowFocus(true);
+	_wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
 	updateWalletLists();
 
 	if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String( "org.kde.kwalletmanager" ))) {
@@ -208,21 +208,22 @@ void KWalletConfig::load() {
 		const QStringList apps = aa.readEntry(*i,QStringList());
 		const QStringList denyapps = ad.readEntry(*i, QStringList());
 		denykeys.removeAll(*i);
-		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
+		QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
 		for (QStringList::const_iterator j = apps.begin(); j != apps.end(); ++j) {
-			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Allow"));
+			new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Allow"));
 		}
 		for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
-			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
+			new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
 		}
 	}
 	for (QStringList::const_iterator i = denykeys.constBegin(); i != denykeys.constEnd(); ++i) {
 		const QStringList denyapps = ad.readEntry(*i,QStringList());
-		Q3ListViewItem *lvi = new Q3ListViewItem(_wcw->_accessList, *i);
+		QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
 		for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
-			new Q3ListViewItem(lvi, QString(), *j, i18n("Always Deny"));
+			new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
 		}
 	}
+	_wcw->_accessList->header()->setResizeMode(QHeaderView::ResizeToContents);
 	emit changed(false);
 }
 
@@ -255,25 +256,29 @@ void KWalletConfig::save() {
 	_cfg->deleteGroup("Auto Allow");
 	_cfg->deleteGroup("Auto Deny");
 	config  = _cfg->group("Auto Allow");
-	for (Q3ListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
+	for (int i = 0; i < _wcw->_accessList->topLevelItemCount(); ++i) {
+		QTreeWidgetItem *parentItem = _wcw->_accessList->topLevelItem(i);
 		QStringList al;
-		for (Q3ListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
-			if (j->text(2) == i18n("Always Allow")) {
-				al << j->text(1);
+		for (int j = 0; j < parentItem->childCount(); ++j) {
+			QTreeWidgetItem *childItem = parentItem->child(j);
+			if (childItem->text(2) == i18n("Always Allow")) {
+				al << childItem->text(1);
 			}
 		}
-		config.writeEntry(i->text(0), al);
+		config.writeEntry(parentItem->text(0), al);
 	}
 
 	config = _cfg->group("Auto Deny");
-	for (Q3ListViewItem *i = _wcw->_accessList->firstChild(); i; i = i->nextSibling()) {
+	for (int i = 0; i < _wcw->_accessList->topLevelItemCount(); ++i) {
+		QTreeWidgetItem *parentItem = _wcw->_accessList->topLevelItem(i);
 		QStringList al;
-		for (Q3ListViewItem *j = i->firstChild(); j; j = j->nextSibling()) {
-			if (j->text(2) == i18n("Always Deny")) {
-				al << j->text(1);
+		for (int j = 0; j < parentItem->childCount(); ++j) {
+			QTreeWidgetItem *childItem = parentItem->child(j);
+			if (childItem->text(2) == i18n("Always Deny")) {
+				al << childItem->text(1);
 			}
 		}
-		config.writeEntry(i->text(0), al);
+		config.writeEntry(parentItem->text(0), al);
 	}
 
 	_cfg->sync();
@@ -309,22 +314,22 @@ QString KWalletConfig::quickHelp() const {
 }
 
 
-void KWalletConfig::contextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
-	Q_UNUSED(col)
+void KWalletConfig::customContextMenuRequested(const QPoint& pos) {
+	QTreeWidgetItem *item = _wcw->_accessList->itemAt(pos);
 	if (item && item->parent()) {
 		KMenu *m = new KMenu(this);
 		m->addTitle(item->parent()->text(0));
 		m->addAction( i18n("&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
-		m->exec(pos);
-                delete m;
+		m->exec(_wcw->_accessList->mapToGlobal(pos));
+		delete m;
 	}
 }
 
 
 void KWalletConfig::deleteEntry() {
-	Q3ListViewItem *item = _wcw->_accessList->selectedItem();
-	if (item) {
-		delete item;
+	QList<QTreeWidgetItem*> items = _wcw->_accessList->selectedItems();
+	if (items.count() == 1 && items[0] ) {
+		delete items[0];
 		emit changed(true);
 	}
 }

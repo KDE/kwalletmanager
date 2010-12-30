@@ -21,9 +21,7 @@
 #define _KWALLETKONFIGURATOR_H
 #include <kcmodule.h>
 #include <ksharedconfig.h>
-class QColorGroup;
 #include "ui_walletconfigwidget.h"
-class Q3ListViewItem;
 
 class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
 {
@@ -54,7 +52,7 @@ class KWalletConfig : public KCModule {
 		void updateWalletLists();
 		QString newWallet();
 		void deleteEntry();
-		void contextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col);
+		void customContextMenuRequested(const QPoint& pos);
 
 	private:
 		WalletConfigWidget *_wcw;
