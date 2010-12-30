@@ -53,7 +53,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 {
     setObjectName(QLatin1String( name ) );
     QDBusConnection::sessionBus().registerObject(QLatin1String( "/KWalletManager" ), this, QDBusConnection::ExportScriptableSlots);
-	KGlobal::dirs()->addResourceType("kwallet", QLatin1String( "share/apps/kwallet" ));
+	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
 	_kwalletdLaunch = false;
 	_shuttingDown = false;
 	m_kwalletdModule = 0;

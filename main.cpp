@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
 	KWalletManager wm;
 	wm.setCaption(i18n("KDE Wallet Manager"));
 
-	KGlobal::dirs()->addResourceType("kwallet", QLatin1String( "share/apps/kwallet" ));
+	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
 
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
