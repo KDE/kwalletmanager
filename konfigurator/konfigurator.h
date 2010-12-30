@@ -21,6 +21,7 @@
 #define _KWALLETKONFIGURATOR_H
 #include <kcmodule.h>
 #include <ksharedconfig.h>
+class QColorGroup;
 #include "ui_walletconfigwidget.h"
 class Q3ListViewItem;
 

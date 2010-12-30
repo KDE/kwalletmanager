@@ -90,7 +90,7 @@ KWalletConfig::~KWalletConfig() {
 
 
 void KWalletConfig::updateWalletLists() {
-        const QString p1( _wcw->_localWallet->currentText() );
+	const QString p1( _wcw->_localWallet->currentText() );
 	const QString p2( _wcw->_defaultWallet->currentText() );
 
 	_wcw->_localWallet->clear();
@@ -100,12 +100,14 @@ void KWalletConfig::updateWalletLists() {
 	_wcw->_localWallet->addItems(wl);
 	_wcw->_defaultWallet->addItems(wl);
 
-	if (wl.contains(p1)) {
-		_wcw->_localWallet->setCurrentText(p1);
+	int index = wl.indexOf(p1);
+	if (index != -1) {
+		_wcw->_localWallet->setCurrentIndex(index);
 	}
 
-	if (wl.contains(p2)) {
-		_wcw->_defaultWallet->setCurrentText(p2);
+	index = wl.indexOf(p2);
+	if (index != -1) {
+		_wcw->_defaultWallet->setCurrentIndex(index);
 	}
 }
 
@@ -141,7 +143,7 @@ void KWalletConfig::newLocalWallet() {
 
 	updateWalletLists();
 
-	_wcw->_localWallet->setCurrentText(n);
+	_wcw->_localWallet->setCurrentIndex(_wcw->_localWallet->findText(n));
 
 	emit changed(true);
 }
@@ -155,7 +157,7 @@ void KWalletConfig::newNetworkWallet() {
 
 	updateWalletLists();
 
-	_wcw->_defaultWallet->setCurrentText(n);
+	_wcw->_defaultWallet->setCurrentIndex(_wcw->_defaultWallet->findText(n));
 
 	emit changed(true);
 }
@@ -187,13 +189,13 @@ void KWalletConfig::load() {
 	_wcw->_closeIdle->setChecked(config.readEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readEntry("Idle Timeout", 10));
 	if (config.hasKey("Default Wallet")) {
-		_wcw->_defaultWallet->setCurrentText(config.readEntry("Default Wallet"));
+		_wcw->_defaultWallet->setItemText(_wcw->_defaultWallet->currentIndex(), config.readEntry("Default Wallet"));
 	} else {
 		_wcw->_defaultWallet->setCurrentIndex(0);
 	}
 	if (config.hasKey("Local Wallet")) {
 		_wcw->_localWalletSelected->setChecked( !config.readEntry("Use One Wallet", false) );
-		_wcw->_localWallet->setCurrentText(config.readEntry("Local Wallet"));
+		_wcw->_localWallet->setItemText(_wcw->_defaultWallet->currentIndex(), config.readEntry("Local Wallet"));
 	} else {
 		_wcw->_localWalletSelected->setChecked(false);
 	}
