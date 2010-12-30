@@ -175,25 +175,21 @@ KWalletEntryItem::~KWalletEntryItem() {
 /****************
  * KWalletItem - IconView items to represent wallets
  */
-KWalletItem::KWalletItem(Q3IconView *parent, const QString& walletName)
-: Q3IconViewItem(parent, walletName, DesktopIcon(QLatin1String( "wallet-closed" ))), _open(false) {
+KWalletItem::KWalletItem(QListWidget *parent, const QString& walletName)
+: QListWidgetItem(DesktopIcon(QLatin1String( "wallet-closed" )), walletName, parent), _open(false) {
+	setFlags(flags() | Qt::ItemIsDropEnabled);
 }
 
 KWalletItem::~KWalletItem() {
-}
-
-bool KWalletItem::acceptDrop(const QMimeSource *mime) const {
-	return mime->provides("application/x-kwallet-folder") ||
-		mime->provides("text/uri-list");
 }
 
 void KWalletItem::setOpen(bool state) {
 	if (_open != state) {
 		_open = state;
 		if (_open) {
-			setPixmap( DesktopIcon(QLatin1String( "wallet-open" )) );
+			setIcon( DesktopIcon(QLatin1String( "wallet-open" )) );
 		} else {
-			setPixmap( DesktopIcon(QLatin1String( "wallet-closed" )) );
+			setIcon( DesktopIcon(QLatin1String( "wallet-closed" )) );
 		}
 	}
 }
@@ -260,22 +256,18 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 	return true;
 }
 
-void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst) {
-	Q_UNUSED(lst);
+void KWalletItem::processDropEvent(QDropEvent *e) {
 	if (e->provides("application/x-kwallet-folder") ||
-			e->provides("text/uri-list")) {
-
+	    e->provides("text/uri-list")) {
 		// FIXME: don't allow the drop if the wallet name is the same
-
-		KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(text(), iconView()->topLevelWidget()->winId());
+		KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(text(), listWidget()->topLevelWidget()->winId());
 		if (!_wallet) {
 			e->ignore();
 			return;
 		}
 
-		QString saveFolder = _wallet->currentFolder();
+		const QString saveFolder = _wallet->currentFolder();
 
-		QFile file;
 		QDataStream *ds = 0L;
 
 		if (e->provides("application/x-kwallet-folder")) {
@@ -299,12 +291,13 @@ void KWalletItem::dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst)
 			}
 			QString tmpFile;
 			if (KIO::NetAccess::download(u, tmpFile, 0L)) {
+				QFile file;
 				file.setFileName(tmpFile);
 				file.open(QIODevice::ReadOnly);
 				ds = new QDataStream(&file);
 				KIO::NetAccess::removeTempFile(tmpFile);
 			} else {
-				KMessageBox::error(iconView(), KIO::NetAccess::lastErrorString());
+				KMessageBox::error(listWidget(), KIO::NetAccess::lastErrorString());
 			}
 		}
 		if (ds) {
@@ -587,142 +580,166 @@ KWalletFolderItem *KWalletEntryList::getItemFolder(Q3ListViewItem *item) {
 	return 0;
 }
 
-/****************
- *  KWalletIconDrag - Stores the data for wallet drags
- */
-class KWalletIconDrag : public Q3IconDrag {
+class ReturnPressedFilter : public QObject
+{
 	public:
-		KWalletIconDrag(QWidget *dragSource, const char *name = 0L)
-			: Q3IconDrag(dragSource, name) {
+		ReturnPressedFilter(KListWidget *parent) : QObject(parent)
+		{
+			parent->installEventFilter(this);
 		}
-
-		virtual ~KWalletIconDrag() {}
-
-		virtual const char *format(int i = 0) const {
-			if (i == 0) {
-				return "application/x-qiconlist";
-			} else if (i == 1) {
-				return "text/uri-list";
-			}
-			return 0L;
-		}
-
-		QByteArray encodedData(const char *mime) const {
-			QByteArray a;
-			QByteArray mimetype(mime);
-			if (mimetype == "application/x-qiconlist") {
-				return Q3IconDrag::encodedData(mime);
-			} else if (mimetype == "text/uri-list") {
-				QByteArray s = _urls.join( QLatin1String( "\r\n" )).toLatin1();
-				if (_urls.count() > 0) {
-					s.append("\r\n");
+	
+		bool eventFilter(QObject * /*watched*/, QEvent *event)
+		{
+			if (event->type () == QEvent::KeyPress)
+			{
+				QKeyEvent *ke = static_cast<QKeyEvent *>(event);
+				if (ke->key() == Qt::Key_Enter || ke->key() == Qt::Key_Return)
+				{
+					KListWidget *p = static_cast<KListWidget*>(parent());
+					QMetaObject::invokeMethod(p, "executed", Q_ARG(QListWidgetItem*, p->currentItem()));
+					return true;
 				}
-				a.resize(s.length() + 1);
-				memcpy(a.data(), s.data(), s.length() + 1);
 			}
-			return a;
+			return false;
 		}
-
-		void append(const Q3IconDragItem &item, const QRect &pr,
-				const QRect &tr, const QString &url) {
-			Q3IconDrag::append(item, pr, tr);
-			_urls.append(url);
-		}
-
-	private:
-		QStringList _urls;
 };
 
 /****************
 *  *  KWalletIconView - An iconview to store wallets
 *   */
-KWalletIconView::KWalletIconView(QWidget *parent, const char *name)
-: K3IconView(parent, name) {
+KWalletIconView::KWalletIconView(QWidget *parent)
+: KListWidget(parent) {
 	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
-	connect(this, SIGNAL(dropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)), SLOT(slotDropped(QDropEvent*, const Q3ValueList<Q3IconDragItem>&)));
-
-        // make Return execute() the icon
-        connect( this, SIGNAL( returnPressed(Q3IconViewItem *) ),
-                this, SIGNAL( executed(Q3IconViewItem *)) );
+	setViewMode(IconMode);
+	setUniformItemSizes(true);
+	setIconSize(QSize(48, 48));
+	setAcceptDrops(true);
+	setDragEnabled(true);
+	setDragDropMode(DragDrop);
+	
+	new ReturnPressedFilter(this);
 }
 
 KWalletIconView::~KWalletIconView() {
 }
 
-void KWalletIconView::slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& /*lst*/) {
-	if (e->source() == viewport()) {
-		e->ignore();
-		return;
-	}
-
-	if (!e->provides("text/uri-list")) {
-		e->ignore();
-		return;
-	}
-
-	QByteArray edata = e->encodedData("text/uri-list");
-	QByteArray urls = edata.data();
+static KUrl decodeUrl(const QByteArray &edata)
+{
+	const QByteArray urls = edata.data();
 
 	if (urls.isEmpty()) {
-		e->ignore();
-		return;
+		return KUrl();
 	}
 
-	QStringList ul = QString::fromLatin1(urls).split(QLatin1String( "\r\n" ), QString::SkipEmptyParts);
+	const QStringList ul = QString::fromLatin1(urls).split(QLatin1String( "\r\n" ), QString::SkipEmptyParts);
 	if (ul.isEmpty() || ul.first().isEmpty()) {
-		e->ignore();
-		return;
+		return KUrl();
 	}
 
-	KUrl u(ul.first());
+	const KUrl u = ul.first();
 
 	if (u.fileName().isEmpty()) {
-		e->ignore();
-		return;
+		return KUrl();
+	}
+	
+	return u;
+}
+
+bool KWalletIconView::shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u, QListWidgetItem **item) const {
+	if (e->source() == viewport()) {
+		return true;
 	}
 
-	QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.fileName();
-	if (QFile::exists(dest)) {
-		KMessageBox::sorry(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
-		e->ignore();
-		return;
+	if (!e->provides("application/x-kwallet-folder") &&
+		!e->provides("application/x-kwallet-wallet") &&
+		!e->provides("text/uri-list")) {
+		return true;
+	}
+	
+	// Over wallets folders, over nothing wallets
+	*item = itemAt(e->pos());
+	const QByteArray edata = e->encodedData(item ? "application/x-kwallet-folder" : "application/x-kwallet-wallet");
+	*u = decodeUrl(edata);
+	if (*u == KUrl()) {
+		*u = decodeUrl(e->encodedData("text/uri-list"));
 	}
 
-	// FIXME: verify that it is a real wallet file first
-	KIO::NetAccess::file_copy(u, KUrl(dest));
+	return *u == KUrl();
+}
+
+void KWalletIconView::dragEnterEvent(QDragEnterEvent *e) {
 	e->accept();
 }
 
-void KWalletIconView::contentsMousePressEvent(QMouseEvent *e) {
-	_mousePos = e->pos();
-	if (!findItem(_mousePos)) {
-		clearSelection();
+void KWalletIconView::dragMoveEvent(QDragMoveEvent *e) {
+	KUrl dummy;
+	QListWidgetItem *dummy2;
+	if (shouldIgnoreDropEvent(e, &dummy, &dummy2)) {
+		e->ignore();
+	} else {
+		e->accept();
 	}
-	K3IconView::contentsMousePressEvent( e );
 }
 
-Q3DragObject *KWalletIconView::dragObject() {
-	KWalletIconDrag* id = new KWalletIconDrag(viewport(), "KWallet Drag");
-	QString path = QLatin1String( "file:" ) + KGlobal::dirs()->saveLocation("kwallet");
-	QPoint pos = _mousePos;
-	for (Q3IconViewItem *item = firstItem(); item; item = item->nextItem()) {
-		if (item->isSelected()) {
-			QString url = path + item->text() + QLatin1String( ".kwl" );
-			Q3IconDragItem idi;
-			idi.setData(url.toLocal8Bit());
-			id->append(idi,
-			QRect(item->pixmapRect(false).topLeft() - pos,
-			item->pixmapRect(false).size()),
-			QRect(item->textRect(false).topLeft() - pos,
-			item->textRect(false).size()),
-			url);
+void KWalletIconView::dropEvent(QDropEvent *e) {
+	KUrl u;
+	QListWidgetItem *item;
+	if (shouldIgnoreDropEvent(e, &u, &item)) {
+		e->ignore();
+		return;
+	}
+	
+	if (!item) {
+		// Not dropped over an item thus it is a wallet
+		const QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.fileName();
+		if (QFile::exists(dest)) {
+			KMessageBox::sorry(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
+			e->ignore();
+			return;
+		}
+
+		// FIXME: verify that it is a real wallet file first
+		KIO::NetAccess::file_copy(u, KUrl(dest));
+		e->accept();
+	} else {
+		// Dropped over an item thus it is a folder
+		KWalletItem *kwi = dynamic_cast<KWalletItem *>(item);
+		Q_ASSERT(kwi);
+		if (kwi) {
+			kwi->processDropEvent(e);
 		}
 	}
+}
 
-	id->setPixmap(*currentItem()->pixmap(),
-	pos - currentItem()->pixmapRect(false).topLeft());
+void KWalletIconView::mousePressEvent(QMouseEvent *e) {
+	if (e->button() == Qt::LeftButton)
+		_mousePos = e->pos();
+	if (!itemAt(_mousePos)) {
+		clearSelection();
+	}
+	KListWidget::mousePressEvent( e );
+}
 
-	return id;
+void KWalletIconView::mouseMoveEvent(QMouseEvent *e) {
+	if (!(e->buttons() & Qt::LeftButton))
+		return;
+	if ((e->pos() - _mousePos).manhattanLength() < QApplication::startDragDistance())
+		return;
+	
+	const QListWidgetItem *item = itemAt(_mousePos);
+	if (!item || !item->isSelected())
+		return;
+	
+	QDrag *drag = new QDrag(this);
+	QMimeData *mimeData = new QMimeData;
+	
+	const QString path = QLatin1String( "file:" ) + KGlobal::dirs()->saveLocation("kwallet");
+	const QString url = path + item->text() + QLatin1String( ".kwl" );
+	drag->setPixmap(item->icon().pixmap(48));
+	mimeData->setData("application/x-kwallet-wallet", url.toUtf8());
+	drag->setMimeData(mimeData);
+	drag->setHotSpot(QPoint(0,0));
+	drag->exec();
 }
 
 Q3DragObject *KWalletEntryList::dragObject() {

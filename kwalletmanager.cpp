@@ -87,9 +87,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		_tray = 0;
 	}
 
-	_iconView = new KWalletIconView(this, "kwalletmanager icon view");
-	connect(_iconView, SIGNAL(executed(Q3IconViewItem*)), this, SLOT(openWallet(Q3IconViewItem*)));
-	connect(_iconView, SIGNAL(contextMenuRequested(Q3IconViewItem*, const QPoint&)), this, SLOT(contextMenu(Q3IconViewItem*, const QPoint&)));
+	_iconView = new KWalletIconView(this);
+	_iconView->setContextMenuPolicy(Qt::CustomContextMenu);
+	connect(_iconView, SIGNAL(executed(QListWidgetItem*)), this, SLOT(openWallet(QListWidgetItem*)));
+	connect(_iconView, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(contextMenu(const QPoint&)));
 
 	updateWalletDisplay();
 	setCentralWidget(_iconView);
@@ -194,9 +195,10 @@ void KWalletManager::aWalletWasOpened() {
 
 void KWalletManager::updateWalletDisplay() {
     const QStringList wl = KWallet::Wallet::walletList();
-    QStack<Q3IconViewItem*> trash;
+    QStack<QListWidgetItem *> trash;
 
-	for (Q3IconViewItem *item = _iconView->firstItem(); item; item = item->nextItem()) {
+	for (int i = 0; i < _iconView->count(); ++i) {
+		QListWidgetItem *item = _iconView->item(i);
 		if (!wl.contains(item->text())) {
 			trash.push(item);
 		}
@@ -206,11 +208,13 @@ void KWalletManager::updateWalletDisplay() {
 	trash.clear();
 
 	for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
-		Q3IconViewItem *itm = _iconView->findItem(*i, Q3IconView::ExactMatch | Q3IconView::CaseSensitive);
-		if (!itm) {
-			itm = new KWalletItem(_iconView, *i);
+		const QList<QListWidgetItem *> items = _iconView->findItems(*i, Qt::MatchFixedString | Qt::MatchCaseSensitive);
+		KWalletItem *wi = 0;
+		if (items.isEmpty()) {
+			wi = new KWalletItem(_iconView, *i);
+		} else {
+			wi = dynamic_cast<KWalletItem*>(items[0]);
 		}
-		KWalletItem *wi = static_cast<KWalletItem*>(itm);
 		if (wi) {
 			wi->setOpen(KWallet::Wallet::isOpen(*i));
 		}
@@ -218,7 +222,8 @@ void KWalletManager::updateWalletDisplay() {
 }
 
 
-void KWalletManager::contextMenu(Q3IconViewItem *item, const QPoint& pos) {
+void KWalletManager::contextMenu(const QPoint& pos) {
+	QListWidgetItem *item = _iconView->itemAt(pos);
 	if (item) {
 		QPointer<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
 		connect(popupMenu, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
@@ -226,7 +231,7 @@ void KWalletManager::contextMenu(Q3IconViewItem *item, const QPoint& pos) {
 		connect(popupMenu, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
 		connect(popupMenu, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
 		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
-		popupMenu->exec(pos);
+		popupMenu->exec(_iconView->mapToGlobal(pos));
 		delete popupMenu;
 	}
 }
@@ -280,12 +285,12 @@ void KWalletManager::openWalletFile(const QString& path) {
 
 
 void KWalletManager::openWallet() {
-	Q3IconViewItem *item = _iconView->currentItem();
+	QListWidgetItem *item = _iconView->currentItem();
 	openWallet(item);
 }
 
 void KWalletManager::deleteWallet() {
-	Q3IconViewItem *item = _iconView->currentItem();
+	QListWidgetItem *item = _iconView->currentItem();
 	if (item) {
 		deleteWallet(item->text());
 	}
@@ -321,7 +326,7 @@ void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
 }
 
 
-void KWalletManager::openWallet(Q3IconViewItem *item) {
+void KWalletManager::openWallet(QListWidgetItem *item) {
 	if (item) {
 		openWallet(item->text());
 	}
@@ -382,7 +387,7 @@ void KWalletManager::createWallet() {
 			return;
 		}
 
-		if (_iconView->findItem(n)) {
+		if (!_iconView->findItems(n, Qt::MatchFixedString).isEmpty ()) {
 			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString(), KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
 			if (rc == KMessageBox::No) {
 				return;

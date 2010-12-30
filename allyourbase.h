@@ -21,12 +21,11 @@
 #ifndef ALLYOURBASE_H
 #define ALLYOURBASE_H
 
-#include <k3iconview.h>
 #include <k3listview.h>
 #include <kwallet.h>
 #include <kiconloader.h>
 #include <kicontheme.h>
-//Added by qt3to4:
+#include <klistwidget.h>
 #include <QPixmap>
 #include <QDropEvent>
 #include <QDragEnterEvent>
@@ -34,6 +33,8 @@
 
 #define KWALLETENTRYMAGIC ((quint32) 0x6B776C65)
 #define KWALLETFOLDERMAGIC ((quint32) 0x6B776C66)
+
+class KUrl;
 
 enum KWalletListItemClasses {
 	KWalletFolderItemClass = 1000,
@@ -125,36 +126,36 @@ class KWalletEntryList : public K3ListView {
 		KWallet::Wallet *_wallet;
 };
 
-class KWalletItem : public Q3IconViewItem {
+class KWalletItem : public QListWidgetItem {
 	public:
-		KWalletItem(Q3IconView *parent, const QString& walletName);
+		KWalletItem(QListWidget *parent, const QString& walletName);
 		virtual ~KWalletItem();
 
-		virtual bool acceptDrop(const QMimeSource *mime) const;
-		
 		void setOpen(bool state);
-
-	protected:
-		virtual void dropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst); 
 		
+		void processDropEvent(QDropEvent *e);
+
 	private:
 		bool _open;
 };
 
 
-class KWalletIconView : public K3IconView {
+class KWalletIconView : public KListWidget {
 	Q_OBJECT
 
 	public:
-		explicit KWalletIconView(QWidget *parent, const char *name = 0L);
+		explicit KWalletIconView(QWidget *parent);
 		virtual ~KWalletIconView();
 
-	protected slots:
-		virtual void slotDropped(QDropEvent *e, const Q3ValueList<Q3IconDragItem>& lst);
-
 	protected:
-		virtual Q3DragObject *dragObject();
-		virtual void contentsMousePressEvent(QMouseEvent *e);
+		virtual void dragEnterEvent(QDragEnterEvent *e);
+		virtual void dragMoveEvent(QDragMoveEvent *e);
+		virtual void dropEvent(QDropEvent *e);
+		virtual void mousePressEvent(QMouseEvent *e);
+		virtual void mouseMoveEvent(QMouseEvent *e);
+	
+	private:
+		bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u, QListWidgetItem **item) const;
 		QPoint _mousePos;
 };
 

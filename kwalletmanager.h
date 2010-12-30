@@ -25,7 +25,7 @@
 
 class KStatusNotifierItem;
 class KWalletIconView;
-class Q3IconViewItem;
+class QListWidgetItem;
 class OrgKdeKWalletInterface;
 
 class KWalletManager : public KXmlGuiWindow {
@@ -47,8 +47,8 @@ class KWalletManager : public KXmlGuiWindow {
 		void openWallet(const QString& walletName);
 		void openWallet(const QString& walletName, bool newWallet);
 		void openWalletFile(const QString& path);
-		void openWallet(Q3IconViewItem *item);
-		void contextMenu(Q3IconViewItem *item, const QPoint& pos);
+		void openWallet(QListWidgetItem *item);
+		void contextMenu(const QPoint& pos);
 
 	protected:
 		virtual bool queryClose();
