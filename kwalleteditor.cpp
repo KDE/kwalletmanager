@@ -50,7 +50,6 @@
 #include <QClipboard>
 #include <Q3ListView>
 #include <QPushButton>
-#include <Q3TextEdit>
 #include <QTimer>
 #include <QSet>
 #include <QTextStream>
