@@ -416,10 +416,13 @@ void KWalletEditor::entryEditted() {
 
 void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
     // do not forget to save changes
-    if ( _ww->_saveChanges->isEnabled() && _displayedItem ){
+    if ( _ww->_saveChanges->isEnabled() && (_displayedItem != item) ){
         if ( KMessageBox::Yes ==  KMessageBox::questionYesNo(this, 
                                             i18n("The contents of the current item has changed.\nDo you want to save changes?"))) {
             saveEntry();
+        } else {
+            _ww->_saveChanges->setEnabled(false);
+            _ww->_undoChanges->setEnabled(false);
         }
     }
 	KWalletContainerItem *ci = 0L;
