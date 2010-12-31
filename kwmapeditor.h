@@ -22,38 +22,35 @@
 
 #include <QMap>
 
-#include <Q3Table>
+#include <QTableWidget>
 
 class KAction;
 class KActionCollection;
 
-class KWMapEditor : public Q3Table {
+class KWMapEditor : public QTableWidget {
 	Q_OBJECT
 
 	public:
-		KWMapEditor(QMap<QString,QString>& map, QWidget *parent = 0, const char *name = 0);
+		KWMapEditor(QMap<QString,QString>& map, QWidget *parent = 0);
 		virtual ~KWMapEditor();
 
 	public slots:
 		void reload();
 		void saveMap();
 		void erase();
-		void contextMenu(int row, int col, const QPoint& pos);
+		void contextMenu(const QPoint& pos);
 		void addEntry();
 		void emitDirty();
 
 	private slots:
 		void copy();
 
-	protected:
-		virtual QWidget *beginEdit(int row, int col, bool replace);
-
 	signals:
 		void dirty();
 
 	private:
 		QMap<QString,QString>& _map;
-		int _contextRow, _contextCol;
+		int _contextRow;
 		KActionCollection *_ac;
 		KAction *_copyAct;
 };

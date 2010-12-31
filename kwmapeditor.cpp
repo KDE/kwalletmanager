@@ -32,115 +32,15 @@
 #include <ktextedit.h>
 #include <QFocusEvent>
 #include <QKeyEvent>
-
-KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent, const char *name)
-: Q3Table(0, 3, parent, name), _map(map) {
-	_ac = new KActionCollection(this);
-	_copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
-	connect(this, SIGNAL(valueChanged(int,int)), this, SIGNAL(dirty()));
-	connect(this, SIGNAL(contextMenuRequested(int,int,const QPoint&)),
-		this, SLOT(contextMenu(int,int,const QPoint&)));
-	setSelectionMode(Q3Table::NoSelection);
-	horizontalHeader()->setLabel(0, QString());
-	horizontalHeader()->setLabel(1, i18n("Key"));
-	horizontalHeader()->setLabel(2, i18n("Value"));
-	setColumnWidth(0, 20); // FIXME: this is arbitrary
-	reload();
-}
-
-void KWMapEditor::reload() {
-	int row = 0;
-
-	while ((row = numRows()) > _map.count()) {
-		removeRow(row - 1);
-	}
-
-	if ((row = numRows()) < _map.count()) {
-		insertRows(row, _map.count() - row);
-		for (int x = row; x < numRows(); ++x) {
-			QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
-			connect(b, SIGNAL(clicked()), this, SLOT(erase()));
-			setCellWidget(x, 0, b);
-		}
-	}
-
-	row = 0;
-	for (QMap<QString,QString>::Iterator it = _map.begin(); it != _map.end(); ++it) {
-		setText(row, 1, it.key());
-		setText(row, 2, it.value());
-		row++;
-	}
-}
-
-
-KWMapEditor::~KWMapEditor() {
-}
-
-
-void KWMapEditor::erase() {
-	const QObject *o = sender();
-	for (int i = 0; i < numRows(); i++) {
-		if (cellWidget(i, 0) == o) {
-			removeRow(i);
-			break;
-		}
-	}
-
-	emit dirty();
-}
-
-
-void KWMapEditor::saveMap() {
-	_map.clear();
-
-	for (int i = 0; i < numRows(); i++) {
-		_map[text(i, 1)] = text(i, 2);
-	}
-}
-
-
-void KWMapEditor::addEntry() {
-	int x = numRows();
-	insertRows(x, 1);
-	QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
-	connect(b, SIGNAL(clicked()), this, SLOT(erase()));
-	setCellWidget(x, 0, b);
-	ensureCellVisible(x, 1);
-	setCurrentCell(x, 1);
-	emit dirty();
-}
-
-
-void KWMapEditor::emitDirty() {
-	emit dirty();
-}
-
-
-void KWMapEditor::contextMenu(int row, int col, const QPoint& pos) {
-	_contextRow = row;
-	_contextCol = col;
-	KMenu *m = new KMenu(this);
-	m->addAction( i18n("&New Entry" ), this, SLOT(addEntry()));
-	m->addAction( _copyAct );
-	m->popup(pos);
-}
-
-
-void KWMapEditor::copy() {
-	QApplication::clipboard()->setText(text(_contextRow, 2));
-}
-
+#include <QItemDelegate>
 
 class InlineEditor : public KTextEdit {
 	public:
-	InlineEditor(KWMapEditor *p, int row, int col) : KTextEdit(), _p(p), row(row), col(col) {
+	InlineEditor(KWMapEditor *p) : KTextEdit(), _p(p) {
 		setAttribute(Qt::WA_DeleteOnClose);
 		setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
+		setCheckSpellingEnabled(false);
 		connect(p, SIGNAL(destroyed()), SLOT(close()));
-	}
-	virtual ~InlineEditor() {
-		if (!_p) return;
-		_p->setText(row, col, toPlainText()); _p->emitDirty();
 	}
 
 	protected:
@@ -170,26 +70,170 @@ class InlineEditor : public KTextEdit {
 		   delete popup;
 		}
 		QPointer<KWMapEditor> _p;
-		int row, col;
 		QPointer<QMenu> popup;
 };
 
-QWidget *KWMapEditor::beginEdit(int row, int col, bool replace) {
-	//kDebug() << "EDIT COLUMN " << col ;
-	if (col != 2) {
-		return Q3Table::beginEdit(row, col, replace);
-	}
+class KWMapEditorDelegate : public QItemDelegate
+{
+	public:
+		KWMapEditorDelegate(KWMapEditor *parent) : QItemDelegate(parent)
+		{
+		}
+		
+		QWidget *createEditor(QWidget *parentWidget, const QStyleOptionViewItem &option, const QModelIndex &index) const
+		{
+			if (index.column() != 2) {
+				return QItemDelegate::createEditor(parentWidget, option, index);
+			}
 
-	QRect geo = cellGeometry(row, col);
-	KTextEdit *e = new InlineEditor(this, row, col);
-	e->setCheckSpellingEnabled(false); // disable spell-checking
-	e->setText(text(row, col));
-	e->move(mapToGlobal(geo.topLeft()));
-	e->resize(geo.width() * 2, geo.height() * 3);
-	e->show();
-	e->setFocus(Qt::PopupFocusReason);
-	return e;
+			KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
+			return new InlineEditor(mapEditor);
+		}
+		
+		void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
+		{
+			if (dynamic_cast<InlineEditor*>(editor))
+			{
+				KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
+				const QRect geo = mapEditor->visualRect(index);
+				editor->move(mapEditor->mapToGlobal(geo.topLeft()));
+				editor->resize(geo.width() * 2, geo.height() * 3);
+			}
+			else
+			{
+				QItemDelegate::updateEditorGeometry(editor, option, index);
+			}
+		}
+		
+		void setEditorData(QWidget *editor, const QModelIndex &index) const
+		{
+			InlineEditor *e = dynamic_cast<InlineEditor*>(editor);
+			if (e)
+			{
+				KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
+				e->setText(mapEditor->item(index.row(), index.column())->text());
+			}
+			else
+			{
+				QItemDelegate::setEditorData(editor, index);
+			}
+		}
+		
+		void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+		{
+			InlineEditor *e = dynamic_cast<InlineEditor*>(editor);
+			if (e)
+			{
+				KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
+				mapEditor->item(index.row(), index.column())->setText(e->toPlainText());
+			}
+			else
+			{
+				QItemDelegate::setModelData(editor, model, index);
+			}
+		}
+};
+
+KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent)
+: QTableWidget(0, 3, parent), _map(map) {
+	setItemDelegate(new KWMapEditorDelegate(this));
+	_ac = new KActionCollection(this);
+	_copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
+	connect(this, SIGNAL(itemChanged(QTableWidgetItem*)), this, SIGNAL(dirty()));
+	connect(this, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(contextMenu(const QPoint&)));
+	setSelectionMode(NoSelection);
+	setHorizontalHeaderLabels(QStringList() << QString() << i18n("Key") << i18n("Value"));
+	setColumnWidth(0, 20); // FIXME: this is arbitrary
+	setContextMenuPolicy(Qt::CustomContextMenu);
+	reload();
 }
 
+void KWMapEditor::reload() {
+	int row = 0;
+
+	while ((row = rowCount()) > _map.count()) {
+		removeRow(row - 1);
+	}
+
+	if ((row = rowCount()) < _map.count()) {
+		setRowCount(_map.count());
+		for (int x = row; x < rowCount(); ++x) {
+			QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
+			connect(b, SIGNAL(clicked()), this, SLOT(erase()));
+			setCellWidget(x, 0, b);
+			setItem(x, 1, new QTableWidgetItem());
+			setItem(x, 2, new QTableWidgetItem());
+		}
+	}
+
+	row = 0;
+	for (QMap<QString,QString>::Iterator it = _map.begin(); it != _map.end(); ++it) {
+		item(row, 1)->setText(it.key());
+		item(row, 2)->setText(it.value());
+		row++;
+	}
+}
+
+
+KWMapEditor::~KWMapEditor() {
+}
+
+
+void KWMapEditor::erase() {
+	const QObject *o = sender();
+	for (int i = 0; i < rowCount(); i++) {
+		if (cellWidget(i, 0) == o) {
+			removeRow(i);
+			break;
+		}
+	}
+
+	emit dirty();
+}
+
+
+void KWMapEditor::saveMap() {
+	_map.clear();
+
+	for (int i = 0; i < rowCount(); i++) {
+		_map[item(i, 1)->text()] = item(i, 2)->text();
+	}
+}
+
+
+void KWMapEditor::addEntry() {
+	int x = rowCount();
+	insertRow(x);
+	QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
+	connect(b, SIGNAL(clicked()), this, SLOT(erase()));
+	setCellWidget(x, 0, b);
+	setItem(x, 1, new QTableWidgetItem());
+	setItem(x, 2, new QTableWidgetItem());
+	scrollToItem(item(x, 1));
+	setCurrentCell(x, 1);
+	emit dirty();
+}
+
+
+void KWMapEditor::emitDirty() {
+	emit dirty();
+}
+
+
+void KWMapEditor::contextMenu(const QPoint& pos) {
+	QTableWidgetItem *twi = itemAt(pos);
+	_contextRow = row(twi);
+	KMenu *m = new KMenu(this);
+	m->addAction( i18n("&New Entry" ), this, SLOT(addEntry()));
+	m->addAction( _copyAct );
+	m->popup(mapToGlobal(pos));
+}
+
+
+void KWMapEditor::copy() {
+	QTableWidgetItem *twi = item(_contextRow, 2);
+	if (twi)
+		QApplication::clipboard()->setText(twi->text());
+}
 
 #include "kwmapeditor.moc"

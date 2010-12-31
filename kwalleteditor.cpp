@@ -52,7 +52,6 @@
 #include <QPushButton>
 #include <Q3TextEdit>
 #include <QTimer>
-#include <Q3WidgetStack>
 #include <QSet>
 #include <QTextStream>
 #include <QList>
