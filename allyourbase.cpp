@@ -28,7 +28,6 @@
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
-#include <k3urldrag.h>
 #include <kwallet.h>
 
 #include <Q3DragObject>

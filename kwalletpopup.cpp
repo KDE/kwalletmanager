@@ -23,7 +23,6 @@
 #include <kactioncollection.h>
 #include <kaction.h>
 #include <kdebug.h>
-#include <k3iconview.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kwallet.h>

@@ -88,8 +88,4 @@
       </item>
     </layout>
   </widget>
-    <includes>
-    <include location="global" >k3activelabel.h</include>
-    <include location="local" >k3activelabel.h</include>
-  </includes>
 </ui>

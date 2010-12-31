@@ -29,7 +29,6 @@
 #include <kconfig.h>
 #include <kdebug.h>
 #include <kiconloader.h>
-#include <k3iconview.h>
 #include <kinputdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
