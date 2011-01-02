@@ -21,7 +21,6 @@
 #ifndef ALLYOURBASE_H
 #define ALLYOURBASE_H
 
-#include <k3listview.h>
 #include <kwallet.h>
 #include <kiconloader.h>
 #include <kicontheme.h>
@@ -30,6 +29,7 @@
 #include <QDropEvent>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
+#include <QTreeWidget>
 
 #define KWALLETENTRYMAGIC ((quint32) 0x6B776C65)
 #define KWALLETFOLDERMAGIC ((quint32) 0x6B776C66)
@@ -37,22 +37,21 @@
 class KUrl;
 
 enum KWalletListItemClasses {
-	KWalletFolderItemClass = 1000,
+	KWalletFolderItemClass = QTreeWidgetItem::UserType,
 	KWalletContainerItemClass,
 	KWalletEntryItemClass,
-	KWalletUnknownClass = 2000
+	KWalletUnknownClass
 };
 
-class KWalletEntryItem : public K3ListViewItem {
+class KWalletEntryItem : public QTreeWidgetItem {
 	public:
-		KWalletEntryItem(KWallet::Wallet *w, Q3ListViewItem* parent, const QString& ename);
+		KWalletEntryItem(KWallet::Wallet *w, QTreeWidgetItem* parent, const QString& ename);
 		virtual ~KWalletEntryItem();
 
 		const QString& oldName() { return _oldName; }
 		QString currentName() { return text(0); }
 
 		void clearOldName() { _oldName = text(0); }
-		virtual int rtti() const;
 
 	public:
 		KWallet::Wallet *_wallet;
@@ -61,37 +60,33 @@ class KWalletEntryItem : public K3ListViewItem {
 		QString _oldName;
 };
 
-class KWalletContainerItem : public K3ListViewItem {
+class KWalletContainerItem : public QTreeWidgetItem {
 	public:
-		KWalletContainerItem(Q3ListViewItem* parent, const QString& name,
-		    KWallet::Wallet::EntryType type);
+		KWalletContainerItem(QTreeWidgetItem* parent, const QString& name, KWallet::Wallet::EntryType entryType);
 		virtual ~KWalletContainerItem();
 
 	public:
-		virtual int rtti() const;
-		KWallet::Wallet::EntryType type();
+		KWallet::Wallet::EntryType entryType();
 		bool contains(const QString& itemKey);
-		Q3ListViewItem* getItem(const QString& itemKey);
+		QTreeWidgetItem* getItem(const QString& itemKey);
 
 	private:
 		KWallet::Wallet::EntryType _type;
 };
 
-class KWalletFolderItem : public K3ListViewItem {
+class KWalletFolderItem : public QTreeWidgetItem {
 	public:
-		KWalletFolderItem(KWallet::Wallet *w, Q3ListView* parent, 
-			const QString& name, int entries);
+		KWalletFolderItem(KWallet::Wallet *w, QTreeWidget* parent, const QString& name, int entries);
 		virtual ~KWalletFolderItem();
 
 		virtual bool acceptDrop(const QMimeSource *mime) const;
-		virtual int rtti() const;
 
 		QString name() const;
 		void refresh();
 		KWalletContainerItem* getContainer(KWallet::Wallet::EntryType type);
 		QPixmap getFolderIcon(KIconLoader::Group group);
 		bool contains(const QString& itemKey);
-		Q3ListViewItem* getItem(const QString& itemKey);
+		QTreeWidgetItem* getItem(const QString& itemKey);
 
 	public:
 		KWallet::Wallet *_wallet;
@@ -101,7 +96,7 @@ class KWalletFolderItem : public K3ListViewItem {
 		int _entries;
 };
 
-class KWalletEntryList : public K3ListView {
+class KWalletEntryList : public QTreeWidget {
 	Q_OBJECT
 
 	public:
@@ -110,20 +105,24 @@ class KWalletEntryList : public K3ListView {
 
 		bool existsFolder(const QString& name);
 		KWalletFolderItem* getFolder(const QString& name);
-		void contentsDropEvent(QDropEvent *e);
-		void contentsDragEnterEvent(QDragEnterEvent *e);
 		void setWallet(KWallet::Wallet *w);
 
 	protected:
-		void itemDropped(QDropEvent *e, Q3ListViewItem *item);
-		virtual Q3DragObject *dragObject();
-		virtual bool acceptDrag (QDropEvent* event) const;
+		virtual void dragEnterEvent(QDragEnterEvent *e);
+		virtual void dragMoveEvent(QDragMoveEvent *e);
+		virtual void dropEvent(QDropEvent *e);
+		virtual void mousePressEvent(QMouseEvent *e);
+		virtual void mouseMoveEvent(QMouseEvent *e);
+		
+		void itemDropped(QDropEvent *e, QTreeWidgetItem *item);
 
 	private:
-		static KWalletFolderItem *getItemFolder(Q3ListViewItem *item);
+		static KWalletFolderItem *getItemFolder(QTreeWidgetItem *item);
+		QMimeData *itemMimeData(const QTreeWidgetItem *i) const;
 	
 	public:
 		KWallet::Wallet *_wallet;
+		QPoint _mousePos;
 };
 
 class KWalletItem : public QListWidgetItem {

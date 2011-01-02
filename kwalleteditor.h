@@ -27,7 +27,7 @@
 #include <QStringList>
 #include <QLabel>
 
-class Q3ListViewItem;
+class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
 class KWMapEditor;
@@ -59,9 +59,9 @@ class KWalletEditor : public KXmlGuiWindow {
 
 	private slots:
 		void updateFolderList(bool checkEntries = false);
-		void entrySelectionChanged(Q3ListViewItem *item);
-		void listItemRenamed(Q3ListViewItem *, int, const QString&);
-		void listContextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col);
+		void entrySelectionChanged(QTreeWidgetItem *item);
+		void listItemRenamed(QTreeWidgetItem *);
+		void listContextMenuRequested(const QPoint& pos);
 		void updateEntries(const QString& folder);
 
 		void newEntry();
@@ -113,7 +113,7 @@ class KWalletEditor : public KXmlGuiWindow {
 		QCheckBox *_mapEditorShowHide;
 		bool _newWallet;
 		KMenu *_contextMenu;
-        Q3ListViewItem *_displayedItem; // used to find old item when selection just changed
+        QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
 };
 
 #endif

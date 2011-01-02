@@ -34,7 +34,6 @@
 #include <kfiledialog.h>
 #include <kinputdialog.h>
 #include <kio/netaccess.h>
-#include <k3listviewsearchline.h>
 #include <kactioncollection.h>
 #include <klocale.h>
 #include <kcodecs.h>
@@ -48,7 +47,6 @@
 #include <kxmlguifactory.h>
 #include <QCheckBox>
 #include <QClipboard>
-#include <Q3ListView>
 #include <QPushButton>
 #include <QTimer>
 #include <QSet>
@@ -61,6 +59,7 @@
 #include <ktoolbar.h>
 #include <kicon.h>
 #include <KAction>
+#include <KTreeWidgetSearchLine>
 
 KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent, const char *name)
 : KXmlGuiWindow(parent), _walletName(wallet), _nonLocal(isPath), _displayedItem(0)  {
@@ -78,7 +77,8 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	box->setSpacing( KDialog::spacingHint() );
 	box->setMargin( KDialog::marginHint() );
 	_entryList = new KWalletEntryList(_ww->_entryListFrame, "Wallet Entry List");
-	box->addWidget(new K3ListViewSearchLineWidget(_entryList, _ww->_entryListFrame));
+	_entryList->setContextMenuPolicy(Qt::CustomContextMenu);
+	box->addWidget(new KTreeWidgetSearchLine(_ww->_entryListFrame, _entryList));
 	box->addWidget(_entryList);
 
 	_ww->_entryStack->setEnabled(true);
@@ -103,16 +103,16 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	}
 	_ww->_splitter->setSizes(splitterSize);
 
-	connect(_entryList, SIGNAL(selectionChanged(Q3ListViewItem*)),
-		this, SLOT(entrySelectionChanged(Q3ListViewItem*)));
+	connect(_entryList, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
+		this, SLOT(entrySelectionChanged(QTreeWidgetItem*)));
 	connect(_entryList,
-		SIGNAL(contextMenuRequested(Q3ListViewItem*,const QPoint&,int)),
+		SIGNAL(customContextMenuRequested(const QPoint&)),
 		this,
-		SLOT(listContextMenuRequested(Q3ListViewItem*,const QPoint&,int)));
+		SLOT(listContextMenuRequested(const QPoint&)));
 	connect(_entryList,
-		SIGNAL(itemRenamed(Q3ListViewItem*, int, const QString&)),
+		SIGNAL(itemChanged(QTreeWidgetItem*, int)),
 		this,
-		SLOT(listItemRenamed(Q3ListViewItem*, int, const QString&)));
+		SLOT(listItemRenamed(QTreeWidgetItem*)));
 
 	connect(_ww->_passwordValue, SIGNAL(textChanged()),
 		this, SLOT(entryEditted()));
@@ -255,15 +255,15 @@ void KWalletEditor::walletClosed() {
 
 void KWalletEditor::updateFolderList(bool checkEntries) {
 	const QStringList fl = _w->folderList();
-	QStack<Q3ListViewItem*> trash;
+	QStack<QTreeWidgetItem*> trash;
 
-	for (Q3ListViewItem *i = _entryList->firstChild(); i; i = i->nextSibling()) {
-		KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(i);
+	for (int i = 0; i < _entryList->topLevelItemCount(); ++i) {
+		KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(_entryList->topLevelItem(i));
 		if (!fi) {
 			continue;
 		}
 		if (!fl.contains(fi->name())) {
-			trash.push(i);
+			trash.push(fi);
 		}
 	}
 
@@ -280,8 +280,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 
 		_w->setFolder(*i);
 		const QStringList entries = _w->entryList();
-		KWalletFolderItem *item = new KWalletFolderItem(_w,_entryList,
-			*i, entries.count());
+		KWalletFolderItem *item = new KWalletFolderItem(_w,_entryList, *i, entries.count());
 
 		KWalletContainerItem *pi = new KWalletContainerItem(item, i18n("Passwords"),KWallet::Wallet::Password);
 		KWalletContainerItem *mi = new KWalletContainerItem(item, i18n("Maps"),KWallet::Wallet::Map);
@@ -301,7 +300,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 					break;
 				case KWallet::Wallet::Unknown:
 				default:
-					new Q3ListViewItem(ui, *j);
+					new QTreeWidgetItem(ui, QStringList() << *j);
 					break;
 			}
 		}
@@ -318,7 +317,7 @@ void KWalletEditor::updateFolderList(bool checkEntries) {
 
 void KWalletEditor::deleteFolder() {
 	if (_w) {
-		Q3ListViewItem *i = _entryList->currentItem();
+		QTreeWidgetItem *i = _entryList->currentItem();
 		if (i) {
 			KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(i);
 			if (!fi) {
@@ -375,16 +374,16 @@ void KWalletEditor::createFolder() {
 
 void KWalletEditor::saveEntry() {
 	int rc = 1;
-	Q3ListViewItem *item = _displayedItem; //  _entryList->currentItem();
+	QTreeWidgetItem *item = _displayedItem; //  _entryList->currentItem();
 	_ww->_saveChanges->setEnabled(false);
 	_ww->_undoChanges->setEnabled(false);
 
 	if (item && _w && item->parent()) {
 		KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(item->parent());
 		if (ci) {
-			if (ci->type() == KWallet::Wallet::Password) {
+			if (ci->entryType() == KWallet::Wallet::Password) {
 				rc = _w->writePassword(item->text(0), _ww->_passwordValue->toPlainText());
-			} else if (ci->type() == KWallet::Wallet::Map) {
+			} else if (ci->entryType() == KWallet::Wallet::Map) {
 				_mapEditor->saveMap();
 				rc = _w->writeMap(item->text(0), _currentMap);
 			} else {
@@ -412,7 +411,7 @@ void KWalletEditor::entryEditted() {
 }
 
 
-void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
+void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item) {
     // do not forget to save changes
     if ( _ww->_saveChanges->isEnabled() && (_displayedItem != item) ){
         if ( KMessageBox::Yes ==  KMessageBox::questionYesNo(this, 
@@ -440,7 +439,8 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 		_contextMenu->addTitle(_contextMenu->fontMetrics().elidedText(
 			item->text(0), Qt::ElideMiddle, 200 ) );
 
-		switch (item->rtti()) {
+		// TODO rtti
+		switch (item->type()) {
 			case KWalletEntryItemClass:
 				ci = dynamic_cast<KWalletContainerItem*>(item->parent());
 				if (!ci) {
@@ -461,7 +461,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				_renameEntryAction->setEnabled(true);
 				_deleteEntryAction->setEnabled(true);
 
-				if (ci->type() == KWallet::Wallet::Password) {
+				if (ci->entryType() == KWallet::Wallet::Password) {
 					QString pass;
 					if (_w->readPassword(item->text(0), pass) == 0) {
 						_ww->_entryStack->setCurrentIndex(4);
@@ -474,7 +474,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 					// add a context-menu action for copying passwords
 					_contextMenu->addSeparator();
 					_contextMenu->addAction( _copyPassAction );
-				} else if (ci->type() == KWallet::Wallet::Map) {
+				} else if (ci->entryType() == KWallet::Wallet::Map) {
 					_ww->_entryStack->setCurrentIndex(2);
 					_mapEditorShowHide->setChecked(false);
 					showHideMapEditorValue(false);
@@ -484,7 +484,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 						_ww->_saveChanges->setEnabled(false);
 						_ww->_undoChanges->setEnabled(false);
 					}
-				} else if (ci->type() == KWallet::Wallet::Stream) {
+				} else if (ci->entryType() == KWallet::Wallet::Stream) {
 					_ww->_entryStack->setCurrentIndex(3);
 					QByteArray ba;
 					if (_w->readEntry(item->text(0), ba) == 0) {
@@ -501,7 +501,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 				if (!ci) {
 					return;
 				}
-				if (ci->type() == KWallet::Wallet::Unknown) {
+				if (ci->entryType() == KWallet::Wallet::Unknown) {
 					// disable context menu on unknown items
 					_contextMenu->setEnabled(false);
 				} else {
@@ -557,7 +557,7 @@ void KWalletEditor::entrySelectionChanged(Q3ListViewItem *item) {
 }
 
 void KWalletEditor::updateEntries(const QString& folder) {
-	QStack<Q3ListViewItem*> trash;
+	QStack<QTreeWidgetItem*> trash;
 
 	_w->setFolder(folder);
 	const QStringList entries = _w->entryList();
@@ -574,39 +574,43 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	KWalletContainerItem *ui = fi->getContainer(KWallet::Wallet::Unknown);
 
 	// Remove deleted entries
-	for (Q3ListViewItem *i = pi->firstChild(); i; i = i->nextSibling()) {
-		if (!entries.contains(i->text(0))) {
-			if (i == _entryList->currentItem()) {
+	for (int i = 0; i < pi->childCount(); ++i) {
+		QTreeWidgetItem *twi = pi->child(i);
+		if (!entries.contains(twi->text(0))) {
+			if (twi == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
 			}
-			trash.push(i);
+			trash.push(twi);
 		}
 	}
 
-	for (Q3ListViewItem *i = mi->firstChild(); i; i = i->nextSibling()) {
-		if (!entries.contains(i->text(0))) {
-			if (i == _entryList->currentItem()) {
+	for (int i = 0; i < mi->childCount(); ++i) {
+		QTreeWidgetItem *twi = mi->child(i);
+		if (!entries.contains(twi->text(0))) {
+			if (twi == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
 			}
-			trash.push(i);
+			trash.push(twi);
 		}
 	}
 
-	for (Q3ListViewItem *i = bi->firstChild(); i; i = i->nextSibling()) {
-		if (!entries.contains(i->text(0))) {
-			if (i == _entryList->currentItem()) {
+	for (int i = 0; i < bi->childCount(); ++i) {
+		QTreeWidgetItem *twi = bi->child(i);
+		if (!entries.contains(twi->text(0))) {
+			if (twi == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
 			}
-			trash.push(i);
+			trash.push(twi);
 		}
 	}
 
-	for (Q3ListViewItem *i = ui->firstChild(); i; i = i->nextSibling()) {
-		if (!entries.contains(i->text(0))) {
-			if (i == _entryList->currentItem()) {
+	for (int i = 0; i < ui->childCount(); ++i) {
+		QTreeWidgetItem *twi = ui->child(i);
+		if (!entries.contains(twi->text(0))) {
+			if (twi == _entryList->currentItem()) {
 				entrySelectionChanged(0L);
 			}
-			trash.push(i);
+			trash.push(twi);
 		}
 	}
 
@@ -631,7 +635,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 				break;
 			case KWallet::Wallet::Unknown:
 			default:
-				new Q3ListViewItem(ui, *i);
+				new QTreeWidgetItem(ui, QStringList() << *i);
 				break;
 		}
 	}
@@ -639,26 +643,23 @@ void KWalletEditor::updateEntries(const QString& folder) {
 	if (fi->name() == _currentFolder) {
             _ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
 	}
-	if (!_entryList->selectedItem()) {
+	if (!_entryList->currentItem()) {
 		_ww->_entryName->clear();
 		_ww->_entryStack->setCurrentIndex(0);
 	}
 }
 
-void KWalletEditor::listContextMenuRequested(Q3ListViewItem *item, const QPoint& pos, int col) {
-	Q_UNUSED(item)
-	Q_UNUSED(col)
-
+void KWalletEditor::listContextMenuRequested(const QPoint& pos) {
 	if (!_walletIsOpen || !_contextMenu->isEnabled()) {
 		return;
 	}
 
-	_contextMenu->popup(pos);
+	_contextMenu->popup(_entryList->mapToGlobal(pos));
 }
 
 
 void KWalletEditor::copyPassword() {
-	Q3ListViewItem *item = _entryList->selectedItem();
+	QTreeWidgetItem *item = _entryList->currentItem();
 	if (_w && item) {
 		QString pass;
 		if (_w->readPassword(item->text(0), pass) == 0) {
@@ -669,17 +670,16 @@ void KWalletEditor::copyPassword() {
 
 
 void KWalletEditor::newEntry() {
-	Q3ListViewItem *item = _entryList->selectedItem();
+	QTreeWidgetItem *item = _entryList->currentItem();
 	QString n;
 	bool ok;
 
-	Q3ListViewItem *p;
 	KWalletFolderItem *fi;
 
 	//set the folder where we're trying to create the new entry
 	if (_w && item) {
-		p = item;
-		if (p->rtti() == KWalletEntryItemClass) {
+		QTreeWidgetItem *p = item;
+		if (p->type() == KWalletEntryItemClass) {
 			p = item->parent();
 		}
 		fi = dynamic_cast<KWalletFolderItem *>(p->parent());
@@ -714,8 +714,8 @@ void KWalletEditor::newEntry() {
 	} while (true);
 
 	if (_w && item && !n.isEmpty()) {
-		Q3ListViewItem *p = item;
-		if (p->rtti() == KWalletEntryItemClass) {
+		QTreeWidgetItem *p = item;
+		if (p->type() == KWalletEntryItemClass) {
 			p = item->parent();
 		}
 
@@ -734,18 +734,18 @@ void KWalletEditor::newEntry() {
 			delete ni;
 			return;
 		}
-		if (ci->type() == KWallet::Wallet::Password) {
+		if (ci->entryType() == KWallet::Wallet::Password) {
 			_w->writePassword(n, QString());
-		} else if (ci->type() == KWallet::Wallet::Map) {
+		} else if (ci->entryType() == KWallet::Wallet::Map) {
 			_w->writeMap(n, QMap<QString,QString>());
-		} else if (ci->type() == KWallet::Wallet::Stream) {
+		} else if (ci->entryType() == KWallet::Wallet::Stream) {
 			_w->writeEntry(n, QByteArray());
 		} else {
 			abort();
 		}
 
-		_entryList->setSelected(ni,true);
-		_entryList->ensureItemVisible(ni);
+		_entryList->setCurrentItem(ni);
+		_entryList->scrollToItem(ni);
 
 		fi->refresh();
 		_ww->_entryTitle->setText(QString::fromLatin1("<font size=\"+1\">%1</font>").arg(fi->text(0)));
@@ -754,21 +754,22 @@ void KWalletEditor::newEntry() {
 
 
 void KWalletEditor::renameEntry() {
-	Q3ListViewItem *item = _entryList->selectedItem();
+	QTreeWidgetItem *item = _entryList->currentItem();
 	if (_w && item) {
-		item->startRename(0);
+		_entryList->editItem(item, 0);
 	}
 }
 
 
 // Only supports renaming of KWalletEntryItem derived classes.
-void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t) {
+void KWalletEditor::listItemRenamed(QTreeWidgetItem* item) {
 	if (item) {
 		KWalletEntryItem *i = dynamic_cast<KWalletEntryItem*>(item);
 		if (!i) {
 			return;
 		}
 
+		const QString t = item->text(0);
 		if (!_w || t.isEmpty()) {
 			i->setText(0, i->oldName());
 			return;
@@ -781,11 +782,11 @@ void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t)
 				KMessageBox::error(this, i18n("An unexpected error occurred trying to rename the entry"));
 				return;
 			}
-			if (ci->type() == KWallet::Wallet::Password) {
+			if (ci->entryType() == KWallet::Wallet::Password) {
 				_ww->_entryName->setText(i18n("Password: %1", item->text(0)));
-			} else if (ci->type() == KWallet::Wallet::Map) {
+			} else if (ci->entryType() == KWallet::Wallet::Map) {
 				_ww->_entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
-			} else if (ci->type() == KWallet::Wallet::Stream) {
+			} else if (ci->entryType() == KWallet::Wallet::Stream) {
 				_ww->_entryName->setText(i18n("Binary Data: %1", item->text(0)));
 			}
 		} else {
@@ -796,7 +797,7 @@ void KWalletEditor::listItemRenamed(Q3ListViewItem* item, int, const QString& t)
 
 
 void KWalletEditor::deleteEntry() {
-	Q3ListViewItem *item = _entryList->selectedItem();
+	QTreeWidgetItem *item = _entryList->currentItem();
 	if (_w && item) {
 		int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)),QString(),KStandardGuiItem::del());
 		if (rc == KMessageBox::Continue) {
