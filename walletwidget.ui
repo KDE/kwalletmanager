@@ -144,7 +144,13 @@
             </layout>
            </item>
            <item>
-            <widget class="QTextEdit" name="_passwordValue"/>
+            <widget class="QTextEdit" name="_passwordValue">
+             <property name="font">
+              <font>
+               <family>Monospace</family>
+              </font>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
