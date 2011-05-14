@@ -6,6 +6,7 @@ include_directories(${KDE4_INCLUDES})
 
 add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
+add_subdirectory( doc )
 add_subdirectory( icons ) 
 add_subdirectory( konfigurator ) 
 
