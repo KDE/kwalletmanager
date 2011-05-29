@@ -1,10 +1,8 @@
 project(kwallet)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    find_package(KDE4)
-    include( KDE4Defaults )
-    include_directories(${KDE4_INCLUDES})
-endif()
+find_package(KDE4)
+include( KDE4Defaults )
+include_directories(${KDE4_INCLUDES})
 
 add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
