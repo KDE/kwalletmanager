@@ -41,7 +41,7 @@ class MyApp : public KUniqueApplication {
 };
 
 int main(int argc, char **argv) {
-	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "1.8",
+	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "1.9",
 		ki18n("KDE Wallet Management Tool"),
 		KAboutData::License_GPL,
 		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
