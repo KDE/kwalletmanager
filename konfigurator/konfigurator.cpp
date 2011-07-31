@@ -72,7 +72,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-	connect(_wcw->_accessList, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(customContextMenuRequested(const QPoint&)));
+	connect(_wcw->_accessList, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
 
 	_wcw->_accessList->setAllColumnsShowFocus(true);
 	_wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);

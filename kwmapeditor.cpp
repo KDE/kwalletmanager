@@ -140,7 +140,7 @@ KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent)
 	_ac = new KActionCollection(this);
 	_copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
 	connect(this, SIGNAL(itemChanged(QTableWidgetItem*)), this, SIGNAL(dirty()));
-	connect(this, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(contextMenu(const QPoint&)));
+	connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
 	setSelectionMode(NoSelection);
 	setHorizontalHeaderLabels(QStringList() << QString() << i18n("Key") << i18n("Value"));
 	setColumnWidth(0, 20); // FIXME: this is arbitrary

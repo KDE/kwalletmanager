@@ -106,11 +106,11 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	connect(_entryList, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
 		this, SLOT(entrySelectionChanged(QTreeWidgetItem*)));
 	connect(_entryList,
-		SIGNAL(customContextMenuRequested(const QPoint&)),
+		SIGNAL(customContextMenuRequested(QPoint)),
 		this,
-		SLOT(listContextMenuRequested(const QPoint&)));
+		SLOT(listContextMenuRequested(QPoint)));
 	connect(_entryList,
-		SIGNAL(itemChanged(QTreeWidgetItem*, int)),
+		SIGNAL(itemChanged(QTreeWidgetItem*,int)),
 		this,
 		SLOT(listItemRenamed(QTreeWidgetItem*)));
 
@@ -135,7 +135,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	if (_w) {
 		connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
 		connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
-		connect(_w, SIGNAL(folderUpdated(const QString&)), this, SLOT(updateEntries(const QString&)));
+		connect(_w, SIGNAL(folderUpdated(QString)), this, SLOT(updateEntries(QString)));
 		connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
 		updateFolderList();
 	} else {
@@ -171,13 +171,13 @@ void KWalletEditor::createActions() {
         _newFolderAction = actionCollection()->addAction( QLatin1String( "create_folder" ));
         _newFolderAction->setText( i18n("&New Folder...") );
         _newFolderAction->setIcon( KIcon( QLatin1String( "folder-new" )) );
-	connect(_newFolderAction, SIGNAL(triggered(bool) ), SLOT(createFolder()));
+	connect(_newFolderAction, SIGNAL(triggered(bool)), SLOT(createFolder()));
 	connect(this, SIGNAL(enableFolderActions(bool)),
 		_newFolderAction, SLOT(setEnabled(bool)));
 
         _deleteFolderAction = actionCollection()->addAction( QLatin1String( "delete_folder" ) );
         _deleteFolderAction->setText( i18n("&Delete Folder") );
-	connect(_deleteFolderAction, SIGNAL(triggered(bool) ), SLOT(deleteFolder()));
+	connect(_deleteFolderAction, SIGNAL(triggered(bool)), SLOT(deleteFolder()));
 	connect(this, SIGNAL(enableContextFolderActions(bool)),
 		_deleteFolderAction, SLOT(setEnabled(bool)));
 	connect(this, SIGNAL(enableFolderActions(bool)),
@@ -185,25 +185,25 @@ void KWalletEditor::createActions() {
 
         _passwordAction = actionCollection()->addAction( QLatin1String(  "change_password" ) );
         _passwordAction->setText( i18n("Change &Password...") );
-	connect(_passwordAction, SIGNAL(triggered(bool) ), SLOT(changePassword()));
+	connect(_passwordAction, SIGNAL(triggered(bool)), SLOT(changePassword()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_passwordAction, SLOT(setEnabled(bool)));
 
         _mergeAction = actionCollection()->addAction( QLatin1String(  "merge" ));
         _mergeAction->setText( i18n("&Merge Wallet...") );
-	connect(_mergeAction, SIGNAL(triggered(bool) ), SLOT(importWallet()));
+	connect(_mergeAction, SIGNAL(triggered(bool)), SLOT(importWallet()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_mergeAction, SLOT(setEnabled(bool)));
 
         _importAction= actionCollection()->addAction( QLatin1String(  "import" ) );
         _importAction->setText( i18n("&Import XML...") );
-	connect(_importAction, SIGNAL(triggered(bool) ), SLOT(importXML()));
+	connect(_importAction, SIGNAL(triggered(bool)), SLOT(importXML()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_importAction, SLOT(setEnabled(bool)));
 
         _exportAction = actionCollection()->addAction( QLatin1String(  "export" ) );
         _exportAction->setText( i18n("&Export...") );
-	connect(_exportAction, SIGNAL(triggered(bool) ), SLOT(exportXML()));
+	connect(_exportAction, SIGNAL(triggered(bool)), SLOT(exportXML()));
 	connect(this, SIGNAL(enableWalletActions(bool)),
 		_exportAction, SLOT(setEnabled(bool)));
 
