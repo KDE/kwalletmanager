@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2011-08-04</date>
-<releaseinfo>1.8 (&kde; 4.7)</releaseinfo>
+<date>2010-08-19</date>
+<releaseinfo>1.6 (&kde; 4.5)</releaseinfo>
 
 <abstract>
 <para>
@@ -260,7 +260,7 @@ will contain folders named Form Data and Passwords.
 <listitem><para>A search line to filter the items of the current
 wallet</para></listitem>
 <listitem><para>The tree view of the folders contained in the wallet. 
-Click the <guiicon>&gt;</guiicon> / <guiicon>v</guiicon> symbols to expand or collapse 
+Click the <guiicon>+</guiicon> / <guiicon>-</guiicon> symbols to expand or collapse 
 the tree view.</para></listitem>
 <listitem><para>The contents of the selected folder entry at the right side</para></listitem>
 </itemizedlist>
@@ -374,7 +374,6 @@ system tray.</para>
 
 <para>Finally, there is a button labeled <guibutton>Launch Wallet
 Manager</guibutton>, which does precisely that.</para>
-<para>This button is only visible if &kwalletmanager; is not running</para>
 </sect1>
 
 <sect1 id="wallet-access-control">
