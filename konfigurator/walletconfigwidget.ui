@@ -30,6 +30,16 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="_useKSecretsService">
+         <property name="whatsThis">
+          <string>&lt;p&gt;The KSecretsService infrastructure will supersede the KWallet infrastructure, which will be disabled in the future. Please start using KSecretsService right away!&lt;/p&gt;</string>
+         </property>
+         <property name="text">
+          <string>&amp;Use KSecretsService infrastructure</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QGroupBox" name="groupBox2">
          <property name="whatsThis">
           <string>It is best to close your wallets when you are not using them to prevent others from viewing or using them.</string>
@@ -484,8 +494,24 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>56</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_enabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>_useKSecretsService</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>38</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>

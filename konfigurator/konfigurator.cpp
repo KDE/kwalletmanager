@@ -59,6 +59,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 	vbox->addWidget(_wcw);
 
 	connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
+    connect(_wcw->_useKSecretsService, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_launchManager, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_autocloseManager, SIGNAL(clicked()), this, SLOT(configChanged()));
 	connect(_wcw->_autoclose, SIGNAL(clicked()), this, SLOT(configChanged()));
@@ -72,7 +73,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 	connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
 	connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
 	connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-	connect(_wcw->_accessList, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(customContextMenuRequested(const QPoint&)));
+	connect(_wcw->_accessList, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
 
 	_wcw->_accessList->setAllColumnsShowFocus(true);
 	_wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -176,11 +177,17 @@ void KWalletConfig::launchManager() {
 
 void KWalletConfig::configChanged() {
 	emit changed(true);
+
+/*    bool enableItems = !_wcw->_useKSecretsService->isChecked();
+    _wcw->groupBox2->setEnabled( enableItems );
+    _wcw->groupBox3->setEnabled( enableItems );
+    _wcw->groupBox4->setEnabled( enableItems );*/
 }
 
 void KWalletConfig::load() {
 	KConfigGroup config(_cfg, "Wallet");
 	_wcw->_enabled->setChecked(config.readEntry("Enabled", true));
+    _wcw->_useKSecretsService->setChecked(config.readEntry("UseKSecretsService", false));
 	_wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", true));
 	_wcw->_launchManager->setChecked(config.readEntry("Launch Manager", true));
 	_wcw->_autocloseManager->setChecked(! config.readEntry("Leave Manager Open", false));
@@ -231,6 +238,7 @@ void KWalletConfig::load() {
 void KWalletConfig::save() {
 	KConfigGroup config(_cfg, "Wallet");
 	config.writeEntry("Enabled", _wcw->_enabled->isChecked());
+    config.writeEntry("UseKSecretsService", _wcw->_useKSecretsService->isChecked());
 	config.writeEntry("Launch Manager", _wcw->_launchManager->isChecked());
 	config.writeEntry("Leave Manager Open", !_wcw->_autocloseManager->isChecked());
 	config.writeEntry("Leave Open", !_wcw->_autoclose->isChecked());
@@ -294,6 +302,7 @@ void KWalletConfig::save() {
 
 void KWalletConfig::defaults() {
 	_wcw->_enabled->setChecked(true);
+    _wcw->_useKSecretsService->setChecked(false);
 	_wcw->_openPrompt->setChecked(true);
 	_wcw->_launchManager->setChecked(true);
 	_wcw->_autocloseManager->setChecked(false);
