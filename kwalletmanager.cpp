@@ -79,7 +79,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		if (!isOpen && qApp->isSessionRestored()) {
 			delete _tray;
 			_tray = 0;
-			QTimer::singleShot( 0, qApp, SLOT( quit()));
+			QTimer::singleShot( 0, qApp, SLOT(quit()));
 			return;
 		}
 	} else {
@@ -89,7 +89,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	_iconView = new KWalletIconView(this);
 	_iconView->setContextMenuPolicy(Qt::CustomContextMenu);
 	connect(_iconView, SIGNAL(executed(QListWidgetItem*)), this, SLOT(openWallet(QListWidgetItem*)));
-	connect(_iconView, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(contextMenu(const QPoint&)));
+	connect(_iconView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
 
 	updateWalletDisplay();
 	setCentralWidget(_iconView);
@@ -102,7 +102,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
                 this,
                 SLOT(possiblyRescan(QString,QString,QString)));
         connect( m_kwalletdModule, SIGNAL(allWalletsClosed()),
-                 this, SLOT(allWalletsClosed() ) );
+                 this, SLOT(allWalletsClosed()) );
         connect( m_kwalletdModule, SIGNAL(walletClosed(QString)),
                  this, SLOT(updateWalletDisplay()) );
         connect( m_kwalletdModule, SIGNAL(walletOpened(QString)),
@@ -225,10 +225,10 @@ void KWalletManager::contextMenu(const QPoint& pos) {
 	QListWidgetItem *item = _iconView->itemAt(pos);
 	if (item) {
 		QPointer<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
-		connect(popupMenu, SIGNAL(walletOpened(const QString&)), this, SLOT(openWallet(const QString&)));
-		connect(popupMenu, SIGNAL(walletClosed(const QString&)), this, SLOT(closeWallet(const QString&)));
-		connect(popupMenu, SIGNAL(walletDeleted(const QString&)), this, SLOT(deleteWallet(const QString&)));
-		connect(popupMenu, SIGNAL(walletChangePassword(const QString&)), this, SLOT(changeWalletPassword(const QString&)));
+		connect(popupMenu, SIGNAL(walletOpened(QString)), this, SLOT(openWallet(QString)));
+		connect(popupMenu, SIGNAL(walletClosed(QString)), this, SLOT(closeWallet(QString)));
+		connect(popupMenu, SIGNAL(walletDeleted(QString)), this, SLOT(deleteWallet(QString)));
+		connect(popupMenu, SIGNAL(walletChangePassword(QString)), this, SLOT(changeWalletPassword(QString)));
 		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
 		popupMenu->exec(_iconView->mapToGlobal(pos));
 		delete popupMenu;
