@@ -53,6 +53,7 @@ class KWalletConfig : public KCModule {
 		QString newWallet();
 		void deleteEntry();
 		void customContextMenuRequested(const QPoint& pos);
+        void importWallets();
 
 	private:
 		WalletConfigWidget *_wcw;

@@ -2,10 +2,42 @@
 <ui version="4.0">
  <class>WalletConfigWidget</class>
  <widget class="QWidget" name="WalletConfigWidget">
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="margin">
-    <number>0</number>
-   </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>533</width>
+    <height>463</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_launch">
+       <property name="text">
+        <string>&amp;Launch Wallet Manager</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item>
     <widget class="QTabWidget" name="tabWidget2">
      <property name="currentIndex">
@@ -15,7 +47,7 @@
       <attribute name="title">
        <string>Wallet Preferences</string>
       </attribute>
-      <layout class="QVBoxLayout">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QCheckBox" name="_enabled">
          <property name="whatsThis">
@@ -30,14 +62,34 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="_useKSecretsService">
-         <property name="whatsThis">
-          <string>&lt;p&gt;The KSecretsService infrastructure will supersede the KWallet infrastructure, which will be disabled in the future. Please start using KSecretsService right away!&lt;/p&gt;</string>
-         </property>
-         <property name="text">
-          <string>&amp;Use KSecretsService infrastructure</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QCheckBox" name="_useKSecretsService">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;p&gt;The KSecretsService infrastructure will supersede the KWallet infrastructure, which will be disabled in the future. Please start using KSecretsService right away!&lt;/p&gt;</string>
+           </property>
+           <property name="text">
+            <string>&amp;Use KSecretsService infrastructure</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="_importWallets">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Import wallets...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <widget class="QGroupBox" name="groupBox2">
@@ -309,33 +361,15 @@
           <property name="text">
            <string>Wallet</string>
           </property>
-          <property name="clickable">
-           <bool>true</bool>
-          </property>
-          <property name="resizable">
-           <bool>true</bool>
-          </property>
          </column>
          <column>
           <property name="text">
            <string>Application</string>
           </property>
-          <property name="clickable">
-           <bool>true</bool>
-          </property>
-          <property name="resizable">
-           <bool>true</bool>
-          </property>
          </column>
          <column>
           <property name="text">
            <string>Policy</string>
-          </property>
-          <property name="clickable">
-           <bool>true</bool>
-          </property>
-          <property name="resizable">
-           <bool>true</bool>
           </property>
          </column>
         </widget>
@@ -343,33 +377,6 @@
       </layout>
      </widget>
     </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <spacer>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>0</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="_launch">
-       <property name="text">
-        <string>&amp;Launch Wallet Manager</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
   </layout>
  </widget>
@@ -382,12 +389,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>255</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>350</x>
+     <y>254</y>
     </hint>
    </hints>
   </connection>
@@ -398,12 +405,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>255</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>275</x>
+     <y>254</y>
     </hint>
    </hints>
   </connection>
@@ -414,12 +421,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>32</x>
+     <y>119</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>192</x>
+     <y>119</y>
     </hint>
    </hints>
   </connection>
@@ -430,12 +437,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>24</x>
+     <y>44</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>24</x>
+     <y>89</y>
     </hint>
    </hints>
   </connection>
@@ -446,12 +453,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>24</x>
+     <y>44</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>24</x>
+     <y>198</y>
     </hint>
    </hints>
   </connection>
@@ -462,12 +469,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>24</x>
+     <y>44</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>24</x>
+     <y>286</y>
     </hint>
    </hints>
   </connection>
@@ -478,12 +485,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>32</x>
+     <y>119</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>192</x>
+     <y>119</y>
     </hint>
    </hints>
   </connection>
@@ -494,12 +501,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>31</x>
-     <y>311</y>
+     <x>42</x>
+     <y>335</y>
     </hint>
     <hint type="destinationlabel">
-     <x>56</x>
-     <y>337</y>
+     <x>92</x>
+     <y>361</y>
     </hint>
    </hints>
   </connection>
@@ -514,8 +521,24 @@
      <y>38</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
+     <x>25</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_useKSecretsService</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>_importWallets</receiver>
+   <slot>setOn(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>69</y>
     </hint>
    </hints>
   </connection>
