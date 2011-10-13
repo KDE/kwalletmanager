@@ -75,7 +75,7 @@
             <string>&lt;p&gt;The KSecretsService infrastructure will supersede the KWallet infrastructure, which will be disabled in the future. Please start using KSecretsService right away!&lt;/p&gt;</string>
            </property>
            <property name="text">
-            <string>&amp;Use KSecretsService infrastructure</string>
+            <string>&amp;Use KSecretsService infrastructure (EXPERIMENTAL)</string>
            </property>
           </widget>
          </item>
