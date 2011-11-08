@@ -234,8 +234,8 @@ void KWalletEditor::createActions() {
 	_deleteEntryAction->setEnabled(false);
 
 	KStandardAction::quit(this, SLOT(close()), actionCollection());
-	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
-actionCollection());
+	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
+    
 	emit enableWalletActions(false);
 	emit enableFolderActions(false);
 	emit enableContextFolderActions(false);
@@ -412,8 +412,21 @@ void KWalletEditor::entryEditted() {
 	_ww->_undoChanges->setEnabled(true);
 }
 
+/*
+ * This utility class can be used to change cursor inside methods using
+ * return statement in the middle (booo) :-)
+ */
+struct WaitCursor {
+    WaitCursor() {
+        QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+    }
+    ~WaitCursor() {
+        QApplication::restoreOverrideCursor();
+    }
+};
 
 void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item) {
+    WaitCursor waitCursor;
     // do not forget to save changes
     if ( _ww->_saveChanges->isEnabled() && (_displayedItem != item) ){
         if ( KMessageBox::Yes ==  KMessageBox::questionYesNo(this, 

@@ -96,6 +96,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	setAutoSaveSettings(QLatin1String("MainWindow"), true);
 	_iconView->setMinimumSize(320, 200);
 
+    if ( !KWallet::Wallet::isUsingKSecretsService() ) {
         m_kwalletdModule = new org::kde::KWallet(QLatin1String( "org.kde.kwalletd" ), QLatin1String( "/modules/kwalletd" ), QDBusConnection::sessionBus());
         connect(QDBusConnection::sessionBus().interface(),
                 SIGNAL(serviceOwnerChanged(QString,QString,QString)),
@@ -111,6 +112,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
                  this, SLOT(updateWalletDisplay()) );
         connect( m_kwalletdModule, SIGNAL(walletListDirty()),
                  this, SLOT(updateWalletDisplay()) );
+    }
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
@@ -400,6 +402,7 @@ void KWalletManager::createWallet() {
 	// Small race here - the wallet could be created on us already.
 	if (!n.isEmpty()) {
 		openWallet(n, true);
+        updateWalletDisplay();
 	}
 }
 
@@ -416,7 +419,9 @@ void KWalletManager::setupWallet() {
 
 
 void KWalletManager::closeAllWallets() {
-    m_kwalletdModule->closeAllWallets();
+    if ( m_kwalletdModule ) {
+        m_kwalletdModule->closeAllWallets();
+    }
 }
 
 #include "kwalletmanager.moc"
