@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2011-08-04</date>
-<releaseinfo>1.8 (&kde; 4.7)</releaseinfo>
+<date>2011-11-28</date>
+<releaseinfo>1.8 (&kde; 4.8)</releaseinfo>
 
 <abstract>
 <para>
@@ -406,6 +406,67 @@ all passwords stored inside.</para>
 
 </sect1>
 
+<sect1 id="ksecretsync-kcontrol-module">
+<title>&kde; Secret Sync</title>
+
+<para>KDE Secret Sync tool aims to help synchronize secrets, such as passwords 
+and login-in account information, between several devices running KDE. 
+It comes as a feature of the new KSecretsService infrastructure. For 
+more information about this infrastructure, please check the 
+<ulink url="http://techbase.kde.org/Projects/Utils/ksecretsservice">KSecretsservice page</ulink> 
+and also the 
+<ulink url="https://projects.kde.org/projects/kde/kdeutils/ksecrets">project information page</ulink>. This tool is 
+currently under development.</para>
+
+<para>&kde; Secret Sync uses cryptograpy to securely exchange the secrets 
+between the devices. As such, it can be used over unsecure connections, 
+such as the internet.</para>
+<!-- not in gui 4.8.0
+<para>The operation is quite simple and it can follow one of the two scenarios:</para>
+<itemizedlist>
+<listitem><para>synchronize using a centralized resource</para></listitem>
+<listitem><para>peer-to-peer synchronization</para></listitem>
+</itemizedlist>
+
+<sect2 id="centralized-resource">
+<title>Using a centralized resource</title>
+<para>This operating mode requires full access to an IMAP server. The &kde; 
+Secret Sync tool creates an encrypted resource under the folder of your 
+choice then it updates it each time a local secret collection changes, 
+as notified by the KSecretsService infrastructure. This occurs each time 
+an application updates it's secret information. &kde; Secret Sync tool 
+periodically checks this central resource for modifications and when 
+updates are found, then they are pushed to the corresponding local 
+collection.</para>
+
+<para>This case requires permanent connection to an IMAP server. The &kde; 
+Secret Sync tool will hold sync operations during network outages. The 
+security level of this kind of operation depends of the security of the 
+IMAP server and the encrypting algorithm used to created the centralized 
+resource. On the other hand, storing the secrets on that centralized 
+resources can also be viewed as a backup.</para>
+</sect2>
+-->
+<sect2 id="peer-to-peer-synchronization">
+<title>Peer-to-peer synchronization</title>
+<para>This operation mode does not require access to a centralized <!--IMAP--> 
+server. A list of known computers is used instead. &kde; Secret Sync will 
+initiate secret exchange sessions with each of it's known computers over 
+a SSH tunnel. The local secret changes are propagated to the other known 
+computers as soon as they are detected.</para>
+
+<para>This case require a network connection between known devices. The &kde; 
+Secret Sync tool will hold sync operations with the devices that are not 
+available due to network outages. A naming service should be used for 
+devices that change IP address with each connection.</para>
+
+<para>On the <guilabel>General</guilabel> tab check <guilabel>Enable auto synchronization</guilabel> 
+and adjust the port your computer is listening for this service. Go to the 
+<guilabel>Computers</guilabel> tab and add all remote computer names and the 
+port numbers they are listening for synchronization of secrets.</para>
+
+</sect2>
+</sect1>
 </chapter>
 
 <chapter id="advanced-features">
