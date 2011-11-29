@@ -413,14 +413,14 @@ all passwords stored inside.</para>
 and login-in account information, between several devices running KDE. 
 It comes as a feature of the new KSecretsService infrastructure. For 
 more information about this infrastructure, please check the 
-<ulink url="http://techbase.kde.org/Projects/Utils/ksecretsservice">KSecretsservice page</ulink> 
+<ulink url="http://techbase.kde.org/Projects/Utils/ksecretsservice">KSecretsService page</ulink> 
 and also the 
 <ulink url="https://projects.kde.org/projects/kde/kdeutils/ksecrets">project information page</ulink>. This tool is 
 currently under development.</para>
 
-<para>&kde; Secret Sync uses cryptograpy to securely exchange the secrets 
-between the devices. As such, it can be used over unsecure connections, 
-such as the internet.</para>
+<para>&kde; Secret Sync uses cryptography to securely exchange the secrets 
+between the devices. As such, it can be used over insecure connections, 
+such as the Internet.</para>
 <!-- not in gui 4.8.0
 <para>The operation is quite simple and it can follow one of the two scenarios:</para>
 <itemizedlist>
