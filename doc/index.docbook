@@ -405,7 +405,7 @@ context menu that appears, or by simply selecting it and pressing the
 all passwords stored inside.</para>
 
 </sect1>
-
+<!-- ksecrets moved to playground in 4.9
 <sect1 id="ksecretsync-kcontrol-module">
 <title>&kde; Secret Sync</title>
 
@@ -421,6 +421,7 @@ currently under development.</para>
 <para>&kde; Secret Sync uses cryptography to securely exchange the secrets 
 between the devices. As such, it can be used over insecure connections, 
 such as the Internet.</para>
+-->
 <!-- not in gui 4.8.0
 <para>The operation is quite simple and it can follow one of the two scenarios:</para>
 <itemizedlist>
@@ -447,9 +448,10 @@ resource. On the other hand, storing the secrets on that centralized
 resources can also be viewed as a backup.</para>
 </sect2>
 -->
+<!--
 <sect2 id="peer-to-peer-synchronization">
 <title>Peer-to-peer synchronization</title>
-<para>This operation mode does not require access to a centralized <!--IMAP--> 
+<para>This operation mode does not require access to a centralized (IMAP) 
 server. A list of known computers is used instead. &kde; Secret Sync will 
 initiate secret exchange sessions with each of it's known computers over 
 a SSH tunnel. The local secret changes are propagated to the other known 
@@ -464,9 +466,9 @@ devices that change IP address with each connection.</para>
 and adjust the port your computer is listening for this service. Go to the 
 <guilabel>Computers</guilabel> tab and add all remote computer names and the 
 port numbers they are listening for synchronization of secrets.</para>
-
 </sect2>
 </sect1>
+-->
 </chapter>
 
 <chapter id="advanced-features">
