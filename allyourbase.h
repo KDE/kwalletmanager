@@ -48,16 +48,17 @@ class KWalletEntryItem : public QTreeWidgetItem {
 		KWalletEntryItem(KWallet::Wallet *w, QTreeWidgetItem* parent, const QString& ename);
 		virtual ~KWalletEntryItem();
 
-		const QString& oldName() { return _oldName; }
-		QString currentName() { return text(0); }
-
-		void clearOldName() { _oldName = text(0); }
+		const QString& name() const { return m_name; }
+		void setName(const QString& n);
+		// Cancel renaming
+		void restoreName();
 
 	public:
 		KWallet::Wallet *_wallet;
 
 	private:
-		QString _oldName;
+		void setText(int, const QString&) {} // forbidden
+		QString m_name;
 };
 
 class KWalletContainerItem : public QTreeWidgetItem {

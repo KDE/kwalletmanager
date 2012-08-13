@@ -133,8 +133,9 @@ bool KWalletContainerItem::contains(const QString& key) {
 
 QTreeWidgetItem *KWalletContainerItem::getItem(const QString& key) {
 	for (int i = 0; i < childCount(); ++i) {
-		if (child(i)->text(0) == key) {
-			return child(i);
+		KWalletEntryItem* entryItem = dynamic_cast<KWalletEntryItem *>(child(i));
+		if (entryItem && entryItem->name() == key) {
+			return entryItem;
 		}
 	}
 	return 0;
@@ -144,12 +145,24 @@ QTreeWidgetItem *KWalletContainerItem::getItem(const QString& key) {
  *  KWalletEntryItem - ListView items to represent kwallet entries
  */
 KWalletEntryItem::KWalletEntryItem(KWallet::Wallet *w, QTreeWidgetItem* parent, const QString& ename)
-: QTreeWidgetItem(parent, QStringList() << ename, KWalletEntryItemClass), _wallet(w), _oldName(ename) {
+: QTreeWidgetItem(parent, QStringList() << ename, KWalletEntryItemClass), _wallet(w), m_name(ename) {
 	setFlags(Qt::ItemIsSelectable | Qt::ItemIsEditable | Qt::ItemIsDragEnabled | Qt::ItemIsEnabled);
 }
 
 KWalletEntryItem::~KWalletEntryItem() {
 }
+
+void KWalletEntryItem::setName(const QString& n)
+{
+	m_name = n;
+	QTreeWidgetItem::setText(0, n);
+}
+
+void KWalletEntryItem::restoreName()
+{
+	QTreeWidgetItem::setText(0, m_name);
+}
+
 
 /****************
  * KWalletItem - IconView items to represent wallets

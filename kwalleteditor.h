@@ -60,7 +60,7 @@ class KWalletEditor : public KXmlGuiWindow {
 	private slots:
 		void updateFolderList(bool checkEntries = false);
 		void entrySelectionChanged(QTreeWidgetItem *item);
-		void listItemRenamed(QTreeWidgetItem *);
+		void listItemChanged(QTreeWidgetItem *, int column);
 		void listContextMenuRequested(const QPoint& pos);
 		void updateEntries(const QString& folder);
 

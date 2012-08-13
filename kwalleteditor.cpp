@@ -112,7 +112,7 @@ KWalletEditor::KWalletEditor(const QString& wallet, bool isPath, QWidget *parent
 	connect(_entryList,
 		SIGNAL(itemChanged(QTreeWidgetItem*,int)),
 		this,
-		SLOT(listItemRenamed(QTreeWidgetItem*)));
+		SLOT(listItemChanged(QTreeWidgetItem*,int)));
 
 	connect(_ww->_passwordValue, SIGNAL(textChanged()),
 		this, SLOT(entryEditted()));
@@ -762,21 +762,24 @@ void KWalletEditor::renameEntry() {
 
 
 // Only supports renaming of KWalletEntryItem derived classes.
-void KWalletEditor::listItemRenamed(QTreeWidgetItem* item) {
-	if (item) {
+void KWalletEditor::listItemChanged(QTreeWidgetItem* item, int column) {
+	if (item && column == 0) {
 		KWalletEntryItem *i = dynamic_cast<KWalletEntryItem*>(item);
 		if (!i) {
 			return;
 		}
 
 		const QString t = item->text(0);
+		if (t == i->name()) {
+			return;
+		}
 		if (!_w || t.isEmpty()) {
-			i->setText(0, i->oldName());
+			i->restoreName();
 			return;
 		}
 
-		if (_w->renameEntry(i->oldName(), t) == 0) {
-			i->clearOldName();
+		if (_w->renameEntry(i->name(), t) == 0) {
+			i->setName(t);
 			KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem*>(item->parent());
 			if (!ci) {
 				KMessageBox::error(this, i18n("An unexpected error occurred trying to rename the entry"));
@@ -790,7 +793,7 @@ void KWalletEditor::listItemRenamed(QTreeWidgetItem* item) {
 				_ww->_entryName->setText(i18n("Binary Data: %1", item->text(0)));
 			}
 		} else {
-			i->setText(0, i->oldName());
+			i->restoreName();
 		}
 	}
 }
