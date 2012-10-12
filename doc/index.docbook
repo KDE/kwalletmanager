@@ -8,7 +8,7 @@
   <!ENTITY % English "INCLUDE">
 ]>
 
-<book lang="&language;">
+<book id="kwallet" lang="&language;">
 <bookinfo>
 <title>The &kwallet; Handbook</title>
 
