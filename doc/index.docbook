@@ -142,7 +142,7 @@ from within the &kwalletmanager;.</para>
 deleting wallets and manipulating their contents (changing keys, ...).</para>
 
 <para>The &kwalletmanager; application is launched with <menuchoice>
-<guimenu>Applications</guimenu><guisubmenu>Settings</guisubmenu>
+<guimenu>Applications</guimenu><guisubmenu>System</guisubmenu>
 <guimenuitem>Wallet Management Tool</guimenuitem></menuchoice> from the
 application launcher. 
 Alternatively start &krunner; with shortcut <keycombo
