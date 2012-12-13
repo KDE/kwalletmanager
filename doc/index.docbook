@@ -485,6 +485,17 @@ on a vacation, and still have easy access to important sites.</para>
 <para>Future versions will have built-in functions for easy export or
 copying of data to portable devices.</para>
 
+ <note>
+   <para>
+     Information on the internal structure of &kwallet; and some useful links
+     to the code where you can find the answers on questions about the
+     structure of the passwords records and the ciphers applied to keep
+     passwords confident can be found on
+     <ulink url="http://techbase.kde.org/Projects/Utils/kwallet">&kwallet;
+     TechBase page</ulink>.
+   </para>
+ </note>
+
 </chapter>
 
 <chapter id="credits-and-licenses">
