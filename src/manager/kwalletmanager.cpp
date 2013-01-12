@@ -19,6 +19,7 @@
 
 
 #include "kwalletmanager.h"
+#include "kwalletmanagerwidget.h"
 #include "kwalletpopup.h"
 #include "kwalleteditor.h"
 #include "allyourbase.h"
@@ -86,15 +87,15 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 		_tray = 0;
 	}
 
-	_iconView = new KWalletIconView(this);
-	_iconView->setContextMenuPolicy(Qt::CustomContextMenu);
-	connect(_iconView, SIGNAL(executed(QListWidgetItem*)), this, SLOT(openWallet(QListWidgetItem*)));
-	connect(_iconView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
+    _managerWidget = new KWalletManagerWidget(this);
+// 	_iconView->setContextMenuPolicy(Qt::CustomContextMenu);
+// 	connect(_iconView, SIGNAL(executed(QListWidgetItem*)), this, SLOT(openWallet(QListWidgetItem*)));
+// 	connect(_iconView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
 
 	updateWalletDisplay();
-	setCentralWidget(_iconView);
+	setCentralWidget(_managerWidget);
 	setAutoSaveSettings(QLatin1String("MainWindow"), true);
-	_iconView->setMinimumSize(320, 200);
+//  	_managerWidget->setMinimumSize(320, 200);
 
         m_kwalletdModule = new org::kde::KWallet(QLatin1String( "org.kde.kwalletd" ), QLatin1String( "/modules/kwalletd" ), QDBusConnection::sessionBus());
         connect(QDBusConnection::sessionBus().interface(),
@@ -193,46 +194,22 @@ void KWalletManager::aWalletWasOpened() {
 
 
 void KWalletManager::updateWalletDisplay() {
-    const QStringList wl = KWallet::Wallet::walletList();
-    QStack<QListWidgetItem *> trash;
-
-	for (int i = 0; i < _iconView->count(); ++i) {
-		QListWidgetItem *item = _iconView->item(i);
-		if (!wl.contains(item->text())) {
-			trash.push(item);
-		}
-	}
-
-	qDeleteAll(trash);
-	trash.clear();
-
-	for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
-		const QList<QListWidgetItem *> items = _iconView->findItems(*i, Qt::MatchFixedString | Qt::MatchCaseSensitive);
-		KWalletItem *wi = 0;
-		if (items.isEmpty()) {
-			wi = new KWalletItem(_iconView, *i);
-		} else {
-			wi = dynamic_cast<KWalletItem*>(items[0]);
-		}
-		if (wi) {
-			wi->setOpen(KWallet::Wallet::isOpen(*i));
-		}
-	}
+    _managerWidget->updateWalletDisplay();
 }
 
 
 void KWalletManager::contextMenu(const QPoint& pos) {
-	QListWidgetItem *item = _iconView->itemAt(pos);
-	if (item) {
-		QPointer<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
-		connect(popupMenu, SIGNAL(walletOpened(QString)), this, SLOT(openWallet(QString)));
-		connect(popupMenu, SIGNAL(walletClosed(QString)), this, SLOT(closeWallet(QString)));
-		connect(popupMenu, SIGNAL(walletDeleted(QString)), this, SLOT(deleteWallet(QString)));
-		connect(popupMenu, SIGNAL(walletChangePassword(QString)), this, SLOT(changeWalletPassword(QString)));
-		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
-		popupMenu->exec(_iconView->mapToGlobal(pos));
-		delete popupMenu;
-	}
+// 	QListWidgetItem *item = _iconView->itemAt(pos);
+// 	if (item) {
+// 		QPointer<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
+// 		connect(popupMenu, SIGNAL(walletOpened(QString)), this, SLOT(openWallet(QString)));
+// 		connect(popupMenu, SIGNAL(walletClosed(QString)), this, SLOT(closeWallet(QString)));
+// 		connect(popupMenu, SIGNAL(walletDeleted(QString)), this, SLOT(deleteWallet(QString)));
+// 		connect(popupMenu, SIGNAL(walletChangePassword(QString)), this, SLOT(changeWalletPassword(QString)));
+// 		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
+// 		popupMenu->exec(_iconView->mapToGlobal(pos));
+// 		delete popupMenu;
+// 	}
 }
 
 
@@ -284,15 +261,15 @@ void KWalletManager::openWalletFile(const QString& path) {
 
 
 void KWalletManager::openWallet() {
-	QListWidgetItem *item = _iconView->currentItem();
-	openWallet(item);
+// 	QListWidgetItem *item = _iconView->currentItem();
+// 	openWallet(item);
 }
 
 void KWalletManager::deleteWallet() {
-	QListWidgetItem *item = _iconView->currentItem();
-	if (item) {
-		deleteWallet(item->text());
-	}
+// 	QListWidgetItem *item = _iconView->currentItem();
+// 	if (item) {
+// 		deleteWallet(item->text());
+// 	}
 }
 
 
@@ -386,7 +363,7 @@ void KWalletManager::createWallet() {
 			return;
 		}
 
-		if (!_iconView->findItems(n, Qt::MatchFixedString).isEmpty ()) {
+		if (_managerWidget->hasWallet(n)) {
 			int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString(), KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
 			if (rc == KMessageBox::No) {
 				return;

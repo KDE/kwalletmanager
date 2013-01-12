@@ -23,6 +23,7 @@
 #include <kxmlguiwindow.h>
 #include <QIcon>
 
+class KWalletManagerWidget;
 class KStatusNotifierItem;
 class KWalletIconView;
 class QListWidgetItem;
@@ -72,7 +73,7 @@ class KWalletManager : public KXmlGuiWindow {
 	private:
 		KStatusNotifierItem *_tray;
 		bool _shuttingDown;
-		KWalletIconView *_iconView;
+        KWalletManagerWidget *_managerWidget;
 		OrgKdeKWalletInterface *m_kwalletdModule;
 		QList<KXmlGuiWindow*> _windows;
 		bool _kwalletdLaunch;

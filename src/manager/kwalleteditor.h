@@ -21,7 +21,8 @@
 #ifndef KWALLETEDITOR_H
 #define KWALLETEDITOR_H
 
-#include "ui_walletwidget.h"
+#include "walletwidget.h"
+
 #include <kwallet.h>
 #include <kxmlguiwindow.h>
 #include <QStringList>
@@ -32,13 +33,6 @@ class QCheckBox;
 class KWalletEntryList;
 class KWMapEditor;
 class KAction;
-class WalletWidget : public QWidget, public Ui::WalletWidget
-{
-public:
-  WalletWidget( QWidget *parent ) : QWidget( parent ) {
-    setupUi( this );
-  }
-};
 
 
 class KWalletEditor : public KXmlGuiWindow {
