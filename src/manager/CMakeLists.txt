@@ -1,13 +1,15 @@
 ########### next target ###############
 
 set(kwalletmanager_SRCS 
-   kwalletmanager.cpp 
-   main.cpp 
-   kwalletpopup.cpp 
-   kwalleteditor.cpp 
-   kwmapeditor.cpp 
-   allyourbase.cpp 
-   kbetterthankdialogbase.cpp )
+    kwalletmanager.cpp
+    kwalletmanagerwidget.cpp
+    kwalletmanagerwidgetitem.cpp
+    main.cpp
+    kwalletpopup.cpp
+    kwalleteditor.cpp
+    kwmapeditor.cpp
+    allyourbase.cpp
+    kbetterthankdialogbase.cpp )
 
 qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
 
