@@ -6,13 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>664</width>
-    <height>336</height>
+    <width>252</width>
+    <height>203</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <layout class="QGridLayout">
    <item row="0" column="0">
     <widget class="QSplitter" name="_splitter">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -316,14 +328,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KSqueezedTextLabel</class>
-   <extends>QLabel</extends>
-   <header>ksqueezedtextlabel.h</header>
-  </customwidget>
-  <customwidget>
    <class>KPushButton</class>
    <extends>QPushButton</extends>
    <header>kpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KSqueezedTextLabel</class>
+   <extends>QLabel</extends>
+   <header>ksqueezedtextlabel.h</header>
   </customwidget>
  </customwidgets>
  <includes>

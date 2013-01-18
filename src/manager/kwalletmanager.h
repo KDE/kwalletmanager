@@ -48,7 +48,7 @@ class KWalletManager : public KXmlGuiWindow {
 		void openWallet(const QString& walletName);
 		void openWallet(const QString& walletName, bool newWallet);
 		void openWalletFile(const QString& path);
-		void openWallet(QListWidgetItem *item);
+// 		void openWallet(QListWidgetItem *item);
 		void contextMenu(const QPoint& pos);
 
 	protected:

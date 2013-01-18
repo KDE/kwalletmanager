@@ -4,16 +4,18 @@ set(kwalletmanager_SRCS
     kwalletmanager.cpp
     kwalletmanagerwidget.cpp
     kwalletmanagerwidgetitem.cpp
+    walletcontrolwidget.cpp
     main.cpp
     kwalletpopup.cpp
     kwalleteditor.cpp
+    walletwidget.cpp
     kwmapeditor.cpp
     allyourbase.cpp
     kbetterthankdialogbase.cpp )
 
 qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
 
-kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui)
+kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui walletcontrolwidget.ui)
 
 kde4_add_app_icon(kwalletmanager_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kwalletmanager.png")
 

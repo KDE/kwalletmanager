@@ -279,34 +279,15 @@ void KWalletManager::openWallet(const QString& walletName) {
 
 
 void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
-	// Don't allow a wallet to open in two windows
-	foreach (KXmlGuiWindow *w, _windows) {
-		KWalletEditor *e = static_cast<KWalletEditor*>(w);
-		if (e->isOpen() && e->_walletName == walletName) {
-			w->raise();
-			return;
-		}
-	}
-
-	KWalletEditor *we = new KWalletEditor(walletName, false, this, "Wallet Editor");
-	we->setNewWallet(newWallet);
-	if (we->isOpen()) {
-		connect(we, SIGNAL(editorClosed(KXmlGuiWindow*)),
-			this, SLOT(editorClosed(KXmlGuiWindow*)));
-		we->show();
-		_windows.append(we);
-	} else if (!newWallet) {
-		KMessageBox::sorry(this, i18n("Error opening wallet %1.", walletName));
-		delete we;
-	}
+    qDebug("openWallet: TODO does it's still needeed?");
 }
 
 
-void KWalletManager::openWallet(QListWidgetItem *item) {
-	if (item) {
-		openWallet(item->text());
-	}
-}
+// void KWalletManager::openWallet(QListWidgetItem *item) {
+// 	if (item) {
+// 		openWallet(item->text());
+// 	}
+// }
 
 
 void KWalletManager::allWalletsClosed() {
