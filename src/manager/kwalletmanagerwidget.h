@@ -22,6 +22,8 @@
 
 #include <kpagewidget.h>
 
+class KWalletManagerWidgetItem;
+
 class KWalletManagerWidget : public KPageWidget {
     Q_OBJECT
 public:
@@ -31,7 +33,7 @@ public:
     void updateWalletDisplay();
     bool hasWallet(const QString&) const;
 private:
-    typedef QHash<QString, KPageWidgetItem*> WalletPagesHash;
+    typedef QHash<QString, KWalletManagerWidgetItem*> WalletPagesHash;
     WalletPagesHash _walletPages;
 };
 

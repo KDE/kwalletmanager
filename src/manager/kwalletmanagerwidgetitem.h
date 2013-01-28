@@ -22,10 +22,17 @@
 
 #include <kpagewidgetmodel.h>
 
+class WalletControlWidget;
 class KWalletManagerWidgetItem : public KPageWidgetItem {
     Q_OBJECT
 public:
     KWalletManagerWidgetItem(QWidget* widgetParent, const QString& walletName);
+
+    void updateWalletDisplay();
+
+private:
+    WalletControlWidget *_controlWidget;
+    QString             _walletName;
 };
 
 #endif // KWALLETMANAGERWIDGETITEM_H
