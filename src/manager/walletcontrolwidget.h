@@ -37,6 +37,8 @@ public Q_SLOTS:
     void onOpenClose();
     void onWalletClosed();
     void onChangePassword();
+    void updateWalletDisplay();
+    void onDisconnectApplication();
 
 private:
     QString             _walletName;

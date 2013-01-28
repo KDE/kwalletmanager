@@ -23,6 +23,10 @@
 
 #include "ui_walletwidget.h"
 
+namespace KWallet {
+class Wallet;
+}
+
 class KWMapEditor;
 class QCheckBox;
 class KWalletEntryList;
@@ -32,11 +36,15 @@ class WalletWidget : public QWidget, public Ui::WalletWidget
 public:
     explicit WalletWidget( QWidget *parent =0);
 
+    void startWalletEditing(KWallet::Wallet *wallet);
+    void forgetWallet();
+
 private:
     KWalletEntryList        *_entryList;
     QCheckBox               *_mapEditorShowHide;
     KWMapEditor             *_mapEditor;
     QMap<QString,QString>   _currentMap; // save memory by storing
+    KWallet::Wallet         *_wallet;
 };
 
 #endif // WALLETWIDGET_H

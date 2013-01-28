@@ -38,6 +38,7 @@ KWalletManagerWidget::~KWalletManagerWidget()
 
 void KWalletManagerWidget::updateWalletDisplay()
 {
+    // find out pages corresponding to deleted wallets
     const QStringList wl = KWallet::Wallet::walletList();
     WalletPagesHash::iterator p = _walletPages.begin();
     while ( p != _walletPages.end() ) {
@@ -50,6 +51,14 @@ void KWalletManagerWidget::updateWalletDisplay()
         }
     }
 
+    // update existing wallets display, e.g. icon
+    WalletPagesHash::const_iterator cp = _walletPages.constBegin();
+    WalletPagesHash::const_iterator cend = _walletPages.constEnd();
+    for ( ; cp != cend; cp++ ) {
+         cp.value()->updateWalletDisplay();
+    }
+
+    // add new wallets
     for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
         const QString& name = *i;
         if ( !_walletPages.contains(name) ) {

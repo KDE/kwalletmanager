@@ -43,16 +43,23 @@ WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletN
 void WalletControlWidget::onSetupWidget()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {
-        _wallet = KWallet::Wallet::openWallet(_walletName, winId());
+        if (0 == _wallet) {
+            _wallet = KWallet::Wallet::openWallet(_walletName, winId());
+            Q_ASSERT(_wallet != 0);
+        }
         connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
-        _openClose->setText(tr2i18n("Close", 0));
+        _openClose->setText(tr2i18n("&Close", 0));
         _openClose->setArrowType(Qt::UpArrow);
         _walletWidget->setVisible(true);
+        _walletWidget->startWalletEditing(_wallet);
         _changePassword->setEnabled(true);
         _disconnect->setEnabled(true);
         _delete->setEnabled(true);
     } else {
+        _openClose->setText(tr2i18n("&Open", 0));
+        _openClose->setArrowType(Qt::DownArrow);
         _walletWidget->setVisible(false);
+        _walletWidget->forgetWallet();
         _changePassword->setEnabled(false);
         _disconnect->setEnabled(false);
         _delete->setEnabled(false);
@@ -71,8 +78,12 @@ void WalletControlWidget::onOpenClose()
                 rc = KWallet::Wallet::closeWallet(_walletName, true);
                 if (rc != 0) {
                     KMessageBox::sorry(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
+                } else {
+                    _wallet = 0;
                 }
             }
+        } else {
+            _wallet = 0;
         }
     }
     else {
@@ -90,4 +101,34 @@ void WalletControlWidget::onWalletClosed()
 void WalletControlWidget::onChangePassword()
 {
     KWallet::Wallet::changePassword(_walletName, winId());
+}
+
+void WalletControlWidget::updateWalletDisplay()
+{
+    QList<QAction*> existingActions = _disconnect->actions();
+    QList<QAction*>::const_iterator i = existingActions.constBegin();
+    QList<QAction*>::const_iterator ie = existingActions.constEnd();
+    for ( ; i != ie; i++ ) {
+        _disconnect->removeAction(*i);
+    }
+
+    // create the disconnect widget menu
+    const QStringList ul = KWallet::Wallet::users(_walletName);
+    if (!ul.isEmpty()) {
+        for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
+            QAction *a = new QAction(*it, this);
+            connect(a, SIGNAL(triggered()), this, SLOT(onDisconnectApplication()));
+            _disconnect->addAction(a);
+            a->setData(*it);
+        }
+    }
+}
+
+void WalletControlWidget::onDisconnectApplication()
+{
+    QAction *a = qobject_cast<QAction *>(sender());
+    Q_ASSERT(a);
+    if (a)  {
+        KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
+    }
 }

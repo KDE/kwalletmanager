@@ -25,11 +25,18 @@
 #include <kicon.h>
 
 KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget* widgetParent, const QString& walletName):
-    KPageWidgetItem( new WalletControlWidget(widgetParent, walletName), walletName )
+    KPageWidgetItem( _controlWidget = new WalletControlWidget(widgetParent, walletName), walletName ),
+    _walletName(walletName)
 {
-    if (KWallet::Wallet::isOpen(walletName)) {
+    updateWalletDisplay();
+}
+
+void KWalletManagerWidgetItem::updateWalletDisplay()
+{
+    if (KWallet::Wallet::isOpen(_walletName)) {
         setIcon( KIcon( QLatin1String("wallet-open") ) );
     } else {
         setIcon( KIcon( QLatin1String("wallet-closed") ) );
     }
+    _controlWidget->updateWalletDisplay();
 }

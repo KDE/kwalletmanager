@@ -27,7 +27,8 @@
 #include <ktreewidgetsearchline.h>
 
 WalletWidget::WalletWidget(QWidget* parent) :
-    QWidget( parent )
+    QWidget( parent ),
+    _wallet(0)
 {
     setupUi( this );
 
@@ -65,3 +66,12 @@ WalletWidget::WalletWidget(QWidget* parent) :
 //     _splitter->setSizes(splitterSize);
 }
 
+void WalletWidget::forgetWallet()
+{
+    _wallet = 0;
+}
+
+void WalletWidget::startWalletEditing(KWallet::Wallet* wallet)
+{
+    _wallet = wallet;
+}
