@@ -248,14 +248,8 @@ void KWalletManager::changeWalletPassword(const QString& walletName) {
 
 
 void KWalletManager::openWalletFile(const QString& path) {
-	KWalletEditor *we = new KWalletEditor(path, true, this, "Wallet Editor");
-	if (we->isOpen()) {
-		connect(we, SIGNAL(editorClosed(KXmlGuiWindow*)),
-			this, SLOT(editorClosed(KXmlGuiWindow*)));
-		we->show();
-	} else {
+    if (!_managerWidget->openWalletFile(path)) {
 		KMessageBox::sorry(this, i18n("Error opening wallet %1.", path));
-		delete we;
 	}
 }
 
