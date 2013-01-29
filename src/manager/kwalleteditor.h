@@ -35,11 +35,11 @@ class KWMapEditor;
 class KAction;
 
 
-class KWalletEditor : public KXmlGuiWindow {
+class KWalletEditor : public QObject {
 	Q_OBJECT
 
 	public:
-		KWalletEditor(const QString& wallet, bool isPath, QWidget *parent = 0, const char* name = 0);
+		KWalletEditor(WalletWidget* ww, KWallet::Wallet* wallet, bool isPath, QWidget *parent = 0, const char* name = 0);
 		virtual ~KWalletEditor();
 
 		bool isOpen() const { return _w != 0L; }
@@ -83,13 +83,14 @@ class KWalletEditor : public KXmlGuiWindow {
 		void enableWalletActions(bool enable);
 		void enableFolderActions(bool enable);
 		void enableContextFolderActions(bool enable);
-		void editorClosed(KXmlGuiWindow*);
 
 	public:
 		QString _walletName;
 
 	private:
 		void createActions();
+        KActionCollection *actionCollection();
+
 		bool _nonLocal;
 		KWallet::Wallet *_w;
 		WalletWidget *_ww;
@@ -108,6 +109,7 @@ class KWalletEditor : public KXmlGuiWindow {
 		bool _newWallet;
 		KMenu *_contextMenu;
         QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
+        KActionCollection *_actionCollection;
 };
 
 #endif

@@ -23,6 +23,7 @@
 
 #include "ui_walletwidget.h"
 
+class KWalletEditor;
 namespace KWallet {
 class Wallet;
 }
@@ -45,6 +46,7 @@ private:
     KWMapEditor             *_mapEditor;
     QMap<QString,QString>   _currentMap; // save memory by storing
     KWallet::Wallet         *_wallet;
+    KWalletEditor           *_editor;
 };
 
 #endif // WALLETWIDGET_H

@@ -74,3 +74,10 @@ bool KWalletManagerWidget::hasWallet(const QString& name) const
 {
     return _walletPages.contains(name);
 }
+
+bool KWalletManagerWidget::openWalletFile(const QString& path)
+{
+    Q_ASSERT(0);
+    // TODO: implement this method: add a new tab with an editor centered on a file
+    return false;
+}
