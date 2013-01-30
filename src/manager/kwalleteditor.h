@@ -28,6 +28,8 @@
 #include <QStringList>
 #include <QLabel>
 
+class KMenu;
+class QToolButton;
 class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
@@ -45,6 +47,7 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		bool isOpen() const { return _w != 0L; }
 
 		void setNewWallet(bool newWallet);
+        void setControlWidget(QToolButton* control);
 
 	public slots:
 		void walletClosed();
@@ -109,6 +112,9 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		KMenu *_contextMenu;
         QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
         KActionCollection *_actionCollection;
+        QToolButton *_control;
+        KMenu* _controlMenu;
+        KMenu* _walletSubmenu;
 };
 
 #endif

@@ -23,8 +23,10 @@
 #include <QPropertyAnimation>
 #include <QTimer>
 #include <QFrame>
+#include <QToolButton>
 #include <kwallet.h>
 #include <kmessagebox.h>
+#include <kmenu.h>
 
 WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletName):
     QWidget(parent),
@@ -52,10 +54,9 @@ void WalletControlWidget::onSetupWidget()
             _walletEditor = new KWalletEditor(_editorFrame, _wallet, false);
             _editorFrameLayout->addWidget(_walletEditor);
             _walletEditor->setVisible(true);
+            _walletEditor->setControlWidget(_control);
 
-            _changePassword->setEnabled(true);
-            _disconnect->setEnabled(true);
-            _delete->setEnabled(true);
+            _control->setEnabled(true);
         }
     } else {
         _openClose->setText(tr2i18n("&Open", 0));
@@ -65,10 +66,7 @@ void WalletControlWidget::onSetupWidget()
             _walletEditor->setVisible(false);
             delete _walletEditor, _walletEditor =0;
         }
-
-        _changePassword->setEnabled(false);
-        _disconnect->setEnabled(false);
-        _delete->setEnabled(false);
+        _control->setEnabled(false);
     }
 }
 
@@ -104,11 +102,6 @@ void WalletControlWidget::onWalletClosed()
     onSetupWidget();
 }
 
-void WalletControlWidget::onChangePassword()
-{
-    KWallet::Wallet::changePassword(_walletName, winId());
-}
-
 void WalletControlWidget::updateWalletDisplay()
 {
     QList<QAction*> existingActions = _disconnect->actions();
@@ -137,4 +130,21 @@ void WalletControlWidget::onDisconnectApplication()
     if (a)  {
         KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
     }
+}
+
+void WalletControlWidget::onDisconnectPressed()
+{
+    _disconnect->showMenu();
+}
+
+void WalletControlWidget::onControlPressed()
+{
+    if (_walletEditor) {
+        _control->showMenu();
+    }
+}
+
+void WalletControlWidget::onDelete()
+{
+
 }

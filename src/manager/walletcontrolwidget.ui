@@ -35,23 +35,19 @@
      <item>
       <widget class="QToolButton" name="_control">
        <property name="text">
-        <string>Control</string>
+        <string>Wallet</string>
+       </property>
+       <property name="icon">
+        <iconset theme="wallet-open"/>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
        </property>
        <property name="arrowType">
         <enum>Qt::DownArrow</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="_changePassword">
-       <property name="text">
-        <string>Change password...</string>
-       </property>
-       <property name="flat">
-        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -117,7 +113,6 @@
  </widget>
  <tabstops>
   <tabstop>_openClose</tabstop>
-  <tabstop>_changePassword</tabstop>
   <tabstop>_disconnect</tabstop>
   <tabstop>_delete</tabstop>
  </tabstops>
@@ -140,18 +135,50 @@
    </hints>
   </connection>
   <connection>
-   <sender>_changePassword</sender>
-   <signal>clicked()</signal>
+   <sender>_control</sender>
+   <signal>pressed()</signal>
    <receiver>WalletControlWidget</receiver>
-   <slot>onChangePassword()</slot>
+   <slot>onControlPressed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>128</x>
-     <y>18</y>
+     <x>127</x>
+     <y>15</y>
     </hint>
     <hint type="destinationlabel">
-     <x>879</x>
-     <y>30</y>
+     <x>1</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_disconnect</sender>
+   <signal>pressed()</signal>
+   <receiver>WalletControlWidget</receiver>
+   <slot>onDisconnectPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>WalletControlWidget</receiver>
+   <slot>onDelete()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>95</y>
     </hint>
    </hints>
   </connection>
@@ -159,5 +186,8 @@
  <slots>
   <slot>onOpenClose()</slot>
   <slot>onChangePassword()</slot>
+  <slot>onControlPressed()</slot>
+  <slot>onDisconnectPressed()</slot>
+  <slot>onDelete()</slot>
  </slots>
 </ui>

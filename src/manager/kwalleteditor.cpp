@@ -54,6 +54,7 @@
 #include <QList>
 #include <QVBoxLayout>
 #include <QStack>
+#include <QToolButton>
 
 #include <assert.h>
 #include <ktoolbar.h>
@@ -157,6 +158,32 @@ KWalletEditor::~KWalletEditor() {
 	}
 }
 
+void KWalletEditor::setControlWidget(QToolButton* control)
+{
+    _control = control;
+//     _actionCollection->associateWidget(_control);
+    _controlMenu = new KMenu(_control);
+
+//     _controlMenu->setTitle(i18n("&Wallet"));
+//     _controlMenu->setIcon(KIcon(QLatin1String("wallet-open")));
+    _controlMenu->addAction(_saveAsAction);
+    _controlMenu->addSeparator();
+    _controlMenu->addAction(_newFolderAction);
+    _controlMenu->addAction(_deleteFolderAction);
+    _controlMenu->addSeparator();
+    _controlMenu->addAction(_passwordAction);
+    _controlMenu->addSeparator();
+    _controlMenu->addAction(_mergeAction);
+    _controlMenu->addAction(_importAction);
+    _controlMenu->addAction(_exportAction);
+
+    control->setMenu(_controlMenu);
+
+    emit enableFolderActions(true);
+    emit enableContextFolderActions(false);
+    emit enableWalletActions(true);
+}
+
 KActionCollection* KWalletEditor::actionCollection()
 {
     if (_actionCollection == 0) {
@@ -229,7 +256,6 @@ void KWalletEditor::createActions() {
 	connect(_deleteEntryAction, SIGNAL(triggered(bool)), SLOT(deleteEntry()));
 	_deleteEntryAction->setEnabled(false);
 
-	KStandardAction::quit(this, SLOT(close()), actionCollection());
 //	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 // actionCollection());
 	emit enableWalletActions(false);
