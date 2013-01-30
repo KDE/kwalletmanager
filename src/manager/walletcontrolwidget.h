@@ -37,9 +37,11 @@ public Q_SLOTS:
     void onSetupWidget();
     void onOpenClose();
     void onWalletClosed();
-    void onChangePassword();
     void updateWalletDisplay();
     void onDisconnectApplication();
+    void onControlPressed();
+    void onDisconnectPressed();
+    void onDelete();
 
 private:
     QString             _walletName;
