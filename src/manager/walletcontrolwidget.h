@@ -21,11 +21,12 @@
 
 #include "ui_walletcontrolwidget.h"
 
+class KWalletEditor;
+
 namespace KWallet {
 class Wallet;
 }
 
-class WalletWidget;
 class WalletControlWidget : public QWidget, public Ui::WalletControlWidget 
 {
     Q_OBJECT
@@ -43,7 +44,7 @@ public Q_SLOTS:
 private:
     QString             _walletName;
     KWallet::Wallet*    _wallet;
-    WalletWidget*       _walletWidget;
+    KWalletEditor*      _walletEditor;
 };
 
 #endif // WALLETCONTROLWIDGET_H

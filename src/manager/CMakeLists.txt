@@ -8,7 +8,6 @@ set(kwalletmanager_SRCS
     main.cpp
     kwalletpopup.cpp
     kwalleteditor.cpp
-    walletwidget.cpp
     kwmapeditor.cpp
     allyourbase.cpp
     kbetterthankdialogbase.cpp )
