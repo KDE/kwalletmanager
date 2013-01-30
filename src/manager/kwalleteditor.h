@@ -21,7 +21,7 @@
 #ifndef KWALLETEDITOR_H
 #define KWALLETEDITOR_H
 
-#include "walletwidget.h"
+#include "ui_walletwidget.h"
 
 #include <kwallet.h>
 #include <kxmlguiwindow.h>
@@ -35,11 +35,11 @@ class KWMapEditor;
 class KAction;
 
 
-class KWalletEditor : public QObject {
+class KWalletEditor : public QWidget, public Ui::WalletWidget {
 	Q_OBJECT
 
 	public:
-		KWalletEditor(WalletWidget* ww, KWallet::Wallet* wallet, bool isPath, QWidget *parent = 0, const char* name = 0);
+		KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPath, const char* name = 0);
 		virtual ~KWalletEditor();
 
 		bool isOpen() const { return _w != 0L; }
@@ -93,7 +93,6 @@ class KWalletEditor : public QObject {
 
 		bool _nonLocal;
 		KWallet::Wallet *_w;
-		WalletWidget *_ww;
 		KWalletEntryList *_entryList;
 		bool _walletIsOpen;
 		QAction *_newFolderAction, *_deleteFolderAction;

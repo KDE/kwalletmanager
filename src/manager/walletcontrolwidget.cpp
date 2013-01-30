@@ -18,10 +18,11 @@
 */
 
 #include "walletcontrolwidget.h"
-#include "walletwidget.h"
+#include "kwalleteditor.h"
 
 #include <QPropertyAnimation>
 #include <QTimer>
+#include <QFrame>
 #include <kwallet.h>
 #include <kmessagebox.h>
 
@@ -29,13 +30,9 @@ WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletN
     QWidget(parent),
     _walletName(walletName),
     _wallet(0),
-    _walletWidget(0)
+    _walletEditor(0)
 {
     setupUi(this);
-
-    _walletWidget = new WalletWidget(_editorFrame);
-    _walletWidget->setVisible(false);
-    _editorFrameLayout->addWidget(_walletWidget);
 
     QTimer::singleShot(1, this, SLOT(onSetupWidget()));
 }
@@ -47,19 +44,28 @@ void WalletControlWidget::onSetupWidget()
             _wallet = KWallet::Wallet::openWallet(_walletName, winId());
             Q_ASSERT(_wallet != 0);
         }
-        connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
-        _openClose->setText(tr2i18n("&Close", 0));
-        _openClose->setArrowType(Qt::UpArrow);
-        _walletWidget->setVisible(true);
-        _walletWidget->startWalletEditing(_wallet);
-        _changePassword->setEnabled(true);
-        _disconnect->setEnabled(true);
-        _delete->setEnabled(true);
+        if (_wallet) {
+            connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
+            _openClose->setText(tr2i18n("&Close", 0));
+            _openClose->setArrowType(Qt::UpArrow);
+
+            _walletEditor = new KWalletEditor(_editorFrame, _wallet, false);
+            _editorFrameLayout->addWidget(_walletEditor);
+            _walletEditor->setVisible(true);
+
+            _changePassword->setEnabled(true);
+            _disconnect->setEnabled(true);
+            _delete->setEnabled(true);
+        }
     } else {
         _openClose->setText(tr2i18n("&Open", 0));
         _openClose->setArrowType(Qt::DownArrow);
-        _walletWidget->setVisible(false);
-        _walletWidget->forgetWallet();
+
+        if (_walletEditor) {
+            _walletEditor->setVisible(false);
+            delete _walletEditor, _walletEditor =0;
+        }
+
         _changePassword->setEnabled(false);
         _disconnect->setEnabled(false);
         _delete->setEnabled(false);
@@ -68,7 +74,7 @@ void WalletControlWidget::onSetupWidget()
 
 void WalletControlWidget::onOpenClose()
 {
-    // TODO create some fancy animation here to make _walletWidget appear or dissapear in a fancy way
+    // TODO create some fancy animation here to make _walletEditor appear or dissapear in a fancy way
     if (_wallet) {
         // Wallet is open, attempt close it
         int rc = KWallet::Wallet::closeWallet(_walletName, false);

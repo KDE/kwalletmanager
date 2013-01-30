@@ -33,6 +33,19 @@
       </widget>
      </item>
      <item>
+      <widget class="QToolButton" name="_control">
+       <property name="text">
+        <string>Control</string>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::DownArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="_changePassword">
        <property name="text">
         <string>Change password...</string>
@@ -48,10 +61,16 @@
         <string>Disconnect</string>
        </property>
        <property name="popupMode">
-        <enum>QToolButton::MenuButtonPopup</enum>
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
        </property>
        <property name="arrowType">
-        <enum>Qt::NoArrow</enum>
+        <enum>Qt::DownArrow</enum>
        </property>
       </widget>
      </item>

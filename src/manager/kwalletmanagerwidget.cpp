@@ -20,7 +20,6 @@
 
 #include "kwalletmanagerwidget.h"
 #include "kwalletmanagerwidgetitem.h"
-#include "walletwidget.h"
 #include "kwallet_interface.h"
 
 #include <kwallet.h>
