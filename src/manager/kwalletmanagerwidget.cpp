@@ -35,7 +35,7 @@ KWalletManagerWidget::~KWalletManagerWidget()
 
 }
 
-void KWalletManagerWidget::updateWalletDisplay()
+void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString() */)
 {
     // find out pages corresponding to deleted wallets
     const QStringList wl = KWallet::Wallet::walletList();
@@ -43,6 +43,7 @@ void KWalletManagerWidget::updateWalletDisplay()
     while ( p != _walletPages.end() ) {
         if ( !wl.contains(p.key()) ) {
             // remove the page corresponding to the missing wallet
+            removePage(p.value());
             p = _walletPages.erase(p);
         }
         else {
@@ -64,8 +65,11 @@ void KWalletManagerWidget::updateWalletDisplay()
             KWalletManagerWidgetItem *wi = new KWalletManagerWidgetItem(this, name);
             addPage( wi );
             _walletPages.insert(*i, wi);
-            // TODO show open wallet icon here
         }
+    }
+
+    if (!selectWallet.isEmpty()) {
+        setCurrentPage(_walletPages[selectWallet]);
     }
 }
 

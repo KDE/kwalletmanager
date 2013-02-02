@@ -42,14 +42,13 @@ class KWalletManager : public KXmlGuiWindow {
 
 	public slots:
 		void createWallet();
-		void deleteWallet(const QString& walletName);
 		void closeWallet(const QString& walletName);
 		void changeWalletPassword(const QString& walletName);
 		void openWallet(const QString& walletName);
-		void openWallet(const QString& walletName, bool newWallet);
 		void openWalletFile(const QString& path);
 // 		void openWallet(QListWidgetItem *item);
 		void contextMenu(const QPoint& pos);
+        void walletCreated(const QString& walletName);
 
 	protected:
 		virtual bool queryClose();
@@ -67,7 +66,6 @@ class KWalletManager : public KXmlGuiWindow {
 		void possiblyRescan(const QString& app, const QString&, const QString&);
 		void setupWallet();
 		void openWallet();
-		void deleteWallet();
 		void closeAllWallets();
 
 	private:

@@ -88,9 +88,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	}
 
     _managerWidget = new KWalletManagerWidget(this);
-// 	_iconView->setContextMenuPolicy(Qt::CustomContextMenu);
-// 	connect(_iconView, SIGNAL(executed(QListWidgetItem*)), this, SLOT(openWallet(QListWidgetItem*)));
-// 	connect(_iconView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
 
 	updateWalletDisplay();
 	setCentralWidget(_managerWidget);
@@ -112,6 +109,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
                  this, SLOT(updateWalletDisplay()) );
         connect( m_kwalletdModule, SIGNAL(walletListDirty()),
                  this, SLOT(updateWalletDisplay()) );
+        connect( m_kwalletdModule, SIGNAL(walletCreated(QString)), this, SLOT(walletCreated(QString)));
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
@@ -139,14 +137,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 actionCollection());
 
 	createGUI( QLatin1String( "kwalletmanager.rc" ));
-
-        KAction* openWalletAction = new KAction(i18n("Open Wallet"), actionCollection());
-        openWalletAction->setShortcut(Qt::Key_Return);
-        connect(openWalletAction, SIGNAL(triggered()), this, SLOT(openWallet()));
-
-        KAction* deleteWalletAction = new KAction(i18n("Delete Wallet"), actionCollection());
-        deleteWalletAction->setShortcut(Qt::Key_Delete);
-        connect(deleteWalletAction, SIGNAL(triggered()), this, SLOT(deleteWallet()));
 
 	if (_tray) {
 //		_tray->show();
@@ -197,32 +187,12 @@ void KWalletManager::updateWalletDisplay() {
     _managerWidget->updateWalletDisplay();
 }
 
-
-void KWalletManager::contextMenu(const QPoint& pos) {
-// 	QListWidgetItem *item = _iconView->itemAt(pos);
-// 	if (item) {
-// 		QPointer<KWalletPopup> popupMenu = new KWalletPopup(item->text(), this);
-// 		connect(popupMenu, SIGNAL(walletOpened(QString)), this, SLOT(openWallet(QString)));
-// 		connect(popupMenu, SIGNAL(walletClosed(QString)), this, SLOT(closeWallet(QString)));
-// 		connect(popupMenu, SIGNAL(walletDeleted(QString)), this, SLOT(deleteWallet(QString)));
-// 		connect(popupMenu, SIGNAL(walletChangePassword(QString)), this, SLOT(changeWalletPassword(QString)));
-// 		connect(popupMenu, SIGNAL(walletCreated()), this, SLOT(createWallet()));
-// 		popupMenu->exec(_iconView->mapToGlobal(pos));
-// 		delete popupMenu;
-// 	}
+void KWalletManager::walletCreated(const QString& newWalletName)
+{
+    _managerWidget->updateWalletDisplay(newWalletName);
 }
 
-
-void KWalletManager::deleteWallet(const QString& walletName) {
-	int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?", walletName),QString(),KStandardGuiItem::del());
-	if (rc != KMessageBox::Continue) {
-		return;
-	}
-	rc = KWallet::Wallet::deleteWallet(walletName);
-	if (rc != 0) {
-		KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.", rc));
-	}
-	updateWalletDisplay();
+void KWalletManager::contextMenu(const QPoint& ) {
 }
 
 
@@ -252,37 +222,6 @@ void KWalletManager::openWalletFile(const QString& path) {
 		KMessageBox::sorry(this, i18n("Error opening wallet %1.", path));
 	}
 }
-
-
-void KWalletManager::openWallet() {
-// 	QListWidgetItem *item = _iconView->currentItem();
-// 	openWallet(item);
-}
-
-void KWalletManager::deleteWallet() {
-// 	QListWidgetItem *item = _iconView->currentItem();
-// 	if (item) {
-// 		deleteWallet(item->text());
-// 	}
-}
-
-
-void KWalletManager::openWallet(const QString& walletName) {
-	openWallet(walletName, false);
-}
-
-
-void KWalletManager::openWallet(const QString& walletName, bool newWallet) {
-    qDebug("openWallet: TODO does it's still needeed?");
-}
-
-
-// void KWalletManager::openWallet(QListWidgetItem *item) {
-// 	if (item) {
-// 		openWallet(item->text());
-// 	}
-// }
-
 
 void KWalletManager::allWalletsClosed() {
 	if (_tray) {
@@ -351,10 +290,23 @@ void KWalletManager::createWallet() {
 
 	// Small race here - the wallet could be created on us already.
 	if (!n.isEmpty()) {
-		openWallet(n, true);
+        // attempt open the wallet to create it, then dispose it
+        // as it'll appear in on the main window via the walletCreated signal
+        // emmitted by the kwalletd
+        KWallet::Wallet::openWallet(n, winId());
 	}
 }
 
+void KWalletManager::openWallet(const QString& walletName)
+{
+    Q_UNUSED(walletName);
+    qWarning("TODO: implement openWallet from name");
+}
+
+void KWalletManager::openWallet()
+{
+    qWarning("TODO: implement openWallet from file");
+}
 
 void KWalletManager::shuttingDown() {
 	_shuttingDown = true;

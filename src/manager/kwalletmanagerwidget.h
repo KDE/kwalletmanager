@@ -30,7 +30,7 @@ public:
     explicit KWalletManagerWidget(QWidget* parent = 0, Qt::WindowFlags flags = 0);
     virtual ~KWalletManagerWidget();
 
-    void updateWalletDisplay();
+    void updateWalletDisplay(QString selectWallet = QString());
     bool hasWallet(const QString&) const;
     bool openWalletFile(const QString& path);
 private:

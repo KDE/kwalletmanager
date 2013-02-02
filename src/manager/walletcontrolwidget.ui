@@ -18,8 +18,20 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QToolButton" name="_openClose">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
         <string>Open</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -34,11 +46,24 @@
      </item>
      <item>
       <widget class="QToolButton" name="_control">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>Wallet</string>
+        <string>Wallet...</string>
        </property>
        <property name="icon">
-        <iconset theme="wallet-open"/>
+        <iconset theme="wallet-open">
+         <normaloff>../../../../../../../valentin/.designer/backup</normaloff>../../../../../../../valentin/.designer/backup</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
        </property>
        <property name="checkable">
         <bool>true</bool>
@@ -47,14 +72,26 @@
         <enum>Qt::ToolButtonTextBesideIcon</enum>
        </property>
        <property name="arrowType">
-        <enum>Qt::DownArrow</enum>
+        <enum>Qt::NoArrow</enum>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QToolButton" name="_disconnect">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
         <string>Disconnect</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
        </property>
        <property name="popupMode">
         <enum>QToolButton::DelayedPopup</enum>
@@ -66,14 +103,32 @@
         <bool>false</bool>
        </property>
        <property name="arrowType">
-        <enum>Qt::DownArrow</enum>
+        <enum>Qt::NoArrow</enum>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QToolButton" name="_delete">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
         <string>Delete...</string>
+       </property>
+       <property name="icon">
+        <iconset theme="trash-empty"/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
        </property>
       </widget>
      </item>
