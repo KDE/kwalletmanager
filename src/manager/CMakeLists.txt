@@ -23,4 +23,5 @@ kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
 target_link_libraries(kwalletmanager ${KDE4_KIO_LIBS})
 
 install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install( FILES kwalletmanager.rc DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
 
