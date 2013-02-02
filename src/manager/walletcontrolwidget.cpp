@@ -91,7 +91,7 @@ void WalletControlWidget::onOpenClose()
         }
     }
     else {
-        _wallet = KWallet::Wallet::openWallet(_walletName, false);
+        _wallet = KWallet::Wallet::openWallet(_walletName, winId());
         onSetupWidget();
     }
 }
