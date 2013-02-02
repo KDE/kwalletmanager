@@ -24,7 +24,6 @@ add_subdirectory( src )
 ########### install files ###############
 
 install( PROGRAMS kwalletmanager.desktop kwalletmanager-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
-install( FILES kwalletmanager.rc DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
 
 kde4_install_icons( ${ICON_INSTALL_DIR}   )
 
