@@ -25,7 +25,6 @@
 
 class KWalletManagerWidget;
 class KStatusNotifierItem;
-class KWalletIconView;
 class QListWidgetItem;
 class OrgKdeKWalletInterface;
 
