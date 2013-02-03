@@ -144,14 +144,3 @@ void WalletControlWidget::onControlPressed()
     }
 }
 
-void WalletControlWidget::onDelete()
-{
-    int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?", _walletName),QString(),KStandardGuiItem::del());
-    if (rc != KMessageBox::Continue) {
-        return;
-    }
-    rc = KWallet::Wallet::deleteWallet(_walletName);
-    if (rc != 0) {
-        KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.", rc));
-    }
-}

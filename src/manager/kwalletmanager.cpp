@@ -118,6 +118,10 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	action->setText(i18n("&New Wallet..."));
 	action->setIcon(KIcon( QLatin1String( "kwalletmanager" )));
 	connect(action, SIGNAL(triggered()), SLOT(createWallet()));
+    action = actionCollection()->addAction(QLatin1String( "wallet_delete" ));
+    action->setText(i18n("&Delete wallet..."));
+    action->setIcon(KIcon( QLatin1String( "trash-empty" )));
+    connect(action, SIGNAL(triggered()), SLOT(deleteWallet()));
 	QAction *act = actionCollection()->addAction(QLatin1String( "wallet_settings" ));
 	act->setText(i18n("Configure &Wallet..."));
 	act->setIcon(KIcon( QLatin1String( "configure" )));
@@ -295,6 +299,19 @@ void KWalletManager::createWallet() {
         // emmitted by the kwalletd
         KWallet::Wallet::openWallet(n, winId());
 	}
+}
+
+void KWalletManager::deleteWallet()
+{
+    QString walletName = _managerWidget->activeWalletName();
+    int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?", walletName),QString(),KStandardGuiItem::del());
+    if (rc != KMessageBox::Continue) {
+        return;
+    }
+    rc = KWallet::Wallet::deleteWallet(walletName);
+    if (rc != 0) {
+        KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.", rc));
+    }
 }
 
 void KWalletManager::openWallet(const QString& walletName)

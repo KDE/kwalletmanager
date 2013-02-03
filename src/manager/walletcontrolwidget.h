@@ -41,7 +41,6 @@ public Q_SLOTS:
     void onDisconnectApplication();
     void onControlPressed();
     void onDisconnectPressed();
-    void onDelete();
 
 private:
     QString             _walletName;

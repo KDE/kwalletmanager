@@ -42,6 +42,7 @@ class KWalletManager : public KXmlGuiWindow {
 
 	public slots:
 		void createWallet();
+        void deleteWallet();
 		void closeWallet(const QString& walletName);
 		void changeWalletPassword(const QString& walletName);
 		void openWallet(const QString& walletName);

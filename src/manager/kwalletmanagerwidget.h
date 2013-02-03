@@ -33,6 +33,9 @@ public:
     void updateWalletDisplay(QString selectWallet = QString());
     bool hasWallet(const QString&) const;
     bool openWalletFile(const QString& path);
+
+    const QString& activeWalletName() const;
+
 private:
     typedef QHash<QString, KWalletManagerWidgetItem*> WalletPagesHash;
     WalletPagesHash _walletPages;

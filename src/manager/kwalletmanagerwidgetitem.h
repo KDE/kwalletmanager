@@ -29,6 +29,7 @@ public:
     KWalletManagerWidgetItem(QWidget* widgetParent, const QString& walletName);
 
     void updateWalletDisplay();
+    const QString& walletName() const { return _walletName; }
 
 private:
     WalletControlWidget *_controlWidget;
