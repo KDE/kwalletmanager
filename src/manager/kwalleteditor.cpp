@@ -127,8 +127,6 @@ KWalletEditor::KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPa
 	connect(_hideContents, SIGNAL(clicked()),
 		this, SLOT(hidePasswordContents()));
 
-	_walletIsOpen = false;
-
     Q_ASSERT(wallet != 0);
 	_w = wallet;
     connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
@@ -265,7 +263,6 @@ void KWalletEditor::createActions() {
 
 
 void KWalletEditor::walletClosed() {
-	_walletIsOpen = false;
 	_w = 0L;
 	setEnabled(false);
 	emit enableWalletActions(false);
@@ -670,7 +667,7 @@ void KWalletEditor::updateEntries(const QString& folder) {
 }
 
 void KWalletEditor::listContextMenuRequested(const QPoint& pos) {
-	if (!_walletIsOpen || !_contextMenu->isEnabled()) {
+	if (!_contextMenu->isEnabled()) {
 		return;
 	}
 
@@ -850,7 +847,6 @@ void KWalletEditor::walletOpened(bool success) {
 		emit enableWalletActions(true);
 		updateFolderList();
 		_entryList->setWallet(_w);
-		_walletIsOpen = true;
 	} else {
 		if (!_newWallet) {
 			KMessageBox::sorry(this, i18n("Unable to open the requested wallet."));
