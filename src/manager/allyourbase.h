@@ -139,27 +139,6 @@ class KWalletItem : public QListWidgetItem {
 		bool _open;
 };
 
-
-class KWalletIconView : public KListWidget {
-	Q_OBJECT
-
-	public:
-		explicit KWalletIconView(QWidget *parent);
-		virtual ~KWalletIconView();
-
-	protected:
-		virtual void dragEnterEvent(QDragEnterEvent *e);
-		virtual void dragMoveEvent(QDragMoveEvent *e);
-		virtual void dropEvent(QDropEvent *e);
-		virtual void mousePressEvent(QMouseEvent *e);
-		virtual void mouseMoveEvent(QMouseEvent *e);
-	
-	private:
-		bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u, QListWidgetItem **item) const;
-		QPoint _mousePos;
-};
-
-
 inline QDataStream& operator<<(QDataStream& str, const KWalletEntryItem& w) {
 	QString name = w.text(0);
 	str << name;
