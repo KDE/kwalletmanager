@@ -97,7 +97,6 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		bool _nonLocal;
 		KWallet::Wallet *_w;
 		KWalletEntryList *_entryList;
-		bool _walletIsOpen;
 		QAction *_newFolderAction, *_deleteFolderAction;
 		QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
 		KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
