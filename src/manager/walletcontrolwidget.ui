@@ -108,31 +108,6 @@
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="_delete">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Delete...</string>
-       </property>
-       <property name="icon">
-        <iconset theme="trash-empty"/>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>22</width>
-         <height>22</height>
-        </size>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextBesideIcon</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -169,7 +144,6 @@
  <tabstops>
   <tabstop>_openClose</tabstop>
   <tabstop>_disconnect</tabstop>
-  <tabstop>_delete</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -218,22 +192,6 @@
     <hint type="destinationlabel">
      <x>3</x>
      <y>43</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>_delete</sender>
-   <signal>clicked()</signal>
-   <receiver>WalletControlWidget</receiver>
-   <slot>onDelete()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>298</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1</x>
-     <y>95</y>
     </hint>
    </hints>
   </connection>

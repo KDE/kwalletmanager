@@ -84,3 +84,8 @@ bool KWalletManagerWidget::openWalletFile(const QString& path)
     // TODO: implement this method: add a new tab with an editor centered on a file
     return false;
 }
+
+const QString& KWalletManagerWidget::activeWalletName() const
+{
+    return qobject_cast<KWalletManagerWidgetItem*>(currentPage())->walletName();
+}
