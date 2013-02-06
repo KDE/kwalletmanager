@@ -22,6 +22,8 @@
 
 #include <kpagewidget.h>
 
+class KUrl;
+class QDropEvent;
 class KWalletManagerWidgetItem;
 
 class KWalletManagerWidget : public KPageWidget {
@@ -36,9 +38,18 @@ public:
 
     const QString& activeWalletName() const;
 
+protected:
+    virtual void dragEnterEvent(QDragEnterEvent *e);
+    virtual void dragMoveEvent(QDragMoveEvent *e);
+    virtual void dropEvent(QDropEvent *e);
+
 private:
+    bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const;
+
     typedef QHash<QString, KWalletManagerWidgetItem*> WalletPagesHash;
     WalletPagesHash _walletPages;
 };
 
 #endif // KWALLETMANAGERWIDGET_H
+
+class KUrl;
