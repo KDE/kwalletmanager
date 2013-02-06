@@ -23,11 +23,18 @@
 #include "kwallet_interface.h"
 
 #include <kwallet.h>
+#include <kurl.h>
+#include <kglobal.h>
+#include <kmessagebox.h>
+#include <klocalizedstring.h>
+#include <kio/netaccess.h>
+#include <QDragEnterEvent>
 
 KWalletManagerWidget::KWalletManagerWidget(QWidget* parent, Qt::WindowFlags flags): 
     KPageWidget(parent)
 {
     setFaceType(List);
+    setAcceptDrops(true);
 }
 
 KWalletManagerWidget::~KWalletManagerWidget()
@@ -88,4 +95,81 @@ bool KWalletManagerWidget::openWalletFile(const QString& path)
 const QString& KWalletManagerWidget::activeWalletName() const
 {
     return qobject_cast<KWalletManagerWidgetItem*>(currentPage())->walletName();
+}
+
+void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent* e)
+{
+    if (e->provides("application/x-kwallet-wallet")) {
+        e->accept();
+    } else {
+        e->ignore();
+    }
+}
+
+void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent* e)
+{
+    qDebug("KWalletManagerWidget::dragMoveEvent");
+//     KUrl dummy;
+//     QListWidgetItem *dummy2;
+//     if (shouldIgnoreDropEvent(e, &dummy, &dummy2)) {
+//         e->ignore();
+//     } else {
+//         e->accept();
+//     }
+}
+
+void KWalletManagerWidget::dropEvent(QDropEvent* e)
+{
+    qDebug("KWalletManagerWidget::dropEvent");
+//     KUrl u;
+//     QListWidgetItem *item;
+//     if (shouldIgnoreDropEvent(e, &u, &item)) {
+//         e->ignore();
+//         return;
+//     }
+// 
+//     if (!item) {
+//         // Not dropped over an item thus it is a wallet
+//         const QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.fileName();
+//         if (QFile::exists(dest)) {
+//             KMessageBox::sorry(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
+//             e->ignore();
+//             return;
+//         }
+// 
+//         // FIXME: verify that it is a real wallet file first
+//         KIO::NetAccess::file_copy(u, KUrl(dest));
+//         e->accept();
+//     } else {
+//         // Dropped over an item thus it is a folder
+//         KWalletItem *kwi = dynamic_cast<KWalletItem *>(item);
+//         Q_ASSERT(kwi);
+//         if (kwi) {
+//             kwi->processDropEvent(e);
+//         }
+//     }
+}
+
+bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent* e, KUrl* u) const
+{
+    return false;
+//     if (e->source() == viewport()) {
+//         return true;
+//     }
+// 
+//     if (!e->provides("application/x-kwallet-folder") &&
+//         !e->provides("application/x-kwallet-wallet") &&
+//         !e->provides("text/uri-list")) {
+//         return true;
+//     }
+// 
+//     // Over wallets folders, over nothing wallets
+//     *item = itemAt(e->pos());
+//     const QByteArray edata = e->encodedData(item ? "application/x-kwallet-folder" : "application/x-kwallet-wallet");
+//     *u = decodeUrl(edata);
+//     if (*u == KUrl()) {
+//         *u = decodeUrl(e->encodedData("text/uri-list"));
+//     }
+// 
+//     return *u == KUrl();
 }
