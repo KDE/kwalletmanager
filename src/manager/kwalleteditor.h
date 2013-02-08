@@ -47,7 +47,6 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		bool isOpen() const { return _w != 0L; }
 
 		void setNewWallet(bool newWallet);
-        void setControlWidget(QToolButton* control);
 
 	public slots:
 		void walletClosed();
