@@ -49,24 +49,21 @@ void WalletControlWidget::onSetupWidget()
         if (_wallet) {
             connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
             _openClose->setText(tr2i18n("&Close", 0));
-            _openClose->setArrowType(Qt::UpArrow);
 
             _walletEditor = new KWalletEditor(_editorFrame, _wallet, false);
             _editorFrameLayout->addWidget(_walletEditor);
             _walletEditor->setVisible(true);
-            _walletEditor->setControlWidget(_control);
 
-            _control->setEnabled(true);
+            _changePassword->setEnabled(true);
         }
     } else {
-        _openClose->setText(tr2i18n("&Open", 0));
-        _openClose->setArrowType(Qt::DownArrow);
+        _openClose->setText(tr2i18n("&Open...", 0));
 
         if (_walletEditor) {
             _walletEditor->setVisible(false);
             delete _walletEditor, _walletEditor =0;
         }
-        _control->setEnabled(false);
+        _changePassword->setEnabled(false);
     }
 }
 

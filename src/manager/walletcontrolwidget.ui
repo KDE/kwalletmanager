@@ -6,16 +6,54 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>881</width>
-    <height>512</height>
+    <width>604</width>
+    <height>543</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="_stateIcon">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KSqueezedTextLabel" name="_stateLabel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>KSqueezedTextLabel</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QToolButton" name="_openClose">
        <property name="sizePolicy">
@@ -25,7 +63,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>Open</string>
+        <string>Open...</string>
        </property>
        <property name="iconSize">
         <size>
@@ -40,44 +78,12 @@
         <bool>false</bool>
        </property>
        <property name="arrowType">
-        <enum>Qt::DownArrow</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="_control">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Wallet...</string>
-       </property>
-       <property name="icon">
-        <iconset theme="wallet-open">
-         <normaloff>../../../../../../../valentin/.designer/backup</normaloff>../../../../../../../valentin/.designer/backup</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>22</width>
-         <height>22</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextBesideIcon</enum>
-       </property>
-       <property name="arrowType">
         <enum>Qt::NoArrow</enum>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="_disconnect">
+      <widget class="QToolButton" name="_changePassword">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
          <horstretch>0</horstretch>
@@ -85,16 +91,13 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>Disconnect</string>
+        <string>Change password...</string>
        </property>
        <property name="iconSize">
         <size>
          <width>22</width>
          <height>22</height>
         </size>
-       </property>
-       <property name="popupMode">
-        <enum>QToolButton::DelayedPopup</enum>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -108,9 +111,12 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="topSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -123,39 +129,99 @@
     </layout>
    </item>
    <item>
-    <widget class="QFrame" name="_editorFrame">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QTabWidget" name="_tabs">
+     <property name="currentIndex">
+      <number>0</number>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <layout class="QVBoxLayout" name="_editorFrameLayout"/>
+     <widget class="QWidget" name="_contentsTab">
+      <attribute name="icon">
+       <iconset theme="wallet-open"/>
+      </attribute>
+      <attribute name="title">
+       <string>Contents</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QFrame" name="_editorFrame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <layout class="QVBoxLayout" name="_editorFrameLayout"/>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="_appsTab">
+      <attribute name="icon">
+       <iconset theme="start-here-kde"/>
+      </attribute>
+      <attribute name="title">
+       <string>Applications</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>These applications are currently connected to this wallet:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListView" name="_connectedApps"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>These applications are authorized to access the contents of this wallet:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListView" name="_authorizedApps"/>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KSqueezedTextLabel</class>
+   <extends>QLabel</extends>
+   <header>ksqueezedtextlabel.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>_openClose</tabstop>
-  <tabstop>_disconnect</tabstop>
+  <tabstop>_changePassword</tabstop>
+  <tabstop>_tabs</tabstop>
+  <tabstop>_connectedApps</tabstop>
+  <tabstop>_authorizedApps</tabstop>
  </tabstops>
  <resources/>
  <connections>
   <connection>
    <sender>_openClose</sender>
-   <signal>clicked()</signal>
+   <signal>triggered(QAction*)</signal>
    <receiver>WalletControlWidget</receiver>
    <slot>onOpenClose()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>46</x>
-     <y>17</y>
+     <x>258</x>
+     <y>22</y>
     </hint>
     <hint type="destinationlabel">
      <x>10</x>
@@ -164,34 +230,18 @@
    </hints>
   </connection>
   <connection>
-   <sender>_control</sender>
-   <signal>pressed()</signal>
+   <sender>_changePassword</sender>
+   <signal>triggered(QAction*)</signal>
    <receiver>WalletControlWidget</receiver>
-   <slot>onControlPressed()</slot>
+   <slot>onChangePassword()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>127</x>
-     <y>15</y>
+     <x>349</x>
+     <y>16</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1</x>
-     <y>53</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>_disconnect</sender>
-   <signal>pressed()</signal>
-   <receiver>WalletControlWidget</receiver>
-   <slot>onDisconnectPressed()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>215</x>
-     <y>17</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>3</x>
-     <y>43</y>
+     <x>301</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>
@@ -199,8 +249,5 @@
  <slots>
   <slot>onOpenClose()</slot>
   <slot>onChangePassword()</slot>
-  <slot>onControlPressed()</slot>
-  <slot>onDisconnectPressed()</slot>
-  <slot>onDelete()</slot>
  </slots>
 </ui>
