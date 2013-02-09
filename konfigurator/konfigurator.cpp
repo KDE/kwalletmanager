@@ -189,13 +189,23 @@ void KWalletConfig::load() {
 	_wcw->_closeIdle->setChecked(config.readEntry("Close When Idle", false));
 	_wcw->_idleTime->setValue(config.readEntry("Idle Timeout", 10));
 	if (config.hasKey("Default Wallet")) {
-		_wcw->_defaultWallet->setItemText(_wcw->_defaultWallet->currentIndex(), config.readEntry("Default Wallet"));
+		int defaultWallet_idx = _wcw->_defaultWallet->findText(config.readEntry("Default Wallet"));
+		if (defaultWallet_idx != -1) {
+			_wcw->_defaultWallet->setCurrentIndex(defaultWallet_idx);
+		} else {
+			_wcw->_defaultWallet->setCurrentIndex(0);
+		}
 	} else {
 		_wcw->_defaultWallet->setCurrentIndex(0);
 	}
 	if (config.hasKey("Local Wallet")) {
 		_wcw->_localWalletSelected->setChecked( !config.readEntry("Use One Wallet", false) );
-		_wcw->_localWallet->setItemText(_wcw->_defaultWallet->currentIndex(), config.readEntry("Local Wallet"));
+		int localWallet_idx = _wcw->_localWallet->findText(config.readEntry("Local Wallet"));
+		if (localWallet_idx != -1) {
+			_wcw->_localWallet->setCurrentIndex(localWallet_idx);
+		} else {
+			_wcw->_localWallet->setCurrentIndex(0);
+		}
 	} else {
 		_wcw->_localWalletSelected->setChecked(false);
 	}
