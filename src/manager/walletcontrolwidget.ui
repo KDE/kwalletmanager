@@ -17,31 +17,6 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="_stateIcon">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>24</width>
-         <height>24</height>
-        </size>
-       </property>
-       <property name="autoFillBackground">
-        <bool>true</bool>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="KSqueezedTextLabel" name="_stateLabel">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -135,9 +110,7 @@
      </property>
      <widget class="QWidget" name="_contentsTab">
       <attribute name="icon">
-       <iconset theme="wallet-open">
-        <normaloff/>
-       </iconset>
+       <iconset theme="wallet-closed"/>
       </attribute>
       <attribute name="title">
        <string>Contents</string>
@@ -175,25 +148,22 @@
        <string>Applications</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
        <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>These applications are currently connected to this wallet:</string>
+        <widget class="QFrame" name="_applicationsFrame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QListView" name="_connectedApps"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>These applications are authorized to access the contents of this wallet:</string>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
          </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <layout class="QVBoxLayout" name="_applicationsFrameLayout"/>
         </widget>
-       </item>
-       <item>
-        <widget class="QListView" name="_authorizedApps"/>
        </item>
       </layout>
      </widget>
@@ -212,8 +182,6 @@
   <tabstop>_openClose</tabstop>
   <tabstop>_changePassword</tabstop>
   <tabstop>_tabs</tabstop>
-  <tabstop>_connectedApps</tabstop>
-  <tabstop>_authorizedApps</tabstop>
  </tabstops>
  <resources/>
  <connections>

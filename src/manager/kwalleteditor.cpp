@@ -77,8 +77,8 @@ QAction *KWalletEditor::_copyPassAction;
 RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletEditor::createActions);
 
 
-KWalletEditor::KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPath, const char *name)
-: _walletName(wallet->walletName()), _nonLocal(isPath), _displayedItem(0), _actionCollection(0) {
+KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
+: _displayedItem(0), _actionCollection(0) {
     setupUi( this );
 	setObjectName( QLatin1String( name ) );
 	_newWallet = false;
@@ -142,14 +142,6 @@ KWalletEditor::KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPa
 	connect(_hideContents, SIGNAL(clicked()),
 		this, SLOT(hidePasswordContents()));
 
-    Q_ASSERT(wallet != 0);
-	_w = wallet;
-    connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
-    connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
-    connect(_w, SIGNAL(folderUpdated(QString)), this, SLOT(updateEntries(QString)));
-    connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
-    updateFolderList();
-
 //	createActions();
     // TODO: remove kwalleteditor.rc file
 }
@@ -169,6 +161,20 @@ KWalletEditor::~KWalletEditor() {
 	if (_nonLocal) {
 		KWallet::Wallet::closeWallet(_walletName, true);
 	}
+}
+
+void KWalletEditor::setWallet(KWallet::Wallet* wallet, bool isPath)
+{
+    _walletName = wallet->walletName();
+    _nonLocal = isPath;
+
+    Q_ASSERT(wallet != 0);
+    _w = wallet;
+    connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
+    connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
+    connect(_w, SIGNAL(folderUpdated(QString)), this, SLOT(updateEntries(QString)));
+    connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
+    updateFolderList();
 }
 
 KActionCollection* KWalletEditor::actionCollection()
