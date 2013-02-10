@@ -16,35 +16,24 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef WALLETCONTROLWIDGET_H
-#define WALLETCONTROLWIDGET_H
 
-#include "ui_walletcontrolwidget.h"
 
-class KWalletEditor;
+#include "registercreateactionmethod.h"
 
-namespace KWallet {
-class Wallet;
+#include <kglobal.h>
+
+K_GLOBAL_STATIC(std::list<RegisterCreateActionsMethod::CreateActionsMethod>, createActionMethodList);
+
+RegisterCreateActionsMethod::RegisterCreateActionsMethod(RegisterCreateActionsMethod::CreateActionsMethod method)
+{
+    createActionMethodList->push_back(method);
 }
 
-class WalletControlWidget : public QWidget, public Ui::WalletControlWidget 
+void RegisterCreateActionsMethod::createActions(KActionCollection* actionCollection)
 {
-    Q_OBJECT
-public:
-    WalletControlWidget(QWidget* parent, const QString& walletName);
-
-public Q_SLOTS:
-    void onSetupWidget();
-    void onOpenClose();
-    void onWalletClosed();
-    void updateWalletDisplay();
-    void onDisconnectApplication();
-    void onChangePassword();
-
-private:
-    QString             _walletName;
-    KWallet::Wallet*    _wallet;
-    KWalletEditor*      _walletEditor;
-};
-
-#endif // WALLETCONTROLWIDGET_H
+    std::list<CreateActionsMethod>::const_iterator it = createActionMethodList->begin();
+    std::list<CreateActionsMethod>::const_iterator end = createActionMethodList->end();
+    for ( ; it != end; it++ ) {
+        (*it)(actionCollection);
+    }
+}

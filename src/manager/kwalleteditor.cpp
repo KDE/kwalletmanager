@@ -62,8 +62,23 @@
 #include <KAction>
 #include <KTreeWidgetSearchLine>
 
+QAction *KWalletEditor::_newFolderAction =0;
+QAction *KWalletEditor::_deleteFolderAction =0;
+QAction *KWalletEditor::_passwordAction =0;
+QAction *KWalletEditor::_exportAction =0;
+QAction *KWalletEditor::_saveAsAction =0;
+QAction *KWalletEditor::_mergeAction =0;
+QAction *KWalletEditor::_importAction =0;
+KAction *KWalletEditor::_newEntryAction =0;
+KAction *KWalletEditor::_renameEntryAction =0;
+KAction *KWalletEditor::_deleteEntryAction =0;
+QAction *KWalletEditor::_copyPassAction;
+
+RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletEditor::createActions);
+
+
 KWalletEditor::KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPath, const char *name)
-: _walletName(wallet->walletName()), _nonLocal(isPath), _displayedItem(0), _actionCollection(0)  {
+: _walletName(wallet->walletName()), _nonLocal(isPath), _displayedItem(0), _actionCollection(0) {
     setupUi( this );
 	setObjectName( QLatin1String( name ) );
 	_newWallet = false;
@@ -135,7 +150,7 @@ KWalletEditor::KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPa
     connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
     updateFolderList();
 
-	createActions();
+//	createActions();
     // TODO: remove kwalleteditor.rc file
 }
 
@@ -156,32 +171,6 @@ KWalletEditor::~KWalletEditor() {
 	}
 }
 
-void KWalletEditor::setControlWidget(QToolButton* control)
-{
-    _control = control;
-//     _actionCollection->associateWidget(_control);
-    _controlMenu = new KMenu(_control);
-
-//     _controlMenu->setTitle(i18n("&Wallet"));
-//     _controlMenu->setIcon(KIcon(QLatin1String("wallet-open")));
-    _controlMenu->addAction(_saveAsAction);
-    _controlMenu->addSeparator();
-    _controlMenu->addAction(_newFolderAction);
-    _controlMenu->addAction(_deleteFolderAction);
-    _controlMenu->addSeparator();
-    _controlMenu->addAction(_passwordAction);
-    _controlMenu->addSeparator();
-    _controlMenu->addAction(_mergeAction);
-    _controlMenu->addAction(_importAction);
-    _controlMenu->addAction(_exportAction);
-
-    control->setMenu(_controlMenu);
-
-    emit enableFolderActions(true);
-    emit enableContextFolderActions(false);
-    emit enableWalletActions(true);
-}
-
 KActionCollection* KWalletEditor::actionCollection()
 {
     if (_actionCollection == 0) {
@@ -190,75 +179,82 @@ KActionCollection* KWalletEditor::actionCollection()
     return _actionCollection;
 }
 
-void KWalletEditor::createActions() {
-        _newFolderAction = actionCollection()->addAction( QLatin1String( "create_folder" ));
+void KWalletEditor::createActions(KActionCollection* actionCollection) {
+        _newFolderAction = actionCollection->addAction( QLatin1String( "create_folder" ));
         _newFolderAction->setText( i18n("&New Folder...") );
         _newFolderAction->setIcon( KIcon( QLatin1String( "folder-new" )) );
-	connect(_newFolderAction, SIGNAL(triggered(bool)), SLOT(createFolder()));
-	connect(this, SIGNAL(enableFolderActions(bool)),
-		_newFolderAction, SLOT(setEnabled(bool)));
 
-        _deleteFolderAction = actionCollection()->addAction( QLatin1String( "delete_folder" ) );
+        _deleteFolderAction = actionCollection->addAction( QLatin1String( "delete_folder" ) );
         _deleteFolderAction->setText( i18n("&Delete Folder") );
-	connect(_deleteFolderAction, SIGNAL(triggered(bool)), SLOT(deleteFolder()));
-	connect(this, SIGNAL(enableContextFolderActions(bool)),
-		_deleteFolderAction, SLOT(setEnabled(bool)));
-	connect(this, SIGNAL(enableFolderActions(bool)),
-		_deleteFolderAction, SLOT(setEnabled(bool)));
 
-        _passwordAction = actionCollection()->addAction( QLatin1String(  "change_password" ) );
+        _passwordAction = actionCollection->addAction( QLatin1String(  "change_password" ) );
         _passwordAction->setText( i18n("Change &Password...") );
-	connect(_passwordAction, SIGNAL(triggered(bool)), SLOT(changePassword()));
-	connect(this, SIGNAL(enableWalletActions(bool)),
-		_passwordAction, SLOT(setEnabled(bool)));
 
-        _mergeAction = actionCollection()->addAction( QLatin1String(  "merge" ));
+        _mergeAction = actionCollection->addAction( QLatin1String(  "wallet_merge" ));
         _mergeAction->setText( i18n("&Merge Wallet...") );
-	connect(_mergeAction, SIGNAL(triggered(bool)), SLOT(importWallet()));
-	connect(this, SIGNAL(enableWalletActions(bool)),
-		_mergeAction, SLOT(setEnabled(bool)));
 
-        _importAction= actionCollection()->addAction( QLatin1String(  "import" ) );
+        _importAction= actionCollection->addAction( QLatin1String(  "wallet_import" ) );
         _importAction->setText( i18n("&Import XML...") );
-	connect(_importAction, SIGNAL(triggered(bool)), SLOT(importXML()));
-	connect(this, SIGNAL(enableWalletActions(bool)),
-		_importAction, SLOT(setEnabled(bool)));
 
-        _exportAction = actionCollection()->addAction( QLatin1String(  "export" ) );
+        _exportAction = actionCollection->addAction( QLatin1String(  "wallet_export" ) );
         _exportAction->setText( i18n("&Export...") );
-	connect(_exportAction, SIGNAL(triggered(bool)), SLOT(exportXML()));
-	connect(this, SIGNAL(enableWalletActions(bool)),
-		_exportAction, SLOT(setEnabled(bool)));
 
-	_saveAsAction = KStandardAction::saveAs(this, SLOT(saveAs()), actionCollection());
-	connect(this, SIGNAL(enableWalletActions(bool)),
-		_saveAsAction, SLOT(setEnabled(bool)));
+	_saveAsAction = KStandardAction::saveAs(0, 0, actionCollection);
+	_copyPassAction = KStandardAction::copy(0, SLOT(copyPassword()), actionCollection);
 
-	_copyPassAction = KStandardAction::copy(this, SLOT(copyPassword()), actionCollection());
-
-	_newEntryAction = actionCollection()->addAction( QLatin1String(  "new_entry" ) );
+	_newEntryAction = actionCollection->addAction( QLatin1String(  "new_entry" ) );
 	_newEntryAction->setText( i18n( "&New..." ) );
 	_newEntryAction->setShortcut( Qt::Key_Insert );
-	connect(_newEntryAction, SIGNAL(triggered(bool)), SLOT(newEntry()));
 	_newEntryAction->setEnabled(false);
 
-	_renameEntryAction = actionCollection()->addAction( QLatin1String(  "rename_entry" ) );
+	_renameEntryAction = actionCollection->addAction( QLatin1String(  "rename_entry" ) );
 	_renameEntryAction->setText( i18n( "&Rename" ) );
 	_renameEntryAction->setShortcut( Qt::Key_F2 );
-	connect(_renameEntryAction, SIGNAL(triggered(bool)), SLOT(renameEntry()));
 	_renameEntryAction->setEnabled(false);
 
-	_deleteEntryAction = actionCollection()->addAction( QLatin1String(  "delete_entry" ) );
+	_deleteEntryAction = actionCollection->addAction( QLatin1String(  "delete_entry" ) );
 	_deleteEntryAction->setText( i18n( "&Delete" ) );
 	_deleteEntryAction->setShortcut( Qt::Key_Delete );
-	connect(_deleteEntryAction, SIGNAL(triggered(bool)), SLOT(deleteEntry()));
 	_deleteEntryAction->setEnabled(false);
+}
 
-//	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
-// actionCollection());
-	emit enableWalletActions(false);
-	emit enableFolderActions(false);
-	emit enableContextFolderActions(false);
+void KWalletEditor::connectActions()
+{
+    connect(_newFolderAction, SIGNAL(triggered(bool)), SLOT(createFolder()));
+    connect(this, SIGNAL(enableFolderActions(bool)),
+        _newFolderAction, SLOT(setEnabled(bool)));
+
+    connect(_deleteFolderAction, SIGNAL(triggered(bool)), SLOT(deleteFolder()));
+    connect(this, SIGNAL(enableContextFolderActions(bool)),
+        _deleteFolderAction, SLOT(setEnabled(bool)));
+    connect(this, SIGNAL(enableFolderActions(bool)),
+        _deleteFolderAction, SLOT(setEnabled(bool)));
+
+    connect(_passwordAction, SIGNAL(triggered(bool)), SLOT(changePassword()));
+    connect(this, SIGNAL(enableWalletActions(bool)),
+        _passwordAction, SLOT(setEnabled(bool)));
+
+    connect(_mergeAction, SIGNAL(triggered(bool)), SLOT(importWallet()));
+    connect(this, SIGNAL(enableWalletActions(bool)),
+        _mergeAction, SLOT(setEnabled(bool)));
+
+    connect(_importAction, SIGNAL(triggered(bool)), SLOT(importXML()));
+    connect(this, SIGNAL(enableWalletActions(bool)),
+        _importAction, SLOT(setEnabled(bool)));
+
+    connect(_exportAction, SIGNAL(triggered(bool)), SLOT(exportXML()));
+    connect(this, SIGNAL(enableWalletActions(bool)),
+        _exportAction, SLOT(setEnabled(bool)));
+
+    connect(_saveAsAction, SIGNAL(triggered(bool)), SLOT(saveAs()));
+    connect(this, SIGNAL(enableWalletActions(bool)),
+        _saveAsAction, SLOT(setEnabled(bool)));
+
+    connect(_newEntryAction, SIGNAL(triggered(bool)), SLOT(newEntry()));
+
+    connect(_renameEntryAction, SIGNAL(triggered(bool)), SLOT(renameEntry()));
+
+    connect(_deleteEntryAction, SIGNAL(triggered(bool)), SLOT(deleteEntry()));
 }
 
 

@@ -25,9 +25,11 @@
 
 #include <kwallet.h>
 #include <kxmlguiwindow.h>
+#include "registercreateactionmethod.h"
 #include <QStringList>
 #include <QLabel>
 
+class KActionCollection;
 class KMenu;
 class QToolButton;
 class QTreeWidgetItem;
@@ -90,16 +92,18 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		QString _walletName;
 
 	private:
-		void createActions();
+		static void createActions(KActionCollection*);
+        void connectActions();
         KActionCollection *actionCollection();
 
 		bool _nonLocal;
 		KWallet::Wallet *_w;
 		KWalletEntryList *_entryList;
-		QAction *_newFolderAction, *_deleteFolderAction;
-		QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
-		KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
-		QAction *_copyPassAction;
+        static RegisterCreateActionsMethod _registerCreateActionMethod;
+		static QAction *_newFolderAction, *_deleteFolderAction;
+		static QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
+		static KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
+		static QAction *_copyPassAction;
 		QLabel*_details;
 		QString _currentFolder;
 		QMap<QString,QString> _currentMap; // save memory by storing
@@ -110,7 +114,6 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		KMenu *_contextMenu;
         QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
         KActionCollection *_actionCollection;
-        QToolButton *_control;
         KMenu* _controlMenu;
         KMenu* _walletSubmenu;
 };

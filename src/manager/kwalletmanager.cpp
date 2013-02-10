@@ -24,6 +24,7 @@
 #include "kwalleteditor.h"
 #include "allyourbase.h"
 #include "kwallet_interface.h"
+#include "registercreateactionmethod.h"
 
 #include <kaction.h>
 #include <kapplication.h>
@@ -126,6 +127,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	act->setText(i18n("Configure &Wallet..."));
 	act->setIcon(KIcon( QLatin1String( "configure" )));
 
+    RegisterCreateActionsMethod::createActions(actionCollection());
+
 	connect(act, SIGNAL(triggered()), SLOT(setupWallet()));
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
@@ -184,6 +187,7 @@ void KWalletManager::aWalletWasOpened() {
 		_tray->setStatus(KStatusNotifierItem::Active);
 	}
 	updateWalletDisplay();
+    createGUI( QLatin1String( "kwalletmanager.rc" ));
 }
 
 
