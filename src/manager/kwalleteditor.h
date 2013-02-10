@@ -43,9 +43,10 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 	Q_OBJECT
 
 	public:
-		KWalletEditor(QWidget* parent, KWallet::Wallet* wallet, bool isPath, const char* name = 0);
+		KWalletEditor(QWidget* parent, const char* name = 0);
 		virtual ~KWalletEditor();
 
+        void setWallet(KWallet::Wallet* wallet, bool isPath =false);
 		bool isOpen() const { return _w != 0L; }
 
 		void setNewWallet(bool newWallet);

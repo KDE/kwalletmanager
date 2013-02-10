@@ -19,6 +19,7 @@
 
 #include "walletcontrolwidget.h"
 #include "kwalleteditor.h"
+#include "applicationsmanager.h"
 
 #include <QPropertyAnimation>
 #include <QTimer>
@@ -27,12 +28,14 @@
 #include <kwallet.h>
 #include <kmessagebox.h>
 #include <kmenu.h>
+#include <KTabWidget>
 
 WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletName):
     QWidget(parent),
     _walletName(walletName),
     _wallet(0),
-    _walletEditor(0)
+    _walletEditor(0),
+    _applicationsManager(0)
 {
     setupUi(this);
     onSetupWidget();
@@ -51,13 +54,23 @@ void WalletControlWidget::onSetupWidget()
             connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
             _openClose->setText(tr2i18n("&Close", 0));
 
-            _walletEditor = new KWalletEditor(_editorFrame, _wallet, false);
-            _editorFrameLayout->addWidget(_walletEditor);
-            _walletEditor->setVisible(true);
+            if (0 == _walletEditor) {
+                _walletEditor = new KWalletEditor(_editorFrame);
+                _editorFrameLayout->addWidget(_walletEditor);
+                _walletEditor->setVisible(true);
+            }
+            _walletEditor->setWallet(_wallet);
+
+            if (0 == _applicationsManager) {
+                _applicationsManager = new ApplicationsManager(_applicationsFrame);
+                _applicationsFrameLayout->addWidget(_applicationsManager);
+                _applicationsManager->setVisible(true);
+            }
+            _applicationsManager->setWallet(_wallet);
 
             _changePassword->setEnabled(true);
             _stateLabel->setText(tr2i18n("The wallet is currently open"));
-            _stateIcon->setIcon(KIcon("wallet-open").pixmap());
+            _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-open")).pixmap());
         }
     } else {
         _openClose->setText(tr2i18n("&Open...", 0));
@@ -68,7 +81,7 @@ void WalletControlWidget::onSetupWidget()
         }
         _changePassword->setEnabled(false);
         _stateLabel->setText(tr2i18n("The wallet is currently closed"));
-        _stateIcon->setIcon(KIcon("wallet-closed").pixmap());
+        _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-closed")).pixmap());
     }
 }
 

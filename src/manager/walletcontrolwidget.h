@@ -22,6 +22,7 @@
 #include "ui_walletcontrolwidget.h"
 
 class KWalletEditor;
+class ApplicationsManager;
 
 namespace KWallet {
 class Wallet;
@@ -45,6 +46,7 @@ private:
     QString             _walletName;
     KWallet::Wallet*    _wallet;
     KWalletEditor*      _walletEditor;
+    ApplicationsManager* _applicationsManager;
 };
 
 #endif // WALLETCONTROLWIDGET_H
