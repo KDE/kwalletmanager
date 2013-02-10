@@ -10,7 +10,8 @@ set(kwalletmanager_SRCS
     kwalleteditor.cpp
     kwmapeditor.cpp
     allyourbase.cpp
-    kbetterthankdialogbase.cpp )
+    kbetterthankdialogbase.cpp
+    registercreateactionmethod.cpp)
 
 qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
 

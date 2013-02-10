@@ -135,7 +135,9 @@
      </property>
      <widget class="QWidget" name="_contentsTab">
       <attribute name="icon">
-       <iconset theme="wallet-open"/>
+       <iconset theme="wallet-open">
+        <normaloff/>
+       </iconset>
       </attribute>
       <attribute name="title">
        <string>Contents</string>
@@ -165,7 +167,9 @@
      </widget>
      <widget class="QWidget" name="_appsTab">
       <attribute name="icon">
-       <iconset theme="start-here-kde"/>
+       <iconset theme="start-here-kde">
+        <normaloff/>
+       </iconset>
       </attribute>
       <attribute name="title">
        <string>Applications</string>
@@ -215,7 +219,7 @@
  <connections>
   <connection>
    <sender>_openClose</sender>
-   <signal>triggered(QAction*)</signal>
+   <signal>clicked()</signal>
    <receiver>WalletControlWidget</receiver>
    <slot>onOpenClose()</slot>
    <hints>
@@ -231,7 +235,7 @@
   </connection>
   <connection>
    <sender>_changePassword</sender>
-   <signal>triggered(QAction*)</signal>
+   <signal>clicked()</signal>
    <receiver>WalletControlWidget</receiver>
    <slot>onChangePassword()</slot>
    <hints>

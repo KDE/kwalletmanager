@@ -35,6 +35,7 @@ WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletN
     _walletEditor(0)
 {
     setupUi(this);
+    onSetupWidget();
 
     QTimer::singleShot(1, this, SLOT(onSetupWidget()));
 }
@@ -55,6 +56,8 @@ void WalletControlWidget::onSetupWidget()
             _walletEditor->setVisible(true);
 
             _changePassword->setEnabled(true);
+            _stateLabel->setText(tr2i18n("The wallet is currently open"));
+            _stateIcon->setIcon(KIcon("wallet-open").pixmap());
         }
     } else {
         _openClose->setText(tr2i18n("&Open...", 0));
@@ -64,6 +67,8 @@ void WalletControlWidget::onSetupWidget()
             delete _walletEditor, _walletEditor =0;
         }
         _changePassword->setEnabled(false);
+        _stateLabel->setText(tr2i18n("The wallet is currently closed"));
+        _stateIcon->setIcon(KIcon("wallet-closed").pixmap());
     }
 }
 
@@ -89,8 +94,8 @@ void WalletControlWidget::onOpenClose()
     }
     else {
         _wallet = KWallet::Wallet::openWallet(_walletName, winId());
-        onSetupWidget();
     }
+    onSetupWidget();
 }
 
 void WalletControlWidget::onWalletClosed()
@@ -101,23 +106,23 @@ void WalletControlWidget::onWalletClosed()
 
 void WalletControlWidget::updateWalletDisplay()
 {
-    QList<QAction*> existingActions = _disconnect->actions();
-    QList<QAction*>::const_iterator i = existingActions.constBegin();
-    QList<QAction*>::const_iterator ie = existingActions.constEnd();
-    for ( ; i != ie; i++ ) {
-        _disconnect->removeAction(*i);
-    }
-
-    // create the disconnect widget menu
-    const QStringList ul = KWallet::Wallet::users(_walletName);
-    if (!ul.isEmpty()) {
-        for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
-            QAction *a = new QAction(*it, this);
-            connect(a, SIGNAL(triggered()), this, SLOT(onDisconnectApplication()));
-            _disconnect->addAction(a);
-            a->setData(*it);
-        }
-    }
+//     QList<QAction*> existingActions = _disconnect->actions();
+//     QList<QAction*>::const_iterator i = existingActions.constBegin();
+//     QList<QAction*>::const_iterator ie = existingActions.constEnd();
+//     for ( ; i != ie; i++ ) {
+//         _disconnect->removeAction(*i);
+//     }
+// 
+//     // create the disconnect widget menu
+//     const QStringList ul = KWallet::Wallet::users(_walletName);
+//     if (!ul.isEmpty()) {
+//         for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
+//             QAction *a = new QAction(*it, this);
+//             connect(a, SIGNAL(triggered()), this, SLOT(onDisconnectApplication()));
+//             _disconnect->addAction(a);
+//             a->setData(*it);
+//         }
+//     }
 }
 
 void WalletControlWidget::onDisconnectApplication()
@@ -129,15 +134,8 @@ void WalletControlWidget::onDisconnectApplication()
     }
 }
 
-void WalletControlWidget::onDisconnectPressed()
+void WalletControlWidget::onChangePassword()
 {
-    _disconnect->showMenu();
-}
 
-void WalletControlWidget::onControlPressed()
-{
-    if (_walletEditor) {
-        _control->showMenu();
-    }
 }
 
