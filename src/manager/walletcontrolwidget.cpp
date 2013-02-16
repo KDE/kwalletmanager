@@ -25,10 +25,12 @@
 #include <QTimer>
 #include <QFrame>
 #include <QToolButton>
+#include <qevent.h>
 #include <kwallet.h>
 #include <kmessagebox.h>
 #include <kmenu.h>
 #include <KTabWidget>
+#include <kdebug.h>
 
 WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletName):
     QWidget(parent),
@@ -79,6 +81,11 @@ void WalletControlWidget::onSetupWidget()
             _walletEditor->setVisible(false);
             delete _walletEditor, _walletEditor =0;
         }
+
+        if (_applicationsManager) {
+            _applicationsManager->setVisible(false);
+            delete _applicationsManager, _applicationsManager = 0;
+        }
         _changePassword->setEnabled(false);
         _stateLabel->setText(tr2i18n("The wallet is currently closed"));
         _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-closed")).pixmap());
@@ -126,16 +133,6 @@ void WalletControlWidget::updateWalletDisplay()
 //         _disconnect->removeAction(*i);
 //     }
 // 
-//     // create the disconnect widget menu
-//     const QStringList ul = KWallet::Wallet::users(_walletName);
-//     if (!ul.isEmpty()) {
-//         for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
-//             QAction *a = new QAction(*it, this);
-//             connect(a, SIGNAL(triggered()), this, SLOT(onDisconnectApplication()));
-//             _disconnect->addAction(a);
-//             a->setData(*it);
-//         }
-//     }
 }
 
 void WalletControlWidget::onDisconnectApplication()
@@ -149,6 +146,13 @@ void WalletControlWidget::onDisconnectApplication()
 
 void WalletControlWidget::onChangePassword()
 {
-
+    KWallet::Wallet::changePassword(_walletName, winId());
 }
 
+void WalletControlWidget::hideEvent(QHideEvent* )
+{
+}
+
+void WalletControlWidget::showEvent(QShowEvent* ev)
+{
+}

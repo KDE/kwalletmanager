@@ -42,6 +42,10 @@ public Q_SLOTS:
     void onDisconnectApplication();
     void onChangePassword();
 
+protected:
+    virtual void hideEvent(QHideEvent*);
+    virtual void showEvent(QShowEvent*);
+
 private:
     QString             _walletName;
     KWallet::Wallet*    _wallet;

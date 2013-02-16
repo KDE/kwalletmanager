@@ -44,6 +44,7 @@ protected:
     virtual void dropEvent(QDropEvent *e);
 
 private:
+    void onCurrentPageChanged(KPageWidgetItem*,KPageWidgetItem*);
     bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const;
 
     typedef QHash<QString, KWalletManagerWidgetItem*> WalletPagesHash;
