@@ -51,6 +51,10 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 
 		void setNewWallet(bool newWallet);
 
+protected:
+        virtual void hideEvent(QHideEvent*);
+        virtual void showEvent(QShowEvent*);
+
 	public slots:
 		void walletClosed();
 		void createFolder();
@@ -95,6 +99,7 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 	private:
 		static void createActions(KActionCollection*);
         void connectActions();
+        void disconnectActions();
         KActionCollection *actionCollection();
 
 		bool _nonLocal;
@@ -102,7 +107,7 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget {
 		KWalletEntryList *_entryList;
         static RegisterCreateActionsMethod _registerCreateActionMethod;
 		static QAction *_newFolderAction, *_deleteFolderAction;
-		static QAction *_passwordAction, *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
+		static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
 		static KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
 		static QAction *_copyPassAction;
 		QLabel*_details;

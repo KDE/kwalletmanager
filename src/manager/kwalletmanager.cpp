@@ -52,6 +52,8 @@
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KXmlGuiWindow(parent, f)
 {
+    RegisterCreateActionsMethod::createActions(actionCollection());
+
     setObjectName(QLatin1String( name ) );
     QDBusConnection::sessionBus().registerObject(QLatin1String( "/KWalletManager" ), this, QDBusConnection::ExportScriptableSlots);
 	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
@@ -127,8 +129,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	act->setText(i18n("Configure &Wallet..."));
 	act->setIcon(KIcon( QLatin1String( "configure" )));
 
-    RegisterCreateActionsMethod::createActions(actionCollection());
-
 	connect(act, SIGNAL(triggered()), SLOT(setupWallet()));
 	if (_tray) {
 		_tray->contextMenu()->addAction( act );
@@ -143,7 +143,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 
-	createGUI( QLatin1String( "kwalletmanager.rc" ));
+    setupGUI( Keys | StatusBar | Save | Create, QLatin1String( "kwalletmanager.rc" ));
 
 	if (_tray) {
 //		_tray->show();
