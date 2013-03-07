@@ -2,48 +2,75 @@
 #include "applicationsmanager.h"
 #include "kwallet.h"
 
-#include <QStringListModel>
 #include <QStyledItemDelegate>
 #include <QPainter>
+#include <QStandardItemModel>
 #include <kdebug.h>
 
 class ConnectedAppItemDelegate : public QStyledItemDelegate
 {
 public:
     explicit ConnectedAppItemDelegate(QObject* parent = 0) : QStyledItemDelegate(parent) {}
-    virtual void paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index) 
+    virtual void paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index)
     {
         QStyledItemDelegate::paint(painter, option, index);
         kDebug() << "paint";
     }
 };
 
-class ConnectedAppModel : public QAbstractTableModel
+class DisconnectAppItem : public QStandardItem {
+public:
+    DisconnectAppItem(const QString& appName, KWallet::Wallet *wallet) :
+            _appName(appName), _wallet(wallet) {
+        setText(tr2i18n("Disconnect"));
+        setEditable(false);
+        setSelectable(false);
+    }
+private:
+    QString             _appName;
+    KWallet::Wallet     *_wallet;
+};
+
+class ConnectedAppModel : public QStandardItemModel
 {
 public:
-    explicit ConnectedAppModel(KWallet::Wallet *wallet) : QAbstractTableModel(0) {
+    explicit ConnectedAppModel(KWallet::Wallet *wallet) : QStandardItemModel() {
         _connectedApps = KWallet::Wallet::users(wallet->walletName());
+        int row =0;
+        Q_FOREACH(QString appName, _connectedApps ) {
+            // for un unknown reason, kwalletd returs empty strings so lets avoid inserting them
+            // FIXME: find out why kwalletd returns empty strings here
+            if (appName.length()>0) {
+                QStandardItem *item = new QStandardItem(appName);
+                item->setEditable(false);
+                setItem(row, 0, item);
+                setItem(row, 1, new DisconnectAppItem(appName, wallet));
+                row++;
+            }
+        }
     }
 
 protected:
-    int columnCount(const QModelIndex& parent =QModelIndex()) const { return 2; }
-    int rowCount(const QModelIndex& parent =QModelIndex()) const {
-        if (parent.isValid())
-            return 0; // see QT QAbstractItemModel::rowCount documentation about this
-        else
-            return _connectedApps.count();
-    }
-    QVariant data(const QModelIndex& index, int role =Qt::DisplayRole) const {
-        QVariant result;
-        switch (index.column()) {
-            case 0:
-                result = QVariant(_connectedApps.at(index.row()));
-                break;
-            default:
-                break; // nothing for the other columns
-        }
-        return result;
-    }
+//     virtual int columnCount(const QModelIndex& parent =QModelIndex()) const { return 1; }
+//     virtual int rowCount(const QModelIndex& parent =QModelIndex()) const {
+//         if (parent.isValid())
+//             return 0; // see QT QAbstractItemModel::rowCount documentation about this
+//         else
+//             return _connectedApps.count();
+//     }
+//     QVariant data(const QModelIndex& index, int role =Qt::DisplayRole) const {
+//         QVariant result;
+//         QString appName;
+//         switch (index.column()) {
+//             case 0:
+//                 appName = _connectedApps.at(index.row());
+//                 result = appName;
+//                 break;
+//             default:
+//                 break; // nothing for the other columns
+//         }
+//         return result;
+//     }
 
 private:
     QStringList _connectedApps;
@@ -55,7 +82,7 @@ ApplicationsManager::ApplicationsManager(QWidget* parent):
     _connectedAppsModel(0)
 {
     setupUi(this);
-    _connectedApps->setItemDelegate(new ConnectedAppItemDelegate());
+//    _connectedApps->setItemDelegate(new ConnectedAppItemDelegate());
 }
 
 ApplicationsManager::~ApplicationsManager()

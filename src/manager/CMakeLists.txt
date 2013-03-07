@@ -12,7 +12,9 @@ set(kwalletmanager_SRCS
     allyourbase.cpp
     kbetterthankdialogbase.cpp
     registercreateactionmethod.cpp
-    applicationsmanager.cpp)
+    applicationsmanager.cpp
+    connectedapplicationstable.cpp
+)
 
 qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
 
