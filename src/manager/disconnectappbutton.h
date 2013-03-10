@@ -17,30 +17,31 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef APPLICATIONSMANAGER_H
-#define APPLICATIONSMANAGER_H
+#ifndef DISCONNECTAPPBUTTON_H
+#define DISCONNECTAPPBUTTON_H
 
-#include "ui_applicationsmanager.h"
-#include <QWidget>
+#include <QPushButton>
 
 namespace KWallet {
-class Wallet;
+    class Wallet;
 }
 
-class QStringListModel;
-
-class ApplicationsManager : public QWidget, public Ui::ApplicationsManager
-{
+class DisconnectAppButton : public QPushButton {
     Q_OBJECT
 public:
-    ApplicationsManager(QWidget *parent);
-    virtual ~ApplicationsManager();
+    DisconnectAppButton(const QString& appName, KWallet::Wallet *wallet);
 
-    void setWallet(KWallet::Wallet *wallet);
+Q_SIGNALS:
+    void appDisconnected(QString);
+
+private Q_SLOTS:
+    void onClicked();
 
 private:
+    QString             _appName;
     KWallet::Wallet     *_wallet;
-    QStringListModel    *_connectedAppsModel;
 };
 
-#endif // APPLICATIONSMANAGER_H
+
+
+#endif // DISCONNECTAPPBUTTON_H

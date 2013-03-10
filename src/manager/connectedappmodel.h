@@ -17,30 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef APPLICATIONSMANAGER_H
-#define APPLICATIONSMANAGER_H
+#ifndef CONNECTEDAPPMODEL_H
+#define CONNECTEDAPPMODEL_H
 
-#include "ui_applicationsmanager.h"
-#include <QWidget>
+#include <QStandardItemModel>
 
 namespace KWallet {
 class Wallet;
 }
 
-class QStringListModel;
-
-class ApplicationsManager : public QWidget, public Ui::ApplicationsManager
+class ConnectedAppModel : public QStandardItemModel
 {
     Q_OBJECT
 public:
-    ApplicationsManager(QWidget *parent);
-    virtual ~ApplicationsManager();
+    explicit ConnectedAppModel(KWallet::Wallet *wallet);
 
-    void setWallet(KWallet::Wallet *wallet);
+public Q_SLOTS:
+    void refresh();
+    void removeApp(QString);
 
 private:
-    KWallet::Wallet     *_wallet;
-    QStringListModel    *_connectedAppsModel;
+    KWallet::Wallet                         *_wallet;
+    QStringList                             _connectedApps;
+    QMap<QString, QPersistentModelIndex>    _connectedAppsIndexMap;
 };
 
-#endif // APPLICATIONSMANAGER_H
+
+#endif // CONNECTEDAPPMODEL_H
