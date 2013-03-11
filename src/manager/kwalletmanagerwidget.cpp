@@ -33,7 +33,7 @@
 KWalletManagerWidget::KWalletManagerWidget(QWidget* parent, Qt::WindowFlags flags): 
     KPageWidget(parent)
 {
-    setFaceType(List);
+    setFaceType(Auto);
     setAcceptDrops(true);
 
     connect(this, SIGNAL(currentPageChanged(KPageWidgetItem*,KPageWidgetItem*)), SLOT(onCurrentPageChanged(KPageWidgetItem*,KPageWidgetItem*)));
