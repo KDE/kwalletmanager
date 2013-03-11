@@ -17,38 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "applicationsmanager.h"
-#include "connectedappmodel.h"
-#include "authorizedappmodel.h"
-#include "kwallet.h"
+#include "revokeauthbutton.h"
+#include <klocalizedstring.h>
 
-#include <QStyledItemDelegate>
-#include <QPainter>
-#include <QStandardItemModel>
-#include <kdebug.h>
-
-ApplicationsManager::ApplicationsManager(QWidget* parent):
-    QWidget(parent),
-    _wallet(0),
-    _connectedAppsModel(0)
+RevokeAuthButton::RevokeAuthButton(const QString& appName, KWallet::Wallet* wallet): 
+    QPushButton(),
+    _appName(appName),
+    _wallet(wallet)
 {
-    setupUi(this);
+    setText(tr2i18n("Revoke Authorization"));
+    connect(this, SIGNAL(clicked(bool)), this, SLOT(onClicked()));
 }
 
-ApplicationsManager::~ApplicationsManager()
+void RevokeAuthButton::onClicked()
 {
-    delete _connectedAppsModel;
+    emit appRevoked(_appName);
 }
 
-void ApplicationsManager::setWallet(KWallet::Wallet* wallet)
-{
-    Q_ASSERT(wallet != 0);
-    _wallet = wallet;
-
-    // create the disconnect widget menu
-    _connectedApps->setWallet(_wallet);
-    _connectedApps->setModel(new ConnectedAppModel(_wallet));
-
-    _authorizedApps->setWallet(_wallet);
-    _authorizedApps->setModel(new AuthorizedAppModel(_wallet));
-}
+#include "revokeauthbutton.moc"

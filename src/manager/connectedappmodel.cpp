@@ -32,7 +32,8 @@ ConnectedAppModel::ConnectedAppModel(KWallet::Wallet* wallet):
 
 void ConnectedAppModel::refresh()
 {
-    QStringList existingAppList = _connectedApps;
+    clear();
+    _connectedAppsIndexMap.clear();
 
     _connectedApps = KWallet::Wallet::users(_wallet->walletName());
     int row =0;
@@ -40,16 +41,13 @@ void ConnectedAppModel::refresh()
         // for un unknown reason, kwalletd returs empty strings so lets avoid inserting them
         // FIXME: find out why kwalletd returns empty strings here
         if (appName.length()>0) {
-            if ((existingAppList.count() == 0) || !existingAppList.contains(appName)) {
-                existingAppList.remove(appName);
-                QStandardItem *item = new QStandardItem(appName);
-                item->setEditable(false);
-                setItem(row, 0, item);
-                // this item will be hidden by the disconnect button, see below setIndexWidget call
-                setItem(row, 1, new QStandardItem("dummy"));
-                _connectedAppsIndexMap.insert(appName, QPersistentModelIndex(index(row, 0)));
-                row++;
-            }
+            QStandardItem *item = new QStandardItem(appName);
+            item->setEditable(false);
+            setItem(row, 0, item);
+            // this item will be hidden by the disconnect button, see below setIndexWidget call
+            setItem(row, 1, new QStandardItem("dummy"));
+            _connectedAppsIndexMap.insert(appName, QPersistentModelIndex(index(row, 0)));
+            row++;
         }
     }
 }

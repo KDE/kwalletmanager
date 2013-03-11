@@ -64,12 +64,40 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>These applications are authorized to access the contents of this wallet:</string>
+      <string>These applications are authorized to access this wallet:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QListView" name="_authorizedApps"/>
+    <widget class="AuthorizedApplicationsTable" name="_authorizedApps">
+     <property name="showDropIndicator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>false</bool>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -78,6 +106,11 @@
    <class>ConnectedApplicationsTable</class>
    <extends>QTableView</extends>
    <header>connectedapplicationstable.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AuthorizedApplicationsTable</class>
+   <extends>QTableView</extends>
+   <header>authorizedapplicationstable.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
