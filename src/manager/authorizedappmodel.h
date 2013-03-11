@@ -17,38 +17,32 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "applicationsmanager.h"
-#include "connectedappmodel.h"
-#include "authorizedappmodel.h"
-#include "kwallet.h"
+#ifndef AUTHORIZEDAPPMODEL_H
+#define AUTHORIZEDAPPMODEL_H
 
-#include <QStyledItemDelegate>
-#include <QPainter>
 #include <QStandardItemModel>
-#include <kdebug.h>
+#include <ksharedconfig.h>
 
-ApplicationsManager::ApplicationsManager(QWidget* parent):
-    QWidget(parent),
-    _wallet(0),
-    _connectedAppsModel(0)
-{
-    setupUi(this);
+namespace KWallet {
+class Wallet;
 }
 
-ApplicationsManager::~ApplicationsManager()
+class AuthorizedAppModel : public QStandardItemModel
 {
-    delete _connectedAppsModel;
-}
+    Q_OBJECT
+public:
+    explicit AuthorizedAppModel(KWallet::Wallet *wallet);
 
-void ApplicationsManager::setWallet(KWallet::Wallet* wallet)
-{
-    Q_ASSERT(wallet != 0);
-    _wallet = wallet;
+public Q_SLOTS:
+    void removeApp(QString);
 
-    // create the disconnect widget menu
-    _connectedApps->setWallet(_wallet);
-    _connectedApps->setModel(new ConnectedAppModel(_wallet));
+private Q_SLOTS:
+    void saveConfig();
 
-    _authorizedApps->setWallet(_wallet);
-    _authorizedApps->setModel(new AuthorizedAppModel(_wallet));
-}
+private:
+    KSharedConfig::Ptr                      _cfg;
+    KWallet::Wallet                         *_wallet;
+    QMap<QString, QPersistentModelIndex>    _authorizedAppsIndexMap;
+};
+
+#endif // AUTHORIZEDAPPMODEL_H

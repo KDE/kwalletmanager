@@ -17,38 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "applicationsmanager.h"
-#include "connectedappmodel.h"
-#include "authorizedappmodel.h"
-#include "kwallet.h"
+#ifndef REVOKEAUTHBUTTON_H
+#define REVOKEAUTHBUTTON_H
 
-#include <QStyledItemDelegate>
-#include <QPainter>
-#include <QStandardItemModel>
-#include <kdebug.h>
+#include <QPushButton>
 
-ApplicationsManager::ApplicationsManager(QWidget* parent):
-    QWidget(parent),
-    _wallet(0),
-    _connectedAppsModel(0)
-{
-    setupUi(this);
+namespace KWallet {
+class Wallet;
 }
 
-ApplicationsManager::~ApplicationsManager()
+class RevokeAuthButton : public QPushButton
 {
-    delete _connectedAppsModel;
-}
+    Q_OBJECT
+public:
+    RevokeAuthButton(const QString& appName, KWallet::Wallet *wallet);
 
-void ApplicationsManager::setWallet(KWallet::Wallet* wallet)
-{
-    Q_ASSERT(wallet != 0);
-    _wallet = wallet;
+private Q_SLOTS:
+    void onClicked();
 
-    // create the disconnect widget menu
-    _connectedApps->setWallet(_wallet);
-    _connectedApps->setModel(new ConnectedAppModel(_wallet));
+Q_SIGNALS:
+    void appRevoked(QString);
 
-    _authorizedApps->setWallet(_wallet);
-    _authorizedApps->setModel(new AuthorizedAppModel(_wallet));
-}
+private:
+    QString             _appName;
+    KWallet::Wallet     *_wallet;
+};
+
+#endif // REVOKEAUTHBUTTON_H

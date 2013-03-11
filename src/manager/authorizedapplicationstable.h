@@ -17,38 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "applicationsmanager.h"
-#include "connectedappmodel.h"
-#include "authorizedappmodel.h"
-#include "kwallet.h"
 
-#include <QStyledItemDelegate>
-#include <QPainter>
-#include <QStandardItemModel>
-#include <kdebug.h>
+#ifndef AUTHORIZEDAPPLICATIONSTABLE_H
+#define AUTHORIZEDAPPLICATIONSTABLE_H
 
-ApplicationsManager::ApplicationsManager(QWidget* parent):
-    QWidget(parent),
-    _wallet(0),
-    _connectedAppsModel(0)
-{
-    setupUi(this);
+#include <QTableView>
+
+namespace KWallet {
+class Wallet;
 }
 
-ApplicationsManager::~ApplicationsManager()
+class AuthorizedApplicationsTable : public QTableView
 {
-    delete _connectedAppsModel;
-}
+    Q_OBJECT
+public:
+    explicit AuthorizedApplicationsTable(QWidget* parent);
 
-void ApplicationsManager::setWallet(KWallet::Wallet* wallet)
-{
-    Q_ASSERT(wallet != 0);
-    _wallet = wallet;
+    virtual void setModel(QAbstractItemModel *model);
+    void setWallet(KWallet::Wallet *wallet);
 
-    // create the disconnect widget menu
-    _connectedApps->setWallet(_wallet);
-    _connectedApps->setModel(new ConnectedAppModel(_wallet));
+protected:
+    virtual void resizeEvent(QResizeEvent *resizeEvent);
 
-    _authorizedApps->setWallet(_wallet);
-    _authorizedApps->setModel(new AuthorizedAppModel(_wallet));
-}
+private:
+    KWallet::Wallet     *_wallet;
+};
+
+#endif // AUTHORIZEDAPPLICATIONSTABLE_H

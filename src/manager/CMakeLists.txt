@@ -16,6 +16,9 @@ set(kwalletmanager_SRCS
     connectedapplicationstable.cpp
     connectedappmodel.cpp
     disconnectappbutton.cpp
+    authorizedappmodel.cpp
+    authorizedapplicationstable.cpp
+    revokeauthbutton.cpp
 )
 
 qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
