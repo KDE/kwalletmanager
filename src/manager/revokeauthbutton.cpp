@@ -25,6 +25,7 @@ RevokeAuthButton::RevokeAuthButton(const QString& appName, KWallet::Wallet* wall
     _appName(appName),
     _wallet(wallet)
 {
+    setObjectName(QString("Revoke_%1").arg(appName));
     setText(tr2i18n("Revoke Authorization"));
     connect(this, SIGNAL(clicked(bool)), this, SLOT(onClicked()));
 }
