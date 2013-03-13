@@ -206,7 +206,11 @@ void KWalletEditor::createActions(KActionCollection* actionCollection) {
         _exportAction->setText( i18n("&Export...") );
 
 	_saveAsAction = KStandardAction::saveAs(0, 0, actionCollection);
-	_copyPassAction = KStandardAction::copy(0, SLOT(copyPassword()), actionCollection);
+
+	_copyPassAction = actionCollection->addAction( QLatin1String( "copy_action" ) );
+	_copyPassAction->setText( i18n("&Copy") );
+    _copyPassAction->setShortcut( Qt::Key_C + Qt::CTRL );
+    _copyPassAction->setEnabled(false);
 
 	_newEntryAction = actionCollection->addAction( QLatin1String(  "new_entry" ) );
 	_newEntryAction->setText( i18n( "&New..." ) );
