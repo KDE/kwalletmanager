@@ -143,7 +143,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
 actionCollection());
 
-    setupGUI( Keys | StatusBar | Save | Create, QLatin1String( "kwalletmanager.rc" ));
+    setupGUI( Keys | Save | Create, QLatin1String( "kwalletmanager.rc" ));
+    setStandardToolBarMenuEnabled(false);
 
 	if (_tray) {
 //		_tray->show();

@@ -71,7 +71,7 @@ void WalletControlWidget::onSetupWidget()
             _applicationsManager->setWallet(_wallet);
 
             _changePassword->setEnabled(true);
-            _stateLabel->setText(tr2i18n("The wallet is currently open"));
+            _stateLabel->setText(tr2i18n("The '%1' wallet is currently open", "the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)").arg(_walletName));
             _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-open")).pixmap());
         }
     } else {
