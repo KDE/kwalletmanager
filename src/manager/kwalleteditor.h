@@ -37,6 +37,7 @@ class QCheckBox;
 class KWalletEntryList;
 class KWMapEditor;
 class KAction;
+class KTreeWidgetSearchLine;
 
 
 class KWalletEditor : public QWidget, public Ui::WalletWidget {
@@ -120,8 +121,9 @@ protected:
 		KMenu *_contextMenu;
         QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
         KActionCollection *_actionCollection;
-        KMenu* _controlMenu;
-        KMenu* _walletSubmenu;
+        KMenu *_controlMenu;
+        KMenu *_walletSubmenu;
+        KTreeWidgetSearchLine *_searchLine;
 };
 
 #endif
