@@ -93,7 +93,8 @@ KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
 	box->setMargin( KDialog::marginHint() );
 	_entryList = new KWalletEntryList(_entryListFrame, "Wallet Entry List");
 	_entryList->setContextMenuPolicy(Qt::CustomContextMenu);
-	box->addWidget(new KTreeWidgetSearchLine(_entryListFrame, _entryList));
+    _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
+	box->addWidget(_searchLine);
 	box->addWidget(_entryList);
 
 	_entryStack->setEnabled(true);
@@ -114,6 +115,8 @@ KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
 		splitterSize.append(_splitter->width()/2);
 	}
 	_splitter->setSizes(splitterSize);
+
+    _searchLine->setFocus();
 
 	connect(_entryList, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
 		this, SLOT(entrySelectionChanged(QTreeWidgetItem*)));
@@ -159,6 +162,8 @@ KWalletEditor::~KWalletEditor() {
 	if (_nonLocal) {
 		KWallet::Wallet::closeWallet(_walletName, true);
 	}
+	delete _contextMenu;
+    _contextMenu = NULL;
 }
 
 void KWalletEditor::setWallet(KWallet::Wallet* wallet, bool isPath)
@@ -178,6 +183,9 @@ void KWalletEditor::setWallet(KWallet::Wallet* wallet, bool isPath)
     emit enableFolderActions(true);
     emit enableWalletActions(true);
     emit enableContextFolderActions(true);
+
+    setFocus();
+    _searchLine->setFocus();
 }
 
 KActionCollection* KWalletEditor::actionCollection()
