@@ -51,6 +51,12 @@ void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem* current, KPageW
 
 void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString() */)
 {
+    // NOTE: this method is called upon several kwalletd events
+    static bool alreadyUpdating = false;
+    if (alreadyUpdating)
+        return;
+
+    alreadyUpdating = true;
     // find out pages corresponding to deleted wallets
     const QStringList wl = KWallet::Wallet::walletList();
     WalletPagesHash::iterator p = _walletPages.begin();
@@ -65,13 +71,6 @@ void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString
         }
     }
 
-    // update existing wallets display, e.g. icon
-    WalletPagesHash::const_iterator cp = _walletPages.constBegin();
-    WalletPagesHash::const_iterator cend = _walletPages.constEnd();
-    for ( ; cp != cend; cp++ ) {
-         cp.value()->updateWalletDisplay();
-    }
-
     // add new wallets
     for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
         const QString& name = *i;
@@ -82,9 +81,17 @@ void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString
         }
     }
 
+    // update existing wallets display, e.g. icon
+    WalletPagesHash::const_iterator cp = _walletPages.constBegin();
+    WalletPagesHash::const_iterator cend = _walletPages.constEnd();
+    for ( ; cp != cend; cp++ ) {
+         cp.value()->updateWalletDisplay();
+    }
+
     if (!selectWallet.isEmpty()) {
         setCurrentPage(_walletPages[selectWallet]);
     }
+    alreadyUpdating = false;
 }
 
 bool KWalletManagerWidget::hasWallet(const QString& name) const
