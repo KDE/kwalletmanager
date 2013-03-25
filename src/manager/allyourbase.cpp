@@ -332,6 +332,7 @@ KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
 	setDragEnabled(true);
 	setAcceptDrops(true);
 	setDragDropMode(DragDrop);
+    setSelectionMode(SingleSelection);
 }
 
 KWalletEntryList::~KWalletEntryList() {
@@ -602,6 +603,22 @@ KWalletFolderItem *KWalletEntryList::getItemFolder(QTreeWidgetItem *item) {
 			return dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
 	}
 	return 0;
+}
+
+void KWalletEntryList::selectFirstVisible()
+{
+    QTreeWidgetItemIterator it(this);
+    while (*it) {
+        QTreeWidgetItem *item = *it++;
+        if (!item->isHidden()) {
+            // if it's a leaf, then select it and quit
+            if (item->childCount() ==0) {
+//                 kDebug() << "selecting " << item->text(0);
+                setCurrentItem(item);
+                break;
+            }
+        }
+    }
 }
 
 class ReturnPressedFilter : public QObject

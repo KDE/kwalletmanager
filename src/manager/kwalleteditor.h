@@ -89,6 +89,8 @@ protected:
 
 		void copyPassword();
 
+        void onSearchTextChanged(const QString&);
+
 	signals:
 		void enableWalletActions(bool enable);
 		void enableFolderActions(bool enable);
