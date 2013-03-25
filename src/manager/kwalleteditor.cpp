@@ -94,6 +94,7 @@ KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
 	_entryList = new KWalletEntryList(_entryListFrame, "Wallet Entry List");
 	_entryList->setContextMenuPolicy(Qt::CustomContextMenu);
     _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
+    connect(_searchLine, SIGNAL(textChanged(const QString&)), this, SLOT(onSearchTextChanged(const QString&)));
 	box->addWidget(_searchLine);
 	box->addWidget(_entryList);
 
@@ -1263,6 +1264,27 @@ void KWalletEditor::showEvent(QShowEvent* )
     emit enableWalletActions(true);
 }
 
+void KWalletEditor::onSearchTextChanged(const QString& text)
+{
+    static bool treeIsExpanded = false;
+    if (text.isEmpty()) {
+        if (treeIsExpanded) {
+            _entryList->setCurrentItem(NULL);
+            // NOTE: the 300 ms here is a value >200 ms used internally by KTreeWidgetSearchLine
+            // TODO: replace this timer with a connection to KTreeWidgetSearchLine::searchUpdated signal introduced with KF5
+            QTimer::singleShot(300, _entryList, SLOT(collapseAll()));
+            treeIsExpanded = false;
+        }
+    } else {
+        if (!treeIsExpanded) {
+            _entryList->expandAll();
+            treeIsExpanded = true;
+        }
+        // NOTE: the 300 ms here is a value >200 ms used internally by KTreeWidgetSearchLine
+        // TODO: replace this timer with a connection to KTreeWidgetSearchLine::searchUpdated signal introduced with KF5
+        QTimer::singleShot(300, _entryList, SLOT(selectFirstVisible()));
+    }
+}
 
 #include "kwalleteditor.moc"
 

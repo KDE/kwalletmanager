@@ -124,6 +124,9 @@ class KWalletEntryList : public QTreeWidget {
 	public:
 		KWallet::Wallet *_wallet;
 		QPoint _mousePos;
+
+    public Q_SLOTS:
+        void selectFirstVisible();
 };
 
 class KWalletItem : public QListWidgetItem {
