@@ -88,6 +88,7 @@ class KWalletFolderItem : public QTreeWidgetItem {
 		QPixmap getFolderIcon(KIconLoader::Group group);
 		bool contains(const QString& itemKey);
 		QTreeWidgetItem* getItem(const QString& itemKey);
+        void refreshItemsCount();
 
 	public:
 		KWallet::Wallet *_wallet;
@@ -127,6 +128,7 @@ class KWalletEntryList : public QTreeWidget {
 
     public Q_SLOTS:
         void selectFirstVisible();
+        void refreshItemsCount();
 };
 
 class KWalletItem : public QListWidgetItem {

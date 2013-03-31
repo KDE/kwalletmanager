@@ -1284,6 +1284,8 @@ void KWalletEditor::onSearchTextChanged(const QString& text)
         // TODO: replace this timer with a connection to KTreeWidgetSearchLine::searchUpdated signal introduced with KF5
         QTimer::singleShot(300, _entryList, SLOT(selectFirstVisible()));
     }
+    // TODO: reduce timer count when KTreeWidgetSearchLine::searchUpdated signal will be there
+    QTimer::singleShot(300, _entryList, SLOT(refreshItemsCount()));
 }
 
 #include "kwalleteditor.moc"

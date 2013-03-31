@@ -68,6 +68,22 @@ void KWalletFolderItem::refresh() {
 	_wallet->setFolder(saveFolder);
 }
 
+void KWalletFolderItem::refreshItemsCount()
+{
+    int visibleLeafCount =0;
+    for (int i=0; i < childCount(); i++) {
+        QTreeWidgetItem* wi = child(i);
+        if (wi->childCount()) {
+            for (int l=0; l < wi->childCount(); l++) {
+                QTreeWidgetItem* li = wi->child(l);
+                if (!li->isHidden())
+                    visibleLeafCount++;
+            }
+        }
+    }
+    setText(0, QString::fromLatin1("%1 (%2)").arg(_name).arg(visibleLeafCount));
+}
+
 KWalletContainerItem* KWalletFolderItem::getContainer(KWallet::Wallet::EntryType type) {
 	for (int i = 0; i < childCount(); ++i) {
 		KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem *>(child(i));
@@ -617,6 +633,18 @@ void KWalletEntryList::selectFirstVisible()
                 setCurrentItem(item);
                 break;
             }
+        }
+    }
+}
+
+void KWalletEntryList::refreshItemsCount()
+{
+    QTreeWidgetItemIterator it(this);
+    while (*it) {
+        QTreeWidgetItem *item = *it++;
+        KWalletFolderItem *fi = dynamic_cast< KWalletFolderItem* >(item);
+        if (fi) {
+            fi->refreshItemsCount();
         }
     }
 }
