@@ -90,6 +90,8 @@ protected:
 		void copyPassword();
 
         void onSearchTextChanged(const QString&);
+        void onAlwaysShowContents(bool);
+        void onAlwaysHideContents(bool);
 
 	signals:
 		void enableWalletActions(bool enable);
@@ -126,6 +128,8 @@ protected:
         KMenu *_controlMenu;
         KMenu *_walletSubmenu;
         KTreeWidgetSearchLine *_searchLine;
+        static QAction *_alwaysShowContentsAction, *_alwaysHideContentsAction;
+        bool _alwaysShowContents;
 };
 
 #endif

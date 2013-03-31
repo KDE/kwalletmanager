@@ -134,9 +134,18 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
-              <widget class="KPushButton" name="_hideContents">
+              <widget class="QToolButton" name="_hideContents">
                <property name="text">
                 <string>Hide &amp;Contents</string>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::DelayedPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextOnly</enum>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::DownArrow</enum>
                </property>
               </widget>
              </item>
@@ -245,9 +254,15 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <widget class="KPushButton" name="_showContents">
+              <widget class="QToolButton" name="_showContents">
                <property name="text">
                 <string>Show &amp;Contents</string>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonFollowStyle</enum>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::NoArrow</enum>
                </property>
               </widget>
              </item>
