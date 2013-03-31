@@ -45,7 +45,6 @@ void AuthorizedApplicationsTable::setModel(QAbstractItemModel* model)
         setIndexWidget( model->index(row, 1), btn);
         connect(btn, SIGNAL(appRevoked(QString)), appModel, SLOT(removeApp(QString)));
     }
-    QTableView::setModel(model);
 }
 
 void AuthorizedApplicationsTable::resizeEvent(QResizeEvent* resizeEvent)
