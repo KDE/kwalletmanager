@@ -72,7 +72,7 @@ void WalletControlWidget::onSetupWidget()
 
             _changePassword->setEnabled(true);
             _stateLabel->setText(tr2i18n("The '%1' wallet is currently open", "the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)").arg(_walletName));
-            _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-open")).pixmap());
+            _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-open")).pixmap(16));
         }
     } else {
         _openClose->setText(tr2i18n("&Open...", 0));
@@ -88,7 +88,7 @@ void WalletControlWidget::onSetupWidget()
         }
         _changePassword->setEnabled(false);
         _stateLabel->setText(tr2i18n("The wallet is currently closed"));
-        _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-closed")).pixmap());
+        _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-closed")).pixmap(16));
     }
 }
 
