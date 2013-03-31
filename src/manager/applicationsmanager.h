@@ -23,6 +23,8 @@
 #include "ui_applicationsmanager.h"
 #include <QWidget>
 
+class AuthorizedAppModel;
+class ConnectedAppModel;
 namespace KWallet {
 class Wallet;
 }
@@ -40,7 +42,8 @@ public:
 
 private:
     KWallet::Wallet     *_wallet;
-    QStringListModel    *_connectedAppsModel;
+    ConnectedAppModel   *_connectedAppsModel;
+    AuthorizedAppModel  *_authorizedAppModel;
 };
 
 #endif // APPLICATIONSMANAGER_H
