@@ -31,7 +31,6 @@
 
 class KActionCollection;
 class KMenu;
-class QToolButton;
 class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
