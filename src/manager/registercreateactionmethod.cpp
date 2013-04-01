@@ -22,7 +22,7 @@
 
 #include <kglobal.h>
 
-K_GLOBAL_STATIC(std::list<RegisterCreateActionsMethod::CreateActionsMethod>, createActionMethodList);
+K_GLOBAL_STATIC(std::list<RegisterCreateActionsMethod::CreateActionsMethod>, createActionMethodList)
 
 RegisterCreateActionsMethod::RegisterCreateActionsMethod(RegisterCreateActionsMethod::CreateActionsMethod method)
 {
