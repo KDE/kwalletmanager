@@ -43,8 +43,10 @@ protected:
     virtual void dragMoveEvent(QDragMoveEvent *e);
     virtual void dropEvent(QDropEvent *e);
 
-private:
+private Q_SLOTS:
     void onCurrentPageChanged(KPageWidgetItem*,KPageWidgetItem*);
+
+private:
     bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const;
 
     typedef QHash<QString, KWalletManagerWidgetItem*> WalletPagesHash;
