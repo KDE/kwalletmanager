@@ -156,3 +156,5 @@ void WalletControlWidget::hideEvent(QHideEvent* )
 void WalletControlWidget::showEvent(QShowEvent* ev)
 {
 }
+
+#include "walletcontrolwidget.moc"

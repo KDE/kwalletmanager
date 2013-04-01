@@ -187,3 +187,5 @@ bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent* e, KUrl* u) c
 // 
 //     return *u == KUrl();
 }
+
+#include "kwalletmanagerwidget.moc"
