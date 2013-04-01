@@ -24,8 +24,8 @@
 
 
 ConnectedAppModel::ConnectedAppModel(KWallet::Wallet* wallet):
-    _wallet(wallet),
-    QStandardItemModel()
+    QStandardItemModel(),
+    _wallet(wallet)
 {
     refresh();
 }
