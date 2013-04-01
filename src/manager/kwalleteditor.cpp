@@ -71,7 +71,7 @@ QAction *KWalletEditor::_importAction =0;
 KAction *KWalletEditor::_newEntryAction =0;
 KAction *KWalletEditor::_renameEntryAction =0;
 KAction *KWalletEditor::_deleteEntryAction =0;
-QAction *KWalletEditor::_copyPassAction =0;
+KAction *KWalletEditor::_copyPassAction =0;
 QAction *KWalletEditor::_alwaysShowContentsAction =0;
 QAction *KWalletEditor::_alwaysHideContentsAction =0;
 
