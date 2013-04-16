@@ -36,3 +36,5 @@ void DisconnectAppButton::onClicked()
         emit appDisconnected(_appName);
     }
 }
+
+#include "disconnectappbutton.moc"

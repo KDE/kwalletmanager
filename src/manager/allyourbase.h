@@ -34,7 +34,6 @@
 #define KWALLETENTRYMAGIC ((quint32) 0x6B776C65)
 #define KWALLETFOLDERMAGIC ((quint32) 0x6B776C66)
 
-class KUrl;
 
 enum KWalletListItemClasses {
 	KWalletFolderItemClass = QTreeWidgetItem::UserType,

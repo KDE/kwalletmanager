@@ -56,3 +56,5 @@ void AuthorizedApplicationsTable::resizeEvent(QResizeEvent* resizeEvent)
     setColumnWidth(0, appColumnSize);
     QAbstractItemView::resizeEvent(resizeEvent);
 }
+
+#include "authorizedapplicationstable.moc"

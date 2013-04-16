@@ -31,7 +31,6 @@
 
 class KActionCollection;
 class KMenu;
-class QToolButton;
 class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
@@ -114,7 +113,7 @@ protected:
 		static QAction *_newFolderAction, *_deleteFolderAction;
 		static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
 		static KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
-		static QAction *_copyPassAction;
+		static KAction *_copyPassAction;
 		QLabel*_details;
 		QString _currentFolder;
 		QMap<QString,QString> _currentMap; // save memory by storing

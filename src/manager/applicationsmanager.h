@@ -29,7 +29,6 @@ namespace KWallet {
 class Wallet;
 }
 
-class QStringListModel;
 
 class ApplicationsManager : public QWidget, public Ui::ApplicationsManager
 {

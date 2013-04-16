@@ -76,3 +76,5 @@ void AuthorizedAppModel::saveConfig()
     config.writeEntry(_wallet->walletName(), appList);
     _cfg->sync();
 }
+
+#include "authorizedappmodel.moc"
