@@ -1325,7 +1325,9 @@ void KWalletEditor::onAlwaysHideContents(bool checked)
 {
     _alwaysShowContents = !checked;
     _alwaysShowContentsAction->setChecked(_alwaysShowContents);
-    hidePasswordContents();
+    if (checked) {
+        hidePasswordContents();
+    }
 }
 
 #include "kwalleteditor.moc"
