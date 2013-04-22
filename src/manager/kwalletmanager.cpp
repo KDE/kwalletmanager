@@ -122,7 +122,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	action->setIcon(KIcon( QLatin1String( "kwalletmanager" )));
 	connect(action, SIGNAL(triggered()), SLOT(createWallet()));
     action = actionCollection()->addAction(QLatin1String( "wallet_delete" ));
-    action->setText(i18n("&Delete wallet..."));
+    action->setText(i18n("&Delete Wallet..."));
     action->setIcon(KIcon( QLatin1String( "trash-empty" )));
     connect(action, SIGNAL(triggered()), SLOT(deleteWallet()));
 	QAction *act = actionCollection()->addAction(QLatin1String( "wallet_settings" ));

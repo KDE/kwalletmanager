@@ -11,6 +11,9 @@
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
@@ -27,58 +30,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="_openClose">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+      <widget class="QPushButton" name="_openClose">
        <property name="text">
         <string>Open...</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>22</width>
-         <height>22</height>
-        </size>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextBesideIcon</enum>
-       </property>
-       <property name="autoRaise">
-        <bool>false</bool>
-       </property>
-       <property name="arrowType">
-        <enum>Qt::NoArrow</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="_changePassword">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Change password...</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>22</width>
-         <height>22</height>
-        </size>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextBesideIcon</enum>
-       </property>
-       <property name="autoRaise">
-        <bool>false</bool>
-       </property>
-       <property name="arrowType">
-        <enum>Qt::NoArrow</enum>
        </property>
       </widget>
      </item>
@@ -98,6 +52,13 @@
        </property>
       </spacer>
      </item>
+     <item>
+      <widget class="QPushButton" name="_changePassword">
+       <property name="text">
+        <string>Change Password...</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -107,12 +68,17 @@
      </property>
      <widget class="QWidget" name="_contentsTab">
       <attribute name="icon">
-       <iconset theme="wallet-closed"/>
+       <iconset theme="wallet-closed">
+        <normaloff/>
+       </iconset>
       </attribute>
       <attribute name="title">
        <string>Contents</string>
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="margin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="_editorFrame">
          <property name="sizePolicy">
@@ -130,7 +96,11 @@
          <property name="lineWidth">
           <number>0</number>
          </property>
-         <layout class="QVBoxLayout" name="_editorFrameLayout"/>
+         <layout class="QVBoxLayout" name="_editorFrameLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -145,8 +115,8 @@
        <string>Applications</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="leftMargin">
-        <number>4</number>
+       <property name="margin">
+        <number>0</number>
        </property>
        <item>
         <widget class="QFrame" name="_applicationsFrame">
@@ -159,7 +129,11 @@
          <property name="lineWidth">
           <number>0</number>
          </property>
-         <layout class="QVBoxLayout" name="_applicationsFrameLayout"/>
+         <layout class="QVBoxLayout" name="_applicationsFrameLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </layout>
         </widget>
        </item>
       </layout>

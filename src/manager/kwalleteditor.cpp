@@ -91,11 +91,11 @@ KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
 	_saveChanges->setIcon(KIcon( QLatin1String( "document-save" )));
 
 	QVBoxLayout *box = new QVBoxLayout(_entryListFrame);
-	box->setSpacing( KDialog::spacingHint() );
-	box->setMargin( KDialog::marginHint() );
+	box->setMargin(0);
 	_entryList = new KWalletEntryList(_entryListFrame, "Wallet Entry List");
 	_entryList->setContextMenuPolicy(Qt::CustomContextMenu);
     _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
+    _searchLine->setClickMessage(i18n("Search"));
     connect(_searchLine, SIGNAL(textChanged(const QString&)), this, SLOT(onSearchTextChanged(const QString&)));
 	box->addWidget(_searchLine);
 	box->addWidget(_entryList);
@@ -103,6 +103,7 @@ KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
 	_entryStack->setEnabled(true);
 
 	box = new QVBoxLayout(_entryStack->widget(2));
+	box->setMargin(0);
 	_mapEditorShowHide = new QCheckBox(i18n("&Show values"), _entryStack->widget(2));
 	connect(_mapEditorShowHide, SIGNAL(toggled(bool)), this, SLOT(showHideMapEditorValue(bool)));
 	_mapEditor = new KWMapEditor(_currentMap, _entryStack->widget(2));
