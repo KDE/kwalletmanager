@@ -46,6 +46,8 @@ void ConnectedApplicationsTable::setModel(QAbstractItemModel* model)
     QTableView::setModel(model);
     for (int row =0; row < model->rowCount(); row++) {
         DisconnectAppButton *btn = new DisconnectAppButton( model->index(row, 0).data().toString() , _wallet);
+        btn->setFixedHeight(btn->sizeHint().height());
+        setRowHeight(row, btn->height());
         setIndexWidget( model->index(row, 1), btn);
         connect(btn, SIGNAL(appDisconnected(QString)), appModel, SLOT(removeApp(QString)));
     }
