@@ -28,7 +28,7 @@
 #include <QPointer>
 #include <QApplication>
 #include <QClipboard>
-#include <QPushButton>
+#include <QToolButton>
 #include <ktextedit.h>
 #include <QFocusEvent>
 #include <QKeyEvent>
@@ -158,7 +158,9 @@ void KWMapEditor::reload() {
 	if ((row = rowCount()) < _map.count()) {
 		setRowCount(_map.count());
 		for (int x = row; x < rowCount(); ++x) {
-			QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
+			QToolButton *b = new QToolButton(this);
+			b->setIcon(KIcon("edit-delete"));
+			b->setToolTip(i18n("Delete Entry"));
 			connect(b, SIGNAL(clicked()), this, SLOT(erase()));
 			setCellWidget(x, 0, b);
 			setItem(x, 1, new QTableWidgetItem());
@@ -204,7 +206,9 @@ void KWMapEditor::saveMap() {
 void KWMapEditor::addEntry() {
 	int x = rowCount();
 	insertRow(x);
-	QPushButton *b = new QPushButton(QLatin1String( "X" ), this);
+	QToolButton *b = new QToolButton(this);
+	b->setIcon(KIcon("edit-delete"));
+	b->setToolTip(i18n("Delete Entry"));
 	connect(b, SIGNAL(clicked()), this, SLOT(erase()));
 	setCellWidget(x, 0, b);
 	setItem(x, 1, new QTableWidgetItem());
