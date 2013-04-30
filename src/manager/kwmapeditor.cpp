@@ -143,7 +143,6 @@ KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent)
 	connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
 	setSelectionMode(NoSelection);
 	setHorizontalHeaderLabels(QStringList() << QString() << i18n("Key") << i18n("Value"));
-	setColumnWidth(0, 20); // FIXME: this is arbitrary
 	setContextMenuPolicy(Qt::CustomContextMenu);
 	reload();
 }
@@ -163,6 +162,9 @@ void KWMapEditor::reload() {
 			b->setToolTip(i18n("Delete Entry"));
 			connect(b, SIGNAL(clicked()), this, SLOT(erase()));
 			setCellWidget(x, 0, b);
+			if (columnWidth(0) != b->sizeHint().width()) {
+				setColumnWidth(0, b->sizeHint().width());
+			}
 			setItem(x, 1, new QTableWidgetItem());
 			setItem(x, 2, new QTableWidgetItem());
 		}
