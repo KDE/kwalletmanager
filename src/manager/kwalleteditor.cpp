@@ -79,7 +79,7 @@ RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletE
 
 
 KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
-: _displayedItem(0), _actionCollection(0), _alwaysShowContents(false) {
+: QWidget(parent), _displayedItem(0), _actionCollection(0), _alwaysShowContents(false) {
     setupUi( this );
 	setObjectName( QLatin1String( name ) );
 	_newWallet = false;
@@ -185,7 +185,6 @@ void KWalletEditor::setWallet(KWallet::Wallet* wallet, bool isPath)
     connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
     updateFolderList();
 
-    connectActions();
     emit enableFolderActions(true);
     emit enableWalletActions(true);
     emit enableContextFolderActions(true);
@@ -1276,6 +1275,7 @@ void KWalletEditor::saveAs() {
 
 void KWalletEditor::hideEvent(QHideEvent* )
 {
+    kDebug() << "hideEvent " << (_w ? _walletName : "");
     emit enableContextFolderActions(false);
     emit enableFolderActions(false);
     emit enableWalletActions(false);
@@ -1285,6 +1285,7 @@ void KWalletEditor::hideEvent(QHideEvent* )
 
 void KWalletEditor::showEvent(QShowEvent* )
 {
+    kDebug() << "showEvent " << (_w ? _walletName : "");
     connectActions();
     emit enableContextFolderActions(true);
     emit enableFolderActions(true);
