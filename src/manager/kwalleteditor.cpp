@@ -96,7 +96,7 @@ KWalletEditor::KWalletEditor(QWidget* parent, const char *name)
 	_entryList->setContextMenuPolicy(Qt::CustomContextMenu);
     _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
     _searchLine->setClickMessage(i18n("Search"));
-    connect(_searchLine, SIGNAL(textChanged(const QString&)), this, SLOT(onSearchTextChanged(const QString&)));
+    connect(_searchLine, SIGNAL(textChanged(QString)), this, SLOT(onSearchTextChanged(QString)));
 	box->addWidget(_searchLine);
 	box->addWidget(_entryList);
 
