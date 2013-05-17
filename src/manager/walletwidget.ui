@@ -212,7 +212,7 @@
              <item>
               <widget class="QLabel" name="textLabel1_2">
                <property name="text">
-                <string>This is a binary data entry.  It cannot be editted as its format is unknown and application specific.</string>
+                <string>This is a binary data entry.  It cannot be edited as its format is unknown and application specific.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignVCenter</set>
