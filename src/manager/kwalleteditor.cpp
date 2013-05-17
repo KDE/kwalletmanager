@@ -1275,7 +1275,6 @@ void KWalletEditor::saveAs() {
 
 void KWalletEditor::hideEvent(QHideEvent* )
 {
-    kDebug() << "hideEvent " << (_w ? _walletName : "");
     emit enableContextFolderActions(false);
     emit enableFolderActions(false);
     emit enableWalletActions(false);
@@ -1285,7 +1284,6 @@ void KWalletEditor::hideEvent(QHideEvent* )
 
 void KWalletEditor::showEvent(QShowEvent* )
 {
-    kDebug() << "showEvent " << (_w ? _walletName : "");
     connectActions();
     emit enableContextFolderActions(true);
     emit enableFolderActions(true);
