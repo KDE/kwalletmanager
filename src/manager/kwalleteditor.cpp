@@ -210,13 +210,13 @@ void KWalletEditor::createActions(KActionCollection* actionCollection) {
         _deleteFolderAction->setText( i18n("&Delete Folder") );
 
         _mergeAction = actionCollection->addAction( QLatin1String(  "wallet_merge" ));
-        _mergeAction->setText( i18n("&Merge Wallet...") );
+        _mergeAction->setText( i18n("&Import Wallet...") );
 
         _importAction= actionCollection->addAction( QLatin1String(  "wallet_import" ) );
         _importAction->setText( i18n("&Import XML...") );
 
         _exportAction = actionCollection->addAction( QLatin1String(  "wallet_export" ) );
-        _exportAction->setText( i18n("&Export...") );
+        _exportAction->setText( i18n("&Export as XML...") );
 
 	_saveAsAction = KStandardAction::saveAs(0, 0, actionCollection);
 
