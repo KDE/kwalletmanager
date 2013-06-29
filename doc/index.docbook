@@ -401,9 +401,9 @@ Manager</guibutton>, which does precisely that.</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Prompt when an application accesses an open wallet</guilabel></term>
+<term><guilabel>Prompt when an application accesses a wallet</guilabel></term>
 <listitem>
-<para>Signal you when an application gains access to an open wallet.</para>
+<para>Signal you when an application gains access to a wallet.</para>
 </listitem>
 </varlistentry>
 </variablelist>
