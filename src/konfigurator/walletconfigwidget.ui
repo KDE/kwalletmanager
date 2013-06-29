@@ -283,7 +283,7 @@
        <item>
         <widget class="QCheckBox" name="_openPrompt">
          <property name="text">
-          <string>&amp;Prompt when an application accesses an open wallet</string>
+          <string>&amp;Prompt when an application accesses a wallet</string>
          </property>
          <property name="checked">
           <bool>true</bool>

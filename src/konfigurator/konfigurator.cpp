@@ -181,7 +181,7 @@ void KWalletConfig::configChanged() {
 void KWalletConfig::load() {
 	KConfigGroup config(_cfg, "Wallet");
 	_wcw->_enabled->setChecked(config.readEntry("Enabled", true));
-	_wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", true));
+	_wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", false));
 	_wcw->_launchManager->setChecked(config.readEntry("Launch Manager", true));
 	_wcw->_autocloseManager->setChecked(! config.readEntry("Leave Manager Open", false));
 	_wcw->_screensaverLock->setChecked(config.readEntry("Close on Screensaver", false));
@@ -304,7 +304,7 @@ void KWalletConfig::save() {
 
 void KWalletConfig::defaults() {
 	_wcw->_enabled->setChecked(true);
-	_wcw->_openPrompt->setChecked(true);
+	_wcw->_openPrompt->setChecked(false);
 	_wcw->_launchManager->setChecked(true);
 	_wcw->_autocloseManager->setChecked(false);
 	_wcw->_screensaverLock->setChecked(false);
