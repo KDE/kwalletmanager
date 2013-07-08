@@ -2,7 +2,7 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kwallet "<application>KWallet</application>">
   <!ENTITY kwalletmanager "<application>KWallet Manager</application>">
-  <!ENTITY package "kdeutils">
+  <!ENTITY package "kwallet">
   <!ENTITY kappname "&kwallet;">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2011-11-28</date>
-<releaseinfo>1.8 (&kde; 4.8)</releaseinfo>
+<date>2013-06-06</date>
+<releaseinfo>1.10 (&kde; 4.11)</releaseinfo>
 
 <abstract>
 <para>
@@ -168,99 +168,64 @@ wallet:
 </para>
 
 <para>Click once on the system tray wallet icon to display the &kwalletmanager;
-window showing all available wallets as icons which reflect their
-current status, either open or closed.</para>
+window.</para>
 <para>
+<screenshot>
+<screeninfo>Main window with one wallet</screeninfo>
 <mediaobject>
-   <imageobject>
-     <imagedata fileref="kwalletmanager.png"/>
-   </imageobject>
- </mediaobject></para>
-
-
-<sect1 id="kwalletmanager-context-menu">
-<title>The &kwalletmanager; Context Menu</title>
-
-<para><mousebutton>Right</mousebutton> clicking on a wallet in the
-&kwalletmanager; window offers 
-the following functions:</para>
-
-<variablelist>
-
-<varlistentry>
-<term><guimenuitem>New Wallet...</guimenuitem></term>
-<listitem>
-<para>Create a new wallet. A dialog box will ask you
-for the name of the new wallet that you want to create.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice><shortcut><keycap>Return</keycap></shortcut>
-<guisubmenu>Open...</guisubmenu></menuchoice></term>
-<listitem>
-<para>Open the wallet. Opening the wallet causes the contents 
-of the wallet to be displayed in a new window where you can
-add, delete, or modify the contents of the wallet. You may also 
-double click the wallet icon to cause it to open. If the wallet
-is not already open, you will be requested to enter the password.
-See below for details of using the wallet window.
+<imageobject>
+<imagedata fileref="kwalletmanager.png"/>
+</imageobject>
+<textobject>
+<phrase>Main window with one wallet</phrase>
+</textobject>
+<caption><para>Main window with one wallet</para></caption>
+</mediaobject>
+</screenshot>
 </para>
-</listitem>
-</varlistentry>
 
-<varlistentry>
-<term><guimenuitem>Change Password...</guimenuitem></term>
-<listitem>
-<para>Change the master password for the wallet.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guisubmenu>Disconnect</guisubmenu></term>
-<listitem><para>Disconnect an application from the wallet. Currently
-connected applications will appear in a submenu.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice><shortcut> <keycombo
-action="simul">&Ctrl;<keycap>W</keycap></keycombo></shortcut>
-<guimenuitem>Close</guimenuitem></menuchoice></term>
-<listitem><para>Force the wallet to be closed.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice><shortcut><keycap>Del</keycap></shortcut><guimenuitem>Delete</guimenuitem></menuchoice></term>
-<listitem>
-<para>Delete the wallet</para>
-</listitem>
-</varlistentry>
-</variablelist>
-</sect1>
-
+<!--FIXME 
+How to get assistant "First Use"? kwalletwizardpageintro.ui
+Last code change with http://websvn.kde.org/?view=revision&revision=882694
+see also https://bugs.kde.org/show_bug.cgi?id=290309
+-->
 <sect1 id="kwalletmanager-wallet-window">
 <title>The Wallet Window</title>
 
-<para>Double clicking on a wallet in the &kwalletmanager; window will open a new
-window displaying that wallet's contents. A wallet may contain any number
+<para>If you have more than one wallet all available wallets are shown as icons on the left. The Icons reflect the 
+current wallet status, either open or closed.
+</para>
+<para>Clicking on a wallet in the &kwalletmanager; window will display 
+that wallet's status and the contents of an opened wallet. A wallet may contain any number
 of folders, which allow storing of password information. By default a wallet
 will contain folders named Form Data and Passwords.
 </para>
 
-<para>The window has three sections:</para>
-<para>
+<screenshot>
+<screeninfo>Main window with two wallets</screeninfo>
 <mediaobject>
-   <imageobject>
-     <imagedata fileref="edit1.png"/>
-   </imageobject>
- </mediaobject></para>
+<imageobject>
+<imagedata fileref="kwallet-edit.png"/>
+</imageobject>
+<textobject>
+<phrase>Main window with two wallets</phrase>
+</textobject>
+<caption><para>Main window with two wallets</para></caption>
+</mediaobject>
+</screenshot>
+<para>Use <guibutton>Open</guibutton> to display the content of a closed wallet. 
+You will be requested to enter the master password.</para>
 
+<sect2>
+<title>Contents tab</title>
+
+<para>The <guilabel>Contents</guilabel> tab has three sections:</para>
 
 <itemizedlist>
 <listitem><para>A search line to filter the items of the current
 wallet</para></listitem>
 <listitem><para>The tree view of the folders contained in the wallet. 
-Click the <guiicon>&gt;</guiicon> / <guiicon>v</guiicon> symbols to expand or collapse 
+Click the <guiicon>&gt;</guiicon> / <guiicon>v</guiicon> icons to expand or collapse 
 the tree view.</para></listitem>
 <listitem><para>The contents of the selected folder entry at the right side. 
 By default the password and value are hidden. To display and edit them enable 
@@ -272,13 +237,6 @@ By default the password and value are hidden. To display and edit them enable
 the folder entry list and the summary display.  Selecting a folder entry
 will update the entry contents pane, and allow you to edit that
 entry.</para>
-<para>
-<mediaobject>
-   <imageobject>
-     <imagedata fileref="edit2.png"/>
-   </imageobject>
- </mediaobject></para>
-
 
 <para>Entries may also be created or deleted via the context menu for the
 folder contents.</para>
@@ -290,7 +248,20 @@ could be created and copied onto a removable flash memory device.  Important
 passwords could be transferred there, so you have them available in other
 locations.</para>
 
-<sect2 id="kwallet-adding-entries">
+<sect3 id="kwallet-import-export">
+<title>Import and Export</title>
+<para>If you want to transfer your secrets to another device or computer use 
+the actions in the <guimenu>File</guimenu> menu. With <guimenuitem>Save As</guimenuitem> 
+a wallets can be exported into an encrypted <filename class="extension">.kwl</filename> file. 
+Importing the <filename class="extension">.kwl</filename> file you have to provide t
+he master password of the wallet.
+</para>
+<para>Alternatively a <filename class="extension">.xml</filename> file can be used for transferring 
+a wallet. Keep in mind that all secrets are stored as plain text in this file.
+</para>
+</sect3>
+
+<sect3 id="kwallet-adding-entries">
 <title>Adding Entries Manually</title>
 <para>Open the context menu with the &RMB; click on <guilabel>Maps</guilabel> or 
 <guilabel>Passwords</guilabel> in the <guilabel>Folder</guilabel> tree view.
@@ -302,8 +273,33 @@ For Maps you have to add a <guilabel>Key</guilabel> and a <guilabel>Value</guila
 Click the <guilabel>Save</guilabel> button to store the new entries in the encrypted
 wallet file.
 </para>
+</sect3>
 </sect2>
 
+<sect2>
+<title>Applications tab</title>
+<para>
+<screenshot>
+<screeninfo>Applications tab</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-applications.png"/>
+</imageobject>
+<textobject>
+<phrase>Applications tab</phrase>
+</textobject>
+<caption><para>Applications tab</para></caption>
+</mediaobject>
+</screenshot>
+</para>
+<para>The first list shows all applications currently connected to the selected wallet. 
+Use the button at the right side of each entry to disconnect the application.</para>
+
+<para>In the second list all applications are displayed which are authorized to access the wallet.
+Use the button right of each entry in the list to revoke the access.
+</para>
+<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
+</sect2>
 </sect1>
 
 </chapter>
@@ -420,6 +416,25 @@ context menu that appears, or by simply selecting it and pressing the
 
 <para>An application that has been allowed access to a wallet is granted access to
 all passwords stored inside.</para>
+
+<para>If you erroneously configured an application not to use the &kde; &kwalletmanager; 
+delete the policy for this application here.</para>
+<!-- FIXME difference to Revoke Authorization in kwallermanager?-->
+<para>
+On the next start of this application you can define a new policy for access to the wallet.
+</para>
+<screenshot>
+<screeninfo>Access request to open a wallet</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="application-request-to-open-wallet.png"/>
+</imageobject>
+<textobject>
+<phrase>Access request to open a wallet</phrase>
+</textobject>
+<caption><para>An application requesting access to a wallet</para></caption>
+</mediaobject>
+</screenshot>
 
 </sect1>
 <!-- ksecrets moved to playground in 4.9
