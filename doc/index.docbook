@@ -252,9 +252,8 @@ locations.</para>
 <title>Import and Export</title>
 <para>If you want to transfer your secrets to another device or computer use 
 the actions in the <guimenu>File</guimenu> menu. With <guimenuitem>Save As</guimenuitem> 
-a wallets can be exported into an encrypted <filename class="extension">.kwl</filename> file. 
-Importing the <filename class="extension">.kwl</filename> file you have to provide t
-he master password of the wallet.
+wallets can be exported into an encrypted <filename class="extension">.kwl</filename> file. 
+Importing the <filename class="extension">.kwl</filename> file you have to provide the master password of the wallet.
 </para>
 <para>Alternatively a <filename class="extension">.xml</filename> file can be used for transferring 
 a wallet. Keep in mind that all secrets are stored as plain text in this file.
