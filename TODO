@@ -1,13 +1,14 @@
 Things left:
 
 Backend:
-- test 64 bit, zSeries
+- test zSeries
 - refactor the hashes to make it efficient
 
 Integration:
 - Cookie jar
-- KMail
 
 Future ideas:
 - Make it a kpart
 
+GPG
+- Provide a backend conversion tool to help switching from blowfish to GPG or viceversa
