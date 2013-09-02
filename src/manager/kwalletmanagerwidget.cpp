@@ -106,6 +106,17 @@ bool KWalletManagerWidget::openWalletFile(const QString& path)
     return false;
 }
 
+bool KWalletManagerWidget::openWallet(const QString& name)
+{
+    bool result = false;
+    if (_walletPages.contains(name)) {
+        KWalletManagerWidgetItem *wi = _walletPages[name];
+        setCurrentPage(wi);
+        result = wi->openWallet();
+    }
+    return result;
+}
+
 const QString& KWalletManagerWidget::activeWalletName() const
 {
     return qobject_cast<KWalletManagerWidgetItem*>(currentPage())->walletName();

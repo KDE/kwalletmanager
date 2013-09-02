@@ -45,6 +45,19 @@ WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletN
     QTimer::singleShot(1, this, SLOT(onSetupWidget()));
 }
 
+bool WalletControlWidget::openWallet()
+{
+    bool result = false;
+    if (_wallet && _wallet->isOpen()) {
+        result = true; // already opened
+    } else {
+        _wallet = KWallet::Wallet::openWallet(_walletName, winId());
+        result = _wallet != 0;
+        onSetupWidget();
+    }
+    return result;
+}
+
 void WalletControlWidget::onSetupWidget()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {

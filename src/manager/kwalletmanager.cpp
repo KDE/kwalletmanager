@@ -121,6 +121,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	action->setText(i18n("&New Wallet..."));
 	action->setIcon(KIcon( QLatin1String( "kwalletmanager" )));
 	connect(action, SIGNAL(triggered()), SLOT(createWallet()));
+
+    action = actionCollection()->addAction(QLatin1String( "wallet_open") );
+    action->setText(i18n("Open Wallet..."));
+    connect(action, SIGNAL(triggered()), this, SLOT(openWallet()));
+    
     action = actionCollection()->addAction(QLatin1String( "wallet_delete" ));
     action->setText(i18n("&Delete Wallet..."));
     action->setIcon(KIcon( QLatin1String( "trash-empty" )));
@@ -321,8 +326,7 @@ void KWalletManager::deleteWallet()
 
 void KWalletManager::openWallet(const QString& walletName)
 {
-    Q_UNUSED(walletName);
-    qWarning("TODO: implement openWallet from name");
+    _managerWidget->openWallet(walletName);
 }
 
 void KWalletManager::openWallet()

@@ -35,6 +35,7 @@ public:
     void updateWalletDisplay(QString selectWallet = QString());
     bool hasWallet(const QString&) const;
     bool openWalletFile(const QString& path);
+    bool openWallet(const QString& name);
 
     const QString& activeWalletName() const;
 

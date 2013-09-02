@@ -41,4 +41,9 @@ void KWalletManagerWidgetItem::updateWalletDisplay()
     _controlWidget->updateWalletDisplay();
 }
 
+bool KWalletManagerWidgetItem::openWallet()
+{
+    return _controlWidget->openWallet();
+}
+
 #include "kwalletmanagerwidgetitem.moc"

@@ -30,6 +30,7 @@ public:
 
     void updateWalletDisplay();
     const QString& walletName() const { return _walletName; }
+    bool openWallet();
 
 private:
     WalletControlWidget *_controlWidget;

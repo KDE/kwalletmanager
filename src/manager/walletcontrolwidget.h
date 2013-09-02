@@ -34,6 +34,8 @@ class WalletControlWidget : public QWidget, public Ui::WalletControlWidget
 public:
     WalletControlWidget(QWidget* parent, const QString& walletName);
 
+    bool openWallet();
+
 public Q_SLOTS:
     void onSetupWidget();
     void onOpenClose();
