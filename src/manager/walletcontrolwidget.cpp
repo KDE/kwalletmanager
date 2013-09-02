@@ -63,30 +63,33 @@ void WalletControlWidget::onSetupWidget()
     if (KWallet::Wallet::isOpen(_walletName)) {
         if (0 == _wallet) {
             _wallet = KWallet::Wallet::openWallet(_walletName, winId());
-            Q_ASSERT(_wallet != 0);
-        }
-        if (_wallet) {
-            connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
-            _openClose->setText(i18n("&Close"));
-
-            if (0 == _walletEditor) {
-                _walletEditor = new KWalletEditor(_editorFrame);
-                _editorFrameLayout->addWidget(_walletEditor);
-                _walletEditor->setVisible(true);
+            if (0 == _wallet) {
+                kDebug() << "Weird situation: wallet could not be opened when setting-up the widget.";
             }
-            _walletEditor->setWallet(_wallet);
-
-            if (0 == _applicationsManager) {
-                _applicationsManager = new ApplicationsManager(_applicationsFrame);
-                _applicationsFrameLayout->addWidget(_applicationsManager);
-                _applicationsManager->setVisible(true);
-            }
-            _applicationsManager->setWallet(_wallet);
-
-            _changePassword->setEnabled(true);
-            _stateLabel->setText(i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open", _walletName));
-            _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-open")).pixmap(16));
         }
+    }
+
+    if (_wallet) {
+        connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
+        _openClose->setText(i18n("&Close"));
+
+        if (0 == _walletEditor) {
+            _walletEditor = new KWalletEditor(_editorFrame);
+            _editorFrameLayout->addWidget(_walletEditor);
+            _walletEditor->setVisible(true);
+        }
+        _walletEditor->setWallet(_wallet);
+
+        if (0 == _applicationsManager) {
+            _applicationsManager = new ApplicationsManager(_applicationsFrame);
+            _applicationsFrameLayout->addWidget(_applicationsManager);
+            _applicationsManager->setVisible(true);
+        }
+        _applicationsManager->setWallet(_wallet);
+
+        _changePassword->setEnabled(true);
+        _stateLabel->setText(i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open", _walletName));
+        _tabs->setTabIcon(0, QIcon::fromTheme( QLatin1String("wallet-open")).pixmap(16));
     } else {
         _openClose->setText(i18n("&Open..."));
 
