@@ -15,6 +15,16 @@ target_link_libraries(kcm_kwallet ${KDE4_KDEUI_LIBS})
 
 install(TARGETS kcm_kwallet  DESTINATION ${PLUGIN_INSTALL_DIR})
 
+########### kauth helper ################
+set(kcm_kwallet_helper_SRCS savehelper.cpp)
+
+kde4_add_executable(kcm_kwallet_helper ${kcm_kwallet_helper_SRCS})
+target_link_libraries(kcm_kwallet_helper ${KDE4_KDECORE_LIBS})
+
+install(TARGETS kcm_kwallet_helper DESTINATION ${LIBEXEC_INSTALL_DIR})
+
+kde4_install_auth_helper_files(kcm_kwallet_helper org.kde.kcontrol.kcmkwallet root)
+kde4_install_auth_actions(org.kde.kcontrol.kcmkwallet kwallet.actions)
 
 ########### install files ###############
 

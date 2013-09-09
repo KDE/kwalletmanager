@@ -1,0 +1,9 @@
+[Domain]
+Name=KDE Wallet system
+Icon=kwalletmanager
+
+[org.kde.kcontrol.kcmkwallet.save]
+Name=Save wallet configuration
+Description=Allow saving wallet configuration settings
+Policy=auth_self
+Persistence=session

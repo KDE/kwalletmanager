@@ -28,12 +28,15 @@
 #include <kinputdialog.h>
 #include <kmenu.h>
 #include <kwallet.h>
+#include <kauthaction.h>
+#include <kdebug.h>
 
 #include <QCheckBox>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>
 #include <kconfiggroup.h>
+#include <kmessagebox.h>
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
@@ -51,6 +54,8 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
 				ki18n("(c) 2003 George Staikos"));
 		about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
 	setAboutData( about );
+
+    setNeedsAuthorization(true);
 
 	QVBoxLayout *vbox = new QVBoxLayout(this);
 	vbox->setSpacing(KDialog::spacingHint());
@@ -239,6 +244,28 @@ void KWalletConfig::load() {
 
 
 void KWalletConfig::save() {
+    QVariantMap args;
+    KAuth::Action *action = authAction();
+    if (0 == action) {
+        kDebug() << "There's no authAction, not saving settings";
+        return;
+    }
+    action->setArguments(args);
+
+    KAuth::ActionReply reply = action->execute();
+
+    if (reply.failed()) {
+        if (reply.type() == KAuth::ActionReply::KAuthError){
+            kDebug() << "Save action was not authorized!";
+            KMessageBox::error(this, i18n("Sorry, the system security policy didn't allow you to save the changes."), i18n("KDE Wallet Control Module"));
+        } else {
+            KMessageBox::error(this, reply.errorDescription(), i18n("KDE Wallet Control Module"));
+            kDebug() << "Save action failed. Not saving the settings.";
+        }
+        load();
+        return;
+    }
+
 	KConfigGroup config(_cfg, "Wallet");
 	config.writeEntry("Enabled", _wcw->_enabled->isChecked());
 	config.writeEntry("Launch Manager", _wcw->_launchManager->isChecked());
