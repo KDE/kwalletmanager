@@ -189,6 +189,9 @@ void KWalletEditor::setWallet(KWallet::Wallet* wallet, bool isPath)
     emit enableWalletActions(true);
     emit enableContextFolderActions(true);
 
+    _mapEditorShowHide->setChecked(false);
+    showHideMapEditorValue(false);
+
     setFocus();
     _searchLine->setFocus();
 }
@@ -556,13 +559,12 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item) {
                     }
 				} else if (ci->entryType() == KWallet::Wallet::Map) {
 					_entryStack->setCurrentIndex(2);
-					_mapEditorShowHide->setChecked(false);
-					showHideMapEditorValue(false);
 					if (_w->readMap(item->text(0), _currentMap) == 0) {
 						_mapEditor->reload();
 						_entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
 						_saveChanges->setEnabled(false);
 						_undoChanges->setEnabled(false);
+                        showHideMapEditorValue(_mapEditorShowHide->isChecked());
 					}
 				} else if (ci->entryType() == KWallet::Wallet::Stream) {
 					_entryStack->setCurrentIndex(3);
