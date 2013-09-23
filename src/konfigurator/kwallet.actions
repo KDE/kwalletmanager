@@ -1,9 +1,30 @@
 [Domain]
 Name=KDE Wallet system
+Name[de]=Digitale Brieftasche für KDE
+Name[pt]=Sistema da Carteira do KDE
+Name[pt_BR]=Sistema de carteiras do KDE
+Name[sk]=Systém KDE peňaženky
+Name[sv]=KDE:s plånbokssystem
+Name[uk]=Система роботи з буферами даних KDE
+Name[x-test]=xxKDE Wallet systemxx
 Icon=kwalletmanager
 
 [org.kde.kcontrol.kcmkwallet.save]
 Name=Save wallet configuration
+Name[de]=Einstellungen der „digitalen Brieftasche“ speichern
+Name[pt]=Gravar a configuração da carteira
+Name[pt_BR]=Salvar a configuração da carteira
+Name[sk]=Uložiť nastavenie peňaženky
+Name[sv]=Spara plånboksinställning
+Name[uk]=Збереження налаштувань KWallet
+Name[x-test]=xxSave wallet configurationxx
 Description=Allow saving wallet configuration settings
+Description[de]=Ermöglicht es, die Einstellungen der digitalen Brieftasche zu speichern
+Description[pt]=Permitir a gravação das definições da carteira
+Description[pt_BR]=Permite salvar as configurações da carteira
+Description[sk]=Umožniť ukladanie nastavenia peňaženky
+Description[sv]=Tillåt att plånboksinställningar sparas
+Description[uk]=Дозволити зберігання параметрів налаштування KWallet
+Description[x-test]=xxAllow saving wallet configuration settingsxx
 Policy=auth_self
 Persistence=session
