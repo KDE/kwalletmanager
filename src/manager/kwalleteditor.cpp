@@ -179,6 +179,7 @@ void KWalletEditor::setWallet(KWallet::Wallet* wallet, bool isPath)
     _nonLocal = isPath;
 
     _w = wallet;
+    _entryList->setWallet(_w);
     connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
     connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
     connect(_w, SIGNAL(folderUpdated(QString)), this, SLOT(updateEntries(QString)));

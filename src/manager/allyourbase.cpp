@@ -340,7 +340,8 @@ void KWalletItem::processDropEvent(QDropEvent *e) {
  *  KWalletEntryList - A listview to store wallet entries
  */
 KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
-: QTreeWidget(parent) {
+: QTreeWidget(parent),
+    _wallet(0) {
 	setObjectName( QLatin1String( name ) );
 	setColumnCount(1);
 	setHeaderLabel(i18n("Folders"));
