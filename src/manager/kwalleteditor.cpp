@@ -494,7 +494,7 @@ void KWalletEditor::entryEditted() {
 
 void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item) {
     // do not forget to save changes
-    if ( _saveChanges->isEnabled() && (_displayedItem != item) ){
+    if ( _saveChanges->isEnabled() && _displayedItem && (_displayedItem != item) ){
         if ( KMessageBox::Yes ==  KMessageBox::questionYesNo(this, 
                                             i18n("The contents of the current item has changed.\nDo you want to save changes?"))) {
             saveEntry();
@@ -892,6 +892,7 @@ void KWalletEditor::deleteEntry() {
 				KMessageBox::error(this, i18n("An unexpected error occurred trying to delete the entry"));
 				return;
 			}
+            _displayedItem = 0;
 			_w->removeEntry(item->text(0));
 			delete item;
 			entrySelectionChanged(_entryList->currentItem());
