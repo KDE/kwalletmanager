@@ -1,5 +1,6 @@
 [Domain]
 Name=KDE Wallet system
+Name[ca]=Sistema de cartera del KDE
 Name[cs]=Systém úschovny pro KDE
 Name[de]=Digitale Brieftasche für KDE
 Name[es]=Sistema de carteras de KDE
@@ -27,6 +28,7 @@ Icon=kwalletmanager
 
 [org.kde.kcontrol.kcmkwallet.save]
 Name=Save wallet configuration
+Name[ca]=Desa la configuració de la cartera
 Name[cs]=Uložit nastavení úschovny
 Name[de]=Einstellungen der „digitalen Brieftasche“ speichern
 Name[es]=Guardar la configuración de la cartera
@@ -51,6 +53,7 @@ Name[x-test]=xxSave wallet configurationxx
 Name[zh_CN]=保存钱包配置
 Name[zh_TW]=儲存錢包設定
 Description=Allow saving wallet configuration settings
+Description[ca]=Permet desar els paràmetres de configuració de la cartera
 Description[cs]=Povolit uložení nastavení úschovny
 Description[de]=Ermöglicht es, die Einstellungen der digitalen Brieftasche zu speichern
 Description[es]=Permitir que se guarde la configuración de la cartera
