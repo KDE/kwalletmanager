@@ -37,6 +37,7 @@
 #include <ktoolinvocation.h>
 #include <kconfiggroup.h>
 #include <kmessagebox.h>
+#include <kstandarddirs.h>
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
@@ -220,10 +221,24 @@ void KWalletConfig::load() {
 	QStringList denykeys = ad.entryMap().keys();
 	const QStringList keys = aa.entryMap().keys();
 	for (QStringList::const_iterator i = keys.begin(); i != keys.end(); ++i) {
+        QString walletName = *i;
+        // perform cleanup in the kwalletrc file, by removing entries that correspond to non-existent
+        // (previously deleted, for example) wallets
+        QString path = KGlobal::dirs()->locateLocal("data", QString("kwallet/%1.kwl").arg(walletName));
+        if (!QFile::exists(path)) {
+            // if the wallet no longer exists, delete the entries from the configuration file and skip to next entry
+            KConfigGroup cfgAllow = KSharedConfig::openConfig("kwalletrc")->group("Auto Allow");
+            cfgAllow.deleteEntry(walletName);
+
+            KConfigGroup cfgDeny = KSharedConfig::openConfig("kwalletrc")->group("Auto Deny");
+            cfgDeny.deleteEntry(walletName);
+            continue;
+        }
+
 		const QStringList apps = aa.readEntry(*i,QStringList());
 		const QStringList denyapps = ad.readEntry(*i, QStringList());
-		denykeys.removeAll(*i);
-		QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
+		denykeys.removeAll(walletName);
+		QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << walletName);
 		for (QStringList::const_iterator j = apps.begin(); j != apps.end(); ++j) {
 			new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Allow"));
 		}
