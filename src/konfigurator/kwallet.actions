@@ -1,5 +1,6 @@
 [Domain]
 Name=KDE Wallet system
+Name[bs]=KDE sistem novčanika
 Name[ca]=Sistema de cartera del KDE
 Name[cs]=Systém úschovny pro KDE
 Name[da]=KDE's tegnebogssystem
@@ -31,6 +32,7 @@ Icon=kwalletmanager
 
 [org.kde.kcontrol.kcmkwallet.save]
 Name=Save wallet configuration
+Name[bs]=Snimi podešavanje novčanika
 Name[ca]=Desa la configuració de la cartera
 Name[cs]=Uložit nastavení úschovny
 Name[da]=Gem konfiguration af tegnebog
@@ -59,6 +61,7 @@ Name[x-test]=xxSave wallet configurationxx
 Name[zh_CN]=保存钱包配置
 Name[zh_TW]=儲存錢包設定
 Description=Allow saving wallet configuration settings
+Description[bs]=Dopusti snimanje konfiguracijskih postavki novčanika
 Description[ca]=Permet desar els paràmetres de configuració de la cartera
 Description[cs]=Povolit uložení nastavení úschovny
 Description[da]=Tillad gemning af tegnebogsindstillinger
