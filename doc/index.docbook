@@ -129,7 +129,7 @@ before the data is deciphered and accessible by the applications.
 <textobject><phrase>No GPG key found</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para>The screenshots above show the case where an encryption capable GPG key was 
+<para>The screenshots above show the case where an encryption capable GPG key was not 
 found on the system. Please use applications like &kgpg; or &kleopatra; to create a key an try again.</para>
 
 <para>If a GPG key was found you will get the next dialog where you can select a key to use for your new wallet.
