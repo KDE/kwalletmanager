@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-06-06</date>
-<releaseinfo>1.10 (&kde; 4.11)</releaseinfo>
+<date>2013-11-19</date>
+<releaseinfo>2.0 (&kde; 4.12)</releaseinfo>
 
 <abstract>
 <para>
@@ -54,22 +54,129 @@ passwords.</para>
 
 <para>Computer users have a very large amount of data to manage, some of
 which is sensitive.  In particular, you will typically have many passwords
-to manage.  Remembering them is difficult, writing them down on paper or in
-a text file is insecure, and using tools such at PGP is tedious and
-inconvenient.</para>
+to manage.  Remembering them is difficult and writing them down on paper or in
+a text file is insecure.</para>
 
+<para>&kwallet; provides a secure way to store passwords and other secret information, 
+allowing the user to remember only a single password instead of numerous different passwords and credentials.
+</para>
+
+<sect1 id="kwallet-create">
+
+<title>Create a Wallet</title>
+
+<para>There are three ways to create a new wallet:</para>
+
+<itemizedlist>
+<listitem><para>Use the menu item <menuchoice><guimenu>File</guimenu><guimenuitem>New 
+Wallet</guimenuitem></menuchoice> in the &kwalletmanager;</para></listitem>
+
+<listitem><para>Use the <guibutton>New</guibutton> button in the &systemsettings; module 
+<guilabel>KDE Wallet</guilabel></para></listitem>
+
+<listitem><para>On the first attempt to store login information in a wallet when you did 
+not create a wallet so far, see section <link linkend="kwallet-using">Using &kwallet;</link>.
+</para></listitem>
+</itemizedlist>
+
+<para>&kwallet; offers two different ways to store your data:</para>
+
+<screenshot>
+<screeninfo>Select encryption</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
+<textobject><phrase>Select encryption</phrase></textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+
+<varlistentry>
+<term>Blowfish encryption</term>
+<listitem>
 <para>&kwallet; saves this sensitive data for you in a strongly encrypted
-<footnote><para>
-The data is encrypted with the
+file, accessible by all applications, and protected with a master
+password that you define.</para>
+
+<screenshot>
+<screeninfo>Create a blowfish encrypted wallet</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject><phrase>Create a blowfish encrypted wallet</phrase></textobject>
+</mediaobject>
+</screenshot>
+
+<para>The data is encrypted with the
 <ulink url="http://www.schneier.com/blowfish.html">Blowfish symmetric block cipher algorithm</ulink>,
 the algorithm key is derived from the
 <ulink url="http://www.ietf.org/rfc/rfc3174.txt">SHA-1 hash</ulink>
 of the password, with a key length of 156 bits (20 bytes).
 The data into the wallet file is also hashed with SHA-1 and checked
 before the data is deciphered and accessible by the applications.
-</para></footnote>
-file, accessible by all applications, and protected with a master
-password that you define.</para>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>GPG encryption</term>
+<listitem>
+<para>GnuPG offers some very strong encryption algorithms and uses passphrase protected long keys.</para>
+
+<screenshot>
+<screeninfo>No GPG key found</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
+<textobject><phrase>No GPG key found</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>The screenshots above show the case where an encryption capable GPG key was 
+found on the system. Please use applications like &kgpg; or &kleopatra; to create a key an try again.</para>
+
+<para>If a GPG key was found you will get the next dialog where you can select a key to use for your new wallet.
+</para>
+<screenshot>
+<screeninfo>Select an encryption key</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
+<textobject><phrase>Select an encryption key</phrase></textobject>
+</mediaobject>
+</screenshot>
+
+<para>&kwallet; will now use GPG when storing wallets and when opening them. 
+The passphrase dialog only shows once. Even if the wallet is closed after initial open, 
+subsequent opening will occur silently during the same &kde; session.
+</para>
+
+<para>
+The same &kde; session can handle simultaneously both file formats. &kwallet; will transparently detect 
+the file format and load the correct backend to handle it.</para>
+
+<para>
+To use your sensitive data from your classic wallet with the new backend follow these steps:</para>
+
+<itemizedlist>
+<listitem><para>Create a new GPG based wallet</para></listitem>
+<listitem><para>Launch &kwalletmanager; and select your old wallet then choose <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Export as XML</guimenuitem></menuchoice> to create an &XML; file with your sensitive data.
+</para></listitem>
+<listitem><para>Select the new GPG based wallet then choose <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Import XML</guimenuitem></menuchoice> and select the file you just saved.</para>
+<para>Encrypt the &XML; file to keep a backup.</para>
+</listitem>
+<listitem><para><menuchoice><guimenu>File</guimenu><guimenuitem>Import Wallet</guimenuitem></menuchoice>
+but in that case you have to select the <filename class="extension">.kwl</filename> file corresponding 
+to your old wallet, located in <filename class="directory">$<envar>KDEHOME</envar>/.kde/share/apps/kwallet</filename>.
+</para></listitem>
+<listitem><para>Go to &systemsettings; <menuchoice><guimenu>Account Details</guimenu> <guimenuitem>KDE 
+Wallet</guimenuitem></menuchoice> and select the newly created GPG based wallet from the <guilabel>Select 
+wallet to use as default</guilabel> combobox.
+</para></listitem>
+</itemizedlist>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
 
 <tip>
 <para>&kwallet; supports multiple wallets, so
@@ -82,6 +189,7 @@ the default setting is to store everything in one wallet.</para>
 <para>A wallet is by default closed, which means that you must supply
 a password to open it. Once the wallet is opened, the contents can
 be accessed.</para>
+</sect1>
 
 <sect1 id="kwallet-using">
 <title>Using &kwallet;</title>
@@ -100,16 +208,8 @@ encrypted wallet:</para>
 
 <para>If you want to store this information, select <guibutton>Store</guibutton> 
 to proceed. In case you did not create a wallet so far, the next dialog asks for 
-the wallet password and creates a wallet named kdewallet.
+the encryption backend and creates a wallet named kdewallet.
 </para>
-
-<screenshot>
-<screeninfo>Create a wallet</screeninfo>
-<mediaobject>
-<imageobject><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
-<textobject><phrase>Create a wallet</phrase></textobject>
-</mediaobject>
-</screenshot>
 
 <para>Next time you visit the same website again, the application requests to open the wallet.
 Enter the wallet password and click the <guibutton>Open</guibutton> button.</para> 
@@ -266,8 +366,8 @@ a wallet. Keep in mind that all secrets are stored as plain text in this file.
 <guilabel>Passwords</guilabel> in the <guilabel>Folder</guilabel> tree view.
 Select <guimenuitem>New</guimenuitem> and choose a name for the new entry.</para>
 <para>In the folder contents pane select <guilabel>New Entry</guilabel> from 
-the context menu. For passwords click the <guilabel>Show Contents</guilabel> 
-button, enter the new password.
+the context menu of <quote>Form Data</quote> or <quote>Passwords</quote>. 
+For passwords click the <guilabel>Show Contents</guilabel> button, enter the new password.
 For Maps you have to add a <guilabel>Key</guilabel> and a <guilabel>Value</guilabel>.
 Click the <guilabel>Save</guilabel> button to store the new entries in the encrypted
 wallet file.
