@@ -22,8 +22,8 @@
 #include <kdebug.h>
 #include <unistd.h>
 
-#if defined(Q_CC_MSVC)
-// TODO: or rather use uid_t in the getuid() call below?
+#if defined(Q_WS_WIN)
+// TODO: or rather use uid_t in the getuid() call below? or test for if __uid_t is present
 #define __uid_t uid_t
 #endif
 
