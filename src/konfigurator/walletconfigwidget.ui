@@ -19,7 +19,7 @@
        <item>
         <widget class="QCheckBox" name="_enabled">
          <property name="whatsThis">
-          <string>&lt;p&gt;The wallet subsystem provides a convenient and secure way to manage all your passwords.  This option specifies whether or not you want to use it.&lt;/p&gt;</string>
+          <string>&lt;p&gt;The wallet subsystem provides a convenient and secure way to manage all your passwords. This option specifies whether or not you want to use it.&lt;/p&gt;</string>
          </property>
          <property name="text">
           <string>&amp;Enable the KDE wallet subsystem</string>
