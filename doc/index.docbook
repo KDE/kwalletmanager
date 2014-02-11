@@ -333,12 +333,12 @@ By default the password and value are hidden. To display and edit them enable
 </para></listitem>
 </itemizedlist>
 
-<para>Folders may be added, deleted or renamed via the context menu, and selecting a folder will update
+<para>Folders may be added or deleted via the context menu, and selecting a folder will update
 the folder entry list and the summary display.  Selecting a folder entry
 will update the entry contents pane, and allow you to edit that
 entry.</para>
 
-<para>Entries may also be created or deleted via the context menu for the
+<para>Entries may also be created, renamed or deleted via the context menu for the
 folder contents.</para>
 
 <para>All folders and entries may be dragged and dropped into other wallets
