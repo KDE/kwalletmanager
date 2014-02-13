@@ -62,7 +62,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 	m_kwalletdModule = 0;
 	KConfig cfg( QLatin1String( "kwalletrc" )); // not sure why this setting isn't in kwalletmanagerrc...
 	KConfigGroup walletConfigGroup(&cfg, "Wallet");
-	if (walletConfigGroup.readEntry("Launch Manager", true)) {
+	if (walletConfigGroup.readEntry("Launch Manager", false)) {
 		_tray = new KStatusNotifierItem(this);
 		_tray->setObjectName( QLatin1String("kwalletmanager tray" ));
         _tray->setCategory( KStatusNotifierItem::SystemServices );
