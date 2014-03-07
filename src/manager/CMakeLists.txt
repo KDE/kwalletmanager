@@ -21,17 +21,28 @@ set(kwalletmanager_SRCS
     revokeauthbutton.cpp
 )
 
-qt4_add_dbus_interface(kwalletmanager_SRCS ${KDE4_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface)
+qt5_add_dbus_interface(kwalletmanager_SRCS
+    ${KWALLET_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface
+)
 
-kde4_add_ui_files(kwalletmanager_SRCS walletwidget.ui kbetterthankdialogbase.ui walletcontrolwidget.ui applicationsmanager.ui)
+qt5_wrap_ui(kwalletmanager_SRCS
+    walletwidget.ui
+    kbetterthankdialogbase.ui
+    walletcontrolwidget.ui
+    applicationsmanager.ui
+)
 
-kde4_add_app_icon(kwalletmanager_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kwalletmanager.png")
+# Sets the icon on Windows and OSX, TODO: port to KF5
+#kde4_add_app_icon(kwalletmanager_SRCS
+#    "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kwalletmanager.png"
+#)
 
-kde4_add_executable(kwalletmanager ${kwalletmanager_SRCS})
+add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
 target_link_libraries(kwalletmanager ${KDE4_KIO_LIBS})
 
 install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )
-install( FILES kwalletmanager.rc DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
+install(FILES kwalletmanager.rc
+        DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
 
-kde4_install_icons( ${ICON_INSTALL_DIR} )
+ecm_install_icons( ${ICON_INSTALL_DIR} )
