@@ -25,29 +25,29 @@
 
 
 class KWalletPopup : public KMenu {
-	Q_OBJECT
+    Q_OBJECT
 
-	public:
-		explicit KWalletPopup(const QString& wallet, QWidget *parent = 0, const char* name = 0);
-		virtual ~KWalletPopup();
+    public:
+        explicit KWalletPopup(const QString& wallet, QWidget *parent = 0, const char* name = 0);
+        virtual ~KWalletPopup();
 
-	public slots:
-		void openWallet();
-		void deleteWallet();
-		void closeWallet();
-		void createWallet();
-		void changeWalletPassword();
-		void disconnectApp();
+    public slots:
+        void openWallet();
+        void deleteWallet();
+        void closeWallet();
+        void createWallet();
+        void changeWalletPassword();
+        void disconnectApp();
 
-	signals:
-		void walletOpened(const QString& walletName);
-		void walletClosed(const QString& walletName);
-		void walletDeleted(const QString& walletName);
-		void walletCreated();
-		void walletChangePassword(const QString& walletName);
+    signals:
+        void walletOpened(const QString& walletName);
+        void walletClosed(const QString& walletName);
+        void walletDeleted(const QString& walletName);
+        void walletCreated();
+        void walletChangePassword(const QString& walletName);
 
-	private:
-		QString _walletName;
+    private:
+        QString _walletName;
 };
 
 #endif

@@ -29,52 +29,52 @@ class QListWidgetItem;
 class OrgKdeKWalletInterface;
 
 class KWalletManager : public KXmlGuiWindow {
-	Q_OBJECT
+    Q_OBJECT
 
-	    Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
+        Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
 
-	public:
-		explicit KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
-		virtual ~KWalletManager();
+    public:
+        explicit KWalletManager(QWidget *parent = 0, const char* name = 0, Qt::WFlags f = 0);
+        virtual ~KWalletManager();
 
-		void kwalletdLaunch();
+        void kwalletdLaunch();
 
-	public slots:
-		void createWallet();
+    public slots:
+        void createWallet();
         void deleteWallet();
-		void closeWallet(const QString& walletName);
-		void changeWalletPassword(const QString& walletName);
-		void openWallet(const QString& walletName);
-		void openWalletFile(const QString& path);
-// 		void openWallet(QListWidgetItem *item);
-		void contextMenu(const QPoint& pos);
+        void closeWallet(const QString& walletName);
+        void changeWalletPassword(const QString& walletName);
+        void openWallet(const QString& walletName);
+        void openWalletFile(const QString& path);
+//         void openWallet(QListWidgetItem *item);
+        void contextMenu(const QPoint& pos);
         void walletCreated(const QString& walletName);
 
-	protected:
-		virtual bool queryClose();
+    protected:
+        virtual bool queryClose();
 
-	private:
-	public Q_SLOTS: //dbus
-		Q_SCRIPTABLE void allWalletsClosed();
-		Q_SCRIPTABLE void updateWalletDisplay();
-		Q_SCRIPTABLE void aWalletWasOpened();
+    private:
+    public Q_SLOTS: //dbus
+        Q_SCRIPTABLE void allWalletsClosed();
+        Q_SCRIPTABLE void updateWalletDisplay();
+        Q_SCRIPTABLE void aWalletWasOpened();
 
-	private slots:
-		void shuttingDown();
-		void possiblyQuit();
-		void editorClosed(KXmlGuiWindow* e);
-		void possiblyRescan(const QString& app, const QString&, const QString&);
-		void setupWallet();
-		void openWallet();
-		void closeAllWallets();
+    private slots:
+        void shuttingDown();
+        void possiblyQuit();
+        void editorClosed(KXmlGuiWindow* e);
+        void possiblyRescan(const QString& app, const QString&, const QString&);
+        void setupWallet();
+        void openWallet();
+        void closeAllWallets();
 
-	private:
-		KStatusNotifierItem *_tray;
-		bool _shuttingDown;
+    private:
+        KStatusNotifierItem *_tray;
+        bool _shuttingDown;
         KWalletManagerWidget *_managerWidget;
-		OrgKdeKWalletInterface *m_kwalletdModule;
-		QList<KXmlGuiWindow*> _windows;
-		bool _kwalletdLaunch;
+        OrgKdeKWalletInterface *m_kwalletdModule;
+        QList<KXmlGuiWindow*> _windows;
+        bool _kwalletdLaunch;
 };
 
 #endif

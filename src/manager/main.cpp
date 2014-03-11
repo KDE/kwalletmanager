@@ -34,66 +34,66 @@
 
 
 class MyApp : public KUniqueApplication {
-	public:
-		MyApp() : KUniqueApplication() { KGlobal::ref(); }
-		virtual ~MyApp() {}
+    public:
+        MyApp() : KUniqueApplication() { KGlobal::ref(); }
+        virtual ~MyApp() {}
 
-		virtual int newInstance() { return 0; }
+        virtual int newInstance() { return 0; }
 };
 
 int main(int argc, char **argv) {
     K4AboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "2.0",
-		ki18n("KDE Wallet Management Tool"),
+        ki18n("KDE Wallet Management Tool"),
         K4AboutData::License_GPL,
-		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
-		"http://utils.kde.org/projects/kwalletmanager");
+        ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
+        "http://utils.kde.org/projects/kwalletmanager");
 
     about.addAuthor(ki18n("Valentin Rusu"), ki18n("Maintainer, user interface refactoring"), "kde@rusu.info");
-	about.addAuthor(ki18n("George Staikos"), ki18n("Original author and former maintainer"), "staikos@kde.org");
+    about.addAuthor(ki18n("George Staikos"), ki18n("Original author and former maintainer"), "staikos@kde.org");
     about.addAuthor(ki18n("Michael Leupold"), ki18n("Developer and former maintainer"), "lemma@confuego.org");
-	about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
+    about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
 
-	KCmdLineArgs::init(argc, argv, &about);
+    KCmdLineArgs::init(argc, argv, &about);
 
-	KCmdLineOptions options;
-	options.add("show", ki18n("Show window on startup"));
-	options.add("kwalletd", ki18n("For use by kwalletd only"));
-	options.add("+name", ki18n("A wallet name"));
-	KCmdLineArgs::addCmdLineOptions(options);
+    KCmdLineOptions options;
+    options.add("show", ki18n("Show window on startup"));
+    options.add("kwalletd", ki18n("For use by kwalletd only"));
+    options.add("+name", ki18n("A wallet name"));
+    KCmdLineArgs::addCmdLineOptions(options);
 
-	if (!KUniqueApplication::start()) {
-		return 0;
-	}
+    if (!KUniqueApplication::start()) {
+        return 0;
+    }
 
-	MyApp a;
+    MyApp a;
 
-	KWalletManager wm;
-	wm.setCaption(i18n("KDE Wallet Manager"));
+    KWalletManager wm;
+    wm.setCaption(i18n("KDE Wallet Manager"));
 
-	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
+    KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
 
-	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
-	if (args->isSet("show")) {
-		wm.show();
-	}
+    if (args->isSet("show")) {
+        wm.show();
+    }
 
-	if (args->isSet("kwalletd")) {
-		wm.kwalletdLaunch();
-	}
+    if (args->isSet("kwalletd")) {
+        wm.kwalletdLaunch();
+    }
 
-	for (int i = 0; i < args->count(); ++i) {
-		QString fn = QFileInfo(args->arg(i)).absoluteFilePath();
-		KMimeType::Ptr ptr;
-		if (QFile::exists(fn) &&
-			(ptr = KMimeType::findByFileContent(fn)) &&
-			ptr->is(QLatin1String( "application/x-kwallet" ))) {
-			wm.openWalletFile(fn);
-		} else {
-			wm.openWallet(args->arg(i));
-		}
-	}
-	args->clear();
-	return a.exec();
+    for (int i = 0; i < args->count(); ++i) {
+        QString fn = QFileInfo(args->arg(i)).absoluteFilePath();
+        KMimeType::Ptr ptr;
+        if (QFile::exists(fn) &&
+            (ptr = KMimeType::findByFileContent(fn)) &&
+            ptr->is(QLatin1String( "application/x-kwallet" ))) {
+            wm.openWalletFile(fn);
+        } else {
+            wm.openWallet(args->arg(i));
+        }
+    }
+    args->clear();
+    return a.exec();
 }
 

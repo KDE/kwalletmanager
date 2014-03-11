@@ -29,56 +29,56 @@
 
 KWalletPopup::KWalletPopup(const QString& wallet, QWidget *parent, const char *name)
 : KMenu(parent), _walletName(wallet) {
-	addTitle(wallet);
-	setObjectName( QLatin1String( name ) );
-	KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
-	ac->setObjectName( QLatin1String("kwallet context actions" ));
-	QAction *act;
+    addTitle(wallet);
+    setObjectName( QLatin1String( name ) );
+    KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
+    ac->setObjectName( QLatin1String("kwallet context actions" ));
+    QAction *act;
 
-	act = ac->addAction(QLatin1String( "wallet_create" ));
-	act->setText(i18n("&New Wallet..."));
-	connect(act, SIGNAL(triggered(bool)), SLOT(createWallet()));
-	addAction( act );
+    act = ac->addAction(QLatin1String( "wallet_create" ));
+    act->setText(i18n("&New Wallet..."));
+    connect(act, SIGNAL(triggered(bool)), SLOT(createWallet()));
+    addAction( act );
 
         act= ac->addAction( QLatin1String( "wallet-open" ));
         act->setText( i18n( "&Open..." ) );
-	connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
-	act->setShortcut(QKeySequence(Qt::Key_Return));
-	addAction( act );
+    connect(act, SIGNAL(triggered(bool)), SLOT(openWallet()));
+    act->setShortcut(QKeySequence(Qt::Key_Return));
+    addAction( act );
 
         act=ac->addAction( QLatin1String( "wallet_password" ) );
         act->setText( i18n("Change &Password...") );
-	connect(act, SIGNAL(triggered(bool)), SLOT(changeWalletPassword()));
-	addAction( act );
+    connect(act, SIGNAL(triggered(bool)), SLOT(changeWalletPassword()));
+    addAction( act );
 
-	const QStringList ul = KWallet::Wallet::users(wallet);
-	if (!ul.isEmpty()) {
-		KMenu *pm = new KMenu(this);
-		pm->setObjectName( QLatin1String("Disconnect Apps" ));
-		int id = 7000;
-		for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
-			QAction *a = pm->addAction(*it, this, SLOT(disconnectApp()));
-			a->setData(*it);
-			id++;
-		}
+    const QStringList ul = KWallet::Wallet::users(wallet);
+    if (!ul.isEmpty()) {
+        KMenu *pm = new KMenu(this);
+        pm->setObjectName( QLatin1String("Disconnect Apps" ));
+        int id = 7000;
+        for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
+            QAction *a = pm->addAction(*it, this, SLOT(disconnectApp()));
+            a->setData(*it);
+            id++;
+        }
                 QAction *act = addMenu( pm);
                 act->setText(i18n("Disconnec&t"));
-	}
+    }
 
-	act = KStandardAction::close( this,
-			SLOT(closeWallet()), ac);
+    act = KStandardAction::close( this,
+            SLOT(closeWallet()), ac);
         ac->addAction(QLatin1String( "wallet_close" ), act);
-	// FIXME: let's track this inside the manager so we don't need a dcop
-	//        roundtrip here.
-	act->setEnabled(KWallet::Wallet::isOpen(wallet));
-	addAction( act );
+    // FIXME: let's track this inside the manager so we don't need a dcop
+    //        roundtrip here.
+    act->setEnabled(KWallet::Wallet::isOpen(wallet));
+    addAction( act );
 
         act = ac->addAction( QLatin1String( "wallet_delete" ) );
         act->setText( i18n( "&Delete") );
 
-	connect(act, SIGNAL(triggered(bool)), SLOT(deleteWallet()));
-	act->setShortcut(QKeySequence(Qt::Key_Delete));
-	addAction( act );
+    connect(act, SIGNAL(triggered(bool)), SLOT(deleteWallet()));
+    act->setShortcut(QKeySequence(Qt::Key_Delete));
+    addAction( act );
 }
 
 
@@ -87,7 +87,7 @@ KWalletPopup::~KWalletPopup() {
 
 
 void KWalletPopup::openWallet() {
-	emit walletOpened(_walletName);
+    emit walletOpened(_walletName);
 }
 
 
@@ -97,26 +97,26 @@ void KWalletPopup::deleteWallet() {
 
 
 void KWalletPopup::closeWallet() {
-	emit walletClosed(_walletName);
+    emit walletClosed(_walletName);
 }
 
 
 void KWalletPopup::changeWalletPassword() {
-	emit walletChangePassword(_walletName);
+    emit walletChangePassword(_walletName);
 }
 
 
 void KWalletPopup::createWallet() {
-	emit walletCreated();
+    emit walletCreated();
 }
 
 
 void KWalletPopup::disconnectApp() {
-	QAction *a = qobject_cast<QAction *>(sender());
-	Q_ASSERT(a);
-	if (a) 	{
-		KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
-	}
+    QAction *a = qobject_cast<QAction *>(sender());
+    Q_ASSERT(a);
+    if (a)     {
+        KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
+    }
 }
 
 #include "kwalletpopup.moc"

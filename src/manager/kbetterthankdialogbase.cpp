@@ -24,13 +24,13 @@
 void KBetterThanKDialogBase::clicked()
 {
     if (sender() == _allowOnce) {
-	done(3);
+    done(3);
     } else if (sender() == _allowAlways) {
-	done(1);
+    done(1);
     } else if (sender() == _deny) {
-	done(4);
+    done(4);
     } else if (sender() == _denyForever) {
-	done(2);
+    done(2);
     }
 }
 
