@@ -37,9 +37,10 @@ class KActionCollection;
  * To avoid that, the main window will call createActions of this class that will
  * in turn delegate to the registered CreateActionsMethod's registered here.
  */
-class RegisterCreateActionsMethod {
+class RegisterCreateActionsMethod
+{
 public:
-    typedef void (*CreateActionsMethod)(KActionCollection*);
+    typedef void (*CreateActionsMethod)(KActionCollection *);
 
     RegisterCreateActionsMethod(CreateActionsMethod method);
 

@@ -21,35 +21,35 @@
 #include "authorizedappmodel.h"
 #include "revokeauthbutton.h"
 
-AuthorizedApplicationsTable::AuthorizedApplicationsTable(QWidget* parent) :
+AuthorizedApplicationsTable::AuthorizedApplicationsTable(QWidget *parent) :
     QTableView(parent),
     _wallet(0)
 {
 }
 
-void AuthorizedApplicationsTable::setWallet(KWallet::Wallet* wallet)
+void AuthorizedApplicationsTable::setWallet(KWallet::Wallet *wallet)
 {
     _wallet = wallet;
 }
 
-void AuthorizedApplicationsTable::setModel(QAbstractItemModel* model)
+void AuthorizedApplicationsTable::setModel(QAbstractItemModel *model)
 {
     Q_ASSERT(_wallet != 0);
 
-    AuthorizedAppModel *appModel = qobject_cast<AuthorizedAppModel*>(model);
+    AuthorizedAppModel *appModel = qobject_cast<AuthorizedAppModel *>(model);
     Q_ASSERT(appModel != 0);
 
     QTableView::setModel(model);
-    for (int row =0; row < model->rowCount(); row++) {
-        RevokeAuthButton *btn = new RevokeAuthButton( model->index(row, 0).data().toString() , _wallet);
+    for (int row = 0; row < model->rowCount(); row++) {
+        RevokeAuthButton *btn = new RevokeAuthButton(model->index(row, 0).data().toString(), _wallet);
         btn->setFixedHeight(btn->sizeHint().height());
         setRowHeight(row, btn->height());
-        setIndexWidget( model->index(row, 1), btn);
+        setIndexWidget(model->index(row, 1), btn);
         connect(btn, SIGNAL(appRevoked(QString)), appModel, SLOT(removeApp(QString)));
     }
 }
 
-void AuthorizedApplicationsTable::resizeEvent(QResizeEvent* resizeEvent)
+void AuthorizedApplicationsTable::resizeEvent(QResizeEvent *resizeEvent)
 {
     // this will keep disconnect buttons column at it's minimum size and
     // make the application names take the reminder of the horizontal space

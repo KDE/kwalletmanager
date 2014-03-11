@@ -27,7 +27,7 @@
 #include <QStandardItemModel>
 #include <kdebug.h>
 
-ApplicationsManager::ApplicationsManager(QWidget* parent):
+ApplicationsManager::ApplicationsManager(QWidget *parent):
     QWidget(parent),
     _wallet(0),
     _connectedAppsModel(0),
@@ -42,7 +42,7 @@ ApplicationsManager::~ApplicationsManager()
     delete _authorizedAppModel;
 }
 
-void ApplicationsManager::setWallet(KWallet::Wallet* wallet)
+void ApplicationsManager::setWallet(KWallet::Wallet *wallet)
 {
     Q_ASSERT(wallet != 0);
     _wallet = wallet;

@@ -20,7 +20,7 @@
 #include "revokeauthbutton.h"
 #include <klocalizedstring.h>
 
-RevokeAuthButton::RevokeAuthButton(const QString& appName, KWallet::Wallet* wallet): 
+RevokeAuthButton::RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet):
     QPushButton(),
     _appName(appName),
     _wallet(wallet)

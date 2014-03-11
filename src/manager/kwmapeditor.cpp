@@ -35,108 +35,104 @@
 #include <QKeyEvent>
 #include <QItemDelegate>
 
-class InlineEditor : public KTextEdit {
-    public:
-    InlineEditor(KWMapEditor *p) : KTextEdit(), _p(p) {
+class InlineEditor : public KTextEdit
+{
+public:
+    InlineEditor(KWMapEditor *p) : KTextEdit(), _p(p)
+    {
         setAttribute(Qt::WA_DeleteOnClose);
         setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
         setCheckSpellingEnabled(false);
         connect(p, SIGNAL(destroyed()), SLOT(close()));
     }
 
-    protected:
-        virtual void focusOutEvent(QFocusEvent *e) {
-            if (e->reason() == Qt::PopupFocusReason) {
-                // TODO: It seems we only get here if we're disturbed
-                // by our own popup. this needs some clearance though.
-                return;
-            }
+protected:
+    virtual void focusOutEvent(QFocusEvent *e)
+    {
+        if (e->reason() == Qt::PopupFocusReason) {
+            // TODO: It seems we only get here if we're disturbed
+            // by our own popup. this needs some clearance though.
+            return;
+        }
 
+        close();
+    }
+    virtual void keyPressEvent(QKeyEvent *e)
+    {
+        if (e->key() == Qt::Key_Escape) {
+            e->accept();
             close();
+        } else {
+            e->ignore();
+            KTextEdit::keyPressEvent(e);
         }
-        virtual void keyPressEvent(QKeyEvent *e) {
-            if (e->key() == Qt::Key_Escape) {
-                e->accept();
-                close();
-            } else {
-                e->ignore();
-                KTextEdit::keyPressEvent(e);
-            }
-        }
-        virtual void contextMenuEvent( QContextMenuEvent *event )
-        {
-           QMenu *menu = createStandardContextMenu();
-           popup = menu;
-           popup->exec( event->globalPos() );
-           delete popup;
-        }
-        QPointer<KWMapEditor> _p;
-        QPointer<QMenu> popup;
+    }
+    virtual void contextMenuEvent(QContextMenuEvent *event)
+    {
+        QMenu *menu = createStandardContextMenu();
+        popup = menu;
+        popup->exec(event->globalPos());
+        delete popup;
+    }
+    QPointer<KWMapEditor> _p;
+    QPointer<QMenu> popup;
 };
 
 class KWMapEditorDelegate : public QItemDelegate
 {
-    public:
-        KWMapEditorDelegate(KWMapEditor *parent) : QItemDelegate(parent)
-        {
-        }
-        
-        QWidget *createEditor(QWidget *parentWidget, const QStyleOptionViewItem &option, const QModelIndex &index) const
-        {
-            if (index.column() != 2) {
-                return QItemDelegate::createEditor(parentWidget, option, index);
-            }
+public:
+    KWMapEditorDelegate(KWMapEditor *parent) : QItemDelegate(parent)
+    {
+    }
 
-            KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
-            return new InlineEditor(mapEditor);
+    QWidget *createEditor(QWidget *parentWidget, const QStyleOptionViewItem &option, const QModelIndex &index) const
+    {
+        if (index.column() != 2) {
+            return QItemDelegate::createEditor(parentWidget, option, index);
         }
-        
-        void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
-        {
-            if (dynamic_cast<InlineEditor*>(editor))
-            {
-                KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
-                const QRect geo = mapEditor->visualRect(index);
-                editor->move(mapEditor->mapToGlobal(geo.topLeft()));
-                editor->resize(geo.width() * 2, geo.height() * 3);
-            }
-            else
-            {
-                QItemDelegate::updateEditorGeometry(editor, option, index);
-            }
+
+        KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+        return new InlineEditor(mapEditor);
+    }
+
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
+    {
+        if (dynamic_cast<InlineEditor *>(editor)) {
+            KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+            const QRect geo = mapEditor->visualRect(index);
+            editor->move(mapEditor->mapToGlobal(geo.topLeft()));
+            editor->resize(geo.width() * 2, geo.height() * 3);
+        } else {
+            QItemDelegate::updateEditorGeometry(editor, option, index);
         }
-        
-        void setEditorData(QWidget *editor, const QModelIndex &index) const
-        {
-            InlineEditor *e = dynamic_cast<InlineEditor*>(editor);
-            if (e)
-            {
-                KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
-                e->setText(mapEditor->item(index.row(), index.column())->text());
-            }
-            else
-            {
-                QItemDelegate::setEditorData(editor, index);
-            }
+    }
+
+    void setEditorData(QWidget *editor, const QModelIndex &index) const
+    {
+        InlineEditor *e = dynamic_cast<InlineEditor *>(editor);
+        if (e) {
+            KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+            e->setText(mapEditor->item(index.row(), index.column())->text());
+        } else {
+            QItemDelegate::setEditorData(editor, index);
         }
-        
-        void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
-        {
-            InlineEditor *e = dynamic_cast<InlineEditor*>(editor);
-            if (e)
-            {
-                KWMapEditor *mapEditor = static_cast<KWMapEditor*>(parent());
-                mapEditor->item(index.row(), index.column())->setText(e->toPlainText());
-            }
-            else
-            {
-                QItemDelegate::setModelData(editor, model, index);
-            }
+    }
+
+    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+    {
+        InlineEditor *e = dynamic_cast<InlineEditor *>(editor);
+        if (e) {
+            KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+            mapEditor->item(index.row(), index.column())->setText(e->toPlainText());
+        } else {
+            QItemDelegate::setModelData(editor, model, index);
         }
+    }
 };
 
-KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent)
-: QTableWidget(0, 3, parent), _map(map) {
+KWMapEditor::KWMapEditor(QMap<QString, QString> &map, QWidget *parent)
+    : QTableWidget(0, 3, parent), _map(map)
+{
     setItemDelegate(new KWMapEditorDelegate(this));
     _ac = new KActionCollection(this);
     _copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
@@ -148,7 +144,8 @@ KWMapEditor::KWMapEditor(QMap<QString,QString>& map, QWidget *parent)
     reload();
 }
 
-void KWMapEditor::reload() {
+void KWMapEditor::reload()
+{
     int row = 0;
 
     while ((row = rowCount()) > _map.count()) {
@@ -172,19 +169,19 @@ void KWMapEditor::reload() {
     }
 
     row = 0;
-    for (QMap<QString,QString>::Iterator it = _map.begin(); it != _map.end(); ++it) {
+    for (QMap<QString, QString>::Iterator it = _map.begin(); it != _map.end(); ++it) {
         item(row, 1)->setText(it.key());
         item(row, 2)->setText(it.value());
         row++;
     }
 }
 
-
-KWMapEditor::~KWMapEditor() {
+KWMapEditor::~KWMapEditor()
+{
 }
 
-
-void KWMapEditor::erase() {
+void KWMapEditor::erase()
+{
     const QObject *o = sender();
     for (int i = 0; i < rowCount(); i++) {
         if (cellWidget(i, 0) == o) {
@@ -196,8 +193,8 @@ void KWMapEditor::erase() {
     emit dirty();
 }
 
-
-void KWMapEditor::saveMap() {
+void KWMapEditor::saveMap()
+{
     _map.clear();
 
     for (int i = 0; i < rowCount(); i++) {
@@ -205,8 +202,8 @@ void KWMapEditor::saveMap() {
     }
 }
 
-
-void KWMapEditor::addEntry() {
+void KWMapEditor::addEntry()
+{
     int x = rowCount();
     insertRow(x);
     QToolButton *b = new QToolButton(this);
@@ -221,26 +218,27 @@ void KWMapEditor::addEntry() {
     emit dirty();
 }
 
-
-void KWMapEditor::emitDirty() {
+void KWMapEditor::emitDirty()
+{
     emit dirty();
 }
 
-
-void KWMapEditor::contextMenu(const QPoint& pos) {
+void KWMapEditor::contextMenu(const QPoint &pos)
+{
     QTableWidgetItem *twi = itemAt(pos);
     _contextRow = row(twi);
     KMenu *m = new KMenu(this);
-    m->addAction( i18n("&New Entry" ), this, SLOT(addEntry()));
-    m->addAction( _copyAct );
+    m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
+    m->addAction(_copyAct);
     m->popup(mapToGlobal(pos));
 }
 
-
-void KWMapEditor::copy() {
+void KWMapEditor::copy()
+{
     QTableWidgetItem *twi = item(_contextRow, 2);
-    if (twi)
+    if (twi) {
         QApplication::clipboard()->setText(twi->text());
+    }
 }
 
 #include "kwmapeditor.moc"

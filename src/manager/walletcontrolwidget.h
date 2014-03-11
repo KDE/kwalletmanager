@@ -24,15 +24,16 @@
 class KWalletEditor;
 class ApplicationsManager;
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 
-class WalletControlWidget : public QWidget, public Ui::WalletControlWidget 
+class WalletControlWidget : public QWidget, public Ui::WalletControlWidget
 {
     Q_OBJECT
 public:
-    WalletControlWidget(QWidget* parent, const QString& walletName);
+    WalletControlWidget(QWidget *parent, const QString &walletName);
 
     bool openWallet();
 
@@ -45,14 +46,14 @@ public Q_SLOTS:
     void onChangePassword();
 
 protected:
-    virtual void hideEvent(QHideEvent*);
-    virtual void showEvent(QShowEvent*);
+    virtual void hideEvent(QHideEvent *);
+    virtual void showEvent(QShowEvent *);
 
 private:
     QString             _walletName;
-    KWallet::Wallet*    _wallet;
-    KWalletEditor*      _walletEditor;
-    ApplicationsManager* _applicationsManager;
+    KWallet::Wallet    *_wallet;
+    KWalletEditor      *_walletEditor;
+    ApplicationsManager *_applicationsManager;
 };
 
 #endif // WALLETCONTROLWIDGET_H

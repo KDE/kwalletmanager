@@ -24,9 +24,9 @@
 #include <kdebug.h>
 #include <QTimer>
 
-AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet* wallet): 
+AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
     QStandardItemModel(),
-    _cfg(KSharedConfig::openConfig(QLatin1String( "kwalletrc" ), KConfig::NoGlobals)),
+    _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals)),
     _wallet(wallet)
 {
     // TODO: handle "Auto Deny" applications
@@ -67,7 +67,7 @@ void AuthorizedAppModel::removeApp(QString appName)
 void AuthorizedAppModel::saveConfig()
 {
     QStringList appList;
-    for (int r=0; r <rowCount(); r++) {
+    for (int r = 0; r < rowCount(); r++) {
         appList << item(r)->text();
     }
     QString walletName = _wallet->walletName();

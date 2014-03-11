@@ -47,23 +47,24 @@
 
 K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
 
-KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
+KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
-  _cfg(KSharedConfig::openConfig(QLatin1String( "kwalletrc" ), KConfig::NoGlobals)) {
+      _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals))
+{
 
     K4AboutData *about =
         new K4AboutData(I18N_NOOP("kcmkwallet"), 0,
-                ki18n("KDE Wallet Control Module"),
-                0, KLocalizedString(), K4AboutData::License_GPL,
-                ki18n("(c) 2003 George Staikos"));
-        about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
+                        ki18n("KDE Wallet Control Module"),
+                        0, KLocalizedString(), K4AboutData::License_GPL,
+                        ki18n("(c) 2003 George Staikos"));
+    about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
 
     setNeedsAuthorization(true);
 
     QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setSpacing(KDialog::spacingHint());
     vbox->setMargin(0);
-        _wcw = new WalletConfigWidget(this);
+    _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
 
     connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
@@ -86,20 +87,20 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
     _wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
     updateWalletLists();
 
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String( "org.kde.kwalletmanager" ))) {
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.kwalletmanager"))) {
         _wcw->_launch->hide();
     }
 
 }
 
-
-KWalletConfig::~KWalletConfig() {
+KWalletConfig::~KWalletConfig()
+{
 }
 
-
-void KWalletConfig::updateWalletLists() {
-    const QString p1( _wcw->_localWallet->currentText() );
-    const QString p2( _wcw->_defaultWallet->currentText() );
+void KWalletConfig::updateWalletLists()
+{
+    const QString p1(_wcw->_localWallet->currentText());
+    const QString p2(_wcw->_defaultWallet->currentText());
 
     _wcw->_localWallet->clear();
     _wcw->_defaultWallet->clear();
@@ -119,15 +120,15 @@ void KWalletConfig::updateWalletLists() {
     }
 }
 
-
-QString KWalletConfig::newWallet() {
+QString KWalletConfig::newWallet()
+{
     bool ok;
 
     const QString n = KInputDialog::getText(i18n("New Wallet"),
-            i18n("Please choose a name for the new wallet:"),
-            QString(),
-            &ok,
-            this);
+                                            i18n("Please choose a name for the new wallet:"),
+                                            QString(),
+                                            &ok,
+                                            this);
 
     if (!ok) {
         return QString();
@@ -142,8 +143,8 @@ QString KWalletConfig::newWallet() {
     return n;
 }
 
-
-void KWalletConfig::newLocalWallet() {
+void KWalletConfig::newLocalWallet()
+{
     const QString n = newWallet();
     if (n.isEmpty()) {
         return;
@@ -156,8 +157,8 @@ void KWalletConfig::newLocalWallet() {
     emit changed(true);
 }
 
-
-void KWalletConfig::newNetworkWallet() {
+void KWalletConfig::newNetworkWallet()
+{
     const QString n = newWallet();
     if (n.isEmpty()) {
         return;
@@ -170,23 +171,24 @@ void KWalletConfig::newNetworkWallet() {
     emit changed(true);
 }
 
-
-void KWalletConfig::launchManager() {
-    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String( "org.kde.kwalletmanager" ))) {
-        KToolInvocation::startServiceByDesktopName( QLatin1String( "kwalletmanager_show" ));
+void KWalletConfig::launchManager()
+{
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.kwalletmanager"))) {
+        KToolInvocation::startServiceByDesktopName(QLatin1String("kwalletmanager_show"));
     } else {
-             QDBusInterface kwalletd(QLatin1String( "org.kde.kwalletmanager" ), QLatin1String( "/kwalletmanager/MainWindow_1" ));
-             kwalletd.call( QLatin1String( "show" ));
-             kwalletd.call( QLatin1String( "raise" ) );
+        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletmanager"), QLatin1String("/kwalletmanager/MainWindow_1"));
+        kwalletd.call(QLatin1String("show"));
+        kwalletd.call(QLatin1String("raise"));
     }
 }
 
-
-void KWalletConfig::configChanged() {
+void KWalletConfig::configChanged()
+{
     emit changed(true);
 }
 
-void KWalletConfig::load() {
+void KWalletConfig::load()
+{
     KConfigGroup config(_cfg, "Wallet");
     _wcw->_enabled->setChecked(config.readEntry("Enabled", true));
     _wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", false));
@@ -207,7 +209,7 @@ void KWalletConfig::load() {
         _wcw->_defaultWallet->setCurrentIndex(0);
     }
     if (config.hasKey("Local Wallet")) {
-        _wcw->_localWalletSelected->setChecked( !config.readEntry("Use One Wallet", false) );
+        _wcw->_localWalletSelected->setChecked(!config.readEntry("Use One Wallet", false));
         int localWallet_idx = _wcw->_localWallet->findText(config.readEntry("Local Wallet"));
         if (localWallet_idx != -1) {
             _wcw->_localWallet->setCurrentIndex(localWallet_idx);
@@ -237,7 +239,7 @@ void KWalletConfig::load() {
             continue;
         }
 
-        const QStringList apps = aa.readEntry(*i,QStringList());
+        const QStringList apps = aa.readEntry(*i, QStringList());
         const QStringList denyapps = ad.readEntry(*i, QStringList());
         denykeys.removeAll(walletName);
         QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << walletName);
@@ -249,7 +251,7 @@ void KWalletConfig::load() {
         }
     }
     for (QStringList::const_iterator i = denykeys.constBegin(); i != denykeys.constEnd(); ++i) {
-        const QStringList denyapps = ad.readEntry(*i,QStringList());
+        const QStringList denyapps = ad.readEntry(*i, QStringList());
         QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
         for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
@@ -259,8 +261,8 @@ void KWalletConfig::load() {
     emit changed(false);
 }
 
-
-void KWalletConfig::save() {
+void KWalletConfig::save()
+{
     QVariantMap args;
     KAuth::Action action = authAction();
     if (!action.isValid()) {
@@ -269,7 +271,7 @@ void KWalletConfig::save() {
     }
     action.setArguments(args);
 
-    KAuth::ExecuteJob* j = action.execute();
+    KAuth::ExecuteJob *j = action.execute();
 
     if (j->error()) {
         kDebug() << j->errorText();
@@ -332,16 +334,16 @@ void KWalletConfig::save() {
 
     _cfg->sync();
 
-        // this restarts kwalletd if necessary
+    // this restarts kwalletd if necessary
     if (KWallet::Wallet::isEnabled()) {
-            QDBusInterface kwalletd(QLatin1String( "org.kde.kwalletd" ), QLatin1String( "/modules/kwalletd" ),QLatin1String( KWALLETMANAGERINTERFACE ));
-            kwalletd.call( QLatin1String( "reconfigure" ) );
-        }
+        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletd"), QLatin1String("/modules/kwalletd"), QLatin1String(KWALLETMANAGERINTERFACE));
+        kwalletd.call(QLatin1String("reconfigure"));
+    }
     emit changed(false);
 }
 
-
-void KWalletConfig::defaults() {
+void KWalletConfig::defaults()
+{
     _wcw->_enabled->setChecked(true);
     _wcw->_openPrompt->setChecked(false);
     _wcw->_launchManager->setChecked(true);
@@ -352,32 +354,32 @@ void KWalletConfig::defaults() {
     _wcw->_idleTime->setValue(10);
     _wcw->_defaultWallet->setCurrentIndex(0);
     _wcw->_localWalletSelected->setChecked(false);
-        _wcw->_localWallet->setCurrentIndex( 0 );
+    _wcw->_localWallet->setCurrentIndex(0);
     _wcw->_accessList->clear();
     emit changed(true);
 }
 
-
-QString KWalletConfig::quickHelp() const {
+QString KWalletConfig::quickHelp() const
+{
     return i18n("This configuration module allows you to configure the KDE wallet system.");
 }
 
-
-void KWalletConfig::customContextMenuRequested(const QPoint& pos) {
+void KWalletConfig::customContextMenuRequested(const QPoint &pos)
+{
     QTreeWidgetItem *item = _wcw->_accessList->itemAt(pos);
     if (item && item->parent()) {
         QMenu *m = new QMenu(this);
         m->setTitle(item->parent()->text(0));
-        m->addAction( i18n("&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
+        m->addAction(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
         m->exec(_wcw->_accessList->mapToGlobal(pos));
         delete m;
     }
 }
 
-
-void KWalletConfig::deleteEntry() {
-    QList<QTreeWidgetItem*> items = _wcw->_accessList->selectedItems();
-    if (items.count() == 1 && items[0] ) {
+void KWalletConfig::deleteEntry()
+{
+    QList<QTreeWidgetItem *> items = _wcw->_accessList->selectedItems();
+    if (items.count() == 1 && items[0]) {
         delete items[0];
         emit changed(true);
     }

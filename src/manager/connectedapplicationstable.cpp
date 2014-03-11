@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "connectedapplicationstable.h"
 #include "disconnectappbutton.h"
 #include "connectedappmodel.h"
@@ -25,35 +24,35 @@
 #include <klocalizedstring.h>
 #include <QPushButton>
 
-ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget* parent):
+ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget *parent):
     QTableView(parent),
     _wallet(0)
 {
 }
 
-void ConnectedApplicationsTable::setWallet(KWallet::Wallet* wallet)
+void ConnectedApplicationsTable::setWallet(KWallet::Wallet *wallet)
 {
     _wallet = wallet;
 }
 
-void ConnectedApplicationsTable::setModel(QAbstractItemModel* model)
+void ConnectedApplicationsTable::setModel(QAbstractItemModel *model)
 {
     Q_ASSERT(_wallet != 0);
 
-    ConnectedAppModel *appModel = qobject_cast<ConnectedAppModel*>(model);
+    ConnectedAppModel *appModel = qobject_cast<ConnectedAppModel *>(model);
     Q_ASSERT(appModel != 0);
 
     QTableView::setModel(model);
-    for (int row =0; row < model->rowCount(); row++) {
-        DisconnectAppButton *btn = new DisconnectAppButton( model->index(row, 0).data().toString() , _wallet);
+    for (int row = 0; row < model->rowCount(); row++) {
+        DisconnectAppButton *btn = new DisconnectAppButton(model->index(row, 0).data().toString(), _wallet);
         btn->setFixedHeight(btn->sizeHint().height());
         setRowHeight(row, btn->height());
-        setIndexWidget( model->index(row, 1), btn);
+        setIndexWidget(model->index(row, 1), btn);
         connect(btn, SIGNAL(appDisconnected(QString)), appModel, SLOT(removeApp(QString)));
     }
 }
 
-void ConnectedApplicationsTable::resizeEvent(QResizeEvent* resizeEvent)
+void ConnectedApplicationsTable::resizeEvent(QResizeEvent *resizeEvent)
 {
     // this will keep disconnect buttons column at it's minimum size and
     // make the application names take the reminder of the horizontal space

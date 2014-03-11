@@ -22,7 +22,8 @@
 
 #include <QStandardItemModel>
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 
@@ -41,6 +42,5 @@ private:
     QStringList                             _connectedApps;
     QMap<QString, QPersistentModelIndex>    _connectedAppsIndexMap;
 };
-
 
 #endif // CONNECTEDAPPMODEL_H

@@ -30,7 +30,7 @@
 #include <kio/netaccess.h>
 #include <QDragEnterEvent>
 
-KWalletManagerWidget::KWalletManagerWidget(QWidget* parent, Qt::WindowFlags flags): 
+KWalletManagerWidget::KWalletManagerWidget(QWidget *parent, Qt::WindowFlags flags):
     KPageWidget(parent)
 {
     setFaceType(Auto);
@@ -44,7 +44,7 @@ KWalletManagerWidget::~KWalletManagerWidget()
 
 }
 
-void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem* current, KPageWidgetItem* before)
+void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before)
 {
 
 }
@@ -53,30 +53,30 @@ void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString
 {
     // NOTE: this method is called upon several kwalletd events
     static bool alreadyUpdating = false;
-    if (alreadyUpdating)
+    if (alreadyUpdating) {
         return;
+    }
 
     alreadyUpdating = true;
     // find out pages corresponding to deleted wallets
     const QStringList wl = KWallet::Wallet::walletList();
     WalletPagesHash::iterator p = _walletPages.begin();
-    while ( p != _walletPages.end() ) {
-        if ( !wl.contains(p.key()) ) {
+    while (p != _walletPages.end()) {
+        if (!wl.contains(p.key())) {
             // remove the page corresponding to the missing wallet
             removePage(p.value());
             p = _walletPages.erase(p);
-        }
-        else {
+        } else {
             ++p;
         }
     }
 
     // add new wallets
     for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
-        const QString& name = *i;
-        if ( !_walletPages.contains(name) ) {
+        const QString &name = *i;
+        if (!_walletPages.contains(name)) {
             KWalletManagerWidgetItem *wi = new KWalletManagerWidgetItem(this, name);
-            addPage( wi );
+            addPage(wi);
             _walletPages.insert(*i, wi);
         }
     }
@@ -84,8 +84,8 @@ void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString
     // update existing wallets display, e.g. icon
     WalletPagesHash::const_iterator cp = _walletPages.constBegin();
     WalletPagesHash::const_iterator cend = _walletPages.constEnd();
-    for ( ; cp != cend; cp++ ) {
-         cp.value()->updateWalletDisplay();
+    for (; cp != cend; cp++) {
+        cp.value()->updateWalletDisplay();
     }
 
     if (!selectWallet.isEmpty()) {
@@ -94,19 +94,19 @@ void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString
     alreadyUpdating = false;
 }
 
-bool KWalletManagerWidget::hasWallet(const QString& name) const
+bool KWalletManagerWidget::hasWallet(const QString &name) const
 {
     return _walletPages.contains(name);
 }
 
-bool KWalletManagerWidget::openWalletFile(const QString& path)
+bool KWalletManagerWidget::openWalletFile(const QString &path)
 {
     Q_ASSERT(0);
     // TODO: implement this method: add a new tab with an editor centered on a file
     return false;
 }
 
-bool KWalletManagerWidget::openWallet(const QString& name)
+bool KWalletManagerWidget::openWallet(const QString &name)
 {
     bool result = false;
     if (_walletPages.contains(name)) {
@@ -117,12 +117,12 @@ bool KWalletManagerWidget::openWallet(const QString& name)
     return result;
 }
 
-const QString& KWalletManagerWidget::activeWalletName() const
+const QString &KWalletManagerWidget::activeWalletName() const
 {
-    return qobject_cast<KWalletManagerWidgetItem*>(currentPage())->walletName();
+    return qobject_cast<KWalletManagerWidgetItem *>(currentPage())->walletName();
 }
 
-void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent* e)
+void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent *e)
 {
     if (e->mimeData()->hasFormat("application/x-kwallet-wallet")) {
         e->accept();
@@ -131,7 +131,7 @@ void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent* e)
     }
 }
 
-void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent* e)
+void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent *e)
 {
     qDebug("KWalletManagerWidget::dragMoveEvent");
 //     KUrl dummy;
@@ -143,7 +143,7 @@ void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent* e)
 //     }
 }
 
-void KWalletManagerWidget::dropEvent(QDropEvent* e)
+void KWalletManagerWidget::dropEvent(QDropEvent *e)
 {
     qDebug("KWalletManagerWidget::dropEvent");
 //     KUrl u;
@@ -152,7 +152,7 @@ void KWalletManagerWidget::dropEvent(QDropEvent* e)
 //         e->ignore();
 //         return;
 //     }
-// 
+//
 //     if (!item) {
 //         // Not dropped over an item thus it is a wallet
 //         const QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.fileName();
@@ -161,7 +161,7 @@ void KWalletManagerWidget::dropEvent(QDropEvent* e)
 //             e->ignore();
 //             return;
 //         }
-// 
+//
 //         // FIXME: verify that it is a real wallet file first
 //         KIO::NetAccess::file_copy(u, KUrl(dest));
 //         e->accept();
@@ -175,19 +175,19 @@ void KWalletManagerWidget::dropEvent(QDropEvent* e)
 //     }
 }
 
-bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent* e, KUrl* u) const
+bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const
 {
     return false;
 //     if (e->source() == viewport()) {
 //         return true;
 //     }
-// 
+//
 //     if (!e->provides("application/x-kwallet-folder") &&
 //         !e->provides("application/x-kwallet-wallet") &&
 //         !e->provides("text/uri-list")) {
 //         return true;
 //     }
-// 
+//
 //     // Over wallets folders, over nothing wallets
 //     *item = itemAt(e->pos());
 //     const QByteArray edata = e->encodedData(item ? "application/x-kwallet-folder" : "application/x-kwallet-wallet");
@@ -195,7 +195,7 @@ bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent* e, KUrl* u) c
 //     if (*u == KUrl()) {
 //         *u = decodeUrl(e->encodedData("text/uri-list"));
 //     }
-// 
+//
 //     return *u == KUrl();
 }
 

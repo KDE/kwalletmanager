@@ -22,7 +22,8 @@
 
 #include <QPushButton>
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 
@@ -30,7 +31,7 @@ class RevokeAuthButton : public QPushButton
 {
     Q_OBJECT
 public:
-    RevokeAuthButton(const QString& appName, KWallet::Wallet *wallet);
+    RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet);
 
 private Q_SLOTS:
     void onClicked();

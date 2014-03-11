@@ -31,22 +31,28 @@
 #include <QFile>
 #include <QFileInfo>
 
+class MyApp : public KUniqueApplication
+{
+public:
+    MyApp() : KUniqueApplication()
+    {
+        KGlobal::ref();
+    }
+    virtual ~MyApp() {}
 
-
-class MyApp : public KUniqueApplication {
-    public:
-        MyApp() : KUniqueApplication() { KGlobal::ref(); }
-        virtual ~MyApp() {}
-
-        virtual int newInstance() { return 0; }
+    virtual int newInstance()
+    {
+        return 0;
+    }
 };
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     K4AboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "2.0",
-        ki18n("KDE Wallet Management Tool"),
-        K4AboutData::License_GPL,
-        ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
-        "http://utils.kde.org/projects/kwalletmanager");
+                      ki18n("KDE Wallet Management Tool"),
+                      K4AboutData::License_GPL,
+                      ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
+                      "http://utils.kde.org/projects/kwalletmanager");
 
     about.addAuthor(ki18n("Valentin Rusu"), ki18n("Maintainer, user interface refactoring"), "kde@rusu.info");
     about.addAuthor(ki18n("George Staikos"), ki18n("Original author and former maintainer"), "staikos@kde.org");
@@ -70,7 +76,7 @@ int main(int argc, char **argv) {
     KWalletManager wm;
     wm.setCaption(i18n("KDE Wallet Manager"));
 
-    KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
+    KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String("share/apps/kwallet"));
 
     KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
@@ -86,8 +92,8 @@ int main(int argc, char **argv) {
         QString fn = QFileInfo(args->arg(i)).absoluteFilePath();
         KMimeType::Ptr ptr;
         if (QFile::exists(fn) &&
-            (ptr = KMimeType::findByFileContent(fn)) &&
-            ptr->is(QLatin1String( "application/x-kwallet" ))) {
+                (ptr = KMimeType::findByFileContent(fn)) &&
+                ptr->is(QLatin1String("application/x-kwallet"))) {
             wm.openWalletFile(fn);
         } else {
             wm.openWallet(args->arg(i));
