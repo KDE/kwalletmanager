@@ -22,7 +22,7 @@ set(kwalletmanager_SRCS
 )
 
 qt5_add_dbus_interface(kwalletmanager_SRCS
-    ${KWALLET_DBUS_INTERFACES_DIR}/org.kde.KWallet.xml kwallet_interface
+    ${KWALLET_DBUS_INTERFACES_DIR}/kf5_org.kde.KWallet.xml kwallet_interface
 )
 
 qt5_wrap_ui(kwalletmanager_SRCS
