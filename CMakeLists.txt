@@ -6,35 +6,28 @@ find_package(ECM 0.0.9 REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-set(REQUIRED_QT_VERSION 5.2.0)
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
+find_package(Qt5 5.2.0 CONFIG REQUIRED Core Gui Widgets DBus)
 
-set(KF5_VERSION "4.96.0")
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(FeatureSummary)
-include(GenerateExportHeader)
-include(ECMSetupVersion)
-include(ECMGenerateHeaders)
 include(ECMInstallIcons)
 
-if(NOT kdelibs_SOURCE_DIR)
-    find_package(KF5 ${KF5_VERSION} REQUIRED
-        CoreAddons
-        DocTools
-        Auth
-        Wallet
-        KCMUtils
-        KDE4Support
-        I18n
-        XmlGui
-        ConfigWidgets
-    )
-endif()
+find_package(KF5 4.96.0 REQUIRED
+    CoreAddons
+    DocTools
+    Auth
+    Wallet
+    KCMUtils
+    KDE4Support
+    I18n
+    XmlGui
+    ConfigWidgets
+)
 
 add_subdirectory( doc )
-add_subdirectory( icons ) 
-add_subdirectory( src ) 
+add_subdirectory( icons )
+add_subdirectory( src )
 
 if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
   feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
