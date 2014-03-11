@@ -25,6 +25,8 @@
 class KUrl;
 class QDropEvent;
 class KWalletManagerWidgetItem;
+class QDragEnterEvent;
+class QDragMoveEvent;
 
 class KWalletManagerWidget : public KPageWidget {
     Q_OBJECT

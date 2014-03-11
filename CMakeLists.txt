@@ -11,7 +11,6 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
 
 set(KF5_VERSION "4.96.0")
 include(KDEInstallDirs)
-include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 include(FeatureSummary)
 include(GenerateExportHeader)
@@ -25,12 +24,11 @@ if(NOT kdelibs_SOURCE_DIR)
         DocTools
         Auth
         Wallet
-#        WidgetsAddons
-#        Service
-#        Config
-#        WindowSystem
-#        I18n
-#        KDE4Support #KUniqueApplication in ksecretsserviced
+        KCMUtils
+        KDE4Support
+        I18n
+        XmlGui
+        ConfigWidgets
     )
 endif()
 

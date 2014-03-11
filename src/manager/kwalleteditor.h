@@ -35,7 +35,6 @@ class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
 class KWMapEditor;
-class KAction;
 class KTreeWidgetSearchLine;
 
 
@@ -112,8 +111,8 @@ protected:
         static RegisterCreateActionsMethod _registerCreateActionMethod;
 		static QAction *_newFolderAction, *_deleteFolderAction;
 		static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
-		static KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
-		static KAction *_copyPassAction;
+        static QAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
+        static QAction *_copyPassAction;
 		QLabel*_details;
 		QString _currentFolder;
 		QMap<QString,QString> _currentMap; // save memory by storing

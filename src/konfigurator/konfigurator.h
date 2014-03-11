@@ -44,7 +44,7 @@ class KWalletConfig : public KCModule {
 
 		QString quickHelp() const;
 
-	public slots:
+    public slots:
 		void configChanged();
 		void launchManager();
 		void newLocalWallet();

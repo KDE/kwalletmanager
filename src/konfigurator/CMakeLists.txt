@@ -9,7 +9,10 @@ add_library(kcm_kwallet MODULE ${kcm_kwallet_PART_SRCS})
 
 target_link_libraries(kcm_kwallet
     Qt5::Core
+    KF5::Auth
     KF5::CoreAddons
+    KF5::KCMUtils
+    KF5::KDE4Support
 )
 
 install(TARGETS kcm_kwallet  DESTINATION ${PLUGIN_INSTALL_DIR})
@@ -20,6 +23,7 @@ set(kcm_kwallet_helper_SRCS savehelper.cpp)
 add_executable(kcm_kwallet_helper ${kcm_kwallet_helper_SRCS})
 target_link_libraries(kcm_kwallet_helper
     Qt5::Core
+    KF5::Auth
     KF5::CoreAddons
 )
 

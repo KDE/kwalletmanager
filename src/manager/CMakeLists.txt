@@ -39,7 +39,16 @@ qt5_wrap_ui(kwalletmanager_SRCS
 
 add_executable(kwalletmanager ${kwalletmanager_SRCS})
 
-target_link_libraries(kwalletmanager ${KDE4_KIO_LIBS})
+target_link_libraries(kwalletmanager
+    Qt5::Core
+    KF5::CoreAddons
+    KF5::KDE4Support
+    KF5::I18n
+    KF5::XmlGui #KActionCollection
+    KF5::ConfigWidgets
+    KF5::ItemViews
+    KF5::Wallet
+)
 
 install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc

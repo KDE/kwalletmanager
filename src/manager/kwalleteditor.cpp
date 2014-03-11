@@ -27,6 +27,7 @@
 #include <QDomElement>
 #include <QDomNode>
 #include <QDomDocument>
+#include <QFileDialog>
 #include <QXmlStreamWriter>
 #include <kaction.h>
 #include <kdebug.h>
@@ -68,10 +69,10 @@ QAction *KWalletEditor::_exportAction =0;
 QAction *KWalletEditor::_saveAsAction =0;
 QAction *KWalletEditor::_mergeAction =0;
 QAction *KWalletEditor::_importAction =0;
-KAction *KWalletEditor::_newEntryAction =0;
-KAction *KWalletEditor::_renameEntryAction =0;
-KAction *KWalletEditor::_deleteEntryAction =0;
-KAction *KWalletEditor::_copyPassAction =0;
+QAction *KWalletEditor::_newEntryAction =0;
+QAction *KWalletEditor::_renameEntryAction =0;
+QAction *KWalletEditor::_deleteEntryAction =0;
+QAction *KWalletEditor::_copyPassAction =0;
 QAction *KWalletEditor::_alwaysShowContentsAction =0;
 QAction *KWalletEditor::_alwaysHideContentsAction =0;
 
@@ -944,14 +945,15 @@ void KWalletEditor::showHideMapEditorValue(bool show) {
 enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
 
 void KWalletEditor::importWallet() {
-	KUrl url = KFileDialog::getOpenUrl(KUrl(), QLatin1String( "*.kwl" ), this);
+    QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), QLatin1String( "*.kwl" ));
+
 	if (url.isEmpty()) {
 		return;
 	}
 
 	QString tmpFile;
 	if (!KIO::NetAccess::download(url, tmpFile, this)) {
-		KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.prettyUrl()));
+        KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
 		return;
 	}
 
@@ -1079,27 +1081,28 @@ void KWalletEditor::importWallet() {
 
 
 void KWalletEditor::importXML() {
-	KUrl url = KFileDialog::getOpenUrl( KUrl(), QLatin1String( "*.xml" ), this);
-	if (url.isEmpty()) {
+    QUrl url = QFileDialog::getOpenFileUrl( this, QString(), QUrl(), QLatin1String( "*.xml" ));
+
+    if (url.isEmpty()) {
 		return;
 	}
 
 	QString tmpFile;
 	if (!KIO::NetAccess::download(url, tmpFile, this)) {
-		KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.prettyUrl()));
+        KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.toDisplayString()));
 		return;
 	}
 
 	QFile qf(tmpFile);
 	if (!qf.open(QIODevice::ReadOnly)) {
-		KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.", url.prettyUrl()));
+        KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.", url.toDisplayString()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
 	}
 
 	QDomDocument doc(tmpFile);
 	if (!doc.setContent(&qf)) {
-		KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.prettyUrl()));
+        KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.toDisplayString()));
 		KIO::NetAccess::removeTempFile(tmpFile);
 		return;
 	}
@@ -1251,10 +1254,10 @@ void KWalletEditor::exportXML() {
 	xml.writeEndDocument();
 	tf.flush();
 
-	KUrl url = KFileDialog::getSaveUrl(KUrl(), QLatin1String( "*.xml" ), this);
+    QUrl url = QFileDialog::getSaveFileUrl( this, QString(), QUrl(), QLatin1String( "*.xml" ));
 
 	if (!url.isEmpty()) {
-		KIO::NetAccess::dircopy(KUrl::fromPath(tf.fileName()), url, this);
+        KIO::NetAccess::dircopy(QUrl::fromLocalFile(tf.fileName()), url, this);
 	}
 }
 
@@ -1265,14 +1268,15 @@ void KWalletEditor::setNewWallet(bool x) {
 
 
 void KWalletEditor::saveAs() {
-	KUrl url = KFileDialog::getSaveUrl(KUrl(), QLatin1String( "*.kwl" ), this);
-	if (!url.isEmpty()) {
+    QUrl url = QFileDialog::getSaveFileUrl( this, QString(), QUrl(), QLatin1String( "*.kwl" ));
+
+    if (!url.isEmpty()) {
 		// Sync() kwalletd
 		if (_nonLocal) {
 			KIO::NetAccess::dircopy(_walletName, url, this);
 		} else {
 			QString path = KGlobal::dirs()->saveLocation("kwallet") + QLatin1Char( '/' ) + _walletName + QLatin1String( ".kwl" );
-			KIO::NetAccess::dircopy(KUrl::fromPath(path), url, this);
+            KIO::NetAccess::dircopy(QUrl::fromLocalFile(path), url, this);
 		}
 	}
 }

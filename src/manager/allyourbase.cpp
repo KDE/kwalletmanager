@@ -32,6 +32,7 @@
 
 #include <QFile>
 #include <QApplication>
+#include <QDrag>
 //Added by qt3to4:
 #include <QPixmap>
 #include <QDropEvent>
@@ -115,9 +116,9 @@ QTreeWidgetItem* KWalletFolderItem::getItem(const QString& key) {
 	return 0;
 }
 
-bool KWalletFolderItem::acceptDrop(const QMimeSource *mime) const {
-	return mime->provides("application/x-kwallet-entry") ||
-		mime->provides("text/uri-list");
+bool KWalletFolderItem::acceptDrop(const QMimeData *mime) const {
+    return mime->hasFormat("application/x-kwallet-entry") ||
+        mime->hasFormat("text/uri-list");
 }
 
 QString KWalletFolderItem::name() const {
@@ -265,8 +266,8 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream& ds) {
 }
 
 void KWalletItem::processDropEvent(QDropEvent *e) {
-	if (e->provides("application/x-kwallet-folder") ||
-	    e->provides("text/uri-list")) {
+    if (e->mimeData()->hasFormat("application/x-kwallet-folder") ||
+        e->mimeData()->hasFormat("text/uri-list")) {
 		// FIXME: don't allow the drop if the wallet name is the same
 		KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(text(), listWidget()->topLevelWidget()->winId());
 		if (!_wallet) {
@@ -278,8 +279,8 @@ void KWalletItem::processDropEvent(QDropEvent *e) {
 
 		QDataStream *ds = 0L;
 
-		if (e->provides("application/x-kwallet-folder")) {
-			QByteArray edata = e->encodedData("application/x-kwallet-folder");
+        if (e->mimeData()->hasFormat("application/x-kwallet-folder")) {
+            QByteArray edata = e->mimeData()->data("application/x-kwallet-folder");
 			if (!edata.isEmpty()) {
 				ds = new QDataStream(&edata, QIODevice::ReadOnly);
 			}
@@ -376,7 +377,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item) {
 			sel = el->currentItem();
 	}
 
-	if (e->provides("application/x-kwallet-entry")) {
+    if (e->mimeData()->hasFormat("application/x-kwallet-entry")) {
 		//do nothing if we are in the same folder
 		if (sel && sel->parent()->parent() ==
 				KWalletEntryList::getItemFolder(item)) {
@@ -384,26 +385,26 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item) {
 			return;
 		}
 		isEntry = true;
-		QByteArray data = e->encodedData("application/x-kwallet-entry");
+        QByteArray data = e->mimeData()->data("application/x-kwallet-entry");
 		if (data.isEmpty()) {
 			e->ignore();
 			return;
 		}
 		ds = new QDataStream(&data, QIODevice::ReadOnly);
-	} else if (e->provides("application/x-kwallet-folder")) {
+    } else if (e->mimeData()->hasFormat("application/x-kwallet-folder")) {
 		//do nothing if we are in the same wallet
 		if (this == el) {
 			e->ignore();
 			return;
 		}
 		isEntry = false;
-		QByteArray data = e->encodedData("application/x-kwallet-folder");
+        QByteArray data = e->mimeData()->data("application/x-kwallet-folder");
 		if (data.isEmpty()) {
 			e->ignore();
 			return;
 		}
 		ds = new QDataStream(&data, QIODevice::ReadOnly);
-	} else if (e->provides("text/uri-list")) {
+    } else if (e->mimeData()->hasFormat("text/uri-list")) {
 		const QList<QUrl> urls = e->mimeData()->urls();
 		if (urls.isEmpty()) {
 			e->ignore();
@@ -585,14 +586,14 @@ void KWalletEntryList::dragMoveEvent(QDragMoveEvent *e) {
 	QTreeWidgetItem *i = itemAt(e->pos());
 	e->ignore();
 	if (i) {
-		if (e->provides("application/x-kwallet-entry") ||
-				e->provides("text/uri-list")) {
+        if (e->mimeData()->hasFormat("application/x-kwallet-entry") ||
+                e->mimeData()->hasFormat("text/uri-list")) {
 			e->accept();
 		}
 	}
-	if ((e->provides("application/x-kwallet-folder") &&
+    if ((e->mimeData()->hasFormat("application/x-kwallet-folder") &&
 			e->source() != viewport()) ||
-			e->provides("text/uri-list")) {
+            e->mimeData()->hasFormat("text/uri-list")) {
 		e->accept();
 	}
 }

@@ -79,7 +79,7 @@ class KWalletFolderItem : public QTreeWidgetItem {
 		KWalletFolderItem(KWallet::Wallet *w, QTreeWidget* parent, const QString& name, int entries);
 		virtual ~KWalletFolderItem();
 
-		virtual bool acceptDrop(const QMimeSource *mime) const;
+        virtual bool acceptDrop(const QMimeData *mime) const;
 
 		QString name() const;
 		void refresh();

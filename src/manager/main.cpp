@@ -17,7 +17,9 @@
    Boston, MA 02110-1301, USA.
  */
 
-#include <kaboutdata.h>
+#include "kwalletmanager.h"
+
+#include <k4aboutdata.h>
 #include <kcmdlineargs.h>
 #include <kdebug.h>
 #include <kglobal.h>
@@ -29,7 +31,6 @@
 #include <QFile>
 #include <QFileInfo>
 
-#include "kwalletmanager.h"
 
 
 class MyApp : public KUniqueApplication {
@@ -41,9 +42,9 @@ class MyApp : public KUniqueApplication {
 };
 
 int main(int argc, char **argv) {
-	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "2.0",
+    K4AboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "2.0",
 		ki18n("KDE Wallet Management Tool"),
-		KAboutData::License_GPL,
+        K4AboutData::License_GPL,
 		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
 		"http://utils.kde.org/projects/kwalletmanager");
 

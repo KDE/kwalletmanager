@@ -49,6 +49,9 @@
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
 
+// KF5::KDE4Support
+#include <kglobal.h>
+
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KXmlGuiWindow(parent, f)
 {

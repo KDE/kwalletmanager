@@ -19,7 +19,10 @@
 
 #include "savehelper.h"
 
-#include <kdebug.h>
+#include <kauthhelpersupport.h>
+
+#include <QDebug>
+
 #include <unistd.h>
 
 #if defined(Q_CC_MSVC)
@@ -30,9 +33,9 @@
 ActionReply SaveHelper::save(QVariantMap args)
 {
     __uid_t uid = getuid();
-    kDebug() << "executing uid=" << uid;
+    qDebug() << "executing uid=" << uid;
 
-    return ActionReply::SuccessReply;
+    return ActionReply::SuccessReply();
 }
 
-KDE4_AUTH_HELPER_MAIN("org.kde.kcontrol.kcmkwallet", SaveHelper)
+KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmkwallet", SaveHelper)

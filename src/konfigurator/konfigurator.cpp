@@ -19,19 +19,24 @@
 #include "konfigurator.h"
 
 #include <QtDBus/QtDBus>
-#include <kaboutdata.h>
-#include <kapplication.h>
 #include <ksharedconfig.h>
-#include <kdialog.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <kinputdialog.h>
-#include <kmenu.h>
 #include <kwallet.h>
 #include <kauthaction.h>
+#include <kauthactionreply.h>
+#include <kauthexecutejob.h>
+
+//KDE4Support
+#include <kdialog.h>
+#include <kglobal.h>
+#include <k4aboutdata.h>
 #include <kdebug.h>
 
 #include <QCheckBox>
+#include <QDialog>
+#include <QMenu>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <ktoolinvocation.h>
@@ -41,20 +46,17 @@
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
-K_EXPORT_PLUGIN(KWalletFactory("kcmkwallet"))
-
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList& args)
-: KCModule(KWalletFactory::componentData(), parent, args),
+    : KCModule(parent, args),
   _cfg(KSharedConfig::openConfig(QLatin1String( "kwalletrc" ), KConfig::NoGlobals)) {
 
-	KAboutData *about =
-		new KAboutData(I18N_NOOP("kcmkwallet"), 0,
+    K4AboutData *about =
+        new K4AboutData(I18N_NOOP("kcmkwallet"), 0,
 				ki18n("KDE Wallet Control Module"),
-				0, KLocalizedString(), KAboutData::License_GPL,
+                0, KLocalizedString(), K4AboutData::License_GPL,
 				ki18n("(c) 2003 George Staikos"));
 		about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
-	setAboutData( about );
 
     setNeedsAuthorization(true);
 
@@ -260,23 +262,18 @@ void KWalletConfig::load() {
 
 void KWalletConfig::save() {
     QVariantMap args;
-    KAuth::Action *action = authAction();
-    if (0 == action) {
+    KAuth::Action action = authAction();
+    if (!action.isValid()) {
         kDebug() << "There's no authAction, not saving settings";
         return;
     }
-    action->setArguments(args);
+    action.setArguments(args);
 
-    KAuth::ActionReply reply = action->execute();
+    KAuth::ExecuteJob* j = action.execute();
 
-    if (reply.failed()) {
-        if (reply.type() == KAuth::ActionReply::KAuthError){
-            kDebug() << "Save action was not authorized!";
-            KMessageBox::error(this, i18n("Sorry, the system security policy didn't allow you to save the changes."), i18n("KDE Wallet Control Module"));
-        } else {
-            KMessageBox::error(this, reply.errorDescription(), i18n("KDE Wallet Control Module"));
-            kDebug() << "Save action failed. Not saving the settings.";
-        }
+    if (j->error()) {
+        kDebug() << j->errorText();
+        KMessageBox::error(this, j->errorString(), i18n("KDE Wallet Control Module"));
         load();
         return;
     }
@@ -369,11 +366,11 @@ QString KWalletConfig::quickHelp() const {
 void KWalletConfig::customContextMenuRequested(const QPoint& pos) {
 	QTreeWidgetItem *item = _wcw->_accessList->itemAt(pos);
 	if (item && item->parent()) {
-		KMenu *m = new KMenu(this);
-		m->addTitle(item->parent()->text(0));
+        QMenu *m = new QMenu(this);
+        m->setTitle(item->parent()->text(0));
 		m->addAction( i18n("&Delete" ), this, SLOT(deleteEntry()), Qt::Key_Delete);
 		m->exec(_wcw->_accessList->mapToGlobal(pos));
-		delete m;
+        delete m;
 	}
 }
 

@@ -31,6 +31,7 @@
 #include <kmenu.h>
 #include <KTabWidget>
 #include <kdebug.h>
+#include <klocale.h>
 
 WalletControlWidget::WalletControlWidget(QWidget* parent, const QString& walletName):
     QWidget(parent),

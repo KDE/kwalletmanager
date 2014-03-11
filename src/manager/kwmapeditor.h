@@ -24,7 +24,6 @@
 
 #include <QTableWidget>
 
-class KAction;
 class KActionCollection;
 
 class KWMapEditor : public QTableWidget {
@@ -52,7 +51,7 @@ class KWMapEditor : public QTableWidget {
 		QMap<QString,QString>& _map;
 		int _contextRow;
 		KActionCollection *_ac;
-		KAction *_copyAct;
+        QAction *_copyAct;
 };
 
 #endif
