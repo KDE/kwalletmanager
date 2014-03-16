@@ -22,7 +22,6 @@
 
 #include <kdebug.h>
 #include <kcomponentdata.h>
-#include <kglobal.h>
 #include <kio/netaccess.h>
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -33,6 +32,7 @@
 #include <QFile>
 #include <QApplication>
 #include <QDrag>
+#include <QMimeData>
 //Added by qt3to4:
 #include <QPixmap>
 #include <QDropEvent>

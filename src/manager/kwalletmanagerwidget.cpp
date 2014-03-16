@@ -24,7 +24,6 @@
 
 #include <kwallet.h>
 #include <kurl.h>
-#include <kglobal.h>
 #include <kmessagebox.h>
 #include <klocalizedstring.h>
 #include <kio/netaccess.h>
