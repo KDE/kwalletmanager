@@ -22,7 +22,9 @@ find_package(KF5 4.96.0 REQUIRED
     KDE4Support
     I18n
     XmlGui
+    Config
     ConfigWidgets
+    DBusAddons
 )
 
 add_subdirectory( doc )

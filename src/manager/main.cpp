@@ -19,87 +19,85 @@
 
 #include "kwalletmanager.h"
 
-#include <k4aboutdata.h>
-#include <kcmdlineargs.h>
-#include <kdebug.h>
-#include <kglobal.h>
-#include <klocale.h>
-#include <kmimetype.h>
-#include <kstandarddirs.h>
-#include <kuniqueapplication.h>
+#include <KDBusAddons/kdbusservice.h>
+#include <klocalizedstring.h>
 
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QEventLoopLocker>
 #include <QFile>
 #include <QFileInfo>
+#include <QMimeDatabase>
+#include <QMimeType>
+#include <QStandardPaths>
 
-class MyApp : public KUniqueApplication
+class MyApp : public QApplication
 {
 public:
-    MyApp() : KUniqueApplication()
+    MyApp(int &argc, char **argv) : QApplication(argc, argv)
     {
-        KGlobal::ref();
+        //was: KGlobal::ref(); ported to QEeventLoopLocker
     }
+
     virtual ~MyApp() {}
 
     virtual int newInstance()
     {
         return 0;
     }
+private:
+    QEventLoopLocker m_locker;
 };
+
 
 int main(int argc, char **argv)
 {
-    K4AboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "2.0",
-                      ki18n("KDE Wallet Management Tool"),
-                      K4AboutData::License_GPL,
-                      ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
-                      "http://utils.kde.org/projects/kwalletmanager");
+    QCoreApplication::setApplicationName("kwalletmanager");
+    QCoreApplication::setApplicationVersion("3.0");
+    QCoreApplication::setOrganizationName("KDE");
+    QCoreApplication::setOrganizationDomain("kde.org");
+    QApplication::setApplicationDisplayName(i18n("Plasma Wallet Manager"));
 
-    about.addAuthor(ki18n("Valentin Rusu"), ki18n("Maintainer, user interface refactoring"), "kde@rusu.info");
-    about.addAuthor(ki18n("George Staikos"), ki18n("Original author and former maintainer"), "staikos@kde.org");
-    about.addAuthor(ki18n("Michael Leupold"), ki18n("Developer and former maintainer"), "lemma@confuego.org");
-    about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
+    QCommandLineParser parser;
+    parser.addHelpOption();
+    parser.addVersionOption();
 
-    KCmdLineArgs::init(argc, argv, &about);
+    parser.addOption(QCommandLineOption("show", i18n("Show window on startup")));
+    parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
+    parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
 
-    KCmdLineOptions options;
-    options.add("show", ki18n("Show window on startup"));
-    options.add("kwalletd", ki18n("For use by kwalletd only"));
-    options.add("+name", ki18n("A wallet name"));
-    KCmdLineArgs::addCmdLineOptions(options);
+    KDBusService dbssvc(KDBusService::Unique);
 
-    if (!KUniqueApplication::start()) {
-        return 0;
-    }
-
-    MyApp a;
+    MyApp a(argc, argv);
 
     KWalletManager wm;
-    wm.setCaption(i18n("KDE Wallet Manager"));
+    wm.setCaption(i18n("Plasma Wallet Manager"));
 
-    KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String("share/apps/kwallet"));
-
-    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-
-    if (args->isSet("show")) {
+    if (parser.isSet("show")) {
         wm.show();
     }
 
-    if (args->isSet("kwalletd")) {
+    if (parser.isSet("kwalletd")) {
         wm.kwalletdLaunch();
     }
 
-    for (int i = 0; i < args->count(); ++i) {
-        QString fn = QFileInfo(args->arg(i)).absoluteFilePath();
-        KMimeType::Ptr ptr;
-        if (QFile::exists(fn) &&
-                (ptr = KMimeType::findByFileContent(fn)) &&
-                ptr->is(QLatin1String("application/x-kwallet"))) {
-            wm.openWalletFile(fn);
-        } else {
-            wm.openWallet(args->arg(i));
+    for (int i = 0; i < a.arguments().count(); ++i) {
+        QString fn = QFileInfo(a.arguments().at(i)).absoluteFilePath();
+        if (QFile::exists(fn))
+        {
+            QMimeDatabase mimeDb;
+            QMimeType mt = mimeDb.mimeTypeForFile(fn, QMimeDatabase::MatchContent);
+
+            if (mt.isValid() &&
+                    mt.inherits(QLatin1String("application/x-kwallet"))) {
+                wm.openWalletFile(fn);
+            }
+            else {
+                wm.openWallet(a.arguments().at(i));
+            }
         }
     }
-    args->clear();
+
     return a.exec();
 }
 

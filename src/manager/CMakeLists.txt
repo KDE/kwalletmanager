@@ -42,12 +42,14 @@ add_executable(kwalletmanager ${kwalletmanager_SRCS})
 target_link_libraries(kwalletmanager
     Qt5::Core
     KF5::CoreAddons
-    KF5::KDE4Support
     KF5::I18n
     KF5::XmlGui #KActionCollection
     KF5::ConfigWidgets
     KF5::ItemViews
     KF5::Wallet
+    KF5::DBusAddons
+    KF5::ConfigCore
+    KF5::KDE4Support
 )
 
 install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )

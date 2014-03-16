@@ -28,6 +28,7 @@
 #include <QDomNode>
 #include <QDomDocument>
 #include <QFileDialog>
+#include <QStandardPaths>
 #include <QXmlStreamWriter>
 #include <kaction.h>
 #include <kdebug.h>
@@ -112,7 +113,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
     box->addWidget(_mapEditor);
 
     // load splitter size
-    KConfigGroup cg(KGlobal::config(), "WalletEditor");
+    KConfigGroup cg(KSharedConfig::openConfig(), "WalletEditor");
     QList<int> splitterSize = cg.readEntry("SplitterSize", QList<int>());
     if (splitterSize.size() != 2) {
         splitterSize.clear();
@@ -160,7 +161,7 @@ KWalletEditor::~KWalletEditor()
     emit enableWalletActions(false);
     emit enableContextFolderActions(false);
     // save splitter size
-    KConfigGroup cg(KGlobal::config(), "WalletEditor");
+    KConfigGroup cg(KSharedConfig::openConfig(), "WalletEditor");
     cg.writeEntry("SplitterSize", _splitter->sizes());
     cg.writeEntry("AlwaysShowContents", _alwaysShowContents);
     cg.sync();
@@ -1279,7 +1280,12 @@ void KWalletEditor::saveAs()
         if (_nonLocal) {
             KIO::NetAccess::dircopy(_walletName, url, this);
         } else {
-            QString path = KGlobal::dirs()->saveLocation("kwallet") + QLatin1Char('/') + _walletName + QLatin1String(".kwl");
+            QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation).append("/kwallet");
+            QDir dir(path);
+            if (!dir.exists()) {
+                dir.mkpath(path);
+            }
+            path.append(QLatin1Char('/') + _walletName + QLatin1String(".kwl"));
             KIO::NetAccess::dircopy(QUrl::fromLocalFile(path), url, this);
         }
     }

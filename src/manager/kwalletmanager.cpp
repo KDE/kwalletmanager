@@ -48,9 +48,6 @@
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
 
-// KF5::KDE4Support
-#include <kglobal.h>
-
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KXmlGuiWindow(parent, f)
 {
@@ -58,7 +55,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 
     setObjectName(QLatin1String(name));
     QDBusConnection::sessionBus().registerObject(QLatin1String("/KWalletManager"), this, QDBusConnection::ExportScriptableSlots);
-    KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String("share/apps/kwallet"));
     _kwalletdLaunch = false;
     _shuttingDown = false;
     m_kwalletdModule = 0;
@@ -176,7 +172,7 @@ void KWalletManager::kwalletdLaunch()
 
 bool KWalletManager::queryClose()
 {
-    if (!_shuttingDown && !kapp->sessionSaving()) {
+    if (!_shuttingDown) {
         if (!_tray) {
             qApp->quit();
         } else {

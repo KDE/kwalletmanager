@@ -30,7 +30,6 @@
 
 //KDE4Support
 #include <kdialog.h>
-#include <kglobal.h>
 #include <k4aboutdata.h>
 #include <kdebug.h>
 
@@ -228,7 +227,8 @@ void KWalletConfig::load()
         QString walletName = *i;
         // perform cleanup in the kwalletrc file, by removing entries that correspond to non-existent
         // (previously deleted, for example) wallets
-        QString path = KGlobal::dirs()->locateLocal("data", QString("kwallet/%1.kwl").arg(walletName));
+        QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+        path.append(QString("/kwallet/%1.kwl").arg(walletName));
         if (!QFile::exists(path)) {
             // if the wallet no longer exists, delete the entries from the configuration file and skip to next entry
             KConfigGroup cfgAllow = KSharedConfig::openConfig("kwalletrc")->group("Auto Allow");
