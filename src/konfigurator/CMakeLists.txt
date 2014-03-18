@@ -12,6 +12,7 @@ target_link_libraries(kcm_kwallet
     KF5::Auth
     KF5::CoreAddons
     KF5::KCMUtils
+    KF5::Wallet
     KF5::KDE4Support
 )
 
@@ -24,6 +25,7 @@ add_executable(kcm_kwallet_helper ${kcm_kwallet_helper_SRCS})
 target_link_libraries(kcm_kwallet_helper
     Qt5::Core
     KF5::Auth
+    KF5::Wallet
     KF5::CoreAddons
 )
 
