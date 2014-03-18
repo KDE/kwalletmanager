@@ -30,7 +30,7 @@
 #include <kmessagebox.h>
 #include <kmenu.h>
 #include <KTabWidget>
-#include <kdebug.h>
+#include <QDebug>
 #include <klocale.h>
 
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
@@ -65,7 +65,7 @@ void WalletControlWidget::onSetupWidget()
         if (0 == _wallet) {
             _wallet = KWallet::Wallet::openWallet(_walletName, winId());
             if (0 == _wallet) {
-                kDebug() << "Weird situation: wallet could not be opened when setting-up the widget.";
+                qDebug() << "Weird situation: wallet could not be opened when setting-up the widget.";
             }
         }
     }

@@ -25,7 +25,7 @@
 #include <QStyledItemDelegate>
 #include <QPainter>
 #include <QStandardItemModel>
-#include <kdebug.h>
+#include <QDebug>
 
 ApplicationsManager::ApplicationsManager(QWidget *parent):
     QWidget(parent),

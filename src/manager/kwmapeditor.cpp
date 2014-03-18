@@ -20,7 +20,7 @@
 #include "kwmapeditor.h"
 #include <kaction.h>
 #include <kactioncollection.h>
-#include <kdebug.h>
+#include <QDebug>
 #include <kicon.h>
 #include <klocale.h>
 #include <kmenu.h>

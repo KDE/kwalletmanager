@@ -31,7 +31,7 @@
 #include <QStandardPaths>
 #include <QXmlStreamWriter>
 #include <kaction.h>
-#include <kdebug.h>
+#include <QDebug>
 #include <kdialog.h>
 #include <kfiledialog.h>
 #include <kinputdialog.h>

@@ -27,7 +27,7 @@
 
 #include <kaction.h>
 #include <kconfig.h>
-#include <kdebug.h>
+#include <QDebug>
 #include <kiconloader.h>
 #include <kinputdialog.h>
 #include <klocale.h>

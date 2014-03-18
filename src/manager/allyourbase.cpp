@@ -20,7 +20,7 @@
 
 #include "allyourbase.h"
 
-#include <kdebug.h>
+#include <QDebug>
 #include <kcomponentdata.h>
 #include <kio/netaccess.h>
 #include <klocale.h>
@@ -227,7 +227,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream &ds)
     quint32 magic;
     ds >> magic;
     if (magic != KWALLETENTRYMAGIC) {
-        kDebug() << "bad magic" ;
+        qDebug() << "bad magic" ;
         return false;
     }
     QString name;
@@ -253,7 +253,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream &ds)
     quint32 magic;
     ds >> magic;
     if (magic != KWALLETFOLDERMAGIC) {
-        kDebug() << "bad magic" ;
+        qDebug() << "bad magic" ;
         return false;
     }
     QString folder;
@@ -392,7 +392,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
     QTreeWidgetItem *sel = 0L;
 
     //detect if we are dragging from kwallet itself
-    kDebug() << e->source() << e->source()->metaObject()->className();
+    qDebug() << e->source() << e->source()->metaObject()->className();
     if (e->source() && !strcmp(e->source()->metaObject()->className(), "KWalletEntryList")) {
 
         el = dynamic_cast<KWalletEntryList *>(e->source());
@@ -455,7 +455,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
             } else if (magic == KWALLETFOLDERMAGIC) {
                 isEntry = false;
             } else {
-                kDebug() << "bad magic" ;
+                qDebug() << "bad magic" ;
                 e->ignore();
                 return;
             }
@@ -671,7 +671,7 @@ void KWalletEntryList::selectFirstVisible()
         if (!item->isHidden()) {
             // if it's a leaf, then select it and quit
             if (item->childCount() == 0) {
-//                 kDebug() << "selecting " << item->text(0);
+//                 qDebug() << "selecting " << item->text(0);
                 setCurrentItem(item);
                 break;
             }

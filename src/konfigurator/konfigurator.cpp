@@ -31,7 +31,7 @@
 //KDE4Support
 #include <kdialog.h>
 #include <k4aboutdata.h>
-#include <kdebug.h>
+#include <QDebug>
 
 #include <QCheckBox>
 #include <QDialog>
@@ -266,7 +266,7 @@ void KWalletConfig::save()
     QVariantMap args;
     KAuth::Action action = authAction();
     if (!action.isValid()) {
-        kDebug() << "There's no authAction, not saving settings";
+        qDebug() << "There's no authAction, not saving settings";
         return;
     }
     action.setArguments(args);
@@ -274,7 +274,7 @@ void KWalletConfig::save()
     KAuth::ExecuteJob *j = action.execute();
 
     if (j->error()) {
-        kDebug() << j->errorText();
+        qDebug() << j->errorText();
         KMessageBox::error(this, j->errorString(), i18n("KDE Wallet Control Module"));
         load();
         return;

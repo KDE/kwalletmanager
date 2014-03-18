@@ -20,7 +20,7 @@
 #include "connectedappmodel.h"
 
 #include <kwallet.h>
-#include <kdebug.h>
+#include <QDebug>
 
 ConnectedAppModel::ConnectedAppModel(KWallet::Wallet *wallet):
     QStandardItemModel(),
@@ -57,11 +57,11 @@ void ConnectedAppModel::removeApp(QString appName)
         QPersistentModelIndex idx = _connectedAppsIndexMap[appName];
         if (idx.isValid()) {
             if (!removeRow(idx.row())) {
-                kDebug() << "Remove row failed for app " << appName;
+                qDebug() << "Remove row failed for app " << appName;
             }
         }
     } else {
-        kDebug() << "Attempting to remove unknown application " << appName;
+        qDebug() << "Attempting to remove unknown application " << appName;
     }
 }
 
