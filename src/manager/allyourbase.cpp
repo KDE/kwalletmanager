@@ -20,18 +20,17 @@
 
 #include "allyourbase.h"
 
-#include <QDebug>
 #include <kcomponentdata.h>
 #include <kio/netaccess.h>
-#include <klocale.h>
+#include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kstandarddirs.h>
 #include <kurl.h>
 #include <kwallet.h>
 
-#include <QFile>
 #include <QApplication>
+#include <QDebug>
 #include <QDrag>
+#include <QFile>
 #include <QMimeData>
 //Added by qt3to4:
 #include <QPixmap>

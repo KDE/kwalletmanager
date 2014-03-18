@@ -21,17 +21,18 @@
 #include "kwalleteditor.h"
 #include "applicationsmanager.h"
 
-#include <QPropertyAnimation>
-#include <QTimer>
-#include <QFrame>
-#include <QToolButton>
-#include <qevent.h>
-#include <kwallet.h>
+#include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kmenu.h>
 #include <KTabWidget>
+#include <kwallet.h>
+
 #include <QDebug>
-#include <klocale.h>
+#include <QEvent>
+#include <QFrame>
+#include <QPropertyAnimation>
+#include <QTimer>
+#include <QToolButton>
 
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
     QWidget(parent),

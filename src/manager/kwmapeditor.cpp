@@ -18,22 +18,24 @@
 */
 
 #include "kwmapeditor.h"
+
 #include <kaction.h>
 #include <kactioncollection.h>
-#include <QDebug>
 #include <kicon.h>
-#include <klocale.h>
+#include <klocalizedstring.h>
 #include <kmenu.h>
 #include <kstandardaction.h>
 #include <kwindowsystem.h>
-#include <QPointer>
+#include <ktextedit.h>
+
 #include <QApplication>
 #include <QClipboard>
-#include <QToolButton>
-#include <ktextedit.h>
+#include <QDebug>
+#include <QItemDelegate>
 #include <QFocusEvent>
 #include <QKeyEvent>
-#include <QItemDelegate>
+#include <QPointer>
+#include <QToolButton>
 
 class InlineEditor : public KTextEdit
 {

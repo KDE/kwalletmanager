@@ -18,13 +18,15 @@
 */
 
 #include "kwalletpopup.h"
+
 #include <kstandardaction.h>
 #include <kactioncollection.h>
 #include <kaction.h>
-#include <QDebug>
-#include <klocale.h>
+#include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kwallet.h>
+
+#include <QDebug>
 
 KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const char *name)
     : KMenu(parent), _walletName(wallet)

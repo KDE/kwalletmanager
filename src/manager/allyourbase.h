@@ -25,6 +25,7 @@
 #include <kiconloader.h>
 #include <kicontheme.h>
 #include <klistwidget.h>
+
 #include <QPixmap>
 #include <QDropEvent>
 #include <QDragEnterEvent>

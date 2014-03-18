@@ -25,27 +25,28 @@
 #include "kwallet_interface.h"
 #include "registercreateactionmethod.h"
 
+#include <klocalizedstring.h>
+
 #include <kaction.h>
 #include <kconfig.h>
-#include <QDebug>
 #include <kiconloader.h>
 #include <kinputdialog.h>
-#include <klocale.h>
 #include <kmessagebox.h>
-#include <kstandarddirs.h>
 #include <kstandardaction.h>
 #include <kstatusnotifieritem.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
-#include <QPointer>
-#include <QRegExp>
-
-#include <QRegExpValidator>
-#include <QTimer>
 #include <ktoolinvocation.h>
 #include <kicon.h>
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
+
+#include <QDebug>
+#include <QPointer>
+#include <QRegExp>
+#include <QRegExpValidator>
+#include <QTimer>
+
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KXmlGuiWindow(parent, f)

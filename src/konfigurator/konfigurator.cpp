@@ -18,7 +18,6 @@
  */
 #include "konfigurator.h"
 
-#include <QtDBus/QtDBus>
 #include <ksharedconfig.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
@@ -27,21 +26,22 @@
 #include <kauthaction.h>
 #include <kauthactionreply.h>
 #include <kauthexecutejob.h>
+#include <ktoolinvocation.h>
+#include <kconfiggroup.h>
+#include <kmessagebox.h>
 
 //KDE4Support
 #include <kdialog.h>
 #include <k4aboutdata.h>
-#include <QDebug>
 
+#include <QDebug>
 #include <QCheckBox>
 #include <QDialog>
 #include <QMenu>
 #include <QPushButton>
+#include <QtDBus/QtDBus>
 #include <QVBoxLayout>
-#include <ktoolinvocation.h>
-#include <kconfiggroup.h>
-#include <kmessagebox.h>
-#include <kstandarddirs.h>
+
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)

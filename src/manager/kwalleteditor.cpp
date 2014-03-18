@@ -23,46 +23,45 @@
 #include "kwmapeditor.h"
 #include "allyourbase.h"
 
-#include <stdlib.h>
-#include <QDomElement>
-#include <QDomNode>
-#include <QDomDocument>
-#include <QFileDialog>
-#include <QStandardPaths>
-#include <QXmlStreamWriter>
 #include <kaction.h>
-#include <QDebug>
 #include <kdialog.h>
 #include <kfiledialog.h>
 #include <kinputdialog.h>
 #include <kio/netaccess.h>
 #include <kactioncollection.h>
-#include <klocale.h>
 #include <kcodecs.h>
 #include <kmessagebox.h>
 #include <kmenu.h>
 #include <ksqueezedtextlabel.h>
-#include <kstandarddirs.h>
 #include <kstandardaction.h>
 
 #include <ktemporaryfile.h>
 #include <kxmlguifactory.h>
-#include <QCheckBox>
-#include <QClipboard>
-#include <QPushButton>
-#include <QTimer>
-#include <QSet>
-#include <QTextStream>
-#include <QList>
-#include <QVBoxLayout>
-#include <QStack>
-#include <QToolButton>
 
-#include <assert.h>
 #include <ktoolbar.h>
 #include <kicon.h>
-#include <KAction>
 #include <KTreeWidgetSearchLine>
+
+#include <QCheckBox>
+#include <QClipboard>
+#include <QDebug>
+#include <QDomDocument>
+#include <QDomElement>
+#include <QDomNode>
+#include <QFileDialog>
+#include <QList>
+#include <QPushButton>
+#include <QStack>
+#include <QStandardPaths>
+#include <QSet>
+#include <QTextStream>
+#include <QTimer>
+#include <QToolButton>
+#include <QVBoxLayout>
+#include <QXmlStreamWriter>
+
+#include <assert.h>
+#include <stdlib.h>
 
 QAction *KWalletEditor::_newFolderAction = 0;
 QAction *KWalletEditor::_deleteFolderAction = 0;
