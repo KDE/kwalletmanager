@@ -56,7 +56,9 @@ int main(int argc, char **argv)
     QCoreApplication::setApplicationVersion("3.0");
     QCoreApplication::setOrganizationName("KDE");
     QCoreApplication::setOrganizationDomain("kde.org");
-    QApplication::setApplicationDisplayName(i18n("Plasma Wallet Manager"));
+    QApplication::setApplicationDisplayName(i18n("Wallet Manager"));
+
+    KDBusService dbssvc(KDBusService::Unique);
 
     QCommandLineParser parser;
     parser.addHelpOption();
@@ -66,12 +68,10 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
     parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
 
-    KDBusService dbssvc(KDBusService::Unique);
-
     MyApp a(argc, argv);
 
     KWalletManager wm;
-    wm.setCaption(i18n("Plasma Wallet Manager"));
+    wm.setCaption(i18n("Wallet Manager"));
 
     if (parser.isSet("show")) {
         wm.show();

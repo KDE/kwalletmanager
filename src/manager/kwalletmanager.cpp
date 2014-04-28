@@ -66,14 +66,14 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
         _tray->setCategory(KStatusNotifierItem::SystemServices);
         _tray->setStatus(KStatusNotifierItem::Passive);
         _tray->setIconByName(QLatin1String("wallet-closed"));
-        _tray->setToolTip(QLatin1String("wallet-closed"), i18n("KDE Wallet"), i18n("No wallets open."));
+        _tray->setToolTip(QLatin1String("wallet-closed"), i18n("Wallet"), i18n("No wallets open."));
         //connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
         const QStringList wl = KWallet::Wallet::walletList();
         bool isOpen = false;
         for (QStringList::ConstIterator it = wl.begin(); it != wl.end(); ++it) {
             if (KWallet::Wallet::isOpen(*it)) {
                 _tray->setIconByName(QLatin1String("wallet-open"));
-                _tray->setToolTip(QLatin1String("wallet-open"), i18n("KDE Wallet"), i18n("A wallet is open."));
+                _tray->setToolTip(QLatin1String("wallet-open"), i18n("Wallet"), i18n("A wallet is open."));
                 isOpen = true;
                 break;
             }
@@ -187,7 +187,7 @@ void KWalletManager::aWalletWasOpened()
 {
     if (_tray) {
         _tray->setIconByName(QLatin1String("wallet-open"));
-        _tray->setToolTip(QLatin1String("wallet-open"), i18n("KDE Wallet"), i18n("A wallet is open."));
+        _tray->setToolTip(QLatin1String("wallet-open"), i18n("Wallet"), i18n("A wallet is open."));
         _tray->setStatus(KStatusNotifierItem::Active);
     }
     updateWalletDisplay();
@@ -240,7 +240,7 @@ void KWalletManager::allWalletsClosed()
 {
     if (_tray) {
         _tray->setIconByName(QLatin1String("wallet-closed"));
-        _tray->setToolTip(QLatin1String("wallet-closed"), i18n("KDE Wallet"), i18n("No wallets open."));
+        _tray->setToolTip(QLatin1String("wallet-closed"), i18n("Wallet"), i18n("No wallets open."));
         _tray->setStatus(KStatusNotifierItem::Passive);
     }
     possiblyQuit();
