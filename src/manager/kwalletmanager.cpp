@@ -93,7 +93,8 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     updateWalletDisplay();
     setCentralWidget(_managerWidget);
     setAutoSaveSettings(QLatin1String("MainWindow"), true);
-//      _managerWidget->setMinimumSize(320, 200);
+    QFontMetrics fm = fontMetrics();
+    _managerWidget->setMinimumSize(16*fm.height(), 18*fm.height());
 
     m_kwalletdModule = new org::kde::KWallet(QLatin1String("org.kde.kwalletd"), QLatin1String("/modules/kwalletd"), QDBusConnection::sessionBus());
     connect(QDBusConnection::sessionBus().interface(),
