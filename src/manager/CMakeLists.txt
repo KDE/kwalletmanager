@@ -49,6 +49,7 @@ target_link_libraries(kwalletmanager
     KF5::Wallet
     KF5::DBusAddons
     KF5::ConfigCore
+    KF5::Service
     KF5::KDE4Support
 )
 

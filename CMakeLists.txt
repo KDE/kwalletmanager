@@ -18,6 +18,7 @@ find_package(KF5 4.96.0 REQUIRED
     DocTools
     Auth
     Wallet
+    Service
     KCMUtils
     KDE4Support
     I18n

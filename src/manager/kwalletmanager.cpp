@@ -26,6 +26,7 @@
 #include "registercreateactionmethod.h"
 
 #include <klocalizedstring.h>
+#include <KService/KToolInvocation>
 
 #include <kaction.h>
 #include <kconfig.h>
@@ -36,7 +37,6 @@
 #include <kstatusnotifieritem.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
-#include <ktoolinvocation.h>
 #include <kicon.h>
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
