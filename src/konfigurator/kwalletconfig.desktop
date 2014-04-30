@@ -4,7 +4,7 @@ Icon=kwalletmanager
 Type=Service
 X-KDE-ServiceTypes=KCModule
 
-Exec=kcmshell4 kwalletconfig
+Exec=kcmshell5 kwalletconfig
 X-DocPath=kwallet/index.html#kwallet-kcontrol-module
 X-KDE-Library=kcm_kwallet
 X-KDE-ParentApp=kcontrol
