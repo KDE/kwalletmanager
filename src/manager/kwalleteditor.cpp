@@ -902,8 +902,9 @@ void KWalletEditor::deleteEntry() {
 	}
 }
 
-void KWalletEditor::changePassword() {
-	KWallet::Wallet::changePassword(_walletName, winId());
+void KWalletEditor::changePassword()
+{
+    KWallet::Wallet::changePassword(_walletName, effectiveWinId());
 }
 
 

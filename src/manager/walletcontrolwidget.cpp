@@ -51,7 +51,7 @@ bool WalletControlWidget::openWallet()
     if (_wallet && _wallet->isOpen()) {
         result = true; // already opened
     } else {
-        _wallet = KWallet::Wallet::openWallet(_walletName, winId());
+        _wallet = KWallet::Wallet::openWallet(_walletName, effectiveWinId());
         result = _wallet != 0;
         onSetupWidget();
     }
@@ -62,7 +62,7 @@ void WalletControlWidget::onSetupWidget()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {
         if (0 == _wallet) {
-            _wallet = KWallet::Wallet::openWallet(_walletName, winId());
+            _wallet = KWallet::Wallet::openWallet(_walletName, effectiveWinId());
             if (0 == _wallet) {
                 kDebug() << "Weird situation: wallet could not be opened when setting-up the widget.";
             }
@@ -161,7 +161,7 @@ void WalletControlWidget::onDisconnectApplication()
 
 void WalletControlWidget::onChangePassword()
 {
-    KWallet::Wallet::changePassword(_walletName, winId());
+    KWallet::Wallet::changePassword(_walletName, effectiveWinId());
 }
 
 void WalletControlWidget::hideEvent(QHideEvent* )
