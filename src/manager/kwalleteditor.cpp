@@ -911,7 +911,7 @@ void KWalletEditor::deleteEntry()
 
 void KWalletEditor::changePassword()
 {
-    KWallet::Wallet::changePassword(_walletName, winId());
+    KWallet::Wallet::changePassword(_walletName, effectiveWinId());
 }
 
 void KWalletEditor::walletOpened(bool success)
@@ -964,7 +964,7 @@ void KWalletEditor::importWallet()
         return;
     }
 
-    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile, winId(), KWallet::Wallet::Path);
+    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile, effectiveWinId(), KWallet::Wallet::Path);
     if (w && w->isOpen()) {
         MergePlan mp = Prompt;
         QStringList fl = w->folderList();

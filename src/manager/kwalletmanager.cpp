@@ -227,7 +227,7 @@ void KWalletManager::closeWallet(const QString &walletName)
 
 void KWalletManager::changeWalletPassword(const QString &walletName)
 {
-    KWallet::Wallet::changePassword(walletName, winId());
+    KWallet::Wallet::changePassword(walletName, effectiveWinId());
 }
 
 void KWalletManager::openWalletFile(const QString &path)
@@ -309,7 +309,7 @@ void KWalletManager::createWallet()
         // attempt open the wallet to create it, then dispose it
         // as it'll appear in on the main window via the walletCreated signal
         // emmitted by the kwalletd
-        KWallet::Wallet::openWallet(n, winId());
+        KWallet::Wallet::openWallet(n, effectiveWinId());
     }
 }
 
