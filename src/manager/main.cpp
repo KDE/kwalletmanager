@@ -52,7 +52,7 @@ private:
 
 int main(int argc, char **argv)
 {
-    QCoreApplication::setApplicationName("kwalletmanager");
+    QCoreApplication::setApplicationName("kwalletmanager5");
     QCoreApplication::setApplicationVersion("3.0");
     QCoreApplication::setOrganizationName("KDE");
     QCoreApplication::setOrganizationDomain("kde.org");
