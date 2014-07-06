@@ -50,7 +50,7 @@ target_link_libraries(kwalletmanager
     KF5::DBusAddons
     KF5::ConfigCore
     KF5::Service
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )

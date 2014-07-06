@@ -13,7 +13,7 @@ target_link_libraries(kcm_kwallet
     KF5::CoreAddons
     KF5::KCMUtils
     KF5::Wallet
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 install(TARGETS kcm_kwallet  DESTINATION ${PLUGIN_INSTALL_DIR})

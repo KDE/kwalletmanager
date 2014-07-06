@@ -20,7 +20,7 @@ find_package(KF5 4.96.0 REQUIRED
     Wallet
     Service
     KCMUtils
-    KDE4Support
+    KDELibs4Support
     I18n
     XmlGui
     Config
