@@ -37,9 +37,9 @@ qt5_wrap_ui(kwalletmanager_SRCS
 #    "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kwalletmanager.png"
 #)
 
-add_executable(kwalletmanager ${kwalletmanager_SRCS})
+add_executable(kwalletmanager5 ${kwalletmanager_SRCS})
 
-target_link_libraries(kwalletmanager
+target_link_libraries(kwalletmanager5
     Qt5::Core
     KF5::CoreAddons
     KF5::I18n
@@ -53,8 +53,8 @@ target_link_libraries(kwalletmanager
     KF5::KDELibs4Support
 )
 
-install(TARGETS kwalletmanager  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kwalletmanager5  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc
-        DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager)
+        DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager5)
 
 ecm_install_icons( ${ICON_INSTALL_DIR} )

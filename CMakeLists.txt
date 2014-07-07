@@ -1,4 +1,4 @@
-project(kwalletmanager)
+project(kwalletmanager5)
 
 cmake_minimum_required(VERSION 2.8.12)
 
@@ -37,5 +37,5 @@ if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 endif()
 
 ########### install files ###############
-install( PROGRAMS kwalletmanager.desktop kwalletmanager-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+install( PROGRAMS kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 
