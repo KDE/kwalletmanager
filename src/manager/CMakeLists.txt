@@ -55,6 +55,6 @@ target_link_libraries(kwalletmanager5
 
 install(TARGETS kwalletmanager5  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc
-        DESTINATION ${DATA_INSTALL_DIR}/kwalletmanager5)
+        DESTINATION ${KXMLGUI_INSTALL_DIR}/kwalletmanager5)
 
 ecm_install_icons( ${ICON_INSTALL_DIR} )
