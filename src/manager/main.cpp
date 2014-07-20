@@ -68,8 +68,9 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
     parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
 
+    
     MyApp a(argc, argv);
-
+    parser.process(a);
     KWalletManager wm;
     wm.setCaption(i18n("Wallet Manager"));
 
