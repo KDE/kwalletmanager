@@ -1,8 +1,9 @@
 ########### next target ###############
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmkwallet\")
 
 set(kcm_kwallet_PART_SRCS konfigurator.cpp )
 
-qt5_wrap_ui(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
+ki18n_wrap_ui(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
 
 add_library(kcm_kwallet MODULE ${kcm_kwallet_PART_SRCS})
 
