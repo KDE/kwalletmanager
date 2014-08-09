@@ -67,6 +67,7 @@ class KWalletManager : public KXmlGuiWindow {
 		void setupWallet();
 		void openWallet();
 		void closeAllWallets();
+        void walletDeleted(const QString& walletName);
 
 	private:
 		KStatusNotifierItem *_tray;
@@ -75,6 +76,7 @@ class KWalletManager : public KXmlGuiWindow {
 		OrgKdeKWalletInterface *m_kwalletdModule;
 		QList<KXmlGuiWindow*> _windows;
 		bool _kwalletdLaunch;
+        QAction *_walletDeleteAction;
 };
 
 #endif

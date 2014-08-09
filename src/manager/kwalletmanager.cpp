@@ -113,6 +113,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
         connect( m_kwalletdModule, SIGNAL(walletListDirty()),
                  this, SLOT(updateWalletDisplay()) );
         connect( m_kwalletdModule, SIGNAL(walletCreated(QString)), this, SLOT(walletCreated(QString)));
+        connect( m_kwalletdModule, SIGNAL(walletDeleted(QString)), this, SLOT(walletDeleted(QString)));
 	// FIXME: slight race - a wallet can open, then we get launched, but the
 	//        wallet closes before we are done opening.  We will then stay
 	//        open.  Must check that a wallet is still open here.
@@ -126,10 +127,11 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     action->setText(i18n("Open Wallet..."));
     connect(action, SIGNAL(triggered()), this, SLOT(openWallet()));
     
-    action = actionCollection()->addAction(QLatin1String( "wallet_delete" ));
-    action->setText(i18n("&Delete Wallet..."));
-    action->setIcon(KIcon( QLatin1String( "trash-empty" )));
-    connect(action, SIGNAL(triggered()), SLOT(deleteWallet()));
+    _walletDeleteAction = actionCollection()->addAction(QLatin1String( "wallet_delete" ));
+    _walletDeleteAction->setText(i18n("&Delete Wallet..."));
+    _walletDeleteAction->setIcon(KIcon( QLatin1String( "trash-empty" )));
+    connect(_walletDeleteAction, SIGNAL(triggered()), SLOT(deleteWallet()));
+
 	QAction *act = actionCollection()->addAction(QLatin1String( "wallet_settings" ));
 	act->setText(i18n("Configure &Wallet..."));
 	act->setIcon(KIcon( QLatin1String( "configure" )));
@@ -156,6 +158,10 @@ actionCollection());
 	} else {
 		show();
 	}
+
+    if (KWallet::Wallet::walletList().size() < 1) {
+        _walletDeleteAction->setEnabled(false);
+    }
 
 	qApp->setObjectName( QLatin1String("kwallet" )); // hack to fix docs
 }
@@ -204,7 +210,19 @@ void KWalletManager::updateWalletDisplay() {
 void KWalletManager::walletCreated(const QString& newWalletName)
 {
     _managerWidget->updateWalletDisplay(newWalletName);
+    if (!_walletDeleteAction->isEnabled() && (KWallet::Wallet::walletList().size() > 0)) {
+        _walletDeleteAction->setEnabled(true);
+    }
 }
+
+void KWalletManager::walletDeleted(const QString& walletName)
+{
+    Q_UNUSED(walletName);
+    if (_walletDeleteAction->isEnabled() && (KWallet::Wallet::walletList().size() < 1)) {
+        _walletDeleteAction->setEnabled(false);
+    }
+}
+
 
 void KWalletManager::contextMenu(const QPoint& ) {
 }
