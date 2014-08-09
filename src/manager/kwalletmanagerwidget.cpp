@@ -117,9 +117,13 @@ bool KWalletManagerWidget::openWallet(const QString& name)
     return result;
 }
 
-const QString& KWalletManagerWidget::activeWalletName() const
+const QString KWalletManagerWidget::activeWalletName() const
 {
-    return qobject_cast<KWalletManagerWidgetItem*>(currentPage())->walletName();
+    if (currentPage()) {
+            return qobject_cast<KWalletManagerWidgetItem*>(currentPage())->walletName();
+    } else {
+            return QString();
+    }
 }
 
 void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent* e)

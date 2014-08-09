@@ -37,7 +37,7 @@ public:
     bool openWalletFile(const QString& path);
     bool openWallet(const QString& name);
 
-    const QString& activeWalletName() const;
+    const QString activeWalletName() const;
 
 protected:
     virtual void dragEnterEvent(QDragEnterEvent *e);
