@@ -91,6 +91,7 @@ void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString
     if (!selectWallet.isEmpty()) {
         setCurrentPage(_walletPages[selectWallet]);
     }
+    setVisible(!KWallet::Wallet::walletList().isEmpty());
     alreadyUpdating = false;
 }
 
