@@ -30,7 +30,7 @@ target_link_libraries(kcm_kwallet_helper
     KF5::CoreAddons
 )
 
-install(TARGETS kcm_kwallet_helper DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS kcm_kwallet_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 kauth_install_helper_files(kcm_kwallet_helper org.kde.kcontrol.kcmkwallet root)
 kauth_install_actions(org.kde.kcontrol.kcmkwallet kwallet.actions)
