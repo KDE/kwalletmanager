@@ -83,7 +83,6 @@ private slots:
     void showPasswordContents();
     void showHideMapEditorValue(bool show);
 
-    void saveAs();
     void exportXML();
     void importXML();
     void importWallet();

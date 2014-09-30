@@ -52,6 +52,7 @@ target_link_libraries(kwalletmanager5
     KF5::ConfigCore
     KF5::Service
     KF5::KDELibs4Support
+    KF5::Archive
 )
 
 install(TARGETS kwalletmanager5  ${INSTALL_TARGETS_DEFAULT_ARGS} )

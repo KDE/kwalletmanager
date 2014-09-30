@@ -66,7 +66,6 @@
 QAction *KWalletEditor::_newFolderAction = 0;
 QAction *KWalletEditor::_deleteFolderAction = 0;
 QAction *KWalletEditor::_exportAction = 0;
-QAction *KWalletEditor::_saveAsAction = 0;
 QAction *KWalletEditor::_mergeAction = 0;
 QAction *KWalletEditor::_importAction = 0;
 QAction *KWalletEditor::_newEntryAction = 0;
@@ -217,15 +216,13 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
     _deleteFolderAction->setText(i18n("&Delete Folder"));
 
     _mergeAction = actionCollection->addAction(QLatin1String("wallet_merge"));
-    _mergeAction->setText(i18n("&Import Wallet..."));
+    _mergeAction->setText(i18n("&Import a wallet..."));
 
     _importAction = actionCollection->addAction(QLatin1String("wallet_import"));
     _importAction->setText(i18n("&Import XML..."));
 
     _exportAction = actionCollection->addAction(QLatin1String("wallet_export"));
     _exportAction->setText(i18n("&Export as XML..."));
-
-    _saveAsAction = KStandardAction::saveAs(0, 0, actionCollection);
 
     _copyPassAction = actionCollection->addAction(QLatin1String("copy_action"));
     _copyPassAction->setText(i18n("&Copy"));
@@ -274,9 +271,6 @@ void KWalletEditor::connectActions()
     connect(_exportAction, SIGNAL(triggered(bool)), SLOT(exportXML()));
     connect(this, SIGNAL(enableWalletActions(bool)), _exportAction, SLOT(setEnabled(bool)));
 
-    connect(_saveAsAction, SIGNAL(triggered(bool)), SLOT(saveAs()));
-    connect(this, SIGNAL(enableWalletActions(bool)), _saveAsAction, SLOT(setEnabled(bool)));
-
     connect(_newEntryAction, SIGNAL(triggered(bool)), SLOT(newEntry()));
 
     connect(_renameEntryAction, SIGNAL(triggered(bool)), SLOT(renameEntry()));
@@ -312,9 +306,6 @@ void KWalletEditor::disconnectActions()
 
     disconnect(_exportAction, SIGNAL(triggered(bool)), this, SLOT(exportXML()));
     disconnect(this, SIGNAL(enableWalletActions(bool)), _exportAction, SLOT(setEnabled(bool)));
-
-    disconnect(_saveAsAction, SIGNAL(triggered(bool)), this, SLOT(saveAs()));
-    disconnect(this, SIGNAL(enableWalletActions(bool)), _saveAsAction, SLOT(setEnabled(bool)));
 
     disconnect(_newEntryAction, SIGNAL(triggered(bool)), this, SLOT(newEntry()));
 
@@ -1270,33 +1261,12 @@ void KWalletEditor::setNewWallet(bool x)
     _newWallet = x;
 }
 
-void KWalletEditor::saveAs()
-{
-    QUrl url = QFileDialog::getSaveFileUrl(this, QString(), QUrl(), QLatin1String("*.kwl"));
-
-    if (!url.isEmpty()) {
-        // Sync() kwalletd
-        if (_nonLocal) {
-            KIO::NetAccess::dircopy(_walletName, url, this);
-        } else {
-            QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation).append("/kwallet");
-            QDir dir(path);
-            if (!dir.exists()) {
-                dir.mkpath(path);
-            }
-            path.append(QLatin1Char('/') + _walletName + QLatin1String(".kwl"));
-            KIO::NetAccess::dircopy(QUrl::fromLocalFile(path), url, this);
-        }
-    }
-}
-
 void KWalletEditor::hideEvent(QHideEvent *)
 {
     emit enableContextFolderActions(false);
     emit enableFolderActions(false);
     emit enableWalletActions(false);
     disconnectActions();
-    _saveAsAction->setEnabled(false);
 }
 
 void KWalletEditor::showEvent(QShowEvent *)

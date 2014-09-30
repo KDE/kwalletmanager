@@ -27,6 +27,7 @@ class KWalletManagerWidget;
 class KStatusNotifierItem;
 class QListWidgetItem;
 class OrgKdeKWalletInterface;
+class QAction;
 
 class KWalletManager : public KXmlGuiWindow
 {
@@ -68,6 +69,8 @@ private slots:
     void setupWallet();
     void openWallet();
     void closeAllWallets();
+    void exportWallets();
+    void importWallets();
 
 private:
     KStatusNotifierItem *_tray;
@@ -76,6 +79,7 @@ private:
     OrgKdeKWalletInterface *m_kwalletdModule;
     QList<KXmlGuiWindow *> _windows;
     bool _kwalletdLaunch;
+    QAction *_walletsExportAction = nullptr;
 };
 
 #endif

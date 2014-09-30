@@ -40,12 +40,14 @@
 #include <kicon.h>
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
+#include <KTar>
 
 #include <QDebug>
 #include <QPointer>
 #include <QRegExp>
 #include <QRegExpValidator>
 #include <QTimer>
+#include <QFileDialog>
 
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
@@ -129,6 +131,17 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     action->setText(i18n("&Delete Wallet..."));
     action->setIcon(KIcon(QLatin1String("trash-empty")));
     connect(action, SIGNAL(triggered()), SLOT(deleteWallet()));
+
+    _walletsExportAction = actionCollection()->addAction("wallet_export_encrypted");
+    _walletsExportAction->setText(i18n("Export as encrypted"));
+    _walletsExportAction->setIcon(QIcon::fromTheme("document-export"));
+    connect(_walletsExportAction, &QAction::triggered, this, &KWalletManager::exportWallets);
+
+    action = actionCollection()->addAction("wallet_import_encrypted");
+    action->setText(i18n("&Import encrypted"));
+    action->setIcon(QIcon::fromTheme("document-import"));
+    connect(action, &QAction::triggered, this, &KWalletManager::importWallets);
+
     QAction *act = actionCollection()->addAction(QLatin1String("wallet_settings"));
     act->setText(i18n("Configure &Wallet..."));
     act->setIcon(KIcon(QLatin1String("configure")));
@@ -156,6 +169,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
         show();
     }
 
+    _walletsExportAction->setDisabled(KWallet::Wallet::walletList().isEmpty());
     qApp->setObjectName(QLatin1String("kwallet"));   // hack to fix docs
 }
 
@@ -197,6 +211,9 @@ void KWalletManager::aWalletWasOpened()
 
 void KWalletManager::updateWalletDisplay()
 {
+    if (_walletsExportAction) {
+        _walletsExportAction->setDisabled(KWallet::Wallet::walletList().isEmpty());
+    }
     _managerWidget->updateWalletDisplay();
 }
 
@@ -350,6 +367,71 @@ void KWalletManager::setupWallet()
 void KWalletManager::closeAllWallets()
 {
     m_kwalletdModule->closeAllWallets();
+}
+
+void KWalletManager::exportWallets()
+{
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/kwalletd/";
+    const QDir dir(path);
+
+    Q_ASSERT(dir.exists());
+
+    const QStringList filesList = dir.entryList(QStringList() << "*.kwl" << "*.salt",
+                                                QDir::Files | QDir::Readable | QDir::NoSymLinks);
+
+    Q_ASSERT(!filesList.isEmpty());
+
+    const QString destination = QFileDialog::getSaveFileName(this,i18n("File name"));
+    if (destination.isEmpty()) {
+        return;
+    }
+
+    KTar archive(destination);
+    if (!archive.open(QIODevice::WriteOnly)) {
+        KMessageBox::error(this, i18n("Failed to open file for writing"));
+        return;
+    }
+
+    for (int i = 0; i < filesList.size(); i++) {
+        archive.addLocalFile(path + filesList.at(i), filesList.at(i));
+    }
+}
+
+void KWalletManager::importWallets()
+{
+    const QString source = QFileDialog::getOpenFileName(this, "Select file");
+    const QString destinationDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/kwalletd/";
+
+    if (source.isEmpty()) {
+        return;
+    }
+
+    KTar archive(source);
+    if (!archive.open(QIODevice::ReadOnly)) {
+        KMessageBox::error(this, i18n("Failed to open file"));
+        return;
+    }
+
+    const KArchiveDirectory *archiveDir = archive.directory();
+    const QStringList archiveEntries = archiveDir->entries();
+
+    for (int i = 0; i < archiveEntries.size(); i++) {
+        if (QFile::exists(destinationDir + archiveEntries.at(i))
+                && archiveEntries.at(i).endsWith(".kwl")) {
+            QString walletName = archiveEntries.at(i);
+            // remove ".kwl"
+            walletName.chop(4);
+            KMessageBox::error(this, i18n("Wallet named %1 already exists, Operation aborted",
+                                          walletName));
+            return;
+        }
+    }
+
+    if (!archiveDir->copyTo(destinationDir, false)) {
+        KMessageBox::error(this,i18n("Failed to copy files"));
+        return;
+    }
+
 }
 
 #include "kwalletmanager.moc"
