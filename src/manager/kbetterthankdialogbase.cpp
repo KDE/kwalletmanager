@@ -59,4 +59,4 @@ void KBetterThanKDialogBase::reject()
     QDialog::reject();
     setResult(4);
 }
-#include "kbetterthankdialogbase.moc"
+

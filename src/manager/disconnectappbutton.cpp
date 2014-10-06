@@ -37,4 +37,4 @@ void DisconnectAppButton::onClicked()
     }
 }
 
-#include "disconnectappbutton.moc"
+

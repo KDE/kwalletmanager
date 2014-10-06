@@ -31,7 +31,7 @@
 #include <kactioncollection.h>
 #include <kcodecs.h>
 #include <kmessagebox.h>
-#include <kmenu.h>
+#include <QMenu>
 #include <ksqueezedtextlabel.h>
 #include <kstandardaction.h>
 
@@ -39,7 +39,7 @@
 #include <kxmlguifactory.h>
 
 #include <ktoolbar.h>
-#include <kicon.h>
+#include <QIcon>
 #include <KTreeWidgetSearchLine>
 
 #include <QCheckBox>
@@ -85,10 +85,10 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
     _newWallet = false;
     _splitter->setStretchFactor(0, 1);
     _splitter->setStretchFactor(1, 2);
-    _contextMenu = new KMenu(this);
+    _contextMenu = new QMenu(this);
 
-    _undoChanges->setIcon(KIcon(QLatin1String("edit-undo")));
-    _saveChanges->setIcon(KIcon(QLatin1String("document-save")));
+    _undoChanges->setIcon(QIcon::fromTheme(QLatin1String("edit-undo")));
+    _saveChanges->setIcon(QIcon::fromTheme(QLatin1String("document-save")));
 
     QVBoxLayout *box = new QVBoxLayout(_entryListFrame);
     box->setMargin(0);
@@ -210,7 +210,7 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
 {
     _newFolderAction = actionCollection->addAction(QLatin1String("create_folder"));
     _newFolderAction->setText(i18n("&New Folder..."));
-    _newFolderAction->setIcon(KIcon(QLatin1String("folder-new")));
+    _newFolderAction->setIcon(QIcon::fromTheme(QLatin1String("folder-new")));
 
     _deleteFolderAction = actionCollection->addAction(QLatin1String("delete_folder"));
     _deleteFolderAction->setText(i18n("&Delete Folder"));
@@ -513,7 +513,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
 
     if (item) {
         // set the context menu's title
-        _contextMenu->addTitle(_contextMenu->fontMetrics().elidedText(
+        _contextMenu->addSection(_contextMenu->fontMetrics().elidedText(
                                    item->text(0), Qt::ElideMiddle, 200));
 
         // TODO rtti
@@ -1317,5 +1317,5 @@ void KWalletEditor::onAlwaysHideContents(bool checked)
     }
 }
 
-#include "kwalleteditor.moc"
+
 

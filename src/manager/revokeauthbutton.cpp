@@ -35,4 +35,4 @@ void RevokeAuthButton::onClicked()
     emit appRevoked(_appName);
 }
 
-#include "revokeauthbutton.moc"
+

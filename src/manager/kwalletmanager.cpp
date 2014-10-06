@@ -28,7 +28,7 @@
 #include <klocalizedstring.h>
 #include <KService/KToolInvocation>
 
-#include <kaction.h>
+#include <qaction.h>
 #include <kconfig.h>
 #include <kiconloader.h>
 #include <kinputdialog.h>
@@ -37,7 +37,7 @@
 #include <kstatusnotifieritem.h>
 #include <kwallet.h>
 #include <kxmlguifactory.h>
-#include <kicon.h>
+#include <QIcon>
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
 #include <KTar>
@@ -120,7 +120,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 
     QAction *action = actionCollection()->addAction(QLatin1String("wallet_create"));
     action->setText(i18n("&New Wallet..."));
-    action->setIcon(KIcon(QLatin1String("kwalletmanager")));
+    action->setIcon(QIcon::fromTheme(QLatin1String("kwalletmanager")));
     connect(action, SIGNAL(triggered()), SLOT(createWallet()));
 
     action = actionCollection()->addAction(QLatin1String("wallet_open"));
@@ -129,7 +129,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 
     action = actionCollection()->addAction(QLatin1String("wallet_delete"));
     action->setText(i18n("&Delete Wallet..."));
-    action->setIcon(KIcon(QLatin1String("trash-empty")));
+    action->setIcon(QIcon::fromTheme(QLatin1String("trash-empty")));
     connect(action, SIGNAL(triggered()), SLOT(deleteWallet()));
 
     _walletsExportAction = actionCollection()->addAction("wallet_export_encrypted");
@@ -144,7 +144,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
 
     QAction *act = actionCollection()->addAction(QLatin1String("wallet_settings"));
     act->setText(i18n("Configure &Wallet..."));
-    act->setIcon(KIcon(QLatin1String("configure")));
+    act->setIcon(QIcon::fromTheme(QLatin1String("configure")));
 
     connect(act, SIGNAL(triggered()), SLOT(setupWallet()));
     if (_tray) {
@@ -434,4 +434,4 @@ void KWalletManager::importWallets()
 
 }
 
-#include "kwalletmanager.moc"
+

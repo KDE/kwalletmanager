@@ -62,4 +62,4 @@ void ConnectedApplicationsTable::resizeEvent(QResizeEvent *resizeEvent)
     QAbstractItemView::resizeEvent(resizeEvent);
 }
 
-#include "connectedapplicationstable.moc"
+

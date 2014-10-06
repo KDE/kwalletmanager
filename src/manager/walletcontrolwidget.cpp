@@ -23,7 +23,7 @@
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kmenu.h>
+#include <qmenu.h>
 #include <KTabWidget>
 #include <kwallet.h>
 
@@ -174,4 +174,4 @@ void WalletControlWidget::showEvent(QShowEvent *ev)
 {
 }
 
-#include "walletcontrolwidget.moc"
+

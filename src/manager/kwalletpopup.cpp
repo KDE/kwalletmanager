@@ -21,7 +21,7 @@
 
 #include <kstandardaction.h>
 #include <kactioncollection.h>
-#include <kaction.h>
+#include <qaction.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kwallet.h>
@@ -29,9 +29,9 @@
 #include <QDebug>
 
 KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const char *name)
-    : KMenu(parent), _walletName(wallet)
+    : QMenu(parent), _walletName(wallet)
 {
-    addTitle(wallet);
+    addSection(wallet);
     setObjectName(QLatin1String(name));
     KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
     ac->setObjectName(QLatin1String("kwallet context actions"));
@@ -55,7 +55,7 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const char *n
 
     const QStringList ul = KWallet::Wallet::users(wallet);
     if (!ul.isEmpty()) {
-        KMenu *pm = new KMenu(this);
+        QMenu *pm = new QMenu(this);
         pm->setObjectName(QLatin1String("Disconnect Apps"));
         int id = 7000;
         for (QStringList::const_iterator it = ul.begin(); it != ul.end(); ++it) {
@@ -121,5 +121,5 @@ void KWalletPopup::disconnectApp()
     }
 }
 
-#include "kwalletpopup.moc"
+
 

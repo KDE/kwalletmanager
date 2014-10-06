@@ -77,4 +77,4 @@ void AuthorizedAppModel::saveConfig()
     _cfg->sync();
 }
 
-#include "authorizedappmodel.moc"
+

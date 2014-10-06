@@ -19,11 +19,11 @@
 
 #include "kwmapeditor.h"
 
-#include <kaction.h>
+#include <qaction.h>
 #include <kactioncollection.h>
-#include <kicon.h>
+#include <QIcon>
 #include <klocalizedstring.h>
-#include <kmenu.h>
+#include <QMenu>
 #include <kstandardaction.h>
 #include <kwindowsystem.h>
 #include <ktextedit.h>
@@ -158,7 +158,7 @@ void KWMapEditor::reload()
         setRowCount(_map.count());
         for (int x = row; x < rowCount(); ++x) {
             QToolButton *b = new QToolButton(this);
-            b->setIcon(KIcon("edit-delete"));
+            b->setIcon(QIcon::fromTheme("edit-delete"));
             b->setToolTip(i18n("Delete Entry"));
             connect(b, SIGNAL(clicked()), this, SLOT(erase()));
             setCellWidget(x, 0, b);
@@ -209,7 +209,7 @@ void KWMapEditor::addEntry()
     int x = rowCount();
     insertRow(x);
     QToolButton *b = new QToolButton(this);
-    b->setIcon(KIcon("edit-delete"));
+    b->setIcon(QIcon::fromTheme("edit-delete"));
     b->setToolTip(i18n("Delete Entry"));
     connect(b, SIGNAL(clicked()), this, SLOT(erase()));
     setCellWidget(x, 0, b);
@@ -229,7 +229,7 @@ void KWMapEditor::contextMenu(const QPoint &pos)
 {
     QTableWidgetItem *twi = itemAt(pos);
     _contextRow = row(twi);
-    KMenu *m = new KMenu(this);
+    QMenu *m = new QMenu(this);
     m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
     m->addAction(_copyAct);
     m->popup(mapToGlobal(pos));
@@ -243,4 +243,4 @@ void KWMapEditor::copy()
     }
 }
 
-#include "kwmapeditor.moc"
+

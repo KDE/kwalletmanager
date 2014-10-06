@@ -22,7 +22,7 @@
 #include "walletcontrolwidget.h"
 
 #include <kwallet.h>
-#include <kicon.h>
+#include <QIcon>
 
 KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget *widgetParent, const QString &walletName):
     KPageWidgetItem(_controlWidget = new WalletControlWidget(widgetParent, walletName), walletName),
@@ -34,9 +34,9 @@ KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget *widgetParent, const 
 void KWalletManagerWidgetItem::updateWalletDisplay()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {
-        setIcon(KIcon(QLatin1String("wallet-open")));
+        setIcon(QIcon::fromTheme(QLatin1String("wallet-open")));
     } else {
-        setIcon(KIcon(QLatin1String("wallet-closed")));
+        setIcon(QIcon::fromTheme(QLatin1String("wallet-closed")));
     }
     _controlWidget->updateWalletDisplay();
 }
@@ -46,4 +46,4 @@ bool KWalletManagerWidgetItem::openWallet()
     return _controlWidget->openWallet();
 }
 
-#include "kwalletmanagerwidgetitem.moc"
+

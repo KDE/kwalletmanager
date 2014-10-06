@@ -32,7 +32,7 @@
 
 //KDE4Support
 #include <kdialog.h>
-#include <k4aboutdata.h>
+#include <kaboutdata.h>
 
 #include <QDebug>
 #include <QCheckBox>
@@ -50,14 +50,13 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
       _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals))
 {
-
-    K4AboutData *about =
-        new K4AboutData(I18N_NOOP("kcmkwallet"), 0,
-                        ki18n("KDE Wallet Control Module"),
-                        0, KLocalizedString(), K4AboutData::License_GPL,
-                        ki18n("(c) 2003 George Staikos"));
-    about->addAuthor(ki18n("George Staikos"), KLocalizedString(), "staikos@kde.org");
-
+    KAboutData *about =
+        new KAboutData(QLatin1String("kcmkwallet"),
+                        i18n("KDE Wallet Control Module"),
+                        QString(), QString(), KAboutLicense::GPL,
+                        i18n("(c) 2003 George Staikos"));
+    about->addAuthor(i18n("George Staikos"), QString(), QLatin1String("staikos@kde.org"));
+    setAboutData(about);
     setNeedsAuthorization(true);
 
     QVBoxLayout *vbox = new QVBoxLayout(this);

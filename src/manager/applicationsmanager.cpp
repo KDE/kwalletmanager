@@ -57,4 +57,4 @@ void ApplicationsManager::setWallet(KWallet::Wallet *wallet)
     _authorizedApps->setModel(_authorizedAppModel);
 }
 
-#include "applicationsmanager.moc"
+

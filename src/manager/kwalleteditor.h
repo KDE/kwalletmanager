@@ -30,7 +30,7 @@
 #include <QLabel>
 
 class KActionCollection;
-class KMenu;
+class QMenu;
 class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
@@ -122,11 +122,11 @@ private:
     KWMapEditor *_mapEditor;
     QCheckBox *_mapEditorShowHide;
     bool _newWallet;
-    KMenu *_contextMenu;
+    QMenu *_contextMenu;
     QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
     KActionCollection *_actionCollection;
-    KMenu *_controlMenu;
-    KMenu *_walletSubmenu;
+    QMenu *_controlMenu;
+    QMenu *_walletSubmenu;
     KTreeWidgetSearchLine *_searchLine;
     static QAction *_alwaysShowContentsAction, *_alwaysHideContentsAction;
     bool _alwaysShowContents;

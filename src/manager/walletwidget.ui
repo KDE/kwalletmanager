@@ -323,7 +323,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="KPushButton" name="_undoChanges">
+          <widget class="QPushButton" name="_undoChanges">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -333,7 +333,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KPushButton" name="_saveChanges">
+          <widget class="QPushButton" name="_saveChanges">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -352,18 +352,12 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
-  <customwidget>
    <class>KSqueezedTextLabel</class>
    <extends>QLabel</extends>
    <header>ksqueezedtextlabel.h</header>
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="global">kdialog.h</include>
   <include location="global">kiconloader.h</include>
  </includes>
  <resources/>
