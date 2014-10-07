@@ -60,15 +60,15 @@ install(FILES kwalletmanager.rc
         DESTINATION ${KXMLGUI_INSTALL_DIR}/kwalletmanager5)
 
 ecm_install_icons( ICONS
-hi128-app-kwalletmanager2.png
-hi128-app-kwalletmanager.png
-hi16-app-kwalletmanager2.png
-hi16-app-kwalletmanager.png
-hi22-app-kwalletmanager.png
-hi32-app-kwalletmanager2.png
-hi32-app-kwalletmanager.png
-hi48-app-kwalletmanager2.png
-hi48-app-kwalletmanager.png
-hi64-app-kwalletmanager2.png
-hi64-app-kwalletmanager.png
+hi128-apps-kwalletmanager2.png
+hi128-apps-kwalletmanager.png
+hi16-apps-kwalletmanager2.png
+hi16-apps-kwalletmanager.png
+hi22-apps-kwalletmanager.png
+hi32-apps-kwalletmanager2.png
+hi32-apps-kwalletmanager.png
+hi48-apps-kwalletmanager2.png
+hi48-apps-kwalletmanager.png
+hi64-apps-kwalletmanager2.png
+hi64-apps-kwalletmanager.png
 DESTINATION ${ICON_INSTALL_DIR} )
