@@ -14,7 +14,7 @@ include(KDECompilerSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
 
-find_package(KF5 4.96.0 REQUIRED
+find_package(KF5 5.2.0 REQUIRED
     CoreAddons
     DocTools
     Auth
@@ -38,5 +38,5 @@ if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 endif()
 
 ########### install files ###############
-install( PROGRAMS kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 
