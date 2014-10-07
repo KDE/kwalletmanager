@@ -22,7 +22,7 @@
 
 #include <kpagewidget.h>
 
-class KUrl;
+class QUrl;
 class QDropEvent;
 class KWalletManagerWidgetItem;
 class QDragEnterEvent;
@@ -51,7 +51,7 @@ private Q_SLOTS:
     void onCurrentPageChanged(KPageWidgetItem *, KPageWidgetItem *);
 
 private:
-    bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const;
+    bool shouldIgnoreDropEvent(const QDropEvent *e, QUrl *u) const;
 
     typedef QHash<QString, KWalletManagerWidgetItem *> WalletPagesHash;
     WalletPagesHash _walletPages;

@@ -23,7 +23,7 @@
 #include "kwallet_interface.h"
 
 #include <kwallet.h>
-#include <kurl.h>
+#include <qurl.h>
 #include <kmessagebox.h>
 #include <klocalizedstring.h>
 #include <kio/netaccess.h>
@@ -174,7 +174,7 @@ void KWalletManagerWidget::dropEvent(QDropEvent *e)
 //     }
 }
 
-bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const
+bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent *e, QUrl *u) const
 {
     return false;
 //     if (e->source() == viewport()) {

@@ -23,10 +23,9 @@
 #include "kwmapeditor.h"
 #include "allyourbase.h"
 
-#include <kaction.h>
-#include <kdialog.h>
-#include <kfiledialog.h>
-#include <kinputdialog.h>
+#include <qaction.h>
+#include <qdialog.h>
+#include <qinputdialog.h>
 #include <kio/netaccess.h>
 #include <kactioncollection.h>
 #include <kcodecs.h>
@@ -34,9 +33,11 @@
 #include <QMenu>
 #include <ksqueezedtextlabel.h>
 #include <kstandardaction.h>
+#include <KConfigGroup>
 
-#include <ktemporaryfile.h>
+#include <QTemporaryFile>
 #include <kxmlguifactory.h>
+#include <KSharedConfig>
 
 #include <ktoolbar.h>
 #include <QIcon>
@@ -424,11 +425,10 @@ void KWalletEditor::createFolder()
         bool ok;
 
         do {
-            n = KInputDialog::getText(i18n("New Folder"),
+            n = QInputDialog::getText(this, i18n("New Folder"),
                                       i18n("Please choose a name for the new folder:"),
-                                      QString(),
-                                      &ok,
-                                      this);
+                                      QLineEdit::Normal, QString(),
+                                      &ok);
 
             if (!ok) {
                 return;
@@ -773,11 +773,10 @@ void KWalletEditor::newEntry()
     }
 
     do {
-        n = KInputDialog::getText(i18n("New Entry"),
+        n = QInputDialog::getText(this, i18n("New Entry"),
                                   i18n("Please choose a name for the new entry:"),
-                                  QString(),
-                                  &ok,
-                                  this);
+                                  QLineEdit::Normal, QString(),
+                                  &ok);
 
         if (!ok) {
             return;
@@ -1186,7 +1185,7 @@ void KWalletEditor::importXML()
 
 void KWalletEditor::exportXML()
 {
-    KTemporaryFile tf;
+    QTemporaryFile tf;
     tf.open();
     QXmlStreamWriter xml(&tf);
     xml.setAutoFormatting(true);

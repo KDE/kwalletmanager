@@ -21,7 +21,7 @@
 #include <ksharedconfig.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <kinputdialog.h>
+#include <qinputdialog.h>
 #include <kwallet.h>
 #include <kauthaction.h>
 #include <kauthactionreply.h>
@@ -30,8 +30,6 @@
 #include <kconfiggroup.h>
 #include <kmessagebox.h>
 
-//KDE4Support
-#include <kdialog.h>
 #include <kaboutdata.h>
 
 #include <QDebug>
@@ -60,7 +58,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     setNeedsAuthorization(true);
 
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    vbox->setSpacing(KDialog::spacingHint());
+    //PORT QT5 vbox->setSpacing(KDialog::spacingHint());
     vbox->setMargin(0);
     _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
@@ -122,11 +120,10 @@ QString KWalletConfig::newWallet()
 {
     bool ok;
 
-    const QString n = KInputDialog::getText(i18n("New Wallet"),
+    const QString n = QInputDialog::getText(this, i18n("New Wallet"),
                                             i18n("Please choose a name for the new wallet:"),
-                                            QString(),
-                                            &ok,
-                                            this);
+                                            QLineEdit::Normal, QString(),
+                                            &ok);
 
     if (!ok) {
         return QString();

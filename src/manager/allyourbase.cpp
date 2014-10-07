@@ -20,11 +20,10 @@
 
 #include "allyourbase.h"
 
-#include <kcomponentdata.h>
 #include <kio/netaccess.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kurl.h>
+#include <qurl.h>
 #include <kwallet.h>
 
 #include <QApplication>
@@ -32,7 +31,6 @@
 #include <QDrag>
 #include <QFile>
 #include <QMimeData>
-//Added by qt3to4:
 #include <QPixmap>
 #include <QDropEvent>
 #include <QDragEnterEvent>
@@ -312,7 +310,7 @@ void KWalletItem::processDropEvent(QDropEvent *e)
                 return;
             }
 
-            KUrl u(urls.first());
+            QUrl u(urls.first());
             if (u.fileName().isEmpty()) {
                 e->ignore();
                 return;
@@ -435,7 +433,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
             e->ignore();
             return;
         }
-        KUrl u(urls.first());
+        QUrl u(urls.first());
         if (u.fileName().isEmpty()) {
             e->ignore();
             return;
