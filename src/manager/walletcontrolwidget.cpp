@@ -24,7 +24,7 @@
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <qmenu.h>
-#include <KTabWidget>
+#include <QTabWidget>
 #include <kwallet.h>
 
 #include <QDebug>
