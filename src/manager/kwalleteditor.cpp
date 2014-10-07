@@ -226,22 +226,22 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
 
     _copyPassAction = actionCollection->addAction(QLatin1String("copy_action"));
     _copyPassAction->setText(i18n("&Copy"));
-    _copyPassAction->setShortcut(Qt::Key_C + Qt::CTRL);
+    actionCollection->setDefaultShortcut(_copyPassAction, Qt::Key_C + Qt::CTRL);
     _copyPassAction->setEnabled(false);
 
     _newEntryAction = actionCollection->addAction(QLatin1String("new_entry"));
     _newEntryAction->setText(i18n("&New..."));
-    _newEntryAction->setShortcut(Qt::Key_Insert);
+    actionCollection->setDefaultShortcut(_newEntryAction, Qt::Key_Insert);
     _newEntryAction->setEnabled(false);
 
     _renameEntryAction = actionCollection->addAction(QLatin1String("rename_entry"));
     _renameEntryAction->setText(i18n("&Rename"));
-    _renameEntryAction->setShortcut(Qt::Key_F2);
+    actionCollection->setDefaultShortcut(_renameEntryAction, Qt::Key_F2);
     _renameEntryAction->setEnabled(false);
 
     _deleteEntryAction = actionCollection->addAction(QLatin1String("delete_entry"));
     _deleteEntryAction->setText(i18n("&Delete"));
-    _deleteEntryAction->setShortcut(Qt::Key_Delete);
+    actionCollection->setDefaultShortcut(_deleteEntryAction, Qt::Key_Delete);
     _deleteEntryAction->setEnabled(false);
 
     _alwaysShowContentsAction = actionCollection->addAction(QLatin1String("always_show_contents"));
