@@ -693,7 +693,7 @@ void KWalletEntryList::refreshItemsCount()
 class ReturnPressedFilter : public QObject
 {
 public:
-    ReturnPressedFilter(KListWidget *parent) : QObject(parent)
+    ReturnPressedFilter(QListWidget *parent) : QObject(parent)
     {
         parent->installEventFilter(this);
     }
@@ -703,7 +703,7 @@ public:
         if (event->type() == QEvent::KeyPress) {
             QKeyEvent *ke = static_cast<QKeyEvent *>(event);
             if (ke->key() == Qt::Key_Enter || ke->key() == Qt::Key_Return) {
-                KListWidget *p = static_cast<KListWidget *>(parent());
+                QListWidget *p = static_cast<QListWidget *>(parent());
                 QMetaObject::invokeMethod(p, "executed", Q_ARG(QListWidgetItem *, p->currentItem()));
                 return true;
             }

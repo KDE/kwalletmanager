@@ -24,7 +24,7 @@
 #include <kwallet.h>
 #include <kiconloader.h>
 #include <kicontheme.h>
-#include <klistwidget.h>
+#include <QListWidget>
 
 #include <QPixmap>
 #include <QDropEvent>
