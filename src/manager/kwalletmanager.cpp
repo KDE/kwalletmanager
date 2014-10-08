@@ -99,21 +99,16 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     _managerWidget->setMinimumSize(16*fm.height(), 18*fm.height());
 
     m_kwalletdModule = new org::kde::KWallet(QLatin1String("org.kde.kwalletd5"), QLatin1String("/modules/kwalletd5"), QDBusConnection::sessionBus());
-    connect(QDBusConnection::sessionBus().interface(),
-            SIGNAL(serviceOwnerChanged(QString,QString,QString)),
-            this,
+    connect(QDBusConnection::sessionBus().interface(), SIGNAL(serviceOwnerChanged(QString,QString,QString)), this,
             SLOT(possiblyRescan(QString,QString,QString)));
-    connect(m_kwalletdModule, SIGNAL(allWalletsClosed()),
-            this, SLOT(allWalletsClosed()));
+    connect(m_kwalletdModule, &OrgKdeKWalletInterface::allWalletsClosed, this, &KWalletManager::allWalletsClosed);
     connect(m_kwalletdModule, SIGNAL(walletClosed(QString)),
             this, SLOT(updateWalletDisplay()));
-    connect(m_kwalletdModule, SIGNAL(walletOpened(QString)),
-            this, SLOT(aWalletWasOpened()));
-    connect(m_kwalletdModule, SIGNAL(walletDeleted(QString)),
-            this, SLOT(updateWalletDisplay()));
-    connect(m_kwalletdModule, SIGNAL(walletListDirty()),
-            this, SLOT(updateWalletDisplay()));
-    connect(m_kwalletdModule, SIGNAL(walletCreated(QString)), this, SLOT(walletCreated(QString)));
+
+    connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletOpened, this, &KWalletManager::aWalletWasOpened);
+    connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletDeleted, this, &KWalletManager::updateWalletDisplay);
+    connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletListDirty, this, &KWalletManager::updateWalletDisplay);
+    connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletCreated, this, &KWalletManager::walletCreated);
     // FIXME: slight race - a wallet can open, then we get launched, but the
     //        wallet closes before we are done opening.  We will then stay
     //        open.  Must check that a wallet is still open here.
@@ -130,7 +125,7 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     action = actionCollection()->addAction(QLatin1String("wallet_delete"));
     action->setText(i18n("&Delete Wallet..."));
     action->setIcon(QIcon::fromTheme(QLatin1String("trash-empty")));
-    connect(action, SIGNAL(triggered()), SLOT(deleteWallet()));
+    connect(action, &QAction::triggered, this, &KWalletManager::deleteWallet);
 
     _walletsExportAction = actionCollection()->addAction("wallet_export_encrypted");
     _walletsExportAction->setText(i18n("Export as encrypted"));
@@ -146,13 +141,13 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     act->setText(i18n("Configure &Wallet..."));
     act->setIcon(QIcon::fromTheme(QLatin1String("configure")));
 
-    connect(act, SIGNAL(triggered()), SLOT(setupWallet()));
+    connect(act, &QAction::triggered, this, &KWalletManager::setupWallet);
     if (_tray) {
         _tray->contextMenu()->addAction(act);
     }
     act = actionCollection()->addAction(QLatin1String("close_all_wallets"));
     act->setText(i18n("Close &All Wallets"));
-    connect(act, SIGNAL(triggered()), SLOT(closeAllWallets()));
+    connect(act, &QAction::triggered, this, &KWalletManager::closeAllWallets);
     if (_tray) {
         _tray->contextMenu()->addAction(act);
     }

@@ -48,7 +48,7 @@ void ConnectedApplicationsTable::setModel(QAbstractItemModel *model)
         btn->setFixedHeight(btn->sizeHint().height());
         setRowHeight(row, btn->height());
         setIndexWidget(model->index(row, 1), btn);
-        connect(btn, SIGNAL(appDisconnected(QString)), appModel, SLOT(removeApp(QString)));
+        connect(btn, &DisconnectAppButton::appDisconnected, appModel, &ConnectedAppModel::removeApp);
     }
 }
 

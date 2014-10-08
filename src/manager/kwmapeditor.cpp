@@ -138,8 +138,8 @@ KWMapEditor::KWMapEditor(QMap<QString, QString> &map, QWidget *parent)
     setItemDelegate(new KWMapEditorDelegate(this));
     _ac = new KActionCollection(this);
     _copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
-    connect(this, SIGNAL(itemChanged(QTableWidgetItem*)), this, SIGNAL(dirty()));
-    connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
+    connect(this, &KWMapEditor::itemChanged, this, &KWMapEditor::dirty);
+    connect(this, &KWMapEditor::customContextMenuRequested, this, &KWMapEditor::contextMenu);
     setSelectionMode(NoSelection);
     setHorizontalHeaderLabels(QStringList() << QString() << i18n("Key") << i18n("Value"));
     setContextMenuPolicy(Qt::CustomContextMenu);
@@ -160,7 +160,7 @@ void KWMapEditor::reload()
             QToolButton *b = new QToolButton(this);
             b->setIcon(QIcon::fromTheme("edit-delete"));
             b->setToolTip(i18n("Delete Entry"));
-            connect(b, SIGNAL(clicked()), this, SLOT(erase()));
+            connect(b, &QToolButton::clicked, this, &KWMapEditor::erase);
             setCellWidget(x, 0, b);
             if (columnWidth(0) != b->sizeHint().width()) {
                 setColumnWidth(0, b->sizeHint().width());
@@ -211,7 +211,7 @@ void KWMapEditor::addEntry()
     QToolButton *b = new QToolButton(this);
     b->setIcon(QIcon::fromTheme("edit-delete"));
     b->setToolTip(i18n("Delete Entry"));
-    connect(b, SIGNAL(clicked()), this, SLOT(erase()));
+    connect(b, &QToolButton::clicked, this, &KWMapEditor::erase);
     setCellWidget(x, 0, b);
     setItem(x, 1, new QTableWidgetItem());
     setItem(x, 2, new QTableWidgetItem());

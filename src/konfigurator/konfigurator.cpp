@@ -63,21 +63,21 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
 
-    connect(_wcw->_enabled, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_launchManager, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_autocloseManager, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_autoclose, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_closeIdle, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_openPrompt, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_screensaverLock, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_localWalletSelected, SIGNAL(clicked()), this, SLOT(configChanged()));
-    connect(_wcw->_idleTime, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
-    connect(_wcw->_launch, SIGNAL(clicked()), this, SLOT(launchManager()));
-    connect(_wcw->_newWallet, SIGNAL(clicked()), this, SLOT(newNetworkWallet()));
-    connect(_wcw->_newLocalWallet, SIGNAL(clicked()), this, SLOT(newLocalWallet()));
-    connect(_wcw->_localWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-    connect(_wcw->_defaultWallet, SIGNAL(activated(int)), this, SLOT(configChanged()));
-    connect(_wcw->_accessList, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
+    connect(_wcw->_enabled, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_launchManager, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_autocloseManager, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_autoclose, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_closeIdle, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_openPrompt, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_screensaverLock, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_localWalletSelected, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
+    connect(_wcw->_idleTime, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KWalletConfig::configChanged);
+    connect(_wcw->_launch, &QPushButton::clicked, this, &KWalletConfig::launchManager);
+    connect(_wcw->_newWallet, &QPushButton::clicked, this, &KWalletConfig::newNetworkWallet);
+    connect(_wcw->_newLocalWallet, &QPushButton::clicked, this, &KWalletConfig::newLocalWallet);
+    connect(_wcw->_localWallet, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &KWalletConfig::configChanged);
+    connect(_wcw->_defaultWallet, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &KWalletConfig::configChanged);
+    connect(_wcw->_accessList, &QTreeWidget::customContextMenuRequested, this, &KWalletConfig::customContextMenuRequested);
 
     _wcw->_accessList->setAllColumnsShowFocus(true);
     _wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);

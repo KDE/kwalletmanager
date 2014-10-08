@@ -72,7 +72,7 @@ void WalletControlWidget::onSetupWidget()
     }
 
     if (_wallet) {
-        connect(_wallet, SIGNAL(walletClosed()), this, SLOT(onWalletClosed()));
+        connect(_wallet, &KWallet::Wallet::walletClosed, this, &WalletControlWidget::onWalletClosed);
         _openClose->setText(i18n("&Close"));
 
         if (0 == _walletEditor) {

@@ -97,7 +97,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
     _entryList->setContextMenuPolicy(Qt::CustomContextMenu);
     _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
     _searchLine->setClickMessage(i18n("Search"));
-    connect(_searchLine, SIGNAL(textChanged(QString)), this, SLOT(onSearchTextChanged(QString)));
+    connect(_searchLine, &KTreeWidgetSearchLine::textChanged, this, &KWalletEditor::onSearchTextChanged);
     box->addWidget(_searchLine);
     box->addWidget(_entryList);
 
@@ -106,7 +106,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
     box = new QVBoxLayout(_entryStack->widget(2));
     box->setMargin(0);
     _mapEditorShowHide = new QCheckBox(i18n("&Show values"), _entryStack->widget(2));
-    connect(_mapEditorShowHide, SIGNAL(toggled(bool)), this, SLOT(showHideMapEditorValue(bool)));
+    connect(_mapEditorShowHide, &QCheckBox::toggled, this, &KWalletEditor::showHideMapEditorValue);
     _mapEditor = new KWMapEditor(_currentMap, _entryStack->widget(2));
     box->addWidget(_mapEditorShowHide);
     box->addWidget(_mapEditor);
@@ -124,31 +124,18 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
 
     _searchLine->setFocus();
 
-    connect(_entryList, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
-            this, SLOT(entrySelectionChanged(QTreeWidgetItem*)));
-    connect(_entryList,
-            SIGNAL(customContextMenuRequested(QPoint)),
-            this,
-            SLOT(listContextMenuRequested(QPoint)));
-    connect(_entryList,
-            SIGNAL(itemChanged(QTreeWidgetItem*,int)),
-            this,
-            SLOT(listItemChanged(QTreeWidgetItem*,int)));
+    connect(_entryList, &KWalletEntryList::currentItemChanged, this, &KWalletEditor::entrySelectionChanged);
+    connect(_entryList, &KWalletEntryList::customContextMenuRequested, this, &KWalletEditor::listContextMenuRequested);
+    connect(_entryList, &KWalletEntryList::itemChanged, this, &KWalletEditor::listItemChanged);
 
-    connect(_passwordValue, SIGNAL(textChanged()),
-            this, SLOT(entryEditted()));
-    connect(_mapEditor, SIGNAL(dirty()),
-            this, SLOT(entryEditted()));
+    connect(_passwordValue, &QTextEdit::textChanged, this, &KWalletEditor::entryEditted);
+    connect(_mapEditor, &KWMapEditor::dirty, this, &KWalletEditor::entryEditted);
 
-    connect(_undoChanges, SIGNAL(clicked()),
-            this, SLOT(restoreEntry()));
-    connect(_saveChanges, SIGNAL(clicked()),
-            this, SLOT(saveEntry()));
+    connect(_undoChanges, &QPushButton::clicked, this, &KWalletEditor::restoreEntry);
+    connect(_saveChanges, &QPushButton::clicked, this, &KWalletEditor::saveEntry);
 
-    connect(_showContents, SIGNAL(clicked()),
-            this, SLOT(showPasswordContents()));
-    connect(_hideContents, SIGNAL(clicked()),
-            this, SLOT(hidePasswordContents()));
+    connect(_showContents, &QToolButton::clicked, this, &KWalletEditor::showPasswordContents);
+    connect(_hideContents, &QToolButton::clicked, this, &KWalletEditor::hidePasswordContents);
 
 //    createActions();
     // TODO: remove kwalleteditor.rc file
@@ -182,9 +169,9 @@ void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
 
     _w = wallet;
     _entryList->setWallet(_w);
-    connect(_w, SIGNAL(walletOpened(bool)), this, SLOT(walletOpened(bool)));
-    connect(_w, SIGNAL(walletClosed()), this, SLOT(walletClosed()));
-    connect(_w, SIGNAL(folderUpdated(QString)), this, SLOT(updateEntries(QString)));
+    connect(_w, &KWallet::Wallet::walletOpened, this, &KWalletEditor::walletOpened);
+    connect(_w, &KWallet::Wallet::walletClosed, this, &KWalletEditor::walletClosed);
+    connect(_w, &KWallet::Wallet::folderUpdated, this, &KWalletEditor::updateEntries);
     connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
     updateFolderList();
 

@@ -45,7 +45,7 @@ void AuthorizedApplicationsTable::setModel(QAbstractItemModel *model)
         btn->setFixedHeight(btn->sizeHint().height());
         setRowHeight(row, btn->height());
         setIndexWidget(model->index(row, 1), btn);
-        connect(btn, SIGNAL(appRevoked(QString)), appModel, SLOT(removeApp(QString)));
+        connect(btn, &RevokeAuthButton::appRevoked, appModel, &AuthorizedAppModel::removeApp);
     }
 }
 

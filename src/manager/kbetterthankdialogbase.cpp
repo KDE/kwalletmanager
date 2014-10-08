@@ -42,10 +42,10 @@ KBetterThanKDialogBase::KBetterThanKDialogBase(QWidget *parent)
     : QDialog(parent), Ui_KBetterThanKDialogBase()
 {
     setupUi(this);
-    connect(_allowOnce, SIGNAL(clicked()), this, SLOT(clicked()));
-    connect(_allowAlways, SIGNAL(clicked()), this, SLOT(clicked()));
-    connect(_deny, SIGNAL(clicked()), this, SLOT(clicked()));
-    connect(_denyForever, SIGNAL(clicked()), this, SLOT(clicked()));
+    connect(_allowOnce, &QPushButton::clicked, this, &KBetterThanKDialogBase::clicked);
+    connect(_allowAlways, &QPushButton::clicked, this, &KBetterThanKDialogBase::clicked);
+    connect(_deny, &QPushButton::clicked, this, &KBetterThanKDialogBase::clicked);
+    connect(_denyForever, &QPushButton::clicked, this, &KBetterThanKDialogBase::clicked);
     _allowOnce->setFocus();
 }
 
