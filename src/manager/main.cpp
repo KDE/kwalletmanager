@@ -82,8 +82,9 @@ int main(int argc, char **argv)
         wm.kwalletdLaunch();
     }
 
-    for (int i = 0; i < a.arguments().count(); ++i) {
-        QString fn = QFileInfo(a.arguments().at(i)).absoluteFilePath();
+    const QStringList arguments = a.arguments();
+    for (int i = 1; i < arguments.count(); ++i) {
+        QString fn = QFileInfo(arguments.at(i)).absoluteFilePath();
         if (QFile::exists(fn))
         {
             QMimeDatabase mimeDb;
@@ -93,9 +94,8 @@ int main(int argc, char **argv)
                     mt.inherits(QLatin1String("application/x-kwallet"))) {
                 wm.openWalletFile(fn);
             }
-            else {
-                wm.openWallet(a.arguments().at(i));
-            }
+        } else {
+                wm.openWallet(arguments.at(i));
         }
     }
 
