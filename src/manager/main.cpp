@@ -36,7 +36,6 @@ class MyApp : public QApplication
 public:
     MyApp(int &argc, char **argv) : QApplication(argc, argv)
     {
-        //was: KGlobal::ref(); ported to QEeventLoopLocker
     }
 
     virtual ~MyApp() {}
