@@ -368,6 +368,7 @@ void KWalletManager::exportWallets()
 {
     const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/kwalletd/";
     const QDir dir(path);
+    dir.mkpath(path);
 
     Q_ASSERT(dir.exists());
 
@@ -396,6 +397,7 @@ void KWalletManager::importWallets()
 {
     const QString source = QFileDialog::getOpenFileName(this, i18n("Select file"));
     const QString destinationDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/kwalletd/";
+    QDir().mkpath(destinationDir);
 
     if (source.isEmpty()) {
         return;
