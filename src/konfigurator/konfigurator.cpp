@@ -332,7 +332,7 @@ void KWalletConfig::save()
 
     // this restarts kwalletd if necessary
     if (KWallet::Wallet::isEnabled()) {
-        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletd"), QLatin1String("/modules/kwalletd"), QLatin1String(KWALLETMANAGERINTERFACE));
+        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletd5"), QLatin1String("/modules/kwalletd"), QLatin1String(KWALLETMANAGERINTERFACE));
         kwalletd.call(QLatin1String("reconfigure"));
     }
     emit changed(false);
@@ -382,4 +382,3 @@ void KWalletConfig::deleteEntry()
 }
 
 #include "konfigurator.moc"
-

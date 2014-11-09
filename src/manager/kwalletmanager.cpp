@@ -280,7 +280,7 @@ void KWalletManager::possiblyRescan(const QString &app, const QString &oldOwner,
 {
     Q_UNUSED(oldOwner);
     Q_UNUSED(newOwner);
-    if (app == QLatin1String("org.kde.kwalletd")) {
+    if (app == QLatin1String("org.kde.kwalletd5")) {
         updateWalletDisplay();
     }
 }
@@ -394,7 +394,7 @@ void KWalletManager::exportWallets()
 
 void KWalletManager::importWallets()
 {
-    const QString source = QFileDialog::getOpenFileName(this, "Select file");
+    const QString source = QFileDialog::getOpenFileName(this, i18n("Select file"));
     const QString destinationDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/kwalletd/";
 
     if (source.isEmpty()) {
