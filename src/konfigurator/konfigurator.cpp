@@ -168,10 +168,10 @@ void KWalletConfig::newNetworkWallet()
 
 void KWalletConfig::launchManager()
 {
-    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.kwalletmanager"))) {
-        KToolInvocation::startServiceByDesktopName(QLatin1String("kwalletmanager_show"));
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.kwalletmanager5"))) {
+        QProcess::startDetached(QLatin1String("kwalletmanager5 --show"));
     } else {
-        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletmanager"), QLatin1String("/kwalletmanager/MainWindow_1"));
+        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletmanager5"), QLatin1String("/kwalletmanager5/MainWindow_1"));
         kwalletd.call(QLatin1String("show"));
         kwalletd.call(QLatin1String("raise"));
     }

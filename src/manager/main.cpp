@@ -24,33 +24,15 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QEventLoopLocker>
 #include <QFile>
 #include <QFileInfo>
 #include <QMimeDatabase>
 #include <QMimeType>
-#include <QStandardPaths>
-
-class MyApp : public QApplication
-{
-public:
-    MyApp(int &argc, char **argv) : QApplication(argc, argv)
-    {
-    }
-
-    virtual ~MyApp() {}
-
-    virtual int newInstance()
-    {
-        return 0;
-    }
-private:
-    QEventLoopLocker m_locker;
-};
-
 
 int main(int argc, char **argv)
 {
+    QApplication a(argc, argv);
+
     QCoreApplication::setApplicationName("kwalletmanager5");
     QCoreApplication::setApplicationVersion("3.0");
     QCoreApplication::setOrganizationName("KDE");
@@ -66,12 +48,10 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption("show", i18n("Show window on startup")));
     parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
     parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
-
     
-    MyApp a(argc, argv);
     parser.process(a);
     KWalletManager wm;
-    wm.setCaption(i18n("Wallet Manager"));
+    QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &QWidget::activateWindow);
 
     if (parser.isSet("show")) {
         wm.show();
@@ -81,20 +61,18 @@ int main(int argc, char **argv)
         wm.kwalletdLaunch();
     }
 
-    const QStringList arguments = a.arguments();
+    const QStringList arguments = parser.positionalArguments();
     for (int i = 1; i < arguments.count(); ++i) {
         QString fn = QFileInfo(arguments.at(i)).absoluteFilePath();
-        if (QFile::exists(fn))
-        {
+        if (QFile::exists(fn)) {
             QMimeDatabase mimeDb;
             QMimeType mt = mimeDb.mimeTypeForFile(fn, QMimeDatabase::MatchContent);
 
-            if (mt.isValid() &&
-                    mt.inherits(QLatin1String("application/x-kwallet"))) {
+            if (mt.isValid() && mt.inherits(QLatin1String("application/x-kwallet"))) {
                 wm.openWalletFile(fn);
             }
         } else {
-                wm.openWallet(arguments.at(i));
+            wm.openWallet(arguments.at(i));
         }
     }
 
