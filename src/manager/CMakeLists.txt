@@ -33,10 +33,10 @@ ki18n_wrap_ui(kwalletmanager_SRCS
     applicationsmanager.ui
 )
 
-# Sets the icon on Windows and OSX, TODO: port to KF5
-#kde4_add_app_icon(kwalletmanager_SRCS
-#    "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kwalletmanager.png"
-#)
+
+# Sets the icon on Windows and OSX
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-kwalletmanager.png")
+ecm_add_app_icon(kwalletmanager_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(kwalletmanager5 ${kwalletmanager_SRCS})
 

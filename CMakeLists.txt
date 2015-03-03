@@ -2,7 +2,7 @@ project(kwalletmanager5)
 
 cmake_minimum_required(VERSION 2.8.12)
 
-find_package(ECM 1.2.0 REQUIRED NO_MODULE)
+find_package(ECM 1.7.0 REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
@@ -13,6 +13,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
+include(ECMAddAppIcon)
 
 find_package(KF5 5.2.0 REQUIRED
     CoreAddons
@@ -39,4 +40,3 @@ endif()
 
 ########### install files ###############
 install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
-
