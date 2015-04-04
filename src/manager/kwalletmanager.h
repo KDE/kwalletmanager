@@ -71,6 +71,8 @@ private slots:
     void closeAllWallets();
     void exportWallets();
     void importWallets();
+    void beginConfiguration();
+    void configUI();
 
 private:
     KStatusNotifierItem *_tray;

@@ -53,13 +53,37 @@
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     : KXmlGuiWindow(parent, f)
 {
-    RegisterCreateActionsMethod::createActions(actionCollection());
-
-    setObjectName(QLatin1String(name));
-    QDBusConnection::sessionBus().registerObject(QLatin1String("/KWalletManager"), this, QDBusConnection::ExportScriptableSlots);
     _kwalletdLaunch = false;
     _shuttingDown = false;
     m_kwalletdModule = 0;
+    setObjectName(QLatin1String(name));
+    RegisterCreateActionsMethod::createActions(actionCollection());
+
+    setupGUI(Keys | Save | Create, QLatin1String("kwalletmanager.rc"));
+    setStandardToolBarMenuEnabled(false);
+
+    QTimer::singleShot(0, this, SLOT(beginConfiguration()));
+}
+
+void KWalletManager::beginConfiguration() {
+    KConfig cfg(QLatin1String("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
+    KConfigGroup walletConfigGroup(&cfg, "Wallet");
+    if (walletConfigGroup.readEntry("Enabled", true)){
+        QTimer::singleShot(0, this, SLOT(configUI()));
+    } else {
+        int rc = KMessageBox::warningYesNo(this,
+            i18n("The KDE Wallet system is not enabled. Do you want me to enable it? If not, the KWalletManager will quit as it cannot work without reading the wallets."));
+        if (rc == KMessageBox::Yes) {
+            walletConfigGroup.writeEntry("Enabled", true);
+            QTimer::singleShot(0, this, SLOT(configUI()));
+        } else {
+            QApplication::quit();
+        }
+    }
+}
+
+void KWalletManager::configUI() {
+    QDBusConnection::sessionBus().registerObject(QLatin1String("/KWalletManager"), this, QDBusConnection::ExportScriptableSlots);
     KConfig cfg(QLatin1String("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
     KConfigGroup walletConfigGroup(&cfg, "Wallet");
     if (walletConfigGroup.readEntry("Launch Manager", false)) {
@@ -155,8 +179,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
                                  actionCollection());
 
-    setupGUI(Keys | Save | Create, QLatin1String("kwalletmanager.rc"));
-    setStandardToolBarMenuEnabled(false);
 
     if (_tray) {
 //        _tray->show();
