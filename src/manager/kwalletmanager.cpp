@@ -59,9 +59,6 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
     setObjectName(QLatin1String(name));
     RegisterCreateActionsMethod::createActions(actionCollection());
 
-    setupGUI(Keys | Save | Create, QLatin1String("kwalletmanager.rc"));
-    setStandardToolBarMenuEnabled(false);
-
     QTimer::singleShot(0, this, SLOT(beginConfiguration()));
 }
 
@@ -179,6 +176,8 @@ void KWalletManager::configUI() {
     KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
                                  actionCollection());
 
+    setupGUI(Keys | Save | Create, QLatin1String("kwalletmanager.rc"));
+    setStandardToolBarMenuEnabled(false);
 
     if (_tray) {
 //        _tray->show();
