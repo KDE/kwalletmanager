@@ -48,7 +48,7 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption("show", i18n("Show window on startup")));
     parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
     parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
-    
+
     parser.process(a);
     KWalletManager wm;
     QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &QWidget::activateWindow);
