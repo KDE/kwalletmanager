@@ -38,4 +38,4 @@ ActionReply SaveHelper::save(QVariantMap args)
     return ActionReply::SuccessReply();
 }
 
-KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmkwallet", SaveHelper)
+KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmkwallet5", SaveHelper)

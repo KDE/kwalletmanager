@@ -39,7 +39,7 @@ Name[zh_CN]=KDE 钱包系统
 Name[zh_TW]=KDE 錢包系統
 Icon=kwalletmanager
 
-[org.kde.kcontrol.kcmkwallet.save]
+[org.kde.kcontrol.kcmkwallet5.save]
 Name=Save wallet configuration
 Name[bs]=Snimi konfiguraciju novčanika
 Name[ca]=Desa la configuració de la cartera

@@ -377,7 +377,7 @@ void KWalletManager::shuttingDown()
 
 void KWalletManager::setupWallet()
 {
-    KToolInvocation::startServiceByDesktopName(QLatin1String("kwalletconfig"));
+    KToolInvocation::startServiceByDesktopName(QLatin1String("kwalletconfig5"));
 }
 
 void KWalletManager::closeAllWallets()

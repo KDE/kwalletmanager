@@ -75,4 +75,4 @@ Type=Application
 Terminal=false
 X-KDE-StartupNotify=false
 NoDisplay=true
-
+X-DocPath=help:/kwallet5/index.html

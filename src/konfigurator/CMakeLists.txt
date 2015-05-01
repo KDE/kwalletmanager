@@ -5,10 +5,10 @@ set(kcm_kwallet_PART_SRCS konfigurator.cpp )
 
 ki18n_wrap_ui(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
 
-add_library(kcm_kwallet MODULE ${kcm_kwallet_PART_SRCS})
+add_library(kcm_kwallet5 MODULE ${kcm_kwallet_PART_SRCS})
 
 
-target_link_libraries(kcm_kwallet
+target_link_libraries(kcm_kwallet5
     Qt5::Core
     KF5::Auth
     KF5::CoreAddons
@@ -18,24 +18,24 @@ target_link_libraries(kcm_kwallet
     Qt5::DBus
 )
 
-install(TARGETS kcm_kwallet  DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_kwallet5  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 ########### kauth helper ################
 set(kcm_kwallet_helper_SRCS savehelper.cpp)
 
-add_executable(kcm_kwallet_helper ${kcm_kwallet_helper_SRCS})
-target_link_libraries(kcm_kwallet_helper
+add_executable(kcm_kwallet_helper5 ${kcm_kwallet_helper_SRCS})
+target_link_libraries(kcm_kwallet_helper5
     Qt5::Core
     KF5::Auth
     KF5::Wallet
     KF5::CoreAddons
 )
 
-install(TARGETS kcm_kwallet_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+install(TARGETS kcm_kwallet_helper5 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
-kauth_install_helper_files(kcm_kwallet_helper org.kde.kcontrol.kcmkwallet root)
-kauth_install_actions(org.kde.kcontrol.kcmkwallet kwallet.actions)
+kauth_install_helper_files(kcm_kwallet_helper5 org.kde.kcontrol.kcmkwallet5 root)
+kauth_install_actions(org.kde.kcontrol.kcmkwallet5 kwallet.actions)
 
 ########### install files ###############
 
-install( FILES kwalletconfig.desktop kwalletmanager_show.desktop  DESTINATION ${SERVICES_INSTALL_DIR})
+install( FILES kwalletconfig5.desktop kwalletmanager5_show.desktop  DESTINATION ${SERVICES_INSTALL_DIR})

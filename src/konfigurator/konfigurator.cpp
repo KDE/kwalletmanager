@@ -49,7 +49,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
       _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals))
 {
     KAboutData *about =
-        new KAboutData(QLatin1String("kcmkwallet"),
+        new KAboutData(QLatin1String("kcmkwallet5"),
                         i18n("KDE Wallet Control Module"),
                         QString(), QString(), KAboutLicense::GPL,
                         i18n("(c) 2003 George Staikos"));
