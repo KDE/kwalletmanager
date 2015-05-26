@@ -269,7 +269,7 @@ void KWalletConfig::save()
 
     KAuth::ExecuteJob *j = action.execute();
 
-    if (j->error()) {
+    if (!j->exec()) {
         qDebug() << j->errorText();
         KMessageBox::error(this, j->errorString(), i18n("KDE Wallet Control Module"));
         load();
