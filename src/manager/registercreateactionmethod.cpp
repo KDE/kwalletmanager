@@ -17,23 +17,20 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "registercreateactionmethod.h"
 
-#include <kglobal.h>
-
-K_GLOBAL_STATIC(std::list<RegisterCreateActionsMethod::CreateActionsMethod>, createActionMethodList)
+Q_GLOBAL_STATIC(std::list<RegisterCreateActionsMethod::CreateActionsMethod>, createActionMethodList)
 
 RegisterCreateActionsMethod::RegisterCreateActionsMethod(RegisterCreateActionsMethod::CreateActionsMethod method)
 {
     createActionMethodList->push_back(method);
 }
 
-void RegisterCreateActionsMethod::createActions(KActionCollection* actionCollection)
+void RegisterCreateActionsMethod::createActions(KActionCollection *actionCollection)
 {
     std::list<CreateActionsMethod>::const_iterator it = createActionMethodList->begin();
     std::list<CreateActionsMethod>::const_iterator end = createActionMethodList->end();
-    for ( ; it != end; it++ ) {
+    for (; it != end; it++) {
         (*it)(actionCollection);
     }
 }

@@ -22,12 +22,12 @@
 #include <klocalizedstring.h>
 #include <kwallet.h>
 
-DisconnectAppButton::DisconnectAppButton(const QString& appName, KWallet::Wallet* wallet) :
-        _appName(appName), _wallet(wallet) 
+DisconnectAppButton::DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet) :
+    _appName(appName), _wallet(wallet)
 {
     setObjectName(QString("Disconnect_%1").arg(appName));
     setText(i18n("Disconnect"));
-    connect(this, SIGNAL(clicked(bool)), this, SLOT(onClicked()));
+    connect(this, &DisconnectAppButton::clicked, this, &DisconnectAppButton::onClicked);
 }
 
 void DisconnectAppButton::onClicked()
@@ -37,4 +37,4 @@ void DisconnectAppButton::onClicked()
     }
 }
 
-#include "disconnectappbutton.moc"
+

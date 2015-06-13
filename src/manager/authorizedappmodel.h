@@ -23,7 +23,8 @@
 #include <QStandardItemModel>
 #include <ksharedconfig.h>
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 

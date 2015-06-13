@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
-  <!ENTITY kwallet "<application>KWallet</application>">
-  <!ENTITY kwalletmanager "<application>KWallet Manager</application>">
-  <!ENTITY package "kwallet">
-  <!ENTITY kappname "&kwallet;">
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kwallet5 "<application>KWallet</application>">
+  <!ENTITY kwalletmanager5 "<application>KWallet Manager</application>">
+  <!ENTITY package "kwallet5">
+  <!ENTITY kappname "&kwallet5;">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
 
-<book id="kwallet" lang="&language;">
+<book id="kwallet5" lang="&language;">
 <bookinfo>
-<title>The &kwallet; Handbook</title>
+<title>The &kwallet5; Handbook</title>
 
 <authorgroup>
 <author>
@@ -57,7 +57,7 @@ which is sensitive.  In particular, you will typically have many passwords
 to manage.  Remembering them is difficult and writing them down on paper or in
 a text file is insecure.</para>
 
-<para>&kwallet; provides a secure way to store passwords and other secret information, 
+<para>&kwallet5; provides a secure way to store passwords and other secret information, 
 allowing the user to remember only a single password instead of numerous different passwords and credentials.
 </para>
 
@@ -69,17 +69,17 @@ allowing the user to remember only a single password instead of numerous differe
 
 <itemizedlist>
 <listitem><para>Use the menu item <menuchoice><guimenu>File</guimenu><guimenuitem>New 
-Wallet</guimenuitem></menuchoice> in the &kwalletmanager;</para></listitem>
+Wallet</guimenuitem></menuchoice> in the &kwalletmanager5;</para></listitem>
 
 <listitem><para>Use the <guibutton>New</guibutton> button in the &systemsettings; module 
 <guilabel>KDE Wallet</guilabel></para></listitem>
 
 <listitem><para>On the first attempt to store login information in a wallet when you did 
-not create a wallet so far, see section <link linkend="kwallet-using">Using &kwallet;</link>.
+not create a wallet so far, see section <link linkend="kwallet-using">Using &kwallet5;</link>.
 </para></listitem>
 </itemizedlist>
 
-<para>&kwallet; offers two different ways to store your data:</para>
+<para>&kwallet5; offers two different ways to store your data:</para>
 
 <screenshot>
 <screeninfo>Select encryption</screeninfo>
@@ -94,7 +94,7 @@ not create a wallet so far, see section <link linkend="kwallet-using">Using &kwa
 <varlistentry>
 <term>Blowfish encryption</term>
 <listitem>
-<para>&kwallet; saves this sensitive data for you in a strongly encrypted
+<para>&kwallet5; saves this sensitive data for you in a strongly encrypted
 file, accessible by all applications, and protected with a master
 password that you define.</para>
 
@@ -142,13 +142,13 @@ found on the system. Please use applications like &kgpg; or &kleopatra; to creat
 </mediaobject>
 </screenshot>
 
-<para>&kwallet; will now use GPG when storing wallets and when opening them. 
+<para>&kwallet5; will now use GPG when storing wallets and when opening them. 
 The passphrase dialog only shows once. Even if the wallet is closed after initial open, 
 subsequent opening will occur silently during the same &kde; session.
 </para>
 
 <para>
-The same &kde; session can handle simultaneously both file formats. &kwallet; will transparently detect 
+The same &kde; session can handle simultaneously both file formats. &kwallet5; will transparently detect 
 the file format and load the correct backend to handle it.</para>
 
 <para>
@@ -156,7 +156,7 @@ To use your sensitive data from your classic wallet with the new backend follow 
 
 <itemizedlist>
 <listitem><para>Create a new GPG based wallet</para></listitem>
-<listitem><para>Launch &kwalletmanager; and select your old wallet then choose <menuchoice><guimenu>File</guimenu>
+<listitem><para>Launch &kwalletmanager5; and select your old wallet then choose <menuchoice><guimenu>File</guimenu>
 <guimenuitem>Export as XML</guimenuitem></menuchoice> to create an &XML; file with your sensitive data.
 </para></listitem>
 <listitem><para>Select the new GPG based wallet then choose <menuchoice><guimenu>File</guimenu>
@@ -165,7 +165,7 @@ To use your sensitive data from your classic wallet with the new backend follow 
 </listitem>
 <listitem><para><menuchoice><guimenu>File</guimenu><guimenuitem>Import Wallet</guimenuitem></menuchoice>
 but in that case you have to select the <filename class="extension">.kwl</filename> file corresponding 
-to your old wallet, located in <filename class="directory">$<envar>KDEHOME</envar>/.kde/share/apps/kwallet</filename>.
+to your old wallet, located in <filename class="directory">$<envar>KDEHOME</envar>/.local/share/kwalletd</filename>.
 </para></listitem>
 <listitem><para>Go to &systemsettings; <menuchoice><guimenu>Account Details</guimenu> <guimenuitem>KDE 
 Wallet</guimenuitem></menuchoice> and select the newly created GPG based wallet from the <guilabel>Select 
@@ -179,10 +179,10 @@ wallet to use as default</guilabel> combobox.
 </variablelist>
 
 <tip>
-<para>&kwallet; supports multiple wallets, so
+<para>&kwallet5; supports multiple wallets, so
 for the most secure operation, you should use one wallet for local
 passwords, and another for network passwords and form data.  You can
-configure this behavior in the &kwallet; &systemsettings; module, however
+configure this behavior in the &kwallet5; &systemsettings; module, however
 the default setting is to store everything in one wallet.</para>
 </tip>
 
@@ -192,7 +192,7 @@ be accessed.</para>
 </sect1>
 
 <sect1 id="kwallet-using">
-<title>Using &kwallet;</title>
+<title>Using &kwallet5;</title>
 
 <para>If you visit &eg; the &kde; bugtracker and enter the login data for 
 the first time, a dialog pops up offering to store the password in an 
@@ -230,24 +230,24 @@ the wallet, it can automatically restore any login information stored in the wal
 
 </chapter>
 
-<chapter id="kwalletmanager">
-<title>&kwalletmanager;</title>
+<chapter id="kwalletmanager5">
+<title>&kwalletmanager5;</title>
 
-<para>&kwalletmanager; serves a number of functions.  Firstly it allows you to see if
+<para>&kwalletmanager5; serves a number of functions.  Firstly it allows you to see if
 any wallets are open, which wallets those are, and which applications are
 using each wallet.  You can disconnect an application's access to a wallet
-from within the &kwalletmanager;.</para>
+from within the &kwalletmanager5;.</para>
 
 <para>You may also manage the wallets installed on the system, creating and
 deleting wallets and manipulating their contents (changing keys, ...).</para>
 
-<para>The &kwalletmanager; application is launched with <menuchoice>
+<para>The &kwalletmanager5; application is launched with <menuchoice>
 <guimenu>Applications</guimenu><guisubmenu>System</guisubmenu>
 <guimenuitem>Wallet Management Tool</guimenuitem></menuchoice> from the
 application launcher. 
 Alternatively start &krunner; with shortcut <keycombo
 action="simul">&Alt;<keycap>F2</keycap></keycombo> and enter
-<command>kwalletmanager</command>.</para>
+<command>kwalletmanager5</command>.</para>
 
 <para>A system tray icon indicates that a wallet is open:
  <mediaobject>
@@ -267,14 +267,14 @@ wallet:
 
 </para>
 
-<para>Click once on the system tray wallet icon to display the &kwalletmanager;
+<para>Click once on the system tray wallet icon to display the &kwalletmanager5;
 window.</para>
 <para>
 <screenshot>
 <screeninfo>Main window with one wallet</screeninfo>
 <mediaobject>
 <imageobject>
-<imagedata fileref="kwalletmanager.png"/>
+<imagedata fileref="kwalletmanager5.png"/>
 </imageobject>
 <textobject>
 <phrase>Main window with one wallet</phrase>
@@ -295,7 +295,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <para>If you have more than one wallet all available wallets are shown as icons on the left. The Icons reflect the 
 current wallet status, either open or closed.
 </para>
-<para>Clicking on a wallet in the &kwalletmanager; window will display 
+<para>Clicking on a wallet in the &kwalletmanager5; window will display 
 that wallet's status and the contents of an opened wallet. A wallet may contain any number
 of folders, which allow storing of password information. By default a wallet
 will contain folders named Form Data and Passwords.
@@ -404,18 +404,18 @@ Use the button right of each entry in the list to revoke the access.
 </chapter>
 
 <chapter id="kwallet-kcontrol-module">
-<title>Configuring &kwallet;</title>
+<title>Configuring &kwallet5;</title>
 
 <sect1 id="wallet-preferences">
 <title>Wallet Preferences</title>
 
-<para>&kwallet; contains a small configuration panel with several options
-that allow you to tune &kwallet; to your personal preferences.  The
-default settings for &kwallet; are sufficient for most users.</para>
+<para>&kwallet5; contains a small configuration panel with several options
+that allow you to tune &kwallet5; to your personal preferences.  The
+default settings for &kwallet5; are sufficient for most users.</para>
 
 <para>Check the box to enable or disable the &kde; wallet subsystem
-entirely.  If this box is unchecked, then &kwallet; is entirely disabled and
-none of the other options here have any effect, nor will &kwallet; record
+entirely.  If this box is unchecked, then &kwallet5; is entirely disabled and
+none of the other options here have any effect, nor will &kwallet5; record
 any information, or offer to fill in forms for you.</para>
 
 <variablelist>
@@ -486,7 +486,7 @@ system tray.</para>
 
 <para>Finally, there is a button labeled <guibutton>Launch Wallet
 Manager</guibutton>, which does precisely that.</para>
-<para>This button is only visible if &kwalletmanager; is not running</para>
+<para>This button is only visible if &kwalletmanager5; is not running</para>
 </sect1>
 
 <sect1 id="wallet-access-control">
@@ -516,7 +516,7 @@ context menu that appears, or by simply selecting it and pressing the
 <para>An application that has been allowed access to a wallet is granted access to
 all passwords stored inside.</para>
 
-<para>If you erroneously configured an application not to use the &kde; &kwalletmanager; 
+<para>If you erroneously configured an application not to use the &kde; &kwalletmanager5; 
 delete the policy for this application here.</para>
 <!-- FIXME difference to Revoke Authorization in kwallermanager?-->
 <para>
@@ -605,7 +605,7 @@ port numbers they are listening for synchronization of secrets.</para>
 <chapter id="advanced-features">
 <title>Advanced Features</title>
 
-<para>Wallets can be dragged from the &kwalletmanager; window.  This allows
+<para>Wallets can be dragged from the &kwalletmanager5; window.  This allows
 you to drag the wallet to a file browser window, where you can choose to
 copy, move, or link the wallet, as desired.</para>
 
@@ -618,11 +618,11 @@ copying of data to portable devices.</para>
 
  <note>
    <para>
-     Information on the internal structure of &kwallet; and some useful links
+     Information on the internal structure of &kwallet5; and some useful links
      to the code where you can find the answers on questions about the
      structure of the passwords records and the ciphers applied to keep
      passwords confident can be found on
-     <ulink url="http://techbase.kde.org/Projects/Utils/kwallet">&kwallet;
+     <ulink url="http://techbase.kde.org/Projects/Utils/kwallet">&kwallet5;
      TechBase page</ulink>.
    </para>
  </note>
@@ -632,7 +632,7 @@ copying of data to portable devices.</para>
 <chapter id="credits-and-license">
 <title>Credits and License</title>
 
-<para>&kwallet; &copy; 2003 &George.Staikos;</para>
+<para>&kwallet5; &copy; 2003 &George.Staikos;</para>
 <para>Documentation &copy; &Lauri.Watts; and &George.Staikos;</para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->

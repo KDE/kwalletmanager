@@ -22,22 +22,25 @@
 
 #include <kpagewidget.h>
 
-class KUrl;
+class QUrl;
 class QDropEvent;
 class KWalletManagerWidgetItem;
+class QDragEnterEvent;
+class QDragMoveEvent;
 
-class KWalletManagerWidget : public KPageWidget {
+class KWalletManagerWidget : public KPageWidget
+{
     Q_OBJECT
 public:
-    explicit KWalletManagerWidget(QWidget* parent = 0, Qt::WindowFlags flags = 0);
+    explicit KWalletManagerWidget(QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~KWalletManagerWidget();
 
     void updateWalletDisplay(QString selectWallet = QString());
-    bool hasWallet(const QString&) const;
-    bool openWalletFile(const QString& path);
-    bool openWallet(const QString& name);
+    bool hasWallet(const QString &) const;
+    bool openWalletFile(const QString &path);
+    bool openWallet(const QString &name);
 
-    const QString activeWalletName() const;
+    const QString &activeWalletName() const;
 
 protected:
     virtual void dragEnterEvent(QDragEnterEvent *e);
@@ -45,12 +48,12 @@ protected:
     virtual void dropEvent(QDropEvent *e);
 
 private Q_SLOTS:
-    void onCurrentPageChanged(KPageWidgetItem*,KPageWidgetItem*);
+    void onCurrentPageChanged(KPageWidgetItem *, KPageWidgetItem *);
 
 private:
-    bool shouldIgnoreDropEvent(const QDropEvent *e, KUrl *u) const;
+    bool shouldIgnoreDropEvent(const QDropEvent *e, QUrl *u) const;
 
-    typedef QHash<QString, KWalletManagerWidgetItem*> WalletPagesHash;
+    typedef QHash<QString, KWalletManagerWidgetItem *> WalletPagesHash;
     WalletPagesHash _walletPages;
 };
 

@@ -25,10 +25,10 @@
 
 class AuthorizedAppModel;
 class ConnectedAppModel;
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
-
 
 class ApplicationsManager : public QWidget, public Ui::ApplicationsManager
 {

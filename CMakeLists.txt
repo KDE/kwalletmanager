@@ -1,26 +1,42 @@
-project(kwallet)
+project(kwalletmanager5)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    find_package(KDE4)
-    include( KDE4Defaults )
-    include_directories(${KDE4_INCLUDES})
+cmake_minimum_required(VERSION 2.8.12)
 
-    add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-    add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+find_package(ECM 1.7.0 REQUIRED NO_MODULE)
 
-    # If definitions like -D_GNU_SOURCE are needed for these checks they
-    # should be added to _KDE4_PLATFORM_DEFINITIONS when it is originally
-    # defined outside this file.  Here we include these definitions in
-    # CMAKE_REQUIRED_DEFINITIONS so they will be included in the build of
-    # checks below.
-    set( CMAKE_REQUIRED_DEFINITIONS ${_KDE4_PLATFORM_DEFINITIONS} )
-endif()
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+
+find_package(Qt5 5.2.0 CONFIG REQUIRED Core Gui Widgets DBus)
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(FeatureSummary)
+include(ECMInstallIcons)
+include(ECMAddAppIcon)
+
+find_package(KF5 5.2.0 REQUIRED
+    CoreAddons
+    DocTools
+    Auth
+    Wallet
+    Service
+    KCMUtils
+    KDELibs4Support
+    I18n
+    XmlGui
+    Config
+    ConfigWidgets
+    DBusAddons
+)
 
 add_subdirectory( doc )
-add_subdirectory( icons ) 
-add_subdirectory( src ) 
+add_subdirectory( icons )
+add_subdirectory( src )
 
+if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
+  feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
+endif()
 
 ########### install files ###############
-
-install( PROGRAMS kwalletmanager.desktop kwalletmanager-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})

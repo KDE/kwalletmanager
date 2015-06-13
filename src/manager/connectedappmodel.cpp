@@ -20,10 +20,9 @@
 #include "connectedappmodel.h"
 
 #include <kwallet.h>
-#include <kdebug.h>
+#include <QDebug>
 
-
-ConnectedAppModel::ConnectedAppModel(KWallet::Wallet* wallet):
+ConnectedAppModel::ConnectedAppModel(KWallet::Wallet *wallet):
     QStandardItemModel(),
     _wallet(wallet)
 {
@@ -36,11 +35,11 @@ void ConnectedAppModel::refresh()
     _connectedAppsIndexMap.clear();
 
     _connectedApps = KWallet::Wallet::users(_wallet->walletName());
-    int row =0;
-    Q_FOREACH(QString appName, _connectedApps ) {
+    int row = 0;
+    Q_FOREACH(QString appName, _connectedApps) {
         // for un unknown reason, kwalletd returs empty strings so lets avoid inserting them
         // FIXME: find out why kwalletd returns empty strings here
-        if (appName.length()>0) {
+        if (appName.length() > 0) {
             QStandardItem *item = new QStandardItem(appName);
             item->setEditable(false);
             setItem(row, 0, item);
@@ -58,13 +57,12 @@ void ConnectedAppModel::removeApp(QString appName)
         QPersistentModelIndex idx = _connectedAppsIndexMap[appName];
         if (idx.isValid()) {
             if (!removeRow(idx.row())) {
-                kDebug() << "Remove row failed for app " << appName;
+                qDebug() << "Remove row failed for app " << appName;
             }
         }
     } else {
-        kDebug() << "Attempting to remove unknown application " << appName;
+        qDebug() << "Attempting to remove unknown application " << appName;
     }
 }
 
 
-#include "connectedappmodel.moc"

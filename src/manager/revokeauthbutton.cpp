@@ -20,14 +20,14 @@
 #include "revokeauthbutton.h"
 #include <klocalizedstring.h>
 
-RevokeAuthButton::RevokeAuthButton(const QString& appName, KWallet::Wallet* wallet): 
+RevokeAuthButton::RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet):
     QPushButton(),
     _appName(appName),
     _wallet(wallet)
 {
     setObjectName(QString("Revoke_%1").arg(appName));
     setText(i18n("Revoke Authorization"));
-    connect(this, SIGNAL(clicked(bool)), this, SLOT(onClicked()));
+    connect(this, &RevokeAuthButton::clicked, this, &RevokeAuthButton::onClicked);
 }
 
 void RevokeAuthButton::onClicked()
@@ -35,4 +35,4 @@ void RevokeAuthButton::onClicked()
     emit appRevoked(_appName);
 }
 
-#include "revokeauthbutton.moc"
+

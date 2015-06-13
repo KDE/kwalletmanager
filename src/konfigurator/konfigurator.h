@@ -26,37 +26,38 @@
 class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
 {
 public:
-  WalletConfigWidget( QWidget *parent ) : QWidget( parent ) {
-    setupUi( this );
-  }
+    WalletConfigWidget(QWidget *parent) : QWidget(parent)
+    {
+        setupUi(this);
+    }
 };
 
+class KWalletConfig : public KCModule
+{
+    Q_OBJECT
+public:
+    explicit KWalletConfig(QWidget *parent = 0L, const QVariantList & = QVariantList());
+    virtual ~KWalletConfig();
 
-class KWalletConfig : public KCModule {
-	Q_OBJECT
-	public:
-		explicit KWalletConfig(QWidget *parent = 0L, const QVariantList& = QVariantList());
-		virtual ~KWalletConfig();
+    void load();
+    void save();
+    void defaults();
 
-		void load();
-		void save();
-		void defaults();
+    QString quickHelp() const;
 
-		QString quickHelp() const;
+public slots:
+    void configChanged();
+    void launchManager();
+    void newLocalWallet();
+    void newNetworkWallet();
+    void updateWalletLists();
+    QString newWallet();
+    void deleteEntry();
+    void customContextMenuRequested(const QPoint &pos);
 
-	public slots:
-		void configChanged();
-		void launchManager();
-		void newLocalWallet();
-		void newNetworkWallet();
-		void updateWalletLists();
-		QString newWallet();
-		void deleteEntry();
-		void customContextMenuRequested(const QPoint& pos);
-
-	private:
-		WalletConfigWidget *_wcw;
-		KSharedConfig::Ptr _cfg;
+private:
+    WalletConfigWidget *_wcw;
+    KSharedConfig::Ptr _cfg;
 };
 
 #endif

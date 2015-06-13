@@ -30,105 +30,106 @@
 #include <QLabel>
 
 class KActionCollection;
-class KMenu;
+class QMenu;
 class QTreeWidgetItem;
 class QCheckBox;
 class KWalletEntryList;
 class KWMapEditor;
-class KAction;
 class KTreeWidgetSearchLine;
 
+class KWalletEditor : public QWidget, public Ui::WalletWidget
+{
+    Q_OBJECT
 
-class KWalletEditor : public QWidget, public Ui::WalletWidget {
-	Q_OBJECT
+public:
+    KWalletEditor(QWidget *parent, const char *name = 0);
+    virtual ~KWalletEditor();
 
-	public:
-		KWalletEditor(QWidget* parent, const char* name = 0);
-		virtual ~KWalletEditor();
+    void setWallet(KWallet::Wallet *wallet, bool isPath = false);
+    bool isOpen() const
+    {
+        return _w != 0L;
+    }
 
-        void setWallet(KWallet::Wallet* wallet, bool isPath =false);
-		bool isOpen() const { return _w != 0L; }
-
-		void setNewWallet(bool newWallet);
+    void setNewWallet(bool newWallet);
 
 protected:
-        virtual void hideEvent(QHideEvent*);
-        virtual void showEvent(QShowEvent*);
+    virtual void hideEvent(QHideEvent *);
+    virtual void showEvent(QShowEvent *);
 
-	public slots:
-		void walletClosed();
-		void createFolder();
-		void deleteFolder();
+public slots:
+    void walletClosed();
+    void createFolder();
+    void deleteFolder();
 
-	private slots:
-		void updateFolderList(bool checkEntries = false);
-		void entrySelectionChanged(QTreeWidgetItem *item);
-		void listItemChanged(QTreeWidgetItem *, int column);
-		void listContextMenuRequested(const QPoint& pos);
-		void updateEntries(const QString& folder);
+private slots:
+    void updateFolderList(bool checkEntries = false);
+    void entrySelectionChanged(QTreeWidgetItem *item);
+    void listItemChanged(QTreeWidgetItem *, int column);
+    void listContextMenuRequested(const QPoint &pos);
+    void updateEntries(const QString &folder);
 
-		void newEntry();
-		void renameEntry();
-		void deleteEntry();
-		void entryEditted();
-		void restoreEntry();
-		void saveEntry();
+    void newEntry();
+    void renameEntry();
+    void deleteEntry();
+    void entryEditted();
+    void restoreEntry();
+    void saveEntry();
 
-		void changePassword();
+    void changePassword();
 
-		void walletOpened(bool success);
-		void hidePasswordContents();
-		void showPasswordContents();
-		void showHideMapEditorValue(bool show);
+    void walletOpened(bool success);
+    void hidePasswordContents();
+    void showPasswordContents();
+    void showHideMapEditorValue(bool show);
 
-		void saveAs();
-		void exportXML();
-		void importXML();
-		void importWallet();
+    void exportXML();
+    void importXML();
+    void importWallet();
 
-		void copyPassword();
+    void copyPassword();
 
-        void onSearchTextChanged(const QString&);
-        void onAlwaysShowContents(bool);
-        void onAlwaysHideContents(bool);
+    void onSearchTextChanged(const QString &);
+    void onAlwaysShowContents(bool);
+    void onAlwaysHideContents(bool);
 
-	signals:
-		void enableWalletActions(bool enable);
-		void enableFolderActions(bool enable);
-		void enableContextFolderActions(bool enable);
+signals:
+    void enableWalletActions(bool enable);
+    void enableFolderActions(bool enable);
+    void enableContextFolderActions(bool enable);
 
-	public:
-		QString _walletName;
+public:
+    QString _walletName;
 
-	private:
-		static void createActions(KActionCollection*);
-        void connectActions();
-        void disconnectActions();
-        KActionCollection *actionCollection();
+private:
+    static void createActions(KActionCollection *);
+    void connectActions();
+    void disconnectActions();
+    KActionCollection *actionCollection();
 
-		bool _nonLocal;
-		KWallet::Wallet *_w;
-		KWalletEntryList *_entryList;
-        static RegisterCreateActionsMethod _registerCreateActionMethod;
-		static QAction *_newFolderAction, *_deleteFolderAction;
-		static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
-		static KAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
-		static KAction *_copyPassAction;
-		QLabel*_details;
-		QString _currentFolder;
-		QMap<QString,QString> _currentMap; // save memory by storing
-						   // only the most recent map.
-		KWMapEditor *_mapEditor;
-		QCheckBox *_mapEditorShowHide;
-		bool _newWallet;
-		KMenu *_contextMenu;
-        QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
-        KActionCollection *_actionCollection;
-        KMenu *_controlMenu;
-        KMenu *_walletSubmenu;
-        KTreeWidgetSearchLine *_searchLine;
-        static QAction *_alwaysShowContentsAction, *_alwaysHideContentsAction;
-        bool _alwaysShowContents;
+    bool _nonLocal;
+    KWallet::Wallet *_w;
+    KWalletEntryList *_entryList;
+    static RegisterCreateActionsMethod _registerCreateActionMethod;
+    static QAction *_newFolderAction, *_deleteFolderAction;
+    static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
+    static QAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
+    static QAction *_copyPassAction;
+    QLabel *_details;
+    QString _currentFolder;
+    QMap<QString, QString> _currentMap; // save memory by storing
+    // only the most recent map.
+    KWMapEditor *_mapEditor;
+    QCheckBox *_mapEditorShowHide;
+    bool _newWallet;
+    QMenu *_contextMenu;
+    QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
+    KActionCollection *_actionCollection;
+    QMenu *_controlMenu;
+    QMenu *_walletSubmenu;
+    KTreeWidgetSearchLine *_searchLine;
+    static QAction *_alwaysShowContentsAction, *_alwaysHideContentsAction;
+    bool _alwaysShowContents;
 };
 
 #endif

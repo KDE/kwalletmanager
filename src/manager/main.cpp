@@ -17,82 +17,65 @@
    Boston, MA 02110-1301, USA.
  */
 
-#include <kaboutdata.h>
-#include <kcmdlineargs.h>
-#include <kdebug.h>
-#include <kglobal.h>
-#include <klocale.h>
-#include <kmimetype.h>
-#include <kstandarddirs.h>
-#include <kuniqueapplication.h>
-
-#include <QFile>
-#include <QFileInfo>
-
 #include "kwalletmanager.h"
 
+#include <KDBusAddons/kdbusservice.h>
+#include <klocalizedstring.h>
 
-class MyApp : public KUniqueApplication {
-	public:
-		MyApp() : KUniqueApplication() { KGlobal::ref(); }
-		virtual ~MyApp() {}
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QFile>
+#include <QFileInfo>
+#include <QMimeDatabase>
+#include <QMimeType>
 
-		virtual int newInstance() { return 0; }
-};
+int main(int argc, char **argv)
+{
+    QApplication a(argc, argv);
 
-int main(int argc, char **argv) {
-	KAboutData about("kwalletmanager", 0, ki18n("KDE Wallet Manager"), "2.0",
-		ki18n("KDE Wallet Management Tool"),
-		KAboutData::License_GPL,
-		ki18n("(c) 2003,2004 George Staikos"), KLocalizedString(),
-		"http://utils.kde.org/projects/kwalletmanager");
+    QCoreApplication::setApplicationName("kwalletmanager5");
+    QCoreApplication::setApplicationVersion("3.0");
+    QCoreApplication::setOrganizationName("KDE");
+    QCoreApplication::setOrganizationDomain("kde.org");
+    QApplication::setApplicationDisplayName(i18n("Wallet Manager"));
 
-    about.addAuthor(ki18n("Valentin Rusu"), ki18n("Maintainer, user interface refactoring"), "kde@rusu.info");
-	about.addAuthor(ki18n("George Staikos"), ki18n("Original author and former maintainer"), "staikos@kde.org");
-    about.addAuthor(ki18n("Michael Leupold"), ki18n("Developer and former maintainer"), "lemma@confuego.org");
-	about.addAuthor(ki18n("Isaac Clerencia"), ki18n("Developer"), "isaac@warp.es");
+    KDBusService dbssvc(KDBusService::Unique);
 
-	KCmdLineArgs::init(argc, argv, &about);
+    QCommandLineParser parser;
+    parser.addHelpOption();
+    parser.addVersionOption();
 
-	KCmdLineOptions options;
-	options.add("show", ki18n("Show window on startup"));
-	options.add("kwalletd", ki18n("For use by kwalletd only"));
-	options.add("+name", ki18n("A wallet name"));
-	KCmdLineArgs::addCmdLineOptions(options);
+    parser.addOption(QCommandLineOption("show", i18n("Show window on startup")));
+    parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
+    parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
 
-	if (!KUniqueApplication::start()) {
-		return 0;
-	}
+    parser.process(a);
+    KWalletManager wm;
+    QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &QWidget::activateWindow);
 
-	MyApp a;
+    if (parser.isSet("show")) {
+        wm.show();
+    }
 
-	KWalletManager wm;
-	wm.setCaption(i18n("KDE Wallet Manager"));
+    if (parser.isSet("kwalletd")) {
+        wm.kwalletdLaunch();
+    }
 
-	KGlobal::dirs()->addResourceType("kwallet", 0, QLatin1String( "share/apps/kwallet" ));
+    const QStringList arguments = parser.positionalArguments();
+    for (int i = 1; i < arguments.count(); ++i) {
+        QString fn = QFileInfo(arguments.at(i)).absoluteFilePath();
+        if (QFile::exists(fn)) {
+            QMimeDatabase mimeDb;
+            QMimeType mt = mimeDb.mimeTypeForFile(fn, QMimeDatabase::MatchContent);
 
-	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+            if (mt.isValid() && mt.inherits(QLatin1String("application/x-kwallet"))) {
+                wm.openWalletFile(fn);
+            }
+        } else {
+            wm.openWallet(arguments.at(i));
+        }
+    }
 
-	if (args->isSet("show")) {
-		wm.show();
-	}
-
-	if (args->isSet("kwalletd")) {
-		wm.kwalletdLaunch();
-	}
-
-	for (int i = 0; i < args->count(); ++i) {
-		QString fn = QFileInfo(args->arg(i)).absoluteFilePath();
-		KMimeType::Ptr ptr;
-		if (QFile::exists(fn) &&
-			(ptr = KMimeType::findByFileContent(fn)) &&
-			ptr->is(QLatin1String( "application/x-kwallet" ))) {
-			wm.openWalletFile(fn);
-		} else {
-			wm.openWallet(args->arg(i));
-		}
-	}
-	args->clear();
-	return a.exec();
+    return a.exec();
 }
 

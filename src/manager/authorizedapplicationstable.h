@@ -17,13 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef AUTHORIZEDAPPLICATIONSTABLE_H
 #define AUTHORIZEDAPPLICATIONSTABLE_H
 
 #include <QTableView>
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 
@@ -31,7 +31,7 @@ class AuthorizedApplicationsTable : public QTableView
 {
     Q_OBJECT
 public:
-    explicit AuthorizedApplicationsTable(QWidget* parent);
+    explicit AuthorizedApplicationsTable(QWidget *parent);
 
     virtual void setModel(QAbstractItemModel *model);
     void setWallet(KWallet::Wallet *wallet);

@@ -24,7 +24,8 @@
 
 using namespace KAuth;
 
-class SaveHelper : public QObject {
+class SaveHelper : public QObject
+{
     Q_OBJECT;
 public slots:
     ActionReply save(QVariantMap args);

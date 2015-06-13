@@ -22,14 +22,16 @@
 
 #include <QPushButton>
 
-namespace KWallet {
-    class Wallet;
+namespace KWallet
+{
+class Wallet;
 }
 
-class DisconnectAppButton : public QPushButton {
+class DisconnectAppButton : public QPushButton
+{
     Q_OBJECT
 public:
-    DisconnectAppButton(const QString& appName, KWallet::Wallet *wallet);
+    DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet);
 
 Q_SIGNALS:
     void appDisconnected(QString);
@@ -41,7 +43,5 @@ private:
     QString             _appName;
     KWallet::Wallet     *_wallet;
 };
-
-
 
 #endif // DISCONNECTAPPBUTTON_H
