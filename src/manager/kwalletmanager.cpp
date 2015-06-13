@@ -236,9 +236,6 @@ void KWalletManager::updateWalletDisplay()
 void KWalletManager::walletCreated(const QString &newWalletName)
 {
     _managerWidget->updateWalletDisplay(newWalletName);
-    if (!_walletDeleteAction->isEnabled() && (KWallet::Wallet::walletList().size() > 0)) {
-        _walletDeleteAction->setEnabled(true);
-    }
 }
 
 void KWalletManager::contextMenu(const QPoint &)
