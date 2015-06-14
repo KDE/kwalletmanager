@@ -1,7 +1,7 @@
 [Domain]
 Name=KDE Wallet system
 Name[bs]=Sistem KDE novčanika
-Name[ca]=Sistema de cartera del KDE
+Name[ca]=Sistema de carteres del KDE
 Name[ca@valencia]=Sistema de cartera del KDE
 Name[cs]=Systém úschovny pro KDE
 Name[da]=KDE's tegnebogssystem
@@ -107,7 +107,7 @@ Description[ko]=지갑 설정 저장 허용
 Description[nb]=Kan lagre oppsettsinnstillingene for lommeboka
 Description[nds]=Sekern vun Knippinstellen tolaten
 Description[nl]=Opslaan van instellingen van de portefeuille toestaan
-Description[pl]=Zezwól na zapisywanie konfiguracji portfela
+Description[pl]=Zezwól na zapisywanie ustawień portfela
 Description[pt]=Permitir a gravação das definições da carteira
 Description[pt_BR]=Permite salvar as configurações da carteira
 Description[ro]=Permite salvarea parametrilor de configurare ai portofelului
