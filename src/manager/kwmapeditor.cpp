@@ -103,7 +103,7 @@ public:
             KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
             const QRect geo = mapEditor->visualRect(index);
             editor->move(mapEditor->mapToGlobal(geo.topLeft()));
-            editor->resize(geo.width() * 2, geo.height() * 3);
+            editor->resize(geo.width(), geo.height() * 3);
         } else {
             QItemDelegate::updateEditorGeometry(editor, option, index);
         }
