@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
  */
 
+#include "../kwalletmanager_version.h"
 #include "kwalletmanager.h"
 
 #include <KDBusAddons/kdbusservice.h>
@@ -34,7 +35,7 @@ int main(int argc, char **argv)
     QApplication a(argc, argv);
 
     QCoreApplication::setApplicationName("kwalletmanager5");
-    QCoreApplication::setApplicationVersion("3.0");
+    QCoreApplication::setApplicationVersion(QStringLiteral(KWALLETMANAGER_VERSION_STRING));
     QCoreApplication::setOrganizationName("KDE");
     QCoreApplication::setOrganizationDomain("kde.org");
     QApplication::setApplicationDisplayName(i18n("Wallet Manager"));
