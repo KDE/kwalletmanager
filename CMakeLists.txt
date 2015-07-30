@@ -1,5 +1,11 @@
 project(kwalletmanager5)
 
+# KDE Application Version, managed by release script
+set (KDE_APPLICATIONS_VERSION_MAJOR "15")
+set (KDE_APPLICATIONS_VERSION_MINOR "07")
+set (KDE_APPLICATIONS_VERSION_MICRO "80")
+set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
+
 cmake_minimum_required(VERSION 2.8.12)
 
 find_package(ECM 1.7.0 REQUIRED NO_MODULE)
@@ -14,6 +20,12 @@ include(KDECompilerSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
+include(ECMSetupVersion)
+
+## Generate header with version number
+ecm_setup_version(${KDE_APPLICATIONS_VERSION} VARIABLE_PREFIX KWALLETMANAGER
+                  VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/kwalletmanager_version.h"
+)
 
 find_package(KF5 5.2.0 REQUIRED
     CoreAddons

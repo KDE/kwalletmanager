@@ -16,6 +16,8 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
  */
+
+#include "../kwalletmanager_version.h"
 #include "konfigurator.h"
 
 #include <ksharedconfig.h>
@@ -48,12 +50,15 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
       _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals))
 {
-    KAboutData *about =
-        new KAboutData(QLatin1String("kcmkwallet5"),
-                        i18n("KDE Wallet Control Module"),
-                        QString(), QString(), KAboutLicense::GPL,
-                        i18n("(c) 2003 George Staikos"));
-    about->addAuthor(i18n("George Staikos"), QString(), QLatin1String("staikos@kde.org"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcmkwallet5"),
+                                       i18n("KDE Wallet Control Module"),
+                                       QStringLiteral(KWALLETMANAGER_VERSION_STRING),
+                                       QStringLiteral(),
+                                       KAboutLicense::GPL,
+                                       i18n("(c) 2003 George Staikos"));
+    about->addAuthor(i18n("George Staikos"),
+                     QStringLiteral(),
+                     QStringLiteral("staikos@kde.org"));
     setAboutData(about);
     setNeedsAuthorization(true);
 
