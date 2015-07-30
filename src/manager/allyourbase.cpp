@@ -49,15 +49,14 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, co
 
 QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group)
 {
-    KIconLoader *loader = KIconLoader::global();
-    QPixmap pix = loader->loadIcon(_name, group, 0,
-                                   KIconLoader::DefaultState, QStringList(), 0, true);
+    QPixmap pix = QIcon::fromTheme(_name).pixmap(IconSize(group), IconSize(group));
+
     if (pix.isNull())
-        pix = loader->loadIcon(_name.toLower(), group, 0,
-                               KIconLoader::DefaultState, QStringList(), 0, true);
+        pix = QIcon::fromTheme(_name.toLower()).pixmap(IconSize(group), IconSize(group));
+
     if (pix.isNull())
-        pix = loader->loadIcon(QLatin1String("folder-red"), group, 0,
-                               KIconLoader::DefaultState, QStringList(), 0, true);
+        pix = QIcon::fromTheme(QLatin1String("folder-red")).pixmap(IconSize(group), IconSize(group));
+
     return pix;
 }
 

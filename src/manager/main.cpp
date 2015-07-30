@@ -33,6 +33,11 @@ int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
 
+    /**
+     * enable high dpi support
+     */
+    a.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     QCoreApplication::setApplicationName("kwalletmanager5");
     QCoreApplication::setApplicationVersion("3.0");
     QCoreApplication::setOrganizationName("KDE");
