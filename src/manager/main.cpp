@@ -44,6 +44,7 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationName("KDE");
     QCoreApplication::setOrganizationDomain("kde.org");
     QApplication::setApplicationDisplayName(i18n("Wallet Manager"));
+    a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
 
     KDBusService dbssvc(KDBusService::Unique);
 
