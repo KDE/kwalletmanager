@@ -22,6 +22,7 @@
 
 #include <KDBusAddons/kdbusservice.h>
 #include <klocalizedstring.h>
+#include <KAboutData>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -45,6 +46,21 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationDomain("kde.org");
     QApplication::setApplicationDisplayName(i18n("Wallet Manager"));
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
+
+    KAboutData aboutData(QStringLiteral("kwalletmanager5"),
+                 i18n("Wallet Manager"),
+                 QStringLiteral(KWALLETMANAGER_VERSION_STRING),
+                 i18n("KDE Wallet Management Tool"),
+                 KAboutLicense::GPL,
+                 i18n("Copyright ©2013–2015, KWallet Manager authors"),
+                 QString(),
+                 QStringLiteral("http://utils.kde.org/projects/kwalletmanager"));
+    KAboutData::setApplicationData(aboutData);
+
+    aboutData.addAuthor(QLatin1String("Valentin Rusu"), QLatin1String("Maintainer, user interface refactoring"), "kde@rusu.info");
+    aboutData.addAuthor(QLatin1String("George Staikos"), QLatin1String("Original author and former maintainer"), "staikos@kde.org");
+    aboutData.addAuthor(QLatin1String("Michael Leupold"), QLatin1String("Developer and former maintainer"), "lemma@confuego.org");
+    aboutData.addAuthor(QLatin1String("Isaac Clerencia"), QLatin1String("Developer"), "isaac@warp.es");
 
     KDBusService dbssvc(KDBusService::Unique);
 
