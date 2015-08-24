@@ -40,11 +40,6 @@ int main(int argc, char **argv)
      */
     a.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    QCoreApplication::setApplicationName("kwalletmanager5");
-    QCoreApplication::setApplicationVersion(QStringLiteral(KWALLETMANAGER_VERSION_STRING));
-    QCoreApplication::setOrganizationName("KDE");
-    QCoreApplication::setOrganizationDomain("kde.org");
-    QApplication::setApplicationDisplayName(i18n("Wallet Manager"));
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
 
     KAboutData aboutData(QStringLiteral("kwalletmanager5"),
@@ -56,10 +51,20 @@ int main(int argc, char **argv)
                  QString(),
                  QStringLiteral("http://utils.kde.org/projects/kwalletmanager"));
 
-    aboutData.addAuthor(QLatin1String("Valentin Rusu"), QLatin1String("Maintainer, user interface refactoring"), "kde@rusu.info");
-    aboutData.addAuthor(QLatin1String("George Staikos"), QLatin1String("Original author and former maintainer"), "staikos@kde.org");
-    aboutData.addAuthor(QLatin1String("Michael Leupold"), QLatin1String("Developer and former maintainer"), "lemma@confuego.org");
-    aboutData.addAuthor(QLatin1String("Isaac Clerencia"), QLatin1String("Developer"), "isaac@warp.es");
+    aboutData.addAuthor(i18n("Valentin Rusu"),
+                        i18n("Maintainer, user interface refactoring"),
+                        QStringLiteral("kde@rusu.info"));
+    aboutData.addAuthor(i18n("George Staikos"),
+                        i18n("Original author and former maintainer"),
+                        QStringLiteral("staikos@kde.org"));
+    aboutData.addAuthor(i18n("Michael Leupold"),
+                        i18n("Developer and former maintainer"),
+                        QStringLiteral("lemma@confuego.org"));
+    aboutData.addAuthor(i18n("Isaac Clerencia"),
+                        i18n("Developer"),
+                        QStringLiteral("isaac@warp.es"));
+
+    aboutData.setOrganizationDomain("kde.org");
 
     KAboutData::setApplicationData(aboutData);
 
