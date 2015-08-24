@@ -55,12 +55,13 @@ int main(int argc, char **argv)
                  i18n("Copyright ©2013–2015, KWallet Manager authors"),
                  QString(),
                  QStringLiteral("http://utils.kde.org/projects/kwalletmanager"));
-    KAboutData::setApplicationData(aboutData);
 
     aboutData.addAuthor(QLatin1String("Valentin Rusu"), QLatin1String("Maintainer, user interface refactoring"), "kde@rusu.info");
     aboutData.addAuthor(QLatin1String("George Staikos"), QLatin1String("Original author and former maintainer"), "staikos@kde.org");
     aboutData.addAuthor(QLatin1String("Michael Leupold"), QLatin1String("Developer and former maintainer"), "lemma@confuego.org");
     aboutData.addAuthor(QLatin1String("Isaac Clerencia"), QLatin1String("Developer"), "isaac@warp.es");
+
+    KAboutData::setApplicationData(aboutData);
 
     KDBusService dbssvc(KDBusService::Unique);
 
