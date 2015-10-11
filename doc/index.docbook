@@ -65,6 +65,8 @@ allowing the user to remember only a single password instead of numerous differe
 
 <title>Create a Wallet</title>
 
+<para>Wallet is a password storage. It is usually sufficient to have just one wallet secured by one master password but you can organize your large collection of passwords by wallets using &kwalletmanager5;.</para>
+
 <para>There are three ways to create a new wallet:</para>
 
 <itemizedlist>
@@ -74,8 +76,7 @@ Wallet</guimenuitem></menuchoice> in the &kwalletmanager5;</para></listitem>
 <listitem><para>Use the <guibutton>New</guibutton> button in the &systemsettings; module 
 <guilabel>KDE Wallet</guilabel></para></listitem>
 
-<listitem><para>On the first attempt to store login information in a wallet when you did 
-not create a wallet so far, see section <link linkend="kwallet-using">Using &kwallet5;</link>.
+<listitem><para>If you have not created a wallet yet, see section <link linkend="kwallet-using">Using &kwallet5;</link>.
 </para></listitem>
 </itemizedlist>
 
@@ -156,7 +157,7 @@ To use your sensitive data from your classic wallet with the new backend follow 
 
 <itemizedlist>
 <listitem><para>Create a new GPG based wallet</para></listitem>
-<listitem><para>Launch &kwalletmanager5; and select your old wallet then choose <menuchoice><guimenu>File</guimenu>
+<listitem><para>Launch &kwalletmanager5; using &krunner; (<keycombo>&Alt; <keycap>F2</keycap></keycombo>) or other application launcher (menu) and select your old wallet then choose <menuchoice><guimenu>File</guimenu>
 <guimenuitem>Export as XML</guimenuitem></menuchoice> to create an &XML; file with your sensitive data.
 </para></listitem>
 <listitem><para>Select the new GPG based wallet then choose <menuchoice><guimenu>File</guimenu>
