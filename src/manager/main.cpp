@@ -35,6 +35,8 @@ int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
 
+    KLocalizedString::setApplicationDomain("kwalletmanager");
+
     /**
      * enable high dpi support
      */
