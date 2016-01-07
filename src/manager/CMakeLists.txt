@@ -1,6 +1,4 @@
 ########### next target ###############
-add_definitions(-DTRANSLATION_DOMAIN=\"kwalletmanager\")
-
 set(kwalletmanager_SRCS 
     kwalletmanager.cpp
     kwalletmanagerwidget.cpp
