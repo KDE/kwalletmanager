@@ -16,7 +16,7 @@ find_package(Qt5 5.2.0 CONFIG REQUIRED Core Gui Widgets DBus)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDECompilerSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
