@@ -3,6 +3,7 @@ set(kwalletmanager_SRCS
     kwalletmanager.cpp
     kwalletmanagerwidget.cpp
     kwalletmanagerwidgetitem.cpp
+    kwhexview.cpp
     walletcontrolwidget.cpp
     main.cpp
     kwalletpopup.cpp

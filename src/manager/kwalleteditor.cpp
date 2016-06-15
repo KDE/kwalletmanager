@@ -137,6 +137,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
     connect(_showContents, &QToolButton::clicked, this, &KWalletEditor::showPasswordContents);
     connect(_hideContents, &QToolButton::clicked, this, &KWalletEditor::hidePasswordContents);
 
+    _binaryViewShow->setChecked(_alwaysShowContents);
 //    createActions();
     // TODO: remove kwalleteditor.rc file
 }
@@ -558,6 +559,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                                              item->text(0)));
                     _saveChanges->setEnabled(false);
                     _undoChanges->setEnabled(false);
+                    _binaryView->setData(ba);
                 }
             }
             break;
