@@ -2,8 +2,6 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY kwallet5 "<application>KWallet</application>">
   <!ENTITY kwalletmanager5 "<application>KWallet Manager</application>">
-  <!ENTITY package "kwallet5">
-  <!ENTITY kappname "&kwallet5;">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
