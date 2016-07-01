@@ -154,5 +154,5 @@ Type=Application
 Terminal=false
 StartupNotify=false
 Categories=Qt;KDE;System;Security;
-X-DocPath=kwallet/index.html
+X-DocPath=kwallet5/index.html
 X-DBUS-ServiceName=org.kde.kwalletmanager5
