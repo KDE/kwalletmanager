@@ -31,7 +31,6 @@
 #include <qaction.h>
 #include <kconfig.h>
 #include <kiconloader.h>
-#include <kinputdialog.h>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
 #include <kstatusnotifieritem.h>
@@ -48,6 +47,8 @@
 #include <QRegExpValidator>
 #include <QTimer>
 #include <QFileDialog>
+#include <QDialog>
+#include <QLineEdit>
 
 
 KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WindowFlags f)
@@ -308,8 +309,6 @@ void KWalletManager::possiblyRescan(const QString &app, const QString &oldOwner,
 
 void KWalletManager::createWallet()
 {
-    QString n;
-    bool ok;
     QString txt = i18n("Please choose a name for the new wallet:");
     QRegExpValidator validator(QRegExp(QLatin1String("^[\\w\\^\\&\\'\\@\\{\\}\\[\\]\\,\\$\\=\\!\\-\\#\\(\\)\\%\\.\\+\\_\\s]+$")), this);
 
@@ -318,31 +317,47 @@ void KWalletManager::createWallet()
         return;
     }
 
-    do {
-        n = KInputDialog::getText(i18n("New Wallet"), txt, QString(), &ok, this,
-                                  &validator);
+    QDialog nameDialog(this);
+    nameDialog.setWindowTitle(i18n("New Wallet"));
+    nameDialog.setLayout(new QVBoxLayout);
+    nameDialog.layout()->addWidget(new QLabel(txt));
+    QLineEdit *lineEdit = new QLineEdit;
+    lineEdit->setValidator(&validator);
+    nameDialog.layout()->addWidget(lineEdit);
 
-        if (!ok) {
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(buttonBox, &QDialogButtonBox::accepted, &nameDialog, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, &nameDialog, &QDialog::reject);
+    nameDialog.layout()->addWidget(buttonBox);
+
+    QString name;
+    do {
+        if (!nameDialog.exec()) {
             return;
         }
 
-        if (_managerWidget->hasWallet(n)) {
+        name = lineEdit->text();
+        if (name.isEmpty()) {
+            return;
+        }
+
+        if (_managerWidget->hasWallet(name)) {
             int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString(), KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
             if (rc == KMessageBox::No) {
                 return;
             }
-            n.clear();
+            lineEdit->clear();
         } else  {
             break;
         }
     } while (true);
 
     // Small race here - the wallet could be created on us already.
-    if (!n.isEmpty()) {
+    if (!name.isEmpty()) {
         // attempt open the wallet to create it, then dispose it
         // as it'll appear in on the main window via the walletCreated signal
         // emmitted by the kwalletd
-        KWallet::Wallet::openWallet(n, effectiveWinId());
+        KWallet::Wallet::openWallet(name, effectiveWinId());
     }
 }
 
