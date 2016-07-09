@@ -20,8 +20,9 @@
 
 #include "allyourbase.h"
 
-#include <kio/netaccess.h>
+#include <KJobWidgets>
 #include <klocalizedstring.h>
+#include <KIO/StoredTransferJob>
 #include <kmessagebox.h>
 #include <qurl.h>
 #include <kwallet.h>
@@ -284,6 +285,17 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream &ds)
 
 void KWalletItem::processDropEvent(QDropEvent *e)
 {
+    // We fetch this here at the beginning because we run an event loop further
+    // down which might lead to the event data getting deleted
+    KWalletEntryList *el = nullptr;
+    Qt::DropAction proposedAction = e->proposedAction();
+    if (e->source() && e->source()->parent() &&
+            !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList") &&
+            (proposedAction != Qt::CopyAction)) {
+
+        el = dynamic_cast<KWalletEntryList *>(e->source()->parent());
+    }
+
     if (e->mimeData()->hasFormat("application/x-kwallet-folder") ||
             e->mimeData()->hasFormat("text/uri-list")) {
         // FIXME: don't allow the drop if the wallet name is the same
@@ -295,13 +307,11 @@ void KWalletItem::processDropEvent(QDropEvent *e)
 
         const QString saveFolder = _wallet->currentFolder();
 
-        QDataStream *ds = 0L;
+        QByteArray data;
 
         if (e->mimeData()->hasFormat("application/x-kwallet-folder")) {
-            QByteArray edata = e->mimeData()->data("application/x-kwallet-folder");
-            if (!edata.isEmpty()) {
-                ds = new QDataStream(&edata, QIODevice::ReadOnly);
-            }
+            data = e->mimeData()->data("application/x-kwallet-folder");
+            e->accept();
         } else { // text/uri-list
             const QList<QUrl> urls = e->mimeData()->urls();
             if (urls.isEmpty()) {
@@ -314,41 +324,33 @@ void KWalletItem::processDropEvent(QDropEvent *e)
                 e->ignore();
                 return;
             }
-            QString tmpFile;
-            if (KIO::NetAccess::download(u, tmpFile, 0L)) {
-                QFile file;
-                file.setFileName(tmpFile);
-                file.open(QIODevice::ReadOnly);
-                ds = new QDataStream(&file);
-                KIO::NetAccess::removeTempFile(tmpFile);
+            KIO::StoredTransferJob *job = KIO::storedGet(u);
+            KJobWidgets::setWindow(job, listWidget());
+
+            e->accept();
+            if (job->exec()) {
+                data = job->data();
             } else {
-                KMessageBox::error(listWidget(), KIO::NetAccess::lastErrorString());
+                KMessageBox::error(listWidget(), job->errorString());
             }
         }
-        if (ds) {
-            decodeFolder(_wallet, *ds);
-            delete ds;
+
+        if (!data.isEmpty()) {
+            QDataStream ds(data);
+            decodeFolder(_wallet, ds);
         }
+
         _wallet->setFolder(saveFolder);
         delete _wallet;
 
         //delete the folder from the source if we were moving
-        Qt::MouseButtons state = QApplication::mouseButtons();
-        if (e->source() && e->source()->parent() &&
-                !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList") &&
-                !(state & Qt::ControlModifier)) {
-
-            KWalletEntryList *el =
-                dynamic_cast<KWalletEntryList *>(e->source()->parent());
-            if (el) {
-                KWalletFolderItem *fi =
-                    dynamic_cast<KWalletFolderItem *>(el->currentItem());
-                if (fi) {
-                    el->_wallet->removeFolder(fi->name());
-                }
+        if (el) {
+            KWalletFolderItem *fi =
+                dynamic_cast<KWalletFolderItem *>(el->currentItem());
+            if (fi) {
+                el->_wallet->removeFolder(fi->name());
             }
         }
-        e->accept();
     } else {
         e->ignore();
         return;
@@ -381,11 +383,18 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
 {
     bool ok = true;
     bool isEntry;
-    QFile file;
-    QDataStream *ds;
+    QByteArray data;
 
     KWalletEntryList *el = 0L;
     QTreeWidgetItem *sel = 0L;
+
+    // We fetch this here because we run an event loop further down which might invalidate this
+    Qt::DropAction proposedAction = e->proposedAction();
+
+    if (!item) {
+        e->ignore();
+        return;
+    }
 
     //detect if we are dragging from kwallet itself
     qDebug() << e->source() << e->source()->metaObject()->className();
@@ -407,12 +416,12 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
             return;
         }
         isEntry = true;
-        QByteArray data = e->mimeData()->data("application/x-kwallet-entry");
+        data = e->mimeData()->data("application/x-kwallet-entry");
         if (data.isEmpty()) {
             e->ignore();
             return;
         }
-        ds = new QDataStream(&data, QIODevice::ReadOnly);
+        e->accept();
     } else if (e->mimeData()->hasFormat("application/x-kwallet-folder")) {
         //do nothing if we are in the same wallet
         if (this == el) {
@@ -420,12 +429,12 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
             return;
         }
         isEntry = false;
-        QByteArray data = e->mimeData()->data("application/x-kwallet-folder");
+        data = e->mimeData()->data("application/x-kwallet-folder");
         if (data.isEmpty()) {
             e->ignore();
             return;
         }
-        ds = new QDataStream(&data, QIODevice::ReadOnly);
+        e->accept();
     } else if (e->mimeData()->hasFormat("text/uri-list")) {
         const QList<QUrl> urls = e->mimeData()->urls();
         if (urls.isEmpty()) {
@@ -437,69 +446,57 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
             e->ignore();
             return;
         }
-        QString tmpFile;
-        if (KIO::NetAccess::download(u, tmpFile, 0L)) {
-            file.setFileName(tmpFile);
-            file.open(QIODevice::ReadOnly);
-            ds = new QDataStream(&file);
-            //check magic to discover mime type
-            quint32 magic;
-            (*ds) >> magic;
-            delete ds;
-            if (magic == KWALLETENTRYMAGIC) {
-                isEntry = true;
-            } else if (magic == KWALLETFOLDERMAGIC) {
-                isEntry = false;
-            } else {
-                qDebug() << "bad magic" ;
-                e->ignore();
-                return;
-            }
-            //set the file back to the beginning
-            file.reset();
-            ds = new QDataStream(&file);
-            KIO::NetAccess::removeTempFile(tmpFile);
+
+        e->accept();
+
+        KIO::StoredTransferJob *job = KIO::storedGet(u);
+        KJobWidgets::setWindow(job, this);
+        if (!job->exec()) {
+            KMessageBox::error(this, job->errorString());
+            return;
+        }
+        data = job->data();
+
+        QByteArray entryMagic(QByteArray::number(KWALLETENTRYMAGIC));
+        QByteArray folderMagic(QByteArray::number(KWALLETFOLDERMAGIC));
+
+        if (data.startsWith(entryMagic)) {
+            isEntry = true;
+        } else if (data.startsWith(folderMagic)) {
+            isEntry = false;
         } else {
-            KMessageBox::error(this, KIO::NetAccess::lastErrorString());
+            qDebug() << "bad magic" ;
             return;
         }
     } else {
         e->ignore();
         return;
     }
-    Qt::MouseButtons state = QApplication::mouseButtons();
+
+    QDataStream ds(data);
+
     if (isEntry) {
-        if (!item) {
-            e->ignore();
-            delete(ds);
-            return;
-        }
         KWalletFolderItem *fi = KWalletEntryList::getItemFolder(item);
         if (!fi) {
             KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the entry"));
-            delete(ds);
-            e->accept();
             return;
         }
         QString saveFolder = _wallet->currentFolder();
         _wallet->setFolder(fi->name());
-        ok = decodeEntry(_wallet, *ds);
+        ok = decodeEntry(_wallet, ds);
         _wallet->setFolder(saveFolder);
         fi->refresh();
-        delete(ds);
         //delete source if we were moving, i.e., we are dragging
         //from kwalletmanager and Control is not pressed
-        if (ok && el && !(state & Qt::ControlModifier) && sel) {
+        if (ok && el && proposedAction != Qt::CopyAction && sel) {
             el->_wallet->removeEntry(sel->text(0));
             delete sel;
         }
-        e->accept();
     } else {
-        ok = decodeFolder(_wallet, *ds);
-        delete ds;
+        ok = decodeFolder(_wallet, ds);
         //delete source if we were moving, i.e., we are dragging
         //from kwalletmanager and Control is not pressed
-        if (ok && el && !(state & Qt::ControlModifier) && sel) {
+        if (ok && el && proposedAction != Qt::CopyAction && sel) {
             KWalletFolderItem *fi = dynamic_cast<KWalletFolderItem *>(sel);
             if (fi) {
                 el->_wallet->removeFolder(fi->name());
@@ -508,7 +505,6 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
                 KMessageBox::error(this, i18n("An unexpected error occurred trying to delete the original folder, but the folder has been copied successfully"));
             }
         }
-        e->accept();
     }
 }
 

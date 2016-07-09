@@ -26,7 +26,9 @@
 #include <qaction.h>
 #include <qdialog.h>
 #include <qinputdialog.h>
-#include <kio/netaccess.h>
+#include <KIO/StoredTransferJob>
+#include <KJobUiDelegate>
+#include <KJobWidgets>
 #include <kactioncollection.h>
 #include <kcodecs.h>
 #include <kmessagebox.h>
@@ -937,13 +939,22 @@ void KWalletEditor::importWallet()
         return;
     }
 
-    QString tmpFile;
-    if (!KIO::NetAccess::download(url, tmpFile, this)) {
-        KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
+    QTemporaryFile tmpFile;
+    if (!tmpFile.open()) {
+        KMessageBox::sorry(this, i18n("Unable to create temporary file for downloading '<b>%1</b>'.", url.toDisplayString()));
         return;
     }
 
-    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile, effectiveWinId(), KWallet::Wallet::Path);
+    KIO::StoredTransferJob *job = KIO::storedGet(url);
+    KJobWidgets::setWindow(job, this);
+    if (!job->exec()) {
+        KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
+        return;
+    }
+    tmpFile.write(job->data());
+    tmpFile.flush();
+
+    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile.fileName(), effectiveWinId(), KWallet::Wallet::Path);
     if (w && w->isOpen()) {
         MergePlan mp = Prompt;
         QStringList fl = w->folderList();
@@ -1060,7 +1071,6 @@ void KWalletEditor::importWallet()
 
     delete w;
 
-    KIO::NetAccess::removeTempFile(tmpFile);
     updateFolderList(true);
     restoreEntry();
 }
@@ -1073,30 +1083,22 @@ void KWalletEditor::importXML()
         return;
     }
 
-    QString tmpFile;
-    if (!KIO::NetAccess::download(url, tmpFile, this)) {
+    KIO::StoredTransferJob *job = KIO::storedGet(url);
+    KJobWidgets::setWindow(job, this);
+    if (!job->exec()) {
         KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.toDisplayString()));
         return;
     }
 
-    QFile qf(tmpFile);
-    if (!qf.open(QIODevice::ReadOnly)) {
-        KMessageBox::sorry(this, i18n("Error opening XML file '<b>%1</b>' for input.", url.toDisplayString()));
-        KIO::NetAccess::removeTempFile(tmpFile);
-        return;
-    }
-
-    QDomDocument doc(tmpFile);
-    if (!doc.setContent(&qf)) {
+    QDomDocument doc;
+    if (!doc.setContent(job->data())) {
         KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.toDisplayString()));
-        KIO::NetAccess::removeTempFile(tmpFile);
         return;
     }
 
     QDomElement top = doc.documentElement();
     if (top.tagName().toLower() != QLatin1String("wallet")) {
         KMessageBox::sorry(this, i18n("Error: XML file does not contain a wallet."));
-        KIO::NetAccess::removeTempFile(tmpFile);
         return;
     }
 
@@ -1167,7 +1169,6 @@ void KWalletEditor::importXML()
         n = n.nextSibling();
     }
 
-    KIO::NetAccess::removeTempFile(tmpFile);
     updateFolderList(true);
     restoreEntry();
 }
@@ -1239,8 +1240,14 @@ void KWalletEditor::exportXML()
 
     QUrl url = QFileDialog::getSaveFileUrl(this, QString(), QUrl(), QLatin1String("*.xml"));
 
-    if (!url.isEmpty()) {
-        KIO::NetAccess::dircopy(QUrl::fromLocalFile(tf.fileName()), url, this);
+    if (url.isEmpty()) {
+        return;
+    }
+
+    KIO::StoredTransferJob *putJob = KIO::storedPut(&tf, url, -1);
+    KJobWidgets::setWindow(putJob, this);
+    if (!putJob->exec()) {
+        KMessageBox::sorry(this, i18n("Unable to store to '<b>%1</b>'.", url.toDisplayString()));
     }
 }
 

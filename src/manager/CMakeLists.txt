@@ -50,6 +50,8 @@ target_link_libraries(kwalletmanager5
     KF5::DBusAddons
     KF5::ConfigCore
     KF5::Service
+    KF5::KIOCore
+    KF5::JobWidgets
     KF5::KDELibs4Support
     KF5::Archive
 )

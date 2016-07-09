@@ -26,7 +26,6 @@
 #include <qurl.h>
 #include <kmessagebox.h>
 #include <klocalizedstring.h>
-#include <kio/netaccess.h>
 #include <QDragEnterEvent>
 
 KWalletManagerWidget::KWalletManagerWidget(QWidget *parent, Qt::WindowFlags flags):
