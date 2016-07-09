@@ -28,18 +28,25 @@ ecm_setup_version(${KDE_APPLICATIONS_VERSION} VARIABLE_PREFIX KWALLETMANAGER
 )
 
 find_package(KF5 5.2.0 REQUIRED
-    CoreAddons
-    DocTools
+    Archive
     Auth
-    Wallet
-    Service
-    KCMUtils
-    KDELibs4Support
-    I18n
-    XmlGui
     Config
     ConfigWidgets
+    CoreAddons
     DBusAddons
+    DocTools
+    I18n
+    IconThemes
+    JobWidgets
+    KCMUtils
+    KDELibs4Support
+    KIO
+    Notifications
+    Service
+    TextWidgets
+    Wallet
+    WindowSystem
+    XmlGui
 )
 
 add_subdirectory( doc )

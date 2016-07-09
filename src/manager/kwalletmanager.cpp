@@ -50,7 +50,7 @@
 #include <QFileDialog>
 
 
-KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WFlags f)
+KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WindowFlags f)
     : KXmlGuiWindow(parent, f)
 {
     _kwalletdLaunch = false;

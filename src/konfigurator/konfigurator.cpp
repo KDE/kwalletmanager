@@ -258,7 +258,7 @@ void KWalletConfig::load()
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
         }
     }
-    _wcw->_accessList->header()->setResizeMode(QHeaderView::ResizeToContents);
+    _wcw->_accessList->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     emit changed(false);
 }
 

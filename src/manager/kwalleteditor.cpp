@@ -980,7 +980,7 @@ void KWalletEditor::importWallet()
                     if (hasEntry && mp == Prompt) {
                         KBetterThanKDialogBase *bd;
                         bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(*f), Qt::escape(me.key())));
+                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), me.key().toHtmlEscaped()));
                         mp = (MergePlan)bd->exec();
                         delete bd;
                         bool ok = false;
@@ -1011,7 +1011,7 @@ void KWalletEditor::importWallet()
                     if (hasEntry && mp == Prompt) {
                         KBetterThanKDialogBase *bd;
                         bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(*f), Qt::escape(pe.key())));
+                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), pe.key().toHtmlEscaped()));
                         mp = (MergePlan)bd->exec();
                         delete bd;
                         bool ok = false;
@@ -1046,7 +1046,7 @@ void KWalletEditor::importWallet()
                     if (hasEntry && mp == Prompt) {
                         KBetterThanKDialogBase *bd;
                         bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(*f), Qt::escape(ee.key())));
+                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), ee.key().toHtmlEscaped()));
                         mp = (MergePlan)bd->exec();
                         delete bd;
                         bool ok = false;
@@ -1129,7 +1129,7 @@ void KWalletEditor::importXML()
             if (hasEntry && mp == Prompt) {
                 KBetterThanKDialogBase *bd;
                 bd = new KBetterThanKDialogBase(this);
-                bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", Qt::escape(fname), Qt::escape(ename)));
+                bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", fname.toHtmlEscaped(), ename.toHtmlEscaped()));
                 mp = (MergePlan)bd->exec();
                 delete bd;
                 bool ok = false;

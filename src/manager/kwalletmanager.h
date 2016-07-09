@@ -36,7 +36,7 @@ class KWalletManager : public KXmlGuiWindow
     Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
 
 public:
-    explicit KWalletManager(QWidget *parent = 0, const char *name = 0, Qt::WFlags f = 0);
+    explicit KWalletManager(QWidget *parent = 0, const char *name = 0, Qt::WindowFlags f = 0);
     virtual ~KWalletManager();
 
     void kwalletdLaunch();
