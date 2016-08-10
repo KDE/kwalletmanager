@@ -55,7 +55,6 @@
 #include <QList>
 #include <QPushButton>
 #include <QStack>
-#include <QStandardPaths>
 #include <QSet>
 #include <QTextStream>
 #include <QTimer>
