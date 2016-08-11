@@ -228,8 +228,8 @@ void KWalletConfig::load()
         QString walletName = *i;
         // perform cleanup in the kwalletrc file, by removing entries that correspond to non-existent
         // (previously deleted, for example) wallets
-        QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
-        path.append(QString("/kwallet/%1.kwl").arg(walletName));
+        QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        path.append(QString("/kwalletd/%1.kwl").arg(walletName));
         if (!QFile::exists(path)) {
             // if the wallet no longer exists, delete the entries from the configuration file and skip to next entry
             KConfigGroup cfgAllow = KSharedConfig::openConfig("kwalletrc")->group("Auto Allow");
