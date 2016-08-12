@@ -174,7 +174,7 @@ wallet to use as default</guilabel> combobox.
 </para></listitem>
 </itemizedlist>
 
-<para>Alternativly use <guimenuitem>Import a wallet</guimenuitem>
+<para>Alternatively use <guimenuitem>Import a wallet</guimenuitem>
 but in that case you have to select the <filename class="extension">.kwl</filename> file corresponding
 to your old wallet, located in the folder <filename class="directory">kwalletd</filename>
 in <userinput>qtpaths --paths GenericDataLocation</userinput>.
@@ -351,7 +351,7 @@ locations.</para>
 <para>If you want to transfer your secrets to another device or computer use
 the actions in the <guimenu>File</guimenu> menu. With <guimenuitem>Export as encrypted</guimenuitem>
 wallets can be exported into an encrypted archive file.
-Importing this archive file with <guimenuitem>import encrypted</guimenuitem>
+Importing this archive file with <guimenuitem>Import encrypted</guimenuitem>
 you have to provide the master password of the wallet.
 </para>
 <para>Alternatively a <filename class="extension">.xml</filename> file can be used for transferring
