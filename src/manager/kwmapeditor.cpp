@@ -26,7 +26,7 @@
 #include <QMenu>
 #include <kstandardaction.h>
 #include <kwindowsystem.h>
-#include <ktextedit.h>
+#include <qtextedit.h>
 
 #include <QApplication>
 #include <QClipboard>
@@ -37,14 +37,13 @@
 #include <QPointer>
 #include <QToolButton>
 
-class InlineEditor : public KTextEdit
+class InlineEditor : public QTextEdit
 {
 public:
-    InlineEditor(KWMapEditor *p) : KTextEdit(), _p(p)
+    InlineEditor(KWMapEditor *p) : QTextEdit(), _p(p)
     {
         setAttribute(Qt::WA_DeleteOnClose);
         setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
-        setCheckSpellingEnabled(false);
         connect(p, SIGNAL(destroyed()), SLOT(close()));
     }
 
@@ -66,7 +65,7 @@ protected:
             close();
         } else {
             e->ignore();
-            KTextEdit::keyPressEvent(e);
+            QTextEdit::keyPressEvent(e);
         }
     }
     virtual void contextMenuEvent(QContextMenuEvent *event)
