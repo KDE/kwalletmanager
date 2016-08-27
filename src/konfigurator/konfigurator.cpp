@@ -275,8 +275,11 @@ void KWalletConfig::save()
     KAuth::ExecuteJob *j = action.execute();
 
     if (!j->exec()) {
-        qDebug() << j->errorText();
-        KMessageBox::error(this, j->errorString(), i18n("KDE Wallet Control Module"));
+        if (j->error() == KAuth::ActionReply::AuthorizationDeniedError) {
+            KMessageBox::error(this, i18n("Permission denied."), i18n("KDE Wallet Control Module"));
+        } else {
+            KMessageBox::error(this, i18n("Error while authenticating action:\n%1", j->errorString()), i18n("KDE Wallet Control Module"));
+        }
         load();
         return;
     }
