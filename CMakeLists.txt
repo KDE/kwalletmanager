@@ -39,7 +39,6 @@ find_package(KF5 5.2.0 REQUIRED
     IconThemes
     JobWidgets
     KCMUtils
-    KDELibs4Support
     KIO
     Notifications
     Service
