@@ -1243,6 +1243,9 @@ void KWalletEditor::exportXML()
         return;
     }
 
+    // #368314: QTemporaryFiles are open in ReadWrite mode, so the QIODevice's position needs to be rewind.
+    tf.seek(0);
+
     KIO::StoredTransferJob *putJob = KIO::storedPut(&tf, url, -1);
     KJobWidgets::setWindow(putJob, this);
     if (!putJob->exec()) {
