@@ -103,6 +103,7 @@ Comment[tr]=Cüzdan Yönetim Aracı
 Comment[uk]=Засіб керування торбинками
 Comment[x-test]=xxWallet Management Toolxx
 Comment[zh_CN]=钱包管理工具
+Comment[zh_TW]=錢包管理工具
 Exec=kwalletmanager5 --kwalletd
 Icon=kwalletmanager
 Type=Application
