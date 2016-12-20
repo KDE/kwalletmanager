@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Wallet Management Tool
 Name[ar]=أداة إدارة المحفظة
-Name[ast]=Ferramienta de xestión de carteres
 Name[bg]=Инструмент за настройване на "Портфейл"
 Name[br]=Merour an doug-paperoù
 Name[bs]=Alatka za upravljanje novčanicima
@@ -70,7 +69,6 @@ Name[x-test]=xxWallet Management Toolxx
 Name[zh_CN]=钱包管理工具
 Name[zh_TW]=錢包管理工具
 Comment=Wallet Management Tool
-Comment[ast]=Ferramienta de xestión de carteres
 Comment[ca]=Eina per a la gestió de carteres
 Comment[ca@valencia]=Eina per a la gestió de carteres
 Comment[cs]=Nástroj pro správu úschovny

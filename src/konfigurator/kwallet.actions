@@ -1,6 +1,5 @@
 [Domain]
 Name=KDE Wallet system
-Name[ast]=Sistema de carteres KDE
 Name[bs]=Sistem KDE novčanika
 Name[ca]=Sistema de carteres del KDE
 Name[ca@valencia]=Sistema de carteres del KDE
@@ -46,7 +45,6 @@ Icon=kwalletmanager
 
 [org.kde.kcontrol.kcmkwallet5.save]
 Name=Save wallet configuration
-Name[ast]=Guardar configuración de cartera
 Name[bs]=Snimi konfiguraciju novčanika
 Name[ca]=Desa la configuració de la cartera
 Name[ca@valencia]=Guarda la configuració de la cartera
@@ -89,7 +87,6 @@ Name[x-test]=xxSave wallet configurationxx
 Name[zh_CN]=保存钱包配置
 Name[zh_TW]=儲存錢包設定
 Description=Allow saving wallet configuration settings
-Description[ast]=Permite guardar los axustes de configuración de carteres
 Description[bs]=Dopusti snimanje postavki novčanika
 Description[ca]=Permet desar els paràmetres de configuració de la cartera
 Description[ca@valencia]=Permet guardar els paràmetres de configuració de la cartera
