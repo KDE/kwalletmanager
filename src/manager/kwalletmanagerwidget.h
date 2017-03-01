@@ -41,6 +41,7 @@ public:
     bool openWallet(const QString &name);
 
     const QString &activeWalletName() const;
+    bool hasUnsavedChanges(const QString& name) const;
 
 protected:
     virtual void dragEnterEvent(QDragEnterEvent *e);

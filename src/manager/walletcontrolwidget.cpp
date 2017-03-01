@@ -114,6 +114,12 @@ void WalletControlWidget::onOpenClose()
 {
     // TODO create some fancy animation here to make _walletEditor appear or dissapear in a fancy way
     if (_wallet) {
+        if (hasUnsavedChanges()) {
+            int choice = KMessageBox::warningYesNo(this, i18n("Ignore unsaved changes?"));
+            if (choice == KMessageBox::No) {
+                return;
+            }
+        }
         // Wallet is open, attempt close it
         int rc = KWallet::Wallet::closeWallet(_walletName, false);
         if (rc != 0) {
@@ -164,6 +170,11 @@ void WalletControlWidget::onDisconnectApplication()
 void WalletControlWidget::onChangePassword()
 {
     KWallet::Wallet::changePassword(_walletName, effectiveWinId());
+}
+
+bool WalletControlWidget::hasUnsavedChanges() const
+{
+    return (_walletEditor ? _walletEditor->hasUnsavedChanges() : false);
 }
 
 void WalletControlWidget::hideEvent(QHideEvent *)

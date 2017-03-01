@@ -197,4 +197,22 @@ bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent *e, QUrl *u) c
 //     return *u == KUrl();
 }
 
-
+bool KWalletManagerWidget::hasUnsavedChanges(const QString &name) const
+{
+    if (name.isEmpty()) {
+        WalletPagesHash::const_iterator cp   = _walletPages.constBegin();
+        WalletPagesHash::const_iterator cend = _walletPages.constEnd();
+        for (; cp != cend; cp++) {
+            if (cp.value()->hasUnsavedChanges()) {
+                return true;
+            }
+        }
+        return false;
+    } else {
+        WalletPagesHash::const_iterator it = _walletPages.find(name);
+        if (it == _walletPages.constEnd()) {
+                return false;
+        }
+        return it.value()->hasUnsavedChanges();
+    }
+}

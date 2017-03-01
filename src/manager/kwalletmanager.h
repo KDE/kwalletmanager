@@ -40,6 +40,8 @@ public:
     virtual ~KWalletManager();
 
     void kwalletdLaunch();
+    bool hasUnsavedChanges(const QString& name = QString()) const;
+    bool canIgnoreUnsavedChanges();
 
 public slots:
     void createWallet();

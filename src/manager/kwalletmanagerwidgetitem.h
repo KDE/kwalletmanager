@@ -35,6 +35,7 @@ public:
         return _walletName;
     }
     bool openWallet();
+    bool hasUnsavedChanges() const;
 
 private:
     WalletControlWidget *_controlWidget;

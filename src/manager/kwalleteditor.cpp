@@ -91,6 +91,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
 
     _undoChanges->setIcon(QIcon::fromTheme(QLatin1String("edit-undo")));
     _saveChanges->setIcon(QIcon::fromTheme(QLatin1String("document-save")));
+    _hasUnsavedChanges = false;
 
     QVBoxLayout *box = new QVBoxLayout(_entryListFrame);
     box->setMargin(0);
@@ -444,7 +445,7 @@ void KWalletEditor::saveEntry()
     QTreeWidgetItem *item = _displayedItem; //  _entryList->currentItem();
     _saveChanges->setEnabled(false);
     _undoChanges->setEnabled(false);
-
+    _hasUnsavedChanges = false;
     if (item && _w && item->parent()) {
         KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem *>(item->parent());
         if (ci) {
@@ -469,12 +470,14 @@ void KWalletEditor::saveEntry()
 void KWalletEditor::restoreEntry()
 {
     entrySelectionChanged(_entryList->currentItem());
+    _hasUnsavedChanges = false;
 }
 
 void KWalletEditor::entryEditted()
 {
     _saveChanges->setEnabled(true);
     _undoChanges->setEnabled(true);
+    _hasUnsavedChanges = true;
 }
 
 void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
@@ -487,8 +490,10 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
         } else {
             _saveChanges->setEnabled(false);
             _undoChanges->setEnabled(false);
+            _hasUnsavedChanges = false;
         }
     }
+
     KWalletContainerItem *ci = 0L;
     KWalletFolderItem *fi = 0L;
 
@@ -536,6 +541,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                     _passwordValue->setText(pass);
                     _saveChanges->setEnabled(false);
                     _undoChanges->setEnabled(false);
+                    _hasUnsavedChanges = false;
                 }
                 // add a context-menu action for copying passwords
                 _contextMenu->addSeparator();
@@ -550,6 +556,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                     _entryName->setText(i18n("Name-Value Map: %1", item->text(0)));
                     _saveChanges->setEnabled(false);
                     _undoChanges->setEnabled(false);
+                    _hasUnsavedChanges = false;
                     showHideMapEditorValue(_mapEditorShowHide->isChecked());
                 }
             } else if (ci->entryType() == KWallet::Wallet::Stream) {
@@ -560,6 +567,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                                              item->text(0)));
                     _saveChanges->setEnabled(false);
                     _undoChanges->setEnabled(false);
+                    _hasUnsavedChanges = false;
                     _binaryView->setData(ba);
                 }
             }
@@ -1314,5 +1322,7 @@ void KWalletEditor::onAlwaysHideContents(bool checked)
     }
 }
 
-
-
+bool KWalletEditor::hasUnsavedChanges() const
+{
+    return _hasUnsavedChanges;
+}

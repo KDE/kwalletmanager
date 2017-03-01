@@ -46,4 +46,7 @@ bool KWalletManagerWidgetItem::openWallet()
     return _controlWidget->openWallet();
 }
 
-
+bool KWalletManagerWidgetItem::hasUnsavedChanges() const
+{
+    return (_controlWidget ? _controlWidget->hasUnsavedChanges() : false);
+}

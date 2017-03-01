@@ -204,6 +204,10 @@ void KWalletManager::kwalletdLaunch()
 
 bool KWalletManager::queryClose()
 {
+    if (hasUnsavedChanges() && !canIgnoreUnsavedChanges()) {
+        return false;
+    }
+
     if (!_shuttingDown) {
         if (!_tray) {
             qApp->quit();
@@ -245,6 +249,10 @@ void KWalletManager::contextMenu(const QPoint &)
 
 void KWalletManager::closeWallet(const QString &walletName)
 {
+    if (hasUnsavedChanges(walletName) && !canIgnoreUnsavedChanges()) {
+        return;
+    }
+
     int rc = KWallet::Wallet::closeWallet(walletName, false);
     if (rc != 0) {
         rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString(), KGuiItem(i18n("Force Closure")), KGuiItem(i18n("Do Not Force")));
@@ -386,6 +394,10 @@ void KWalletManager::openWallet()
 
 void KWalletManager::shuttingDown()
 {
+    if (hasUnsavedChanges() && !canIgnoreUnsavedChanges()) {
+        return;
+    }
+
     _shuttingDown = true;
     qApp->quit();
 }
@@ -397,6 +409,11 @@ void KWalletManager::setupWallet()
 
 void KWalletManager::closeAllWallets()
 {
+    if (hasUnsavedChanges() && !canIgnoreUnsavedChanges()) {
+        return;
+
+    }
+
     m_kwalletdModule->closeAllWallets();
 }
 
@@ -467,4 +484,13 @@ void KWalletManager::importWallets()
 
 }
 
+bool KWalletManager::hasUnsavedChanges(const QString &name) const
+{
+    return _managerWidget->hasUnsavedChanges(name);
+}
 
+bool KWalletManager::canIgnoreUnsavedChanges()
+{
+    int rc = KMessageBox::warningYesNo(this, i18n("Ignore unsaved changes?"));
+    return (rc == KMessageBox::Yes);
+}

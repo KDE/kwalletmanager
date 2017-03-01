@@ -36,6 +36,7 @@ public:
     WalletControlWidget(QWidget *parent, const QString &walletName);
 
     bool openWallet();
+    bool hasUnsavedChanges() const;
 
 public Q_SLOTS:
     void onSetupWidget();

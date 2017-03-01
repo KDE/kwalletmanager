@@ -51,6 +51,7 @@ public:
         return _w != 0L;
     }
 
+    bool hasUnsavedChanges() const;
     void setNewWallet(bool newWallet);
 
 protected:
@@ -130,6 +131,7 @@ private:
     KTreeWidgetSearchLine *_searchLine;
     static QAction *_alwaysShowContentsAction, *_alwaysHideContentsAction;
     bool _alwaysShowContents;
+    bool _hasUnsavedChanges;
 };
 
 #endif
