@@ -33,11 +33,11 @@ class AuthorizedApplicationsTable : public QTableView
 public:
     explicit AuthorizedApplicationsTable(QWidget *parent);
 
-    virtual void setModel(QAbstractItemModel *model);
+    void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
     void setWallet(KWallet::Wallet *wallet);
 
 protected:
-    virtual void resizeEvent(QResizeEvent *resizeEvent);
+    void resizeEvent(QResizeEvent *resizeEvent) Q_DECL_OVERRIDE;
 
 private:
     KWallet::Wallet     *_wallet;

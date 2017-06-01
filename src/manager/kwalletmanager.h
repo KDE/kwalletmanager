@@ -55,7 +55,7 @@ public slots:
     void walletCreated(const QString &walletName);
 
 protected:
-    virtual bool queryClose();
+    bool queryClose() Q_DECL_OVERRIDE;
 
 private:
 public Q_SLOTS: //dbus

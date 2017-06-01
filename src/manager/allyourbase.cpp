@@ -691,7 +691,7 @@ public:
         parent->installEventFilter(this);
     }
 
-    bool eventFilter(QObject * /*watched*/, QEvent *event)
+    bool eventFilter(QObject * /*watched*/, QEvent *event) Q_DECL_OVERRIDE
     {
         if (event->type() == QEvent::KeyPress) {
             QKeyEvent *ke = static_cast<QKeyEvent *>(event);

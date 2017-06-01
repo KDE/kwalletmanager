@@ -39,11 +39,11 @@ public:
     explicit KWalletConfig(QWidget *parent = 0L, const QVariantList & = QVariantList());
     virtual ~KWalletConfig();
 
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
-    QString quickHelp() const;
+    QString quickHelp() const Q_DECL_OVERRIDE;
 
 public slots:
     void configChanged();
