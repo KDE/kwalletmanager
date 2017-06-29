@@ -372,6 +372,9 @@ void KWalletManager::createWallet()
 void KWalletManager::deleteWallet()
 {
     QString walletName = _managerWidget->activeWalletName();
+    if (walletName.isEmpty()) {
+        return;
+    }
     int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the wallet '%1'?", walletName), QString(), KStandardGuiItem::del());
     if (rc != KMessageBox::Continue) {
         return;
