@@ -40,7 +40,7 @@ public:
     bool openWalletFile(const QString &path);
     bool openWallet(const QString &name);
 
-    const QString &activeWalletName() const;
+    QString activeWalletName() const;
     bool hasUnsavedChanges(const QString& name) const;
 
 protected:

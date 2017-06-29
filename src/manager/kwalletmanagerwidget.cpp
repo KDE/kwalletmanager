@@ -115,9 +115,14 @@ bool KWalletManagerWidget::openWallet(const QString &name)
     return result;
 }
 
-const QString &KWalletManagerWidget::activeWalletName() const
+QString KWalletManagerWidget::activeWalletName() const
 {
-    return qobject_cast<KWalletManagerWidgetItem *>(currentPage())->walletName();
+    KWalletManagerWidgetItem *page = qobject_cast<KWalletManagerWidgetItem *>(currentPage());
+    if (page) {
+        return page->walletName();
+    } else {
+        return QString();
+    }
 }
 
 void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent *e)
@@ -202,7 +207,7 @@ bool KWalletManagerWidget::hasUnsavedChanges(const QString &name) const
     if (name.isEmpty()) {
         WalletPagesHash::const_iterator cp   = _walletPages.constBegin();
         WalletPagesHash::const_iterator cend = _walletPages.constEnd();
-        for (; cp != cend; cp++) {
+        for (; cp != cend; ++cp) {
             if (cp.value()->hasUnsavedChanges()) {
                 return true;
             }
