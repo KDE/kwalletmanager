@@ -156,7 +156,7 @@ void KWMapEditor::reload()
         setRowCount(_map.count());
         for (int x = row; x < rowCount(); ++x) {
             QToolButton *b = new QToolButton(this);
-            b->setIcon(QIcon::fromTheme("edit-delete"));
+            b->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
             b->setToolTip(i18n("Delete Entry"));
             connect(b, &QToolButton::clicked, this, &KWMapEditor::erase);
             setCellWidget(x, 0, b);
@@ -207,7 +207,7 @@ void KWMapEditor::addEntry()
     int x = rowCount();
     insertRow(x);
     QToolButton *b = new QToolButton(this);
-    b->setIcon(QIcon::fromTheme("edit-delete"));
+    b->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
     b->setToolTip(i18n("Delete Entry"));
     connect(b, &QToolButton::clicked, this, &KWMapEditor::erase);
     setCellWidget(x, 0, b);

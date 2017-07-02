@@ -78,19 +78,19 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.addVersionOption();
 
-    parser.addOption(QCommandLineOption("show", i18n("Show window on startup")));
-    parser.addOption(QCommandLineOption("kwalletd", i18n("For use by kwalletd only")));
-    parser.addOption(QCommandLineOption("name", i18n("A wallet name")));
+    parser.addOption(QCommandLineOption(QStringLiteral("show"), i18n("Show window on startup")));
+    parser.addOption(QCommandLineOption(QStringLiteral("kwalletd"), i18n("For use by kwalletd only")));
+    parser.addOption(QCommandLineOption(QStringLiteral("name"), i18n("A wallet name")));
 
     parser.process(a);
     KWalletManager wm;
     QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &QWidget::activateWindow);
 
-    if (parser.isSet("show")) {
+    if (parser.isSet(QStringLiteral("show"))) {
         wm.show();
     }
 
-    if (parser.isSet("kwalletd")) {
+    if (parser.isSet(QStringLiteral("kwalletd"))) {
         wm.kwalletdLaunch();
     }
 
@@ -101,7 +101,7 @@ int main(int argc, char **argv)
             QMimeDatabase mimeDb;
             QMimeType mt = mimeDb.mimeTypeForFile(fn, QMimeDatabase::MatchContent);
 
-            if (mt.isValid() && mt.inherits(QLatin1String("application/x-kwallet"))) {
+            if (mt.isValid() && mt.inherits(QStringLiteral("application/x-kwallet"))) {
                 wm.openWalletFile(fn);
             }
         } else {

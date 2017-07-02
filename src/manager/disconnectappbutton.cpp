@@ -25,7 +25,7 @@
 DisconnectAppButton::DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet) :
     _appName(appName), _wallet(wallet)
 {
-    setObjectName(QString("Disconnect_%1").arg(appName));
+    setObjectName(QStringLiteral("Disconnect_%1").arg(appName));
     setText(i18n("Disconnect"));
     connect(this, &DisconnectAppButton::clicked, this, &DisconnectAppButton::onClicked);
 }

@@ -34,9 +34,9 @@ KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget *widgetParent, const 
 void KWalletManagerWidgetItem::updateWalletDisplay()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {
-        setIcon(QIcon::fromTheme(QLatin1String("wallet-open")));
+        setIcon(QIcon::fromTheme(QStringLiteral("wallet-open")));
     } else {
-        setIcon(QIcon::fromTheme(QLatin1String("wallet-closed")));
+        setIcon(QIcon::fromTheme(QStringLiteral("wallet-closed")));
     }
     _controlWidget->updateWalletDisplay();
 }

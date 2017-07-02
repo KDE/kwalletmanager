@@ -127,7 +127,7 @@ QString KWalletManagerWidget::activeWalletName() const
 
 void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent *e)
 {
-    if (e->mimeData()->hasFormat("application/x-kwallet-wallet")) {
+    if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-wallet"))) {
         e->accept();
     } else {
         e->ignore();

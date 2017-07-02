@@ -26,7 +26,7 @@
 
 AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
     QStandardItemModel(),
-    _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals)),
+    _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals)),
     _wallet(wallet)
 {
     // TODO: handle "Auto Deny" applications
@@ -41,7 +41,7 @@ AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
             int row = 0;
             Q_FOREACH(QString appName, apps) {
                 setItem(row, 0, new QStandardItem(appName));
-                setItem(row, 1, new QStandardItem("dummy")); // this item will be hidden by the disconnect button, see below setIndexWidget call
+                setItem(row, 1, new QStandardItem(QStringLiteral("dummy"))); // this item will be hidden by the disconnect button, see below setIndexWidget call
                 _authorizedAppsIndexMap.insert(appName, QPersistentModelIndex(index(row, 0)));
                 row++;
             }

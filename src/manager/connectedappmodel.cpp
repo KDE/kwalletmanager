@@ -44,7 +44,7 @@ void ConnectedAppModel::refresh()
             item->setEditable(false);
             setItem(row, 0, item);
             // this item will be hidden by the disconnect button, see below setIndexWidget call
-            setItem(row, 1, new QStandardItem("dummy"));
+            setItem(row, 1, new QStandardItem(QStringLiteral("dummy")));
             _connectedAppsIndexMap.insert(appName, QPersistentModelIndex(index(row, 0)));
             row++;
         }

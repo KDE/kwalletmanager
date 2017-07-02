@@ -47,7 +47,7 @@ K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
-      _cfg(KSharedConfig::openConfig(QLatin1String("kwalletrc"), KConfig::NoGlobals))
+      _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcmkwallet5"),
                                        i18n("KDE Wallet Control Module"),
@@ -87,7 +87,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     _wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
     updateWalletLists();
 
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.kwalletmanager"))) {
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kwalletmanager"))) {
         _wcw->_launch->hide();
     }
 
@@ -172,12 +172,12 @@ void KWalletConfig::newNetworkWallet()
 
 void KWalletConfig::launchManager()
 {
-    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.kwalletmanager5"))) {
-        QProcess::startDetached(QLatin1String("kwalletmanager5 --show"));
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kwalletmanager5"))) {
+        QProcess::startDetached(QStringLiteral("kwalletmanager5 --show"));
     } else {
-        QDBusInterface kwalletd(QLatin1String("org.kde.kwalletmanager5"), QLatin1String("/kwalletmanager5/MainWindow_1"));
-        kwalletd.call(QLatin1String("show"));
-        kwalletd.call(QLatin1String("raise"));
+        QDBusInterface kwalletd(QStringLiteral("org.kde.kwalletmanager5"), QStringLiteral("/kwalletmanager5/MainWindow_1"));
+        kwalletd.call(QStringLiteral("show"));
+        kwalletd.call(QStringLiteral("raise"));
     }
 }
 
@@ -228,13 +228,13 @@ void KWalletConfig::load()
         // perform cleanup in the kwalletrc file, by removing entries that correspond to non-existent
         // (previously deleted, for example) wallets
         QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-        path.append(QString("/kwalletd/%1.kwl").arg(walletName));
+        path.append(QStringLiteral("/kwalletd/%1.kwl").arg(walletName));
         if (!QFile::exists(path)) {
             // if the wallet no longer exists, delete the entries from the configuration file and skip to next entry
-            KConfigGroup cfgAllow = KSharedConfig::openConfig("kwalletrc")->group("Auto Allow");
+            KConfigGroup cfgAllow = KSharedConfig::openConfig(QStringLiteral("kwalletrc"))->group("Auto Allow");
             cfgAllow.deleteEntry(walletName);
 
-            KConfigGroup cfgDeny = KSharedConfig::openConfig("kwalletrc")->group("Auto Deny");
+            KConfigGroup cfgDeny = KSharedConfig::openConfig(QStringLiteral("kwalletrc"))->group("Auto Deny");
             cfgDeny.deleteEntry(walletName);
             continue;
         }
@@ -338,12 +338,12 @@ void KWalletConfig::save()
     _cfg->sync();
 
     // this restarts kwalletd if necessary
-    QDBusInterface kwalletd(QLatin1String("org.kde.kwalletd5"), QLatin1String("/modules/kwalletd"), QLatin1String(KWALLETMANAGERINTERFACE));
+    QDBusInterface kwalletd(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd"), QStringLiteral(KWALLETMANAGERINTERFACE));
     // if wallet was deactivated, then kwalletd will exit upon start so check
     // the status before invoking reconfigure
     if (kwalletd.isValid()) {
         // this will eventually make kwalletd exit upon deactivation
-        kwalletd.call(QLatin1String("reconfigure"));
+        kwalletd.call(QStringLiteral("reconfigure"));
     }
 
     emit changed(false);
