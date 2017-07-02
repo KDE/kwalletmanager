@@ -65,22 +65,22 @@
 #include <assert.h>
 #include <stdlib.h>
 
-QAction *KWalletEditor::_newFolderAction = 0;
-QAction *KWalletEditor::_deleteFolderAction = 0;
-QAction *KWalletEditor::_exportAction = 0;
-QAction *KWalletEditor::_mergeAction = 0;
-QAction *KWalletEditor::_importAction = 0;
-QAction *KWalletEditor::_newEntryAction = 0;
-QAction *KWalletEditor::_renameEntryAction = 0;
-QAction *KWalletEditor::_deleteEntryAction = 0;
-QAction *KWalletEditor::_copyPassAction = 0;
-QAction *KWalletEditor::_alwaysShowContentsAction = 0;
-QAction *KWalletEditor::_alwaysHideContentsAction = 0;
+QAction *KWalletEditor::_newFolderAction = nullptr;
+QAction *KWalletEditor::_deleteFolderAction = nullptr;
+QAction *KWalletEditor::_exportAction = nullptr;
+QAction *KWalletEditor::_mergeAction = nullptr;
+QAction *KWalletEditor::_importAction = nullptr;
+QAction *KWalletEditor::_newEntryAction = nullptr;
+QAction *KWalletEditor::_renameEntryAction = nullptr;
+QAction *KWalletEditor::_deleteEntryAction = nullptr;
+QAction *KWalletEditor::_copyPassAction = nullptr;
+QAction *KWalletEditor::_alwaysShowContentsAction = nullptr;
+QAction *KWalletEditor::_alwaysHideContentsAction = nullptr;
 
 RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletEditor::createActions);
 
 KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
-    : QWidget(parent), _displayedItem(0), _actionCollection(0), _alwaysShowContents(false)
+    : QWidget(parent), _displayedItem(0), _actionCollection(nullptr), _alwaysShowContents(false)
 {
     setupUi(this);
     setObjectName(QLatin1String(name));
@@ -156,17 +156,17 @@ KWalletEditor::~KWalletEditor()
     cg.sync();
 
     delete _w;
-    _w = 0L;
+    _w = nullptr;
     if (_nonLocal) {
         KWallet::Wallet::closeWallet(_walletName, true);
     }
     delete _contextMenu;
-    _contextMenu = NULL;
+    _contextMenu = nullptr;
 }
 
 void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
 {
-    Q_ASSERT(wallet != 0);
+    Q_ASSERT(wallet != nullptr);
     _walletName = wallet->walletName();
     _nonLocal = isPath;
 
@@ -191,7 +191,7 @@ void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
 
 KActionCollection *KWalletEditor::actionCollection()
 {
-    if (_actionCollection == 0) {
+    if (_actionCollection == nullptr) {
         _actionCollection = new KActionCollection(this);
     }
     return _actionCollection;
@@ -313,7 +313,7 @@ void KWalletEditor::disconnectActions()
 
 void KWalletEditor::walletClosed()
 {
-    _w = 0L;
+    _w = nullptr;
     setEnabled(false);
     emit enableWalletActions(false);
     emit enableFolderActions(false);

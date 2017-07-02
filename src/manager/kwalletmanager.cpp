@@ -104,12 +104,12 @@ void KWalletManager::configUI() {
         }
         if (!isOpen && qApp->isSessionRestored()) {
             delete _tray;
-            _tray = 0;
+            _tray = nullptr;
             QTimer::singleShot(0, qApp, SLOT(quit()));
             return;
         }
     } else {
-        _tray = 0;
+        _tray = nullptr;
     }
 
     _managerWidget = new KWalletManagerWidget(this);
@@ -192,9 +192,9 @@ void KWalletManager::configUI() {
 
 KWalletManager::~KWalletManager()
 {
-    _tray = 0L;
+    _tray = nullptr;
     delete m_kwalletdModule;
-    m_kwalletdModule = 0L;
+    m_kwalletdModule = nullptr;
 }
 
 void KWalletManager::kwalletdLaunch()

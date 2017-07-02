@@ -35,7 +35,7 @@ public:
 
 public Q_SLOTS:
     void refresh();
-    void removeApp(QString);
+    void removeApp(const QString &);
 
 private:
     KWallet::Wallet                         *_wallet;

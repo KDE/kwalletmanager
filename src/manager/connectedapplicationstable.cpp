@@ -26,7 +26,7 @@
 
 ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget *parent):
     QTableView(parent),
-    _wallet(0)
+    _wallet(nullptr)
 {
 }
 
@@ -37,10 +37,10 @@ void ConnectedApplicationsTable::setWallet(KWallet::Wallet *wallet)
 
 void ConnectedApplicationsTable::setModel(QAbstractItemModel *model)
 {
-    Q_ASSERT(_wallet != 0);
+    Q_ASSERT(_wallet != nullptr);
 
     ConnectedAppModel *appModel = qobject_cast<ConnectedAppModel *>(model);
-    Q_ASSERT(appModel != 0);
+    Q_ASSERT(appModel != nullptr);
 
     QTableView::setModel(model);
     for (int row = 0; row < model->rowCount(); row++) {

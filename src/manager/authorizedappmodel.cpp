@@ -67,6 +67,7 @@ void AuthorizedAppModel::removeApp(QString appName)
 void AuthorizedAppModel::saveConfig()
 {
     QStringList appList;
+    appList.reserve(rowCount());
     for (int r = 0; r < rowCount(); r++) {
         appList << item(r)->text();
     }

@@ -37,9 +37,9 @@
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
     QWidget(parent),
     _walletName(walletName),
-    _wallet(0),
-    _walletEditor(0),
-    _applicationsManager(0)
+    _wallet(nullptr),
+    _walletEditor(nullptr),
+    _applicationsManager(nullptr)
 {
     setupUi(this);
     onSetupWidget();
@@ -54,7 +54,7 @@ bool WalletControlWidget::openWallet()
         result = true; // already opened
     } else {
         _wallet = KWallet::Wallet::openWallet(_walletName, effectiveWinId());
-        result = _wallet != 0;
+        result = _wallet != nullptr;
         onSetupWidget();
     }
     return result;
@@ -63,9 +63,9 @@ bool WalletControlWidget::openWallet()
 void WalletControlWidget::onSetupWidget()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {
-        if (0 == _wallet) {
+        if (nullptr == _wallet) {
             _wallet = KWallet::Wallet::openWallet(_walletName, effectiveWinId());
-            if (0 == _wallet) {
+            if (nullptr == _wallet) {
                 qDebug() << "Weird situation: wallet could not be opened when setting-up the widget.";
             }
         }
@@ -75,14 +75,14 @@ void WalletControlWidget::onSetupWidget()
         connect(_wallet, &KWallet::Wallet::walletClosed, this, &WalletControlWidget::onWalletClosed);
         _openClose->setText(i18n("&Close"));
 
-        if (0 == _walletEditor) {
+        if (nullptr == _walletEditor) {
             _walletEditor = new KWalletEditor(_editorFrame);
             _editorFrameLayout->addWidget(_walletEditor);
             _walletEditor->setVisible(true);
         }
         _walletEditor->setWallet(_wallet);
 
-        if (0 == _applicationsManager) {
+        if (nullptr == _applicationsManager) {
             _applicationsManager = new ApplicationsManager(_applicationsFrame);
             _applicationsFrameLayout->addWidget(_applicationsManager);
             _applicationsManager->setVisible(true);
@@ -97,16 +97,16 @@ void WalletControlWidget::onSetupWidget()
 
         if (_walletEditor) {
             _walletEditor->setVisible(false);
-            delete _walletEditor, _walletEditor = 0;
+            delete _walletEditor, _walletEditor = nullptr;
         }
 
         if (_applicationsManager) {
             _applicationsManager->setVisible(false);
-            delete _applicationsManager, _applicationsManager = 0;
+            delete _applicationsManager, _applicationsManager = nullptr;
         }
         _changePassword->setEnabled(false);
         _stateLabel->setText(i18n("The wallet is currently closed"));
-        _tabs->setTabIcon(0, QIcon::fromTheme(QLatin1String("wallet-closed")).pixmap(16));
+        _tabs->setTabIcon(0, QIcon::fromTheme(QStringLiteral("wallet-closed")).pixmap(16));
     }
 }
 
@@ -129,11 +129,11 @@ void WalletControlWidget::onOpenClose()
                 if (rc != 0) {
                     KMessageBox::sorry(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
                 } else {
-                    _wallet = 0;
+                    _wallet = nullptr;
                 }
             }
         } else {
-            _wallet = 0;
+            _wallet = nullptr;
         }
     } else {
         _wallet = KWallet::Wallet::openWallet(_walletName, window()->winId());
@@ -143,7 +143,7 @@ void WalletControlWidget::onOpenClose()
 
 void WalletControlWidget::onWalletClosed()
 {
-    _wallet = 0;
+    _wallet = nullptr;
     onSetupWidget();
 }
 

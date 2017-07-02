@@ -29,9 +29,9 @@
 
 ApplicationsManager::ApplicationsManager(QWidget *parent):
     QWidget(parent),
-    _wallet(0),
-    _connectedAppsModel(0),
-    _authorizedAppModel(0)
+    _wallet(nullptr),
+    _connectedAppsModel(nullptr),
+    _authorizedAppModel(nullptr)
 {
     setupUi(this);
 }
@@ -44,7 +44,7 @@ ApplicationsManager::~ApplicationsManager()
 
 void ApplicationsManager::setWallet(KWallet::Wallet *wallet)
 {
-    Q_ASSERT(wallet != 0);
+    Q_ASSERT(wallet != nullptr);
     _wallet = wallet;
 
     // create the disconnect widget menu

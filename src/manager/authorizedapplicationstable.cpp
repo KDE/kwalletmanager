@@ -23,7 +23,7 @@
 
 AuthorizedApplicationsTable::AuthorizedApplicationsTable(QWidget *parent) :
     QTableView(parent),
-    _wallet(0)
+    _wallet(nullptr)
 {
 }
 
@@ -34,10 +34,10 @@ void AuthorizedApplicationsTable::setWallet(KWallet::Wallet *wallet)
 
 void AuthorizedApplicationsTable::setModel(QAbstractItemModel *model)
 {
-    Q_ASSERT(_wallet != 0);
+    Q_ASSERT(_wallet != nullptr);
 
     AuthorizedAppModel *appModel = qobject_cast<AuthorizedAppModel *>(model);
-    Q_ASSERT(appModel != 0);
+    Q_ASSERT(appModel != nullptr);
 
     QTableView::setModel(model);
     for (int row = 0; row < model->rowCount(); row++) {
