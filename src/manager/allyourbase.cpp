@@ -231,7 +231,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream &ds)
     KWallet::Wallet::EntryType et;
     ds >> name;
     if (_wallet->hasEntry(name)) {
-        int rc = KMessageBox::warningContinueCancel(0L, i18n("An entry by the name '%1' already exists. Would you like to continue?", name));
+        int rc = KMessageBox::warningContinueCancel(nullptr, i18n("An entry by the name '%1' already exists. Would you like to continue?", name));
         if (rc == KMessageBox::Cancel) {
             return false;
         }
@@ -255,7 +255,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream &ds)
     QString folder;
     ds >> folder;
     if (_wallet->hasFolder(folder)) {
-        int rc = KMessageBox::warningYesNoCancel(0L, i18n("A folder by the name '%1' already exists.  What would you like to do?", folder), QString(), KStandardGuiItem::cont(), KGuiItem(i18n("Replace")));
+        int rc = KMessageBox::warningYesNoCancel(nullptr, i18n("A folder by the name '%1' already exists.  What would you like to do?", folder), QString(), KStandardGuiItem::cont(), KGuiItem(i18n("Replace")));
         if (rc == KMessageBox::Cancel) {
             return false;
         }
@@ -384,8 +384,8 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
     bool isEntry;
     QByteArray data;
 
-    KWalletEntryList *el = 0L;
-    QTreeWidgetItem *sel = 0L;
+    KWalletEntryList *el = nullptr;
+    QTreeWidgetItem *sel = nullptr;
 
     // We fetch this here because we run an event loop further down which might invalidate this
     Qt::DropAction proposedAction = e->proposedAction();
@@ -528,15 +528,15 @@ bool KWalletEntryList::existsFolder(const QString &name)
 
 QMimeData *KWalletEntryList::itemMimeData(const QTreeWidgetItem *i) const
 {
-    QMimeData *sd = 0L;
+    QMimeData *sd = nullptr;
     if (i->type() == KWalletEntryItemClass) {
         const KWalletEntryItem *ei = dynamic_cast<const KWalletEntryItem *>(i);
         if (!ei) {
-            return 0L;
+            return nullptr;
         }
         KWalletContainerItem *ci = dynamic_cast<KWalletContainerItem *>(ei->parent());
         if (!ci) {
-            return 0L;
+            return nullptr;
         }
         sd = new QMimeData();
         QByteArray a;
@@ -553,7 +553,7 @@ QMimeData *KWalletEntryList::itemMimeData(const QTreeWidgetItem *i) const
     } else if (i->type() == KWalletFolderItemClass) {
         const KWalletFolderItem *fi = dynamic_cast<const KWalletFolderItem *>(i);
         if (!fi) {
-            return 0L;
+            return nullptr;
         }
         sd = new QMimeData();
         QByteArray a;

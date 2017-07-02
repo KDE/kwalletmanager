@@ -491,8 +491,8 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
         }
     }
 
-    KWalletContainerItem *ci = 0L;
-    KWalletFolderItem *fi = 0L;
+    KWalletContainerItem *ci = nullptr;
+    KWalletFolderItem *fi = nullptr;
 
     // clear the context menu
     _contextMenu->clear();
@@ -653,7 +653,7 @@ void KWalletEditor::updateEntries(const QString &folder)
         QTreeWidgetItem *twi = pi->child(i);
         if (!entries.contains(twi->text(0))) {
             if (twi == _entryList->currentItem()) {
-                entrySelectionChanged(0L);
+                entrySelectionChanged(nullptr);
             }
             trash.push(twi);
         }
@@ -663,7 +663,7 @@ void KWalletEditor::updateEntries(const QString &folder)
         QTreeWidgetItem *twi = mi->child(i);
         if (!entries.contains(twi->text(0))) {
             if (twi == _entryList->currentItem()) {
-                entrySelectionChanged(0L);
+                entrySelectionChanged(nullptr);
             }
             trash.push(twi);
         }
@@ -673,7 +673,7 @@ void KWalletEditor::updateEntries(const QString &folder)
         QTreeWidgetItem *twi = bi->child(i);
         if (!entries.contains(twi->text(0))) {
             if (twi == _entryList->currentItem()) {
-                entrySelectionChanged(0L);
+                entrySelectionChanged(nullptr);
             }
             trash.push(twi);
         }
@@ -683,7 +683,7 @@ void KWalletEditor::updateEntries(const QString &folder)
         QTreeWidgetItem *twi = ui->child(i);
         if (!entries.contains(twi->text(0))) {
             if (twi == _entryList->currentItem()) {
-                entrySelectionChanged(0L);
+                entrySelectionChanged(nullptr);
             }
             trash.push(twi);
         }

@@ -47,7 +47,7 @@ public:
     void setWallet(KWallet::Wallet *wallet, bool isPath = false);
     bool isOpen() const
     {
-        return _w != 0L;
+        return _w != nullptr;
     }
 
     bool hasUnsavedChanges() const;

@@ -108,7 +108,7 @@ class KWalletEntryList : public QTreeWidget
     Q_OBJECT
 
 public:
-    explicit KWalletEntryList(QWidget *parent, const char *name = 0L);
+    explicit KWalletEntryList(QWidget *parent, const char *name = nullptr);
     virtual ~KWalletEntryList();
 
     bool existsFolder(const QString &name);
