@@ -92,12 +92,14 @@ void WalletControlWidget::onSetupWidget()
 
         if (_walletEditor) {
             _walletEditor->setVisible(false);
-            delete _walletEditor, _walletEditor = nullptr;
+            delete _walletEditor;
+            _walletEditor = nullptr;
         }
 
         if (_applicationsManager) {
             _applicationsManager->setVisible(false);
-            delete _applicationsManager, _applicationsManager = nullptr;
+            delete _applicationsManager;
+            _applicationsManager = nullptr;
         }
         _changePassword->setEnabled(false);
         _stateLabel->setText(i18n("The wallet is currently closed"));

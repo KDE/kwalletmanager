@@ -41,7 +41,7 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget
     Q_OBJECT
 
 public:
-    KWalletEditor(QWidget *parent, const char *name = 0);
+    explicit KWalletEditor(QWidget *parent, const QString &name = QString());
     virtual ~KWalletEditor();
 
     void setWallet(KWallet::Wallet *wallet, bool isPath = false);

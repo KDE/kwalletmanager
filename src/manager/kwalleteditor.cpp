@@ -76,11 +76,11 @@ QAction *KWalletEditor::_alwaysHideContentsAction = nullptr;
 
 RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletEditor::createActions);
 
-KWalletEditor::KWalletEditor(QWidget *parent, const char *name)
+KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
     : QWidget(parent), _displayedItem(0), _actionCollection(nullptr), _alwaysShowContents(false)
 {
     setupUi(this);
-    setObjectName(QLatin1String(name));
+    setObjectName(name);
     _newWallet = false;
     _splitter->setStretchFactor(0, 1);
     _splitter->setStretchFactor(1, 2);
