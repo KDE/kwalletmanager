@@ -26,7 +26,6 @@
 #include <kwallet.h>
 #include <kxmlguiwindow.h>
 #include "registercreateactionmethod.h"
-#include <QStringList>
 #include <QLabel>
 
 class KActionCollection;

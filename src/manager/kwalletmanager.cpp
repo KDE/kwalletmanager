@@ -26,8 +26,7 @@
 #include "registercreateactionmethod.h"
 
 #include <klocalizedstring.h>
-#include <KService/KToolInvocation>
-
+#include <KToolInvocation>
 #include <qaction.h>
 #include <kconfig.h>
 #include <kiconloader.h>
@@ -42,7 +41,6 @@
 #include <KTar>
 
 #include <QDebug>
-#include <QPointer>
 #include <QRegExp>
 #include <QRegExpValidator>
 #include <QTimer>

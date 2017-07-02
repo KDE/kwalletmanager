@@ -22,7 +22,6 @@
 
 #include <qmenu.h>
 
-#include <QMap>
 
 class KWalletPopup : public QMenu
 {

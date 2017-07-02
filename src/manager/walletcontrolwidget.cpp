@@ -24,15 +24,10 @@
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <qmenu.h>
-#include <QTabWidget>
 #include <kwallet.h>
 
 #include <QDebug>
-#include <QEvent>
-#include <QFrame>
-#include <QPropertyAnimation>
 #include <QTimer>
-#include <QToolButton>
 
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
     QWidget(parent),

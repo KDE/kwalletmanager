@@ -30,7 +30,6 @@
 #include <QApplication>
 #include <QDebug>
 #include <QDrag>
-#include <QFile>
 #include <QMimeData>
 #include <QPixmap>
 #include <QDropEvent>

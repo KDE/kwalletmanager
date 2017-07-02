@@ -60,4 +60,3 @@ private:
 
 #endif // KWALLETMANAGERWIDGET_H
 
-class KUrl;

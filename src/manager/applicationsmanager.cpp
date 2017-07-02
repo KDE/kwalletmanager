@@ -22,10 +22,6 @@
 #include "authorizedappmodel.h"
 #include "kwallet.h"
 
-#include <QStyledItemDelegate>
-#include <QPainter>
-#include <QStandardItemModel>
-#include <QDebug>
 
 ApplicationsManager::ApplicationsManager(QWidget *parent):
     QWidget(parent),

@@ -27,7 +27,6 @@
 #include <qdialog.h>
 #include <qinputdialog.h>
 #include <KIO/StoredTransferJob>
-#include <KJobUiDelegate>
 #include <KJobWidgets>
 #include <kactioncollection.h>
 #include <kcodecs.h>
@@ -47,7 +46,6 @@
 
 #include <QCheckBox>
 #include <QClipboard>
-#include <QDebug>
 #include <QDomDocument>
 #include <QDomElement>
 #include <QDomNode>
@@ -56,7 +54,6 @@
 #include <QPushButton>
 #include <QStack>
 #include <QSet>
-#include <QTextStream>
 #include <QTimer>
 #include <QToolButton>
 #include <QVBoxLayout>

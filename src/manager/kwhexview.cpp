@@ -22,7 +22,6 @@
 #include "kwhexview.h"
 
 #include <qtextstream.h>
-#include <QTextCodec>
 
 KWHexView::KWHexView(QWidget* parent): QPlainTextEdit(parent)
 {

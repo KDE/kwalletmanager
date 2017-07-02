@@ -30,7 +30,6 @@
 
 #include <QApplication>
 #include <QClipboard>
-#include <QDebug>
 #include <QItemDelegate>
 #include <QFocusEvent>
 #include <QKeyEvent>

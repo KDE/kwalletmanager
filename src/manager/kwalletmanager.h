@@ -21,7 +21,6 @@
 #define KWALLETMANAGER_H
 #include <QtCore/QObject>
 #include <kxmlguiwindow.h>
-#include <QIcon>
 
 class KWalletManagerWidget;
 class KStatusNotifierItem;
