@@ -46,6 +46,7 @@ find_package(KF5 5.2.0 REQUIRED
     Wallet
     WindowSystem
     XmlGui
+    Crash
 )
 
 add_subdirectory( doc )

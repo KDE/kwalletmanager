@@ -56,6 +56,7 @@ target_link_libraries(kwalletmanager5
     KF5::IconThemes
     KF5::Notifications
     KF5::WindowSystem
+    KF5::Crash
 )
 
 install(TARGETS kwalletmanager5  ${INSTALL_TARGETS_DEFAULT_ARGS} )

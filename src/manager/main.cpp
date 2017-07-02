@@ -30,12 +30,13 @@
 #include <QFileInfo>
 #include <QMimeDatabase>
 #include <QMimeType>
+#include <KCrash>
 
 int main(int argc, char **argv)
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication a(argc, argv);
-
+    KCrash::initialize();
     KLocalizedString::setApplicationDomain("kwalletmanager");
 
     /**
