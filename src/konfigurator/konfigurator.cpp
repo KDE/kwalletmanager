@@ -62,7 +62,6 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     setNeedsAuthorization(true);
 
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    //PORT QT5 vbox->setSpacing(KDialog::spacingHint());
     vbox->setMargin(0);
     _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
@@ -145,7 +144,7 @@ QString KWalletConfig::newWallet()
 void KWalletConfig::newLocalWallet()
 {
     const QString n = newWallet();
-    if (n.isEmpty()) {
+    if (n.trimmed().isEmpty()) {
         return;
     }
 
@@ -159,7 +158,7 @@ void KWalletConfig::newLocalWallet()
 void KWalletConfig::newNetworkWallet()
 {
     const QString n = newWallet();
-    if (n.isEmpty()) {
+    if (n.trimmed().isEmpty()) {
         return;
     }
 
@@ -243,17 +242,18 @@ void KWalletConfig::load()
         const QStringList denyapps = ad.readEntry(*i, QStringList());
         denykeys.removeAll(walletName);
         QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << walletName);
-        for (QStringList::const_iterator j = apps.begin(); j != apps.end(); ++j) {
+
+        for (QStringList::const_iterator j = apps.begin(), end = apps.end(); j != end; ++j) {
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Allow"));
         }
-        for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
+        for (QStringList::const_iterator j = denyapps.begin(), end = denyapps.end(); j != end; ++j) {
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
         }
     }
-    for (QStringList::const_iterator i = denykeys.constBegin(); i != denykeys.constEnd(); ++i) {
+    for (QStringList::const_iterator i = denykeys.constBegin(), denykeysEnd = denykeys.constEnd(); i != denykeysEnd; ++i) {
         const QStringList denyapps = ad.readEntry(*i, QStringList());
         QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
-        for (QStringList::const_iterator j = denyapps.begin(); j != denyapps.end(); ++j) {
+        for (QStringList::const_iterator j = denyapps.begin(), denyappsEnd = denyapps.end(); j != denyappsEnd; ++j) {
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
         }
     }
