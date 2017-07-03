@@ -211,9 +211,9 @@ void KWalletItem::setOpen(bool state)
     if (_open != state) {
         _open = state;
         if (_open) {
-            setIcon(DesktopIcon(QLatin1String("wallet-open")));
+            setIcon(DesktopIcon(QStringLiteral("wallet-open")));
         } else {
-            setIcon(DesktopIcon(QLatin1String("wallet-closed")));
+            setIcon(DesktopIcon(QStringLiteral("wallet-closed")));
         }
     }
 }

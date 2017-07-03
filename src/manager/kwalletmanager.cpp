@@ -58,20 +58,20 @@ KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WindowFlag
     setObjectName(QLatin1String(name));
     RegisterCreateActionsMethod::createActions(actionCollection());
 
-    QTimer::singleShot(0, this, SLOT(beginConfiguration()));
+    QTimer::singleShot(0, this, &KWalletManager::beginConfiguration);
 }
 
 void KWalletManager::beginConfiguration() {
     KConfig cfg(QStringLiteral("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
     KConfigGroup walletConfigGroup(&cfg, "Wallet");
     if (walletConfigGroup.readEntry("Enabled", true)){
-        QTimer::singleShot(0, this, SLOT(configUI()));
+        QTimer::singleShot(0, this, &KWalletManager::configUI);
     } else {
         int rc = KMessageBox::warningYesNo(this,
             i18n("The KDE Wallet system is not enabled. Do you want me to enable it? If not, the KWalletManager will quit as it cannot work without reading the wallets."));
         if (rc == KMessageBox::Yes) {
             walletConfigGroup.writeEntry("Enabled", true);
-            QTimer::singleShot(0, this, SLOT(configUI()));
+            QTimer::singleShot(0, this, &KWalletManager::configUI);
         } else {
             QApplication::quit();
         }

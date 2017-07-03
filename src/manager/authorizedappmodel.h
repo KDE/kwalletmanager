@@ -35,7 +35,7 @@ public:
     explicit AuthorizedAppModel(KWallet::Wallet *wallet);
 
 public Q_SLOTS:
-    void removeApp(QString);
+    void removeApp(const QString &);
 
 private Q_SLOTS:
     void saveConfig();

@@ -77,7 +77,7 @@ QAction *KWalletEditor::_alwaysHideContentsAction = nullptr;
 RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletEditor::createActions);
 
 KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
-    : QWidget(parent), _displayedItem(0), _actionCollection(nullptr), _alwaysShowContents(false)
+    : QWidget(parent), _displayedItem(nullptr), _actionCollection(nullptr), _alwaysShowContents(false)
 {
     setupUi(this);
     setObjectName(name);
@@ -693,7 +693,7 @@ void KWalletEditor::updateEntries(const QString &folder)
     trash.clear();
 
     // Add new entries
-    for (QStringList::const_iterator i = entries.begin(); i != entries.end(); ++i) {
+    for (QStringList::const_iterator i = entries.begin(), end = entries.end(); i != end; ++i) {
         if (fi->contains(*i)) {
             continue;
         }
@@ -1013,8 +1013,7 @@ void KWalletEditor::importWallet()
                 for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
                     bool hasEntry = _w->hasEntry(pe.key());
                     if (hasEntry && mp == Prompt) {
-                        KBetterThanKDialogBase *bd;
-                        bd = new KBetterThanKDialogBase(this);
+                        KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
                         bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), pe.key().toHtmlEscaped()));
                         mp = (MergePlan)bd->exec();
                         delete bd;
@@ -1048,8 +1047,7 @@ void KWalletEditor::importWallet()
                     }
                     bool hasEntry = _w->hasEntry(ee.key());
                     if (hasEntry && mp == Prompt) {
-                        KBetterThanKDialogBase *bd;
-                        bd = new KBetterThanKDialogBase(this);
+                        KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
                         bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), ee.key().toHtmlEscaped()));
                         mp = (MergePlan)bd->exec();
                         delete bd;
@@ -1081,7 +1079,7 @@ void KWalletEditor::importWallet()
 
 void KWalletEditor::importXML()
 {
-    QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), QStringLiteral("*.xml"));
+    const QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), QStringLiteral("*.xml"));
 
     if (url.isEmpty()) {
         return;
@@ -1131,8 +1129,7 @@ void KWalletEditor::importXML()
             QString ename = e.attribute(QStringLiteral("name"));
             bool hasEntry = _w->hasEntry(ename);
             if (hasEntry && mp == Prompt) {
-                KBetterThanKDialogBase *bd;
-                bd = new KBetterThanKDialogBase(this);
+                KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
                 bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", fname.toHtmlEscaped(), ename.toHtmlEscaped()));
                 mp = (MergePlan)bd->exec();
                 delete bd;

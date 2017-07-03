@@ -39,7 +39,7 @@ AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
         if (cfgWalletName == walletName) {
             const QStringList apps = aa.readEntry(cfgWalletName, QStringList());
             int row = 0;
-            Q_FOREACH(QString appName, apps) {
+            for (const QString &appName : apps) {
                 setItem(row, 0, new QStandardItem(appName));
                 setItem(row, 1, new QStandardItem(QStringLiteral("dummy"))); // this item will be hidden by the disconnect button, see below setIndexWidget call
                 _authorizedAppsIndexMap.insert(appName, QPersistentModelIndex(index(row, 0)));
@@ -49,7 +49,7 @@ AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
     }
 }
 
-void AuthorizedAppModel::removeApp(QString appName)
+void AuthorizedAppModel::removeApp(const QString &appName)
 {
     if (_authorizedAppsIndexMap.contains(appName)) {
         QPersistentModelIndex idx = _authorizedAppsIndexMap[appName];
@@ -61,7 +61,7 @@ void AuthorizedAppModel::removeApp(QString appName)
     } else {
         qDebug() << "Attempting to remove unknown application " << appName;
     }
-    QTimer::singleShot(0, this, SLOT(saveConfig()));
+    QTimer::singleShot(0, this, &AuthorizedAppModel::saveConfig);
 }
 
 void AuthorizedAppModel::saveConfig()
