@@ -1287,7 +1287,7 @@ void KWalletEditor::onSearchTextChanged(const QString &text)
             _entryList->setCurrentItem(NULL);
             // NOTE: the 300 ms here is a value >200 ms used internally by KTreeWidgetSearchLine
             // TODO: replace this timer with a connection to KTreeWidgetSearchLine::searchUpdated signal introduced with KF5
-            QTimer::singleShot(300, _entryList, SLOT(collapseAll()));
+            QTimer::singleShot(300, _entryList, &KWalletEntryList::collapseAll);
             treeIsExpanded = false;
         }
     } else {
@@ -1297,10 +1297,10 @@ void KWalletEditor::onSearchTextChanged(const QString &text)
         }
         // NOTE: the 300 ms here is a value >200 ms used internally by KTreeWidgetSearchLine
         // TODO: replace this timer with a connection to KTreeWidgetSearchLine::searchUpdated signal introduced with KF5
-        QTimer::singleShot(300, _entryList, SLOT(selectFirstVisible()));
+        QTimer::singleShot(300, _entryList, &KWalletEntryList::selectFirstVisible);
     }
     // TODO: reduce timer count when KTreeWidgetSearchLine::searchUpdated signal will be there
-    QTimer::singleShot(300, _entryList, SLOT(refreshItemsCount()));
+    QTimer::singleShot(300, _entryList, &KWalletEntryList::refreshItemsCount);
 }
 
 void KWalletEditor::onAlwaysShowContents(bool checked)

@@ -92,7 +92,7 @@ void KWalletManager::configUI() {
         //connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
         const QStringList wl = KWallet::Wallet::walletList();
         bool isOpen = false;
-        for (QStringList::ConstIterator it = wl.begin(); it != wl.end(); ++it) {
+        for (QStringList::ConstIterator it = wl.begin(), end = wl.end(); it != end; ++it) {
             if (KWallet::Wallet::isOpen(*it)) {
                 _tray->setIconByName(QStringLiteral("wallet-open"));
                 _tray->setToolTip(QStringLiteral("wallet-open"), i18n("Wallet"), i18n("A wallet is open."));
@@ -343,7 +343,7 @@ void KWalletManager::createWallet()
         }
 
         name = lineEdit->text();
-        if (name.isEmpty()) {
+        if (name.trimmed().isEmpty()) {
             return;
         }
 

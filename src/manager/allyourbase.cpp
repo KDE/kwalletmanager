@@ -51,11 +51,11 @@ QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group)
 {
     QPixmap pix = QIcon::fromTheme(_name).pixmap(IconSize(group), IconSize(group));
 
-    if (pix.isNull())
+    if (pix.isNull()) {
         pix = QIcon::fromTheme(_name.toLower()).pixmap(IconSize(group), IconSize(group));
-
-    if (pix.isNull())
-        pix = QIcon::fromTheme(QStringLiteral("folder-red")).pixmap(IconSize(group), IconSize(group));
+        if (pix.isNull())
+            pix = QIcon::fromTheme(QStringLiteral("folder-red")).pixmap(IconSize(group), IconSize(group));
+    }
 
     return pix;
 }
@@ -359,11 +359,11 @@ void KWalletItem::processDropEvent(QDropEvent *e)
 /****************
  *  KWalletEntryList - A listview to store wallet entries
  */
-KWalletEntryList::KWalletEntryList(QWidget *parent, const char *name)
+KWalletEntryList::KWalletEntryList(QWidget *parent, const QString &name)
     : QTreeWidget(parent),
       _wallet(0)
 {
-    setObjectName(QLatin1String(name));
+    setObjectName(name);
     setColumnCount(1);
     setHeaderLabel(i18n("Folders"));
     setRootIsDecorated(true);

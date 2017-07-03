@@ -169,7 +169,7 @@ void KWMapEditor::reload()
     }
 
     row = 0;
-    for (QMap<QString, QString>::Iterator it = _map.begin(); it != _map.end(); ++it) {
+    for (QMap<QString, QString>::Iterator it = _map.begin(), end = _map.end(); it != end; ++it) {
         item(row, 1)->setText(it.key());
         item(row, 2)->setText(it.value());
         row++;

@@ -39,7 +39,7 @@ void ConnectedAppModel::refresh()
     Q_FOREACH(const QString &appName, _connectedApps) {
         // for un unknown reason, kwalletd returs empty strings so lets avoid inserting them
         // FIXME: find out why kwalletd returns empty strings here
-        if (appName.length() > 0) {
+        if (!appName.isEmpty()) {
             QStandardItem *item = new QStandardItem(appName);
             item->setEditable(false);
             setItem(row, 0, item);

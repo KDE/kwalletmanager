@@ -51,7 +51,7 @@ int main(int argc, char **argv)
                  QStringLiteral(KWALLETMANAGER_VERSION_STRING),
                  i18n("KDE Wallet Management Tool"),
                  KAboutLicense::GPL,
-                 i18n("Copyright ©2013–2015, KWallet Manager authors"),
+                 i18n("Copyright ©2013–2017, KWallet Manager authors"),
                  QString(),
                  QStringLiteral("http://utils.kde.org/projects/kwalletmanager"));
 
