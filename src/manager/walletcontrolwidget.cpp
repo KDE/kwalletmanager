@@ -39,7 +39,7 @@ WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletN
     setupUi(this);
     onSetupWidget();
 
-    QTimer::singleShot(1, this, SLOT(onSetupWidget()));
+    QTimer::singleShot(1, this, &WalletControlWidget::onSetupWidget);
 }
 
 bool WalletControlWidget::openWallet()

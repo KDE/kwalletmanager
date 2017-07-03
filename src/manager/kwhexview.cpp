@@ -38,7 +38,7 @@ static QString toHex(It it, It end)
     QString text;
     QTextStream ts(&text);
 
-    ts << hex << qSetFieldWidth(2) << qSetPadChar('0');
+    ts << hex << qSetFieldWidth(2) << qSetPadChar(QLatin1Char('0'));
 
     while (it < end) {
         const auto sEnd = qMin(it + hexStride, end);
@@ -56,7 +56,7 @@ static QString toText(It begin, It end)
     QString text = QString::fromLatin1(begin, end - begin);
 
     for (auto &ch: text)
-        if (!ch.isPrint()) ch = '.';
+        if (!ch.isPrint()) ch = QLatin1Char('.');
 
     return text;
 }

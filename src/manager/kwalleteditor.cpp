@@ -92,7 +92,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
 
     QVBoxLayout *box = new QVBoxLayout(_entryListFrame);
     box->setMargin(0);
-    _entryList = new KWalletEntryList(_entryListFrame, "Wallet Entry List");
+    _entryList = new KWalletEntryList(_entryListFrame, QStringLiteral("Wallet Entry List"));
     _entryList->setContextMenuPolicy(Qt::CustomContextMenu);
     _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
     _searchLine->setPlaceholderText(i18n("Search"));
@@ -544,7 +544,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                 _contextMenu->addSeparator();
                 _contextMenu->addAction(_copyPassAction);
                 if (_alwaysShowContents) {
-                    QTimer::singleShot(0, this, SLOT(showPasswordContents()));
+                    QTimer::singleShot(0, this, &KWalletEditor::showPasswordContents);
                 }
             } else if (ci->entryType() == KWallet::Wallet::Map) {
                 _entryStack->setCurrentIndex(2);
