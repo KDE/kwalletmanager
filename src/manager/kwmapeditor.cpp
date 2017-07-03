@@ -231,6 +231,7 @@ void KWMapEditor::contextMenu(const QPoint &pos)
     m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
     m->addAction(_copyAct);
     m->popup(mapToGlobal(pos));
+    delete m;
 }
 
 void KWMapEditor::copy()
