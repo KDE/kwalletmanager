@@ -52,11 +52,11 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     KAboutData *about = new KAboutData(QStringLiteral("kcmkwallet5"),
                                        i18n("KDE Wallet Control Module"),
                                        QStringLiteral(KWALLETMANAGER_VERSION_STRING),
-                                       QStringLiteral(),
+                                       QString(),
                                        KAboutLicense::GPL,
                                        i18n("(c) 2003 George Staikos"));
     about->addAuthor(i18n("George Staikos"),
-                     QStringLiteral(),
+                     QString(),
                      QStringLiteral("staikos@kde.org"));
     setAboutData(about);
     setNeedsAuthorization(true);
