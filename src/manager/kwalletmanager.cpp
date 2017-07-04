@@ -344,6 +344,7 @@ void KWalletManager::createWallet()
 
         name = lineEdit->text();
         if (name.trimmed().isEmpty()) {
+            KMessageBox::error(this, i18n("Empty name is not supported. Please select a new one."), i18n("Create new wallet"));
             return;
         }
 
