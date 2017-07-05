@@ -186,6 +186,11 @@ void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
     _searchLine->setFocus();
 }
 
+bool KWalletEditor::isOpen() const
+{
+    return _w != nullptr;
+}
+
 KActionCollection *KWalletEditor::actionCollection()
 {
     if (!_actionCollection) {

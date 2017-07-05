@@ -45,10 +45,7 @@ public:
     virtual ~KWalletEditor();
 
     void setWallet(KWallet::Wallet *wallet, bool isPath = false);
-    bool isOpen() const
-    {
-        return _w != nullptr;
-    }
+    bool isOpen() const;
 
     bool hasUnsavedChanges() const;
     void setNewWallet(bool newWallet);
