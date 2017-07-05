@@ -35,7 +35,7 @@ AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
     KConfigGroup aa(_cfg, "Auto Allow");
     QString walletName = _wallet->walletName();
     const QStringList keys = aa.entryMap().keys();
-    Q_FOREACH(QString cfgWalletName, keys) {
+    for (const QString &cfgWalletName : keys) {
         if (cfgWalletName == walletName) {
             const QStringList apps = aa.readEntry(cfgWalletName, QStringList());
             int row = 0;

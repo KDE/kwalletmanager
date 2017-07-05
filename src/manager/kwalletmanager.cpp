@@ -49,13 +49,13 @@
 #include <QLineEdit>
 
 
-KWalletManager::KWalletManager(QWidget *parent, const char *name, Qt::WindowFlags f)
+KWalletManager::KWalletManager(QWidget *parent, const QString &name, Qt::WindowFlags f)
     : KXmlGuiWindow(parent, f)
 {
     _kwalletdLaunch = false;
     _shuttingDown = false;
     m_kwalletdModule = 0;
-    setObjectName(QLatin1String(name));
+    setObjectName(name);
     RegisterCreateActionsMethod::createActions(actionCollection());
 
     QTimer::singleShot(0, this, &KWalletManager::beginConfiguration);

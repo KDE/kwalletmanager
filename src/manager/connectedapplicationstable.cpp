@@ -43,7 +43,8 @@ void ConnectedApplicationsTable::setModel(QAbstractItemModel *model)
     Q_ASSERT(appModel != nullptr);
 
     QTableView::setModel(model);
-    for (int row = 0; row < model->rowCount(); row++) {
+    const int numberRow(model->rowCount());
+    for (int row = 0; row < numberRow; row++) {
         DisconnectAppButton *btn = new DisconnectAppButton(model->index(row, 0).data().toString(), _wallet);
         btn->setFixedHeight(btn->sizeHint().height());
         setRowHeight(row, btn->height());
@@ -57,7 +58,7 @@ void ConnectedApplicationsTable::resizeEvent(QResizeEvent *resizeEvent)
     // this will keep disconnect buttons column at it's minimum size and
     // make the application names take the reminder of the horizontal space
     resizeColumnsToContents();
-    int appColumnSize = contentsRect().width() - columnWidth(1) - 50;
+    const int appColumnSize = contentsRect().width() - columnWidth(1) - 50;
     setColumnWidth(0, appColumnSize);
     QAbstractItemView::resizeEvent(resizeEvent);
 }

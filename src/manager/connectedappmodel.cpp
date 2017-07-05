@@ -36,7 +36,7 @@ void ConnectedAppModel::refresh()
 
     _connectedApps = KWallet::Wallet::users(_wallet->walletName());
     int row = 0;
-    Q_FOREACH(const QString &appName, _connectedApps) {
+    for (const QString &appName : qAsConst(_connectedApps)) {
         // for un unknown reason, kwalletd returs empty strings so lets avoid inserting them
         // FIXME: find out why kwalletd returns empty strings here
         if (!appName.isEmpty()) {

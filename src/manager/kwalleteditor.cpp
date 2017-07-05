@@ -188,7 +188,7 @@ void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
 
 KActionCollection *KWalletEditor::actionCollection()
 {
-    if (_actionCollection == nullptr) {
+    if (!_actionCollection) {
         _actionCollection = new KActionCollection(this);
     }
     return _actionCollection;
