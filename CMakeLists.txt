@@ -12,7 +12,7 @@ find_package(ECM ${KF5_VERSION} REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-find_package(Qt5 5.6.0 CONFIG REQUIRED Core Gui Widgets DBus)
+find_package(Qt5 5.7.0 CONFIG REQUIRED Core Gui Widgets DBus)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
