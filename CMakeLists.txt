@@ -7,8 +7,8 @@ set (KDE_APPLICATIONS_VERSION_MICRO "70")
 set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 
 cmake_minimum_required(VERSION 2.8.12)
-
-find_package(ECM 5.24.0 REQUIRED NO_MODULE)
+set(KF5_VERSION "5.24.0")
+find_package(ECM ${KF5_VERSION} REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
@@ -27,7 +27,7 @@ ecm_setup_version(${KDE_APPLICATIONS_VERSION} VARIABLE_PREFIX KWALLETMANAGER
                   VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/kwalletmanager_version.h"
 )
 
-find_package(KF5 5.24 REQUIRED
+find_package(KF5 ${KF5_VERSION} REQUIRED
     Archive
     Auth
     Config
@@ -59,7 +59,9 @@ add_subdirectory( doc )
 add_subdirectory( icons )
 add_subdirectory( src )
 
-feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 ########### install files ###############
 install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+
+
+feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
