@@ -96,7 +96,7 @@ KWalletContainerItem *KWalletFolderItem::getContainer(KWallet::Wallet::EntryType
             return ci;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 bool KWalletFolderItem::contains(const QString &key)
@@ -116,7 +116,7 @@ QTreeWidgetItem *KWalletFolderItem::getItem(const QString &key)
             return tmp;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 bool KWalletFolderItem::acceptDrop(const QMimeData *mime) const
@@ -166,7 +166,7 @@ QTreeWidgetItem *KWalletContainerItem::getItem(const QString &key)
             return entryItem;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 /****************
@@ -638,7 +638,7 @@ KWalletFolderItem *KWalletEntryList::getFolder(const QString &name)
             return fi;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 KWalletFolderItem *KWalletEntryList::getItemFolder(QTreeWidgetItem *item)
@@ -651,7 +651,7 @@ KWalletFolderItem *KWalletEntryList::getItemFolder(QTreeWidgetItem *item)
     case KWalletEntryItemClass:
         return dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
     }
-    return 0;
+    return nullptr;
 }
 
 void KWalletEntryList::selectFirstVisible()
