@@ -248,69 +248,69 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
 
 void KWalletEditor::connectActions()
 {
-    connect(_newFolderAction, SIGNAL(triggered(bool)), SLOT(createFolder()));
-    connect(this, SIGNAL(enableFolderActions(bool)), _newFolderAction, SLOT(setEnabled(bool)));
+    connect(_newFolderAction, &QAction::triggered, this, &KWalletEditor::createFolder);
+    connect(this, &KWalletEditor::enableFolderActions, _newFolderAction, &QAction::setEnabled);
 
     connect(_deleteFolderAction, SIGNAL(triggered(bool)), SLOT(deleteFolder()));
-    connect(this, SIGNAL(enableContextFolderActions(bool)), _deleteFolderAction, SLOT(setEnabled(bool)));
-    connect(this, SIGNAL(enableFolderActions(bool)), _deleteFolderAction, SLOT(setEnabled(bool)));
+    connect(this, &KWalletEditor::enableContextFolderActions, _deleteFolderAction, &QAction::setEnabled);
+    connect(this, &KWalletEditor::enableFolderActions, _deleteFolderAction, &QAction::setEnabled);
 
-    connect(_mergeAction, SIGNAL(triggered(bool)), SLOT(importWallet()));
-    connect(this, SIGNAL(enableWalletActions(bool)), _mergeAction, SLOT(setEnabled(bool)));
+    connect(_mergeAction, &QAction::triggered, this, &KWalletEditor::importWallet);
+    connect(this, &KWalletEditor::enableWalletActions, _mergeAction, &QAction::setEnabled);
 
-    connect(_importAction, SIGNAL(triggered(bool)), SLOT(importXML()));
-    connect(this, SIGNAL(enableWalletActions(bool)), _importAction, SLOT(setEnabled(bool)));
+    connect(_importAction, &QAction::triggered, this, &KWalletEditor::importXML);
+    connect(this, &KWalletEditor::enableWalletActions, _importAction, &QAction::setEnabled);
 
-    connect(_exportAction, SIGNAL(triggered(bool)), SLOT(exportXML()));
-    connect(this, SIGNAL(enableWalletActions(bool)), _exportAction, SLOT(setEnabled(bool)));
+    connect(_exportAction, &QAction::triggered, this, &KWalletEditor::exportXML);
+    connect(this, &KWalletEditor::enableWalletActions, _exportAction, &QAction::setEnabled);
 
-    connect(_newEntryAction, SIGNAL(triggered(bool)), SLOT(newEntry()));
+    connect(_newEntryAction, &QAction::triggered, this, &KWalletEditor::newEntry);
 
-    connect(_renameEntryAction, SIGNAL(triggered(bool)), SLOT(renameEntry()));
+    connect(_renameEntryAction, &QAction::triggered, this, &KWalletEditor::renameEntry);
 
-    connect(_deleteEntryAction, SIGNAL(triggered(bool)), SLOT(deleteEntry()));
+    connect(_deleteEntryAction, &QAction::triggered, this, &KWalletEditor::deleteEntry);
 
-    connect(_copyPassAction, SIGNAL(triggered(bool)), SLOT(copyPassword()));
-    connect(this, SIGNAL(enableWalletActions(bool)), _copyPassAction, SLOT(setEnabled(bool)));
+    connect(_copyPassAction, &QAction::triggered, this, &KWalletEditor::copyPassword);
+    connect(this, &KWalletEditor::enableWalletActions, _copyPassAction, &QAction::setEnabled);
 
     _showContents->addAction(_alwaysShowContentsAction);
     _alwaysShowContentsAction->setChecked(_alwaysShowContents);
-    connect(_alwaysShowContentsAction, SIGNAL(triggered(bool)), SLOT(onAlwaysShowContents(bool)));
+    connect(_alwaysShowContentsAction, &QAction::triggered, this, &KWalletEditor::onAlwaysShowContents);
 
     _hideContents->addAction(_alwaysHideContentsAction);
     _alwaysHideContentsAction->setChecked(!_alwaysShowContents);
-    connect(_alwaysHideContentsAction, SIGNAL(triggered(bool)), SLOT(onAlwaysHideContents(bool)));
+    connect(_alwaysHideContentsAction, &QAction::triggered, this, &KWalletEditor::onAlwaysHideContents);
 }
 
 void KWalletEditor::disconnectActions()
 {
-    disconnect(_newFolderAction, SIGNAL(triggered(bool)), this, SLOT(createFolder()));
-    disconnect(this, SIGNAL(enableFolderActions(bool)), _newFolderAction, SLOT(setEnabled(bool)));
+    disconnect(_newFolderAction, &QAction::triggered, this, &KWalletEditor::createFolder);
+    disconnect(this, &KWalletEditor::enableFolderActions, _newFolderAction, &QAction::setEnabled);
 
-    disconnect(_deleteFolderAction, SIGNAL(triggered(bool)), this, SLOT(deleteFolder()));
-    disconnect(this, SIGNAL(enableContextFolderActions(bool)), _deleteFolderAction, SLOT(setEnabled(bool)));
-    disconnect(this, SIGNAL(enableFolderActions(bool)), _deleteFolderAction, SLOT(setEnabled(bool)));
+    disconnect(_deleteFolderAction, &QAction::triggered, this, &KWalletEditor::deleteFolder);
+    disconnect(this, &KWalletEditor::enableContextFolderActions, _deleteFolderAction, &QAction::setEnabled);
+    disconnect(this, &KWalletEditor::enableFolderActions, _deleteFolderAction, &QAction::setEnabled);
 
-    disconnect(_mergeAction, SIGNAL(triggered(bool)), this, SLOT(importWallet()));
-    disconnect(this, SIGNAL(enableWalletActions(bool)), _mergeAction, SLOT(setEnabled(bool)));
+    disconnect(_mergeAction, &QAction::triggered, this, &KWalletEditor::importWallet);
+    disconnect(this, &KWalletEditor::enableWalletActions, _mergeAction, &QAction::setEnabled);
 
-    disconnect(_importAction, SIGNAL(triggered(bool)), this, SLOT(importXML()));
-    disconnect(this, SIGNAL(enableWalletActions(bool)), _importAction, SLOT(setEnabled(bool)));
+    disconnect(_importAction, &QAction::triggered, this, &KWalletEditor::importXML);
+    disconnect(this, &KWalletEditor::enableWalletActions, _importAction, &QAction::setEnabled);
 
-    disconnect(_exportAction, SIGNAL(triggered(bool)), this, SLOT(exportXML()));
-    disconnect(this, SIGNAL(enableWalletActions(bool)), _exportAction, SLOT(setEnabled(bool)));
+    disconnect(_exportAction, &QAction::triggered, this, &KWalletEditor::exportXML);
+    disconnect(this, &KWalletEditor::enableWalletActions, _exportAction, &QAction::setEnabled);
 
-    disconnect(_newEntryAction, SIGNAL(triggered(bool)), this, SLOT(newEntry()));
+    disconnect(_newEntryAction, &QAction::triggered, this, &KWalletEditor::newEntry);
 
-    disconnect(_renameEntryAction, SIGNAL(triggered(bool)), this, SLOT(renameEntry()));
+    disconnect(_renameEntryAction, &QAction::triggered, this, &KWalletEditor::renameEntry);
 
-    disconnect(_deleteEntryAction, SIGNAL(triggered(bool)), this, SLOT(deleteEntry()));
+    disconnect(_deleteEntryAction, &QAction::triggered, this, &KWalletEditor::deleteEntry);
 
-    disconnect(_copyPassAction, SIGNAL(triggered(bool)), this, SLOT(copyPassword()));
-    disconnect(this, SIGNAL(enableWalletActions(bool)), _copyPassAction, SLOT(setEnabled(bool)));
+    disconnect(_copyPassAction, &QAction::triggered, this, &KWalletEditor::copyPassword);
+    disconnect(this, &KWalletEditor::enableWalletActions, _copyPassAction, &QAction::setEnabled);
 
-    disconnect(_alwaysShowContentsAction, SIGNAL(triggered(bool)), this, SLOT(onAlwaysShowContents(bool)));
-    disconnect(_alwaysHideContentsAction, SIGNAL(triggered(bool)), this, SLOT(onAlwaysHideContents(bool)));
+    disconnect(_alwaysShowContentsAction, &QAction::triggered, this, &KWalletEditor::onAlwaysShowContents);
+    disconnect(_alwaysHideContentsAction, &QAction::triggered, this, &KWalletEditor::onAlwaysHideContents);
 }
 
 void KWalletEditor::walletClosed()
