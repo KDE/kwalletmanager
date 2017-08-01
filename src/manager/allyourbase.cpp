@@ -101,7 +101,7 @@ KWalletContainerItem *KWalletFolderItem::getContainer(KWallet::Wallet::EntryType
 
 bool KWalletFolderItem::contains(const QString &key)
 {
-    return (getItem(key) != 0);
+    return (getItem(key) != nullptr);
 }
 
 QTreeWidgetItem *KWalletFolderItem::getItem(const QString &key)
@@ -361,7 +361,7 @@ void KWalletItem::processDropEvent(QDropEvent *e)
  */
 KWalletEntryList::KWalletEntryList(QWidget *parent, const QString &name)
     : QTreeWidget(parent),
-      _wallet(0)
+      _wallet(nullptr)
 {
     setObjectName(name);
     setColumnCount(1);
