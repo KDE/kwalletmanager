@@ -1190,12 +1190,12 @@ void KWalletEditor::exportXML()
 
     xml.writeStartElement(QStringLiteral("wallet"));
     xml.writeAttribute(QStringLiteral("name"), _walletName);
-    for (QStringList::const_iterator i = fl.constBegin(); i != fl.constEnd(); ++i) {
+    for (QStringList::const_iterator i = fl.constBegin(), flEnd(fl.constEnd()); i != flEnd; ++i) {
         xml.writeStartElement(QStringLiteral("folder"));
         xml.writeAttribute(QStringLiteral("name"), *i);
         _w->setFolder(*i);
         QStringList entries = _w->entryList();
-        for (QStringList::const_iterator j = entries.constBegin(); j != entries.constEnd(); ++j) {
+        for (QStringList::const_iterator j = entries.constBegin(), entriesEnd(entries.constEnd()); j != entriesEnd; ++j) {
             switch (_w->entryType(*j)) {
             case KWallet::Wallet::Password: {
                 QString pass;
@@ -1222,7 +1222,7 @@ void KWalletEditor::exportXML()
                 if (_w->readMap(*j, map) == 0) {
                     xml.writeStartElement(QStringLiteral("map"));
                     xml.writeAttribute(QStringLiteral("name"), *j);
-                    for (QMap<QString, QString>::ConstIterator k = map.constBegin(); k != map.constEnd(); ++k) {
+                    for (QMap<QString, QString>::ConstIterator k = map.constBegin(), mapEnd(map.constEnd()); k != mapEnd; ++k) {
                         xml.writeStartElement(QStringLiteral("mapentry"));
                         xml.writeAttribute(QStringLiteral("name"), k.key());
                         xml.writeCharacters(k.value());
