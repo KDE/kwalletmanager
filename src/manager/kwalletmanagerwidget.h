@@ -44,9 +44,9 @@ public:
     bool hasUnsavedChanges(const QString& name) const;
 
 protected:
-    void dragEnterEvent(QDragEnterEvent *e) Q_DECL_OVERRIDE;
-    void dragMoveEvent(QDragMoveEvent *e) Q_DECL_OVERRIDE;
-    void dropEvent(QDropEvent *e) Q_DECL_OVERRIDE;
+    void dragEnterEvent(QDragEnterEvent *e) override;
+    void dragMoveEvent(QDragMoveEvent *e) override;
+    void dropEvent(QDropEvent *e) override;
 
 private Q_SLOTS:
     void onCurrentPageChanged(KPageWidgetItem *, KPageWidgetItem *);

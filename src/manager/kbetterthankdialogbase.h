@@ -32,8 +32,8 @@ public:
 
 public slots:
     virtual void setLabel(const QString &label);
-    void accept() Q_DECL_OVERRIDE;
-    void reject() Q_DECL_OVERRIDE;
+    void accept() override;
+    void reject() override;
 
 private slots:
     virtual void clicked();

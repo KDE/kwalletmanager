@@ -116,11 +116,11 @@ public:
     void setWallet(KWallet::Wallet *w);
 
 protected:
-    void dragEnterEvent(QDragEnterEvent *e) Q_DECL_OVERRIDE;
-    void dragMoveEvent(QDragMoveEvent *e) Q_DECL_OVERRIDE;
-    void dropEvent(QDropEvent *e) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
+    void dragEnterEvent(QDragEnterEvent *e) override;
+    void dragMoveEvent(QDragMoveEvent *e) override;
+    void dropEvent(QDropEvent *e) override;
+    void mousePressEvent(QMouseEvent *e) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
 
     void itemDropped(QDropEvent *e, QTreeWidgetItem *item);
 

@@ -29,11 +29,11 @@ class ConnectedApplicationsTable : public QTableView
 public:
     explicit ConnectedApplicationsTable(QWidget *parent);
 
-    void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
+    void setModel(QAbstractItemModel *model) override;
     void setWallet(KWallet::Wallet *wallet);
 
 protected:
-    void resizeEvent(QResizeEvent *resizeEvent) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *resizeEvent) override;
 
 private:
     KWallet::Wallet     *_wallet;

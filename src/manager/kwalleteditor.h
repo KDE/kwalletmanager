@@ -51,8 +51,8 @@ public:
     void setNewWallet(bool newWallet);
 
 protected:
-    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
-    void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    void hideEvent(QHideEvent *) override;
+    void showEvent(QShowEvent *) override;
 
 public slots:
     void walletClosed();

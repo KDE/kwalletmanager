@@ -47,8 +47,8 @@ public Q_SLOTS:
     void onChangePassword();
 
 protected:
-    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
-    void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    void hideEvent(QHideEvent *) override;
+    void showEvent(QShowEvent *) override;
 
 private:
     QString             _walletName;

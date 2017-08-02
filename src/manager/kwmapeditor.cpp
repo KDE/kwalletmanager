@@ -47,7 +47,7 @@ public:
     }
 
 protected:
-    void focusOutEvent(QFocusEvent *e) Q_DECL_OVERRIDE
+    void focusOutEvent(QFocusEvent *e) override
     {
         if (e->reason() == Qt::PopupFocusReason) {
             // TODO: It seems we only get here if we're disturbed
@@ -57,7 +57,7 @@ protected:
 
         close();
     }
-    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE
+    void keyPressEvent(QKeyEvent *e) override
     {
         if (e->key() == Qt::Key_Escape) {
             e->accept();
@@ -67,7 +67,7 @@ protected:
             QTextEdit::keyPressEvent(e);
         }
     }
-    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE
+    void contextMenuEvent(QContextMenuEvent *event) override
     {
         QMenu *menu = createStandardContextMenu();
         popup = menu;
@@ -85,7 +85,7 @@ public:
     {
     }
 
-    QWidget *createEditor(QWidget *parentWidget, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    QWidget *createEditor(QWidget *parentWidget, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         if (index.column() != 2) {
             return QItemDelegate::createEditor(parentWidget, option, index);
@@ -95,7 +95,7 @@ public:
         return new InlineEditor(mapEditor);
     }
 
-    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         if (dynamic_cast<InlineEditor *>(editor)) {
             KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
@@ -107,7 +107,7 @@ public:
         }
     }
 
-    void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void setEditorData(QWidget *editor, const QModelIndex &index) const override
     {
         InlineEditor *e = dynamic_cast<InlineEditor *>(editor);
         if (e) {
@@ -118,7 +118,7 @@ public:
         }
     }
 
-    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override
     {
         InlineEditor *e = dynamic_cast<InlineEditor *>(editor);
         if (e) {
