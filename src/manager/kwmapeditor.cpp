@@ -230,7 +230,7 @@ void KWMapEditor::contextMenu(const QPoint &pos)
     QMenu *m = new QMenu(this);
     m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
     m->addAction(_copyAct);
-    m->popup(mapToGlobal(pos));
+    m->exec(mapToGlobal(pos));
     delete m;
 }
 
