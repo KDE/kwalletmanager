@@ -27,11 +27,11 @@
 #include <kwallet.h>
 
 
-KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const char *name)
+KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString &name)
     : QMenu(parent), _walletName(wallet)
 {
     addSection(wallet);
-    setObjectName(QLatin1String(name));
+    setObjectName(name);
     KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
     ac->setObjectName(QStringLiteral("kwallet context actions"));
     QAction *act;
