@@ -31,7 +31,7 @@ class KWMapEditor : public QTableWidget
     Q_OBJECT
 
 public:
-    KWMapEditor(QMap<QString, QString> &map, QWidget *parent = 0);
+    explicit KWMapEditor(QMap<QString, QString> &map, QWidget *parent = nullptr);
     virtual ~KWMapEditor();
 
 public slots:
