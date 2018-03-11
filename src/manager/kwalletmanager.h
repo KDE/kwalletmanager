@@ -19,7 +19,7 @@
 
 #ifndef KWALLETMANAGER_H
 #define KWALLETMANAGER_H
-#include <QtCore/QObject>
+#include <QObject>
 #include <kxmlguiwindow.h>
 
 class KWalletManagerWidget;
