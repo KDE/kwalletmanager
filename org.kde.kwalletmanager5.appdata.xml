@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.kwalletmanager5</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KWalletManager</name>
+  <summary>Wallet Management Tool</summary>
+  <description>
+    <p>
+     KWalletManager is a tool to manage the passwords on your system. By using the Frameworks wallet subsystem it not only allows you to keep your own secrets but also to access and manage the passwords of every application that integrates with the wallet.
+    </p>
+  </description>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kwalletmanager</url>
+  <url type="donation">https://www.kde.org/community/donations/</url>
+  <url type="help">https://docs.kde.org/?application=kwallet5</url>
+  <url type="homepage">https://utils.kde.org/projects/kwalletmanager/</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.kde.org/images/screenshots/kwalletmanager.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kwalletmanager5</binary>
+  </provides>
+  <launchable type="desktop-id">org.kde.kwalletmanager5.desktop</launchable>
+</component>
