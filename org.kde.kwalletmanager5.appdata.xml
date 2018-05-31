@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>KWalletManager</name>
   <name xml:lang="ca">KWalletManager</name>
+  <name xml:lang="ca-valencia">KWalletManager</name>
   <name xml:lang="de">KWalletManager</name>
   <name xml:lang="es">KWalletManager</name>
   <name xml:lang="pt">KWalletManager</name>
@@ -13,6 +14,7 @@
   <name xml:lang="x-test">xxKWalletManagerxx</name>
   <summary>Wallet Management Tool</summary>
   <summary xml:lang="ca">Eina per a la gestió de carteres</summary>
+  <summary xml:lang="ca-valencia">Eina per a la gestió de carteres</summary>
   <summary xml:lang="de">Dienstprogramm zur Passwortverwaltung</summary>
   <summary xml:lang="es">Herramienta de gestión de carteras</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
@@ -24,6 +26,7 @@
      KWalletManager is a tool to manage the passwords on your system. By using the Frameworks wallet subsystem it not only allows you to keep your own secrets but also to access and manage the passwords of every application that integrates with the wallet.
     </p>
     <p xml:lang="ca">El KWalletManager és una eina per a gestionar les contrasenyes al vostre sistema. Emprant el subsistema de carteres dels Frameworks, no només es permet mantenir els vostres propis secrets, sinó també accedir i gestionar les contrasenyes de cada aplicació que estigui integrada amb la cartera.</p>
+    <p xml:lang="ca-valencia">El KWalletManager és una eina per a gestionar les contrasenyes al vostre sistema. Emprant el subsistema de carteres dels Frameworks, no només es permet mantindre els vostres propis secrets, sinó també accedir i gestionar les contrasenyes de cada aplicació que estiga integrada amb la cartera.</p>
     <p xml:lang="de">KWalletManager ist ein Dienstprogramm zur Verwaltung der Passwörter auf Ihrem System. Durch die Verwendung des Frameworks-Subsystems Wallet können Sie nicht nur Ihre eigenen privaten Daten speichern, sondern auch auf die Passwörter jeder Anwendung, die in das KWallet benutzt, zugreifen und diese verwalten.</p>
     <p xml:lang="es">KWalletManager es una herramienta para gestionar las contraseñas de su sistema. Al usar el subsistema de carteras de Frameworks, no solo le permite guardar sus propios secretos, ya que además puede acceder y gestionar las contraseñas de cualquier aplicación que se integre con la cartera.</p>
     <p xml:lang="pt">O KWalletManager é uma ferramenta para gerir as senhas e palavras-passe no seu sistema. Ao usar o sub-sistema da carteira nas Plataformas, não só é possível manter as suas próprias senhas, mas também aceder e gerir as senhas de todas as aplicações que integram com a carteira.</p>
