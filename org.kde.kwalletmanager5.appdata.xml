@@ -4,21 +4,27 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KWalletManager</name>
+  <name xml:lang="ast">KWalletManager</name>
   <name xml:lang="ca">KWalletManager</name>
   <name xml:lang="ca-valencia">KWalletManager</name>
   <name xml:lang="de">KWalletManager</name>
   <name xml:lang="es">KWalletManager</name>
+  <name xml:lang="fr">KWalletManager</name>
   <name xml:lang="nl">KWalletManager</name>
+  <name xml:lang="pl">KWalletManager</name>
   <name xml:lang="pt">KWalletManager</name>
   <name xml:lang="sv">Plånbokshanteraren</name>
   <name xml:lang="uk">KWalletManager</name>
   <name xml:lang="x-test">xxKWalletManagerxx</name>
   <summary>Wallet Management Tool</summary>
+  <summary xml:lang="ast">Ferramienta de xestión de carteres</summary>
   <summary xml:lang="ca">Eina per a la gestió de carteres</summary>
   <summary xml:lang="ca-valencia">Eina per a la gestió de carteres</summary>
   <summary xml:lang="de">Dienstprogramm zur Passwortverwaltung</summary>
   <summary xml:lang="es">Herramienta de gestión de carteras</summary>
+  <summary xml:lang="fr">Outil de gestion de portefeuilles</summary>
   <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
+  <summary xml:lang="pl">Zarządzanie portfelem</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
   <summary xml:lang="sv">Hanteringsverktyg för plånbok</summary>
   <summary xml:lang="uk">Засіб керування сховищем паролів</summary>
@@ -31,7 +37,9 @@
     <p xml:lang="ca-valencia">El KWalletManager és una eina per a gestionar les contrasenyes al vostre sistema. Emprant el subsistema de carteres dels Frameworks, no només es permet mantindre els vostres propis secrets, sinó també accedir i gestionar les contrasenyes de cada aplicació que estiga integrada amb la cartera.</p>
     <p xml:lang="de">KWalletManager ist ein Dienstprogramm zur Verwaltung der Passwörter auf Ihrem System. Durch die Verwendung des Frameworks-Subsystems Wallet können Sie nicht nur Ihre eigenen privaten Daten speichern, sondern auch auf die Passwörter jeder Anwendung, die in das KWallet benutzt, zugreifen und diese verwalten.</p>
     <p xml:lang="es">KWalletManager es una herramienta para gestionar las contraseñas de su sistema. Al usar el subsistema de carteras de Frameworks, no solo le permite guardar sus propios secretos, ya que además puede acceder y gestionar las contraseñas de cualquier aplicación que se integre con la cartera.</p>
+    <p xml:lang="fr">KWalletManager est un outil qui vous permet de gérer les mots de passe sur votre système. En utilisant le sous-système de portefeuille de Frameworks, il vous permet non seulement de conserver vos propres mots de passe, mais également d'accéder aux mots de passe de toutes les applications qui s'intègrent au portefeuille et de les gérer.</p>
     <p xml:lang="nl">KWalletManager is een hulpmiddel om de wachtwoorden op uw systeem te beheren. Door het portefeuille subsysteem van Frameworks te gebruiken stelt het u niet alleen in staat om uw eigen geheimen te bewaren maar ook om toegang tot en de wachtwoorden van elke toepassing die integreert met de portefeuille te beheren.</p>
+    <p xml:lang="pl">KWalletManager jest narzędziem do zarządzania hasłami w twoim systemie. Używając podsystemu portfela umożliwia ci nie tylko zachowanie poufności, lecz także dostęp i zarządzanie hasłami w każdej aplikacji, która integruje portfel.</p>
     <p xml:lang="pt">O KWalletManager é uma ferramenta para gerir as senhas e palavras-passe no seu sistema. Ao usar o sub-sistema da carteira nas Plataformas, não só é possível manter as suas próprias senhas, mas também aceder e gerir as senhas de todas as aplicações que integram com a carteira.</p>
     <p xml:lang="sv">Plånbokshanteraren är ett verktyg för att hantera lösenorden på systemet. Genom att använda Ramverkens plånboksdelsystem låter det dig behålla egna hemligheter, men också komma åt och hantera lösenord för alla program som är integrerade med plånboken.</p>
     <p xml:lang="uk">KWalletManager — програма для керування даними паролів у вашій системі. На основі використання підсистеми сховища паролів Frameworks програма не лише надає вам змогу зберігати ваші реєстраційні дані, але і надає доступ і керує паролями у всіх програмах, у яких передбачено інтеграцію із таким сховищем.</p>
