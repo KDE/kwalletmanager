@@ -11,6 +11,7 @@
   <name xml:lang="es">KWalletManager</name>
   <name xml:lang="fr">KWalletManager</name>
   <name xml:lang="nl">KWalletManager</name>
+  <name xml:lang="nn">KWalletManager</name>
   <name xml:lang="pl">KWalletManager</name>
   <name xml:lang="pt">KWalletManager</name>
   <name xml:lang="sk">KWalletManager</name>
@@ -25,6 +26,7 @@
   <summary xml:lang="es">Herramienta de gestión de carteras</summary>
   <summary xml:lang="fr">Outil de gestion de portefeuilles</summary>
   <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
+  <summary xml:lang="nn">Wallet-administrasjonsverktøy</summary>
   <summary xml:lang="pl">Zarządzanie portfelem</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
   <summary xml:lang="sk">Nástroj pre správu KDE Wallet</summary>
