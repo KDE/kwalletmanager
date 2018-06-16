@@ -7,6 +7,7 @@
   <name xml:lang="ast">KWalletManager</name>
   <name xml:lang="ca">KWalletManager</name>
   <name xml:lang="ca-valencia">KWalletManager</name>
+  <name xml:lang="cs">KWalletManager</name>
   <name xml:lang="de">KWalletManager</name>
   <name xml:lang="es">KWalletManager</name>
   <name xml:lang="fr">KWalletManager</name>
@@ -23,6 +24,7 @@
   <summary xml:lang="ast">Ferramienta de xestión de carteres</summary>
   <summary xml:lang="ca">Eina per a la gestió de carteres</summary>
   <summary xml:lang="ca-valencia">Eina per a la gestió de carteres</summary>
+  <summary xml:lang="cs">Nástroj pro správu úschovny</summary>
   <summary xml:lang="de">Dienstprogramm zur Passwortverwaltung</summary>
   <summary xml:lang="es">Herramienta de gestión de carteras</summary>
   <summary xml:lang="fr">Outil de gestion de portefeuilles</summary>
