@@ -41,6 +41,7 @@
 #include <KSharedConfig>
 
 #include <ktoolbar.h>
+#include <KLocalizedString>
 #include <QIcon>
 #include <KTreeWidgetSearchLine>
 
@@ -889,7 +890,7 @@ void KWalletEditor::deleteEntry()
                 KMessageBox::error(this, i18n("An unexpected error occurred trying to delete the entry"));
                 return;
             }
-            _displayedItem = 0;
+            _displayedItem = nullptr;
             _w->removeEntry(item->text(0));
             delete item;
             entrySelectionChanged(_entryList->currentItem());
@@ -990,7 +991,7 @@ void KWalletEditor::importWallet()
                         KBetterThanKDialogBase *bd;
                         bd = new KBetterThanKDialogBase(this);
                         bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), me.key().toHtmlEscaped()));
-                        mp = (MergePlan)bd->exec();
+                        mp = static_cast<MergePlan>(bd->exec());
                         delete bd;
                         bool ok = false;
                         if (mp == Always || mp == Yes) {
@@ -1020,7 +1021,7 @@ void KWalletEditor::importWallet()
                     if (hasEntry && mp == Prompt) {
                         KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
                         bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), pe.key().toHtmlEscaped()));
-                        mp = (MergePlan)bd->exec();
+                        mp = static_cast<MergePlan>(bd->exec());
                         delete bd;
                         bool ok = false;
                         if (mp == Always || mp == Yes) {
@@ -1054,7 +1055,7 @@ void KWalletEditor::importWallet()
                     if (hasEntry && mp == Prompt) {
                         KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
                         bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), ee.key().toHtmlEscaped()));
-                        mp = (MergePlan)bd->exec();
+                        mp = static_cast<MergePlan>(bd->exec());
                         delete bd;
                         bool ok = false;
                         if (mp == Always || mp == Yes) {
@@ -1136,7 +1137,7 @@ void KWalletEditor::importXML()
             if (hasEntry && mp == Prompt) {
                 KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
                 bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", fname.toHtmlEscaped(), ename.toHtmlEscaped()));
-                mp = (MergePlan)bd->exec();
+                mp = static_cast<MergePlan>(bd->exec());
                 delete bd;
                 bool ok = false;
                 if (mp == Always || mp == Yes) {
@@ -1286,7 +1287,7 @@ void KWalletEditor::onSearchTextChanged(const QString &text)
     static bool treeIsExpanded = false;
     if (text.isEmpty()) {
         if (treeIsExpanded) {
-            _entryList->setCurrentItem(NULL);
+            _entryList->setCurrentItem(nullptr);
             // NOTE: the 300 ms here is a value >200 ms used internally by KTreeWidgetSearchLine
             // TODO: replace this timer with a connection to KTreeWidgetSearchLine::searchUpdated signal introduced with KF5
             QTimer::singleShot(300, _entryList, &KWalletEntryList::collapseAll);

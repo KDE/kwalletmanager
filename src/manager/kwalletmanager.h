@@ -36,7 +36,7 @@ class KWalletManager : public KXmlGuiWindow
 
 public:
     explicit KWalletManager(QWidget *parent = nullptr, const QString &name = QString(), Qt::WindowFlags f = 0);
-    virtual ~KWalletManager();
+    ~KWalletManager() override;
 
     void kwalletdLaunch();
     bool hasUnsavedChanges(const QString& name = QString()) const;

@@ -34,8 +34,8 @@ class ApplicationsManager : public QWidget, public Ui::ApplicationsManager
 {
     Q_OBJECT
 public:
-    ApplicationsManager(QWidget *parent);
-    virtual ~ApplicationsManager();
+    explicit ApplicationsManager(QWidget *parent);
+    ~ApplicationsManager() override;
 
     void setWallet(KWallet::Wallet *wallet);
 

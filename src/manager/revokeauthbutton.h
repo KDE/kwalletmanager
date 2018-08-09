@@ -41,7 +41,7 @@ Q_SIGNALS:
 
 private:
     QString             _appName;
-    KWallet::Wallet     *_wallet;
+    KWallet::Wallet     *_wallet = nullptr;
 };
 
 #endif // REVOKEAUTHBUTTON_H

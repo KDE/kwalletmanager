@@ -31,17 +31,17 @@ class DisconnectAppButton : public QPushButton
 {
     Q_OBJECT
 public:
-    DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet);
+    explicit DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet);
 
 Q_SIGNALS:
-    void appDisconnected(QString);
+    void appDisconnected(const QString &);
 
 private Q_SLOTS:
     void onClicked();
 
 private:
     QString             _appName;
-    KWallet::Wallet     *_wallet;
+    KWallet::Wallet     *_wallet = nullptr;
 };
 
 #endif // DISCONNECTAPPBUTTON_H

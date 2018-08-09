@@ -27,7 +27,7 @@ class KWalletManagerWidgetItem : public KPageWidgetItem
 {
     Q_OBJECT
 public:
-    KWalletManagerWidgetItem(QWidget *widgetParent, const QString &walletName);
+    explicit KWalletManagerWidgetItem(QWidget *widgetParent, const QString &walletName);
 
     void updateWalletDisplay();
     const QString &walletName() const

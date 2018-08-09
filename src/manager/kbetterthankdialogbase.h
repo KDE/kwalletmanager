@@ -28,7 +28,7 @@ class KBetterThanKDialogBase : public QDialog, private Ui_KBetterThanKDialogBase
     Q_OBJECT
 
 public:
-    KBetterThanKDialogBase(QWidget *parent = 0);
+    explicit KBetterThanKDialogBase(QWidget *parent = nullptr);
 
 public slots:
     virtual void setLabel(const QString &label);

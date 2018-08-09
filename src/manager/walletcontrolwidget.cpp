@@ -179,7 +179,7 @@ void WalletControlWidget::hideEvent(QHideEvent *)
 {
 }
 
-void WalletControlWidget::showEvent(QShowEvent *ev)
+void WalletControlWidget::showEvent(QShowEvent *)
 {
 }
 

@@ -156,7 +156,7 @@ KWallet::Wallet::EntryType KWalletContainerItem::entryType()
 
 bool KWalletContainerItem::contains(const QString &key)
 {
-    return getItem(key) != 0;
+    return getItem(key) != nullptr;
 }
 
 QTreeWidgetItem *KWalletContainerItem::getItem(const QString &key)

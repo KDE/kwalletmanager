@@ -55,7 +55,7 @@ KWalletManager::KWalletManager(QWidget *parent, const QString &name, Qt::WindowF
 {
     _kwalletdLaunch = false;
     _shuttingDown = false;
-    m_kwalletdModule = 0;
+    m_kwalletdModule = nullptr;
     setObjectName(name);
     RegisterCreateActionsMethod::createActions(actionCollection());
 

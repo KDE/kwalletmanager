@@ -25,8 +25,7 @@
 #include <QPushButton>
 
 ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget *parent):
-    QTableView(parent),
-    _wallet(nullptr)
+    QTableView(parent)
 {
 }
 

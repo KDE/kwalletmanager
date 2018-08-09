@@ -33,7 +33,7 @@ class WalletControlWidget : public QWidget, public Ui::WalletControlWidget
 {
     Q_OBJECT
 public:
-    WalletControlWidget(QWidget *parent, const QString &walletName);
+    explicit WalletControlWidget(QWidget *parent, const QString &walletName);
 
     bool openWallet();
     bool hasUnsavedChanges() const;
