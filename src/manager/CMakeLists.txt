@@ -34,7 +34,7 @@ ki18n_wrap_ui(kwalletmanager_SRCS
 
 
 # Sets the icon on Windows and OSX
-file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-kwalletmanager.png")
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kwalletmanager.png")
 ecm_add_app_icon(kwalletmanager_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(kwalletmanager5 ${kwalletmanager_SRCS})
@@ -63,16 +63,4 @@ install(TARGETS kwalletmanager5  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc
         DESTINATION ${KXMLGUI_INSTALL_DIR}/kwalletmanager5)
 
-ecm_install_icons( ICONS
-128-apps-kwalletmanager2.png
-128-apps-kwalletmanager.png
-16-apps-kwalletmanager2.png
-16-apps-kwalletmanager.png
-22-apps-kwalletmanager.png
-32-apps-kwalletmanager2.png
-32-apps-kwalletmanager.png
-48-apps-kwalletmanager2.png
-48-apps-kwalletmanager.png
-64-apps-kwalletmanager2.png
-64-apps-kwalletmanager.png
-DESTINATION ${ICON_INSTALL_DIR} )
+add_subdirectory(icons)
