@@ -27,7 +27,7 @@
 ActionReply SaveHelper::save(const QVariantMap &args)
 {
     Q_UNUSED(args);
-    const quint64 uid = QCoreApplication::applicationPid();
+    const qint64 uid = QCoreApplication::applicationPid();
     qDebug() << "executing uid=" << uid;
 
     return ActionReply::SuccessReply();

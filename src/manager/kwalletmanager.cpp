@@ -24,6 +24,7 @@
 #include "allyourbase.h"
 #include "kwallet_interface.h"
 #include "registercreateactionmethod.h"
+#include "kwalletmanager_debug.h"
 
 #include <klocalizedstring.h>
 #include <KToolInvocation>
@@ -40,7 +41,7 @@
 #include <kconfiggroup.h>
 #include <KTar>
 
-#include <QDebug>
+
 #include <QRegExp>
 #include <QRegExpValidator>
 #include <QTimer>

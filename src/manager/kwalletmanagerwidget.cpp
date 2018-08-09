@@ -21,6 +21,8 @@
 #include "kwalletmanagerwidget.h"
 #include "kwalletmanagerwidgetitem.h"
 #include "kwallet_interface.h"
+#include "kwalletmanager_debug.h"
+
 
 #include <kwallet.h>
 #include <qurl.h>
@@ -136,7 +138,7 @@ void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent *e)
 
 void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent *e)
 {
-    qDebug("KWalletManagerWidget::dragMoveEvent");
+    qCDebug(KWALLETMANAGER_LOG) << "KWalletManagerWidget::dragMoveEvent";
 //     KUrl dummy;
 //     QListWidgetItem *dummy2;
 //     if (shouldIgnoreDropEvent(e, &dummy, &dummy2)) {
@@ -148,7 +150,7 @@ void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent *e)
 
 void KWalletManagerWidget::dropEvent(QDropEvent *e)
 {
-    qDebug("KWalletManagerWidget::dropEvent");
+    qCDebug(KWALLETMANAGER_LOG) << "KWalletManagerWidget::dropEvent";
 //     KUrl u;
 //     QListWidgetItem *item;
 //     if (shouldIgnoreDropEvent(e, &u, &item)) {

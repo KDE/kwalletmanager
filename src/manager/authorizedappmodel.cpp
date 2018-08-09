@@ -18,10 +18,9 @@
 */
 
 #include "authorizedappmodel.h"
-
+#include "kwalletmanager_debug.h"
 #include <kconfiggroup.h>
 #include <kwallet.h>
-#include <QDebug>
 #include <QTimer>
 
 AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
@@ -55,11 +54,11 @@ void AuthorizedAppModel::removeApp(const QString &appName)
         QPersistentModelIndex idx = _authorizedAppsIndexMap[appName];
         if (idx.isValid()) {
             if (!removeRow(idx.row())) {
-                qDebug() << "Remove row failed for app " << appName;
+                qCDebug(KWALLETMANAGER_LOG) << "Remove row failed for app " << appName;
             }
         }
     } else {
-        qDebug() << "Attempting to remove unknown application " << appName;
+        qCDebug(KWALLETMANAGER_LOG) << "Attempting to remove unknown application " << appName;
     }
     QTimer::singleShot(0, this, &AuthorizedAppModel::saveConfig);
 }

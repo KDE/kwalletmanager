@@ -20,13 +20,14 @@
 #include "walletcontrolwidget.h"
 #include "kwalleteditor.h"
 #include "applicationsmanager.h"
+#include "kwalletmanager_debug.h"
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <qmenu.h>
 #include <kwallet.h>
 
-#include <QDebug>
+
 #include <QTimer>
 
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
@@ -61,7 +62,7 @@ void WalletControlWidget::onSetupWidget()
         if (nullptr == _wallet) {
             _wallet = KWallet::Wallet::openWallet(_walletName, effectiveWinId());
             if (nullptr == _wallet) {
-                qDebug() << "Weird situation: wallet could not be opened when setting-up the widget.";
+                qCDebug(KWALLETMANAGER_LOG) << "Weird situation: wallet could not be opened when setting-up the widget.";
             }
         }
     }

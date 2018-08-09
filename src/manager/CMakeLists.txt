@@ -21,6 +21,11 @@ set(kwalletmanager_SRCS
     revokeauthbutton.cpp
 )
 
+ecm_qt_declare_logging_category(kwalletmanager_SRCS
+                                HEADER kwalletmanager_debug.h
+                                IDENTIFIER KWALLETMANAGER_LOG
+                                CATEGORY_NAME org.kde.kwalletmanager)
+
 qt5_add_dbus_interface(kwalletmanager_SRCS
     ${KWALLET_DBUS_INTERFACES_DIR}/kf5_org.kde.KWallet.xml kwallet_interface
 )
