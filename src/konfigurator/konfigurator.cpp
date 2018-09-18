@@ -38,7 +38,8 @@
 #include <QCheckBox>
 #include <QMenu>
 #include <QPushButton>
-#include <QtDBus>
+#include <QDBusConnection>
+#include <QDBusInterface>
 #include <QVBoxLayout>
 
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"

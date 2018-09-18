@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef REGISTERCREATEACTIONSMETHOD_H
-#define REGISTERCREATEACTIONSMETHOD_H
+#ifndef REGISTERCREATEACTIONMETHOD_H
+#define REGISTERCREATEACTIONMETHOD_H
 
 #include <QList>
 #include <list>
@@ -42,10 +42,10 @@ class RegisterCreateActionsMethod
 public:
     typedef void (*CreateActionsMethod)(KActionCollection *);
 
-    RegisterCreateActionsMethod(CreateActionsMethod method);
+    explicit RegisterCreateActionsMethod(CreateActionsMethod method);
 
     static void createActions(KActionCollection *actionCollection);
 
 };
 
-#endif // REGISTERCREATEACTIONSMETHOD_H
+#endif // REGISTERCREATEACTIONMETHOD_H
