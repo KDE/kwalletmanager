@@ -37,6 +37,8 @@
 #include <QDebug>
 #include <QCheckBox>
 #include <QMenu>
+#include <QProcess>
+#include <QFile>
 #include <QPushButton>
 #include <QDBusConnection>
 #include <QDBusInterface>
