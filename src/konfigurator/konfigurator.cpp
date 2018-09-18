@@ -40,6 +40,7 @@
 #include <QPushButton>
 #include <QDBusConnection>
 #include <QDBusInterface>
+#include <QDBusConnectionInterface>
 #include <QVBoxLayout>
 
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
