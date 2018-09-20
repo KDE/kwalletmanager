@@ -45,7 +45,7 @@ public:
 
     QString quickHelp() const override;
 
-public slots:
+public Q_SLOTS:
     void configChanged();
     void launchManager();
     void newLocalWallet();

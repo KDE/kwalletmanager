@@ -27,7 +27,7 @@ using namespace KAuth;
 class SaveHelper : public QObject
 {
     Q_OBJECT
-public slots:
+public Q_SLOTS:
     ActionReply save(const QVariantMap &args);
 };
 

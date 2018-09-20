@@ -54,12 +54,12 @@ protected:
     void hideEvent(QHideEvent *) override;
     void showEvent(QShowEvent *) override;
 
-public slots:
+public Q_SLOTS:
     void walletClosed();
     void createFolder();
     void deleteFolder();
 
-private slots:
+private Q_SLOTS:
     void updateFolderList(bool checkEntries = false);
     void entrySelectionChanged(QTreeWidgetItem *item);
     void listItemChanged(QTreeWidgetItem *, int column);
@@ -90,7 +90,7 @@ private slots:
     void onAlwaysShowContents(bool);
     void onAlwaysHideContents(bool);
 
-signals:
+Q_SIGNALS:
     void enableWalletActions(bool enable);
     void enableFolderActions(bool enable);
     void enableContextFolderActions(bool enable);

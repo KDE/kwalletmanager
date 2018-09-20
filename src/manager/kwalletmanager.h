@@ -42,7 +42,7 @@ public:
     bool hasUnsavedChanges(const QString& name = QString()) const;
     bool canIgnoreUnsavedChanges();
 
-public slots:
+public Q_SLOTS:
     void createWallet();
     void deleteWallet();
     void closeWallet(const QString &walletName);
@@ -62,7 +62,7 @@ public Q_SLOTS: //dbus
     Q_SCRIPTABLE void updateWalletDisplay();
     Q_SCRIPTABLE void aWalletWasOpened();
 
-private slots:
+private Q_SLOTS:
     void shuttingDown();
     void possiblyQuit();
     void editorClosed(KXmlGuiWindow *e);

@@ -31,7 +31,7 @@ public:
     explicit KWalletPopup(const QString &wallet, QWidget *parent = nullptr, const QString &name = QString());
     virtual ~KWalletPopup();
 
-public slots:
+public Q_SLOTS:
     void openWallet();
     void deleteWallet();
     void closeWallet();
@@ -39,7 +39,7 @@ public slots:
     void changeWalletPassword();
     void disconnectApp();
 
-signals:
+Q_SIGNALS:
     void walletOpened(const QString &walletName);
     void walletClosed(const QString &walletName);
     void walletDeleted(const QString &walletName);

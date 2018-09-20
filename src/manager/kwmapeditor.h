@@ -34,7 +34,7 @@ public:
     explicit KWMapEditor(QMap<QString, QString> &map, QWidget *parent = nullptr);
     virtual ~KWMapEditor();
 
-public slots:
+public Q_SLOTS:
     void reload();
     void saveMap();
     void erase();
@@ -42,10 +42,10 @@ public slots:
     void addEntry();
     void emitDirty();
 
-private slots:
+private Q_SLOTS:
     void copy();
 
-signals:
+Q_SIGNALS:
     void dirty();
 
 private:

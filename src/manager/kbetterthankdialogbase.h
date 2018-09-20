@@ -30,12 +30,12 @@ class KBetterThanKDialogBase : public QDialog, private Ui_KBetterThanKDialogBase
 public:
     explicit KBetterThanKDialogBase(QWidget *parent = nullptr);
 
-public slots:
+public Q_SLOTS:
     virtual void setLabel(const QString &label);
     void accept() override;
     void reject() override;
 
-private slots:
+private Q_SLOTS:
     virtual void clicked();
 };
 
