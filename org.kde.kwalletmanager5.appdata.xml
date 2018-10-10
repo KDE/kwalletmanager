@@ -4,7 +4,6 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KWalletManager</name>
-  <name xml:lang="ast">KWalletManager</name>
   <name xml:lang="ca">KWalletManager</name>
   <name xml:lang="ca-valencia">KWalletManager</name>
   <name xml:lang="cs">KWalletManager</name>
@@ -28,7 +27,6 @@
   <name xml:lang="x-test">xxKWalletManagerxx</name>
   <name xml:lang="zh-CN">KWalletManager</name>
   <summary>Wallet Management Tool</summary>
-  <summary xml:lang="ast">Ferramienta de xestión de carteres</summary>
   <summary xml:lang="ca">Eina per a la gestió de carteres</summary>
   <summary xml:lang="ca-valencia">Eina per a la gestió de carteres</summary>
   <summary xml:lang="cs">Nástroj pro správu úschovny</summary>
