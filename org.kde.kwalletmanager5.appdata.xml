@@ -21,6 +21,7 @@
   <name xml:lang="pl">KWalletManager</name>
   <name xml:lang="pt">KWalletManager</name>
   <name xml:lang="pt-BR">KWalletManager</name>
+  <name xml:lang="ru">KWalletManager</name>
   <name xml:lang="sk">KWalletManager</name>
   <name xml:lang="sv">Plånbokshanteraren</name>
   <name xml:lang="uk">KWalletManager</name>
@@ -44,6 +45,7 @@
   <summary xml:lang="pl">Zarządzanie portfelem</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
   <summary xml:lang="pt-BR">Ferramenta para gerenciamento de carteiras</summary>
+  <summary xml:lang="ru">Управление бумажниками</summary>
   <summary xml:lang="sk">Nástroj pre správu KDE Wallet</summary>
   <summary xml:lang="sv">Hanteringsverktyg för plånbok</summary>
   <summary xml:lang="uk">Засіб керування сховищем паролів</summary>
