@@ -80,7 +80,7 @@
     <p xml:lang="zh-CN">KWalletManager 是一个用于管理您系统中密码的工具。通过使用框架中的钱包子系统，它不仅使您能够保存好您自己的密码，还使您能够访问并管理所有和钱包整合的应用程序的密码。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kwalletmanager</url>
-  <url type="donation">https://www.kde.org/community/donations/</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kwalletmanager&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=kwallet5</url>
   <url type="homepage">https://utils.kde.org/projects/kwalletmanager/</url>
   <screenshots>
