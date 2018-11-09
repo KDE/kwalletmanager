@@ -125,7 +125,6 @@ void KWalletManager::configUI() {
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::allWalletsClosed, this, &KWalletManager::allWalletsClosed);
     connect(m_kwalletdModule, SIGNAL(walletClosed(QString)),
             this, SLOT(updateWalletDisplay()));
-
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletOpened, this, &KWalletManager::aWalletWasOpened);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletDeleted, this, &KWalletManager::updateWalletDisplay);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletListDirty, this, &KWalletManager::updateWalletDisplay);
@@ -137,11 +136,7 @@ void KWalletManager::configUI() {
     QAction *action = actionCollection()->addAction(QStringLiteral("wallet_create"));
     action->setText(i18n("&New Wallet..."));
     action->setIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
-    connect(action, SIGNAL(triggered()), SLOT(createWallet()));
-
-    action = actionCollection()->addAction(QStringLiteral("wallet_open"));
-    action->setText(i18n("Open Wallet..."));
-    connect(action, SIGNAL(triggered()), this, SLOT(openWallet()));
+    connect(action, &QAction::triggered, this, &KWalletManager::createWallet);
 
     action = actionCollection()->addAction(QStringLiteral("wallet_delete"));
     action->setText(i18n("&Delete Wallet..."));
@@ -388,11 +383,6 @@ void KWalletManager::deleteWallet()
 void KWalletManager::openWallet(const QString &walletName)
 {
     _managerWidget->openWallet(walletName);
-}
-
-void KWalletManager::openWallet()
-{
-    qWarning("TODO: implement openWallet from file");
 }
 
 void KWalletManager::shuttingDown()
