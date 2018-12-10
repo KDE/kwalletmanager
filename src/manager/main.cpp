@@ -53,7 +53,7 @@ int main(int argc, char **argv)
                  KAboutLicense::GPL,
                  i18n("Copyright ©2013–2017, KWallet Manager authors"),
                  QString(),
-                 QStringLiteral("http://utils.kde.org/projects/kwalletmanager"));
+                 QStringLiteral("https://utils.kde.org/projects/kwalletmanager/"));
 
     aboutData.addAuthor(i18n("Valentin Rusu"),
                         i18n("Maintainer, user interface refactoring"),
