@@ -59,9 +59,9 @@ bool WalletControlWidget::openWallet()
 void WalletControlWidget::onSetupWidget()
 {
     if (KWallet::Wallet::isOpen(_walletName)) {
-        if (nullptr == _wallet) {
+        if (!_wallet) {
             _wallet = KWallet::Wallet::openWallet(_walletName, effectiveWinId());
-            if (nullptr == _wallet) {
+            if (!_wallet) {
                 qCDebug(KWALLETMANAGER_LOG) << "Weird situation: wallet could not be opened when setting-up the widget.";
             }
         }
@@ -71,14 +71,14 @@ void WalletControlWidget::onSetupWidget()
         connect(_wallet, &KWallet::Wallet::walletClosed, this, &WalletControlWidget::onWalletClosed);
         _openClose->setText(i18n("&Close"));
 
-        if (nullptr == _walletEditor) {
+        if (!_walletEditor) {
             _walletEditor = new KWalletEditor(_editorFrame);
             _editorFrameLayout->addWidget(_walletEditor);
             _walletEditor->setVisible(true);
         }
         _walletEditor->setWallet(_wallet);
 
-        if (nullptr == _applicationsManager) {
+        if (!_applicationsManager) {
             _applicationsManager = new ApplicationsManager(_applicationsFrame);
             _applicationsFrameLayout->addWidget(_applicationsManager);
             _applicationsManager->setVisible(true);
