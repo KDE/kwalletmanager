@@ -252,7 +252,7 @@ void KWalletEditor::connectActions()
     connect(_newFolderAction, &QAction::triggered, this, &KWalletEditor::createFolder);
     connect(this, &KWalletEditor::enableFolderActions, _newFolderAction, &QAction::setEnabled);
 
-    connect(_deleteFolderAction, SIGNAL(triggered(bool)), SLOT(deleteFolder()));
+    connect(_deleteFolderAction, &QAction::triggered, this, &KWalletEditor::deleteFolder);
     connect(this, &KWalletEditor::enableContextFolderActions, _deleteFolderAction, &QAction::setEnabled);
     connect(this, &KWalletEditor::enableFolderActions, _deleteFolderAction, &QAction::setEnabled);
 

@@ -43,7 +43,7 @@ public:
     {
         setAttribute(Qt::WA_DeleteOnClose);
         setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
-        connect(p, SIGNAL(destroyed()), SLOT(close()));
+        connect(p, &QObject::destroyed, this, &QWidget::close);
     }
 
 protected:
@@ -228,7 +228,7 @@ void KWMapEditor::contextMenu(const QPoint &pos)
     QTableWidgetItem *twi = itemAt(pos);
     _contextRow = row(twi);
     QMenu *m = new QMenu(this);
-    m->addAction(i18n("&New Entry"), this, SLOT(addEntry()));
+    m->addAction(i18n("&New Entry"), this, &KWMapEditor::addEntry);
     m->addAction(_copyAct);
     m->exec(mapToGlobal(pos));
     delete m;

@@ -120,8 +120,8 @@ void KWalletManager::configUI() {
     _managerWidget->setMinimumSize(16*fm.height(), 18*fm.height());
 
     m_kwalletdModule = new org::kde::KWallet(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd5"), QDBusConnection::sessionBus());
-    connect(QDBusConnection::sessionBus().interface(), SIGNAL(serviceOwnerChanged(QString,QString,QString)), this,
-            SLOT(possiblyRescan(QString,QString,QString)));
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this,
+            &KWalletManager::possiblyRescan);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::allWalletsClosed, this, &KWalletManager::allWalletsClosed);
     connect(m_kwalletdModule, SIGNAL(walletClosed(QString)),
             this, SLOT(updateWalletDisplay()));

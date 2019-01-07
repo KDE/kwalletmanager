@@ -58,7 +58,7 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString
         pm->setObjectName(QStringLiteral("Disconnect Apps"));
         int id = 7000;
         for (QStringList::const_iterator it = ul.begin(), end(ul.end()); it != end; ++it) {
-            QAction *a = pm->addAction(*it, this, SLOT(disconnectApp()));
+            QAction *a = pm->addAction(*it, this, &KWalletPopup::disconnectApp);
             a->setData(*it);
             id++;
         }

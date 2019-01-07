@@ -381,7 +381,7 @@ void KWalletConfig::customContextMenuRequested(const QPoint &pos)
     if (item && item->parent()) {
         QMenu *m = new QMenu(this);
         m->setTitle(item->parent()->text(0));
-        m->addAction(i18n("&Delete"), this, SLOT(deleteEntry()), Qt::Key_Delete);
+        m->addAction(i18n("&Delete"), this, &KWalletConfig::deleteEntry, Qt::Key_Delete);
         m->exec(_wcw->_accessList->mapToGlobal(pos));
         delete m;
     }
