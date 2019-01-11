@@ -49,7 +49,7 @@ void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem *current, KPageW
 
 }
 
-void KWalletManagerWidget::updateWalletDisplay(QString selectWallet /* = QString() */)
+void KWalletManagerWidget::updateWalletDisplay(const QString &selectWallet /* = QString() */)
 {
     // NOTE: this method is called upon several kwalletd events
     static bool alreadyUpdating = false;

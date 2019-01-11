@@ -37,7 +37,7 @@ private Q_SLOTS:
     void onClicked();
 
 Q_SIGNALS:
-    void appRevoked(QString);
+    void appRevoked(const QString&);
 
 private:
     QString             _appName;

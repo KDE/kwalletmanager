@@ -32,10 +32,10 @@ class KWalletManagerWidget : public KPageWidget
 {
     Q_OBJECT
 public:
-    explicit KWalletManagerWidget(QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
+    explicit KWalletManagerWidget(QWidget *parent = nullptr, Qt::WindowFlags flags = {});
     ~KWalletManagerWidget() override;
 
-    void updateWalletDisplay(QString selectWallet = QString());
+    void updateWalletDisplay(const QString &selectWallet = QString());
     bool hasWallet(const QString &) const;
     bool openWalletFile(const QString &path);
     bool openWallet(const QString &name);
