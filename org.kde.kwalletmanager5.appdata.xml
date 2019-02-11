@@ -20,6 +20,7 @@
   <name xml:lang="ko">KWalletManager</name>
   <name xml:lang="nl">KWalletManager</name>
   <name xml:lang="nn">KWalletManager</name>
+  <name xml:lang="pa">ਕੇਵਾਲਿਟ-ਮੈਨੇਜਰ</name>
   <name xml:lang="pl">KWalletManager</name>
   <name xml:lang="pt">KWalletManager</name>
   <name xml:lang="pt-BR">KWalletManager</name>
@@ -47,6 +48,7 @@
   <summary xml:lang="ko">지갑 관리 도구</summary>
   <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
   <summary xml:lang="nn">Wallet-administrasjonsverktøy</summary>
+  <summary xml:lang="pa">ਵਾਲਿਟ ਇੰਤਜ਼ਾਮ ਟੂਲ</summary>
   <summary xml:lang="pl">Zarządzanie portfelem</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
   <summary xml:lang="pt-BR">Ferramenta para gerenciamento de carteiras</summary>
