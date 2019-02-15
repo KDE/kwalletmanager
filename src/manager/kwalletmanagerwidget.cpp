@@ -30,7 +30,7 @@
 #include <klocalizedstring.h>
 #include <QDragEnterEvent>
 
-KWalletManagerWidget::KWalletManagerWidget(QWidget *parent, Qt::WindowFlags flags):
+KWalletManagerWidget::KWalletManagerWidget(QWidget *parent, Qt::WindowFlags /*flags*/):
     KPageWidget(parent)
 {
     setFaceType(Auto);
@@ -44,7 +44,7 @@ KWalletManagerWidget::~KWalletManagerWidget()
 
 }
 
-void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before)
+void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem */*current*/, KPageWidgetItem */*before*/)
 {
 
 }
@@ -99,7 +99,7 @@ bool KWalletManagerWidget::hasWallet(const QString &name) const
     return _walletPages.contains(name);
 }
 
-bool KWalletManagerWidget::openWalletFile(const QString &path)
+bool KWalletManagerWidget::openWalletFile(const QString &/*path*/)
 {
     Q_ASSERT(0);
     // TODO: implement this method: add a new tab with an editor centered on a file
@@ -136,7 +136,7 @@ void KWalletManagerWidget::dragEnterEvent(QDragEnterEvent *e)
     }
 }
 
-void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent *e)
+void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent */*e*/)
 {
     qCDebug(KWALLETMANAGER_LOG) << "KWalletManagerWidget::dragMoveEvent";
 //     KUrl dummy;
@@ -148,7 +148,7 @@ void KWalletManagerWidget::dragMoveEvent(QDragMoveEvent *e)
 //     }
 }
 
-void KWalletManagerWidget::dropEvent(QDropEvent *e)
+void KWalletManagerWidget::dropEvent(QDropEvent */*e*/)
 {
     qCDebug(KWALLETMANAGER_LOG) << "KWalletManagerWidget::dropEvent";
 //     KUrl u;
@@ -180,7 +180,7 @@ void KWalletManagerWidget::dropEvent(QDropEvent *e)
 //     }
 }
 
-bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent *e, QUrl *u) const
+bool KWalletManagerWidget::shouldIgnoreDropEvent(const QDropEvent */*e*/, QUrl */*u*/) const
 {
     return false;
 //     if (e->source() == viewport()) {
