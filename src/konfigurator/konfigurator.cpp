@@ -66,7 +66,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     setNeedsAuthorization(true);
 
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    vbox->setMargin(0);
+    vbox->setContentsMargins(0, 0, 0, 0);
     _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
 
