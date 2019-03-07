@@ -52,7 +52,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED
     Crash
 )
 
-#add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
+add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 if (${KF5Config_VERSION} STRGREATER "5.56.0")
         add_definitions(-DQT_NO_FOREACH)
         MESSAGE(STATUS "compile without foreach")
