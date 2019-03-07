@@ -168,8 +168,8 @@ inline QDataStream &operator<<(QDataStream &str, const KWalletFolderItem &w)
     QString oldFolder = w._wallet->currentFolder();
     str << w.name();
     w._wallet->setFolder(w.name());
-    QStringList entries = w._wallet->entryList();
-    foreach(const QString &entry, entries) {
+    const QStringList entries = w._wallet->entryList();
+    for (const QString &entry : entries) {
         str << entry;
         KWallet::Wallet::EntryType et = w._wallet->entryType(entry);
         str << (qint32)et;
