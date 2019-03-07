@@ -1,5 +1,5 @@
-<!DOCTYPE kpartgui>
-<kpartgui name="kwalletmanager" version="3">
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="kwalletmanager" version="3">
   <MenuBar>
     <Menu name="file"><text>&amp;File</text>
       <Action name="wallet_create"/>
@@ -20,4 +20,4 @@
     <Menu name="help"><text>&amp;Help</text>
     </Menu>
   </MenuBar>
-</kpartgui>
+</gui>
