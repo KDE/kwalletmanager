@@ -23,9 +23,9 @@
 #include "kwmapeditor.h"
 #include "allyourbase.h"
 
-#include <qaction.h>
-#include <qdialog.h>
-#include <qinputdialog.h>
+#include <QAction>
+#include <QDialog>
+#include <QInputDialog>
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
 #include <kactioncollection.h>

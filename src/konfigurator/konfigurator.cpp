@@ -23,7 +23,7 @@
 #include <ksharedconfig.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <qinputdialog.h>
+#include <QInputDialog>
 #include <kwallet.h>
 #include <kauthaction.h>
 #include <kauthactionreply.h>

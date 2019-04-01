@@ -28,7 +28,7 @@
 
 #include <klocalizedstring.h>
 #include <KToolInvocation>
-#include <qaction.h>
+#include <QAction>
 #include <kconfig.h>
 #include <kiconloader.h>
 #include <kmessagebox.h>

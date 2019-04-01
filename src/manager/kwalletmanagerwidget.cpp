@@ -25,7 +25,7 @@
 
 
 #include <kwallet.h>
-#include <qurl.h>
+#include <QUrl>
 #include <kmessagebox.h>
 #include <klocalizedstring.h>
 #include <QDragEnterEvent>

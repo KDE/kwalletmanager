@@ -25,7 +25,7 @@
 #include <klocalizedstring.h>
 #include <KIO/StoredTransferJob>
 #include <kmessagebox.h>
-#include <qurl.h>
+#include <QUrl>
 #include <kwallet.h>
 
 #include <QApplication>

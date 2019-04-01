@@ -21,7 +21,7 @@
 
 #include <kstandardaction.h>
 #include <kactioncollection.h>
-#include <qaction.h>
+#include <QAction>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kwallet.h>

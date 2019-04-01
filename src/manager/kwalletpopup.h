@@ -20,7 +20,7 @@
 #ifndef KWALLETPOPUP_H
 #define KWALLETPOPUP_H
 
-#include <qmenu.h>
+#include <QMenu>
 
 
 class KWalletPopup : public QMenu

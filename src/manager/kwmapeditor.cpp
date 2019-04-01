@@ -19,14 +19,14 @@
 
 #include "kwmapeditor.h"
 
-#include <qaction.h>
+#include <QAction>
 #include <kactioncollection.h>
 #include <QIcon>
 #include <klocalizedstring.h>
 #include <QMenu>
 #include <kstandardaction.h>
 #include <kwindowsystem.h>
-#include <qtextedit.h>
+#include <QTextEdit>
 
 #include <QApplication>
 #include <QClipboard>
