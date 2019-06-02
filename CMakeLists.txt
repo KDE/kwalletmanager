@@ -58,9 +58,6 @@ if (${KF5Config_VERSION} STRGREATER "5.56.0")
         MESSAGE(STATUS "compile without foreach")
 endif()
 
-
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-
 add_subdirectory( doc )
 add_subdirectory( icons )
 add_subdirectory( src )
