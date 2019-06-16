@@ -53,7 +53,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED
 )
 
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
-if (${KF5Config_VERSION} STRGREATER "5.56.0")
+if (KF5Config_VERSION VERSION_GREATER "5.56.0")
         add_definitions(-DQT_NO_FOREACH)
         MESSAGE(STATUS "compile without foreach")
 endif()
@@ -67,10 +67,10 @@ add_subdirectory( src )
 install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(FILES org.kde.kwalletmanager5.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-if (${ECM_VERSION} STRGREATER "5.58.0")
-    install(FILES kwalletmanager.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+if (ECM_VERSION VERSION_GREATER "5.58.0")
+    install(FILES kwalletmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 else()
-    install(FILES kwalletmanager.categories  DESTINATION ${KDE_INSTALL_CONFDIR})
+    install(FILES kwalletmanager.categories DESTINATION ${KDE_INSTALL_CONFDIR})
 endif()
 
 
