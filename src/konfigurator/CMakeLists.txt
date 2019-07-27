@@ -10,7 +10,7 @@ add_library(kcm_kwallet5 MODULE ${kcm_kwallet_PART_SRCS})
 
 target_link_libraries(kcm_kwallet5
     Qt5::Core
-    KF5::Auth
+    KF5::AuthCore
     KF5::CoreAddons
     KF5::KCMUtils
     KF5::Wallet
@@ -26,7 +26,7 @@ set(kcm_kwallet_helper_SRCS savehelper.cpp)
 add_executable(kcm_kwallet_helper5 ${kcm_kwallet_helper_SRCS})
 target_link_libraries(kcm_kwallet_helper5
     Qt5::Core
-    KF5::Auth
+    KF5::AuthCore
     KF5::Wallet
     KF5::CoreAddons
 )
