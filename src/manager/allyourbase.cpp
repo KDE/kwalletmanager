@@ -36,6 +36,7 @@
 #include <QDropEvent>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
+#include <QIcon>
 
 /****************
  *  KWalletFolderItem - ListView items to represent kwallet folders
@@ -198,7 +199,7 @@ void KWalletEntryItem::restoreName()
  * KWalletItem - IconView items to represent wallets
  */
 KWalletItem::KWalletItem(QListWidget *parent, const QString &walletName)
-    : QListWidgetItem(DesktopIcon(QLatin1String("wallet-closed")), walletName, parent), _open(false)
+    : QListWidgetItem(QIcon::fromTheme(QStringLiteral("wallet-closed")), walletName, parent), _open(false)
 {
     setFlags(flags() | Qt::ItemIsDropEnabled);
 }
@@ -212,9 +213,9 @@ void KWalletItem::setOpen(bool state)
     if (_open != state) {
         _open = state;
         if (_open) {
-            setIcon(DesktopIcon(QStringLiteral("wallet-open")));
+            setIcon(QIcon::fromTheme(QStringLiteral("wallet-open")));
         } else {
-            setIcon(DesktopIcon(QStringLiteral("wallet-closed")));
+            setIcon(QIcon::fromTheme(QStringLiteral("wallet-closed")));
         }
     }
 }
