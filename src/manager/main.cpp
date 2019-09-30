@@ -35,14 +35,10 @@
 int main(int argc, char **argv)
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication a(argc, argv);
     KCrash::initialize();
     KLocalizedString::setApplicationDomain("kwalletmanager");
-
-    /**
-     * enable high dpi support
-     */
-    a.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
 
