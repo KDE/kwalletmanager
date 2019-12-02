@@ -20,7 +20,7 @@
 #ifndef KWALLETMANAGERWIDGET_H
 #define KWALLETMANAGERWIDGET_H
 
-#include <kpagewidget.h>
+#include <KPageWidget>
 
 class QUrl;
 class QDropEvent;

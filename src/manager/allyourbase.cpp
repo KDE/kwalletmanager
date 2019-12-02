@@ -22,9 +22,9 @@
 #include "kwalletmanager_debug.h"
 
 #include <KJobWidgets>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <KIO/StoredTransferJob>
-#include <kmessagebox.h>
+#include <KMessageBox>
 #include <QUrl>
 #include <kwallet.h>
 

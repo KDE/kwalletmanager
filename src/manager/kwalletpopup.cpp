@@ -19,11 +19,11 @@
 
 #include "kwalletpopup.h"
 
-#include <kstandardaction.h>
-#include <kactioncollection.h>
+#include <KStandardAction>
+#include <KActionCollection>
 #include <QAction>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <kwallet.h>
 
 

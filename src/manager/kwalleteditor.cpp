@@ -28,19 +28,19 @@
 #include <QInputDialog>
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <kcodecs.h>
-#include <kmessagebox.h>
+#include <KMessageBox>
 #include <QMenu>
-#include <ksqueezedtextlabel.h>
-#include <kstandardaction.h>
+#include <KSqueezedTextLabel>
+#include <KStandardAction>
 #include <KConfigGroup>
 
 #include <QTemporaryFile>
-#include <kxmlguifactory.h>
+#include <KXMLGUIFactory>
 #include <KSharedConfig>
 
-#include <ktoolbar.h>
+#include <KToolBar>
 #include <KLocalizedString>
 #include <QIcon>
 #include <KTreeWidgetSearchLine>

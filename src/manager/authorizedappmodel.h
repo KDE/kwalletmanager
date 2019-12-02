@@ -21,7 +21,7 @@
 #define AUTHORIZEDAPPMODEL_H
 
 #include <QStandardItemModel>
-#include <ksharedconfig.h>
+#include <KSharedConfig>
 
 namespace KWallet
 {

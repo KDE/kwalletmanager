@@ -26,19 +26,19 @@
 #include "registercreateactionmethod.h"
 #include "kwalletmanager_debug.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <KToolInvocation>
 #include <QAction>
-#include <kconfig.h>
-#include <kiconloader.h>
-#include <kmessagebox.h>
-#include <kstandardaction.h>
-#include <kstatusnotifieritem.h>
+#include <KConfig>
+#include <KIconLoader>
+#include <KMessageBox>
+#include <KStandardAction>
+#include <KStatusNotifierItem>
 #include <kwallet.h>
-#include <kxmlguifactory.h>
+#include <KXMLGUIFactory>
 #include <QIcon>
-#include <kactioncollection.h>
-#include <kconfiggroup.h>
+#include <KActionCollection>
+#include <KConfigGroup>
 #include <KTar>
 
 

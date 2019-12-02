@@ -20,7 +20,7 @@
 #ifndef KWALLETMANAGERWIDGETITEM_H
 #define KWALLETMANAGERWIDGETITEM_H
 
-#include <kpagewidgetmodel.h>
+#include <KPageWidgetModel>
 
 class WalletControlWidget;
 class KWalletManagerWidgetItem : public KPageWidgetItem

@@ -19,7 +19,7 @@
 
 #include "savehelper.h"
 
-#include <kauthhelpersupport.h>
+#include <KAuthHelperSupport>
 
 #include <QCoreApplication>
 #include <QDebug>

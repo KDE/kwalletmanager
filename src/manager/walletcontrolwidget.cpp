@@ -22,8 +22,8 @@
 #include "applicationsmanager.h"
 #include "kwalletmanager_debug.h"
 
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QMenu>
 #include <kwallet.h>
 

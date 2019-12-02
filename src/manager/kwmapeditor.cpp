@@ -20,11 +20,11 @@
 #include "kwmapeditor.h"
 
 #include <QAction>
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <QIcon>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <QMenu>
-#include <kstandardaction.h>
+#include <KStandardAction>
 #include <kwindowsystem.h>
 #include <QTextEdit>
 

@@ -20,19 +20,19 @@
 #include "../kwalletmanager_version.h"
 #include "konfigurator.h"
 
-#include <ksharedconfig.h>
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
+#include <KSharedConfig>
+#include <KPluginFactory>
+#include <KPluginLoader>
 #include <QInputDialog>
 #include <kwallet.h>
-#include <kauthaction.h>
-#include <kauthactionreply.h>
-#include <kauthexecutejob.h>
-#include <ktoolinvocation.h>
-#include <kconfiggroup.h>
-#include <kmessagebox.h>
+#include <KAuthAction>
+#include <KAuthActionReply>
+#include <KAuthExecuteJob>
+#include <KToolInvocation>
+#include <KConfigGroup>
+#include <KMessageBox>
 
-#include <kaboutdata.h>
+#include <KAboutData>
 
 #include <QDebug>
 #include <QCheckBox>

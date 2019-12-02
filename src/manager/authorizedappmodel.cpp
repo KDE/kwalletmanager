@@ -19,7 +19,7 @@
 
 #include "authorizedappmodel.h"
 #include "kwalletmanager_debug.h"
-#include <kconfiggroup.h>
+#include <KConfigGroup>
 #include <kwallet.h>
 #include <QTimer>
 

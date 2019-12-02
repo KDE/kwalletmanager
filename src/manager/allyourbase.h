@@ -22,8 +22,8 @@
 #define ALLYOURBASE_H
 
 #include <kwallet.h>
-#include <kiconloader.h>
-#include <kicontheme.h>
+#include <KIconLoader>
+#include <KIconTheme>
 #include <QListWidget>
 
 #include <QPixmap>

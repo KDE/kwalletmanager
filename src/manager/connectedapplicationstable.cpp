@@ -21,7 +21,7 @@
 #include "disconnectappbutton.h"
 #include "connectedappmodel.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <QPushButton>
 
 ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget *parent):

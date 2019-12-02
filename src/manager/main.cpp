@@ -21,7 +21,7 @@
 #include "kwalletmanager.h"
 
 #include <KDBusAddons/kdbusservice.h>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <KAboutData>
 
 #include <QApplication>

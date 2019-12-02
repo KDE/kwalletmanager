@@ -19,8 +19,8 @@
 
 #ifndef _KWALLETKONFIGURATOR_H
 #define _KWALLETKONFIGURATOR_H
-#include <kcmodule.h>
-#include <ksharedconfig.h>
+#include <KCModule>
+#include <KSharedConfig>
 #include "ui_walletconfigwidget.h"
 
 class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
