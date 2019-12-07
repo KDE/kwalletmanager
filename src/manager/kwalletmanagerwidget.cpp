@@ -24,7 +24,7 @@
 #include "kwalletmanager_debug.h"
 
 
-#include <kwallet.h>
+#include <KWallet>
 #include <QUrl>
 #include <KMessageBox>
 #include <KLocalizedString>

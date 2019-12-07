@@ -20,7 +20,7 @@
 #include "connectedappmodel.h"
 #include "kwalletmanager_debug.h"
 
-#include <kwallet.h>
+#include <KWallet>
 
 
 ConnectedAppModel::ConnectedAppModel(KWallet::Wallet *wallet):

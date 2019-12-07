@@ -24,7 +24,7 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <QInputDialog>
-#include <kwallet.h>
+#include <KWallet>
 #include <KAuthAction>
 #include <KAuthActionReply>
 #include <KAuthExecuteJob>

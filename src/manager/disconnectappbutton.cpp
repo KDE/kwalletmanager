@@ -20,7 +20,7 @@
 #include "disconnectappbutton.h"
 
 #include <KLocalizedString>
-#include <kwallet.h>
+#include <KWallet>
 
 DisconnectAppButton::DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet) :
     _appName(appName), _wallet(wallet)

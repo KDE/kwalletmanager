@@ -21,7 +21,7 @@
 #ifndef ALLYOURBASE_H
 #define ALLYOURBASE_H
 
-#include <kwallet.h>
+#include <KWallet>
 #include <KIconLoader>
 #include <KIconTheme>
 #include <QListWidget>

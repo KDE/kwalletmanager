@@ -23,7 +23,7 @@
 
 #include "ui_walletwidget.h"
 
-#include <kwallet.h>
+#include <KWallet>
 #include <kxmlguiwindow.h>
 #include "registercreateactionmethod.h"
 #include <QLabel>

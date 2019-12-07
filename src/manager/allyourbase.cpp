@@ -26,7 +26,7 @@
 #include <KIO/StoredTransferJob>
 #include <KMessageBox>
 #include <QUrl>
-#include <kwallet.h>
+#include <KWallet>
 
 #include <QApplication>
 #include <QDebug>

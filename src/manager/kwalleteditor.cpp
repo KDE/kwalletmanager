@@ -29,7 +29,7 @@
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
 #include <KActionCollection>
-#include <kcodecs.h>
+#include <KCodecs>
 #include <KMessageBox>
 #include <QMenu>
 #include <KSqueezedTextLabel>

@@ -20,7 +20,7 @@
 #include "authorizedappmodel.h"
 #include "kwalletmanager_debug.h"
 #include <KConfigGroup>
-#include <kwallet.h>
+#include <KWallet>
 #include <QTimer>
 
 AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):

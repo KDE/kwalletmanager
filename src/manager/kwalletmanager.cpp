@@ -34,7 +34,7 @@
 #include <KMessageBox>
 #include <KStandardAction>
 #include <KStatusNotifierItem>
-#include <kwallet.h>
+#include <KWallet>
 #include <KXMLGUIFactory>
 #include <QIcon>
 #include <KActionCollection>

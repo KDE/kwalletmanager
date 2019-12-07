@@ -21,7 +21,7 @@
 #include "kwalletmanagerwidgetitem.h"
 #include "walletcontrolwidget.h"
 
-#include <kwallet.h>
+#include <KWallet>
 #include <QIcon>
 
 KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget *widgetParent, const QString &walletName):

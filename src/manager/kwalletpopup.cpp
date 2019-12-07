@@ -24,7 +24,7 @@
 #include <QAction>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kwallet.h>
+#include <KWallet>
 
 
 KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString &name)

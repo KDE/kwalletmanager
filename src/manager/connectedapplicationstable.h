@@ -20,7 +20,7 @@
 #ifndef CONNECTEDAPPLICATIONSTABLE_H
 #define CONNECTEDAPPLICATIONSTABLE_H
 
-#include <kwallet.h>
+#include <KWallet>
 #include <QTableView>
 
 class ConnectedApplicationsTable : public QTableView

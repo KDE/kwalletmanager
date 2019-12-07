@@ -25,7 +25,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QMenu>
-#include <kwallet.h>
+#include <KWallet>
 
 
 #include <QTimer>

@@ -25,7 +25,7 @@
 #include <KLocalizedString>
 #include <QMenu>
 #include <KStandardAction>
-#include <kwindowsystem.h>
+#include <KWindowSystem>
 #include <QTextEdit>
 
 #include <QApplication>

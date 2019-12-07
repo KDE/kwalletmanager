@@ -20,7 +20,7 @@
 #include "applicationsmanager.h"
 #include "connectedappmodel.h"
 #include "authorizedappmodel.h"
-#include "kwallet.h"
+#include <KWallet>
 
 
 ApplicationsManager::ApplicationsManager(QWidget *parent):
