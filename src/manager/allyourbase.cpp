@@ -51,12 +51,13 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, co
 
 QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group)
 {
-    QPixmap pix = QIcon::fromTheme(_name).pixmap(IconSize(group), IconSize(group));
+    const auto iconSize = KIconLoader::global()->currentSize(group);
+    QPixmap pix = QIcon::fromTheme(_name).pixmap(iconSize);
 
     if (pix.isNull()) {
-        pix = QIcon::fromTheme(_name.toLower()).pixmap(IconSize(group), IconSize(group));
+        pix = QIcon::fromTheme(_name.toLower()).pixmap(iconSize);
         if (pix.isNull())
-            pix = QIcon::fromTheme(QStringLiteral("folder-red")).pixmap(IconSize(group), IconSize(group));
+            pix = QIcon::fromTheme(QStringLiteral("folder-red")).pixmap(iconSize);
     }
 
     return pix;
