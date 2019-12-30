@@ -169,11 +169,6 @@
            </item>
            <item>
             <widget class="QTextEdit" name="_passwordValue">
-             <property name="font">
-              <font>
-               <family>Monospace</family>
-              </font>
-             </property>
              <property name="acceptRichText">
               <bool>false</bool>
              </property>

@@ -137,6 +137,8 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
     connect(_showContents, &QToolButton::clicked, this, &KWalletEditor::showPasswordContents);
     connect(_hideContents, &QToolButton::clicked, this, &KWalletEditor::hidePasswordContents);
 
+    _passwordValue->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
+
     _binaryViewShow->setChecked(_alwaysShowContents);
 //    createActions();
     // TODO: remove kwalleteditor.rc file
