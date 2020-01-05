@@ -52,8 +52,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED
     Crash
 )
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
-   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050D00)
+   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054000)
 endif()
 if (KF5Config_VERSION VERSION_GREATER "5.56.0")
         add_definitions(-DQT_NO_FOREACH)
