@@ -981,11 +981,10 @@ void KWalletEditor::importWallet()
 
             _w->setFolder(*f);
 
-            QMap<QString, QMap<QString, QString> > map;
+            bool readMap = false;
+            QMap<QString, QMap<QString, QString>> map = w->mapList(&readMap);
             QSet<QString> mergedkeys; // prevents re-merging already merged entries.
-            int rc;
-            rc = w->readMapList(QStringLiteral("*"), map);
-            if (rc == 0) {
+            if (readMap) {
                 QMap<QString, QMap<QString, QString> >::ConstIterator me;
                 for (me = map.constBegin(); me != map.constEnd(); ++me) {
                     bool hasEntry = _w->hasEntry(me.key());
@@ -1014,9 +1013,9 @@ void KWalletEditor::importWallet()
                 }
             }
 
-            QMap<QString, QString> pwd;
-            rc = w->readPasswordList(QStringLiteral("*"), pwd);
-            if (rc == 0) {
+            bool readPassList = false;
+            QMap<QString, QString> pwd = w->passwordList(&readPassList);
+            if (readPassList) {
                 QMap<QString, QString>::ConstIterator pe;
                 for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
                     bool hasEntry = _w->hasEntry(pe.key());
@@ -1044,9 +1043,9 @@ void KWalletEditor::importWallet()
                 }
             }
 
-            QMap<QString, QByteArray> ent;
-            rc = w->readEntryList(QStringLiteral("*"), ent);
-            if (rc == 0) {
+            bool readEntries = false;
+            QMap<QString, QByteArray> ent = w->entriesList(&readEntries);
+            if (readEntries) {
                 QMap<QString, QByteArray>::ConstIterator ee;
                 for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
                     // prevent re-merging already merged entries.
