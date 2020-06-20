@@ -7,8 +7,8 @@ set (RELEASE_SERVICE_VERSION_MICRO "70")
 set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
 project(kwalletmanager5 VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.11.0")
-set(KF5_MIN_VERSION "5.56.0")
+set(QT_MIN_VERSION "5.12.0")
+set(KF5_MIN_VERSION "5.59.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -56,11 +56,8 @@ add_definitions(
     -DQT_DEPRECATED_WARNINGS_SINCE=0x060000
     -DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054000
     -DKF_DEPRECATED_WARNINGS_SINCE=0x060000
+    -DQT_NO_FOREACH
 )
-if (KF5Config_VERSION VERSION_GREATER "5.56.0")
-        add_definitions(-DQT_NO_FOREACH)
-        MESSAGE(STATUS "compile without foreach")
-endif()
 
 add_subdirectory( doc )
 add_subdirectory( icons )
@@ -71,11 +68,6 @@ add_subdirectory( src )
 install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(FILES org.kde.kwalletmanager5.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-if (ECM_VERSION VERSION_GREATER "5.58.0")
-    install(FILES kwalletmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-else()
-    install(FILES kwalletmanager.categories DESTINATION ${KDE_INSTALL_CONFDIR})
-endif()
-
+install(FILES kwalletmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
