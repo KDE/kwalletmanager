@@ -8,7 +8,7 @@ Exec=kcmshell5 kwalletconfig5
 X-DocPath=kwallet5/index.html#kwallet-kcontrol-module
 X-KDE-Library=kcm_kwallet5
 X-KDE-ParentApp=kcontrol
-X-KDE-System-Settings-Parent-Category=accountdetails
+X-KDE-System-Settings-Parent-Category=personalization
 
 Name=KDE Wallet
 Name[ar]=محفظة كدي
