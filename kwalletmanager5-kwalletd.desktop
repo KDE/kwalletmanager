@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Wallet Management Tool
+Name=KDE Wallet Management Tool
 Name[ar]=أداة لإدارة المحفظة
 Name[bg]=Инструмент за настройване на "Портфейл"
 Name[br]=Merour an doug-paperoù
@@ -68,7 +68,7 @@ Name[vi]=Công Cụ Quản Lý Ví
 Name[x-test]=xxWallet Management Toolxx
 Name[zh_CN]=钱包管理工具
 Name[zh_TW]=錢包管理工具
-Comment=Wallet Management Tool
+Comment=KDE Wallet Management Tool
 Comment[ar]=أداة لإدارة المحفظة
 Comment[ca]=Eina per a la gestió de carteres
 Comment[ca@valencia]=Eina per a la gestió de carteres
