@@ -1,5 +1,11 @@
 [Desktop Entry]
 Name=KDE Wallet Management Tool
+Name[ca]=Eina per a la gestió de carteres del KDE
+Name[nl]=KDE hulpmiddel voor portefeuillebeheer
+Name[pt]=Ferramenta de Gestão da Carteira do KDE
+Name[sv]=KDE:s verktyg för plånbokshantering
+Name[uk]=Засіб KDE для керування торбинками
+Name[x-test]=xxKDE Wallet Management Toolxx
 Comment=KDE Wallet Management Tool
 Comment[ar]=أداة لإدارة محفظة كدي
 Comment[ca]=Eina per a la gestió de carteres del KDE
