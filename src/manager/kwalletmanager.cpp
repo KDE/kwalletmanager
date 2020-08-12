@@ -27,7 +27,6 @@
 #include "kwalletmanager_debug.h"
 
 #include <KLocalizedString>
-#include <KToolInvocation>
 #include <QAction>
 #include <KConfig>
 #include <KIconLoader>
@@ -40,7 +39,7 @@
 #include <KActionCollection>
 #include <KConfigGroup>
 #include <KTar>
-
+#include <KIO/CommandLauncherJob>
 
 #include <QRegExp>
 #include <QRegExpValidator>
@@ -397,7 +396,8 @@ void KWalletManager::shuttingDown()
 
 void KWalletManager::setupWallet()
 {
-    KToolInvocation::startServiceByDesktopName(QStringLiteral("kwalletconfig5"));
+    auto *job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("kwalletconfig5")});
+    job->start();
 }
 
 void KWalletManager::closeAllWallets()

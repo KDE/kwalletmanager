@@ -56,6 +56,7 @@ target_link_libraries(kwalletmanager5
     KF5::ConfigCore
     KF5::Service
     KF5::KIOCore
+    KF5::KIOGui
     KF5::JobWidgets
     KF5::Archive
     KF5::IconThemes
