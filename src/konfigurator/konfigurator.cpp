@@ -28,7 +28,6 @@
 #include <KAuthAction>
 #include <KAuthActionReply>
 #include <KAuthExecuteJob>
-#include <KToolInvocation>
 #include <KConfigGroup>
 #include <KMessageBox>
 
