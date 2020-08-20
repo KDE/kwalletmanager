@@ -43,6 +43,9 @@ void ApplicationsManager::setWallet(KWallet::Wallet *wallet)
     Q_ASSERT(wallet != nullptr);
     _wallet = wallet;
 
+    delete _connectedAppsModel;
+    delete _authorizedAppModel;
+
     // create the disconnect widget menu
     _connectedAppsModel = new ConnectedAppModel(_wallet);
     _connectedApps->setWallet(_wallet);
