@@ -26,16 +26,11 @@
 #include <KIO/StoredTransferJob>
 #include <KMessageBox>
 #include <QUrl>
-#include <KWallet>
 
 #include <QApplication>
 #include <QDebug>
 #include <QDrag>
 #include <QMimeData>
-#include <QPixmap>
-#include <QDropEvent>
-#include <QDragEnterEvent>
-#include <QMouseEvent>
 #include <QIcon>
 
 /****************

@@ -20,7 +20,6 @@
 #include "../kwalletmanager_version.h"
 #include "konfigurator.h"
 
-#include <KSharedConfig>
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <QInputDialog>
