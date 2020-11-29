@@ -21,7 +21,6 @@
 #include "konfigurator.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <QInputDialog>
 #include <KWallet>
 #include <KAuthAction>
