@@ -222,7 +222,7 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
 
     _copyPassAction = actionCollection->addAction(QStringLiteral("copy_action"));
     _copyPassAction->setText(i18n("&Copy"));
-    actionCollection->setDefaultShortcut(_copyPassAction, Qt::Key_C + Qt::CTRL);
+    actionCollection->setDefaultShortcut(_copyPassAction, Qt::Key_C | Qt::CTRL);
     _copyPassAction->setEnabled(false);
 
     _newEntryAction = actionCollection->addAction(QStringLiteral("new_entry"));
