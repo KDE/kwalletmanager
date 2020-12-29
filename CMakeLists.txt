@@ -68,6 +68,10 @@ add_subdirectory( src )
 install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(FILES org.kde.kwalletmanager5.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-install(FILES kwalletmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+ecm_qt_install_logging_categories(
+	EXPORT KWALLETMANAGER
+        FILE kwalletmanager.categories
+        DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+        )
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
