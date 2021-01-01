@@ -24,7 +24,7 @@ class KWalletConfig : public KCModule
     Q_OBJECT
 public:
     explicit KWalletConfig(QWidget *parent = nullptr, const QVariantList & = QVariantList());
-    virtual ~KWalletConfig();
+    ~KWalletConfig() override;
 
     void load() override;
     void save() override;

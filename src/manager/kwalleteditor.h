@@ -29,7 +29,7 @@ class KWalletEditor : public QWidget, public Ui::WalletWidget
 
 public:
     explicit KWalletEditor(QWidget *parent, const QString &name = QString());
-    virtual ~KWalletEditor();
+    ~KWalletEditor() override;
 
     void setWallet(KWallet::Wallet *wallet, bool isPath = false);
     bool isOpen() const;

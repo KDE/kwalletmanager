@@ -19,7 +19,7 @@ class KWMapEditor : public QTableWidget
 
 public:
     explicit KWMapEditor(QMap<QString, QString> &map, QWidget *parent = nullptr);
-    virtual ~KWMapEditor();
+    ~KWMapEditor() override;
 
 public Q_SLOTS:
     void reload();

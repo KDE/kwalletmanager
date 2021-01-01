@@ -16,7 +16,7 @@ class KWalletPopup : public QMenu
 
 public:
     explicit KWalletPopup(const QString &wallet, QWidget *parent = nullptr, const QString &name = QString());
-    virtual ~KWalletPopup();
+    ~KWalletPopup() override;
 
 public Q_SLOTS:
     void openWallet();

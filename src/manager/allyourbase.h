@@ -33,7 +33,7 @@ class KWalletEntryItem : public QTreeWidgetItem
 {
 public:
     KWalletEntryItem(KWallet::Wallet *w, QTreeWidgetItem *parent, const QString &ename);
-    virtual ~KWalletEntryItem();
+    ~KWalletEntryItem() override;
 
     const QString &name() const
     {
@@ -55,7 +55,7 @@ class KWalletContainerItem : public QTreeWidgetItem
 {
 public:
     KWalletContainerItem(QTreeWidgetItem *parent, const QString &name, KWallet::Wallet::EntryType entryType);
-    virtual ~KWalletContainerItem();
+    ~KWalletContainerItem() override;
 
 public:
     KWallet::Wallet::EntryType entryType();
@@ -70,7 +70,7 @@ class KWalletFolderItem : public QTreeWidgetItem
 {
 public:
     KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, const QString &name, int entries);
-    virtual ~KWalletFolderItem();
+    ~KWalletFolderItem() override;
 
     virtual bool acceptDrop(const QMimeData *mime) const;
 
@@ -96,7 +96,7 @@ class KWalletEntryList : public QTreeWidget
 
 public:
     explicit KWalletEntryList(QWidget *parent, const QString &name = QString());
-    virtual ~KWalletEntryList();
+    ~KWalletEntryList() override;
 
     bool existsFolder(const QString &name);
     KWalletFolderItem *getFolder(const QString &name);
@@ -128,7 +128,7 @@ class KWalletItem : public QListWidgetItem
 {
 public:
     KWalletItem(QListWidget *parent, const QString &walletName);
-    virtual ~KWalletItem();
+    ~KWalletItem() override;
 
     void setOpen(bool state);
 
