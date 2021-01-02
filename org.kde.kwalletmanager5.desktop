@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=KWalletManager
 Name[ar]=مدير محفظتك
+Name[az]=KWalletManager
 Name[bg]=KWalletManager
 Name[bs]=KWalletManager
 Name[ca]=KWalletManager
@@ -57,6 +58,7 @@ Name[zh_CN]=KWalletManager
 Name[zh_TW]=KDE 錢包管理員
 Comment=KDE Wallet Management Tool
 Comment[ar]=أداة لإدارة محفظة كدي
+Comment[az]=KDE Cüzdanı İdarəetmə Vasitəsi
 Comment[ca]=Eina per a la gestió de carteres del KDE
 Comment[ca@valencia]=Eina per a la gestió de carteres del KDE
 Comment[cs]=Správce úschovny KDE
@@ -96,6 +98,7 @@ Comment[x-test]=xxKDE Wallet Management Toolxx
 Comment[zh_CN]=KDE 钱包管理工具
 Comment[zh_TW]=KDE 錢包管理工具
 GenericName=KDE Wallet Management Tool
+GenericName[az]=KDE Cüzdanı İdarəetmə Vasitəsi
 GenericName[ca]=Eina per a la gestió de carteres del KDE
 GenericName[cs]=Správce úschovny KDE
 GenericName[da]=Tegnebogsværktøj fra KDE

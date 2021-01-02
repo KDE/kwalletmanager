@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=KDE Wallet Management Tool
+Name[az]=KDE Cüzdanı İdarəetmə Vasitəsi
 Name[ca]=Eina per a la gestió de carteres del KDE
 Name[cs]=Správce úschovny KDE
 Name[da]=Tegnebogsværktøj fra KDE
@@ -26,6 +27,7 @@ Name[x-test]=xxKDE Wallet Management Toolxx
 Name[zh_CN]=KDE 钱包管理工具
 Comment=KDE Wallet Management Tool
 Comment[ar]=أداة لإدارة محفظة كدي
+Comment[az]=KDE Cüzdanı İdarəetmə Vasitəsi
 Comment[ca]=Eina per a la gestió de carteres del KDE
 Comment[ca@valencia]=Eina per a la gestió de carteres del KDE
 Comment[cs]=Správce úschovny KDE
