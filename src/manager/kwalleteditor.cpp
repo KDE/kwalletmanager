@@ -939,9 +939,10 @@ void KWalletEditor::importWallet()
         return;
     }
 
-    QTemporaryFile tmpFile;
-    if (!tmpFile.open()) {
+    QTemporaryFile *tmpFile = new QTemporaryFile;
+    if (!tmpFile->open()) {
         KMessageBox::sorry(this, i18n("Unable to create temporary file for downloading '<b>%1</b>'.", url.toDisplayString()));
+        tmpFile->deleteLater();
         return;
     }
 
@@ -949,17 +950,20 @@ void KWalletEditor::importWallet()
     KJobWidgets::setWindow(job, this);
     if (!job->exec()) {
         KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
+        tmpFile->deleteLater();
         return;
     }
-    tmpFile.write(job->data());
-    tmpFile.flush();
+    tmpFile->write(job->data());
+    tmpFile->flush();
 
-    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile.fileName(), effectiveWinId(), KWallet::Wallet::Path);
+    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile->fileName(), effectiveWinId(), KWallet::Wallet::Path);
 
     if (!w) {
         KMessageBox::sorry(this, i18n("Unable to load wallet '<b>%1</b>'.", url.toDisplayString()));
+        tmpFile->deleteLater();
         return;
     }
+    tmpFile->setParent(w);
     // This is racy, but that's how the kwallet API is
     connect(w, &KWallet::Wallet::walletOpened, this, &KWalletEditor::onImportWalletOpened);
 }
