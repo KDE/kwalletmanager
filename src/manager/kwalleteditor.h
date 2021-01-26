@@ -77,6 +77,8 @@ private Q_SLOTS:
     void onAlwaysShowContents(bool);
     void onAlwaysHideContents(bool);
 
+    void onImportWalletOpened(bool success);
+
 Q_SIGNALS:
     void enableWalletActions(bool enable);
     void enableFolderActions(bool enable);

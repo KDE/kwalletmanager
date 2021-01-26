@@ -46,6 +46,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 #include <QXmlStreamWriter>
+#include <QDebug>
 
 #include <assert.h>
 #include <stdlib.h>
@@ -954,113 +955,147 @@ void KWalletEditor::importWallet()
     tmpFile.flush();
 
     KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile.fileName(), effectiveWinId(), KWallet::Wallet::Path);
-    if (w && w->isOpen()) {
-        MergePlan mp = Prompt;
-        QStringList fl = w->folderList();
-        for (QStringList::ConstIterator f = fl.constBegin(); f != fl.constEnd(); ++f) {
-            if (!w->setFolder(*f)) {
-                continue;
-            }
 
-            if (!_w->hasFolder(*f)) {
-                _w->createFolder(*f);
-            }
+    if (!w) {
+        KMessageBox::sorry(this, i18n("Unable to load wallet '<b>%1</b>'.", url.toDisplayString()));
+        return;
+    }
+    // This is racy, but that's how the kwallet API is
+    connect(w, &KWallet::Wallet::walletOpened, this, &KWalletEditor::onImportWalletOpened);
+}
 
-            _w->setFolder(*f);
+void KWalletEditor::onImportWalletOpened(bool success)
+{
+    KWallet::Wallet *w = qobject_cast<KWallet::Wallet*>(sender());
+    if (!w) {
+        qCritical("Invalid pointer passed");
+        return;
+    }
 
-            bool readMap = false;
-            QMap<QString, QMap<QString, QString>> map = w->mapList(&readMap);
-            QSet<QString> mergedkeys; // prevents re-merging already merged entries.
-            if (readMap) {
-                QMap<QString, QMap<QString, QString> >::ConstIterator me;
-                for (me = map.constBegin(); me != map.constEnd(); ++me) {
-                    bool hasEntry = _w->hasEntry(me.key());
-                    if (hasEntry && mp == Prompt) {
-                        KBetterThanKDialogBase *bd;
-                        bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), me.key().toHtmlEscaped()));
-                        mp = static_cast<MergePlan>(bd->exec());
-                        delete bd;
-                        bool ok = false;
-                        if (mp == Always || mp == Yes) {
-                            ok = true;
-                        }
-                        if (mp == Yes || mp == No) {
-                            // reset mp
-                            mp = Prompt;
-                        }
-                        if (!ok) {
-                            continue;
-                        }
-                    } else if (hasEntry && mp == Never) {
+    if (!success) {
+        KMessageBox::sorry(this, i18n("Failed to unlock wallet '<b>%1</b>'.", w->walletName()));
+        delete w;
+        return;
+    }
+
+    if (!w->isOpen()) {
+        KMessageBox::sorry(this, i18n("Unable to open wallet '<b>%1</b>'.", w->walletName()));
+        delete w;
+        return;
+    }
+
+    MergePlan mp = Prompt;
+    QStringList fl = w->folderList();
+
+    if (fl.isEmpty()) {
+        KMessageBox::sorry(this, i18n("Wallet '<b>%1</b>' is empty.", w->walletName()));
+        delete w;
+        return;
+    }
+
+    for (QStringList::ConstIterator f = fl.constBegin(); f != fl.constEnd(); ++f) {
+        if (!w->setFolder(*f)) {
+            continue;
+        }
+
+        if (!_w->hasFolder(*f)) {
+            _w->createFolder(*f);
+        }
+
+        _w->setFolder(*f);
+
+        bool readMap = false;
+        QMap<QString, QMap<QString, QString>> map = w->mapList(&readMap);
+        QSet<QString> mergedkeys; // prevents re-merging already merged entries.
+        if (readMap) {
+            QMap<QString, QMap<QString, QString> >::ConstIterator me;
+            for (me = map.constBegin(); me != map.constEnd(); ++me) {
+                bool hasEntry = _w->hasEntry(me.key());
+                if (hasEntry && mp == Prompt) {
+                    KBetterThanKDialogBase *bd;
+                    bd = new KBetterThanKDialogBase(this);
+                    bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), me.key().toHtmlEscaped()));
+                    mp = static_cast<MergePlan>(bd->exec());
+                    delete bd;
+                    bool ok = false;
+                    if (mp == Always || mp == Yes) {
+                        ok = true;
+                    }
+                    if (mp == Yes || mp == No) {
+                        // reset mp
+                        mp = Prompt;
+                    }
+                    if (!ok) {
                         continue;
                     }
-                    _w->writeMap(me.key(), me.value());
-                    mergedkeys.insert(me.key()); // remember this key has been merged
+                } else if (hasEntry && mp == Never) {
+                    continue;
                 }
+                _w->writeMap(me.key(), me.value());
+                mergedkeys.insert(me.key()); // remember this key has been merged
             }
+        }
 
-            bool readPassList = false;
-            QMap<QString, QString> pwd = w->passwordList(&readPassList);
-            if (readPassList) {
-                QMap<QString, QString>::ConstIterator pe;
-                for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
-                    bool hasEntry = _w->hasEntry(pe.key());
-                    if (hasEntry && mp == Prompt) {
-                        KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), pe.key().toHtmlEscaped()));
-                        mp = static_cast<MergePlan>(bd->exec());
-                        delete bd;
-                        bool ok = false;
-                        if (mp == Always || mp == Yes) {
-                            ok = true;
-                        }
-                        if (mp == Yes || mp == No) {
-                            // reset mp
-                            mp = Prompt;
-                        }
-                        if (!ok) {
-                            continue;
-                        }
-                    } else if (hasEntry && mp == Never) {
+        bool readPassList = false;
+        QMap<QString, QString> pwd = w->passwordList(&readPassList);
+        if (readPassList) {
+            QMap<QString, QString>::ConstIterator pe;
+            for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
+                bool hasEntry = _w->hasEntry(pe.key());
+                if (hasEntry && mp == Prompt) {
+                    KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
+                    bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), pe.key().toHtmlEscaped()));
+                    mp = static_cast<MergePlan>(bd->exec());
+                    delete bd;
+                    bool ok = false;
+                    if (mp == Always || mp == Yes) {
+                        ok = true;
+                    }
+                    if (mp == Yes || mp == No) {
+                        // reset mp
+                        mp = Prompt;
+                    }
+                    if (!ok) {
                         continue;
                     }
-                    _w->writePassword(pe.key(), pe.value());
-                    mergedkeys.insert(pe.key()); // remember this key has been merged
+                } else if (hasEntry && mp == Never) {
+                    continue;
                 }
+                _w->writePassword(pe.key(), pe.value());
+                mergedkeys.insert(pe.key()); // remember this key has been merged
             }
+        }
 
-            bool readEntries = false;
-            QMap<QString, QByteArray> ent = w->entriesList(&readEntries);
-            if (readEntries) {
-                QMap<QString, QByteArray>::ConstIterator ee;
-                for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
-                    // prevent re-merging already merged entries.
-                    if (mergedkeys.contains(ee.key())) {
-                        continue;
-                    }
-                    bool hasEntry = _w->hasEntry(ee.key());
-                    if (hasEntry && mp == Prompt) {
-                        KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), ee.key().toHtmlEscaped()));
-                        mp = static_cast<MergePlan>(bd->exec());
-                        delete bd;
-                        bool ok = false;
-                        if (mp == Always || mp == Yes) {
-                            ok = true;
-                        }
-                        if (mp == Yes || mp == No) {
-                            // reset mp
-                            mp = Prompt;
-                        }
-                        if (!ok) {
-                            continue;
-                        }
-                    } else if (hasEntry && mp == Never) {
-                        continue;
-                    }
-                    _w->writeEntry(ee.key(), ee.value());
+        bool readEntries = false;
+        QMap<QString, QByteArray> ent = w->entriesList(&readEntries);
+        if (readEntries) {
+            QMap<QString, QByteArray>::ConstIterator ee;
+            for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
+                // prevent re-merging already merged entries.
+                if (mergedkeys.contains(ee.key())) {
+                    continue;
                 }
+                bool hasEntry = _w->hasEntry(ee.key());
+                if (hasEntry && mp == Prompt) {
+                    KBetterThanKDialogBase *bd = new KBetterThanKDialogBase(this);
+                    bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), ee.key().toHtmlEscaped()));
+                    mp = static_cast<MergePlan>(bd->exec());
+                    delete bd;
+                    bool ok = false;
+                    if (mp == Always || mp == Yes) {
+                        ok = true;
+                    }
+                    if (mp == Yes || mp == No) {
+                        // reset mp
+                        mp = Prompt;
+                    }
+                    if (!ok) {
+                        continue;
+                    }
+                } else if (hasEntry && mp == Never) {
+                    continue;
+                }
+                _w->writeEntry(ee.key(), ee.value());
             }
         }
     }
