@@ -18,7 +18,7 @@ target_link_libraries(kcm_kwallet5
     Qt5::DBus
 )
 
-install(TARGETS kcm_kwallet5  DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### kauth helper ################
 set(kcm_kwallet_helper_SRCS savehelper.cpp)

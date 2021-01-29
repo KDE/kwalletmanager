@@ -65,7 +65,7 @@ target_link_libraries(kwalletmanager5
     KF5::Crash
 )
 
-install(TARGETS kwalletmanager5  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc
         DESTINATION ${KXMLGUI_INSTALL_DIR}/kwalletmanager5)
 
