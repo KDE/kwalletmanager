@@ -10,5 +10,5 @@ ecm_install_icons( ICONS
 48-apps-kwalletmanager.png
 64-apps-kwalletmanager2.png
 64-apps-kwalletmanager.png
-DESTINATION ${ICON_INSTALL_DIR} )
+DESTINATION ${KDE_INSTALL_ICONDIR} )
 

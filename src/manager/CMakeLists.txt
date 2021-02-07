@@ -67,6 +67,6 @@ target_link_libraries(kwalletmanager5
 
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc
-        DESTINATION ${KXMLGUI_INSTALL_DIR}/kwalletmanager5)
+        DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/kwalletmanager5)
 
 add_subdirectory(icons)
