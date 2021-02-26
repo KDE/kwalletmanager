@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 # KDE Application Version, managed by release script
 set (RELEASE_SERVICE_VERSION_MAJOR "21")
@@ -73,5 +73,6 @@ ecm_qt_install_logging_categories(
         FILE kwalletmanager.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
-
+ki18n_install(po)
+kdoctools_install(po)
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
