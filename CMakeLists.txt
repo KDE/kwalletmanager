@@ -39,7 +39,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED
     DBusAddons
     DocTools
     I18n
-    IconThemes
     JobWidgets
     KCMUtils
     KIO

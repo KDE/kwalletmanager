@@ -59,7 +59,6 @@ target_link_libraries(kwalletmanager5
     KF5::KIOGui
     KF5::JobWidgets
     KF5::Archive
-    KF5::IconThemes
     KF5::Notifications
     KF5::WindowSystem
     KF5::Crash
