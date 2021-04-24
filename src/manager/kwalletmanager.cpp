@@ -16,7 +16,6 @@
 #include <KLocalizedString>
 #include <QAction>
 #include <KConfig>
-#include <KIconLoader>
 #include <KMessageBox>
 #include <KStandardAction>
 #include <KStatusNotifierItem>

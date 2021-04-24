@@ -327,9 +327,6 @@
    <header>kwhexview.h</header>
   </customwidget>
  </customwidgets>
- <includes>
-  <include location="global">kiconloader.h</include>
- </includes>
  <resources/>
  <connections>
   <connection>
