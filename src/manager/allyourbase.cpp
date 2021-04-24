@@ -28,21 +28,12 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, co
 {
     setText(0, QStringLiteral("%1 (%2)").arg(_name).arg(_entries));
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled);
-    setIcon(0, getFolderIcon(KIconLoader::Small));
+    setIcon(0, getFolderIcon());
 }
 
-QPixmap KWalletFolderItem::getFolderIcon(KIconLoader::Group group)
+QIcon KWalletFolderItem::getFolderIcon()
 {
-    const auto iconSize = KIconLoader::global()->currentSize(group);
-    QPixmap pix = QIcon::fromTheme(_name).pixmap(iconSize);
-
-    if (pix.isNull()) {
-        pix = QIcon::fromTheme(_name.toLower()).pixmap(iconSize);
-        if (pix.isNull())
-            pix = QIcon::fromTheme(QStringLiteral("folder-red")).pixmap(iconSize);
-    }
-
-    return pix;
+    return QIcon::fromTheme(_name, QIcon::fromTheme(_name.toLower(), QIcon::fromTheme(QStringLiteral("folder-red"))));
 }
 
 void KWalletFolderItem::refresh()

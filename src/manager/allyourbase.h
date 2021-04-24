@@ -9,8 +9,6 @@
 #define ALLYOURBASE_H
 
 #include <KWallet>
-#include <KIconLoader>
-#include <KIconTheme>
 #include <QListWidget>
 
 #include <QPixmap>
@@ -77,7 +75,7 @@ public:
     QString name() const;
     void refresh();
     KWalletContainerItem *getContainer(KWallet::Wallet::EntryType type);
-    QPixmap getFolderIcon(KIconLoader::Group group);
+    QIcon getFolderIcon();
     bool contains(const QString &itemKey);
     QTreeWidgetItem *getItem(const QString &itemKey);
     void refreshItemsCount();
