@@ -33,7 +33,7 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, co
 
 QIcon KWalletFolderItem::getFolderIcon()
 {
-    return QIcon::fromTheme(_name, QIcon::fromTheme(_name.toLower(), QIcon::fromTheme(QStringLiteral("folder-red"))));
+    return QIcon::fromTheme(_name, QIcon::fromTheme(_name.toLower(), QIcon::fromTheme(QStringLiteral("folder"))));
 }
 
 void KWalletFolderItem::refresh()
