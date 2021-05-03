@@ -41,7 +41,7 @@ private Q_SLOTS:
 private:
     bool shouldIgnoreDropEvent(const QDropEvent *e, QUrl *u) const;
 
-    typedef QHash<QString, KWalletManagerWidgetItem *> WalletPagesHash;
+    using WalletPagesHash = QHash<QString, KWalletManagerWidgetItem *>;
     WalletPagesHash _walletPages;
 };
 

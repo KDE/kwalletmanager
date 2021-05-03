@@ -297,7 +297,7 @@ void KWalletManager::possiblyRescan(const QString &app, const QString &oldOwner,
 void KWalletManager::createWallet()
 {
     QString txt = i18n("Please choose a name for the new wallet:");
-    QRegExpValidator validator(QRegExp(QLatin1String("^[\\w\\^\\&\\'\\@\\{\\}\\[\\]\\,\\$\\=\\!\\-\\#\\(\\)\\%\\.\\+\\_\\s]+$")), this);
+    QRegExpValidator validator(QRegExp(QLatin1String(R"(^[\w\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\%\.\+\_\s]+$)")), this);
 
     if (!KWallet::Wallet::isEnabled()) {
         // FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString(), i18n("Enable"), i18n("Keep Disabled"));
@@ -308,11 +308,11 @@ void KWalletManager::createWallet()
     nameDialog.setWindowTitle(i18n("New Wallet"));
     nameDialog.setLayout(new QVBoxLayout);
     nameDialog.layout()->addWidget(new QLabel(txt));
-    QLineEdit *lineEdit = new QLineEdit;
+    auto lineEdit = new QLineEdit;
     lineEdit->setValidator(&validator);
     nameDialog.layout()->addWidget(lineEdit);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     connect(buttonBox, &QDialogButtonBox::accepted, &nameDialog, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, &nameDialog, &QDialog::reject);
     nameDialog.layout()->addWidget(buttonBox);
@@ -382,7 +382,7 @@ void KWalletManager::shuttingDown()
 
 void KWalletManager::setupWallet()
 {
-    auto *job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("kwalletconfig5")});
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("kwalletconfig5")});
     job->start();
 }
 

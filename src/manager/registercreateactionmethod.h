@@ -27,7 +27,7 @@ class KActionCollection;
 class RegisterCreateActionsMethod
 {
 public:
-    typedef void (*CreateActionsMethod)(KActionCollection *);
+    using CreateActionsMethod = void (*)(KActionCollection *);
 
     explicit RegisterCreateActionsMethod(CreateActionsMethod method);
 

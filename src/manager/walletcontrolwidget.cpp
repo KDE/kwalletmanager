@@ -145,7 +145,7 @@ void WalletControlWidget::updateWalletDisplay()
 
 void WalletControlWidget::onDisconnectApplication()
 {
-    QAction *a = qobject_cast<QAction *>(sender());
+    auto a = qobject_cast<QAction *>(sender());
     Q_ASSERT(a);
     if (a)  {
         KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());

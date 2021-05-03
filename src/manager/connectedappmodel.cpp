@@ -28,7 +28,7 @@ void ConnectedAppModel::refresh()
         // for un unknown reason, kwalletd returs empty strings so lets avoid inserting them
         // FIXME: find out why kwalletd returns empty strings here
         if (!appName.isEmpty()) {
-            QStandardItem *item = new QStandardItem(appName);
+            auto item = new QStandardItem(appName);
             item->setEditable(false);
             setItem(row, 0, item);
             // this item will be hidden by the disconnect button, see below setIndexWidget call

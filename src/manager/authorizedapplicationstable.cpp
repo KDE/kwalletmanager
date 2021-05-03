@@ -23,13 +23,13 @@ void AuthorizedApplicationsTable::setModel(QAbstractItemModel *model)
 {
     Q_ASSERT(_wallet != nullptr);
 
-    AuthorizedAppModel *appModel = qobject_cast<AuthorizedAppModel *>(model);
+    auto appModel = qobject_cast<AuthorizedAppModel *>(model);
     Q_ASSERT(appModel != nullptr);
 
     QTableView::setModel(model);
     const int numberRow(model->rowCount());
     for (int row = 0; row < numberRow; row++) {
-        RevokeAuthButton *btn = new RevokeAuthButton(model->index(row, 0).data().toString(), _wallet);
+        auto btn = new RevokeAuthButton(model->index(row, 0).data().toString(), _wallet);
         btn->setFixedHeight(btn->sizeHint().height());
         setRowHeight(row, btn->height());
         setIndexWidget(model->index(row, 1), btn);

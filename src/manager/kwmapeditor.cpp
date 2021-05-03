@@ -78,14 +78,14 @@ public:
             return QItemDelegate::createEditor(parentWidget, option, index);
         }
 
-        KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+        auto mapEditor = static_cast<KWMapEditor *>(parent());
         return new InlineEditor(mapEditor);
     }
 
     void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         if (dynamic_cast<InlineEditor *>(editor)) {
-            KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+            auto mapEditor = static_cast<KWMapEditor *>(parent());
             const QRect geo = mapEditor->visualRect(index);
             editor->move(mapEditor->mapToGlobal(geo.topLeft()));
             editor->resize(geo.width(), geo.height() * 3);
@@ -96,9 +96,9 @@ public:
 
     void setEditorData(QWidget *editor, const QModelIndex &index) const override
     {
-        InlineEditor *e = dynamic_cast<InlineEditor *>(editor);
+        auto e = dynamic_cast<InlineEditor *>(editor);
         if (e) {
-            KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+            auto mapEditor = static_cast<KWMapEditor *>(parent());
             e->setText(mapEditor->item(index.row(), index.column())->text());
         } else {
             QItemDelegate::setEditorData(editor, index);
@@ -107,9 +107,9 @@ public:
 
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override
     {
-        InlineEditor *e = dynamic_cast<InlineEditor *>(editor);
+        auto e = dynamic_cast<InlineEditor *>(editor);
         if (e) {
-            KWMapEditor *mapEditor = static_cast<KWMapEditor *>(parent());
+            auto mapEditor = static_cast<KWMapEditor *>(parent());
             mapEditor->item(index.row(), index.column())->setText(e->toPlainText());
         } else {
             QItemDelegate::setModelData(editor, model, index);
@@ -142,7 +142,7 @@ void KWMapEditor::reload()
     if ((row = rowCount()) < _map.count()) {
         setRowCount(_map.count());
         for (int x = row; x < rowCount(); ++x) {
-            QToolButton *b = new QToolButton(this);
+            auto b = new QToolButton(this);
             b->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
             b->setToolTip(i18n("Delete Entry"));
             connect(b, &QToolButton::clicked, this, &KWMapEditor::erase);
@@ -193,7 +193,7 @@ void KWMapEditor::addEntry()
 {
     int x = rowCount();
     insertRow(x);
-    QToolButton *b = new QToolButton(this);
+    auto b = new QToolButton(this);
     b->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
     b->setToolTip(i18n("Delete Entry"));
     connect(b, &QToolButton::clicked, this, &KWMapEditor::erase);
@@ -214,7 +214,7 @@ void KWMapEditor::contextMenu(const QPoint &pos)
 {
     QTableWidgetItem *twi = itemAt(pos);
     _contextRow = row(twi);
-    QMenu *m = new QMenu(this);
+    auto m = new QMenu(this);
     m->addAction(i18n("&New Entry"), this, &KWMapEditor::addEntry);
     m->addAction(_copyAct);
     m->exec(mapToGlobal(pos));

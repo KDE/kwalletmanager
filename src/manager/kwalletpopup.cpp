@@ -19,7 +19,7 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString
 {
     addSection(wallet);
     setObjectName(name);
-    KActionCollection *ac = new KActionCollection(this/*, "kwallet context actions"*/);
+    auto ac = new KActionCollection(this/*, "kwallet context actions"*/);
     ac->setObjectName(QStringLiteral("kwallet context actions"));
     QAction *act;
 
@@ -41,7 +41,7 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString
 
     const QStringList ul = KWallet::Wallet::users(wallet);
     if (!ul.isEmpty()) {
-        QMenu *pm = new QMenu(this);
+        auto pm = new QMenu(this);
         pm->setObjectName(QStringLiteral("Disconnect Apps"));
         int id = 7000;
         for (QStringList::const_iterator it = ul.begin(), end(ul.end()); it != end; ++it) {
@@ -100,7 +100,7 @@ void KWalletPopup::createWallet()
 
 void KWalletPopup::disconnectApp()
 {
-    QAction *a = qobject_cast<QAction *>(sender());
+    auto a = qobject_cast<QAction *>(sender());
     Q_ASSERT(a);
     if (a)     {
         KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());

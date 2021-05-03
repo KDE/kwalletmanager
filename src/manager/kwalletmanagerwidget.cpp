@@ -62,7 +62,7 @@ void KWalletManagerWidget::updateWalletDisplay(const QString &selectWallet /* = 
     for (QStringList::const_iterator i = wl.begin(); i != wl.end(); ++i) {
         const QString &name = *i;
         if (!_walletPages.contains(name)) {
-            KWalletManagerWidgetItem *wi = new KWalletManagerWidgetItem(this, name);
+            auto wi = new KWalletManagerWidgetItem(this, name);
             addPage(wi);
             _walletPages.insert(*i, wi);
         }
@@ -106,7 +106,7 @@ bool KWalletManagerWidget::openWallet(const QString &name)
 
 QString KWalletManagerWidget::activeWalletName() const
 {
-    KWalletManagerWidgetItem *page = qobject_cast<KWalletManagerWidgetItem *>(currentPage());
+    auto page = qobject_cast<KWalletManagerWidgetItem *>(currentPage());
     if (page) {
         return page->walletName();
     } else {

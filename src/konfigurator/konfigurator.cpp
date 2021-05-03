@@ -37,7 +37,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
       _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcmkwallet5"),
+    auto about = new KAboutData(QStringLiteral("kcmkwallet5"),
                                        i18n("KDE Wallet Control Module"),
                                        QStringLiteral(KWALLETMANAGER_VERSION_STRING),
                                        QString(),
@@ -49,7 +49,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     setAboutData(about);
     setNeedsAuthorization(true);
 
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(0, 0, 0, 0);
     _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
@@ -229,7 +229,7 @@ void KWalletConfig::load()
         const QStringList apps = aa.readEntry(*i, QStringList());
         const QStringList denyapps = ad.readEntry(*i, QStringList());
         denykeys.removeAll(walletName);
-        QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << walletName);
+        auto twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << walletName);
 
         for (QStringList::const_iterator j = apps.begin(), end = apps.end(); j != end; ++j) {
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Allow"));
@@ -240,7 +240,7 @@ void KWalletConfig::load()
     }
     for (QStringList::const_iterator i = denykeys.constBegin(), denykeysEnd = denykeys.constEnd(); i != denykeysEnd; ++i) {
         const QStringList denyapps = ad.readEntry(*i, QStringList());
-        QTreeWidgetItem *twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
+        auto twi = new QTreeWidgetItem(_wcw->_accessList, QStringList() << *i);
         for (QStringList::const_iterator j = denyapps.begin(), denyappsEnd = denyapps.end(); j != denyappsEnd; ++j) {
             new QTreeWidgetItem(twi, QStringList() << QString() << *j << i18n("Always Deny"));
         }
@@ -363,7 +363,7 @@ void KWalletConfig::customContextMenuRequested(const QPoint &pos)
 {
     QTreeWidgetItem *item = _wcw->_accessList->itemAt(pos);
     if (item && item->parent()) {
-        QMenu *m = new QMenu(this);
+        auto m = new QMenu(this);
         m->setTitle(item->parent()->text(0));
         m->addAction(i18n("&Delete"), this, &KWalletConfig::deleteEntry, Qt::Key_Delete);
         m->exec(_wcw->_accessList->mapToGlobal(pos));
