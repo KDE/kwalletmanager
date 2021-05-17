@@ -26,7 +26,7 @@ ecm_qt_declare_logging_category(kwalletmanager_SRCS
                                 IDENTIFIER KWALLETMANAGER_LOG
 				CATEGORY_NAME org.kde.kwalletmanager DESCRIPTION "kwalletmanager" EXPORT KWALLETMANAGER)
 
-qt5_add_dbus_interface(kwalletmanager_SRCS
+qt_add_dbus_interface(kwalletmanager_SRCS
     ${KWALLET_DBUS_INTERFACES_DIR}/kf5_org.kde.KWallet.xml kwallet_interface
 )
 
@@ -45,7 +45,7 @@ ecm_add_app_icon(kwalletmanager_SRCS ICONS ${ICONS_SRCS})
 add_executable(kwalletmanager5 ${kwalletmanager_SRCS})
 
 target_link_libraries(kwalletmanager5
-    Qt5::Core
+    Qt::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::XmlGui #KActionCollection
