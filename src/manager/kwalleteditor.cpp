@@ -133,9 +133,9 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
 
 KWalletEditor::~KWalletEditor()
 {
-    emit enableFolderActions(false);
-    emit enableWalletActions(false);
-    emit enableContextFolderActions(false);
+    Q_EMIT enableFolderActions(false);
+    Q_EMIT enableWalletActions(false);
+    Q_EMIT enableContextFolderActions(false);
     // save splitter size
     KConfigGroup cg(KSharedConfig::openConfig(), "WalletEditor");
     cg.writeEntry("SplitterSize", _splitter->sizes());
@@ -165,9 +165,9 @@ void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
     connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
     updateFolderList();
 
-    emit enableFolderActions(true);
-    emit enableWalletActions(true);
-    emit enableContextFolderActions(true);
+    Q_EMIT enableFolderActions(true);
+    Q_EMIT enableWalletActions(true);
+    Q_EMIT enableContextFolderActions(true);
 
     _mapEditorShowHide->setChecked(false);
     showHideMapEditorValue(false);
@@ -307,8 +307,8 @@ void KWalletEditor::walletClosed()
 {
     _w = nullptr;
     setEnabled(false);
-    emit enableWalletActions(false);
-    emit enableFolderActions(false);
+    Q_EMIT enableWalletActions(false);
+    Q_EMIT enableFolderActions(false);
 }
 
 void KWalletEditor::updateFolderList(bool checkEntries)
@@ -897,9 +897,9 @@ void KWalletEditor::changePassword()
 void KWalletEditor::walletOpened(bool success)
 {
     if (success) {
-        emit enableFolderActions(true);
-        emit enableContextFolderActions(false);
-        emit enableWalletActions(true);
+        Q_EMIT enableFolderActions(true);
+        Q_EMIT enableContextFolderActions(false);
+        Q_EMIT enableWalletActions(true);
         updateFolderList();
         _entryList->setWallet(_w);
     } else {
@@ -1256,18 +1256,18 @@ void KWalletEditor::setNewWallet(bool x)
 
 void KWalletEditor::hideEvent(QHideEvent *)
 {
-    emit enableContextFolderActions(false);
-    emit enableFolderActions(false);
-    emit enableWalletActions(false);
+    Q_EMIT enableContextFolderActions(false);
+    Q_EMIT enableFolderActions(false);
+    Q_EMIT enableWalletActions(false);
     disconnectActions();
 }
 
 void KWalletEditor::showEvent(QShowEvent *)
 {
     connectActions();
-    emit enableContextFolderActions(true);
-    emit enableFolderActions(true);
-    emit enableWalletActions(true);
+    Q_EMIT enableContextFolderActions(true);
+    Q_EMIT enableFolderActions(true);
+    Q_EMIT enableWalletActions(true);
 }
 
 void KWalletEditor::onSearchTextChanged(const QString &text)

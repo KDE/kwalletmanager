@@ -140,7 +140,7 @@ void KWalletConfig::newLocalWallet()
 
     _wcw->_localWallet->setCurrentIndex(_wcw->_localWallet->findText(n));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KWalletConfig::newNetworkWallet()
@@ -154,7 +154,7 @@ void KWalletConfig::newNetworkWallet()
 
     _wcw->_defaultWallet->setCurrentIndex(_wcw->_defaultWallet->findText(n));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KWalletConfig::launchManager()
@@ -170,7 +170,7 @@ void KWalletConfig::launchManager()
 
 void KWalletConfig::configChanged()
 {
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KWalletConfig::load()
@@ -246,7 +246,7 @@ void KWalletConfig::load()
         }
     }
     _wcw->_accessList->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    emit changed(false);
+    Q_EMIT changed(false);
 }
 
 void KWalletConfig::save()
@@ -334,7 +334,7 @@ void KWalletConfig::save()
         kwalletd.call(QStringLiteral("reconfigure"));
     }
 
-    emit changed(false);
+    Q_EMIT changed(false);
 }
 
 void KWalletConfig::defaults()
@@ -351,7 +351,7 @@ void KWalletConfig::defaults()
     _wcw->_localWalletSelected->setChecked(false);
     _wcw->_localWallet->setCurrentIndex(0);
     _wcw->_accessList->clear();
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 QString KWalletConfig::quickHelp() const
@@ -376,7 +376,7 @@ void KWalletConfig::deleteEntry()
     QList<QTreeWidgetItem *> items = _wcw->_accessList->selectedItems();
     if (items.count() == 1 && items[0]) {
         delete items[0];
-        emit changed(true);
+        Q_EMIT changed(true);
     }
 }
 

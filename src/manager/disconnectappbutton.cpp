@@ -20,7 +20,7 @@ DisconnectAppButton::DisconnectAppButton(const QString &appName, KWallet::Wallet
 void DisconnectAppButton::onClicked()
 {
     if (_wallet->disconnectApplication(_wallet->walletName(), _appName)) {
-        emit appDisconnected(_appName);
+        Q_EMIT appDisconnected(_appName);
     }
 }
 

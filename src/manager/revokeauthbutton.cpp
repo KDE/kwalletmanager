@@ -19,7 +19,7 @@ RevokeAuthButton::RevokeAuthButton(const QString &appName, KWallet::Wallet *wall
 
 void RevokeAuthButton::onClicked()
 {
-    emit appRevoked(_appName);
+    Q_EMIT appRevoked(_appName);
 }
 
 

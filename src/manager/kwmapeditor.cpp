@@ -177,7 +177,7 @@ void KWMapEditor::erase()
         }
     }
 
-    emit dirty();
+    Q_EMIT dirty();
 }
 
 void KWMapEditor::saveMap()
@@ -202,12 +202,12 @@ void KWMapEditor::addEntry()
     setItem(x, 2, new QTableWidgetItem());
     scrollToItem(item(x, 1));
     setCurrentCell(x, 1);
-    emit dirty();
+    Q_EMIT dirty();
 }
 
 void KWMapEditor::emitDirty()
 {
-    emit dirty();
+    Q_EMIT dirty();
 }
 
 void KWMapEditor::contextMenu(const QPoint &pos)

@@ -75,27 +75,27 @@ KWalletPopup::~KWalletPopup()
 
 void KWalletPopup::openWallet()
 {
-    emit walletOpened(_walletName);
+    Q_EMIT walletOpened(_walletName);
 }
 
 void KWalletPopup::deleteWallet()
 {
-    emit walletDeleted(_walletName);
+    Q_EMIT walletDeleted(_walletName);
 }
 
 void KWalletPopup::closeWallet()
 {
-    emit walletClosed(_walletName);
+    Q_EMIT walletClosed(_walletName);
 }
 
 void KWalletPopup::changeWalletPassword()
 {
-    emit walletChangePassword(_walletName);
+    Q_EMIT walletChangePassword(_walletName);
 }
 
 void KWalletPopup::createWallet()
 {
-    emit walletCreated();
+    Q_EMIT walletCreated();
 }
 
 void KWalletPopup::disconnectApp()
