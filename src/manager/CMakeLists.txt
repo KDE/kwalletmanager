@@ -1,5 +1,6 @@
 ########### next target ###############
-set(kwalletmanager_SRCS 
+add_executable(kwalletmanager5)
+target_sources(kwalletmanager5 PRIVATE
     kwalletmanager.cpp
     kwalletmanagerwidget.cpp
     kwalletmanagerwidgetitem.cpp
@@ -21,7 +22,7 @@ set(kwalletmanager_SRCS
     revokeauthbutton.cpp
 )
 
-ecm_qt_declare_logging_category(kwalletmanager_SRCS
+ecm_qt_declare_logging_category(kwalletmanager5
                                 HEADER kwalletmanager_debug.h
                                 IDENTIFIER KWALLETMANAGER_LOG
 				CATEGORY_NAME org.kde.kwalletmanager DESCRIPTION "kwalletmanager" EXPORT KWALLETMANAGER)
@@ -29,8 +30,9 @@ ecm_qt_declare_logging_category(kwalletmanager_SRCS
 qt_add_dbus_interface(kwalletmanager_SRCS
     ${KWALLET_DBUS_INTERFACES_DIR}/kf5_org.kde.KWallet.xml kwallet_interface
 )
+target_sources(kwalletmanager5 PRIVATE ${kwalletmanager_SRCS})
 
-ki18n_wrap_ui(kwalletmanager_SRCS
+ki18n_wrap_ui(kwalletmanager5
     walletwidget.ui
     kbetterthankdialogbase.ui
     walletcontrolwidget.ui
@@ -40,9 +42,8 @@ ki18n_wrap_ui(kwalletmanager_SRCS
 
 # Sets the icon on Windows and OSX
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kwalletmanager.png")
-ecm_add_app_icon(kwalletmanager_SRCS ICONS ${ICONS_SRCS})
+ecm_add_app_icon(kwalletmanager5 ICONS ${ICONS_SRCS})
 
-add_executable(kwalletmanager5 ${kwalletmanager_SRCS})
 
 target_link_libraries(kwalletmanager5
     Qt::Core

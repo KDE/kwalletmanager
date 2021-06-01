@@ -1,11 +1,11 @@
 ########### next target ###############
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkwallet\")
 
-set(kcm_kwallet_PART_SRCS konfigurator.cpp )
+add_library(kcm_kwallet5 MODULE)
+target_sources(kcm_kwallet5 PRIVATE konfigurator.cpp )
 
-ki18n_wrap_ui(kcm_kwallet_PART_SRCS walletconfigwidget.ui )
+ki18n_wrap_ui(kcm_kwallet5 walletconfigwidget.ui )
 
-add_library(kcm_kwallet5 MODULE ${kcm_kwallet_PART_SRCS})
 
 
 target_link_libraries(kcm_kwallet5
@@ -21,9 +21,9 @@ target_link_libraries(kcm_kwallet5
 install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### kauth helper ################
-set(kcm_kwallet_helper_SRCS savehelper.cpp)
+add_executable(kcm_kwallet_helper5)
+target_sources(kcm_kwallet_helper5 PRIVATE savehelper.cpp)
 
-add_executable(kcm_kwallet_helper5 ${kcm_kwallet_helper_SRCS})
 target_link_libraries(kcm_kwallet_helper5
     Qt::Core
     KF5::AuthCore
