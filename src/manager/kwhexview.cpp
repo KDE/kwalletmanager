@@ -25,11 +25,7 @@ static QString toHex(It it, It end)
     QTextStream ts(&text);
 
     ts <<
-      #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
-          hex
-      #else
           Qt::hex
-      #endif
        << qSetFieldWidth(2) << qSetPadChar(QLatin1Char('0'));
 
     while (it < end) {
@@ -77,11 +73,7 @@ void KWHexView::showData()
     QString text;
     QTextStream ts(&text);
 
-#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
-    ts << left;
-#else
     ts << Qt::left;
-#endif
 
     const auto stride = calculateStride();
     const auto hexwidth = stride * 2 + (stride / hexStride) + 1;
