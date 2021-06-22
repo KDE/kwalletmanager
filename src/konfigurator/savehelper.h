@@ -15,7 +15,7 @@ class SaveHelper : public QObject
 {
     Q_OBJECT
 public Q_SLOTS:
-    ActionReply save(const QVariantMap &args);
+    KAuth::ActionReply save(const QVariantMap &args);
 };
 
 #endif // _SAVEHELPER_H_
