@@ -13,6 +13,7 @@
 #include "registercreateactionmethod.h"
 #include "kwalletmanager_debug.h"
 
+#include <kxmlgui_version.h>
 #include <KLocalizedString>
 #include <QAction>
 #include <KConfig>
@@ -153,8 +154,13 @@ void KWalletManager::configUI() {
         _tray->contextMenu()->addAction(act);
     }
     KStandardAction::quit(this, SLOT(shuttingDown()), actionCollection());
+
+#if KXMLGUI_VERSION >= QT_VERSION_CHECK(5, 84, 0)
+    KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
+#else
     KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()),
                                  actionCollection());
+#endif
 
     setupGUI(Keys | Save | Create, QStringLiteral("kwalletmanager.rc"));
     setStandardToolBarMenuEnabled(false);
