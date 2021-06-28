@@ -4,6 +4,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KWalletManager</name>
+  <name xml:lang="ar">مدير محفظتك</name>
   <name xml:lang="az">KDE Cüzdanı İdarəetməsi</name>
   <name xml:lang="ca">KWalletManager</name>
   <name xml:lang="ca-valencia">KWalletManager</name>
