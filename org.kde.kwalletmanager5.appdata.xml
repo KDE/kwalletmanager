@@ -19,6 +19,7 @@
   <name xml:lang="fi">KWalletManager</name>
   <name xml:lang="fr">KWalletManager</name>
   <name xml:lang="gl">KWalletManager</name>
+  <name xml:lang="hu">KWalletManager</name>
   <name xml:lang="ia">KWalletManager</name>
   <name xml:lang="id">KWalletManager</name>
   <name xml:lang="it">KWalletManager</name>
@@ -55,6 +56,7 @@
   <summary xml:lang="fi">Lompakonhallintatyökalu</summary>
   <summary xml:lang="fr">Outil de gestion de portefeuilles</summary>
   <summary xml:lang="gl">Utilidade de xestión de carteiras</summary>
+  <summary xml:lang="hu">Jelszókezelő eszköz</summary>
   <summary xml:lang="ia">Instrumento de gestion de portafolio</summary>
   <summary xml:lang="id">Alat Pengelolaan Wallet</summary>
   <summary xml:lang="it">Strumento per la gestione del portafogli</summary>
@@ -93,6 +95,7 @@
     <p xml:lang="fi">KWalletManager on työkalu salasanojen hallitsemiseksi koneellasi. Frameworksin lompakkoalijärjestelmää käyttämällä voit niin säilyttää salaisuutesi kuin hallita jokaisen lompakkoa käyttävän sovelluksen salasanoja.</p>
     <p xml:lang="fr">KWalletManager est un outil qui vous permet de gérer les mots de passe sur votre système. En utilisant le sous-système de portefeuille de Frameworks, il vous permet non seulement de conserver vos propres mots de passe, mais également d'accéder aux mots de passe de toutes les applications qui s'intègrent au portefeuille et de les gérer.</p>
     <p xml:lang="gl">KWalletManager é unha ferramenta para xestionar os contrasinais do sistema. Usar o subsistema de carteiras das infraestruturas de KDE non só permite gardar os seus propios segredos, senón tamén xestionar os contrasinais de todas as aplicacións compatíbeis.</p>
+    <p xml:lang="hu">A KWalletManager egy eszköz jelszavainak kezeléséhez. A Frameworks tároló alrendszerének használatával nem csak a jelszavai és titkos adatai tárolását teszi lehetővé, hanem a tárolót integráló más alkalmazások is hozzáférhetnek a jelszavakhoz, és kezelhetik azokat.</p>
     <p xml:lang="ia">KWalletManager es un instrumento pro gerer contrasignos sur tu systema. Pe usar le subsystema de portafolio de Frameworks illo non sol permitte te mantener tu proprie secretos pro acceder e gerer contrassignos per omne applicationes que onintegra con le portafolio.</p>
     <p xml:lang="id">KWalletManager adalah alat untuk mengelola kata sandi di sistemmu. Dengan menggunakan subsistem wallet Frameworks tidak hanya memungkinkan kamu untuk menyimpan kerahasiaanmu sendiri tetapi juga untuk mengakses dan mengelola kata sandi setiap aplikasi yang terintegrasi dengan wallet.</p>
     <p xml:lang="it">KWalletManager è uno strumento per gestire le password nel tuo sistema. Usando il sottosistema del portafogli di Frameworks non solo potrai tenere i tuoi segreti, ma potrai anche accedere alle password e gestirle per qualsiasi applicazione che si integri col portafogli.</p>
