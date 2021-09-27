@@ -23,5 +23,4 @@ Dependencies:
     'frameworks/ktextwidgets': '@stable'
     'frameworks/kwindowsystem': '@stable'
     'frameworks/kcrash': '@stable'
-    'frameworks/kcrash': '@stable'  
 
