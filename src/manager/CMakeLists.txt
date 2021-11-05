@@ -20,6 +20,24 @@ target_sources(kwalletmanager5 PRIVATE
     authorizedappmodel.cpp
     authorizedapplicationstable.cpp
     revokeauthbutton.cpp
+    kwalletmanager.h
+    kwalletmanagerwidget.h
+    walletcontrolwidget.h
+    allyourbase.h
+    kwhexview.h
+    authorizedapplicationstable.h
+    kwalletmanagerwidgetitem.h
+    connectedapplicationstable.h
+    authorizedappmodel.h
+    kwalleteditor.h
+    connectedappmodel.h
+    kwalletpopup.h
+    kbetterthankdialogbase.h
+    revokeauthbutton.h
+    registercreateactionmethod.h
+    disconnectappbutton.h
+    kwmapeditor.h
+    applicationsmanager.h
 )
 
 ecm_qt_declare_logging_category(kwalletmanager5

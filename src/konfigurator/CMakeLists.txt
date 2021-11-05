@@ -2,7 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkwallet\")
 
 add_library(kcm_kwallet5 MODULE)
-target_sources(kcm_kwallet5 PRIVATE konfigurator.cpp )
+target_sources(kcm_kwallet5 PRIVATE konfigurator.cpp konfigurator.h)
 
 ki18n_wrap_ui(kcm_kwallet5 walletconfigwidget.ui )
 
@@ -22,7 +22,7 @@ install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### kauth helper ################
 add_executable(kcm_kwallet_helper5)
-target_sources(kcm_kwallet_helper5 PRIVATE savehelper.cpp)
+target_sources(kcm_kwallet_helper5 PRIVATE savehelper.cpp savehelper.h)
 
 target_link_libraries(kcm_kwallet_helper5
     Qt::Core
