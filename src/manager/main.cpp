@@ -57,8 +57,6 @@ int main(int argc, char **argv)
 
     KAboutData::setApplicationData(aboutData);
 
-    KDBusService dbssvc(KDBusService::Unique);
-
     QCommandLineParser parser;
 
     aboutData.setupCommandLine(&parser);
@@ -67,6 +65,9 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption(QStringLiteral("name"), i18n("A wallet name")));
     parser.process(a);
     aboutData.processCommandLine(&parser);
+
+    KDBusService dbssvc(KDBusService::Unique);
+
     KWalletManager wm;
     QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &QWidget::activateWindow);
 
