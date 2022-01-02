@@ -28,7 +28,9 @@
 #include <KIO/CommandLauncherJob>
 
 #include <QRegExp>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QRegExpValidator>
+#endif
 #include <QTimer>
 #include <QFileDialog>
 #include <QDialog>
@@ -297,19 +299,23 @@ void KWalletManager::possiblyRescan(const QString &app, const QString &oldOwner,
 void KWalletManager::createWallet()
 {
     QString txt = i18n("Please choose a name for the new wallet:");
-    QRegExpValidator validator(QRegExp(QLatin1String(R"(^[\w\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\%\.\+\_\s]+$)")), this);
 
     if (!KWallet::Wallet::isEnabled()) {
         // FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString(), i18n("Enable"), i18n("Keep Disabled"));
         return;
     }
-
+    // TODO port to QRegularExpressionValidator
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    QRegExpValidator validator(QRegExp(QLatin1String(R"(^[\w\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\%\.\+\_\s]+$)")), this);
+#endif
     QDialog nameDialog(this);
     nameDialog.setWindowTitle(i18n("New Wallet"));
     nameDialog.setLayout(new QVBoxLayout);
     nameDialog.layout()->addWidget(new QLabel(txt));
     auto lineEdit = new QLineEdit;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     lineEdit->setValidator(&validator);
+#endif
     nameDialog.layout()->addWidget(lineEdit);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
