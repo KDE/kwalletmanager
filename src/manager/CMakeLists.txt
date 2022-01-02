@@ -64,7 +64,7 @@ ecm_add_app_icon(kwalletmanager5 ICONS ${ICONS_SRCS})
 
 
 target_link_libraries(kwalletmanager5
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::XmlGui #KActionCollection
@@ -85,6 +85,6 @@ target_link_libraries(kwalletmanager5
 
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kwalletmanager.rc
-        DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/kwalletmanager5)
+        DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kwalletmanager5)
 
 add_subdirectory(icons)

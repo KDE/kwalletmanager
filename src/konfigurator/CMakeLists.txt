@@ -9,13 +9,13 @@ ki18n_wrap_ui(kcm_kwallet5 walletconfigwidget.ui )
 
 
 target_link_libraries(kcm_kwallet5
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Core
     KF5::AuthCore
     KF5::CoreAddons
     KF5::KCMUtils
     KF5::Wallet
     KF5::I18n
-    Qt::DBus
+    Qt${QT_MAJOR_VERSION}::DBus
 )
 
 install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR})
@@ -25,7 +25,7 @@ add_executable(kcm_kwallet_helper5)
 target_sources(kcm_kwallet_helper5 PRIVATE savehelper.cpp savehelper.h)
 
 target_link_libraries(kcm_kwallet_helper5
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Core
     KF5::AuthCore
     KF5::Wallet
     KF5::CoreAddons
@@ -38,4 +38,4 @@ kauth_install_actions(org.kde.kcontrol.kcmkwallet5 kwallet.actions)
 
 ########### install files ###############
 
-install( FILES kwalletconfig5.desktop kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install( FILES kwalletconfig5.desktop kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
