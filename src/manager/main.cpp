@@ -7,7 +7,7 @@
 #include "../kwalletmanager_version.h"
 #include "kwalletmanager.h"
 
-#include <KDBusAddons/kdbusservice.h>
+#include <kdbusservice.h>
 #include <KLocalizedString>
 #include <KAboutData>
 

@@ -13,7 +13,6 @@
 #include "registercreateactionmethod.h"
 #include "kwalletmanager_debug.h"
 
-#include <kxmlgui_version.h>
 #include <KLocalizedString>
 #include <QAction>
 #include <KConfig>
