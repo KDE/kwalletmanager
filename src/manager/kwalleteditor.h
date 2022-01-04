@@ -9,10 +9,10 @@
 #define KWALLETEDITOR_H
 
 #include "ui_walletwidget.h"
+#include "registercreateactionmethod.h"
 
 #include <KWallet>
-#include <kxmlguiwindow.h>
-#include "registercreateactionmethod.h"
+
 #include <QLabel>
 
 class KActionCollection;

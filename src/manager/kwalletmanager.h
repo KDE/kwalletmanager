@@ -6,8 +6,10 @@
 
 #ifndef KWALLETMANAGER_H
 #define KWALLETMANAGER_H
+
+#include <KXmlGuiWindow>
+
 #include <QObject>
-#include <kxmlguiwindow.h>
 
 class KWalletManagerWidget;
 class KStatusNotifierItem;
