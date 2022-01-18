@@ -76,6 +76,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     connect(_wcw->_localWallet, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &KWalletConfig::configChanged);
     connect(_wcw->_defaultWallet, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &KWalletConfig::configChanged);
     connect(_wcw->_accessList, &QTreeWidget::customContextMenuRequested, this, &KWalletConfig::customContextMenuRequested);
+    connect(_wcw->_secretServiceAPI, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
 
     _wcw->_accessList->setAllColumnsShowFocus(true);
     _wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -251,6 +252,10 @@ void KWalletConfig::load()
         }
     }
     _wcw->_accessList->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
+
+    KConfigGroup secretsAPIConfig(_cfg, "org.freedesktop.secrets");
+    _wcw->_secretServiceAPI->setChecked(secretsAPIConfig.readEntry("apiEnabled", true));
+
     Q_EMIT changed(false);
 }
 
@@ -328,6 +333,9 @@ void KWalletConfig::save()
         config.writeEntry(parentItem->text(0), al);
     }
 
+    KConfigGroup secretsAPIConfig(_cfg, "org.freedesktop.secrets");
+    secretsAPIConfig.writeEntry("apiEnabled", _wcw->_secretServiceAPI->isChecked());
+
     _cfg->sync();
 
     // this restarts kwalletd if necessary
@@ -356,6 +364,7 @@ void KWalletConfig::defaults()
     _wcw->_localWalletSelected->setChecked(false);
     _wcw->_localWallet->setCurrentIndex(0);
     _wcw->_accessList->clear();
+    _wcw->_secretServiceAPI->setChecked(true);
     Q_EMIT changed(true);
 }
 
