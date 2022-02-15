@@ -38,6 +38,8 @@ target_sources(kwalletmanager5 PRIVATE
     disconnectappbutton.h
     kwmapeditor.h
     applicationsmanager.h
+
+    kwalletmanager.qrc
 )
 
 ecm_qt_declare_logging_category(kwalletmanager5
@@ -84,7 +86,5 @@ target_link_libraries(kwalletmanager5
 )
 
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-install(FILES kwalletmanager.rc
-        DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kwalletmanager5)
 
 add_subdirectory(icons)
