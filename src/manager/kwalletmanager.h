@@ -16,6 +16,7 @@ class KStatusNotifierItem;
 class QListWidgetItem;
 class OrgKdeKWalletInterface;
 class QAction;
+class QCommandLineParser;
 
 class KWalletManager : public KXmlGuiWindow
 {
@@ -24,12 +25,14 @@ class KWalletManager : public KXmlGuiWindow
     Q_CLASSINFO("D-Bus Interface", "org.kde.kwallet.kwalletmanager")
 
 public:
-    explicit KWalletManager(QWidget *parent = nullptr, const QString &name = QString(), Qt::WindowFlags f = {});
+    explicit KWalletManager(QCommandLineParser *commandLineParser);
     ~KWalletManager() override;
 
     void kwalletdLaunch();
     bool hasUnsavedChanges(const QString& name = QString()) const;
     bool canIgnoreUnsavedChanges();
+    void handleActivate(const QStringList& arguments, const QString &workingDirectory);
+    void handleOpen(const QList<QUrl>& urls);
 
 public Q_SLOTS:
     void createWallet();
@@ -64,6 +67,13 @@ private Q_SLOTS:
     void configUI();
 
 private:
+    void activateForStartLikeCall(bool showWindow);
+    void tryOpenWalletFiles(const QStringList &localFiles);
+    enum CommandLineOrigin { ProgramStart, RemoteCall };
+    void processParsedCommandLine(CommandLineOrigin commandLineOrigin);
+
+private:
+    QCommandLineParser * const _commandLineParser;
     KStatusNotifierItem *_tray;
     bool _shuttingDown;
     KWalletManagerWidget *_managerWidget;

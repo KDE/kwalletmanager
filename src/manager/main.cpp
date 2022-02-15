@@ -13,10 +13,6 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QFile>
-#include <QFileInfo>
-#include <QMimeDatabase>
-#include <QMimeType>
 #include <KCrash>
 
 int main(int argc, char **argv)
@@ -68,31 +64,9 @@ int main(int argc, char **argv)
 
     KDBusService dbssvc(KDBusService::Unique);
 
-    KWalletManager wm;
-    QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &QWidget::activateWindow);
-
-    if (parser.isSet(QStringLiteral("show"))) {
-        wm.show();
-    }
-
-    if (parser.isSet(QStringLiteral("kwalletd"))) {
-        wm.kwalletdLaunch();
-    }
-
-    const QStringList arguments = parser.positionalArguments();
-    for (int i = 0; i < arguments.count(); ++i) {
-        QString fn = QFileInfo(arguments.at(i)).absoluteFilePath();
-        if (QFile::exists(fn)) {
-            QMimeDatabase mimeDb;
-            QMimeType mt = mimeDb.mimeTypeForFile(fn, QMimeDatabase::MatchContent);
-
-            if (mt.isValid() && mt.inherits(QStringLiteral("application/x-kwallet"))) {
-                wm.openWalletFile(fn);
-            }
-        } else {
-            wm.openWallet(arguments.at(i));
-        }
-    }
+    KWalletManager wm(&parser);
+    QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &KWalletManager::handleActivate);
+    QObject::connect(&dbssvc, &KDBusService::openRequested, &wm, &KWalletManager::handleOpen);
 
     return a.exec();
 }

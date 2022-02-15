@@ -14,15 +14,17 @@ find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
 include(ECMSetupVersion)
 include(ECMQtDeclareLoggingCategory)
+include(ECMGenerateDBusServiceFile)
+
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
 
 ## Generate header with version number
@@ -66,6 +68,11 @@ add_subdirectory( src )
 ########### install files ###############
 install( PROGRAMS org.kde.kwalletmanager5.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.kwalletmanager5.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+ecm_generate_dbus_service_file(
+    NAME org.kde.kwalletmanager5
+    EXECUTABLE ${KDE_INSTALL_FULL_BINDIR}/kwalletmanager5
+    DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
+)
 
 ecm_qt_install_logging_categories(
 	EXPORT KWALLETMANAGER

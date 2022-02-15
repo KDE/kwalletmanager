@@ -13,6 +13,8 @@
 #include "registercreateactionmethod.h"
 #include "kwalletmanager_debug.h"
 
+#include <kwindowsystem_version.h>
+#include <KWindowSystem>
 #include <KLocalizedString>
 #include <KConfig>
 #include <KMessageBox>
@@ -26,9 +28,9 @@
 #include <KTar>
 #include <KIO/CommandLauncherJob>
 
-#include <QIcon>
 #include <QAction>
-
+#include <QCommandLineParser>
+#include <QIcon>
 #include <QRegExp>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QRegExpValidator>
@@ -37,18 +39,24 @@
 #include <QFileDialog>
 #include <QDialog>
 #include <QLineEdit>
+#include <QFile>
+#include <QFileInfo>
+#include <QMimeDatabase>
+#include <QMimeType>
 
 
-KWalletManager::KWalletManager(QWidget *parent, const QString &name, Qt::WindowFlags f)
-    : KXmlGuiWindow(parent, f)
+KWalletManager::KWalletManager(QCommandLineParser *commandLineParser)
+    : KXmlGuiWindow()
+    , _commandLineParser(commandLineParser)
 {
     _kwalletdLaunch = false;
     _shuttingDown = false;
     m_kwalletdModule = nullptr;
-    setObjectName(name);
     RegisterCreateActionsMethod::createActions(actionCollection());
 
     QTimer::singleShot(0, this, &KWalletManager::beginConfiguration);
+
+    processParsedCommandLine(ProgramStart);
 }
 
 void KWalletManager::beginConfiguration() {
@@ -484,4 +492,97 @@ bool KWalletManager::canIgnoreUnsavedChanges()
 {
     int rc = KMessageBox::warningYesNo(this, i18n("Ignore unsaved changes?"));
     return (rc == KMessageBox::Yes);
+}
+
+void KWalletManager::handleActivate(const QStringList &arguments, const QString &workingDirectory)
+{
+    Q_UNUSED(workingDirectory);
+
+    // DBus activation
+    if (arguments.isEmpty()) {
+        activateForStartLikeCall(true);
+        return;
+    }
+
+    // KDBusService::Unique handling
+    _commandLineParser->parse(arguments);
+
+    processParsedCommandLine(RemoteCall);
+}
+
+void KWalletManager::processParsedCommandLine(CommandLineOrigin commandLineOrigin)
+{
+    const bool shoWWindow = _commandLineParser->isSet(QStringLiteral("show"));
+    if (commandLineOrigin == ProgramStart) {
+        if (shoWWindow)
+            show();
+    } else {
+        activateForStartLikeCall(shoWWindow);
+    }
+
+    if (_commandLineParser->isSet(QStringLiteral("kwalletd"))) {
+        kwalletdLaunch();
+    }
+
+    const QStringList positionalArguments = _commandLineParser->positionalArguments();
+    QStringList localFiles;
+    for (const QString &arg : positionalArguments) {
+        const QString fn = QFileInfo(arg).absoluteFilePath();
+        if (QFile::exists(fn)) {
+            localFiles.append(fn);
+        } else {
+            openWallet(arg);
+        }
+    }
+    tryOpenWalletFiles(localFiles);
+}
+
+void KWalletManager::handleOpen(const QList<QUrl> &urls)
+{
+    QStringList localFiles;
+    for (const QUrl& url : urls) {
+        localFiles.append(url.toLocalFile());
+    }
+    tryOpenWalletFiles(localFiles);
+    activateForStartLikeCall(false);
+}
+
+void KWalletManager::tryOpenWalletFiles(const QStringList &localFiles)
+{
+    QMimeDatabase mimeDb;
+    for (const QString &localFile : localFiles) {
+        if (QFile::exists(localFile)) {
+            QMimeType mt = mimeDb.mimeTypeForFile(localFile, QMimeDatabase::MatchContent);
+
+            if (mt.isValid() && mt.inherits(QStringLiteral("application/x-kwallet"))) {
+                openWalletFile(localFile);
+            }
+        }
+    }
+}
+
+void KWalletManager::activateForStartLikeCall(bool showWindow)
+{
+    if (showWindow) {
+        show();
+    }
+#if KWINDOWSYSTEM_VERSION >= QT_VERSION_CHECK(5, 91, 0)
+    KWindowSystem::updateStartupId(windowHandle());
+#else
+    if (KWindowSystem::isPlatformWayland()) {
+        KWindowSystem::setCurrentXdgActivationToken(qEnvironmentVariable("XDG_ACTIVATION_TOKEN"));
+        //
+    }
+#endif
+    if (showWindow) {
+        if (isMinimized())
+            KWindowSystem::unminimizeWindow(winId());
+        else if (_tray && !isVisible()) // TODO: how does this relate to show() above?
+            _tray->activate(QPoint());
+
+        if (!isActiveWindow()) {
+            raise();
+            KWindowSystem::activateWindow(winId());
+        }
+    }
 }
