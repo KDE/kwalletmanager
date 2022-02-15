@@ -14,18 +14,20 @@
 #include "kwalletmanager_debug.h"
 
 #include <KLocalizedString>
-#include <QAction>
 #include <KConfig>
 #include <KMessageBox>
 #include <KStandardAction>
+#include <knotifications_version.h>
 #include <KStatusNotifierItem>
 #include <KWallet>
 #include <KXMLGUIFactory>
-#include <QIcon>
 #include <KActionCollection>
 #include <KConfigGroup>
 #include <KTar>
 #include <KIO/CommandLauncherJob>
+
+#include <QIcon>
+#include <QAction>
 
 #include <QRegExp>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -193,7 +195,11 @@ bool KWalletManager::queryClose()
         if (!_tray) {
             qApp->quit();
         } else {
+#if KNOTIFICATIONS_VERSION >= QT_VERSION_CHECK(5, 91, 0)
+            _tray->hideAssociatedWidget();
+#else
             hide();
+#endif
         }
         return false;
     }
