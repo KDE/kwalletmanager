@@ -77,7 +77,7 @@ int main(int argc, char **argv)
     }
 
     const QStringList arguments = parser.positionalArguments();
-    for (int i = 1; i < arguments.count(); ++i) {
+    for (int i = 0; i < arguments.count(); ++i) {
         QString fn = QFileInfo(arguments.at(i)).absoluteFilePath();
         if (QFile::exists(fn)) {
             QMimeDatabase mimeDb;
