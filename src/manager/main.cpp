@@ -62,7 +62,7 @@ int main(int argc, char **argv)
     aboutData.setupCommandLine(&parser);
     parser.addOption(QCommandLineOption(QStringLiteral("show"), i18n("Show window on startup")));
     parser.addOption(QCommandLineOption(QStringLiteral("kwalletd"), i18n("For use by kwalletd only")));
-    parser.addOption(QCommandLineOption(QStringLiteral("name"), i18n("A wallet name")));
+    parser.addPositionalArgument(QStringLiteral("name"), i18n("A wallet name"));
     parser.process(a);
     aboutData.processCommandLine(&parser);
 
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
     }
 
     const QStringList arguments = parser.positionalArguments();
-    for (int i = 1; i < arguments.count(); ++i) {
+    for (int i = 0; i < arguments.count(); ++i) {
         QString fn = QFileInfo(arguments.at(i)).absoluteFilePath();
         if (QFile::exists(fn)) {
             QMimeDatabase mimeDb;
