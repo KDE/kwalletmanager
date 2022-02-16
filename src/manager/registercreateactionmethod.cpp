@@ -15,8 +15,8 @@ RegisterCreateActionsMethod::RegisterCreateActionsMethod(RegisterCreateActionsMe
 
 void RegisterCreateActionsMethod::createActions(KActionCollection *actionCollection)
 {
-    std::list<CreateActionsMethod>::const_iterator it = createActionMethodList->begin();
-    std::list<CreateActionsMethod>::const_iterator end = createActionMethodList->end();
+    auto it = createActionMethodList->begin();
+    auto end = createActionMethodList->end();
     for (; it != end; it++) {
         (*it)(actionCollection);
     }

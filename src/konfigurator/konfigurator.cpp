@@ -80,9 +80,7 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
 
 }
 
-KWalletConfig::~KWalletConfig()
-{
-}
+KWalletConfig::~KWalletConfig() = default;
 
 void KWalletConfig::updateWalletLists()
 {
@@ -117,12 +115,12 @@ QString KWalletConfig::newWallet()
                                             &ok);
 
     if (!ok) {
-        return QString();
+        return {};
     }
 
     KWallet::Wallet *w = KWallet::Wallet::openWallet(n, topLevelWidget()->winId());
     if (!w) {
-        return QString();
+        return {};
     }
 
     delete w;

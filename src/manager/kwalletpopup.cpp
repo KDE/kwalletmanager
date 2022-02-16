@@ -69,9 +69,7 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString
     addAction(act);
 }
 
-KWalletPopup::~KWalletPopup()
-{
-}
+KWalletPopup::~KWalletPopup() = default;
 
 void KWalletPopup::openWallet()
 {

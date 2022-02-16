@@ -163,9 +163,7 @@ void KWMapEditor::reload()
     }
 }
 
-KWMapEditor::~KWMapEditor()
-{
-}
+KWMapEditor::~KWMapEditor() = default;
 
 void KWMapEditor::erase()
 {

@@ -26,10 +26,7 @@ KWalletManagerWidget::KWalletManagerWidget(QWidget *parent, Qt::WindowFlags /*fl
     connect(this, &KWalletManagerWidget::currentPageChanged, this, &KWalletManagerWidget::onCurrentPageChanged);
 }
 
-KWalletManagerWidget::~KWalletManagerWidget()
-{
-
-}
+KWalletManagerWidget::~KWalletManagerWidget() = default;
 
 void KWalletManagerWidget::onCurrentPageChanged(KPageWidgetItem */*current*/, KPageWidgetItem */*before*/)
 {
@@ -110,7 +107,7 @@ QString KWalletManagerWidget::activeWalletName() const
     if (page) {
         return page->walletName();
     } else {
-        return QString();
+        return {};
     }
 }
 

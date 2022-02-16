@@ -47,8 +47,8 @@
 #include <QVBoxLayout>
 #include <QXmlStreamWriter>
 
-#include <assert.h>
-#include <stdlib.h>
+#include <cassert>
+#include <cstdlib>
 
 QAction *KWalletEditor::_newFolderAction = nullptr;
 QAction *KWalletEditor::_deleteFolderAction = nullptr;

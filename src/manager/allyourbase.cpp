@@ -106,9 +106,7 @@ QString KWalletFolderItem::name() const
     return _name;
 }
 
-KWalletFolderItem::~KWalletFolderItem()
-{
-}
+KWalletFolderItem::~KWalletFolderItem() = default;
 
 /****************
  *  KWalletContainerItem - ListView items to represent kwallet containers, i.e.
@@ -120,9 +118,7 @@ KWalletContainerItem::KWalletContainerItem(QTreeWidgetItem *parent, const QStrin
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEnabled);
 }
 
-KWalletContainerItem::~KWalletContainerItem()
-{
-}
+KWalletContainerItem::~KWalletContainerItem() = default;
 
 KWallet::Wallet::EntryType KWalletContainerItem::entryType()
 {
@@ -154,9 +150,7 @@ KWalletEntryItem::KWalletEntryItem(KWallet::Wallet *w, QTreeWidgetItem *parent, 
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsEditable | Qt::ItemIsDragEnabled | Qt::ItemIsEnabled);
 }
 
-KWalletEntryItem::~KWalletEntryItem()
-{
-}
+KWalletEntryItem::~KWalletEntryItem() = default;
 
 void KWalletEntryItem::setName(const QString &n)
 {
@@ -178,9 +172,7 @@ KWalletItem::KWalletItem(QListWidget *parent, const QString &walletName)
     setFlags(flags() | Qt::ItemIsDropEnabled);
 }
 
-KWalletItem::~KWalletItem()
-{
-}
+KWalletItem::~KWalletItem() = default;
 
 void KWalletItem::setOpen(bool state)
 {
@@ -349,9 +341,7 @@ KWalletEntryList::KWalletEntryList(QWidget *parent, const QString &name)
     setSelectionMode(SingleSelection);
 }
 
-KWalletEntryList::~KWalletEntryList()
-{
-}
+KWalletEntryList::~KWalletEntryList() = default;
 
 //returns true if the item has been dropped successfully
 void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
