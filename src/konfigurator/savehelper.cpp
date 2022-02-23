@@ -6,7 +6,11 @@
 
 #include "savehelper.h"
 
+#if KAUTH_VERSION >= QT_VERSION_CHECK(5, 92, 0)
+#include <KAuth/HelperSupport>
+#else
 #include <KAuthHelperSupport>
+#endif
 
 #include <QCoreApplication>
 #include <QDebug>
