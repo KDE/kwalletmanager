@@ -498,9 +498,12 @@ void KWalletManager::handleActivate(const QStringList &arguments, const QString 
 {
     Q_UNUSED(workingDirectory);
 
-    // DBus activation
+    // DBus activation or KDBusService::Unique handling without cmdl arguments
     if (arguments.isEmpty()) {
-        activateForStartLikeCall(true);
+        // app start or activation for kwalletmanager historically does not mean "show the window"
+        // just ensure the manager is running in the systray, if configured like that.
+        // In the other case KWalletManager::configUI() will ensure a window is shown on first start.
+        activateForStartLikeCall(false);
         return;
     }
 
@@ -579,7 +582,9 @@ void KWalletManager::activateForStartLikeCall(bool showWindow)
             KWindowSystem::unminimizeWindow(winId());
         else if (_tray && !isVisible()) // TODO: how does this relate to show() above?
             _tray->activate(QPoint());
-
+    }
+    // if there is a window visible, now or before, always activate it
+    if (isVisible()) {
         if (!isActiveWindow()) {
             raise();
             KWindowSystem::activateWindow(winId());
