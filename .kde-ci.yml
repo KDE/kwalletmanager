@@ -24,3 +24,5 @@ Dependencies:
     'frameworks/kwindowsystem': '@stable'
     'frameworks/kcrash': '@stable'
 
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
