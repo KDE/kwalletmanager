@@ -122,6 +122,7 @@
   <url type="donation">https://www.kde.org/community/donations/?app=kwalletmanager&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=kwallet5</url>
   <url type="homepage">https://utils.kde.org/projects/kwalletmanager/</url>
+  <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
       <image>https://www.kde.org/images/screenshots/kwalletmanager.png</image>
