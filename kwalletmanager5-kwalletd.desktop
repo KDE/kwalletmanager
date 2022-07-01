@@ -2,6 +2,7 @@
 Name=KDE Wallet Management Tool
 Name[ar]=أداة لإدارة محفظة كدي
 Name[az]=KDE Cüzdanı İdarəetmə Vasitəsi
+Name[bg]=Инструмент за управление на портфейла на KDE
 Name[ca]=Eina per a la gestió de carteres del KDE
 Name[ca@valencia]=Eina per a la gestió de carteres de KDE
 Name[cs]=Správce úschovny KDE
@@ -36,6 +37,7 @@ Name[zh_CN]=KDE 钱包管理工具
 Comment=KDE Wallet Management Tool
 Comment[ar]=أداة لإدارة محفظة كدي
 Comment[az]=KDE Cüzdanı İdarəetmə Vasitəsi
+Comment[bg]=Инструмент за управление на портфейла на KDE
 Comment[ca]=Eina per a la gestió de carteres del KDE
 Comment[ca@valencia]=Eina per a la gestió de carteres de KDE
 Comment[cs]=Správce úschovny KDE
