@@ -112,7 +112,7 @@ void WalletControlWidget::onOpenClose()
             if (rc == KMessageBox::Yes) {
                 rc = KWallet::Wallet::closeWallet(_walletName, true);
                 if (rc != 0) {
-                    KMessageBox::sorry(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
+                    KMessageBox::error(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
                 } else {
                     _wallet = nullptr;
                 }

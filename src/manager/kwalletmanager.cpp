@@ -254,7 +254,7 @@ void KWalletManager::closeWallet(const QString &walletName)
         if (rc == KMessageBox::Yes) {
             rc = KWallet::Wallet::closeWallet(walletName, true);
             if (rc != 0) {
-                KMessageBox::sorry(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
+                KMessageBox::error(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
             }
         }
     }
@@ -270,7 +270,7 @@ void KWalletManager::changeWalletPassword(const QString &walletName)
 void KWalletManager::openWalletFile(const QString &path)
 {
     if (!_managerWidget->openWalletFile(path)) {
-        KMessageBox::sorry(this, i18n("Error opening wallet %1.", path));
+        KMessageBox::error(this, i18n("Error opening wallet %1.", path));
     }
 }
 
@@ -381,7 +381,7 @@ void KWalletManager::deleteWallet()
     }
     rc = KWallet::Wallet::deleteWallet(walletName);
     if (rc != 0) {
-        KMessageBox::sorry(this, i18n("Unable to delete the wallet. Error code was %1.", rc));
+        KMessageBox::error(this, i18n("Unable to delete the wallet. Error code was %1.", rc));
     }
 }
 

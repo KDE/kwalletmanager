@@ -388,7 +388,7 @@ void KWalletEditor::deleteFolder()
             if (rc == KMessageBox::Continue) {
                 bool rc = _w->removeFolder(fi->name());
                 if (!rc) {
-                    KMessageBox::sorry(this, i18n("Error deleting folder."));
+                    KMessageBox::error(this, i18n("Error deleting folder."));
                     return;
                 }
                 _currentFolder.clear();
@@ -456,7 +456,7 @@ void KWalletEditor::saveEntry()
         }
     }
 
-    KMessageBox::sorry(this, i18n("Error saving entry. Error code: %1", rc));
+    KMessageBox::error(this, i18n("Error saving entry. Error code: %1", rc));
 }
 
 void KWalletEditor::restoreEntry()
@@ -904,7 +904,7 @@ void KWalletEditor::walletOpened(bool success)
         _entryList->setWallet(_w);
     } else {
         if (!_newWallet) {
-            KMessageBox::sorry(this, i18n("Unable to open the requested wallet."));
+            KMessageBox::error(this, i18n("Unable to open the requested wallet."));
         }
     }
 }
@@ -940,14 +940,14 @@ void KWalletEditor::importWallet()
 
     QTemporaryFile tmpFile;
     if (!tmpFile.open()) {
-        KMessageBox::sorry(this, i18n("Unable to create temporary file for downloading '<b>%1</b>'.", url.toDisplayString()));
+        KMessageBox::error(this, i18n("Unable to create temporary file for downloading '<b>%1</b>'.", url.toDisplayString()));
         return;
     }
 
     KIO::StoredTransferJob *job = KIO::storedGet(url);
     KJobWidgets::setWindow(job, this);
     if (!job->exec()) {
-        KMessageBox::sorry(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
+        KMessageBox::error(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
         return;
     }
     tmpFile.write(job->data());
@@ -1082,19 +1082,19 @@ void KWalletEditor::importXML()
     KIO::StoredTransferJob *job = KIO::storedGet(url);
     KJobWidgets::setWindow(job, this);
     if (!job->exec()) {
-        KMessageBox::sorry(this, i18n("Unable to access XML file '<b>%1</b>'.", url.toDisplayString()));
+        KMessageBox::error(this, i18n("Unable to access XML file '<b>%1</b>'.", url.toDisplayString()));
         return;
     }
 
     QDomDocument doc;
     if (!doc.setContent(job->data())) {
-        KMessageBox::sorry(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.toDisplayString()));
+        KMessageBox::error(this, i18n("Error reading XML file '<b>%1</b>' for input.", url.toDisplayString()));
         return;
     }
 
     QDomElement top = doc.documentElement();
     if (top.tagName().toLower() != QLatin1String("wallet")) {
-        KMessageBox::sorry(this, i18n("Error: XML file does not contain a wallet."));
+        KMessageBox::error(this, i18n("Error: XML file does not contain a wallet."));
         return;
     }
 
@@ -1245,7 +1245,7 @@ void KWalletEditor::exportXML()
     KIO::StoredTransferJob *putJob = KIO::storedPut(&tf, url, -1);
     KJobWidgets::setWindow(putJob, this);
     if (!putJob->exec()) {
-        KMessageBox::sorry(this, i18n("Unable to store to '<b>%1</b>'.", url.toDisplayString()));
+        KMessageBox::error(this, i18n("Unable to store to '<b>%1</b>'.", url.toDisplayString()));
     }
 }
 

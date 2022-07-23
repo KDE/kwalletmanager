@@ -146,7 +146,7 @@ void KWalletManagerWidget::dropEvent(QDropEvent */*e*/)
 //         // Not dropped over an item thus it is a wallet
 //         const QString dest = KGlobal::dirs()->saveLocation("kwallet") + u.fileName();
 //         if (QFile::exists(dest)) {
-//             KMessageBox::sorry(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
+//             KMessageBox::error(viewport(), i18n("That wallet file already exists.  You cannot overwrite wallets."));
 //             e->ignore();
 //             return;
 //         }
