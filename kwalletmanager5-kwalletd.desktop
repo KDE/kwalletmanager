@@ -80,7 +80,6 @@ Comment[zh_TW]=KDE 錢包管理工具
 Exec=kwalletmanager5 --kwalletd
 Icon=kwalletmanager
 Type=Application
-Terminal=false
 X-KDE-StartupNotify=false
 NoDisplay=true
 X-DocPath=help:/kwallet5/index.html

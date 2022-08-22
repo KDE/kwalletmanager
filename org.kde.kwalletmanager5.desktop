@@ -139,7 +139,6 @@ MimeType=application/x-kwallet;
 InitialPreference=6
 Icon=kwalletmanager
 Type=Application
-Terminal=false
 StartupNotify=false
 Categories=Qt;KDE;System;Security;
 X-DocPath=kwallet5/index.html
