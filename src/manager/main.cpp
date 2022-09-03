@@ -49,8 +49,6 @@ int main(int argc, char **argv)
                         i18n("Developer"),
                         QStringLiteral("isaac@warp.es"));
 
-    aboutData.setOrganizationDomain("kde.org");
-
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
