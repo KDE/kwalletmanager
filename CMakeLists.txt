@@ -32,9 +32,13 @@ ecm_setup_version(${RELEASE_SERVICE_VERSION} VARIABLE_PREFIX KWALLETMANAGER
                   VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/kwalletmanager_version.h"
 )
 
+option(ENABLE_KAUTH "Enable KAuth support (Disabled for Flatpak builds)" ON)
+if (ENABLE_KAUTH)
+    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED Auth)
+endif()
+
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED
     Archive
-    Auth
     Config
     ConfigWidgets
     CoreAddons
