@@ -88,3 +88,7 @@ target_link_libraries(kwalletmanager5
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 add_subdirectory(icons)
+
+########### install files ###############
+
+install( FILES kwalletconfig5.desktop kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})

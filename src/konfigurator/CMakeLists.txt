@@ -35,7 +35,3 @@ install(TARGETS kcm_kwallet_helper5 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 kauth_install_helper_files(kcm_kwallet_helper5 org.kde.kcontrol.kcmkwallet5 root)
 kauth_install_actions(org.kde.kcontrol.kcmkwallet5 kwallet.actions)
-
-########### install files ###############
-
-install( FILES kwalletconfig5.desktop kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
