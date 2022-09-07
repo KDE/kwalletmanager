@@ -91,4 +91,4 @@ add_subdirectory(icons)
 
 ########### install files ###############
 
-install( FILES kwalletconfig5.desktop kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
+install(FILES kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
