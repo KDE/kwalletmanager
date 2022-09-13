@@ -145,7 +145,6 @@ MimeType=application/x-kwallet;
 InitialPreference=6
 Icon=kwalletmanager
 Type=Application
-StartupNotify=false
 Categories=Qt;KDE;System;Security;
 X-DocPath=kwallet5/index.html
 DBusActivatable=true
