@@ -25,6 +25,7 @@
   <name xml:lang="id">KWalletManager</name>
   <name xml:lang="is">KWalletManager</name>
   <name xml:lang="it">KWalletManager</name>
+  <name xml:lang="ka">KWalletManager</name>
   <name xml:lang="ko">KWalletManager</name>
   <name xml:lang="lt">KWalletManager</name>
   <name xml:lang="nl">KWalletManager</name>
@@ -66,6 +67,7 @@
   <summary xml:lang="id">Alat Pengelolaan Dompet</summary>
   <summary xml:lang="is">Tól til að stýra eiginleikum veskja</summary>
   <summary xml:lang="it">Strumento per la gestione del portafogli</summary>
+  <summary xml:lang="ka">საფულის მართვის ხელსაწყო</summary>
   <summary xml:lang="ko">지갑 관리 도구</summary>
   <summary xml:lang="lt">Slaptažodinių tvarkymo įrankis</summary>
   <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
