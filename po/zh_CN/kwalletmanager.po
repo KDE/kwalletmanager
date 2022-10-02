@@ -1,0 +1,692 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/kwalletmanager/kwalletmanager.pot\n"
+"X-Crowdin-File-ID: 5738\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Guo Yunhe, Tyson Tan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "i@guoyunhe.me, tysontan@tysontan.com"
+
+#: allyourbase.cpp:202
+#, kde-format
+msgid "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr "名称为“%1”的条目已存在。您想要继续吗？"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "A folder by the name '%1' already exists.  What would you like to do?"
+msgstr "名称为“%1”的文件夹已存在。您想要怎么做？"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "Replace"
+msgstr "替换"
+
+#: allyourbase.cpp:336
+#, kde-format
+msgid "Folders"
+msgstr "文件夹"
+
+#: allyourbase.cpp:370
+#, kde-format
+msgid "An unexpected error occurred trying to drop the item"
+msgstr "尝试拖放项目时发生意外错误"
+
+#: allyourbase.cpp:446
+#, kde-format
+msgid "An unexpected error occurred trying to drop the entry"
+msgstr "尝试拖放条目时发生意外错误"
+
+#: allyourbase.cpp:470
+#, kde-format
+msgid ""
+"An unexpected error occurred trying to delete the original folder, but the "
+"folder has been copied successfully"
+msgstr "尝试删除原始文件夹时发生意外错误，但文件夹已被成功复制"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: applicationsmanager.ui:17
+#, kde-format
+msgid "These applications are currently connected to this wallet:"
+msgstr "已接入此密码库的应用程序："
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: applicationsmanager.ui:64
+#, kde-format
+msgid "These applications are authorized to access this wallet:"
+msgstr "已获得此密码库访问权限的应用程序："
+
+#: disconnectappbutton.cpp:16
+#, kde-format
+msgid "Disconnect"
+msgstr "断开"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: kbetterthankdialogbase.ui:43
+#, kde-format
+msgid "&Replace"
+msgstr "替换(&R)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: kbetterthankdialogbase.ui:53
+#, kde-format
+msgid "Replace &All"
+msgstr "全部替换(&A)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: kbetterthankdialogbase.ui:60
+#, kde-format
+msgid "&Skip"
+msgstr "跳过(&S)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: kbetterthankdialogbase.ui:67
+#, kde-format
+msgid "Skip A&ll"
+msgstr "全部跳过(&L)"
+
+#: kwalleteditor.cpp:86
+#, kde-format
+msgid "Search"
+msgstr "搜索"
+
+#: kwalleteditor.cpp:95
+#, kde-format
+msgid "&Show values"
+msgstr "显示值(&S)"
+
+#: kwalleteditor.cpp:195
+#, kde-format
+msgid "&New Folder..."
+msgstr "新建文件夹(&N)..."
+
+#: kwalleteditor.cpp:199
+#, kde-format
+msgid "&Delete Folder"
+msgstr "删除文件夹(&D)"
+
+#: kwalleteditor.cpp:202
+#, kde-format
+msgid "&Import a wallet..."
+msgstr "导入密码库(&I)..."
+
+#: kwalleteditor.cpp:205
+#, kde-format
+msgid "&Import XML..."
+msgstr "导入 XML(&I)..."
+
+#: kwalleteditor.cpp:208
+#, kde-format
+msgid "&Export as XML..."
+msgstr "导出为 XML(&E)..."
+
+#: kwalleteditor.cpp:211
+#, kde-format
+msgid "&Copy"
+msgstr "复制(&C)"
+
+#: kwalleteditor.cpp:216
+#, kde-format
+msgid "&New..."
+msgstr "新建(&N)..."
+
+#: kwalleteditor.cpp:221
+#, kde-format
+msgid "&Rename"
+msgstr "重命名(&R)"
+
+#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#, kde-format
+msgid "&Delete"
+msgstr "删除(&D)"
+
+#: kwalleteditor.cpp:231
+#, kde-format
+msgid "Always show contents"
+msgstr "总是显示内容"
+
+#: kwalleteditor.cpp:235
+#, kde-format
+msgid "Always hide contents"
+msgstr "总是隐藏内容"
+
+#: kwalleteditor.cpp:344
+#, kde-format
+msgid "Passwords"
+msgstr "密码"
+
+#: kwalleteditor.cpp:345
+#, kde-format
+msgid "Maps"
+msgstr "映射"
+
+#: kwalleteditor.cpp:346
+#, kde-format
+msgid "Binary Data"
+msgstr "二进制数据"
+
+#: kwalleteditor.cpp:347
+#, kde-format
+msgid "Unknown"
+msgstr "未知"
+
+#: kwalleteditor.cpp:387
+#, kde-format
+msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
+msgstr "您确定要删除密码库中的文件夹“%1”吗？"
+
+#: kwalleteditor.cpp:391
+#, kde-format
+msgid "Error deleting folder."
+msgstr "删除文件夹时出错。"
+
+#: kwalleteditor.cpp:410
+#, kde-format
+msgid "New Folder"
+msgstr "新建文件夹"
+
+#: kwalleteditor.cpp:411
+#, kde-format
+msgid "Please choose a name for the new folder:"
+msgstr "请选择新文件夹的名称："
+
+#: kwalleteditor.cpp:420
+#, kde-format
+msgid "Sorry, that folder name is in use. Try again?"
+msgstr "对不起，已存在同名文件夹。您想要重试吗？"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#, kde-format
+msgid "Try Again"
+msgstr "重试"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#, kde-format
+msgid "Do Not Try"
+msgstr "不重试"
+
+#: kwalleteditor.cpp:459
+#, kde-format
+msgid "Error saving entry. Error code: %1"
+msgstr "保存条目时出错。错误代码：%1"
+
+#: kwalleteditor.cpp:480
+#, kde-format
+msgid ""
+"The contents of the current item has changed.\n"
+"Do you want to save changes?"
+msgstr ""
+"当前项目的内容已被更改。\n"
+"您想要保存这些更改吗？"
+
+#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#, kde-format
+msgid "Password: %1"
+msgstr "密码：%1"
+
+#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#, kde-format
+msgid "Name-Value Map: %1"
+msgstr "名称-值映射：%1"
+
+#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#, kde-format
+msgid "Binary Data: %1"
+msgstr "二进制数据：%1"
+
+#: kwalleteditor.cpp:766
+#, kde-format
+msgid "New Entry"
+msgstr "新建条目"
+
+#: kwalleteditor.cpp:767
+#, kde-format
+msgid "Please choose a name for the new entry:"
+msgstr "请选择新条目的名称："
+
+#: kwalleteditor.cpp:777
+#, kde-format
+msgid "Sorry, that entry already exists. Try again?"
+msgstr "对不起，已存在同名条目。您想要重试吗？"
+
+#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#, kde-format
+msgid "An unexpected error occurred trying to add the new entry"
+msgstr "尝试添加新条目时发生意外错误"
+
+#: kwalleteditor.cpp:855
+#, kde-format
+msgid "An unexpected error occurred trying to rename the entry"
+msgstr "尝试重命名条目时发生意外错误"
+
+#: kwalleteditor.cpp:875
+#, kde-format
+msgid "Are you sure you wish to delete the item '%1'?"
+msgstr "您确定要删除项目“%1”吗？"
+
+#: kwalleteditor.cpp:879
+#, kde-format
+msgid "An unexpected error occurred trying to delete the entry"
+msgstr "尝试删除条目时发生意外错误"
+
+#: kwalleteditor.cpp:907
+#, kde-format
+msgid "Unable to open the requested wallet."
+msgstr "无法打开请求的密码库。"
+
+#: kwalleteditor.cpp:943
+#, kde-format
+msgid "Unable to create temporary file for downloading '<b>%1</b>'."
+msgstr "无法为下载“<b>%1</b>”创建临时文件。"
+
+#: kwalleteditor.cpp:950
+#, kde-format
+msgid "Unable to access wallet '<b>%1</b>'."
+msgstr "无法访问密码库“<b>%1</b>”。"
+
+#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
+#: kwalleteditor.cpp:1127
+#, kde-format
+msgid ""
+"Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
+"replace it?"
+msgstr "文件夹“<b>%1</b>”已经包含条目“<b>%2</b>”。您想要替换它吗？"
+
+#: kwalleteditor.cpp:1085
+#, kde-format
+msgid "Unable to access XML file '<b>%1</b>'."
+msgstr "无法访问 XML 文件“<b>%1</b>”。"
+
+#: kwalleteditor.cpp:1091
+#, kde-format
+msgid "Error reading XML file '<b>%1</b>' for input."
+msgstr "读取 XML 文件“<b>%1</b>”作为输入出错。"
+
+#: kwalleteditor.cpp:1097
+#, kde-format
+msgid "Error: XML file does not contain a wallet."
+msgstr "错误：XML 文件不包含密码库。"
+
+#: kwalleteditor.cpp:1248
+#, kde-format
+msgid "Unable to store to '<b>%1</b>'."
+msgstr "无法存储到“<b>%1</b>”。"
+
+#: kwalletmanager.cpp:69
+#, kde-format
+msgid ""
+"The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
+"the KWalletManager will quit as it cannot work without reading the wallets."
+msgstr ""
+"KDE 密码库系统尚未启用。您想要启用它吗？如果您不启用它，KWalletManager 程序将"
+"无法读取密码库并退出。"
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:281
+#, kde-format
+msgid "Wallet"
+msgstr "密码库"
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#, kde-format
+msgid "No wallets open."
+msgstr "没有打开的密码库。"
+
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#, kde-format
+msgid "A wallet is open."
+msgstr "有一个打开的密码库。"
+
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#, kde-format
+msgid "&New Wallet..."
+msgstr "新建密码库(&N)..."
+
+#: kwalletmanager.cpp:139
+#, kde-format
+msgid "&Delete Wallet..."
+msgstr "删除密码库(&D)..."
+
+#: kwalletmanager.cpp:144
+#, kde-format
+msgid "Export as encrypted"
+msgstr "导出加密文件"
+
+#: kwalletmanager.cpp:149
+#, kde-format
+msgid "&Import encrypted"
+msgstr "导入加密文件(&I)"
+
+#: kwalletmanager.cpp:154
+#, kde-format
+msgid "Configure &Wallet..."
+msgstr "配置密码库(&W)..."
+
+#: kwalletmanager.cpp:162
+#, kde-format
+msgid "Close &All Wallets"
+msgstr "关闭全部密码库(&A)"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"无法完全关闭密码库，它可能正在被其他程序使用。您想要强制关闭该密码库吗？"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Force Closure"
+msgstr "强制关闭"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Do Not Force"
+msgstr "不强制"
+
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#, kde-format
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "无法强制关闭密码库。错误代码为 %1。"
+
+#: kwalletmanager.cpp:273
+#, kde-format
+msgid "Error opening wallet %1."
+msgstr "打开密码库 %1 时出错。"
+
+#: kwalletmanager.cpp:315
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "请选择新密码库的名称："
+
+#: kwalletmanager.cpp:326
+#, kde-format
+msgid "New Wallet"
+msgstr "新建密码库"
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Empty name is not supported. Please select a new one."
+msgstr "不支持空名称。请另选一个名称。"
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Create new wallet"
+msgstr "创建新密码库"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Sorry, that wallet already exists. Try a new name?"
+msgstr "对不起，已存在同名的其他密码库。您想要尝试另一个名称吗？"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Try New"
+msgstr "尝试新名称"
+
+#: kwalletmanager.cpp:378
+#, kde-format
+msgid "Are you sure you wish to delete the wallet '%1'?"
+msgstr "您确定要删除密码库“%1”吗？"
+
+#: kwalletmanager.cpp:384
+#, kde-format
+msgid "Unable to delete the wallet. Error code was %1."
+msgstr "无法删除该密码库。错误代码为 %1。"
+
+#: kwalletmanager.cpp:432
+#, kde-format
+msgid "File name"
+msgstr "文件名"
+
+#: kwalletmanager.cpp:439
+#, kde-format
+msgid "Failed to open file for writing"
+msgstr "无法打开文件进行写入"
+
+#: kwalletmanager.cpp:450
+#, kde-format
+msgid "Select file"
+msgstr "选择文件"
+
+#: kwalletmanager.cpp:460
+#, kde-format
+msgid "Failed to open file"
+msgstr "无法打开文件"
+
+#: kwalletmanager.cpp:473
+#, kde-format
+msgid "Wallet named %1 already exists, Operation aborted"
+msgstr "已存在名为 %1 的密码库，操作已中止"
+
+#: kwalletmanager.cpp:480
+#, kde-format
+msgid "Failed to copy files"
+msgstr "无法复制文件"
+
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#, kde-format
+msgid "Ignore unsaved changes?"
+msgstr "忽略未保存修改？"
+
+#. i18n: ectx: Menu (file)
+#: kwalletmanager.rc:4
+#, kde-format
+msgid "&File"
+msgstr "文件(&F)"
+
+#. i18n: ectx: Menu (settings)
+#: kwalletmanager.rc:17
+#, kde-format
+msgid "&Settings"
+msgstr "设置(&S)"
+
+#. i18n: ectx: Menu (help)
+#: kwalletmanager.rc:20
+#, kde-format
+msgid "&Help"
+msgstr "帮助(&H)"
+
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#, kde-format
+msgid "&Open..."
+msgstr "打开(&O)..."
+
+#: kwalletpopup.cpp:38
+#, kde-format
+msgid "Change &Password..."
+msgstr "更改密码(&P)..."
+
+#: kwalletpopup.cpp:53
+#, kde-format
+msgid "Disconnec&t"
+msgstr "断开(&T)"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Key"
+msgstr "键"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Value"
+msgstr "值"
+
+#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#, kde-format
+msgid "Delete Entry"
+msgstr "删除条目"
+
+#: kwmapeditor.cpp:216
+#, kde-format
+msgid "&New Entry"
+msgstr "新建条目(&N)"
+
+#: main.cpp:31
+#, kde-format
+msgid "Wallet Manager"
+msgstr "密码库管理器"
+
+#: main.cpp:33
+#, kde-format
+msgid "KDE Wallet Management Tool"
+msgstr "KDE 密码库管理工具"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright ©2013–2017, KWallet Manager authors"
+msgstr "Copyright ©2013–2017, KWallet Manager authors"
+
+#: main.cpp:39
+#, kde-format
+msgid "Valentin Rusu"
+msgstr "Valentin Rusu"
+
+#: main.cpp:40
+#, kde-format
+msgid "Maintainer, user interface refactoring"
+msgstr "维护者，用户界面重构"
+
+#: main.cpp:42
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:43
+#, kde-format
+msgid "Original author and former maintainer"
+msgstr "原作者和前任维护者"
+
+#: main.cpp:45
+#, kde-format
+msgid "Michael Leupold"
+msgstr "Michael Leupold"
+
+#: main.cpp:46
+#, kde-format
+msgid "Developer and former maintainer"
+msgstr "开发者和前任维护者"
+
+#: main.cpp:48
+#, kde-format
+msgid "Isaac Clerencia"
+msgstr "Isaac Clerencia"
+
+#: main.cpp:49
+#, kde-format
+msgid "Developer"
+msgstr "开发者"
+
+#: main.cpp:57
+#, kde-format
+msgid "Show window on startup"
+msgstr "启动时显示窗口"
+
+#: main.cpp:58
+#, kde-format
+msgid "For use by kwalletd only"
+msgstr "仅供 kwalletd 使用"
+
+#: main.cpp:59
+#, kde-format
+msgid "A wallet name"
+msgstr "密码库名称"
+
+#: revokeauthbutton.cpp:16
+#, kde-format
+msgid "Revoke Authorization"
+msgstr "撤销授权"
+
+#: walletcontrolwidget.cpp:59
+#, kde-format
+msgid "&Close"
+msgstr "关闭(&C)"
+
+#: walletcontrolwidget.cpp:76
+#, kde-format
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open"
+msgstr "密码库“%1”已被打开。"
+
+#: walletcontrolwidget.cpp:93
+#, kde-format
+msgid "The wallet is currently closed"
+msgstr "此密码库已经关闭"
+
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: walletcontrolwidget.ui:28
+#, kde-format
+msgid "KSqueezedTextLabel"
+msgstr "KSqueezedTextLabel"
+
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: walletcontrolwidget.ui:35
+#, kde-format
+msgid "Open..."
+msgstr "打开..."
+
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: walletcontrolwidget.ui:58
+#, kde-format
+msgid "Change Password..."
+msgstr "更改密码..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: walletcontrolwidget.ui:76
+#, kde-format
+msgid "Contents"
+msgstr "内容"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: walletcontrolwidget.ui:115
+#, kde-format
+msgid "Applications"
+msgstr "应用程序"
+
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: walletwidget.ui:142
+#, kde-format
+msgid "Hide &Contents"
+msgstr "隐藏内容(&C)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: walletwidget.ui:185 walletwidget.ui:233
+#, kde-format
+msgid "Show &Contents"
+msgstr "显示内容(&C)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
+#: walletwidget.ui:296
+#, kde-format
+msgid "&Undo"
+msgstr "撤销(&U)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
+#: walletwidget.ui:306
+#, kde-format
+msgid "&Save"
+msgstr "保存(&S)"

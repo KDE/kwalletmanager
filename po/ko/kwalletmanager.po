@@ -1,0 +1,737 @@
+# Translation of kwalletmanager to Korean.
+# Copyright (C) 2007 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kwalletmanager package.
+# Shinjo Park <kde@peremen.name>, 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"PO-Revision-Date: 2020-04-21 00:37+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: allyourbase.cpp:202
+#, kde-format
+msgid "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr ""
+"항목 '%1'이(가) 이미 존재합니다. 계속 진행하시겠습니까?|/|항목 '%1'$[이가 "
+"%1] 이미 존재합니다. 계속 진행하시겠습니까?"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "A folder by the name '%1' already exists.  What would you like to do?"
+msgstr ""
+"폴더 '%1'이(가) 이미 존재합니다. 무엇을 하시겠습니까?|/|폴더 '%1'$[이가 %1] "
+"이미 존재합니다. 무엇을 하시겠습니까?"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "Replace"
+msgstr "바꾸기"
+
+#: allyourbase.cpp:336
+#, kde-format
+msgid "Folders"
+msgstr "폴더"
+
+#: allyourbase.cpp:370
+#, kde-format
+msgid "An unexpected error occurred trying to drop the item"
+msgstr "항목을 떨어뜨리는 중 예상하지 못한 오류 발생"
+
+#: allyourbase.cpp:446
+#, kde-format
+msgid "An unexpected error occurred trying to drop the entry"
+msgstr "항목을 떨어뜨리는 중 예상하지 못한 오류 발생"
+
+#: allyourbase.cpp:470
+#, kde-format
+msgid ""
+"An unexpected error occurred trying to delete the original folder, but the "
+"folder has been copied successfully"
+msgstr ""
+"원본 폴더를 삭제하는 중 예상하지 못한 오류가 발생했으나 폴더는 복사되었습니"
+"다."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: applicationsmanager.ui:17
+#, kde-format
+msgid "These applications are currently connected to this wallet:"
+msgstr "다음 프로그램이 이 지갑에 연결되어 있습니다:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: applicationsmanager.ui:64
+#, kde-format
+msgid "These applications are authorized to access this wallet:"
+msgstr "다음 프로그램이 이 지갑에 접근을 허가받았습니다:"
+
+#: disconnectappbutton.cpp:16
+#, kde-format
+msgid "Disconnect"
+msgstr "연결 끊기"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: kbetterthankdialogbase.ui:43
+#, kde-format
+msgid "&Replace"
+msgstr "바꾸기(&R)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: kbetterthankdialogbase.ui:53
+#, kde-format
+msgid "Replace &All"
+msgstr "모두 바꾸기(&A)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: kbetterthankdialogbase.ui:60
+#, kde-format
+msgid "&Skip"
+msgstr "건너뛰기(&S)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: kbetterthankdialogbase.ui:67
+#, kde-format
+msgid "Skip A&ll"
+msgstr "모두 건너뛰기(&L)"
+
+#: kwalleteditor.cpp:86
+#, kde-format
+msgid "Search"
+msgstr "찾기"
+
+#: kwalleteditor.cpp:95
+#, kde-format
+msgid "&Show values"
+msgstr "값 표시(&S)"
+
+#: kwalleteditor.cpp:195
+#, kde-format
+msgid "&New Folder..."
+msgstr "새 폴더(&N)..."
+
+#: kwalleteditor.cpp:199
+#, kde-format
+msgid "&Delete Folder"
+msgstr "폴더 삭제(&D)"
+
+#: kwalleteditor.cpp:202
+#, kde-format
+msgid "&Import a wallet..."
+msgstr "지갑 가져오기(&I)..."
+
+#: kwalleteditor.cpp:205
+#, kde-format
+msgid "&Import XML..."
+msgstr "XML 불러오기(&I)..."
+
+#: kwalleteditor.cpp:208
+#, kde-format
+msgid "&Export as XML..."
+msgstr "XML 내보내기(&E)..."
+
+#: kwalleteditor.cpp:211
+#, kde-format
+msgid "&Copy"
+msgstr "복사(&C)"
+
+#: kwalleteditor.cpp:216
+#, kde-format
+msgid "&New..."
+msgstr "새로 만들기(&N)..."
+
+#: kwalleteditor.cpp:221
+#, kde-format
+msgid "&Rename"
+msgstr "이름 바꾸기(&R)"
+
+#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#, kde-format
+msgid "&Delete"
+msgstr "삭제(&D)"
+
+#: kwalleteditor.cpp:231
+#, kde-format
+msgid "Always show contents"
+msgstr "항상 내용 표시"
+
+#: kwalleteditor.cpp:235
+#, kde-format
+msgid "Always hide contents"
+msgstr "항상 내용 숨기기"
+
+#: kwalleteditor.cpp:344
+#, kde-format
+msgid "Passwords"
+msgstr "암호"
+
+#: kwalleteditor.cpp:345
+#, kde-format
+msgid "Maps"
+msgstr "맵"
+
+#: kwalleteditor.cpp:346
+#, kde-format
+msgid "Binary Data"
+msgstr "이진 데이터"
+
+#: kwalleteditor.cpp:347
+#, kde-format
+msgid "Unknown"
+msgstr "알 수 없음"
+
+#: kwalleteditor.cpp:387
+#, kde-format
+msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
+msgstr "지갑에서 폴더 '%1'을(를) 삭제하시겠습니까?"
+
+#: kwalleteditor.cpp:391
+#, kde-format
+msgid "Error deleting folder."
+msgstr "폴더를 삭제하는 중 오류가 발생했습니다."
+
+#: kwalleteditor.cpp:410
+#, kde-format
+msgid "New Folder"
+msgstr "새 폴더"
+
+#: kwalleteditor.cpp:411
+#, kde-format
+msgid "Please choose a name for the new folder:"
+msgstr "새 폴더의 이름을 입력하십시오:"
+
+#: kwalleteditor.cpp:420
+#, kde-format
+msgid "Sorry, that folder name is in use. Try again?"
+msgstr "그 폴더 이름은 이미 사용 중입니다. 다시 시도하시겠습니까?"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#, kde-format
+msgid "Try Again"
+msgstr "다시 시도"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#, kde-format
+msgid "Do Not Try"
+msgstr "시도하지 않음"
+
+#: kwalleteditor.cpp:459
+#, kde-format
+msgid "Error saving entry. Error code: %1"
+msgstr "항목을 저장하는 중 오류가 발생했습니다. 오류 코드: %1"
+
+#: kwalleteditor.cpp:480
+#, kde-format
+msgid ""
+"The contents of the current item has changed.\n"
+"Do you want to save changes?"
+msgstr ""
+"현재 항목의 내용이 변경되었습니다.\n"
+"변경 사항을 저장하시겠습니까?"
+
+#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#, kde-format
+msgid "Password: %1"
+msgstr "암호: %1"
+
+#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#, kde-format
+msgid "Name-Value Map: %1"
+msgstr "이름-값 맵: %1"
+
+#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#, kde-format
+msgid "Binary Data: %1"
+msgstr "이진 데이터: %1"
+
+#: kwalleteditor.cpp:766
+#, kde-format
+msgid "New Entry"
+msgstr "새 항목"
+
+#: kwalleteditor.cpp:767
+#, kde-format
+msgid "Please choose a name for the new entry:"
+msgstr "새 항목의 이름을 입력하십시오:"
+
+#: kwalleteditor.cpp:777
+#, kde-format
+msgid "Sorry, that entry already exists. Try again?"
+msgstr "그 항목은 이미 존재합니다. 다시 시도하시겠습니까?"
+
+#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#, kde-format
+msgid "An unexpected error occurred trying to add the new entry"
+msgstr "새 항목을 추가하는 중 예상하지 못한 오류 발생"
+
+#: kwalleteditor.cpp:855
+#, kde-format
+msgid "An unexpected error occurred trying to rename the entry"
+msgstr "항목의 이름을 바꾸는 중 예상하지 못한 오류 발생"
+
+#: kwalleteditor.cpp:875
+#, kde-format
+msgid "Are you sure you wish to delete the item '%1'?"
+msgstr "항목 '%1'을(를) 삭제하시겠습니까?"
+
+#: kwalleteditor.cpp:879
+#, kde-format
+msgid "An unexpected error occurred trying to delete the entry"
+msgstr "항목을 삭제하는 중 예상하지 못한 오류 발생"
+
+#: kwalleteditor.cpp:907
+#, kde-format
+msgid "Unable to open the requested wallet."
+msgstr "요청한 지갑을 여는 중 오류가 발생했습니다."
+
+#: kwalleteditor.cpp:943
+#, kde-format
+msgid "Unable to create temporary file for downloading '<b>%1</b>'."
+msgstr "'<b>%1</b>'을(를) 다운로드할 임시 파일을 만들 수 없습니다."
+
+#: kwalleteditor.cpp:950
+#, kde-format
+msgid "Unable to access wallet '<b>%1</b>'."
+msgstr "지갑 '<b>%1</b>'에 접근할 수 없습니다."
+
+#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
+#: kwalleteditor.cpp:1127
+#, kde-format
+msgid ""
+"Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
+"replace it?"
+msgstr ""
+"폴더 '<b>%1</b>'에는 항목 '<b>%2</b>'이(가) 이미 존재합니다. 덮어 쓰시겠습니"
+"까?"
+
+#: kwalleteditor.cpp:1085
+#, kde-format
+msgid "Unable to access XML file '<b>%1</b>'."
+msgstr "XML 파일 '<b>%1</b>'에 접근할 수 없습니다."
+
+#: kwalleteditor.cpp:1091
+#, kde-format
+msgid "Error reading XML file '<b>%1</b>' for input."
+msgstr "XML 파일 '<b>%1</b>'에서 입력을 받는 중 오류가 발생했습니다."
+
+#: kwalleteditor.cpp:1097
+#, kde-format
+msgid "Error: XML file does not contain a wallet."
+msgstr "오류: XML 파일에 지갑이 없습니다."
+
+#: kwalleteditor.cpp:1248
+#, kde-format
+msgid "Unable to store to '<b>%1</b>'."
+msgstr "'<b>%1</b>'에 저장할 수 없습니다."
+
+#: kwalletmanager.cpp:69
+#, kde-format
+msgid ""
+"The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
+"the KWalletManager will quit as it cannot work without reading the wallets."
+msgstr ""
+"KDE 지갑 시스템이 활성화되지 않았습니다. 지갑을 활성화하시겠습니까? 활성화하"
+"지 않으면 지갑을 읽을 수 없기 때문에 KWalletManager를 종료해야 합니다."
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:281
+#, kde-format
+msgid "Wallet"
+msgstr "지갑"
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#, kde-format
+msgid "No wallets open."
+msgstr "열린 지갑이 없습니다."
+
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#, kde-format
+msgid "A wallet is open."
+msgstr "지갑이 열려 있습니다."
+
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#, kde-format
+msgid "&New Wallet..."
+msgstr "새 지갑(&N)..."
+
+#: kwalletmanager.cpp:139
+#, kde-format
+msgid "&Delete Wallet..."
+msgstr "지갑 삭제(&D)..."
+
+#: kwalletmanager.cpp:144
+#, kde-format
+msgid "Export as encrypted"
+msgstr "암호화된 항목으로 내보내기"
+
+#: kwalletmanager.cpp:149
+#, kde-format
+msgid "&Import encrypted"
+msgstr "암호화된 항목 가져오기(&I)"
+
+#: kwalletmanager.cpp:154
+#, kde-format
+msgid "Configure &Wallet..."
+msgstr "지갑 설정(&W)..."
+
+#: kwalletmanager.cpp:162
+#, kde-format
+msgid "Close &All Wallets"
+msgstr "모든 지갑 닫기(&A)"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"지갑을 완전히 닫을 수 없습니다. 다른 프로그램에서 사용할 수도 있습니다. 강제"
+"로 닫으시겠습니까?"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Force Closure"
+msgstr "강제로 닫기"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Do Not Force"
+msgstr "닫지 않음"
+
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#, kde-format
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "강제로 지갑을 닫을 수 없습니다. 오류 코드는 %1입니다."
+
+#: kwalletmanager.cpp:273
+#, kde-format
+msgid "Error opening wallet %1."
+msgstr "지갑 %1을(를) 여는 중 오류가 발생했습니다."
+
+#: kwalletmanager.cpp:315
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "새 지갑의 이름을 입력하십시오:"
+
+#: kwalletmanager.cpp:326
+#, kde-format
+msgid "New Wallet"
+msgstr "새 지갑"
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Empty name is not supported. Please select a new one."
+msgstr "빈 이름은 지원하지 않습니다. 다른 이름을 지정하십시오."
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Create new wallet"
+msgstr "새 지갑 만들기"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Sorry, that wallet already exists. Try a new name?"
+msgstr "그 지갑은 이미 존재합니다. 새 이름을 입력하시겠습니까?"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Try New"
+msgstr "새 이름 입력"
+
+#: kwalletmanager.cpp:378
+#, kde-format
+msgid "Are you sure you wish to delete the wallet '%1'?"
+msgstr "지갑 '%1'을(를) 삭제하시겠습니까?"
+
+#: kwalletmanager.cpp:384
+#, kde-format
+msgid "Unable to delete the wallet. Error code was %1."
+msgstr "지갑을 삭제할 수 없습니다. 오류 코드는 %1입니다."
+
+#: kwalletmanager.cpp:432
+#, kde-format
+msgid "File name"
+msgstr "파일 이름"
+
+#: kwalletmanager.cpp:439
+#, kde-format
+msgid "Failed to open file for writing"
+msgstr "파일에 쓰려고 열 수 없음"
+
+#: kwalletmanager.cpp:450
+#, kde-format
+msgid "Select file"
+msgstr "파일 선택"
+
+#: kwalletmanager.cpp:460
+#, kde-format
+msgid "Failed to open file"
+msgstr "파일을 열 수 없음"
+
+#: kwalletmanager.cpp:473
+#, kde-format
+msgid "Wallet named %1 already exists, Operation aborted"
+msgstr "지갑 %1이(가) 이미 존재하여 작업 중단됨"
+
+#: kwalletmanager.cpp:480
+#, kde-format
+msgid "Failed to copy files"
+msgstr "파일을 복사할 수 없음"
+
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#, kde-format
+msgid "Ignore unsaved changes?"
+msgstr "저장하지 않은 변경 사항을 무시하시겠습니까?"
+
+#. i18n: ectx: Menu (file)
+#: kwalletmanager.rc:4
+#, kde-format
+msgid "&File"
+msgstr "파일(&F)"
+
+#. i18n: ectx: Menu (settings)
+#: kwalletmanager.rc:17
+#, kde-format
+msgid "&Settings"
+msgstr "설정(&S)"
+
+#. i18n: ectx: Menu (help)
+#: kwalletmanager.rc:20
+#, kde-format
+msgid "&Help"
+msgstr "도움말(&H)"
+
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#, kde-format
+msgid "&Open..."
+msgstr "열기(&O)..."
+
+#: kwalletpopup.cpp:38
+#, kde-format
+msgid "Change &Password..."
+msgstr "암호 변경(&P)..."
+
+#: kwalletpopup.cpp:53
+#, kde-format
+msgid "Disconnec&t"
+msgstr "연결 끊기(&T)"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Key"
+msgstr "키"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Value"
+msgstr "값"
+
+#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#, kde-format
+msgid "Delete Entry"
+msgstr "항목 삭제"
+
+#: kwmapeditor.cpp:216
+#, kde-format
+msgid "&New Entry"
+msgstr "새 항목(&N)"
+
+#: main.cpp:31
+#, kde-format
+msgid "Wallet Manager"
+msgstr "지갑 관리자"
+
+#: main.cpp:33
+#, kde-format
+msgid "KDE Wallet Management Tool"
+msgstr "KDE 지갑 관리 도구"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright ©2013–2017, KWallet Manager authors"
+msgstr "Copyright ©2013–2017, KWallet Manager authors"
+
+#: main.cpp:39
+#, kde-format
+msgid "Valentin Rusu"
+msgstr "Valentin Rusu"
+
+#: main.cpp:40
+#, kde-format
+msgid "Maintainer, user interface refactoring"
+msgstr "개발자 - 사용자 인터페이스 리팩토링"
+
+#: main.cpp:42
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:43
+#, kde-format
+msgid "Original author and former maintainer"
+msgstr "원 저자와 이전 관리자"
+
+#: main.cpp:45
+#, kde-format
+msgid "Michael Leupold"
+msgstr "Michael Leupold"
+
+#: main.cpp:46
+#, kde-format
+msgid "Developer and former maintainer"
+msgstr "원 저자와 이전 관리자"
+
+#: main.cpp:48
+#, kde-format
+msgid "Isaac Clerencia"
+msgstr "Isaac Clerencia"
+
+#: main.cpp:49
+#, kde-format
+msgid "Developer"
+msgstr "개발자"
+
+#: main.cpp:57
+#, kde-format
+msgid "Show window on startup"
+msgstr "시작할 때 창 표시"
+
+#: main.cpp:58
+#, kde-format
+msgid "For use by kwalletd only"
+msgstr "kwalletd에서만 사용됨"
+
+#: main.cpp:59
+#, kde-format
+msgid "A wallet name"
+msgstr "지갑 이름"
+
+#: revokeauthbutton.cpp:16
+#, kde-format
+msgid "Revoke Authorization"
+msgstr "인증 취소"
+
+#: walletcontrolwidget.cpp:59
+#, kde-format
+msgid "&Close"
+msgstr "닫기(&C)"
+
+#: walletcontrolwidget.cpp:76
+#, kde-format
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open"
+msgstr "지갑 '%1'이(가) 열려 있습니다."
+
+#: walletcontrolwidget.cpp:93
+#, kde-format
+msgid "The wallet is currently closed"
+msgstr "지갑이 닫혀 있습니다"
+
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: walletcontrolwidget.ui:28
+#, kde-format
+msgid "KSqueezedTextLabel"
+msgstr "KSqueezedTextLabel"
+
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: walletcontrolwidget.ui:35
+#, kde-format
+msgid "Open..."
+msgstr "열기..."
+
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: walletcontrolwidget.ui:58
+#, kde-format
+msgid "Change Password..."
+msgstr "암호 변경..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: walletcontrolwidget.ui:76
+#, kde-format
+msgid "Contents"
+msgstr "내용"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: walletcontrolwidget.ui:115
+#, kde-format
+msgid "Applications"
+msgstr "프로그램"
+
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: walletwidget.ui:142
+#, kde-format
+msgid "Hide &Contents"
+msgstr "내용 숨기기(&C)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: walletwidget.ui:185 walletwidget.ui:233
+#, kde-format
+msgid "Show &Contents"
+msgstr "내용 표시(&C)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
+#: walletwidget.ui:296
+#, kde-format
+msgid "&Undo"
+msgstr "실행 취소(&U)"
+
+#. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
+#: walletwidget.ui:306
+#, kde-format
+msgid "&Save"
+msgstr "저장(&S)"
+
+#~ msgid "Open Wallet..."
+#~ msgstr "지갑 열기..."
+
+#~ msgid "Error opening XML file '<b>%1</b>' for input."
+#~ msgstr "XML 파일 '<b>%1</b>'에서 입력을 받기 위해 열 수 없습니다."
+
+#~ msgid ""
+#~ "This is a binary data entry.  It cannot be edited as its format is "
+#~ "unknown and application specific."
+#~ msgstr ""
+#~ "이것은 이진 데이터 항목입니다. 프로그램에 따라서 데이터 형식이 다르기 때문"
+#~ "에 편집할 수 없습니다."
+
+#~ msgid "(c) 2003,2004 George Staikos"
+#~ msgstr "(c) 2003,2004 George Staikos"
+
+#~ msgid "Maintainer"
+#~ msgstr "관리자"
+
+#~ msgid "&Export..."
+#~ msgstr "내보내기(&E)..."
+
+#, fuzzy
+#~| msgid "Change &Password..."
+#~ msgid "Change password..."
+#~ msgstr "암호 변경(&P)..."
+
+#~ msgid "That wallet file already exists.  You cannot overwrite wallets."
+#~ msgstr "그 지갑 파일은 이미 존재합니다. 지갑을 덮어쓸 수는 없습니다."
+
+#~ msgid ""
+#~ "This wallet was forced closed.  You must reopen it to continue working "
+#~ "with it."
+#~ msgstr "이 지갑은 닫혔습니다. 내용을 보려면 다시 열어야 합니다."

@@ -1,0 +1,284 @@
+# translation of kcmkwallet.po to Lithuanian
+#
+# Donatas Glodenis <dgvirtual@akl.lt>, 2005.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"PO-Revision-Date: 2021-06-10 12:14+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Donatas Glodenis, Moo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "dgvirtual@akl.lt, <>"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "KDE slaptažodinių valdymo modulis"
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "(c) 2003 George Staikos"
+
+#: konfigurator.cpp:53
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr "Nauja slaptažodinė"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "Prašome pasirinkti naujos slaptažodinės pavadinimą:"
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "Visada leisti"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "Visada drausti"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr "Leidimas atmestas."
+
+#: konfigurator.cpp:278
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Klaida tapatybės nustatymo veiksmo metu:\n"
+"%1"
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr ""
+"Šis konfigūravimo modulis leidžia jums konfigūruoti KDE slaptažodinių "
+"sistemą."
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "&Ištrinti"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "Slaptažodinės nuostatos"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, kde-format
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"<p>Slaptažodinių posistemis leidžia patogiai ir saugiai tvarkyti visus savo "
+"slaptažodžius. Ši parinktis nurodo, ar norite naudoti posistemį, ar ne.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "Į&jungti KDE slaptažodinių posistemį"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+"Patartina užverti savo slaptažodines, kai jomis nesinaudojate, kad "
+"neleistumėte kitiems peržiūrėti jų turinį ar jomis pasinaudoti."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "Užverti slaptažodinę"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Užverti slaptažodinę po neveiklumo periodo.</b><br>Užvėrus "
+"slaptažodinę, norint gauti prie jos prieigą ir vėl reikės įvesti slaptažodį."
+"</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "Užverti, kai nenaudojama:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, kde-format
+msgid " minutes"
+msgstr " min."
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Užverti slaptažodinę iš karto  veikti ekrano užsklandai.</"
+"b><br>Užvėrus slaptažodinę, norint gauti prie jos prieigą ir vėl reikės "
+"įvesti slaptažodį.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "Užverti, kai pasileidžia ekrano užsklanda"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p><b>Užverti slaptažodinę iš karto, kai ją naudojančios programos baigia "
+"darbą.</b><br>Atkreipkite dėmesį, kad slaptažodinė bus užverta tik tada, kai "
+"ją nustos naudoti visos ją naudojusios programos.<br>Užvėrus slaptažodinę, "
+"norint gauti prie jos prieigą ir vėl reikės įvesti slaptažodį.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "Užverti, kai paskutinė programa nustoja ją naudoti"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "Automatinis slaptažodinės pasirinkimas"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "Pasirinkite slaptažodinę, kuri naudojama kaip numatytoji:"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "Nauja..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr "Atskira slaptažodinė vietiniams slaptažodžiams:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "Slaptažodinių tvarkytuvė"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr "Rodyti tvarkytuvę sistemos dėkle"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Slėpti sistemos dėklo piktogramą užvėrus paskutinę slaptažodinę"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Enable Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:315
+#, kde-format
+msgid "Access Control"
+msgstr "Prieigos valdymas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:321
+#, kde-format
+msgid "&Prompt when an application accesses a wallet"
+msgstr "&Įspėti, kai programa gauna prieigą prie slaptažodinės"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:335
+#, kde-format
+msgid "Wallet"
+msgstr "Slaptažodinė"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:346
+#, kde-format
+msgid "Application"
+msgstr "Programa"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:357
+#, kde-format
+msgid "Policy"
+msgstr "Politika"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:393
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "&Paleisti slaptažodinių tvarkytuvę"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"

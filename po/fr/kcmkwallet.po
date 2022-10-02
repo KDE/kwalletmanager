@@ -1,0 +1,312 @@
+# translation of kcmkwallet.po to Français
+# translation of kcmkwallet.po to
+# traduction de kcmkwallet.po en français
+# traduction de kcmkwallet.po en Français
+# Copyright (C) 2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Robert Jacolin <rjacolin@ifrance.com>, 2003,2004.
+# Ludovic Grossard <grossard@kde.org>, 2003, 2014.
+# Matthieu Robin <kde@macolu.org>, 2003.
+# Delafond <gerard@delafond.org>, 2004.
+# Matthieu Robin <kde@macolu.org>, 2005.
+# Guillaume Pujol <guill.p@gmail.com>, 2007.
+# Jean-Jacques Finazzi <mrjay01@users.sourceforge.net>, 2008.
+# Jean-Jacques FINAZZI <mrjay01@users.sourceforge.net>, 2008.
+# Mickael Sibelle <kimael@gmail.com>, 2008.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2009.
+# xavier <xavier.besnard@neuf.fr>, 2013, 2021, 2022.
+# Bruno Patri <bruno.patri@gmail.com>, 2013.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"PO-Revision-Date: 2022-07-08 09:49+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Robert Jacolin, Bruno Patri"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "rjacolin@ifrance.com, bruno.patri@gmail.com"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "Module de configuration des portefeuilles de KDE"
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "(c) 2003, George Staikos"
+
+#: konfigurator.cpp:53
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr "Nouveau portefeuille"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "Veuillez choisir un nom pour le nouveau portefeuille :"
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "Toujours accepter"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "Toujours refuser"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr "Permission refusée."
+
+#: konfigurator.cpp:278
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Erreur lors de l'action d'authentification :\n"
+"%1"
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr ""
+"Ce module de configuration vous permet de configurer le système de "
+"portefeuilles de KDE."
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "&Supprimer"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "Préférences des portefeuilles de KDE"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, kde-format
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"<p>Le sous-système de portefeuilles fournit une façon pratique et sûre de "
+"gérer tous vos mots de passe. Vous pouvez décider d'utiliser ou non ce "
+"système grâce à cette option.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "Activ&er le sous-système de portefeuilles de KDE"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+"Il est judicieux de fermer vos portefeuilles lorsque vous ne les utilisez "
+"plus afin que personne ne puisse les regarder ou les utiliser."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "Fermeture du portefeuille"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Ferme un portefeuille après une période d'inactivité</b><br /> Une "
+"fois un portefeuille fermé, le mot de passe est nécessaire pour y accéder à "
+"nouveau.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "Fermer si inutilisé pendant :"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, kde-format
+msgid " minutes"
+msgstr " minutes"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Fermer le portefeuille dès que l'économiseur d'écran démarre.</"
+"b><br>Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire pour "
+"y accéder à nouveau.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "Fermer lorsque l'économiseur d'écran démarre"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p><b>Fermer le portefeuille dès que les applications qui l'utilisent "
+"s'arrêtent.</b><br />Veuillez noter que vos portefeuilles seront fermés "
+"uniquement lorsque toutes les applications qui l'utilisent se seront "
+"arrêtées.<br />Lorsqu'un portefeuille est fermé, le mot de passe est "
+"nécessaire pour y accéder à nouveau.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "Fermer lorsque la dernière application arrête de l'utiliser"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "Sélection automatique du portefeuille"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "Choisissez le portefeuille à utiliser par défaut :"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "Nouveau…"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr "Portefeuille spécifique pour les mots de passe locaux :"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "Gestionnaire de portefeuilles"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr "Afficher le gestionnaire dans la boîte à miniatures"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr ""
+"Masquer l'icône de la boîte à miniatures lorsque le dernier portefeuille est "
+"fermé"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service DBus API"
+msgstr "API « DBus » de services de secrets"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Enable Secret Service DBus API"
+msgstr "Activer l'API « DBus » de services de secrets"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:315
+#, kde-format
+msgid "Access Control"
+msgstr "Contrôle d'accès"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:321
+#, kde-format
+msgid "&Prompt when an application accesses a wallet"
+msgstr ""
+"&Demander une confirmation lorsqu'une application accède à un portefeuille"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:335
+#, kde-format
+msgid "Wallet"
+msgstr "Portefeuille"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:346
+#, kde-format
+msgid "Application"
+msgstr "Application"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:357
+#, kde-format
+msgid "Policy"
+msgstr "Politique"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:393
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "&Lancer le gestionnaire de portefeuilles de KDE"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Désolé, la politique de sécurité du système ne vous autorise pas à "
+#~ "enregistrer ces modifications."

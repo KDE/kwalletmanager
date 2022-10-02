@@ -1,0 +1,279 @@
+# Translation of kcmkwallet to Norwegian Bokmål
+#
+# Knut Yrvin <knut.yrvin@gmail.com>, 2003.
+# Harald Inge Børseth <haraldib@broadpark>, 2004.
+# Nils Kristian Tomren <slx@nilsk.net>, 2004, 2005.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2008, 2009, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"PO-Revision-Date: 2014-01-14 14:59+0100\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Knut Yrvin,Harald Inge Børseth,Nils Kristian Tomren"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "knut.yrvin@gmail.com,haraldib@broadpark.no,slx@nilsk.net"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "Kontrollmodul for KDE lommebok"
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "© 2003 George Staikos"
+
+#: konfigurator.cpp:53
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr " Ny lommebok"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "Velg et navn på den nye lommeboka:"
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "Tillat alltid"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "Nekt alltid"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr "Nektet tilgang."
+
+#: konfigurator.cpp:278
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr "Med denne oppsettsmodulen kan du sette opp KDEs lommebok-system."
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "&Slett"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "Lommebok-innstillinger"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, kde-format
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"<p> Lommeboksystemet gir deg en enkel og sikker måte  å håndtere alle dine "
+"passord. Dette valget oppgir om du vil bruke det eller ikke.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "&Slå på KDEs lommebok-delsystem"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+"Det er lurt å lukke lommebøkene dine når du ikke bruker dem slik at andre "
+"ikke kan se i dem eller bruke dem."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "Lukk lommeboka"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Lukk lommeboka når den ikke har vært i bruk i en periode</b> <br/>Når "
+"lommeboka er lukket, må et passord oppgis for å åpne den igjen.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "Lukket når ikke i bruk i:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, kde-format
+msgid " minutes"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Lukk lommeboka så snart pauseskjermen starter.</b> <br/>Når ei "
+"lommebok er lukket, må det oppgis et passord for å åpne den igjen.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "Lukk når pauseskjermen starter"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p><b>Lukk lommeboka så snart programmene som bruker den har stoppet.</b> "
+"<br/>Merk at din lommebok bare vil lukkes når alle programmer som bruker den "
+"har stoppet. <br/>Når ei lommebok er lukket, må det oppgis et passord for å "
+"åpne den igjen.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "Lukk når siste program er ferdig med å bruke den"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "Automatisk valg av lommebok"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "Velg standard lommebok:"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "Ny …"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr " Egen lommebok for lokale passord:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "Lommebok-håndtering"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr "Vis håndtering i systemkurv"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Skjul systemkurv-knappen når siste lommebok blir lukket"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Enable Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:315
+#, kde-format
+msgid "Access Control"
+msgstr "Tilgangskontroll"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:321
+#, kde-format
+msgid "&Prompt when an application accesses a wallet"
+msgstr "&Spør når et program søker tilgang til en lommebok"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:335
+#, kde-format
+msgid "Wallet"
+msgstr "Lommebok"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:346
+#, kde-format
+msgid "Application"
+msgstr "Program"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:357
+#, kde-format
+msgid "Policy"
+msgstr "Praksis"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:393
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "&Start lommebokhåndtering"

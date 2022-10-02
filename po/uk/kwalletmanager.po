@@ -1,0 +1,742 @@
+# Translation of kwalletmanager.po to Ukrainian
+# Copyright (C) 2003-2017 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Eugene Onischenko <oneugene@ukr.net>, 2003, 2004.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2004, 2005, 2007, 2008.
+# Andriy Rysin <rysin@kde.org>, 2006.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2013, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"PO-Revision-Date: 2017-07-05 09:45+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eugene Onischenko,Іван Петрущак"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "oneugene@ukr.net,ivanpetrouchtchak@yahoo.com"
+
+#: allyourbase.cpp:202
+#, kde-format
+msgid "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr "Запис з назвою «%1» вже існує. Хочете продовжити?"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "A folder by the name '%1' already exists.  What would you like to do?"
+msgstr "Тека з назвою «%1» вже існує. Що бажаєте зробити?"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "Replace"
+msgstr "Замінити"
+
+#: allyourbase.cpp:336
+#, kde-format
+msgid "Folders"
+msgstr "Теки"
+
+#: allyourbase.cpp:370
+#, kde-format
+msgid "An unexpected error occurred trying to drop the item"
+msgstr "Несподівана помилка під час вкидання елемента"
+
+#: allyourbase.cpp:446
+#, kde-format
+msgid "An unexpected error occurred trying to drop the entry"
+msgstr "Несподівана помилка під час вкидання запису"
+
+#: allyourbase.cpp:470
+#, kde-format
+msgid ""
+"An unexpected error occurred trying to delete the original folder, but the "
+"folder has been copied successfully"
+msgstr ""
+"Несподівана помилка під час вилучення джерельної теки, а теку було "
+"скопійовано успішно"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: applicationsmanager.ui:17
+#, kde-format
+msgid "These applications are currently connected to this wallet:"
+msgstr "З цією торбинкою паролів зараз з’єднано такі програми:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: applicationsmanager.ui:64
+#, kde-format
+msgid "These applications are authorized to access this wallet:"
+msgstr "Доступ до паролів з цієї торбинки надано таким програмам:"
+
+#: disconnectappbutton.cpp:16
+#, kde-format
+msgid "Disconnect"
+msgstr "Роз'єднати"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: kbetterthankdialogbase.ui:43
+#, kde-format
+msgid "&Replace"
+msgstr "&Замінити"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: kbetterthankdialogbase.ui:53
+#, kde-format
+msgid "Replace &All"
+msgstr "Замінити &всі"
+
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: kbetterthankdialogbase.ui:60
+#, kde-format
+msgid "&Skip"
+msgstr "&Пропустити"
+
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: kbetterthankdialogbase.ui:67
+#, kde-format
+msgid "Skip A&ll"
+msgstr "Пропустити в&сі"
+
+#: kwalleteditor.cpp:86
+#, kde-format
+msgid "Search"
+msgstr "Пошук"
+
+#: kwalleteditor.cpp:95
+#, kde-format
+msgid "&Show values"
+msgstr "&Показати значення"
+
+#: kwalleteditor.cpp:195
+#, kde-format
+msgid "&New Folder..."
+msgstr "&Нова тека…"
+
+#: kwalleteditor.cpp:199
+#, kde-format
+msgid "&Delete Folder"
+msgstr "&Вилучити теку"
+
+#: kwalleteditor.cpp:202
+#, kde-format
+msgid "&Import a wallet..."
+msgstr "&Імпортувати торбинку…"
+
+#: kwalleteditor.cpp:205
+#, kde-format
+msgid "&Import XML..."
+msgstr "&Імпортувати XML…"
+
+#: kwalleteditor.cpp:208
+#, kde-format
+msgid "&Export as XML..."
+msgstr "&Експортувати як XML…"
+
+#: kwalleteditor.cpp:211
+#, kde-format
+msgid "&Copy"
+msgstr "&Копіювати"
+
+#: kwalleteditor.cpp:216
+#, kde-format
+msgid "&New..."
+msgstr "&Створити…"
+
+#: kwalleteditor.cpp:221
+#, kde-format
+msgid "&Rename"
+msgstr "&Перейменувати"
+
+#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#, kde-format
+msgid "&Delete"
+msgstr "Ви&лучити"
+
+#: kwalleteditor.cpp:231
+#, kde-format
+msgid "Always show contents"
+msgstr "Завжди показувати вміст"
+
+#: kwalleteditor.cpp:235
+#, kde-format
+msgid "Always hide contents"
+msgstr "Завжди приховувати вміст"
+
+#: kwalleteditor.cpp:344
+#, kde-format
+msgid "Passwords"
+msgstr "Паролі"
+
+#: kwalleteditor.cpp:345
+#, kde-format
+msgid "Maps"
+msgstr "Карти"
+
+#: kwalleteditor.cpp:346
+#, kde-format
+msgid "Binary Data"
+msgstr "Двійкові дані"
+
+#: kwalleteditor.cpp:347
+#, kde-format
+msgid "Unknown"
+msgstr "Невідомо"
+
+#: kwalleteditor.cpp:387
+#, kde-format
+msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
+msgstr "Ви впевнені, що бажаєте вилучити теку «%1» з торбинки?"
+
+#: kwalleteditor.cpp:391
+#, kde-format
+msgid "Error deleting folder."
+msgstr "Помилка при вилученні теки."
+
+#: kwalleteditor.cpp:410
+#, kde-format
+msgid "New Folder"
+msgstr "Нова тека"
+
+#: kwalleteditor.cpp:411
+#, kde-format
+msgid "Please choose a name for the new folder:"
+msgstr "Будь ласка, виберіть назву для нової теки:"
+
+#: kwalleteditor.cpp:420
+#, kde-format
+msgid "Sorry, that folder name is in use. Try again?"
+msgstr "Перепрошую, така назва теки вже зайнята. Спробувати іншу назву?"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#, kde-format
+msgid "Try Again"
+msgstr "Спробувати знов"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#, kde-format
+msgid "Do Not Try"
+msgstr "Не пробувати"
+
+#: kwalleteditor.cpp:459
+#, kde-format
+msgid "Error saving entry. Error code: %1"
+msgstr "Помилка збереження запису. Код помилки: %1"
+
+#: kwalleteditor.cpp:480
+#, kde-format
+msgid ""
+"The contents of the current item has changed.\n"
+"Do you want to save changes?"
+msgstr ""
+"Дані поточного запису було змінено.\n"
+"Бажаєте зберегти внесені зміни?"
+
+#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#, kde-format
+msgid "Password: %1"
+msgstr "Пароль: %1"
+
+#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#, kde-format
+msgid "Name-Value Map: %1"
+msgstr "Карта ключ-значення: %1"
+
+#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#, kde-format
+msgid "Binary Data: %1"
+msgstr "Двійкові дані: %1"
+
+#: kwalleteditor.cpp:766
+#, kde-format
+msgid "New Entry"
+msgstr "Новий запис"
+
+#: kwalleteditor.cpp:767
+#, kde-format
+msgid "Please choose a name for the new entry:"
+msgstr "Будь ласка, виберіть назву для нового запису:"
+
+#: kwalleteditor.cpp:777
+#, kde-format
+msgid "Sorry, that entry already exists. Try again?"
+msgstr "Перепрошую, такий запис вже існує. Спробувати ще раз?"
+
+#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#, kde-format
+msgid "An unexpected error occurred trying to add the new entry"
+msgstr "Несподівана помилка під час додавання нового запису"
+
+#: kwalleteditor.cpp:855
+#, kde-format
+msgid "An unexpected error occurred trying to rename the entry"
+msgstr "Несподівана помилка під час перейменування запису"
+
+#: kwalleteditor.cpp:875
+#, kde-format
+msgid "Are you sure you wish to delete the item '%1'?"
+msgstr "Ви впевнені, що бажаєте вилучити елемент «%1»?"
+
+#: kwalleteditor.cpp:879
+#, kde-format
+msgid "An unexpected error occurred trying to delete the entry"
+msgstr "Несподівана помилка під час вилучення запису"
+
+#: kwalleteditor.cpp:907
+#, kde-format
+msgid "Unable to open the requested wallet."
+msgstr "Не вдається відкрити торбинку."
+
+#: kwalleteditor.cpp:943
+#, kde-format
+msgid "Unable to create temporary file for downloading '<b>%1</b>'."
+msgstr "Не вдалося створити тимчасовий файл для отримання «<b>%1</b>»."
+
+#: kwalleteditor.cpp:950
+#, kde-format
+msgid "Unable to access wallet '<b>%1</b>'."
+msgstr "Неможливий доступ до торбинки «<b>%1</b>»."
+
+#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
+#: kwalleteditor.cpp:1127
+#, kde-format
+msgid ""
+"Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
+"replace it?"
+msgstr ""
+"Тека «<b>%1</b>» вже містить елемент «<b>%2</b>».  Хочете замінити його?"
+
+#: kwalleteditor.cpp:1085
+#, kde-format
+msgid "Unable to access XML file '<b>%1</b>'."
+msgstr "Неможливий доступ до XML-файла «<b>%1</b>»."
+
+#: kwalleteditor.cpp:1091
+#, kde-format
+msgid "Error reading XML file '<b>%1</b>' for input."
+msgstr "Помилка читання XML-файла «<b>%1</b>» для вводу."
+
+#: kwalleteditor.cpp:1097
+#, kde-format
+msgid "Error: XML file does not contain a wallet."
+msgstr "Помилка: XML-файл не містить торбинку."
+
+#: kwalleteditor.cpp:1248
+#, kde-format
+msgid "Unable to store to '<b>%1</b>'."
+msgstr "Не вдалося зберегти дані до «<b>%1</b>»."
+
+#: kwalletmanager.cpp:69
+#, kde-format
+msgid ""
+"The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
+"the KWalletManager will quit as it cannot work without reading the wallets."
+msgstr ""
+"Систему зберігання паролів KDE не увімкнено. Хочете увімкнути її? Якщо ви "
+"цього не зробите, KWalletManager завершить роботу і не працюватиме, оскільки "
+"не виконуватиме читання даних із торбинок."
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:281
+#, kde-format
+msgid "Wallet"
+msgstr "Торбинка"
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#, kde-format
+msgid "No wallets open."
+msgstr "Не відкрито жодної торбинки."
+
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#, kde-format
+msgid "A wallet is open."
+msgstr "Торбинку відкрито."
+
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#, kde-format
+msgid "&New Wallet..."
+msgstr "&Нова торбинка…"
+
+#: kwalletmanager.cpp:139
+#, kde-format
+msgid "&Delete Wallet..."
+msgstr "Ви&лучити торбинку…"
+
+#: kwalletmanager.cpp:144
+#, kde-format
+msgid "Export as encrypted"
+msgstr "Експортувати шифроване"
+
+#: kwalletmanager.cpp:149
+#, kde-format
+msgid "&Import encrypted"
+msgstr "&Імпортувати зашифроване"
+
+#: kwalletmanager.cpp:154
+#, kde-format
+msgid "Configure &Wallet..."
+msgstr "Налаштувати &торбинки…"
+
+#: kwalletmanager.cpp:162
+#, kde-format
+msgid "Close &All Wallets"
+msgstr "Закрити &всі торбинки"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"Не вдається замкнути торбинку. Можливо, її використовують інші програми. "
+"Бажаєте примусово замкнути її?"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Force Closure"
+msgstr "Примусово закрити"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Do Not Force"
+msgstr "Не примушувати"
+
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#, kde-format
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "Не вдається примусово замкнути торбинку. Код помилки:%1."
+
+#: kwalletmanager.cpp:273
+#, kde-format
+msgid "Error opening wallet %1."
+msgstr "Помилка відкривання торбинки %1."
+
+#: kwalletmanager.cpp:315
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "Будь ласка, виберіть назву для нової торбинки:"
+
+#: kwalletmanager.cpp:326
+#, kde-format
+msgid "New Wallet"
+msgstr "Нова торбинка"
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Empty name is not supported. Please select a new one."
+msgstr "Підтримки порожніх назв не передбачено. Будь ласка, виберіть назву."
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Create new wallet"
+msgstr "Створення сховища паролів"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Sorry, that wallet already exists. Try a new name?"
+msgstr "Перепрошую, торбинка з такою назвою вже існує. Спробувати іншу назву?"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Try New"
+msgstr "Спробувати новий"
+
+#: kwalletmanager.cpp:378
+#, kde-format
+msgid "Are you sure you wish to delete the wallet '%1'?"
+msgstr "Ви впевнені, що бажаєте вилучити торбинку «%1»?"
+
+#: kwalletmanager.cpp:384
+#, kde-format
+msgid "Unable to delete the wallet. Error code was %1."
+msgstr "Не вдається вилучити торбинку. Код помилки: %1."
+
+#: kwalletmanager.cpp:432
+#, kde-format
+msgid "File name"
+msgstr "Назва файла"
+
+#: kwalletmanager.cpp:439
+#, kde-format
+msgid "Failed to open file for writing"
+msgstr "Не вдалося відкрити файл для записування"
+
+#: kwalletmanager.cpp:450
+#, kde-format
+msgid "Select file"
+msgstr "Виберіть файл"
+
+#: kwalletmanager.cpp:460
+#, kde-format
+msgid "Failed to open file"
+msgstr "Не вдалося відкрити файл"
+
+#: kwalletmanager.cpp:473
+#, kde-format
+msgid "Wallet named %1 already exists, Operation aborted"
+msgstr "Торбинка із назвою %1 вже існує. Дію скасовано."
+
+#: kwalletmanager.cpp:480
+#, kde-format
+msgid "Failed to copy files"
+msgstr "Не вдалося скопіювати файли"
+
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#, kde-format
+msgid "Ignore unsaved changes?"
+msgstr "Ігнорувати незбережені зміни?"
+
+#. i18n: ectx: Menu (file)
+#: kwalletmanager.rc:4
+#, kde-format
+msgid "&File"
+msgstr "&Файл"
+
+#. i18n: ectx: Menu (settings)
+#: kwalletmanager.rc:17
+#, kde-format
+msgid "&Settings"
+msgstr "П&араметри"
+
+#. i18n: ectx: Menu (help)
+#: kwalletmanager.rc:20
+#, kde-format
+msgid "&Help"
+msgstr "&Довідка"
+
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#, kde-format
+msgid "&Open..."
+msgstr "&Відкрити…"
+
+#: kwalletpopup.cpp:38
+#, kde-format
+msgid "Change &Password..."
+msgstr "Змінити &пароль…"
+
+#: kwalletpopup.cpp:53
+#, kde-format
+msgid "Disconnec&t"
+msgstr "Роз'єднатис&ь"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Key"
+msgstr "Ключ"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Value"
+msgstr "Значення"
+
+#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#, kde-format
+msgid "Delete Entry"
+msgstr "Вилучити запис"
+
+#: kwmapeditor.cpp:216
+#, kde-format
+msgid "&New Entry"
+msgstr "&Новий запис"
+
+#: main.cpp:31
+#, kde-format
+msgid "Wallet Manager"
+msgstr "Менеджер торбинок"
+
+#: main.cpp:33
+#, kde-format
+msgid "KDE Wallet Management Tool"
+msgstr "Засіб KDE для керування торбинками"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright ©2013–2017, KWallet Manager authors"
+msgstr "© Автори засобу керування KWallet, 2013–2017"
+
+#: main.cpp:39
+#, kde-format
+msgid "Valentin Rusu"
+msgstr "Valentin Rusu"
+
+#: main.cpp:40
+#, kde-format
+msgid "Maintainer, user interface refactoring"
+msgstr "Супровідник, зміна інтерфейсу користувача"
+
+#: main.cpp:42
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:43
+#, kde-format
+msgid "Original author and former maintainer"
+msgstr "Перший автор та колишній супровідник"
+
+#: main.cpp:45
+#, kde-format
+msgid "Michael Leupold"
+msgstr "Michael Leupold"
+
+#: main.cpp:46
+#, kde-format
+msgid "Developer and former maintainer"
+msgstr "Розробник і колишній супровідник"
+
+#: main.cpp:48
+#, kde-format
+msgid "Isaac Clerencia"
+msgstr "Isaac Clerencia"
+
+#: main.cpp:49
+#, kde-format
+msgid "Developer"
+msgstr "Розробник"
+
+#: main.cpp:57
+#, kde-format
+msgid "Show window on startup"
+msgstr "Показувати вікно при запуску"
+
+#: main.cpp:58
+#, kde-format
+msgid "For use by kwalletd only"
+msgstr "Тільки для використання kwalletd"
+
+#: main.cpp:59
+#, kde-format
+msgid "A wallet name"
+msgstr "Назва торбинки"
+
+#: revokeauthbutton.cpp:16
+#, kde-format
+msgid "Revoke Authorization"
+msgstr "Відкликати доступ"
+
+#: walletcontrolwidget.cpp:59
+#, kde-format
+msgid "&Close"
+msgstr "&Закрити"
+
+#: walletcontrolwidget.cpp:76
+#, kde-format
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open"
+msgstr "Зараз торбинку «%1» відкрито."
+
+#: walletcontrolwidget.cpp:93
+#, kde-format
+msgid "The wallet is currently closed"
+msgstr "Зараз торбинку закрито"
+
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: walletcontrolwidget.ui:28
+#, kde-format
+msgid "KSqueezedTextLabel"
+msgstr "KSqueezedTextLabel"
+
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: walletcontrolwidget.ui:35
+#, kde-format
+msgid "Open..."
+msgstr "Відкрити…"
+
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: walletcontrolwidget.ui:58
+#, kde-format
+msgid "Change Password..."
+msgstr "Змінити пароль…"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: walletcontrolwidget.ui:76
+#, kde-format
+msgid "Contents"
+msgstr "Вміст"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: walletcontrolwidget.ui:115
+#, kde-format
+msgid "Applications"
+msgstr "Програми"
+
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: walletwidget.ui:142
+#, kde-format
+msgid "Hide &Contents"
+msgstr "Сховати &вміст"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: walletwidget.ui:185 walletwidget.ui:233
+#, kde-format
+msgid "Show &Contents"
+msgstr "Показати &вміст"
+
+#. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
+#: walletwidget.ui:296
+#, kde-format
+msgid "&Undo"
+msgstr "&Вернути"
+
+#. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
+#: walletwidget.ui:306
+#, kde-format
+msgid "&Save"
+msgstr "&Зберегти"
+
+#~ msgid "Open Wallet..."
+#~ msgstr "Відкрити торбинку…"
+
+#~ msgid "Error opening XML file '<b>%1</b>' for input."
+#~ msgstr "Помилка відкривання XML-файла «<b>%1</b>» для вводу."
+
+#~ msgid ""
+#~ "This is a binary data entry.  It cannot be edited as its format is "
+#~ "unknown and application specific."
+#~ msgstr ""
+#~ "Це двійкові дані. Їх не можна змінювати тому, що їх формат невідомий та "
+#~ "залежить від програми, що створила його."
+
+#~ msgid "(c) 2003,2004 George Staikos"
+#~ msgstr "© George Staikos, 2003, 2004"
+
+#~ msgid "Maintainer"
+#~ msgstr "Супровідник"
+
+#~ msgid "&Export..."
+#~ msgstr "&Експортувати…"
+
+#~ msgid "Change password..."
+#~ msgstr "Змінити пароль…"
+
+#~ msgid "That wallet file already exists.  You cannot overwrite wallets."
+#~ msgstr ""
+#~ "Такий файл торбинки вже існує. Ви не можете перезаписувати торбинки."
+
+#~ msgid ""
+#~ "This wallet was forced closed.  You must reopen it to continue working "
+#~ "with it."
+#~ msgstr ""
+#~ "Цю торбинку було примусово замкнуто. Для продовження роботи з нею "
+#~ "потрібно відкрити її знову."
+
+#~ msgid "Please choose a name that contains only alphanumeric characters:"
+#~ msgstr "Будь ласка, виберіть назву, яка складається тільки з літер і цифр:"

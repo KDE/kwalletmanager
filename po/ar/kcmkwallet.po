@@ -1,0 +1,284 @@
+# translation of kcmkwallet.po to
+# Copyright (C) 2004, 2006, 2007 Free Software Foundation, Inc.
+# Ahmad M. Zawawi <azawawi@emirates.net.ae>, 2004.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# Khaled Hosny <dr.khaled.hosny@gmail.com>, 2006.
+# Fahad Al-Saidi <fahad.alsaidi@gmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"PO-Revision-Date: 2022-08-08 22:59+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "عبدالرحمن عبدالخالق غريب, خالد حسنى, فهد السعيدي"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"king_abdo@yahoo.com, dr.khaled.hosny@gmail.com, Fahad.alsaidi@gmail.com"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "وحدة التحكم في محفظة كدى"
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "الحقوق محفوظة 2003 لجورج ستايكوس"
+
+#: konfigurator.cpp:53
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr "محفظة جديدة"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "رجاءا أختر اسم للمحفظة الجديدة:"
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "اسمح دوماً"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "امنع دوماً"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr "طلب الإذن مرفوض."
+
+#: konfigurator.cpp:278
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"خطأ أثناء إجراء المصادقة  :\n"
+"%1"
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr "تسمح لك وحدة الإعداد هذه بإعداد نظام محفظة كدى."
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "اح&ذف"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "خصائص المحفظة"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, kde-format
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"<p>يوفر نظام المحفظة الفرعي طريقة آمنة و ملائمة لإدارة كلمات السر.  يمكنك أن "
+"تقرر بهذا الخيار اذا كنت تريد استخدام هذا النظام أم.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "تف&عيل نظام محفظة كدى الفرعي"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+"من الأفضل اغلاق الَمحَافظ عندما تتوقّف عن استخدامها حتى تمنع الآخرين من الاطّلاع "
+"عليها أو استخدامها."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "أغلق المحفظة"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>أغلق المحفظة بعد فترة من عدم النشاط</b><br>عند إغلاق المحفظة سوف تحتاج "
+"لكلمة السر للدخول لها مرة أخرى.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "الاغلاق عند عدم الاستخدام لمدة:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, kde-format
+msgid " minutes"
+msgstr "دقيقة"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<P><b>اغلاق المحفظة بمجرد بدأ حافظة الشاشة.</b><br>عند إغلاق المحفظة سوف "
+"تحتاج لكلمة السر لدخولها مره أخرى.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "أغلق عندما تبدأ حافظة الشاشة"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p><b>أغلق المحفظة بمجرد توقف التطبيق المستخدم لها.</b><br>لاحظ أن المحفظة "
+"سوف تغلق فقط عند توقف كل التطبيقات المستخدمة لها. <br> عند إغلاق المحفظة سوف "
+"تحتاج لكلمة السر للدخول لها مرة أخرى. </p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "أغلق عند توقف آخر تطبيق يستخدمها"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "اختيار المحفظة تلقائيا"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "حدد محفظة لتصبح المحفظة الافتراضية:"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "جديد..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr "محفظة مختلفه لكلمات السر المحلية:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "مدير المحفظة"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr "أظهر المدير في صينية النظام"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "اخف أيقونة صينية النظام عند إغلاق آخر محفظة"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service DBus API"
+msgstr "دوال خدمة الأسرار لدي باص"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Enable Secret Service DBus API"
+msgstr "مكّن دوال خدمة الأسرار لدي باص"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:315
+#, kde-format
+msgid "Access Control"
+msgstr "تحكم الوصول"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:321
+#, kde-format
+msgid "&Prompt when an application accesses a wallet"
+msgstr "إ&ظهار رسالة عند دخول تطبيق لمحفظة"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:335
+#, kde-format
+msgid "Wallet"
+msgstr "المحفظة"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:346
+#, kde-format
+msgid "Application"
+msgstr "التطبيق"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:357
+#, kde-format
+msgid "Policy"
+msgstr "السياسة"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:393
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "أ&طلق مدير المحفظة"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"

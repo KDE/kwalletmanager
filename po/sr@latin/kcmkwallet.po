@@ -1,0 +1,268 @@
+# Translation of kcmkwallet.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2005, 2009, 2010, 2013, 2014, 2016.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Slobodan Simic <slsimic@gmail.com>, 2008.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:13+0200\n"
+"PO-Revision-Date: 2016-11-23 19:27+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Časlav Ilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: konfigurator.cpp:57 konfigurator.cpp:282 konfigurator.cpp:284
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "KDE‑ov kontrolni modul novčanika"
+
+#: konfigurator.cpp:61
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "© 2003, Džordž Stajkos"
+
+#: konfigurator.cpp:62
+#, kde-format
+msgid "George Staikos"
+msgstr "Džordž Stajkos"
+
+#: konfigurator.cpp:130
+#, kde-format
+msgid "New Wallet"
+msgstr "Novi novčanik"
+
+#: konfigurator.cpp:131
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "Izaberite ime za novi novčanik:"
+
+#: konfigurator.cpp:251 konfigurator.cpp:322
+#, kde-format
+msgid "Always Allow"
+msgstr "Uvek dozvoli"
+
+#: konfigurator.cpp:254 konfigurator.cpp:261 konfigurator.cpp:335
+#, kde-format
+msgid "Always Deny"
+msgstr "Uvek odbij"
+
+#: konfigurator.cpp:282
+#, kde-format
+msgid "Permission denied."
+msgstr "Dozvola odbijena."
+
+#: konfigurator.cpp:284
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Greška pri autentifikovanju radnje:\n"
+"%1"
+
+#: konfigurator.cpp:375
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr "Ovaj modul vam omogućava da podesite KDE‑ov sistem novčanika."
+
+#: konfigurator.cpp:384
+#, kde-format
+msgid "&Delete"
+msgstr "&Obriši"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "Postavke novčanika"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, kde-format
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"<p>Podsistem novčanika pruža vam prikladan i bezbedan način za upravljanje "
+"svim lozinkama. Ova opcija određuje želite li da koristite ovaj sistem.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "&Uključi KDE‑ov podsistem novčanika"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+"Pametno je zatvarati novčanike koje više ne koristite, kako niko ne bi mogao "
+"da ih pogleda ili koristi."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "Zatvaranje novčanika"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p>Novčanik se zatvara posle perioda neaktivnosti. Kada je novčanik "
+"zatvoren, potrebna je lozinka da bi mu se ponovo pristupilo.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "Zatvori ako se ne koristi:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, kde-format
+msgid " min"
+msgstr " min."
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p>Novčanik se zatvara čim se pokrene čuvar ekrana. Kada je novčanik "
+"zatvoren, potrebna je lozinka da bi mu se ponovo pristupilo.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "Zatvori kada se pokrene čuvar ekrana"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p>Novčanik se zatvara čim se napusti program koji ga koristi. Ako ga "
+"koristi više programa, novčanik će biti zatvoren kada svi oni prestanu s "
+"radom. Pošto se novčanik zatvori, potrebna je lozinka da bi mu se ponovo "
+"pristupilo.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "Zatvori pošto programi prestanu da ga koriste"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "Automatsko biranje novčanika"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "Izaberite novčanik će se podrazumevano koristiti:"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "Novi..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr "Odvojeni novčanik za lokalne lozinke:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "Menadžer novčanika"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr "Prikaži menadžer u sistemskoj kaseti"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Sakrij ikonicu sistemske kasete po zatvaranju poslednjeg novčanika"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:280
+#, kde-format
+msgid "Access Control"
+msgstr "Upravljanje pristupom"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:286
+#, kde-format
+msgid "&Prompt when an application accesses a wallet"
+msgstr "&Pitaj kada program pristupi novčaniku"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:300
+#, kde-format
+msgid "Wallet"
+msgstr "novčanik"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:311
+#, kde-format
+msgid "Application"
+msgstr "program"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:322
+#, kde-format
+msgid "Policy"
+msgstr "smernica"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:358
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "Pokreni &menadžer novčanika"

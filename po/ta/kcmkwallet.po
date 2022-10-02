@@ -1,0 +1,288 @@
+# Copyright (C) 2021 Free Software Foundation, Inc.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"PO-Revision-Date: 2022-07-07 20:03+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Prem"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "prem4ever_1983@yahoo.com"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "KDE சுறுக்குப்பை  கட்டுப்பாட்டுக்கூறு "
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "(c) 2003 George Staikos"
+
+#: konfigurator.cpp:53
+#, fuzzy, kde-format
+#| msgid "(c) 2003 George Staikos"
+msgid "George Staikos"
+msgstr "(c) 2003 George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr "புதிய சுறுக்குப்பை"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr " புதிய சுறுக்குப்பைக்காக த்யவு செய்து ஒரு பதிய பெயரை தெர்ந்தெடுக்க "
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "எப்போதும் அனுமதி"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "எப்போதும் மறு"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr "அனுமதி மறுக்கப்பட்டது."
+
+#: konfigurator.cpp:278
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr "சுறுக்குபையை முறைமை உள்ளமைவுபடுத்த இந்த  உள்ளமைவுகூறு  உதவுகிறது."
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "&நீக்கு"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "சுறுக்குப்பை விருப்பங்கள்"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>The wallet subsytem allows a convenient and secure way to manage all "
+#| "your passwords. You can decide if you want to use this system with this "
+#| "option.</p>"
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"p>   நுழைசொல்லை சுமூகமாக  மேலாண்மை படுத்த சுறுக்குபை துணைமுறைமையை "
+"அரிமுகப்படுதுகிறது .இந்த விருப்பத்தேர்வை பயன்படுத்த நீங்கள் யோசிக்களாம் .</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "&KDE  சுறுக்கு பையை துணைமுறைமை செயல்படச்செய் "
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr "உங்கள் பயன்பாட்டை அடுதவர்கள் பயன்படுத்திதா வண்ணம் உங்கள் சுறுக்குப்பையை மூடவேண்டும்."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "சுறுக்குபையை மூடு"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p><b>Close wallet after a period of inactivity</b><br>When a wallet is "
+#| "closed the password is needed to access it again.</p>"
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>செயற்படா தன்மை முடிந்தவுடன் சுறுக்குப்பையை மூடுக</b><br> சுறுக்கு பையை "
+"மூடியவுடன் மறுபடியும் அணுக நுழைசொல் தெவை </p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "இது உபயொகதில் இல்லாத போது மூடுக"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid " minutes"
+msgstr "குரைந்தபட்ஷம்"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>திரைக்காப்பு துவங்கியவுடன் சுறுக்குப்பையை மூடுக </b><br>சுறுக்கு பையை "
+"மூடியவுடன் மறுபடியும் அணுக நுழைசொல் தெவை </p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "திரைக்காப்பு துவங்கும் போது மூடுக"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#| "b><br>Note that your wallets will only be closed when all applications "
+#| "that use it have stopped.<br>When a wallet is closed the password is "
+#| "needed to access it again.</p>"
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p><b>பயன்பாடு முடிந்தவுடன் சுறுக்குப்பையை மூடுக.</b><br>குரிப்பு உங்கள் பயன்பாடு "
+"முடிந்தவுடன் மட்டுமெ உங்கல் சுறுக்குப்பை மூடப்படும்<br>சுறுக்கு பையை மூடியவுடன் "
+"மறுபடியும் அணுக நுழைசொல் தெவை.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "கடைசி  பயன்பாடு நிற்க்கும் போது மூடுக "
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "முன்னிருந்த புலத்தேர்வு "
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "முன்னிருப்பாக பயன்படுத்த சுறுக்குப் பையை தெர்ந்தெடு"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "புதிய..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr " வரம்புறுநுழைசோற்களுக்காக விதவிதமான சுறுக்குப் பை"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "சுறுக்குப்பையின் மேளாலர்"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr " முறைமை தட்டில் மேளாலரை காட்டு"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "கடைசி சுறுக்கு பை மூடும்போது  முறைமை தட்டு சின்னத்தை மறைக்க."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Enable Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:315
+#, kde-format
+msgid "Access Control"
+msgstr "அணுக்கம் கட்டுப்பாடு"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:321
+#, fuzzy, kde-format
+#| msgid "&Prompt when an application accesses an open wallet"
+msgid "&Prompt when an application accesses a wallet"
+msgstr " ஒரு பயன்பாடு அணுக்கும் போது திரந்தசுறுக்கு பையை தூண்டி ."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:335
+#, kde-format
+msgid "Wallet"
+msgstr "சிரறுபை"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:346
+#, kde-format
+msgid "Application"
+msgstr "செயலி"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:357
+#, kde-format
+msgid "Policy"
+msgstr "கொள்கை"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:393
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "&சுறுக்குப்பை மேளாலரை துவங்கு"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmk சுறுக்குபை"

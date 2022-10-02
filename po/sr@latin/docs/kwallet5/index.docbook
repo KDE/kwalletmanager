@@ -1,0 +1,863 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Serbian-Latin "INCLUDE">
+]>
+
+<book id="kwallet5" lang="&language;">
+<bookinfo>
+<title
+>Priručnik za K‑novčanik 5</title>
+
+<authorgroup>
+<author
+><personname
+><firstname
+>Džordž</firstname
+> <surname
+>Stajkos</surname
+></personname
+> &George.Staikos.mail; </author>
+<author
+><personname
+><firstname
+>Lori</firstname
+> <surname
+>Vots</surname
+></personname
+> &Lauri.Watts.mail; </author>
+<othercredit role="developer"
+><firstname
+>Džordž</firstname
+> <surname
+>Stajkos</surname
+> <affiliation
+><address
+>&George.Staikos.mail;</address
+></affiliation>
+<contrib
+>programer</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>5. 7. 2016.</date>
+<releaseinfo
+>Programi KDE‑a 16.04</releaseinfo>
+
+<abstract>
+<para
+>Podsistem novčanika pruža udoban i bezbedan način upravljanja svim vašim lozinkama.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>K‑novčanik</keyword>
+<keyword
+>lozinke</keyword>
+<keyword
+>formulari</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>Korisnici računara često upravljaju velikom količinom podataka, od kojih su neki poverljivi. U ovakve posebno spadaju lozinke. Pamtiti lozinke je teško, a zapisivati ih na papir ili u tekstualni fajl nebezbedno.</para>
+
+<para
+>K‑novčanik 5 pruža bezbedan način za skladištenje lozinki i drugih tajnih podataka, tako da korisnik treba da pamti samo jednu lozinku umesto brojnih različitih lozinki i kredencijala. </para>
+
+<sect1 id="kwallet-create">
+
+<title
+>Zatvaranje novčanika</title>
+
+<para
+>Novčanik je skladište lozinki. Obično je dovoljno imati samo jedan novčanik obezbeđen glavnom lozinkom, ali vam Menadžer K‑novčanika 5 omogućava i da organizujete veliku zbirku lozinki u više novčanika.</para>
+
+<para
+>Za skladištenje lozinki podrazumevano se koristi novčanik po imenu <literal
+>kdewallet</literal
+>. Ovaj novčanik je obezbeđen vašom prijavnom lozinkom, i biće automatski otvoren po prijavi, ako je <literal
+>kwallet_pam</literal
+> instaliran i pravilno podešen. U pojedinim distribucijama (npr. Arch Linux) <literal
+>kwallet_pam</literal
+> nije podrazumevano instaliran.</para>
+
+
+<para
+>Ostali novčanici moraju ručno da se otvore.</para>
+
+<para
+>Nov novčanik može da se napravi na dva načina:</para>
+
+<itemizedlist>
+<listitem
+><para
+>preko stavke menija <menuchoice
+><guimenu
+>Fajl</guimenu
+><guimenuitem
+>Novi novčanik</guimenuitem
+></menuchoice
+> u Menadžeru K‑novčanika 5;</para
+></listitem>
+
+<listitem
+><para
+>u Sistemskim postavkama, pomoću dugmeta <guibutton
+>Novi...</guibutton
+> u modulu <guilabel
+>K‑novčanik</guilabel
+>;</para
+></listitem>
+</itemizedlist>
+
+<para
+>Ako još niste napravili novčanik, pogledajte odeljak <link linkend="kwallet-using"
+>o korišćenju K‑novčanika 5</link
+>. </para>
+
+<para
+>K‑novčanik 5 može da skladišti podatke na dva načina:</para>
+
+<screenshot>
+<screeninfo
+>Izbor šifrovanja.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Izbor šifrovanja.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+
+<varlistentry>
+<term
+>šifrovanje Blowfishom</term>
+<listitem>
+<para
+>K‑novčanik 5 upisuje osetljive podatke u snažno šifrovan fajl, dostupan svim programima, a zaštićen glavnom lozinkom koju zadate.</para>
+
+<screenshot>
+<screeninfo
+>Stvaranje novčanika šifrovanog Blowfishom.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Stvaranje novčanika šifrovanog Blowfishom.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Podaci se šifruju <ulink url="http://www.schneier.com/blowfish.html"
+>simetričnim blok‑šifrarskim algoritmom Blowfish</ulink
+>. Ključ algoritma izvodi se iz <ulink url="http://www.ietf.org/rfc/rfc3174.txt"
+>SHA‑1 disperzije</ulink
+> lozinke, i dužine je 156 bitova (20 bajtova). Podaci u novčaniku takođe se disperziraju preko SHA‑1 i proveravaju pre nego što se dešifruju i proslede programu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>šifrovanje GPG‑om</term>
+<listitem>
+<para
+>GnuPG poseduje neke vrlo snažne šifrarske algoritme, i koristi lozinke za zaštitu dugačkih ključeva.</para>
+
+<screenshot>
+<screeninfo
+>Nema nijednog GPG ključa.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Nema nijednog GPG ključa.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Gornji snimci ekrana pokazuju slučaj gde GPG ključ sposoban za šifrovanje nije nađen na sistemu. Upotrebite program poput <application
+>KGPG‑a</application
+> ili <application
+>Kleopatre</application
+> da napravite ključ, pa pokušajte ponovo.</para>
+
+<para
+>Kada je GPG ključ nađen, dobićete naredni dijalog, u kome možete izabrati ključ za potrebe novog novčanika. </para>
+<screenshot>
+<screeninfo
+>Izbor šifrarskog ključa.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Izbor šifrarskog ključa.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Posle ovoga, K‑novčanik 5 će koristiti GPG pri skladištenju novčanikâ̂ i čitanju iz njih. Dijalog za lozinku pojavljuje se samo jednom. Kada se novčanik zatvori posle prvog otvaranja, naredna otvaranja unutar iste sesije odigraće se nečujno. </para>
+
+<para
+>Unutar jedne sesije, mogu se koristiti oba formata fajla. K‑novčanik 5 će prozirno otkriti format fajla i učitati odgovarajuću pozadinu za njegovu obradu.</para>
+
+<para
+>Za korišćenje osetljivih podataka iz klasičnog formata novčanika sa novom pozadinom, ispratite ove korake:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Napravite novi novčanik na osnovi GPG‑a</para
+></listitem>
+<listitem
+><para
+>Pokrenite Menadžer K‑novčanika 5, preko <application
+>K‑izvođača</application
+> (<keycombo
+><keycap
+>Alt</keycap
+><keycap
+>F2</keycap
+></keycombo
+>) ili drugog pokretača programa (menija), i izaberite stari novčanik. Zatim idite na <menuchoice
+><guimenu
+>Fajl</guimenu
+> <guimenuitem
+>Izvezi šifrovano</guimenuitem
+></menuchoice
+> da napravite fajl arhive sa osetljivim podacima. </para
+></listitem>
+<listitem
+><para
+>Izaberite novi novčanik na osnovi GPG‑a, a zatim <menuchoice
+><guimenu
+>Fajl</guimenu
+> <guimenuitem
+>Uvezi šifrovano</guimenuitem
+></menuchoice
+> da izaberete fajl koji ste upravo sačuvali.</para>
+</listitem>
+
+<listitem
+><para
+>Idite u Sistemskim postavkama, <menuchoice
+><guimenu
+>Detalji naloga</guimenu
+> <guimenuitem
+>K‑novčanik</guimenuitem
+></menuchoice
+>, pa izaberite novostvoreni novčanik na osnovi GPG‑a iz liste <guilabel
+>Izaberite novčanik će se podrazumevano koristiti:</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>Alternativno upotrebite <guimenuitem
+>Uvezi novčanik...</guimenuitem
+>, ali tada morate da izaberete <filename class="extension"
+>.kwl</filename
+> fajl koji odgovara starom novčaniku, a nalazi se u fascikli <filename class="directory"
+>kwalletd</filename
+> u <userinput
+>qtpaths --paths GenericDataLocation</userinput
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<tip>
+<para
+>K‑novčanik 5 podržava višestruke novčanike, te bi radi najveće bezbednosti trebalo da koristite jedan novčanik za lokalne lozinke, a drugi za mrežne lozinke i podatke formularâ̂. Ovo ponašanje možete podesiti u modulu K‑novčanika 5 u Sistemskim postavkama. Podrazumevana postavka je ipak skladištenje svega u jednom novčaniku po imenu <literal
+>kdewallet</literal
+>.</para>
+</tip>
+
+<para
+>Novčanik je podrazumevano zatvoren, što znači da morate zadati lozinku da ga otvorite. Pošto se otvori, njegovom sadržaju može pristupiti bilo koji korisnički proces, što može biti bezbednosni problem.</para>
+</sect1>
+
+<sect1 id="kwallet-using">
+<title
+>Korišćenje K‑novčanika 5</title>
+
+<para
+>Ako posetite npr. KDE‑ov pratilac grešaka i po prvi put unesete prijavne podatke, iskočiće dijalog koji vam nudi da skladišti lozinku u šifrovani novčanik:</para>
+
+<screenshot>
+<screeninfo
+>Zahtev za upisivanje prijavnih podataka.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Zahtev za upisivanje prijavnih podataka.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Ako želite da skladištite ove podatke, kliknite na <guibutton
+>Skladišti</guibutton
+> da nastavite. Ako još uvek niste napravili novčanik, sledeći dijalog vam traži pozadinu za šifrovanje i stvara novčanik po imenu <literal
+>kdewallet</literal
+>. </para>
+
+<para
+>Sledeći put kada posetite isti veb sajt, program dobavlja prijavne podatke iz otvorenog novčanika i upisuje ih u formulare.</para>
+
+<screenshot>
+<screeninfo
+>Automatski ispunjeni prijavni podaci.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="prefilled-forms.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Automatski ispunjeni prijavni podaci.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Ako je novčanik zatvoren, program će zatražiti da ga otvori. Unesite lozinku za novčanik i kliknite na dugme <guibutton
+>Otvori</guibutton
+>.</para>
+
+<screenshot>
+<screeninfo
+>Zahtev za otvaranje novčanika.</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Zahtev za otvaranje novčanika.</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Ovo povezuje program s novčanikom, omogućavajući mu da pročita prijavne podatke iz novčanika i pošalje ih veb sajtu. Pošto se program povezao s novčanikom, može automatski pročitati sve prijavne podatke iz njega.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="kwalletmanager5">
+<title
+>Menadžer K‑novčanika 5</title>
+
+<para
+>Menadžer K‑novčanika 5 ima brojne funkcije. Pre svega, omogućava vam da vidite da li su neki novčanici otvoreni, koji su to novčanici i koji programi ih koriste. Kroz Menadžer K‑novčanika možete otkazati pristup programa novčaniku.</para>
+
+<para
+>Možete i upravljati instaliranim novčanicima na sistemu, stvarati i brisati novčanike, i manipulisati njihovim sadržajem (menjati ključeve, itd.)</para>
+
+<para
+>Menadžer K‑novčanika 5 se pokreće preko <menuchoice
+> <guimenu
+>Programi</guimenu
+><guisubmenu
+>Sistem</guisubmenu
+> <guimenuitem
+>Alatka za upravljanje novčanicima</guimenuitem
+></menuchoice
+> u pokretaču programâ̂. Drugačije, pokrenite <application
+>K‑izvođač</application
+> prečicom <keycombo action="simul"
+><keycap
+>Alt</keycap
+><keycap
+>F2</keycap
+></keycombo
+>, pa unesite <command
+>kwalletmanager5</command
+>.</para>
+
+<para
+>Kliknite jednom na ikonicu novčanika u sistemskoj kaseti da pozovete prozor Menadžera K‑novčanika 5.</para>
+<para>
+<screenshot>
+<screeninfo
+>Glavni prozor sa jednim novčanikom.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwalletmanager.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Glavni prozor sa jednim novčanikom.</phrase>
+</textobject>
+<caption
+><para
+>Glavni prozor sa jednim novčanikom.</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<!--FIXME
+How to get assistant "First Use"? kwalletwizardpageintro.ui
+Last code change with http://websvn.kde.org/?view=revision&revision=882694
+see also https://bugs.kde.org/show_bug.cgi?id=290309
+-->
+<sect1 id="kwalletmanager-wallet-window">
+<title
+>Prozor novčanika</title>
+
+<para
+>Ako imate više od jednog novčanika, svi dostupni novčanici nabrojani su levo.</para>
+
+<para
+>Klik na novčanik u prozoru Menadžera K‑novčanika 5 prikazuje stanje tog novčanika i, ako je otvoren, njegov sadržaj. Novčanik može sadržati više fascikli, u kojima se čuvaju podaci o lozinkama. Novčanik će podrazumevano imati fascikle po imenu <guilabel
+>Podaci formulara</guilabel
+> i <guilabel
+>Lozinke</guilabel
+>. </para>
+
+<screenshot>
+<screeninfo
+>Glavni prozor sa dva novčanika.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-edit.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Glavni prozor sa dva novčanika.</phrase>
+</textobject>
+<caption
+><para
+>Glavni prozor sa dva novčanika.</para
+></caption>
+</mediaobject>
+</screenshot>
+<para
+>Upotrebite <guibutton
+>Otvori...</guibutton
+> da prikažete sadržaj zatvorenog novčanika. Biće vam traženo da unesete glavnu lozinku.</para>
+
+<sect2>
+<title
+>Jezičak <guilabel
+>Sadržaj</guilabel
+></title>
+
+<para
+>Jezičak <guilabel
+>Sadržaj</guilabel
+> ima tri dela:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Polje pretrage za filtriranje stavki u tekućem novčaniku.</para
+></listitem>
+<listitem
+><para
+>Prikaz stabla fascikli sadržanih u novčaniku. Kliktanjem na ikonice <guiicon
+>&gt;</guiicon
+> i <guiicon
+>-</guiicon
+> širite i sažimate prikaz stabla.</para
+></listitem>
+<listitem
+><para
+>Sadržaj fascikle izabrane na desnoj strani. Lozinka i vrednost podrazumevano su skrivene. Da biste ih prikazali, popunite <guilabel
+>Prikaži vrednosti</guilabel
+> ili kliknite na dugme <guilabel
+>Prikaži sadržaj</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>Fascikle se mogu dodavati i brisati kroz kontekstni meni, a izborom jedne od njih ažurira se spisak unosa fascikle i prikaz sažetka. Izborom unosa u fascikli ažurira se okno sadržaja unosa, tako da ga možete urediti.</para>
+
+<para
+>Unosi se takođe mogu stvoriti, obrisati i preimenovati preko kontekstnog menija u sadržaju fascikle.</para>
+
+<para
+>Fascikle i unosi se mogu prevlačiti u druge novčanike i fascikle. Ovako korisnik može lako spakovati novi novčanik za prenos u drugo okruženje. Na primer, novi novčanik bi se mogao stvoriti ili kopirati na uklonjivi skladišni uređaj i važne lozinke preneti u njega, tako da vam budu dostupne na drugim lokacijama.</para>
+
+<sect3 id="kwallet-import-export">
+<title
+>Uvoz i izvoz</title>
+<para
+>Ako želite da prenesete svoje tajne na drugi računar, poslužite se radnjama iz menija <guimenu
+>Fajl</guimenu
+>. Pomoću <guimenuitem
+>Izvezi šifrovano</guimenuitem
+> novčanici se izvoze u šifrovani fajl arhive. Pri uvozu ovakvog fajla arhive, preko <guimenuitem
+>Uvezi šifrovano</guimenuitem
+>, moraćete da unesete glavnu lozinku novčanika. </para>
+<para
+>Alternativno, za prenos fajla može da se upotrebi <filename class="extension"
+>.xml</filename
+> fajl. Imajte na umu da su u takvom fajlu sve tajne skladištene kao obični tekst. </para>
+</sect3>
+
+<sect3 id="kwallet-adding-entries">
+<title
+>Ručno dodavanje unosa</title>
+<para
+>Otvorite kontekstni meni desnim klikom na <guilabel
+>mape</guilabel
+> ili <guilabel
+>lozinke</guilabel
+> prikazu stabla fascikli. Izaberite <guimenuitem
+>Novi...</guimenuitem
+> ili <guimenuitem
+>Nova fascikla...</guimenuitem
+> i unesite ime nove stavke.</para>
+<para
+>U oknu sadržaja fascikle, izaberite <guilabel
+>Nova fascikla...</guilabel
+> iz kontekstnog menija nad <guilabel
+>mape</guilabel
+> ili <guilabel
+>lozinke</guilabel
+>. Za lozinke, kliknite na dugme <guilabel
+>Prikaži sadržaj</guilabel
+> da unesete novu. Za mape, treba da dodate ključ i vrednost. Kliknite na dugme <guilabel
+>Sačuvaj</guilabel
+> da bi se novi unosi uskladištili u šifrovanom fajlu novčanika. </para>
+</sect3>
+</sect2>
+
+<sect2>
+<title
+>Jezičak <guilabel
+>Programi</guilabel
+></title>
+<para>
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>Programi</guilabel
+>.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-applications.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>Programi</guilabel
+>.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>Programi</guilabel
+>.</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+<para
+>Prvi spisak prikazuje sve programe trenutno povezane na izabrani novčanik. Dugmetom desno od svakog programa možete prekinuti njegovu vezu sa novčanikom.</para>
+
+<para
+>Na drugom spisku dati su svi programi koji su ovlašćeni za pristup novčaniku. Upotrebite dugme desno od programa da mu povučete ovlašćenje. </para>
+<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
+</sect2>
+</sect1>
+
+</chapter>
+
+<chapter id="kwallet-kcontrol-module">
+<title
+>Podešavanje K‑novčanika 5</title>
+
+<sect1 id="wallet-preferences">
+<title
+>Postavke novčanika</title>
+
+<para
+>K‑novčanik 5 sadrži mali panel za podešavanje, s nekoliko opcija kojima možete prilagoditi K‑novčanik ličnom ukusu. Najvećem broju korisnika odgovaraće podrazumevane postavke.</para>
+
+<para
+>Ovom kućicom možete potpuno uključiti ili isključiti KDE‑ov podsistem novčanika. Pražnjenjem kućice K‑novčanik 5 se potpuno isključuje. Tada nijedna druga opcija više nema nikakvog efekta, K‑novčanik neće pamtiti nikakve podatke, niti nuditi da popunjava formulare umesto vas.</para>
+
+<variablelist>
+<title
+><guilabel
+>Zatvaranje novčanika</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Zatvori ako se ne koristi:</guilabel
+></term>
+<listitem>
+<para
+>Novčanik se zatvara posle perioda neaktivnosti. Ako uključite ovu opciju, period zadajete u polju; podrazumevani je 10 minuta. Pošto se novčanik zatvori, potrebna je lozinka da bi mu se ponovo pristupilo.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zatvori kada se pokrene čuvar ekrana</guilabel
+></term>
+<listitem>
+<para
+>Novčanik se zatvara čim se pokrene čuvar ekrana. Pošto se novčanik zatvori, potrebna je lozinka da bi mu se ponovo pristupilo.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zatvori pošto programi prestanu da ga koriste</guilabel
+></term>
+<listitem>
+<para
+>Novčanik se zatvara čim se završi program koji ga koristi. Ako ga koristi više programa, novčanik će biti zatvoren kada svi oni prestanu s radom. Pošto se novčanik zatvori, potrebna je lozinka da bi mu se ponovo pristupilo.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>Automatsko biranje novčanika</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Izaberite novčanik će se podrazumevano koristiti:</guilabel
+></term>
+<listitem>
+<para
+>Izaberite koji novčanik želite da koristite kao podrazumevani. Imajte u vidu da se samo novčanik po imenu <literal
+>kdewallet</literal
+> otvara automatski po prijavljivanju, ako su vam prijavna lozinka i lozinka novčanika iste. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Odvojeni novčanik za lokalne lozinke:</guilabel
+></term>
+<listitem>
+<para
+>Ako je uključeno, za lokalne lozinke se koristi zaseban novčanik.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>Menadžer novčanika</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Prikaži menadžer u sistemskoj kaseti</guilabel
+></term>
+<listitem>
+<para
+>Uključuje menadžer novčanika i njegovu ikonicu u sistemskoj kaseti.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sakrij ikonicu sistemske kasete po zatvaranju poslednjeg novčanika</guilabel
+></term>
+<listitem>
+<para
+>Kada se više ne koristi nijedan novčanik, nestaje ikonica u sistemskoj kaseti.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Najzad, tu je dugme <guibutton
+>Pokreni menadžer novčanika</guibutton
+> koje radi upravo to.</para>
+<para
+>Ovo dugme je vidljivo samo kada Menadžer K‑novčanika 5 nije u pogonu.</para>
+</sect1>
+
+<sect1 id="wallet-access-control">
+<title
+>Upravljanje pristupom</title>
+
+<para
+>Na ovoj stranici ima samo jedna opcija:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pitaj kada program pristupi novčaniku</guilabel
+></term>
+<listitem>
+<para
+>Signalizira vam kada program dobije pristup novčaniku.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Zatim, tu je prikaz kontrola pristupa novčanicima u obliku stabla.</para>
+
+<screenshot>
+<screeninfo
+>Upravljanje pristupom.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-access-control.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Upravljanje pristupom.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Kliknite levim na simbol <guiicon
+>&gt;</guiicon
+> pored imena novčanika da proširite stablo. Videćete imena svih programa koji su tražili pristup novčaniku i smernicu koju ste za to postavili. Ovde ne možete uređivati smernice niti ih dodavati, ali je moguće obrisati unos desnim klikom na njega i izborom <guimenuitem
+>Obriši</guimenuitem
+> iz kontekstnog menija, ili izborom unosa i pritiskom tastera <keycap
+>Delete</keycap
+>.</para>
+
+<para
+>Program kome se dozvoli pristup novčaniku dobija pristup svim lozinkama skladištenim u njemu.</para>
+
+<para
+>Ako ste nenamerno podesili neki program da ne koristi K‑novčanik 5, ovde možete obrisati tu smernicu.</para>
+<!-- FIXME difference to Revoke Authorization in kwallermanager?-->
+<para
+>Na sledećem pokretanju tog programa možete zadati novu smernicu za pristup novčaniku. </para>
+<screenshot>
+<screeninfo
+>Pristupni zahtev za otvaranje novčanika.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="application-request-to-open-wallet.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Pristupni zahtev za otvaranje novčanika.</phrase>
+</textobject>
+<caption
+><para
+>Program traži pristup novčaniku.</para
+></caption>
+</mediaobject>
+</screenshot>
+
+</sect1>
+
+</chapter>
+
+<chapter id="advanced-features">
+<title
+>Napredne mogućnosti</title>
+
+<para
+>Novčanici se mogu prevlačiti iz prozora Menadžera K‑novčanika 5. Tako možete da prevučete novčanik u prozor menadžera fajlova, pa izabrati da li ćete ga kopirati, premestiti ili povezati, po želji.</para>
+
+<para
+>Ovako možete i upisati novčanik na prenosivi medijum, poput USB štapića, tako da možete lozinke poneti sa sobom na posao ili na odmor, kako biste i dalje lako pristupali važnim sajtovima.</para>
+
+</chapter>
+
+<chapter id="credits-and-license">
+<title
+>Zasluge i licenca</title>
+
+<para
+>K‑novčanik 5: © 2003, <personname
+><firstname
+>Džordž</firstname
+> <surname
+>Stajkos</surname
+></personname
+>.</para>
+<para
+>Dokumentacija: © <personname
+><firstname
+>Lori</firstname
+> <surname
+>Vots</surname
+></personname
+> i <personname
+><firstname
+>Džordž</firstname
+> <surname
+>Stajkos</surname
+></personname
+>.</para>
+
+<para
+>Preveo Dragan Pantelić <email
+>falcon-10@gmx.de</email
+>.</para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->

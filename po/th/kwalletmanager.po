@@ -1,0 +1,752 @@
+# translation of kwalletmanager.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"PO-Revision-Date: 2010-05-01 10:15+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com"
+
+#: allyourbase.cpp:202
+#, kde-format
+msgid "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr "มีรายการชื่อ '%1' อยู่ก่อนแล้ว คุณต้องการจะทำอย่างไรต่อไป ?"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "A folder by the name '%1' already exists.  What would you like to do?"
+msgstr "มีโฟลเดอร์ชื่อ '%1' อยู่ก่อนแล้ว คุณจะทำอย่างไรต่อไป ?"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "Replace"
+msgstr "แทนที่"
+
+#: allyourbase.cpp:336
+#, kde-format
+msgid "Folders"
+msgstr "โฟลเดอร์ต่าง ๆ"
+
+#: allyourbase.cpp:370
+#, kde-format
+msgid "An unexpected error occurred trying to drop the item"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการลบรายการ"
+
+#: allyourbase.cpp:446
+#, kde-format
+msgid "An unexpected error occurred trying to drop the entry"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการลบรายการ"
+
+#: allyourbase.cpp:470
+#, kde-format
+msgid ""
+"An unexpected error occurred trying to delete the original folder, but the "
+"folder has been copied successfully"
+msgstr ""
+"เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการลบโฟลเดอร์ดั้งเดิม "
+"แต่ว่าการคัดลอกโฟลเดอร์สามารถคัดลอกได้สมบูรณ์แล้ว"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: applicationsmanager.ui:17
+#, kde-format
+msgid "These applications are currently connected to this wallet:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: applicationsmanager.ui:64
+#, kde-format
+msgid "These applications are authorized to access this wallet:"
+msgstr ""
+
+#: disconnectappbutton.cpp:16
+#, fuzzy, kde-format
+#| msgid "Disconnec&t"
+msgid "Disconnect"
+msgstr "&ยุติการเชื่อมต่อ"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: kbetterthankdialogbase.ui:43
+#, kde-format
+msgid "&Replace"
+msgstr "แ&ทนที่"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: kbetterthankdialogbase.ui:53
+#, kde-format
+msgid "Replace &All"
+msgstr "แทนที่ทั้งห&มด"
+
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: kbetterthankdialogbase.ui:60
+#, kde-format
+msgid "&Skip"
+msgstr "&ข้าม"
+
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: kbetterthankdialogbase.ui:67
+#, kde-format
+msgid "Skip A&ll"
+msgstr "ข้ามทั้งหม&ด"
+
+#: kwalleteditor.cpp:86
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: kwalleteditor.cpp:95
+#, kde-format
+msgid "&Show values"
+msgstr "แส&ดงค่าต่าง ๆ"
+
+#: kwalleteditor.cpp:195
+#, kde-format
+msgid "&New Folder..."
+msgstr "สร้างโฟลเดอร์ใ&หม่..."
+
+#: kwalleteditor.cpp:199
+#, kde-format
+msgid "&Delete Folder"
+msgstr "&ลบโฟลเดอร์"
+
+#: kwalleteditor.cpp:202
+#, fuzzy, kde-format
+#| msgid "&Merge Wallet..."
+msgid "&Import a wallet..."
+msgstr "รวม&กระเป๋า..."
+
+#: kwalleteditor.cpp:205
+#, kde-format
+msgid "&Import XML..."
+msgstr "&นำเข้าแฟ้ม XML..."
+
+#: kwalleteditor.cpp:208
+#, fuzzy, kde-format
+#| msgid "&Import XML..."
+msgid "&Export as XML..."
+msgstr "&นำเข้าแฟ้ม XML..."
+
+#: kwalleteditor.cpp:211
+#, kde-format
+msgid "&Copy"
+msgstr ""
+
+#: kwalleteditor.cpp:216
+#, kde-format
+msgid "&New..."
+msgstr "สร้างใ&หม่..."
+
+#: kwalleteditor.cpp:221
+#, kde-format
+msgid "&Rename"
+msgstr "เ&ปลี่ยนชื่อ"
+
+#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#, kde-format
+msgid "&Delete"
+msgstr "&ลบ"
+
+#: kwalleteditor.cpp:231
+#, fuzzy, kde-format
+#| msgid "Show &Contents"
+msgid "Always show contents"
+msgstr "แสดงเ&นื้อหา"
+
+#: kwalleteditor.cpp:235
+#, fuzzy, kde-format
+#| msgid "Hide &Contents"
+msgid "Always hide contents"
+msgstr "ซ่อนเ&นื้อหา"
+
+#: kwalleteditor.cpp:344
+#, kde-format
+msgid "Passwords"
+msgstr "รหัสผ่าน"
+
+#: kwalleteditor.cpp:345
+#, kde-format
+msgid "Maps"
+msgstr "จับคู่ข้อมูล"
+
+#: kwalleteditor.cpp:346
+#, kde-format
+msgid "Binary Data"
+msgstr "ข้อมูลแบบไบนารี"
+
+#: kwalleteditor.cpp:347
+#, kde-format
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+#: kwalleteditor.cpp:387
+#, kde-format
+msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
+msgstr "คุณแน่ใจหรือว่า ต้องการจะลบโฟลเดอร์ '%1' นี้ออกจากกระเป๋าคุมรหัสผ่าน ?"
+
+#: kwalleteditor.cpp:391
+#, kde-format
+msgid "Error deleting folder."
+msgstr "เกิดข้อผิดพลาดระหว่างการลบโฟลเดอร์"
+
+#: kwalleteditor.cpp:410
+#, kde-format
+msgid "New Folder"
+msgstr "สร้างโฟลเดอร์ใหม่"
+
+#: kwalleteditor.cpp:411
+#, kde-format
+msgid "Please choose a name for the new folder:"
+msgstr "โปรดป้อนชื่อของโฟลเดอร์ใหม่:"
+
+#: kwalleteditor.cpp:420
+#, kde-format
+msgid "Sorry, that folder name is in use. Try again?"
+msgstr "ขออภัย มีการใช้โฟลเดอร์ชื่อดังกล่าวอยู่ก่อนแล้ว จะลองใหม่อีกครั้งหรือไม่ ?"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#, kde-format
+msgid "Try Again"
+msgstr "ลองใหม่"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#, kde-format
+msgid "Do Not Try"
+msgstr "ไม่ลอง"
+
+#: kwalleteditor.cpp:459
+#, kde-format
+msgid "Error saving entry. Error code: %1"
+msgstr "เกิดข้อผิดพลาดระหว่างบันทึกรายการ รหัสผิดพลาดคือ: %1"
+
+#: kwalleteditor.cpp:480
+#, kde-format
+msgid ""
+"The contents of the current item has changed.\n"
+"Do you want to save changes?"
+msgstr ""
+
+#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#, kde-format
+msgid "Password: %1"
+msgstr "รหัสผ่าน: %1"
+
+#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#, kde-format
+msgid "Name-Value Map: %1"
+msgstr "จับคู่ ชื่อ-ค่า: %1"
+
+#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#, kde-format
+msgid "Binary Data: %1"
+msgstr "ข้อมูลแบบไบนารี: %1"
+
+#: kwalleteditor.cpp:766
+#, kde-format
+msgid "New Entry"
+msgstr "เพิ่มรายการใหม่"
+
+#: kwalleteditor.cpp:767
+#, kde-format
+msgid "Please choose a name for the new entry:"
+msgstr "โปรดป้อนชื่อของรายการใหม่:"
+
+#: kwalleteditor.cpp:777
+#, kde-format
+msgid "Sorry, that entry already exists. Try again?"
+msgstr "ขออภัย มีรายการดังกล่าวอยู่ก่อนแล้ว จะลองใหม่อีกครั้งหรือไม่ ?"
+
+#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#, kde-format
+msgid "An unexpected error occurred trying to add the new entry"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการเพิ่มรายการใหม่"
+
+#: kwalleteditor.cpp:855
+#, kde-format
+msgid "An unexpected error occurred trying to rename the entry"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการเปลี่ยนชื่อรายการ"
+
+#: kwalleteditor.cpp:875
+#, kde-format
+msgid "Are you sure you wish to delete the item '%1'?"
+msgstr "คุณแน่ใจหรือว่า ต้องการจะลบรายการ '%1' นี้ ?"
+
+#: kwalleteditor.cpp:879
+#, kde-format
+msgid "An unexpected error occurred trying to delete the entry"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการลบรายการ"
+
+#: kwalleteditor.cpp:907
+#, kde-format
+msgid "Unable to open the requested wallet."
+msgstr "ไม่สามารถเปิดกระเป๋าที่มีการร้องขอมาได้"
+
+#: kwalleteditor.cpp:943
+#, fuzzy, kde-format
+#| msgid "Unable to access XML file '<b>%1</b>'."
+msgid "Unable to create temporary file for downloading '<b>%1</b>'."
+msgstr "ไม่สามารถเข้าใช้งานแฟ้ม XML '<b>%1</b>' ได้"
+
+#: kwalleteditor.cpp:950
+#, kde-format
+msgid "Unable to access wallet '<b>%1</b>'."
+msgstr "ไม่สามารถเข้าใช้งานกระเป๋า '<b>%1</b>' ได้"
+
+#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
+#: kwalleteditor.cpp:1127
+#, kde-format
+msgid ""
+"Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
+"replace it?"
+msgstr ""
+"มีรายการ '<b>%2</b>' ในโฟลเดอร์ '<b>%1</b>' อยู่ก่อนแล้ว คุณต้องการจะแทนที่มันหรือไม่ ?"
+
+#: kwalleteditor.cpp:1085
+#, kde-format
+msgid "Unable to access XML file '<b>%1</b>'."
+msgstr "ไม่สามารถเข้าใช้งานแฟ้ม XML '<b>%1</b>' ได้"
+
+#: kwalleteditor.cpp:1091
+#, kde-format
+msgid "Error reading XML file '<b>%1</b>' for input."
+msgstr "ไม่สามารถอ่านแฟ้ม XML '<b>%1</b>' เพื่อนำข้อมูลเข้าได้"
+
+#: kwalleteditor.cpp:1097
+#, kde-format
+msgid "Error: XML file does not contain a wallet."
+msgstr "ข้อผิดพลาด: แฟ้ม XML ไม่มีส่วนกระเป๋าคุมข้อมูล"
+
+#: kwalleteditor.cpp:1248
+#, fuzzy, kde-format
+#| msgid "Unable to access wallet '<b>%1</b>'."
+msgid "Unable to store to '<b>%1</b>'."
+msgstr "ไม่สามารถเข้าใช้งานกระเป๋า '<b>%1</b>' ได้"
+
+#: kwalletmanager.cpp:69
+#, kde-format
+msgid ""
+"The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
+"the KWalletManager will quit as it cannot work without reading the wallets."
+msgstr ""
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:281
+#, fuzzy, kde-format
+#| msgid "KDE Wallet"
+msgid "Wallet"
+msgstr "กระเป๋าคุมข้อมูลของ KDE"
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#, kde-format
+msgid "No wallets open."
+msgstr "ยังไม่มีกระเป๋าใดถูกเปิดใช้"
+
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#, kde-format
+msgid "A wallet is open."
+msgstr "มีกระเป๋าถูกเปิดใช้"
+
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#, kde-format
+msgid "&New Wallet..."
+msgstr "สร้างกระเป๋าคุมข้อมูลใ&หม่..."
+
+#: kwalletmanager.cpp:139
+#, fuzzy, kde-format
+#| msgid "Delete Wallet"
+msgid "&Delete Wallet..."
+msgstr "ลบกระเป๋าคุมข้อมูล"
+
+#: kwalletmanager.cpp:144
+#, kde-format
+msgid "Export as encrypted"
+msgstr ""
+
+#: kwalletmanager.cpp:149
+#, kde-format
+msgid "&Import encrypted"
+msgstr ""
+
+#: kwalletmanager.cpp:154
+#, kde-format
+msgid "Configure &Wallet..."
+msgstr "ปรับแต่ง&กระเป๋าคุมข้อมูล..."
+
+#: kwalletmanager.cpp:162
+#, kde-format
+msgid "Close &All Wallets"
+msgstr "ปิดกระเป๋าคุมข้อมูล&ทั้งหมด"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"ไม่สามารถปิดกระเป๋าคุมข้อมูลได้อย่างเรียบร้อย ซึ่งอาจจะมีโปรแกรมบางตัวยังใช้งานมันอยู่ "
+"คุณต้องการจะบังคับให้มันปิดกระเป๋าหรือไม่ ?"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Force Closure"
+msgstr "บังคับปิดกระเป๋า"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Do Not Force"
+msgstr "ไม่ต้องบังคับ"
+
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#, kde-format
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "ไม่สามารถบังคับปิดกระเป๋าคุมข้อมูลได้ รหัสผิดพลาดคือ %1"
+
+#: kwalletmanager.cpp:273
+#, kde-format
+msgid "Error opening wallet %1."
+msgstr "เกิดข้อผิดพลาดระหว่างทำการเปิดกระเป๋าคุมข้อมูล %1"
+
+#: kwalletmanager.cpp:315
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "โปรดเลือกชื่อของกระเป๋าคุมข้อมูลใบใหม่:"
+
+#: kwalletmanager.cpp:326
+#, kde-format
+msgid "New Wallet"
+msgstr "กระเป๋าคุมข้อมูลใหม่"
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Empty name is not supported. Please select a new one."
+msgstr ""
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Create new wallet"
+msgstr ""
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Sorry, that wallet already exists. Try a new name?"
+msgstr "ขออภัย มีกระเป๋าคุมข้อมูลดังกล่าวอยู่ก่อนแล้ว จะลองใช้ชื่อใหม่หรือไม่ ?"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Try New"
+msgstr "ลองใหม่"
+
+#: kwalletmanager.cpp:378
+#, kde-format
+msgid "Are you sure you wish to delete the wallet '%1'?"
+msgstr "คุณแน่ใจหรือว่า ต้องการจะลบกระเป๋าคุมข้อมูล '%1' ?"
+
+#: kwalletmanager.cpp:384
+#, kde-format
+msgid "Unable to delete the wallet. Error code was %1."
+msgstr "ไม่สามารถลบกระเป๋าคุมข้อมูลได้ รหัสผิดพลาดคือ %1"
+
+#: kwalletmanager.cpp:432
+#, fuzzy, kde-format
+#| msgid "A wallet name"
+msgid "File name"
+msgstr "ชื่อกระเป๋าคุมข้อมูล"
+
+#: kwalletmanager.cpp:439
+#, kde-format
+msgid "Failed to open file for writing"
+msgstr ""
+
+#: kwalletmanager.cpp:450
+#, kde-format
+msgid "Select file"
+msgstr ""
+
+#: kwalletmanager.cpp:460
+#, kde-format
+msgid "Failed to open file"
+msgstr ""
+
+#: kwalletmanager.cpp:473
+#, kde-format
+msgid "Wallet named %1 already exists, Operation aborted"
+msgstr ""
+
+#: kwalletmanager.cpp:480
+#, kde-format
+msgid "Failed to copy files"
+msgstr ""
+
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#, kde-format
+msgid "Ignore unsaved changes?"
+msgstr ""
+
+#. i18n: ectx: Menu (file)
+#: kwalletmanager.rc:4
+#, kde-format
+msgid "&File"
+msgstr "แ&ฟ้ม"
+
+#. i18n: ectx: Menu (settings)
+#: kwalletmanager.rc:17
+#, kde-format
+msgid "&Settings"
+msgstr "&ตั้งค่า"
+
+#. i18n: ectx: Menu (help)
+#: kwalletmanager.rc:20
+#, kde-format
+msgid "&Help"
+msgstr "&ช่วยเหลือ"
+
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#, kde-format
+msgid "&Open..."
+msgstr "เ&ปิด..."
+
+#: kwalletpopup.cpp:38
+#, kde-format
+msgid "Change &Password..."
+msgstr "เปลี่ยน&รหัสผ่าน..."
+
+#: kwalletpopup.cpp:53
+#, kde-format
+msgid "Disconnec&t"
+msgstr "&ยุติการเชื่อมต่อ"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Key"
+msgstr "ชื่อตัวแปร"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Value"
+msgstr "ค่า"
+
+#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#, fuzzy, kde-format
+#| msgid "New Entry"
+msgid "Delete Entry"
+msgstr "เพิ่มรายการใหม่"
+
+#: kwmapeditor.cpp:216
+#, kde-format
+msgid "&New Entry"
+msgstr "เพิ่มรายการใ&หม่"
+
+#: main.cpp:31
+#, fuzzy, kde-format
+#| msgid "KDE Wallet Manager"
+msgid "Wallet Manager"
+msgstr "จัดการกระเป๋าคุมข้อมูลของ KDE"
+
+#: main.cpp:33
+#, kde-format
+msgid "KDE Wallet Management Tool"
+msgstr "เครื่องมือจัดการกระเป๋าคุมข้อมูลของ KDE"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright ©2013–2017, KWallet Manager authors"
+msgstr ""
+
+#: main.cpp:39
+#, kde-format
+msgid "Valentin Rusu"
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgid "Maintainer, user interface refactoring"
+msgstr ""
+
+#: main.cpp:42
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:43
+#, kde-format
+msgid "Original author and former maintainer"
+msgstr "ผู้เขียนดั้งเดิมและผู้ดูแลก่อนหน้านี้"
+
+#: main.cpp:45
+#, kde-format
+msgid "Michael Leupold"
+msgstr "Michael Leupold"
+
+#: main.cpp:46
+#, fuzzy, kde-format
+#| msgid "Original author and former maintainer"
+msgid "Developer and former maintainer"
+msgstr "ผู้เขียนดั้งเดิมและผู้ดูแลก่อนหน้านี้"
+
+#: main.cpp:48
+#, kde-format
+msgid "Isaac Clerencia"
+msgstr "Isaac Clerencia"
+
+#: main.cpp:49
+#, kde-format
+msgid "Developer"
+msgstr "ผู้พัฒนา"
+
+#: main.cpp:57
+#, kde-format
+msgid "Show window on startup"
+msgstr "แสดงหน้าต่างเริ่มการทำงาน"
+
+#: main.cpp:58
+#, kde-format
+msgid "For use by kwalletd only"
+msgstr "สำหรับใช้กับ kwalletd เท่านั้น"
+
+#: main.cpp:59
+#, kde-format
+msgid "A wallet name"
+msgstr "ชื่อกระเป๋าคุมข้อมูล"
+
+#: revokeauthbutton.cpp:16
+#, kde-format
+msgid "Revoke Authorization"
+msgstr ""
+
+#: walletcontrolwidget.cpp:59
+#, kde-format
+msgid "&Close"
+msgstr ""
+
+#: walletcontrolwidget.cpp:76
+#, fuzzy, kde-format
+#| msgid "A wallet is open."
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open"
+msgstr "มีกระเป๋าถูกเปิดใช้"
+
+#: walletcontrolwidget.cpp:93
+#, kde-format
+msgid "The wallet is currently closed"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: walletcontrolwidget.ui:28
+#, kde-format
+msgid "KSqueezedTextLabel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: walletcontrolwidget.ui:35
+#, fuzzy, kde-format
+#| msgid "&Open..."
+msgid "Open..."
+msgstr "เ&ปิด..."
+
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: walletcontrolwidget.ui:58
+#, fuzzy, kde-format
+#| msgid "Change &Password..."
+msgid "Change Password..."
+msgstr "เปลี่ยน&รหัสผ่าน..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: walletcontrolwidget.ui:76
+#, fuzzy, kde-format
+#| msgid "Hide &Contents"
+msgid "Contents"
+msgstr "ซ่อนเ&นื้อหา"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: walletcontrolwidget.ui:115
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: walletwidget.ui:142
+#, kde-format
+msgid "Hide &Contents"
+msgstr "ซ่อนเ&นื้อหา"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: walletwidget.ui:185 walletwidget.ui:233
+#, kde-format
+msgid "Show &Contents"
+msgstr "แสดงเ&นื้อหา"
+
+#. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
+#: walletwidget.ui:296
+#, kde-format
+msgid "&Undo"
+msgstr "&เลิกทำ"
+
+#. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
+#: walletwidget.ui:306
+#, kde-format
+msgid "&Save"
+msgstr "&บันทึก"
+
+#, fuzzy
+#~| msgid "Open Wallet"
+#~ msgid "Open Wallet..."
+#~ msgstr "เปิดกระเป๋าคุมข้อมูล"
+
+#~ msgid "Error opening XML file '<b>%1</b>' for input."
+#~ msgstr "ไม่สามารถเปิดแฟ้ม XML '<b>%1</b>' เพื่อนำข้อมูลเข้าได้"
+
+#, fuzzy
+#~| msgid ""
+#~| "This is a binary data entry.  It cannot be editted as its format is "
+#~| "unknown and application specific."
+#~ msgid ""
+#~ "This is a binary data entry.  It cannot be edited as its format is "
+#~ "unknown and application specific."
+#~ msgstr "นี่เป็นรายการข้อมูลฐานสอง  มันไม่สามารถแก้ไขได้เนื่องจากไม่รู้จักรูปแบบของมัน"
+
+#~ msgid "(c) 2003,2004 George Staikos"
+#~ msgstr "สงวนลิขสิทธิ์ (c) 2003,2004 George Staikos"
+
+#~ msgid "Maintainer"
+#~ msgstr "ผู้ดูแล"
+
+#~ msgid "&Export..."
+#~ msgstr "&ส่งออก..."
+
+#, fuzzy
+#~| msgid "Change &Password..."
+#~ msgid "Change password..."
+#~ msgstr "เปลี่ยน&รหัสผ่าน..."
+
+#~ msgid "That wallet file already exists.  You cannot overwrite wallets."
+#~ msgstr "มีแฟ้มกระเป๋าคุมข้อมูลอยู่แล้ว คุณไม่สามารถเขียนทับกระเป๋าคุมข้อมูลต่าง ๆ ได้"
+
+#~ msgid ""
+#~ "This wallet was forced closed.  You must reopen it to continue working "
+#~ "with it."
+#~ msgstr "กระเป๋าใบนี้ถูกบังคับให้ปิด คุณต้องเปิดมันขึ้นมาใหม่เพื่อทำงานกับมันต่อไปได้"
+
+#~ msgid "Please choose a name that contains only alphanumeric characters:"
+#~ msgstr "โปรดเลือกชื่อที่มีเพียงตัวอักษรและตัวเลขเท่านั้น:"

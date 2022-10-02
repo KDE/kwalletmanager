@@ -1,0 +1,761 @@
+# translation of kwalletmanager.po to Persian
+# Zahra Farahmandi <farahmandi@itland.ir>, 2006.
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006, 2007.
+# Mohamad Reza Mirdamadi <mohi@ubuntu.ir>, 2010, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"PO-Revision-Date: 2012-01-13 10:49+0330\n"
+"Last-Translator: Mohammad Reza Mirdamadi <mohi@ubuntu.ir>\n"
+"Language-Team: Farsi (Persian) <>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "محمدرضا میردامادی , مریم سادات رضوی"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mohi@ubuntu.ir , razavi@itland.ir"
+
+#: allyourbase.cpp:202
+#, kde-format
+msgid "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr "در حال حاضر مدخلی با نام «%1» وجود دارد. می‌خواهید ادامه دهید؟"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "A folder by the name '%1' already exists.  What would you like to do?"
+msgstr "در حال حاضر یک پوشه با نام «%1» وجود دارد. می‌خواهید چه کار کنید؟"
+
+#: allyourbase.cpp:226
+#, kde-format
+msgid "Replace"
+msgstr "جایگزینی"
+
+#: allyourbase.cpp:336
+#, kde-format
+msgid "Folders"
+msgstr "پوشه‌ها"
+
+#: allyourbase.cpp:370
+#, kde-format
+msgid "An unexpected error occurred trying to drop the item"
+msgstr "هنگام سعی برای انداختن فقره، خطای غیرمنتظره‌ای رخ داد"
+
+#: allyourbase.cpp:446
+#, kde-format
+msgid "An unexpected error occurred trying to drop the entry"
+msgstr "هنگام سعی برای انداختن مدخل، خطای غیرمنتظره‌ای رخ داد"
+
+#: allyourbase.cpp:470
+#, kde-format
+msgid ""
+"An unexpected error occurred trying to delete the original folder, but the "
+"folder has been copied successfully"
+msgstr ""
+"هنگام سعی برای حذف پوشه اصلی خطای غیرمنتظره‌ای رخ داد، اما پوشه با موفقیت "
+"رونوشت شده است"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: applicationsmanager.ui:17
+#, kde-format
+msgid "These applications are currently connected to this wallet:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: applicationsmanager.ui:64
+#, kde-format
+msgid "These applications are authorized to access this wallet:"
+msgstr ""
+
+#: disconnectappbutton.cpp:16
+#, fuzzy, kde-format
+#| msgid "Disconnec&t"
+msgid "Disconnect"
+msgstr "&قطع ارتباط‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: kbetterthankdialogbase.ui:43
+#, kde-format
+msgid "&Replace"
+msgstr "&جایگزینی‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: kbetterthankdialogbase.ui:53
+#, kde-format
+msgid "Replace &All"
+msgstr "جایگزینی &همه‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: kbetterthankdialogbase.ui:60
+#, kde-format
+msgid "&Skip"
+msgstr "&پرش‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: kbetterthankdialogbase.ui:67
+#, kde-format
+msgid "Skip A&ll"
+msgstr "پرش &همه‌"
+
+#: kwalleteditor.cpp:86
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: kwalleteditor.cpp:95
+#, kde-format
+msgid "&Show values"
+msgstr "&نمایش مقادیر‌"
+
+#: kwalleteditor.cpp:195
+#, kde-format
+msgid "&New Folder..."
+msgstr "پوشه &جدید...‌"
+
+#: kwalleteditor.cpp:199
+#, kde-format
+msgid "&Delete Folder"
+msgstr "&حذف پوشه‌"
+
+#: kwalleteditor.cpp:202
+#, fuzzy, kde-format
+#| msgid "&Merge Wallet..."
+msgid "&Import a wallet..."
+msgstr "&ادغام Wallet...‌"
+
+#: kwalleteditor.cpp:205
+#, kde-format
+msgid "&Import XML..."
+msgstr "&واردات XML...‌"
+
+#: kwalleteditor.cpp:208
+#, fuzzy, kde-format
+#| msgid "&Import XML..."
+msgid "&Export as XML..."
+msgstr "&واردات XML...‌"
+
+#: kwalleteditor.cpp:211
+#, kde-format
+msgid "&Copy"
+msgstr ""
+
+#: kwalleteditor.cpp:216
+#, kde-format
+msgid "&New..."
+msgstr "&جدید...‌"
+
+#: kwalleteditor.cpp:221
+#, kde-format
+msgid "&Rename"
+msgstr "&تغییر نام‌"
+
+#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#, kde-format
+msgid "&Delete"
+msgstr "&حذف‌"
+
+#: kwalleteditor.cpp:231
+#, fuzzy, kde-format
+#| msgid "Show &Contents"
+msgid "Always show contents"
+msgstr "نمایش &محتویات‌"
+
+#: kwalleteditor.cpp:235
+#, fuzzy, kde-format
+#| msgid "Hide &Contents"
+msgid "Always hide contents"
+msgstr "مخفی کردن &محتویات‌"
+
+#: kwalleteditor.cpp:344
+#, kde-format
+msgid "Passwords"
+msgstr "اسم رمزها"
+
+#: kwalleteditor.cpp:345
+#, kde-format
+msgid "Maps"
+msgstr "نگاشتها"
+
+#: kwalleteditor.cpp:346
+#, kde-format
+msgid "Binary Data"
+msgstr "داده دوگانی"
+
+#: kwalleteditor.cpp:347
+#, kde-format
+msgid "Unknown"
+msgstr "ناشناخته"
+
+#: kwalleteditor.cpp:387
+#, kde-format
+msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
+msgstr "مطمئن هستید که می‌خواهید پوشه »%1«  را از Wallet حذف کنید؟"
+
+#: kwalleteditor.cpp:391
+#, kde-format
+msgid "Error deleting folder."
+msgstr "خطای حذف پوشه."
+
+#: kwalleteditor.cpp:410
+#, kde-format
+msgid "New Folder"
+msgstr "پوشه جدید"
+
+#: kwalleteditor.cpp:411
+#, kde-format
+msgid "Please choose a name for the new folder:"
+msgstr "لطفاً برای پوشه جدید نامی انتخاب کنید:"
+
+#: kwalleteditor.cpp:420
+#, kde-format
+msgid "Sorry, that folder name is in use. Try again?"
+msgstr "متأسفم، این نام پوشه استفاده شده است. دوباره سعی می‌کنید؟"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#, kde-format
+msgid "Try Again"
+msgstr "سعی مجدد"
+
+#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#, kde-format
+msgid "Do Not Try"
+msgstr "سعی نشود"
+
+#: kwalleteditor.cpp:459
+#, kde-format
+msgid "Error saving entry. Error code: %1"
+msgstr "خطای ذخیره مدخل. کد خطا:  %1"
+
+#: kwalleteditor.cpp:480
+#, kde-format
+msgid ""
+"The contents of the current item has changed.\n"
+"Do you want to save changes?"
+msgstr "محتویات فقره اخیر تغییر یافته. میخواهید تغییرات ذخیره شود؟"
+
+#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#, kde-format
+msgid "Password: %1"
+msgstr "اسم رمز: %1"
+
+#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#, kde-format
+msgid "Name-Value Map: %1"
+msgstr "نگاشت نام-مقدار: %1"
+
+#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#, kde-format
+msgid "Binary Data: %1"
+msgstr "داده دوگانی : %1"
+
+#: kwalleteditor.cpp:766
+#, kde-format
+msgid "New Entry"
+msgstr "مدخل جدید"
+
+#: kwalleteditor.cpp:767
+#, kde-format
+msgid "Please choose a name for the new entry:"
+msgstr "لطفاً برای مدخل جدید نامی انتخاب کنید:"
+
+#: kwalleteditor.cpp:777
+#, kde-format
+msgid "Sorry, that entry already exists. Try again?"
+msgstr "متأسفم، این مدخل استفاده شده است. دوباره سعی می‌کنید؟"
+
+#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#, kde-format
+msgid "An unexpected error occurred trying to add the new entry"
+msgstr "هنگام سعی برای افزودن مدخل جدید، خطای غیرمنتظره‌ای رخ داد"
+
+#: kwalleteditor.cpp:855
+#, kde-format
+msgid "An unexpected error occurred trying to rename the entry"
+msgstr "هنگام سعی برای افزودن مدخل جدید، خطای غیرمنتظره‌ای رخ داد"
+
+#: kwalleteditor.cpp:875
+#, kde-format
+msgid "Are you sure you wish to delete the item '%1'?"
+msgstr "مطمئنید که می‌خواهید فقره »%1« را حذف کنید؟"
+
+#: kwalleteditor.cpp:879
+#, kde-format
+msgid "An unexpected error occurred trying to delete the entry"
+msgstr "هنگام سعی برای حذف مدخل، خطای غیرمنتظره‌ای رخ داد"
+
+#: kwalleteditor.cpp:907
+#, kde-format
+msgid "Unable to open the requested wallet."
+msgstr "قادر به باز کردن  wallet درخواست‌شده نیست."
+
+#: kwalleteditor.cpp:943
+#, fuzzy, kde-format
+#| msgid "Unable to access XML file '<b>%1</b>'."
+msgid "Unable to create temporary file for downloading '<b>%1</b>'."
+msgstr "قادر به دستیابی به پرونده  XML«<b>%1</b>» نیست."
+
+#: kwalleteditor.cpp:950
+#, kde-format
+msgid "Unable to access wallet '<b>%1</b>'."
+msgstr "قادر به دستیابی به wallet »<b>%1</b>« نیست."
+
+#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
+#: kwalleteditor.cpp:1127
+#, kde-format
+msgid ""
+"Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
+"replace it?"
+msgstr ""
+"پوشه «<b>%1</b>» حاوی مدخل «<b>%2</b>» بوده است. می‌خوهید آن را جایگزین کنید؟"
+
+#: kwalleteditor.cpp:1085
+#, kde-format
+msgid "Unable to access XML file '<b>%1</b>'."
+msgstr "قادر به دستیابی به پرونده  XML«<b>%1</b>» نیست."
+
+#: kwalleteditor.cpp:1091
+#, kde-format
+msgid "Error reading XML file '<b>%1</b>' for input."
+msgstr "خطای خواندن پرونده XML«<b>%1</b>» برای ورودی."
+
+#: kwalleteditor.cpp:1097
+#, kde-format
+msgid "Error: XML file does not contain a wallet."
+msgstr "خطا: پرونده XML شامل wallet نیست."
+
+#: kwalleteditor.cpp:1248
+#, fuzzy, kde-format
+#| msgid "Unable to access wallet '<b>%1</b>'."
+msgid "Unable to store to '<b>%1</b>'."
+msgstr "قادر به دستیابی به wallet »<b>%1</b>« نیست."
+
+#: kwalletmanager.cpp:69
+#, kde-format
+msgid ""
+"The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
+"the KWalletManager will quit as it cannot work without reading the wallets."
+msgstr ""
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:281
+#, fuzzy, kde-format
+#| msgid "KDE Wallet"
+msgid "Wallet"
+msgstr "KDE Wallet"
+
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#, kde-format
+msgid "No wallets open."
+msgstr "هیچ wallet باز نشده است."
+
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#, kde-format
+msgid "A wallet is open."
+msgstr "یک wallet باز است."
+
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#, kde-format
+msgid "&New Wallet..."
+msgstr "Wallet &جدید...‌"
+
+#: kwalletmanager.cpp:139
+#, fuzzy, kde-format
+#| msgid "Delete Wallet"
+msgid "&Delete Wallet..."
+msgstr "wallet حذف"
+
+#: kwalletmanager.cpp:144
+#, kde-format
+msgid "Export as encrypted"
+msgstr ""
+
+#: kwalletmanager.cpp:149
+#, kde-format
+msgid "&Import encrypted"
+msgstr ""
+
+#: kwalletmanager.cpp:154
+#, kde-format
+msgid "Configure &Wallet..."
+msgstr "پیکربندی &Wallet...‌"
+
+#: kwalletmanager.cpp:162
+#, kde-format
+msgid "Close &All Wallets"
+msgstr "بستن &همه Walletها‌"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"قادر به دقیق بستن wallet نیست. ممکن است توسط کاربردهای دیگر استفاده شده "
+"باشد. می‌خواهید به اجبار آن را ببندید؟"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Force Closure"
+msgstr "بستن اجباری"
+
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#, kde-format
+msgid "Do Not Force"
+msgstr "بدون اجبار"
+
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#, kde-format
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "قادر به بستن اجباری  wallet نیست. کد خطا، %1 بود."
+
+#: kwalletmanager.cpp:273
+#, kde-format
+msgid "Error opening wallet %1."
+msgstr "خطای باز کردن wallet %1."
+
+#: kwalletmanager.cpp:315
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "لطفاً، برای wallet جدید نامی انتخاب کنید:"
+
+#: kwalletmanager.cpp:326
+#, kde-format
+msgid "New Wallet"
+msgstr "wallet جدید"
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Empty name is not supported. Please select a new one."
+msgstr ""
+
+#: kwalletmanager.cpp:348
+#, kde-format
+msgid "Create new wallet"
+msgstr ""
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Sorry, that wallet already exists. Try a new name?"
+msgstr ""
+"متأسفم. این wallet  از قبل وجود داشته است. یک نام جدید را امتحان می‌کنید؟"
+
+#: kwalletmanager.cpp:353
+#, kde-format
+msgid "Try New"
+msgstr "امتحان نام جدید"
+
+#: kwalletmanager.cpp:378
+#, kde-format
+msgid "Are you sure you wish to delete the wallet '%1'?"
+msgstr "مطمئنید که می‌خواهید wallet  « %1» را حذف کنید؟"
+
+#: kwalletmanager.cpp:384
+#, kde-format
+msgid "Unable to delete the wallet. Error code was %1."
+msgstr "قادر به حذف wallet نیست. کد خطا، %1 بود."
+
+#: kwalletmanager.cpp:432
+#, fuzzy, kde-format
+#| msgid "A wallet name"
+msgid "File name"
+msgstr "نام wallet"
+
+#: kwalletmanager.cpp:439
+#, kde-format
+msgid "Failed to open file for writing"
+msgstr ""
+
+#: kwalletmanager.cpp:450
+#, kde-format
+msgid "Select file"
+msgstr ""
+
+#: kwalletmanager.cpp:460
+#, kde-format
+msgid "Failed to open file"
+msgstr ""
+
+#: kwalletmanager.cpp:473
+#, kde-format
+msgid "Wallet named %1 already exists, Operation aborted"
+msgstr ""
+
+#: kwalletmanager.cpp:480
+#, kde-format
+msgid "Failed to copy files"
+msgstr ""
+
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#, kde-format
+msgid "Ignore unsaved changes?"
+msgstr ""
+
+#. i18n: ectx: Menu (file)
+#: kwalletmanager.rc:4
+#, kde-format
+msgid "&File"
+msgstr "&پرونده‌"
+
+#. i18n: ectx: Menu (settings)
+#: kwalletmanager.rc:17
+#, kde-format
+msgid "&Settings"
+msgstr "&تنظیمات‌"
+
+#. i18n: ectx: Menu (help)
+#: kwalletmanager.rc:20
+#, kde-format
+msgid "&Help"
+msgstr "&کمک‌"
+
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#, kde-format
+msgid "&Open..."
+msgstr "&باز کردن...‌"
+
+#: kwalletpopup.cpp:38
+#, kde-format
+msgid "Change &Password..."
+msgstr "تغییر &اسم رمز...‌"
+
+#: kwalletpopup.cpp:53
+#, kde-format
+msgid "Disconnec&t"
+msgstr "&قطع ارتباط‌"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Key"
+msgstr "کلید"
+
+#: kwmapeditor.cpp:129
+#, kde-format
+msgid "Value"
+msgstr "مقدار"
+
+#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#, fuzzy, kde-format
+#| msgid "New Entry"
+msgid "Delete Entry"
+msgstr "مدخل جدید"
+
+#: kwmapeditor.cpp:216
+#, kde-format
+msgid "&New Entry"
+msgstr "مدخل &جدید‌"
+
+#: main.cpp:31
+#, fuzzy, kde-format
+#| msgid "KDE Wallet Manager"
+msgid "Wallet Manager"
+msgstr "مدیر KDE Wallet"
+
+#: main.cpp:33
+#, kde-format
+msgid "KDE Wallet Management Tool"
+msgstr "ابزار مدیریت KDE Wallet"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright ©2013–2017, KWallet Manager authors"
+msgstr ""
+
+#: main.cpp:39
+#, kde-format
+msgid "Valentin Rusu"
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgid "Maintainer, user interface refactoring"
+msgstr ""
+
+#: main.cpp:42
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:43
+#, kde-format
+msgid "Original author and former maintainer"
+msgstr "نویسنده اصلی و نگه‌دارنده قبلی"
+
+#: main.cpp:45
+#, kde-format
+msgid "Michael Leupold"
+msgstr "Michael Leupold"
+
+#: main.cpp:46
+#, fuzzy, kde-format
+#| msgid "Original author and former maintainer"
+msgid "Developer and former maintainer"
+msgstr "نویسنده اصلی و نگه‌دارنده قبلی"
+
+#: main.cpp:48
+#, kde-format
+msgid "Isaac Clerencia"
+msgstr "Isaac Clerencia"
+
+#: main.cpp:49
+#, kde-format
+msgid "Developer"
+msgstr "توسعه‌دهنده"
+
+#: main.cpp:57
+#, kde-format
+msgid "Show window on startup"
+msgstr "نمایش پنجره هنگام راه‌اندازی‌"
+
+#: main.cpp:58
+#, kde-format
+msgid "For use by kwalletd only"
+msgstr "فقط برای استفاده توسط  kwalletd"
+
+#: main.cpp:59
+#, kde-format
+msgid "A wallet name"
+msgstr "نام wallet"
+
+#: revokeauthbutton.cpp:16
+#, kde-format
+msgid "Revoke Authorization"
+msgstr ""
+
+#: walletcontrolwidget.cpp:59
+#, kde-format
+msgid "&Close"
+msgstr ""
+
+#: walletcontrolwidget.cpp:76
+#, fuzzy, kde-format
+#| msgid "A wallet is open."
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open"
+msgstr "یک wallet باز است."
+
+#: walletcontrolwidget.cpp:93
+#, kde-format
+msgid "The wallet is currently closed"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: walletcontrolwidget.ui:28
+#, kde-format
+msgid "KSqueezedTextLabel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: walletcontrolwidget.ui:35
+#, fuzzy, kde-format
+#| msgid "&Open..."
+msgid "Open..."
+msgstr "&باز کردن...‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: walletcontrolwidget.ui:58
+#, fuzzy, kde-format
+#| msgid "Change &Password..."
+msgid "Change Password..."
+msgstr "تغییر &اسم رمز...‌"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: walletcontrolwidget.ui:76
+#, fuzzy, kde-format
+#| msgid "Hide &Contents"
+msgid "Contents"
+msgstr "مخفی کردن &محتویات‌"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: walletcontrolwidget.ui:115
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: walletwidget.ui:142
+#, kde-format
+msgid "Hide &Contents"
+msgstr "مخفی کردن &محتویات‌"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: walletwidget.ui:185 walletwidget.ui:233
+#, kde-format
+msgid "Show &Contents"
+msgstr "نمایش &محتویات‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
+#: walletwidget.ui:296
+#, kde-format
+msgid "&Undo"
+msgstr "&واگرد‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
+#: walletwidget.ui:306
+#, kde-format
+msgid "&Save"
+msgstr "&ذخیره کردن‌"
+
+#, fuzzy
+#~| msgid "Open Wallet"
+#~ msgid "Open Wallet..."
+#~ msgstr "wallet بازکردن"
+
+#~ msgid "Error opening XML file '<b>%1</b>' for input."
+#~ msgstr "خطای باز کردن پرونده XML «<b>%1</b>»  برای ورودی."
+
+#, fuzzy
+#~| msgid ""
+#~| "This is a binary data entry.  It cannot be editted as its format is "
+#~| "unknown and application specific."
+#~ msgid ""
+#~ "This is a binary data entry.  It cannot be edited as its format is "
+#~ "unknown and application specific."
+#~ msgstr ""
+#~ "این یک مدخل داده دوگانی است. به دلیل این که قالب آن ناشناخته و مشخصاً "
+#~ "کاربردی است، قابل ویرایش نیست."
+
+#~ msgid "(c) 2003,2004 George Staikos"
+#~ msgstr "(c) 2003,2004 George Staikos"
+
+#~ msgid "Maintainer"
+#~ msgstr "نگهدارنده"
+
+#~ msgid "&Export..."
+#~ msgstr "&صادرات...‌"
+
+#, fuzzy
+#~| msgid "Change &Password..."
+#~ msgid "Change password..."
+#~ msgstr "تغییر &اسم رمز...‌"
+
+#~ msgid "That wallet file already exists.  You cannot overwrite wallets."
+#~ msgstr ""
+#~ "این پرونده wallet از قبل وجود داشته است. walletها را نمی‌توانید رونوشت "
+#~ "کنید."
+
+#~ msgid ""
+#~ "This wallet was forced closed.  You must reopen it to continue working "
+#~ "with it."
+#~ msgstr ""
+#~ "این Wallet به اجبار بسته شده بود. برای ادامه کار با آن، باید دوباره آن را "
+#~ "باز کنید."
+
+#~ msgid "Please choose a name that contains only alphanumeric characters:"
+#~ msgstr "لطفاً، نامی انتخاب کنید که فقط حاوی نویسه‌های الفبایی عددی باشد:"

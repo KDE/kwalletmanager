@@ -1,0 +1,281 @@
+# translation of kcmkwallet.po to Thai
+#
+# Sahachart Anukulkitch <drrider@gmail.com>, 2006.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"PO-Revision-Date: 2010-05-01 10:29+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com, drrider@gmail.com"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "มอดูลศูนย์ควบคุมกระเป๋าคุมข้อมูลสำหรับ KDE"
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "สงวนลิขสิทธิ์ (c) 2003 George Staikos"
+
+#: konfigurator.cpp:53
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr "สร้างกระเป๋าคุมข้อมูลใหม่"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "โปรดเลือกชื่อสำหรับกระเป๋าคุมข้อมูลอันใหม่:"
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "อนุญาตเสมอ"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "ปฏิเสธเสมอ"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr ""
+
+#: konfigurator.cpp:278
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr "มอดูลการปรับแต่งตัวนี้ จะอนุญาตให้คุณได้ทำการปรับแต่งระบบกระเป๋าคุมข้อมูลสำหรับ KDE"
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "&ลบ"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "ตั้งค่ากระเป๋าคุมข้อมูล"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>The wallet subsystem provides a convenient and secure way to manage "
+#| "all your passwords.  This option specifies whether or not you want to use "
+#| "it.</p>"
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+"<p>ระบบกระเป๋าคุมข้อมูล จะช่วยให้คุณสามารถจัดการกับรหัสผ่านต่าง ๆ ทั้งหมดของคุณ "
+"ที่อาจจะมีความแตกต่างกัน รวมถึงข้อมูลบางอย่าง ได้อย่างง่ายดายและปลอดภัย</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "เ&ปิดใช้ระบบกระเป๋าคุมข้อมูลของ KDE"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+"จะเป็นการดีที่สุด หากคุณจะให้มีการปิดการทำงานของกระเป๋าคุมข้อมูลทุกครั้ง เมื่อคุณไม่ได้ใช้งานมันแล้ว"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "ปิดกระเป๋าคุมข้อมูล"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>ปิดกระเป๋าคุมข้อมูล หลังจากช่วงเวลาหนึ่งที่ไม่มีการใช้งานมันแล้ว</b><br>เมื่อปิดกระเป๋าแล้ว "
+"หากมีการใช้งานมันอีก จะต้องป้อนรหัสผ่านใหม่อีกครั้ง</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, kde-format
+msgid "Close when unused for:"
+msgstr "ปิดกระเป๋าเมื่อไม่ได้ใช้นานเกิน:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid " minutes"
+msgstr " นาที"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>ปิดกระเป๋าให้เร็วที่สุดเมื่อโปรแกรมรักษาจอภาพเริ่มการทำงาน</"
+"b><br><br>เมื่อปิดกระเป๋าแล้ว หากมีการใช้งานมันอีก จะต้องป้อนรหัสผ่านใหม่อีกครั้ง</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, kde-format
+msgid "Close when screensaver starts"
+msgstr "ปิดกระเป๋าเมื่อโปรแกรมรักษาจอภาพเริ่มการทำงาน"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+"<p><b>ปิดกระเป๋าให้เร็วที่สุดเมื่อโปรแกรมที่ใช้งานกระเป๋าได้หยุดการทำงานแล้ว</b><br> "
+"แต่ทั้งนี้กระเป๋าจะถูกปิดเมื่อโปรแกรมที่ใช้งานกระเป๋าทุกตัวหยุดการทำงานแล้ว<br>และเมื่อปิดกระเป๋าแล้ว "
+"หากมีการใช้งานมันอีก จะต้องป้อนรหัสผ่านใหม่อีกครั้ง</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr "ปิดกระเป๋าเมื่อโปรแกรมตัวสุดท้ายที่ใช้กระเป๋าจบการทำงาน"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "เลือกกระเป๋าคุมข้อมูลให้อัตโนมัติ"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, kde-format
+msgid "Select wallet to use as default:"
+msgstr "เลือกกระเป๋าที่จะใช้เป็นกระเป๋าปริยาย:"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "สร้างใหม่..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr "แยกเก็บรหัสผ่านภายในระบบในกระเป๋าแยกต่างหาก:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "จัดการกระเป๋าคุมข้อมูล"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, kde-format
+msgid "Show manager in system tray"
+msgstr "แสดงไอคอนตัวจัดการในถาดระบบด้วย"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "ซ่อนไอคอนบนถาดระบบเมื่อปิดกระเป๋าทุกใบแล้ว"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Enable Secret Service DBus API"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:315
+#, kde-format
+msgid "Access Control"
+msgstr "ควบคุมการเข้าใช้"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:321
+#, fuzzy, kde-format
+#| msgid "&Prompt when an application accesses an open wallet"
+msgid "&Prompt when an application accesses a wallet"
+msgstr "แ&จ้งให้ทราบเมื่อมีโปรแกรมเข้าใช้งานกระเป๋าที่เปิด"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:335
+#, kde-format
+msgid "Wallet"
+msgstr "กระเป๋าคุมข้อมูล"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:346
+#, kde-format
+msgid "Application"
+msgstr "โปรแกรม"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:357
+#, kde-format
+msgid "Policy"
+msgstr "นโยบาย"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:393
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "เ&รียกตัวจัดการกระเป๋าคุมข้อมูล"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
