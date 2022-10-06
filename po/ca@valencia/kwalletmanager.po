@@ -92,7 +92,7 @@ msgstr "Desconnecta"
 #: kbetterthankdialogbase.ui:43
 #, kde-format
 msgid "&Replace"
-msgstr "&Substituïx"
+msgstr "Su&bstituïx"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
 #: kbetterthankdialogbase.ui:53
@@ -160,7 +160,7 @@ msgstr "&Nova..."
 #: kwalleteditor.cpp:221
 #, kde-format
 msgid "&Rename"
-msgstr "&Canvia el nom"
+msgstr "Ca&nvia el nom"
 
 #: kwalleteditor.cpp:226 kwalletpopup.cpp:65
 #, kde-format
@@ -504,7 +504,7 @@ msgstr "Voleu ignorar els canvis sense guardar?"
 #: kwalletmanager.rc:4
 #, kde-format
 msgid "&File"
-msgstr "&Fitxer"
+msgstr "Fi&txer"
 
 #. i18n: ectx: Menu (settings)
 #: kwalletmanager.rc:17
@@ -521,7 +521,7 @@ msgstr "A&juda"
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
 #, kde-format
 msgid "&Open..."
-msgstr "&Obri..."
+msgstr "O&bri..."
 
 #: kwalletpopup.cpp:38
 #, kde-format
