@@ -35,15 +35,15 @@
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QRegExpValidator>
 #endif
-#include <QTimer>
-#include <QFileDialog>
 #include <QDialog>
-#include <QLineEdit>
 #include <QFile>
+#include <QFileDialog>
 #include <QFileInfo>
+#include <QLineEdit>
 #include <QMimeDatabase>
 #include <QMimeType>
-
+#include <QTimer>
+#include <kwidgetsaddons_version.h>
 
 KWalletManager::KWalletManager(QCommandLineParser *commandLineParser)
     : KXmlGuiWindow()
@@ -65,9 +65,21 @@ void KWalletManager::beginConfiguration() {
     if (walletConfigGroup.readEntry("Enabled", true)){
         QTimer::singleShot(0, this, &KWalletManager::configUI);
     } else {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        int rc = KMessageBox::warningTwoActions(this,
+#else
         int rc = KMessageBox::warningYesNo(this,
-            i18n("The KDE Wallet system is not enabled. Do you want me to enable it? If not, the KWalletManager will quit as it cannot work without reading the wallets."));
+#endif
+                                                i18n("The KDE Wallet system is not enabled. Do you want me to enable it? If not, the KWalletManager will quit "
+                                                     "as it cannot work without reading the wallets."),
+                                                {},
+                                                KStandardGuiItem::ok(),
+                                                KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (rc == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (rc == KMessageBox::Yes) {
+#endif
             walletConfigGroup.writeEntry("Enabled", true);
             QTimer::singleShot(0, this, &KWalletManager::configUI);
         } else {
@@ -250,8 +262,21 @@ void KWalletManager::closeWallet(const QString &walletName)
 
     int rc = KWallet::Wallet::closeWallet(walletName, false);
     if (rc != 0) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        rc =
+            KMessageBox::warningTwoActions(this,
+                                           i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"),
+                                           QString(),
+                                           KGuiItem(i18n("Force Closure")),
+                                           KGuiItem(i18n("Do Not Force")));
+#else
         rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString(), KGuiItem(i18n("Force Closure")), KGuiItem(i18n("Do Not Force")));
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (rc == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (rc == KMessageBox::Yes) {
+#endif
             rc = KWallet::Wallet::closeWallet(walletName, true);
             if (rc != 0) {
                 KMessageBox::error(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));
@@ -350,8 +375,20 @@ void KWalletManager::createWallet()
         }
 
         if (_managerWidget->hasWallet(name)) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            int rc = KMessageBox::questionTwoActions(this,
+                                                     i18n("Sorry, that wallet already exists. Try a new name?"),
+                                                     QString(),
+                                                     KGuiItem(i18n("Try New")),
+                                                     KGuiItem(i18n("Do Not Try")));
+#else
             int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that wallet already exists. Try a new name?"), QString(), KGuiItem(i18n("Try New")), KGuiItem(i18n("Do Not Try")));
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (rc == KMessageBox::ButtonCode::SecondaryAction) {
+#else
             if (rc == KMessageBox::No) {
+#endif
                 return;
             }
             lineEdit->clear();
@@ -490,8 +527,16 @@ bool KWalletManager::hasUnsavedChanges(const QString &name) const
 
 bool KWalletManager::canIgnoreUnsavedChanges()
 {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    int rc = KMessageBox::warningTwoActions(this, i18n("Ignore unsaved changes?"), {}, KGuiItem(i18n("Ignore")), KStandardGuiItem::cancel());
+#else
     int rc = KMessageBox::warningYesNo(this, i18n("Ignore unsaved changes?"));
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    return (rc == KMessageBox::ButtonCode::PrimaryAction);
+#else
     return (rc == KMessageBox::Yes);
+#endif
 }
 
 void KWalletManager::handleActivate(const QStringList &arguments, const QString &workingDirectory)

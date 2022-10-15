@@ -49,6 +49,7 @@
 
 #include <cassert>
 #include <cstdlib>
+#include <kwidgetsaddons_version.h>
 
 QAction *KWalletEditor::_newFolderAction = nullptr;
 QAction *KWalletEditor::_deleteFolderAction = nullptr;
@@ -417,8 +418,20 @@ void KWalletEditor::createFolder()
             }
 
             if (_entryList->existsFolder(n)) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                int rc = KMessageBox::questionTwoActions(this,
+                                                         i18n("Sorry, that folder name is in use. Try again?"),
+                                                         QString(),
+                                                         KGuiItem(i18n("Try Again")),
+                                                         KGuiItem(i18n("Do Not Try")));
+#else
                 int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that folder name is in use. Try again?"), QString(), KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                if (rc == KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 if (rc == KMessageBox::Yes) {
+#endif
                     continue;
                 }
                 n.clear();
@@ -476,8 +489,17 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
 {
     // do not forget to save changes
     if (_saveChanges->isEnabled() && _displayedItem && (_displayedItem != item)) {
-        if (KMessageBox::Yes ==  KMessageBox::questionYesNo(this,
-                i18n("The contents of the current item has changed.\nDo you want to save changes?"))) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (KMessageBox::ButtonCode::PrimaryAction
+            == KMessageBox::questionTwoActions(this,
+#else
+        if (KMessageBox::Yes
+            == KMessageBox::questionYesNo(this,
+#endif
+                                               i18n("The contents of the current item has changed.\nDo you want to save changes?"),
+                                               {},
+                                               KStandardGuiItem::save(),
+                                               KStandardGuiItem::cancel())) {
             saveEntry();
         } else {
             _saveChanges->setEnabled(false);
@@ -774,8 +796,20 @@ void KWalletEditor::newEntry()
 
         // FIXME: prohibits the use of the subheadings
         if (fi->contains(n)) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            int rc = KMessageBox::questionTwoActions(this,
+                                                     i18n("Sorry, that entry already exists. Try again?"),
+                                                     QString(),
+                                                     KGuiItem(i18n("Try Again")),
+                                                     KGuiItem(i18n("Do Not Try")));
+#else
             int rc = KMessageBox::questionYesNo(this, i18n("Sorry, that entry already exists. Try again?"), QString(), KGuiItem(i18n("Try Again")), KGuiItem(i18n("Do Not Try")));
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (rc == KMessageBox::ButtonCode::PrimaryAction) {
+#else
             if (rc == KMessageBox::Yes) {
+#endif
                 continue;
             }
             n.clear();
