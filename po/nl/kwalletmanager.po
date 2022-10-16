@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"POT-Creation-Date: 2022-10-16 00:51+0000\n"
 "PO-Revision-Date: 2017-07-05 11:55+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -34,39 +34,39 @@ msgid "Your emails"
 msgstr ""
 "wilbert@kde.nl,tomalbers@kde.nl,rinsedevries@kde.nl,freekdekruijf@kde.nl"
 
-#: allyourbase.cpp:202
+#: allyourbase.cpp:203
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Een item met de naam '%1' bestaat al. Wilt u doorgaan?"
 
-#: allyourbase.cpp:226
+#: allyourbase.cpp:229 allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Er bestaat reeds een map met de naam '%1'. Wat wilt u doen?"
 
-#: allyourbase.cpp:226
+#: allyourbase.cpp:232 allyourbase.cpp:234
 #, kde-format
 msgid "Replace"
 msgstr "Vervangen"
 
-#: allyourbase.cpp:336
+#: allyourbase.cpp:349
 #, kde-format
 msgid "Folders"
 msgstr "Mappen"
 
-#: allyourbase.cpp:370
+#: allyourbase.cpp:383
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr ""
 "Er deed zich een onverwachte fout voor tijdens het verslepen van het item"
 
-#: allyourbase.cpp:446
+#: allyourbase.cpp:459
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr ""
 "Er deed zich een onverwachte fout voor tijdens het verslepen van het item"
 
-#: allyourbase.cpp:470
+#: allyourbase.cpp:483
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -118,132 +118,134 @@ msgstr "Over&slaan"
 msgid "Skip A&ll"
 msgstr "A&lles overslaan"
 
-#: kwalleteditor.cpp:86
+#: kwalleteditor.cpp:87
 #, kde-format
 msgid "Search"
 msgstr "Zoeken"
 
-#: kwalleteditor.cpp:95
+#: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
 msgstr "Waarden &tonen"
 
-#: kwalleteditor.cpp:195
+#: kwalleteditor.cpp:196
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Nieuwe map..."
 
-#: kwalleteditor.cpp:199
+#: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
 msgstr "Map verwij&deren"
 
-#: kwalleteditor.cpp:202
+#: kwalleteditor.cpp:203
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "Een portefeuille &importeren..."
 
-#: kwalleteditor.cpp:205
+#: kwalleteditor.cpp:206
 #, kde-format
 msgid "&Import XML..."
 msgstr "XML &importeren..."
 
-#: kwalleteditor.cpp:208
+#: kwalleteditor.cpp:209
 #, kde-format
 msgid "&Export as XML..."
 msgstr "Als XML &exporteren..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:212
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopiëren"
 
-#: kwalleteditor.cpp:216
+#: kwalleteditor.cpp:217
 #, kde-format
 msgid "&New..."
 msgstr "&Nieuw..."
 
-#: kwalleteditor.cpp:221
+#: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Rename"
 msgstr "He&rnoemen"
 
-#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:227 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
 msgstr "Verwij&deren"
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:232
 #, kde-format
 msgid "Always show contents"
 msgstr "Altijd inhoud tonen"
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:236
 #, kde-format
 msgid "Always hide contents"
 msgstr "Altijd inhoud verbergen"
 
-#: kwalleteditor.cpp:344
+#: kwalleteditor.cpp:345
 #, kde-format
 msgid "Passwords"
 msgstr "Wachtwoorden"
 
-#: kwalleteditor.cpp:345
+#: kwalleteditor.cpp:346
 #, kde-format
 msgid "Maps"
 msgstr "Kaarten"
 
-#: kwalleteditor.cpp:346
+#: kwalleteditor.cpp:347
 #, kde-format
 msgid "Binary Data"
 msgstr "Binaire gegevens"
 
-#: kwalleteditor.cpp:347
+#: kwalleteditor.cpp:348
 #, kde-format
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: kwalleteditor.cpp:387
+#: kwalleteditor.cpp:388
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Wilt u de map '%1' uit de portefeuille verwijderen?"
 
-#: kwalleteditor.cpp:391
+#: kwalleteditor.cpp:392
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Fout bij verwijderen van map."
 
-#: kwalleteditor.cpp:410
+#: kwalleteditor.cpp:411
 #, kde-format
 msgid "New Folder"
 msgstr "Nieuwe map"
 
-#: kwalleteditor.cpp:411
+#: kwalleteditor.cpp:412
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Geef een naam voor de nieuwe map:"
 
-#: kwalleteditor.cpp:420
+#: kwalleteditor.cpp:423 kwalleteditor.cpp:428
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Die naam is al in gebruik! Opnieuw proberen?"
 
-#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#: kwalleteditor.cpp:425 kwalleteditor.cpp:428 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:806
 #, kde-format
 msgid "Try Again"
 msgstr "Opnieuw proberen"
 
-#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
+#: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
 #, kde-format
 msgid "Do Not Try"
 msgstr "Niet proberen"
 
-#: kwalleteditor.cpp:459
+#: kwalleteditor.cpp:472
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Er trad een fout op bij het opslaan van het item. De foutcode is %1"
 
-#: kwalleteditor.cpp:480
+#: kwalleteditor.cpp:499
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -252,77 +254,77 @@ msgstr ""
 "De inhoud van het huidige item is gewijzigd.\n"
 "Wilt u wijzigingen opslaan?"
 
-#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#: kwalleteditor.cpp:553 kwalleteditor.cpp:893
 #, kde-format
 msgid "Password: %1"
 msgstr "Wachtwoord: %1"
 
-#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:895
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Naam-waarde kaart: %1"
 
-#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:897
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binaire gegevens: %1"
 
-#: kwalleteditor.cpp:766
+#: kwalleteditor.cpp:788
 #, kde-format
 msgid "New Entry"
 msgstr "Nieuw item"
 
-#: kwalleteditor.cpp:767
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Geef een naam voor het nieuwe item:"
 
-#: kwalleteditor.cpp:777
+#: kwalleteditor.cpp:801 kwalleteditor.cpp:806
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Deze naam is al in gebruik! Opnieuw proberen?"
 
-#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:828 kwalleteditor.cpp:837
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr ""
 "Er deed zich een onverwachte fout voor tijdens het toevoegen van het nieuwe "
 "item"
 
-#: kwalleteditor.cpp:855
+#: kwalleteditor.cpp:889
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr ""
 "Er deed zich een onverwachte fout voor tijdens het hernoemen van het item"
 
-#: kwalleteditor.cpp:875
+#: kwalleteditor.cpp:909
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Wilt u het item '%1' verwijderen?"
 
-#: kwalleteditor.cpp:879
+#: kwalleteditor.cpp:913
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr ""
 "Er deed zich een onverwachte fout voor tijdens het verwijderen van het item"
 
-#: kwalleteditor.cpp:907
+#: kwalleteditor.cpp:941
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "De gevraagde portefeuille kon niet worden geopend."
 
-#: kwalleteditor.cpp:943
+#: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "kan geen tijdelijk bestand aanmaken voor het downloaden '<b>%1</b>'."
 
-#: kwalleteditor.cpp:950
+#: kwalleteditor.cpp:984
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Geen toegang tot portefeuille '<b>%1</b>'."
 
-#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
-#: kwalleteditor.cpp:1127
+#: kwalleteditor.cpp:1015 kwalleteditor.cpp:1045 kwalleteditor.cpp:1079
+#: kwalleteditor.cpp:1161
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -331,27 +333,27 @@ msgstr ""
 "De map '<b>%1</b>' bevat al een item genaamd '<b>%2</b>'. Wilt u het "
 "vervangen?"
 
-#: kwalleteditor.cpp:1085
+#: kwalleteditor.cpp:1119
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Geen toegang tot XML-bestand '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1091
+#: kwalleteditor.cpp:1125
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Fout bij lezen van XML-bestand '<b>%1</b>' voor invoer."
 
-#: kwalleteditor.cpp:1097
+#: kwalleteditor.cpp:1131
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Fout: XML-bestand bevat geen portefeuille."
 
-#: kwalleteditor.cpp:1248
+#: kwalleteditor.cpp:1282
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Kan niet opslaan naar '<b>%1</b>'."
 
-#: kwalletmanager.cpp:69
+#: kwalletmanager.cpp:73
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -361,53 +363,54 @@ msgstr ""
 "niet, dan zal de KWalletManager afsluiten omdat het niet zonder het lezen "
 "van portefeuilles kan werken."
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
-#: kwalletmanager.cpp:281
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
+#: kwalletmanager.cpp:306
 #, kde-format
 msgid "Wallet"
 msgstr "Portefeuille"
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:306
 #, kde-format
 msgid "No wallets open."
 msgstr "Geen portefeuilles open."
 
-#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:108 kwalletmanager.cpp:233
 #, kde-format
 msgid "A wallet is open."
 msgstr "Er is een portefeuille open."
 
-#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:146 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Nieuwe portefeuille..."
 
-#: kwalletmanager.cpp:139
+#: kwalletmanager.cpp:151
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "Portefeuille verwij&deren..."
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:156
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Versleuteld exporteren"
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "&Import encrypted"
 msgstr "Versleuteld &importeren"
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:166
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Portefeuille &instellen..."
 
-#: kwalletmanager.cpp:162
+#: kwalletmanager.cpp:174
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "&Alle portefeuilles sluiten"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
+#: walletcontrolwidget.cpp:128
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -416,104 +419,112 @@ msgstr ""
 "De portefeuille kon niet worden gesloten. Wellicht is deze nog in gebruik "
 "bij andere toepassingen. Wilt u de portefeuille geforceerd sluiten?"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
+#: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
 msgstr "Sluiten forceren"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
+#: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
 msgstr "Niet forceren"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr ""
 "Er trad een fout op bij het geforceerd sluiten van de portefeuille. De "
 "foutcode was: %1."
 
-#: kwalletmanager.cpp:273
+#: kwalletmanager.cpp:298
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Er trad een fout op bij het openen van de portefeuille %1."
 
-#: kwalletmanager.cpp:315
+#: kwalletmanager.cpp:340
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Geef een naam voor de nieuwe portefeuille:"
 
-#: kwalletmanager.cpp:326
+#: kwalletmanager.cpp:351
 #, kde-format
 msgid "New Wallet"
 msgstr "Nieuwe portefeuille"
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:373
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Lege naam wordt niet ondersteund. Kies een nieuwe."
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:373
 #, kde-format
 msgid "Create new wallet"
 msgstr "Nieuw portefeuille aanmaken"
 
-#: kwalletmanager.cpp:353
+#: kwalletmanager.cpp:380 kwalletmanager.cpp:385
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Deze naam is al in gebruik!  Wilt u een andere naam proberen?"
 
-#: kwalletmanager.cpp:353
+#: kwalletmanager.cpp:382 kwalletmanager.cpp:385
 #, kde-format
 msgid "Try New"
 msgstr "Nieuw proberen"
 
-#: kwalletmanager.cpp:378
+#: kwalletmanager.cpp:415
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Wilt u de portefeuille '%1' verwijderen?"
 
-#: kwalletmanager.cpp:384
+#: kwalletmanager.cpp:421
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr ""
 "Er trad een fout op bij het verwijderen van de portefeuille. De foutcode was "
 "%1."
 
-#: kwalletmanager.cpp:432
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Bestandsnaam"
 
-#: kwalletmanager.cpp:439
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Bestand openen voor schrijven is mislukt"
 
-#: kwalletmanager.cpp:450
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Bestand selecteren"
 
-#: kwalletmanager.cpp:460
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "Openen van bestand is mislukt"
 
-#: kwalletmanager.cpp:473
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Portefeuille genaamd %1 bestaat al, bewerking afgebroken"
 
-#: kwalletmanager.cpp:480
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Bestanden kopiëren is mislukt"
 
-#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
+#: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Niet opgeslagen wijzigingen negeren?"
+
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#, kde-format
+msgid "Ignore"
+msgstr ""
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
@@ -533,7 +544,7 @@ msgstr "&Instellingen"
 msgid "&Help"
 msgstr "&Help"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
 msgid "&Open..."
 msgstr "&Openen..."
@@ -643,12 +654,12 @@ msgstr "Naam van een portefeuille"
 msgid "Revoke Authorization"
 msgstr "Autorisatie intrekken"
 
-#: walletcontrolwidget.cpp:59
+#: walletcontrolwidget.cpp:60
 #, kde-format
 msgid "&Close"
 msgstr "&Sluiten"
 
-#: walletcontrolwidget.cpp:76
+#: walletcontrolwidget.cpp:77
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -656,7 +667,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open"
 msgstr "De portefeuille '%1' is nu open"
 
-#: walletcontrolwidget.cpp:93
+#: walletcontrolwidget.cpp:94
 #, kde-format
 msgid "The wallet is currently closed"
 msgstr "De portefeuille is nu gesloten"

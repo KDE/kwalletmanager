@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-04 00:49+0000\n"
+"POT-Creation-Date: 2022-10-16 00:51+0000\n"
 "PO-Revision-Date: 2018-09-04 23:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -35,37 +35,37 @@ msgid "Your emails"
 msgstr ""
 "xalba@euskalnet.net,igaztanaga@gmail.com,marcos@euskalgnu.org,hizpol@ej-gv.es"
 
-#: allyourbase.cpp:202
+#: allyourbase.cpp:203
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Dagoeneko badago '%1' izeneko sarrera bat. Jarraitu nahi duzu?"
 
-#: allyourbase.cpp:226
+#: allyourbase.cpp:229 allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Dagoeneko badago '%1' izeneko karpeta bat. Zer egin nahi duzu?"
 
-#: allyourbase.cpp:226
+#: allyourbase.cpp:232 allyourbase.cpp:234
 #, kde-format
 msgid "Replace"
 msgstr "Ordeztu"
 
-#: allyourbase.cpp:336
+#: allyourbase.cpp:349
 #, kde-format
 msgid "Folders"
 msgstr "Karpetak"
 
-#: allyourbase.cpp:370
+#: allyourbase.cpp:383
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Ustekabeko errore bat gertatu da elementua jaregiten saiatzean"
 
-#: allyourbase.cpp:446
+#: allyourbase.cpp:459
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Ustekabeko errore bat gertatu da sarrera jaregiten saiatzean"
 
-#: allyourbase.cpp:470
+#: allyourbase.cpp:483
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -115,132 +115,134 @@ msgstr "&Saltatu"
 msgid "Skip A&ll"
 msgstr "Sa&ltatu guztiak"
 
-#: kwalleteditor.cpp:86
+#: kwalleteditor.cpp:87
 #, kde-format
 msgid "Search"
 msgstr "Bilatu"
 
-#: kwalleteditor.cpp:95
+#: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
 msgstr "&Erakutsi balioak"
 
-#: kwalleteditor.cpp:195
+#: kwalleteditor.cpp:196
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Karpeta berria"
 
-#: kwalleteditor.cpp:199
+#: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
 msgstr "E&zabatu karpeta"
 
-#: kwalleteditor.cpp:202
+#: kwalleteditor.cpp:203
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "&Inportatu zorro bat..."
 
-#: kwalleteditor.cpp:205
+#: kwalleteditor.cpp:206
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Inportatu XML..."
 
-#: kwalleteditor.cpp:208
+#: kwalleteditor.cpp:209
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&Esportatu XML bezala..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:212
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopiatu"
 
-#: kwalleteditor.cpp:216
+#: kwalleteditor.cpp:217
 #, kde-format
 msgid "&New..."
 msgstr "&Berria..."
 
-#: kwalleteditor.cpp:221
+#: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Rename"
 msgstr "&Izena aldatu"
 
-#: kwalleteditor.cpp:226 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:227 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
 msgstr "E&zabatu"
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:232
 #, kde-format
 msgid "Always show contents"
 msgstr "Edukia erakutsi beti"
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:236
 #, kde-format
 msgid "Always hide contents"
 msgstr "Edukia ezkutatu beti"
 
-#: kwalleteditor.cpp:344
+#: kwalleteditor.cpp:345
 #, kde-format
 msgid "Passwords"
 msgstr "Pasahitzak"
 
-#: kwalleteditor.cpp:345
+#: kwalleteditor.cpp:346
 #, kde-format
 msgid "Maps"
 msgstr "Mapak"
 
-#: kwalleteditor.cpp:346
+#: kwalleteditor.cpp:347
 #, kde-format
 msgid "Binary Data"
 msgstr "Datu bitarrak"
 
-#: kwalleteditor.cpp:347
+#: kwalleteditor.cpp:348
 #, kde-format
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: kwalleteditor.cpp:387
+#: kwalleteditor.cpp:388
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Ziur zaude zorrotik '%1' karpeta ezabatu nahi duzula?"
 
-#: kwalleteditor.cpp:391
+#: kwalleteditor.cpp:392
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Errorea gertatu da karpeta ezabatzean."
 
-#: kwalleteditor.cpp:410
+#: kwalleteditor.cpp:411
 #, kde-format
 msgid "New Folder"
 msgstr "Karpeta berria"
 
-#: kwalleteditor.cpp:411
+#: kwalleteditor.cpp:412
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Aukeratu izen bat karpeta berriarentzat:"
 
-#: kwalleteditor.cpp:420
+#: kwalleteditor.cpp:423 kwalleteditor.cpp:428
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Karpeta-izen hori hartuta dago. Berriro saiatu nahi duzu?"
 
-#: kwalleteditor.cpp:420 kwalleteditor.cpp:777
+#: kwalleteditor.cpp:425 kwalleteditor.cpp:428 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:806
 #, kde-format
 msgid "Try Again"
 msgstr "Saiatu berriz"
 
-#: kwalleteditor.cpp:420 kwalleteditor.cpp:777 kwalletmanager.cpp:353
+#: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
+#: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ez saiatu"
 
-#: kwalleteditor.cpp:459
+#: kwalleteditor.cpp:472
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Errorea gertatu da sarrera gordetzean. Errore-kodea: %1"
 
-#: kwalleteditor.cpp:480
+#: kwalleteditor.cpp:499
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -249,73 +251,73 @@ msgstr ""
 "Uneko elementuaren edukia aldatu egin da.\n"
 "Aldaketak gorde nahi dituzu?"
 
-#: kwalleteditor.cpp:531 kwalleteditor.cpp:859
+#: kwalleteditor.cpp:553 kwalleteditor.cpp:893
 #, kde-format
 msgid "Password: %1"
 msgstr "Pasahitza: %1"
 
-#: kwalleteditor.cpp:548 kwalleteditor.cpp:861
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:895
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Izen-balioaren mapa: %1"
 
-#: kwalleteditor.cpp:558 kwalleteditor.cpp:863
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:897
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Datu bitarrak: %1"
 
-#: kwalleteditor.cpp:766
+#: kwalleteditor.cpp:788
 #, kde-format
 msgid "New Entry"
 msgstr "Sarrera berria"
 
-#: kwalleteditor.cpp:767
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Aukeratu izen bat sarrera berriarentzat:"
 
-#: kwalleteditor.cpp:777
+#: kwalleteditor.cpp:801 kwalleteditor.cpp:806
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Dagoeneko badago sarrera hori. Berriro saiatu nahi duzu?"
 
-#: kwalleteditor.cpp:794 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:828 kwalleteditor.cpp:837
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Ustekabeko errore bat gertatu da sarrera berria gehitzen saiatzean"
 
-#: kwalleteditor.cpp:855
+#: kwalleteditor.cpp:889
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Ustekabeko errore bat gertatu da sarrera izenez aldatzen saiatzean"
 
-#: kwalleteditor.cpp:875
+#: kwalleteditor.cpp:909
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Ziur zaude '%1' elementua ezabatu nahi duzula?"
 
-#: kwalleteditor.cpp:879
+#: kwalleteditor.cpp:913
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Ustekabeko errore bat gertatu da sarrera ezabatzen saiatzean"
 
-#: kwalleteditor.cpp:907
+#: kwalleteditor.cpp:941
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Ezin da ireki eskatutako zorroa."
 
-#: kwalleteditor.cpp:943
+#: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Ezin da sortu '<b>%1</b>' jaisteko aldi baterako fitxategia."
 
-#: kwalleteditor.cpp:950
+#: kwalleteditor.cpp:984
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Ezin da '<b>%1</b>' zorroa atzitu."
 
-#: kwalleteditor.cpp:981 kwalleteditor.cpp:1011 kwalleteditor.cpp:1045
-#: kwalleteditor.cpp:1127
+#: kwalleteditor.cpp:1015 kwalleteditor.cpp:1045 kwalleteditor.cpp:1079
+#: kwalleteditor.cpp:1161
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -324,28 +326,28 @@ msgstr ""
 "'<b>%1</b>' karpetak dagoneko badu '<b>%2</b>' sarrera bat. Ordeztu nahi "
 "duzu?"
 
-#: kwalleteditor.cpp:1085
+#: kwalleteditor.cpp:1119
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Ezin da atzitu '<b>%1</b>' XML fitxategia."
 
-#: kwalleteditor.cpp:1091
+#: kwalleteditor.cpp:1125
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr ""
 "Errorea gertatu da '<b>%1</b>' XML fitxategia datuak sartzeko irakurtzean."
 
-#: kwalleteditor.cpp:1097
+#: kwalleteditor.cpp:1131
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Errorea: XML fitxategiak ez dauka zorrorik."
 
-#: kwalleteditor.cpp:1248
+#: kwalleteditor.cpp:1282
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Ezin da biltegiratu '<b>%1</b>'-(e)ra."
 
-#: kwalletmanager.cpp:69
+#: kwalletmanager.cpp:73
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -354,53 +356,54 @@ msgstr ""
 "KDE Zorro sistema ez dago gaitua. Gaitu nahi duzu? Ezezkoan, KWalletManager "
 "itxi egingo da ezin baitu lan egin zorroak irakurri gabe."
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:221
-#: kwalletmanager.cpp:281
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
+#: kwalletmanager.cpp:306
 #, kde-format
 msgid "Wallet"
 msgstr "Zorroa"
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:281
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:306
 #, kde-format
 msgid "No wallets open."
 msgstr "Zorrorik ez dago irekita."
 
-#: kwalletmanager.cpp:96 kwalletmanager.cpp:221
+#: kwalletmanager.cpp:108 kwalletmanager.cpp:233
 #, kde-format
 msgid "A wallet is open."
 msgstr "Zorro bat irekita dago."
 
-#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:146 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Zorro berria..."
 
-#: kwalletmanager.cpp:139
+#: kwalletmanager.cpp:151
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Ezabatu zorroa..."
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:156
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Esportatu zifratu gisa"
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Inportatu zifratuta"
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:166
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "&Konfiguratu zorroa..."
 
-#: kwalletmanager.cpp:162
+#: kwalletmanager.cpp:174
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Itxi zorro &guztiak"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
+#: walletcontrolwidget.cpp:128
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -409,100 +412,108 @@ msgstr ""
 "Ezin da zorroa ondo itxi. Ziurrenik beste aplikazio batzuk ariko dira "
 "erabiltzen. Ixtera behartu nahi duzu?"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
+#: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
 msgstr "Behartu ixtera"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
+#: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ez behartu"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:115
+#: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ezin da zorroa ixtera behartu. Errore-kodea: %1."
 
-#: kwalletmanager.cpp:273
+#: kwalletmanager.cpp:298
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Errorea gertatu da %1 zorroa irekitzean."
 
-#: kwalletmanager.cpp:315
+#: kwalletmanager.cpp:340
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Aukeratu izen bat zorro berriarentzat:"
 
-#: kwalletmanager.cpp:326
+#: kwalletmanager.cpp:351
 #, kde-format
 msgid "New Wallet"
 msgstr "Zorro berria"
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:373
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Ez da onartzen izena hutsik uztea. Hautatu izen berri bat."
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:373
 #, kde-format
 msgid "Create new wallet"
 msgstr "Sortu zorro berria"
 
-#: kwalletmanager.cpp:353
+#: kwalletmanager.cpp:380 kwalletmanager.cpp:385
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Dagoeneko badago zorro hori. Beste izen batekin saiatu nahi duzu?"
 
-#: kwalletmanager.cpp:353
+#: kwalletmanager.cpp:382 kwalletmanager.cpp:385
 #, kde-format
 msgid "Try New"
 msgstr "Beste batekin saiatu"
 
-#: kwalletmanager.cpp:378
+#: kwalletmanager.cpp:415
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Ziur zaude '%1' zorroa ezabatu nahi duzula?"
 
-#: kwalletmanager.cpp:384
+#: kwalletmanager.cpp:421
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Ezin da zorroa ezabatu. Errore-kodea: %1."
 
-#: kwalletmanager.cpp:432
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Fitxategi izena"
 
-#: kwalletmanager.cpp:439
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Huts egin du fitxategia idazteko irekitzea"
 
-#: kwalletmanager.cpp:450
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Hautatu fitxategia"
 
-#: kwalletmanager.cpp:460
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "Huts egin du fitxategia irekitzea"
 
-#: kwalletmanager.cpp:473
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "'%1' izeneko zorroa badago dagoeneko, eragiketa galarazi da"
 
-#: kwalletmanager.cpp:480
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Fitxategiak kopiatzea huts egin du"
 
-#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:103
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
+#: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ez-ikus gorde gabeko aldaketak?"
+
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#, kde-format
+msgid "Ignore"
+msgstr ""
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
@@ -522,7 +533,7 @@ msgstr "&Ezarpenak"
 msgid "&Help"
 msgstr "Lagu&ntza"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:79
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
 msgid "&Open..."
 msgstr "&Ireki..."
@@ -632,12 +643,12 @@ msgstr "Zorro-izen bat"
 msgid "Revoke Authorization"
 msgstr "Baimena baliogabetu"
 
-#: walletcontrolwidget.cpp:59
+#: walletcontrolwidget.cpp:60
 #, kde-format
 msgid "&Close"
 msgstr "&Itxi"
 
-#: walletcontrolwidget.cpp:76
+#: walletcontrolwidget.cpp:77
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -645,7 +656,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open"
 msgstr "'%1' zorroa une honetan irekita dago"
 
-#: walletcontrolwidget.cpp:93
+#: walletcontrolwidget.cpp:94
 #, kde-format
 msgid "The wallet is currently closed"
 msgstr "Zorroa itxita dago une honetan"
