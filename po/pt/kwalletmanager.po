@@ -502,7 +502,7 @@ msgstr "Ignorar as alterações por gravar?"
 #: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Ignorar"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4

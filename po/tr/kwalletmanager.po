@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:51+0000\n"
-"PO-Revision-Date: 2022-08-26 13:31+0300\n"
+"PO-Revision-Date: 2022-10-16 11:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,7 +46,7 @@ msgstr "'%1' adını taşıyan bir girdi var. Devam etmek istiyor musunuz?"
 #: allyourbase.cpp:229 allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "'%1' isimli bir dizin var. Ne yapmak istiyorsunuz?"
+msgstr "'%1' adlı bir klasör halihazırda var. Ne yapmak istiyorsunuz?"
 
 #: allyourbase.cpp:232 allyourbase.cpp:234
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Değiştir"
 #: allyourbase.cpp:349
 #, kde-format
 msgid "Folders"
-msgstr "Dizinler"
+msgstr "Klasörler"
 
 #: allyourbase.cpp:383
 #, kde-format
@@ -74,8 +74,8 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-"Asıl dizin silinmeye çalışılırken beklenmedik bir hata oluştu; ancak dizin "
-"başarıyla kopyalandı"
+"Özgün klasör silinmeye çalışılırken beklenmedik bir hata oluştu; ancak "
+"klasör başarıyla kopyalandı"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
@@ -131,12 +131,12 @@ msgstr "&Değerleri göster"
 #: kwalleteditor.cpp:196
 #, kde-format
 msgid "&New Folder..."
-msgstr "&Yeni Dizin..."
+msgstr "&Yeni Klasör..."
 
 #: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
-msgstr "&Dizini Sil"
+msgstr "&Klasörü Sil"
 
 #: kwalleteditor.cpp:203
 #, kde-format
@@ -206,27 +206,27 @@ msgstr "Bilinmeyen"
 #: kwalleteditor.cpp:388
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr "'%1' adlı dizini cüzdandan silmek istediğinizden emin misiniz?"
+msgstr "'%1' adlı klasörü cüzdandan silmek istediğinizden emin misiniz?"
 
 #: kwalleteditor.cpp:392
 #, kde-format
 msgid "Error deleting folder."
-msgstr "Dizin silinemedi."
+msgstr "Klasör silinirken hata."
 
 #: kwalleteditor.cpp:411
 #, kde-format
 msgid "New Folder"
-msgstr "Yeni Dizin"
+msgstr "Yeni Klasör"
 
 #: kwalleteditor.cpp:412
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Lütfen yeni dizin için bir isim girin:"
+msgstr "Yeni klasör için bir ad girin:"
 
 #: kwalleteditor.cpp:423 kwalleteditor.cpp:428
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr "Üzgünüm, bu dizin adı kullanılıyor. Yeniden denemek ister misiniz?"
+msgstr "Üzgünüm, bu klasör adı kullanılıyor. Yeniden deneyin."
 
 #: kwalleteditor.cpp:425 kwalleteditor.cpp:428 kwalleteditor.cpp:803
 #: kwalleteditor.cpp:806
@@ -484,7 +484,7 @@ msgstr "Dosya adı"
 #: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr "Dosya yazmak için açılamadı"
+msgstr "Dosya yazma için açılamadı"
 
 #: kwalletmanager.cpp:487
 #, kde-format
@@ -499,7 +499,7 @@ msgstr "Dosya açılamadı"
 #: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr "%1 isimli bir cüzdan zaten var, İşlem iptal edildi"
+msgstr "%1 adlı bir cüzdan halihazırda var, işlem iptal edildi"
 
 #: kwalletmanager.cpp:517
 #, kde-format
@@ -515,7 +515,7 @@ msgstr "Kaydedilmemiş değişiklikleri yok sayıyor musunuz?"
 #: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Yok Say"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
@@ -697,7 +697,7 @@ msgstr "Uygulamalar"
 #: walletwidget.ui:142
 #, kde-format
 msgid "Hide &Contents"
-msgstr "İçerikleri &Gizle"
+msgstr "İçeriği &Gizle"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
