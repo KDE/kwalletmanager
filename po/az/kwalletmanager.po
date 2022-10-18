@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:51+0000\n"
-"PO-Revision-Date: 2022-07-06 09:32+0400\n"
+"PO-Revision-Date: 2022-10-17 23:41+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -505,7 +505,7 @@ msgstr "Saxlanılmamış dəyişikliklər nəzərə alınmasın?"
 #: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Ötürün"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
