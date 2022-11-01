@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:51+0000\n"
-"PO-Revision-Date: 2022-10-06 14:26+0200\n"
+"PO-Revision-Date: 2022-10-31 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -50,12 +50,12 @@ msgstr "Thư mục"
 #: allyourbase.cpp:383
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr ""
+msgstr "Lỗi bất ngờ xảy ra khi đang thả mục"
 
 #: allyourbase.cpp:459
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
-msgstr ""
+msgstr "Lỗi bất ngờ xảy ra khi đang thả mục"
 
 #: allyourbase.cpp:483
 #, kde-format
@@ -63,174 +63,176 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
+"Lỗi bất ngờ xảy ra khi đang xoá thư mục ban đầu, nhưng thư mục đó đã được "
+"sao chép thành công"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr ""
+msgstr "Các ứng dụng này hiện đang được kết nối với ví này:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
 #, kde-format
 msgid "These applications are authorized to access this wallet:"
-msgstr ""
+msgstr "Các ứng dụng này được uỷ quyền để truy cập ví này:"
 
 #: disconnectappbutton.cpp:16
 #, kde-format
 msgid "Disconnect"
-msgstr ""
+msgstr "Huỷ kết nối"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
 #, kde-format
 msgid "&Replace"
-msgstr ""
+msgstr "Tha&y thế"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
 #: kbetterthankdialogbase.ui:53
 #, kde-format
 msgid "Replace &All"
-msgstr ""
+msgstr "Thay thế &hết"
 
 #. i18n: ectx: property (text), widget (QPushButton, _deny)
 #: kbetterthankdialogbase.ui:60
 #, kde-format
 msgid "&Skip"
-msgstr ""
+msgstr "Bỏ &qua"
 
 #. i18n: ectx: property (text), widget (QPushButton, _denyForever)
 #: kbetterthankdialogbase.ui:67
 #, kde-format
 msgid "Skip A&ll"
-msgstr ""
+msgstr "Bỏ qua hế&t"
 
 #: kwalleteditor.cpp:87
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 #: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
-msgstr ""
+msgstr "&Hiện các giá trị"
 
 #: kwalleteditor.cpp:196
 #, kde-format
 msgid "&New Folder..."
-msgstr ""
+msgstr "Thư mục &mới..."
 
 #: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
-msgstr ""
+msgstr "&Xoá thư mục"
 
 #: kwalleteditor.cpp:203
 #, kde-format
 msgid "&Import a wallet..."
-msgstr ""
+msgstr "&Nhập khẩu ví..."
 
 #: kwalleteditor.cpp:206
 #, kde-format
 msgid "&Import XML..."
-msgstr ""
+msgstr "&Nhập khẩu XML..."
 
 #: kwalleteditor.cpp:209
 #, kde-format
 msgid "&Export as XML..."
-msgstr ""
+msgstr "&Xuất khẩu thành XML..."
 
 #: kwalleteditor.cpp:212
 #, kde-format
 msgid "&Copy"
-msgstr ""
+msgstr "&Chép"
 
 #: kwalleteditor.cpp:217
 #, kde-format
 msgid "&New..."
-msgstr ""
+msgstr "&Mới..."
 
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Rename"
-msgstr ""
+msgstr "Đổi tê&n"
 
 #: kwalleteditor.cpp:227 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
-msgstr ""
+msgstr "&Xoá"
 
 #: kwalleteditor.cpp:232
 #, kde-format
 msgid "Always show contents"
-msgstr ""
+msgstr "Luôn hiện nội dung"
 
 #: kwalleteditor.cpp:236
 #, kde-format
 msgid "Always hide contents"
-msgstr ""
+msgstr "Luôn ẩn nội dung"
 
 #: kwalleteditor.cpp:345
 #, kde-format
 msgid "Passwords"
-msgstr ""
+msgstr "Mật khẩu"
 
 #: kwalleteditor.cpp:346
 #, kde-format
 msgid "Maps"
-msgstr ""
+msgstr "Ánh xạ"
 
 #: kwalleteditor.cpp:347
 #, kde-format
 msgid "Binary Data"
-msgstr ""
+msgstr "Dữ liệu nhị phân"
 
 #: kwalleteditor.cpp:348
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Không rõ"
 
 #: kwalleteditor.cpp:388
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn xoá thư mục '%1' khỏi ví không?"
 
 #: kwalleteditor.cpp:392
 #, kde-format
 msgid "Error deleting folder."
-msgstr ""
+msgstr "Lỗi khi xoá thư mục."
 
 #: kwalleteditor.cpp:411
 #, kde-format
 msgid "New Folder"
-msgstr ""
+msgstr "Thư mục mới"
 
 #: kwalleteditor.cpp:412
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr ""
+msgstr "Vui lòng chọn tên cho thư mục mới:"
 
 #: kwalleteditor.cpp:423 kwalleteditor.cpp:428
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr ""
+msgstr "Rất tiếc, tên thư mục đó đã được dùng. Thử lại không?"
 
 #: kwalleteditor.cpp:425 kwalleteditor.cpp:428 kwalleteditor.cpp:803
 #: kwalleteditor.cpp:806
 #, kde-format
 msgid "Try Again"
-msgstr ""
+msgstr "Thử lại"
 
 #: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
 #: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
 #, kde-format
 msgid "Do Not Try"
-msgstr ""
+msgstr "Không"
 
 #: kwalleteditor.cpp:472
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr ""
+msgstr "Lỗi khi lưu mục. Mã lỗi: %1"
 
 #: kwalleteditor.cpp:499
 #, kde-format
@@ -238,71 +240,73 @@ msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
+"Nội dung của mục hiện tại đã thay đổi.\n"
+"Bạn có muốn lưu các thay đổi không?"
 
 #: kwalleteditor.cpp:553 kwalleteditor.cpp:893
 #, kde-format
 msgid "Password: %1"
-msgstr ""
+msgstr "Mật khẩu: %1"
 
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:895
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr ""
+msgstr "Ánh xạ tên - giá trị: %1"
 
 #: kwalleteditor.cpp:580 kwalleteditor.cpp:897
 #, kde-format
 msgid "Binary Data: %1"
-msgstr ""
+msgstr "Dữ liệu nhị phân: %1"
 
 #: kwalleteditor.cpp:788
 #, kde-format
 msgid "New Entry"
-msgstr ""
+msgstr "Mục mới"
 
 #: kwalleteditor.cpp:789
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr ""
+msgstr "Vui lòng chọn tên cho mục mới:"
 
 #: kwalleteditor.cpp:801 kwalleteditor.cpp:806
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr ""
+msgstr "Rất tiếc, mục đó đã tồn tại. Thử lại không?"
 
 #: kwalleteditor.cpp:828 kwalleteditor.cpp:837
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr ""
+msgstr "Lỗi bất ngờ xảy ra khi đang thêm mục mới"
 
 #: kwalleteditor.cpp:889
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr ""
+msgstr "Lỗi bất ngờ xảy ra khi đang đổi tên mục"
 
 #: kwalleteditor.cpp:909
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn xoá mục '%1' không?"
 
 #: kwalleteditor.cpp:913
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr ""
+msgstr "Lỗi bất ngờ xảy ra khi đang xoá mục"
 
 #: kwalleteditor.cpp:941
 #, kde-format
 msgid "Unable to open the requested wallet."
-msgstr ""
+msgstr "Không thể mở ví được yêu cầu."
 
 #: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr ""
+msgstr "Không thể tạo tệp tạm thời để tải '<b>%1</b>' về."
 
 #: kwalleteditor.cpp:984
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr ""
+msgstr "Không thể truy cập ví '<b>%1</b>'."
 
 #: kwalleteditor.cpp:1015 kwalleteditor.cpp:1045 kwalleteditor.cpp:1079
 #: kwalleteditor.cpp:1161
@@ -311,26 +315,28 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
+"Thư mục '<b>%1</b>' đã chứa một mục '<b>%2</b>' rồi. Bạn có muốn thay thế nó "
+"không?"
 
 #: kwalleteditor.cpp:1119
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr ""
+msgstr "Không thể truy cập tệp XML '<b>%1</b>'."
 
 #: kwalleteditor.cpp:1125
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr ""
+msgstr "Lỗi khi đọc đầu vào từ tệp XML '<b>%1</b>'."
 
 #: kwalleteditor.cpp:1131
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
-msgstr ""
+msgstr "Lỗi: tệp XML không chứa ví nào."
 
 #: kwalleteditor.cpp:1282
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr ""
+msgstr "Không thể lưu vào '<b>%1</b>'."
 
 #: kwalletmanager.cpp:73
 #, kde-format
@@ -338,52 +344,54 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
+"Hệ thống ví KDE đang không được bật. Bạn có muốn bật nó không? Nếu không, "
+"trình quản lí ví KDE sẽ thoát vì nó không thể hoạt động mà không xem được ví."
 
 #: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
 #: kwalletmanager.cpp:306
 #, kde-format
 msgid "Wallet"
-msgstr ""
+msgstr "Ví"
 
 #: kwalletmanager.cpp:101 kwalletmanager.cpp:306
 #, kde-format
 msgid "No wallets open."
-msgstr ""
+msgstr "Không ví nào mở."
 
 #: kwalletmanager.cpp:108 kwalletmanager.cpp:233
 #, kde-format
 msgid "A wallet is open."
-msgstr ""
+msgstr "Một ví đang mở."
 
 #: kwalletmanager.cpp:146 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr ""
+msgstr "&Ví mới..."
 
 #: kwalletmanager.cpp:151
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr ""
+msgstr "&Xoá ví..."
 
 #: kwalletmanager.cpp:156
 #, kde-format
 msgid "Export as encrypted"
-msgstr ""
+msgstr "Xuất khẩu dạng mật mã hoá"
 
 #: kwalletmanager.cpp:161
 #, kde-format
 msgid "&Import encrypted"
-msgstr ""
+msgstr "&Nhập khẩu dạng mật mã hoá"
 
 #: kwalletmanager.cpp:166
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr ""
+msgstr "Cấu &hình ví..."
 
 #: kwalletmanager.cpp:174
 #, kde-format
 msgid "Close &All Wallets"
-msgstr ""
+msgstr "Đóng &tất cả các ví"
 
 #: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
 #: walletcontrolwidget.cpp:128
@@ -392,242 +400,244 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
+"Không thể đóng ví hoàn chỉnh. Có thể có các ứng dụng khác đang dùng nó. Bạn "
+"có muốn ép nó đóng không?"
 
 #: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
-msgstr ""
+msgstr "Ép đóng"
 
 #: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
-msgstr ""
+msgstr "Đừng ép"
 
 #: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr ""
+msgstr "Không thể ép đóng ví. Mã lỗi là %1."
 
 #: kwalletmanager.cpp:298
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr ""
+msgstr "Lỗi khi mở ví %1."
 
 #: kwalletmanager.cpp:340
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr ""
+msgstr "Vui lòng chọn tên cho ví mới:"
 
 #: kwalletmanager.cpp:351
 #, kde-format
 msgid "New Wallet"
-msgstr ""
+msgstr "Ví mới"
 
 #: kwalletmanager.cpp:373
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr ""
+msgstr "Không hỗ trợ tên trống. Vui lòng chọn một tên mới."
 
 #: kwalletmanager.cpp:373
 #, kde-format
 msgid "Create new wallet"
-msgstr ""
+msgstr "Tạo ví mới"
 
 #: kwalletmanager.cpp:380 kwalletmanager.cpp:385
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr ""
+msgstr "Rất tiếc, ví đó đã tồn tại. Thử một tên mới không?"
 
 #: kwalletmanager.cpp:382 kwalletmanager.cpp:385
 #, kde-format
 msgid "Try New"
-msgstr ""
+msgstr "Thử tên mới"
 
 #: kwalletmanager.cpp:415
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn xoá ví '%1' không?"
 
 #: kwalletmanager.cpp:421
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr ""
+msgstr "Không thể xoá ví. Mã lỗi là %1."
 
 #: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
-msgstr ""
+msgstr "Tên tệp"
 
 #: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr ""
+msgstr "Mở tệp để ghi thất bại"
 
 #: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
-msgstr ""
+msgstr "Chọn tệp"
 
 #: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
-msgstr ""
+msgstr "Mở tệp thất bại"
 
 #: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr ""
+msgstr "Ví có tên %1 đã tồn tại rồi, thao tác bị huỷ"
 
 #: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
-msgstr ""
+msgstr "Sao chép tệp thất bại"
 
 #: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
-msgstr ""
+msgstr "Bỏ qua các thay đổi chưa lưu?"
 
 #: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Bỏ qua"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
 #, kde-format
 msgid "&File"
-msgstr ""
+msgstr "&Tệp"
 
 #. i18n: ectx: Menu (settings)
 #: kwalletmanager.rc:17
 #, kde-format
 msgid "&Settings"
-msgstr ""
+msgstr "Thiết &lập"
 
 #. i18n: ectx: Menu (help)
 #: kwalletmanager.rc:20
 #, kde-format
 msgid "&Help"
-msgstr ""
+msgstr "Trợ &giúp"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
 msgid "&Open..."
-msgstr ""
+msgstr "&Mở..."
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr ""
+msgstr "Đổi &mật khẩu..."
 
 #: kwalletpopup.cpp:53
 #, kde-format
 msgid "Disconnec&t"
-msgstr ""
+msgstr "Huỷ &kết nối"
 
 #: kwmapeditor.cpp:129
 #, kde-format
 msgid "Key"
-msgstr ""
+msgstr "Khoá"
 
 #: kwmapeditor.cpp:129
 #, kde-format
 msgid "Value"
-msgstr ""
+msgstr "Giá trị"
 
 #: kwmapeditor.cpp:147 kwmapeditor.cpp:196
 #, kde-format
 msgid "Delete Entry"
-msgstr ""
+msgstr "Xoá mục"
 
 #: kwmapeditor.cpp:216
 #, kde-format
 msgid "&New Entry"
-msgstr ""
+msgstr "&Mục mới"
 
 #: main.cpp:31
 #, kde-format
 msgid "Wallet Manager"
-msgstr ""
+msgstr "Trình quản lí ví"
 
 #: main.cpp:33
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr ""
+msgstr "Công cụ quản lí Ví KDE"
 
 #: main.cpp:35
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr ""
+msgstr "Bản quyền ©2013–2017, các tác giả trình quản lí ví KDE"
 
 #: main.cpp:39
 #, kde-format
 msgid "Valentin Rusu"
-msgstr ""
+msgstr "Valentin Rusu"
 
 #: main.cpp:40
 #, kde-format
 msgid "Maintainer, user interface refactoring"
-msgstr ""
+msgstr "Bảo trì viên, cấu trúc lại giao diện người dùng"
 
 #: main.cpp:42
 #, kde-format
 msgid "George Staikos"
-msgstr ""
+msgstr "George Staikos"
 
 #: main.cpp:43
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr ""
+msgstr "Tác giả gốc và bảo trì viên trước đây"
 
 #: main.cpp:45
 #, kde-format
 msgid "Michael Leupold"
-msgstr ""
+msgstr "Michael Leupold"
 
 #: main.cpp:46
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr ""
+msgstr "Nhà phát triển và bảo trì viên trước đây"
 
 #: main.cpp:48
 #, kde-format
 msgid "Isaac Clerencia"
-msgstr ""
+msgstr "Isaac Clerencia"
 
 #: main.cpp:49
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "Nhà phát triển"
 
 #: main.cpp:57
 #, kde-format
 msgid "Show window on startup"
-msgstr ""
+msgstr "Hiện cửa sổ khi khởi động"
 
 #: main.cpp:58
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr ""
+msgstr "Chỉ dùng cho kwalletd"
 
 #: main.cpp:59
 #, kde-format
 msgid "A wallet name"
-msgstr ""
+msgstr "Tên ví"
 
 #: revokeauthbutton.cpp:16
 #, kde-format
 msgid "Revoke Authorization"
-msgstr ""
+msgstr "Thu hồi uỷ quyền"
 
 #: walletcontrolwidget.cpp:60
 #, kde-format
 msgid "&Close"
-msgstr ""
+msgstr "Đón&g"
 
 #: walletcontrolwidget.cpp:77
 #, kde-format
@@ -635,64 +645,64 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open"
-msgstr ""
+msgstr "Ví '%1' hiện đang mở"
 
 #: walletcontrolwidget.cpp:94
 #, kde-format
 msgid "The wallet is currently closed"
-msgstr ""
+msgstr "Ví hiện đang đóng"
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:28
 #, kde-format
 msgid "KSqueezedTextLabel"
-msgstr ""
+msgstr "KSqueezedTextLabel"
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
 #: walletcontrolwidget.ui:35
 #, kde-format
 msgid "Open..."
-msgstr ""
+msgstr "Mở..."
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:58
 #, kde-format
 msgid "Change Password..."
-msgstr ""
+msgstr "Đổi mật khẩu..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:76
 #, kde-format
 msgid "Contents"
-msgstr ""
+msgstr "Nội dung"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
 #: walletcontrolwidget.ui:115
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Ứng dụng"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:142
 #, kde-format
 msgid "Hide &Contents"
-msgstr ""
+msgstr "Ẩn &nội dung"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
 #: walletwidget.ui:185 walletwidget.ui:233
 #, kde-format
 msgid "Show &Contents"
-msgstr ""
+msgstr "Hiện &nội dung"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
 #: walletwidget.ui:296
 #, kde-format
 msgid "&Undo"
-msgstr ""
+msgstr "Đảo n&gược"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
 #: walletwidget.ui:306
 #, kde-format
 msgid "&Save"
-msgstr ""
+msgstr "&Lưu"
