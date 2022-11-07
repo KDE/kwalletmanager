@@ -260,16 +260,29 @@
        <item>
         <widget class="QGroupBox" name="groupBox5">
          <property name="title">
-          <string>Secret Service DBus API</string>
+          <string>Secret Service</string>
          </property>
          <layout class="QVBoxLayout">
           <item>
            <widget class="QCheckBox" name="_secretServiceAPI">
             <property name="text">
-             <string>Enable Secret Service DBus API</string>
+             <string>Use KWallet for the Secret Service interface</string>
             </property>
             <property name="checked">
              <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>The Secret Service interface lets applications store passwords and other confidential data. Disable this to allow third-party wallet services such as KeePassXC or GNOME Keyring to manage it instead.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="indent">
+             <number>2</number>
             </property>
            </widget>
           </item>
