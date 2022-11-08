@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-08 00:50+0000\n"
 "PO-Revision-Date: 2022-11-06 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -226,48 +226,61 @@ msgstr "所有密码库关闭后隐藏系统托盘图标"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, kde-format
-msgid "Secret Service DBus API"
+#, fuzzy, kde-format
+#| msgid "Secret Service DBus API"
+msgid "Secret Service"
 msgstr "密码服务 DBus API"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
-msgid "Enable Secret Service DBus API"
-msgstr "启用密码服务 DBus API"
+msgid "Use KWallet for the Secret Service interface"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: walletconfigwidget.ui:279
+#, kde-format
+msgid ""
+"The Secret Service interface lets applications store passwords and other "
+"confidential data. Disable this to allow third-party wallet services such as "
+"KeePassXC or GNOME Keyring to manage it instead."
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:315
+#: walletconfigwidget.ui:328
 #, kde-format
 msgid "Access Control"
 msgstr "访问控制"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:321
+#: walletconfigwidget.ui:334
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "应用程序访问密码库时提示(&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:335
+#: walletconfigwidget.ui:348
 #, kde-format
 msgid "Wallet"
 msgstr "密码库"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:346
+#: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
 msgstr "应用程序"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:357
+#: walletconfigwidget.ui:370
 #, kde-format
 msgid "Policy"
 msgstr "策略"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:393
+#: walletconfigwidget.ui:406
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "启动密码库管理器(&L)"
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "启用密码服务 DBus API"

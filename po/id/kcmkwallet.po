@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-08 00:50+0000\n"
 "PO-Revision-Date: 2022-03-19 08:06+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -235,47 +235,56 @@ msgstr "Sembunyikan ikon baki sistem ketika dompet terakhir menutup"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
 #, kde-format
-msgid "Secret Service DBus API"
+msgid "Secret Service"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
-msgid "Enable Secret Service DBus API"
+msgid "Use KWallet for the Secret Service interface"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: walletconfigwidget.ui:279
+#, kde-format
+msgid ""
+"The Secret Service interface lets applications store passwords and other "
+"confidential data. Disable this to allow third-party wallet services such as "
+"KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:315
+#: walletconfigwidget.ui:328
 #, kde-format
 msgid "Access Control"
 msgstr "Kendali Akses"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:321
+#: walletconfigwidget.ui:334
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "&Lakukan ketika sebuah aplikasi mengakses dompet"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:335
+#: walletconfigwidget.ui:348
 #, kde-format
 msgid "Wallet"
 msgstr "Dompet"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:346
+#: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
 msgstr "Aplikasi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:357
+#: walletconfigwidget.ui:370
 #, kde-format
 msgid "Policy"
 msgstr "Kebijakan"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:393
+#: walletconfigwidget.ui:406
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Luncurkan Pengelola Dompet"

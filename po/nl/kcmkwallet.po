@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-08 00:50+0000\n"
 "PO-Revision-Date: 2022-07-07 13:19+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -243,51 +243,64 @@ msgstr "Systeemvakpictogram verbergen bij sluiten laatste portefeuille"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, kde-format
-msgid "Secret Service DBus API"
+#, fuzzy, kde-format
+#| msgid "Secret Service DBus API"
+msgid "Secret Service"
 msgstr "DBus API voor service voor geheimen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
-msgid "Enable Secret Service DBus API"
-msgstr "DBus API voor service voor geheimen inschakelen"
+msgid "Use KWallet for the Secret Service interface"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: walletconfigwidget.ui:279
+#, kde-format
+msgid ""
+"The Secret Service interface lets applications store passwords and other "
+"confidential data. Disable this to allow third-party wallet services such as "
+"KeePassXC or GNOME Keyring to manage it instead."
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:315
+#: walletconfigwidget.ui:328
 #, kde-format
 msgid "Access Control"
 msgstr "Toegangscontrole"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:321
+#: walletconfigwidget.ui:334
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "Om bevestiging vragen bij toegang tot een portefeuille"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:335
+#: walletconfigwidget.ui:348
 #, kde-format
 msgid "Wallet"
 msgstr "Portefeuille"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:346
+#: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
 msgstr "Toepassing"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:357
+#: walletconfigwidget.ui:370
 #, kde-format
 msgid "Policy"
 msgstr "Beleid"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:393
+#: walletconfigwidget.ui:406
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Portefeui&llebeheer starten"
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "DBus API voor service voor geheimen inschakelen"
 
 #~ msgid "kcmkwallet"
 #~ msgstr "kcmkwallet"

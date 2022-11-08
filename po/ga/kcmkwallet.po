@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kcmkwallet.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:48+0000\n"
+"POT-Creation-Date: 2022-11-08 00:50+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -236,48 +236,57 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
 #, kde-format
-msgid "Secret Service DBus API"
+msgid "Secret Service"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
-msgid "Enable Secret Service DBus API"
+msgid "Use KWallet for the Secret Service interface"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: walletconfigwidget.ui:279
+#, kde-format
+msgid ""
+"The Secret Service interface lets applications store passwords and other "
+"confidential data. Disable this to allow third-party wallet services such as "
+"KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:315
+#: walletconfigwidget.ui:328
 #, kde-format
 msgid "Access Control"
 msgstr "Rialú Rochtana"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:321
+#: walletconfigwidget.ui:334
 #, fuzzy, kde-format
 #| msgid "&Prompt when an application accesses an open wallet"
 msgid "&Prompt when an application accesses a wallet"
 msgstr "Tabhair &leid nuair a dhéanann feidhmchlár rochtain ar sparán oscailte"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:335
+#: walletconfigwidget.ui:348
 #, kde-format
 msgid "Wallet"
 msgstr "Sparán"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:346
+#: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
 msgstr "Feidhmchlár"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:357
+#: walletconfigwidget.ui:370
 #, kde-format
 msgid "Policy"
 msgstr "Polasaí"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:393
+#: walletconfigwidget.ui:406
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Tosaigh Bainisteoir Sparán"
