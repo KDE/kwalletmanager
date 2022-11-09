@@ -1,6 +1,5 @@
-# Translation of kwalletmanager.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2018 Free Software Foundation.
-# Copyright (C) 2019-2022 This file is copyright:
+# Translation for kwalletmanager.po to Euskara/Basque (eu).
+# Copyright (C) 2003-2022 This file is copyright:
 # This file is distributed under the same license as the kwalletmanager package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #

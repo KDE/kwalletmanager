@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2022-07-07 09:39+0200\n"
+"PO-Revision-Date: 2022-11-08 11:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -240,16 +240,15 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "API del DBus de servei de secrets"
+msgstr "Servei de secrets"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Usa el KWallet per a la interfície del servei de secrets"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -259,6 +258,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"La interfície del servei de secrets permet que les aplicacions emmagatzemin "
+"contrasenyes i altres dades confidencials. Desactiveu-ho per a permetre que "
+"els serveis de carteres de terceres parts com el KeePassXC o l'anell de "
+"claus del GNOME ho gestionin en lloc seu."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
@@ -295,6 +298,3 @@ msgstr "Política"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Llança el gestor de carteres"
-
-#~ msgid "Enable Secret Service DBus API"
-#~ msgstr "Activa l'API del DBus de servei de secrets"

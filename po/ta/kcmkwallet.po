@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2022-07-07 20:03+0530\n"
+"PO-Revision-Date: 2022-11-08 20:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,13 +34,12 @@ msgstr "KDE சுறுக்குப்பை  கட்டுப்பாட
 #: konfigurator.cpp:52
 #, kde-format
 msgid "(c) 2003 George Staikos"
-msgstr "(c) 2003 George Staikos"
+msgstr ""
 
 #: konfigurator.cpp:53
-#, fuzzy, kde-format
-#| msgid "(c) 2003 George Staikos"
+#, kde-format
 msgid "George Staikos"
-msgstr "(c) 2003 George Staikos"
+msgstr ""
 
 #: konfigurator.cpp:120
 #, kde-format
@@ -73,6 +72,8 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
+"செயலுக்கு உரிமை வழங்குவதில் சிக்கல்:\n"
+"%1"
 
 #: konfigurator.cpp:373
 #, kde-format
@@ -147,10 +148,9 @@ msgstr "இது உபயொகதில் இல்லாத போது �
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
-msgstr "குரைந்தபட்ஷம்"
+msgstr " நிமிடங்கள்"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:99

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2022-07-07 09:08+0300\n"
+"PO-Revision-Date: 2022-11-08 13:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -240,16 +240,15 @@ msgstr "Ховати піктограму при замиканні останн
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "Програмний інтерфейс DBus «Секретної служби»"
+msgstr "Секретна служба"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Використовувати KWallet для інтерфейсу «Секретної служби»"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -259,6 +258,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"За допомогою інтерфейсу «Секретної служби» програми можуть зберігати паролі "
+"та інші конфіденційні дані. Вимніть використання, щоб дозволити керувати "
+"цими даними стороннім службам зберігання реєстраційних даних, зокрема "
+"KeePassXC або «В'язці ключів GNOME»."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328

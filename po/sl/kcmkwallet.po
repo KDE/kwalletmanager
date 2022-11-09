@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2022-07-08 06:58+0200\n"
+"PO-Revision-Date: 2022-11-08 11:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
@@ -235,16 +235,15 @@ msgstr "Skrij ikono v sistemski vrstici, ko se zapre zadnja listnica"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "Secret Service DBus API"
+msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Uporabi KWallet kot vmesnik za Secret Service"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -254,6 +253,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Vmesnik za Secret Service dovoljuje aplikacijam shranjevanje gesel in "
+"ostalih zaupnih podatkov. Onemogočenje tega omogoča storitvam tretjih strani "
+"kot so KeePassXC ali GNOME Keyring, da skrbijo za to."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
