@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: kcmwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2022-07-07 11:09+0100\n"
+"PO-Revision-Date: 2022-11-09 22:10+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-POFile-SpellExtra: Staikos min kcmkwallet\n"
+"X-POFile-SpellExtra: Staikos min kcmkwallet KWallet KeePassXC\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -229,16 +229,15 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "API de D-Bus do Serviço de Senhas"
+msgstr "Serviço de Senhas"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Usar o KWallet como interface do Serviço de Senhas"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -248,6 +247,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"A interface do Serviço de Senhas permite às aplicações guardarem as senhas e "
+"outros dados confidenciais. Desactive isto para permitir que os serviços de "
+"terceiros, como o KeePassXC ou o Porta-Chave do GNOME façam a gestão dos "
+"mesmos em alternativa."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
@@ -284,6 +287,3 @@ msgstr "Política"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Lançar o Gestor de Carteiras"
-
-#~ msgid "Enable Secret Service DBus API"
-#~ msgstr "Activar a API de D-Bus do Serviço de Senhas"
