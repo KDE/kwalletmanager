@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-11-08 00:50+0000\n"
+"PO-Revision-Date: 2022-11-16 16:24+0700\n"
+"Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
+"Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
+"Language: ie\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.12\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "OIS"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mistresssilvara@hotmail.com"
+
+#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "Module de control del Porta-papere de KDE"
+
+#: konfigurator.cpp:52
+#, kde-format
+msgid "(c) 2003 George Staikos"
+msgstr "(c) 2003 George Staikos"
+
+#: konfigurator.cpp:53
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: konfigurator.cpp:120
+#, kde-format
+msgid "New Wallet"
+msgstr "Nov Porta-papere"
+
+#: konfigurator.cpp:121
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "Provide un nómine del nov Porta-papere:"
+
+#: konfigurator.cpp:241 konfigurator.cpp:316
+#, kde-format
+msgid "Always Allow"
+msgstr "Sempre permisser"
+
+#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#, kde-format
+msgid "Always Deny"
+msgstr "Sempre refusar"
+
+#: konfigurator.cpp:276
+#, kde-format
+msgid "Permission denied."
+msgstr "Permission refusat."
+
+#: konfigurator.cpp:278
+#, fuzzy, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr "Un errore evenit accessante «%1»"
+
+#: konfigurator.cpp:373
+#, kde-format
+msgid ""
+"This configuration module allows you to configure the KDE wallet system."
+msgstr ""
+
+#: konfigurator.cpp:382
+#, kde-format
+msgid "&Delete"
+msgstr "&Remover"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: walletconfigwidget.ui:16
+#, kde-format
+msgid "Wallet Preferences"
+msgstr "Preferenties del porta-papere"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:22
+#, kde-format
+msgid ""
+"<p>The wallet subsystem provides a convenient and secure way to manage all "
+"your passwords. This option specifies whether or not you want to use it.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _enabled)
+#: walletconfigwidget.ui:25
+#, kde-format
+msgid "&Enable the KDE wallet subsystem"
+msgstr "A&ctivar li sistema del Porta-papere de KDE"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:35
+#, kde-format
+msgid ""
+"It is best to close your wallets when you are not using them to prevent "
+"others from viewing or using them."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: walletconfigwidget.ui:38
+#, kde-format
+msgid "Close Wallet"
+msgstr "Cluder li Porta-papere"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:49
+#, fuzzy, kde-format
+msgid "Close when unused for:"
+msgstr "Ne clu&der quande li comande fini se"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:62
+#, kde-format
+msgid " minutes"
+msgstr " minutes"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:99
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:102
+#, fuzzy, kde-format
+msgid "Close when screensaver starts"
+msgstr "Quande li garda-ecran es activat"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:109
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as applications that use it have stopped.</"
+"b><br>Note that your wallet will only be closed when all applications that "
+"use it have stopped.<br>When a wallet is closed the password is needed to "
+"access it again.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
+#: walletconfigwidget.ui:112
+#, kde-format
+msgid "Close when last application stops using it"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
+#: walletconfigwidget.ui:122
+#, kde-format
+msgid "Automatic Wallet Selection"
+msgstr "Automatic selection de un Porta-papere"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: walletconfigwidget.ui:128
+#, fuzzy, kde-format
+msgid "Select wallet to use as default:"
+msgstr "Selecter un fonde predefinit"
+
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
+#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#, kde-format
+msgid "New..."
+msgstr "Crear..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:168
+#, kde-format
+msgid "Different wallet for local passwords:"
+msgstr "Un apart Porta-papere por local contrasignes:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: walletconfigwidget.ui:201
+#, kde-format
+msgid "Wallet Manager"
+msgstr "Gerente del Porta-papere"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
+#: walletconfigwidget.ui:207
+#, fuzzy, kde-format
+msgid "Show manager in system tray"
+msgstr "Monstrar icone in li area de notificationes"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
+#: walletconfigwidget.ui:235
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Use KWallet for the Secret Service interface"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: walletconfigwidget.ui:279
+#, kde-format
+msgid ""
+"The Secret Service interface lets applications store passwords and other "
+"confidential data. Disable this to allow third-party wallet services such as "
+"KeePassXC or GNOME Keyring to manage it instead."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: walletconfigwidget.ui:328
+#, kde-format
+msgid "Access Control"
+msgstr "Control de accesse"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
+#: walletconfigwidget.ui:334
+#, kde-format
+msgid "&Prompt when an application accesses a wallet"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:348
+#, kde-format
+msgid "Wallet"
+msgstr "Porta-papere"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:359
+#, kde-format
+msgid "Application"
+msgstr "Application"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
+#: walletconfigwidget.ui:370
+#, kde-format
+msgid "Policy"
+msgstr "Politica"
+
+#. i18n: ectx: property (text), widget (QPushButton, _launch)
+#: walletconfigwidget.ui:406
+#, kde-format
+msgid "&Launch Wallet Manager"
+msgstr "&Lansar li gerente del Porta-papere"
