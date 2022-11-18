@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2021-06-10 12:14+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 01:13+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -236,13 +236,13 @@ msgstr "Slėpti sistemos dėklo piktogramą užvėrus paskutinę slaptažodinę"
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Slapta tarnyba"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Naudoti KWallet slaptos tarnybos sąsajai"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -252,6 +252,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Slaptos tarnybos sąsaja leidžia programoms saugoti slaptažodžius ir kitus "
+"konfidencialius duomenis. Išjunkite tai, kad vietoj to, leistumėte trečiųjų "
+"šalių slaptažodinių tarnyboms, tokioms kaip KeePassXC ar GNOME raktinei, "
+"tvarkyti tuos duomenis."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
