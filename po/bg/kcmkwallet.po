@@ -292,6 +292,3 @@ msgstr "Политика"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Стартиране на мениджъра"
-
-#~ msgid "Enable Secret Service DBus API"
-#~ msgstr "Активиране на Secret Service DBus API"
