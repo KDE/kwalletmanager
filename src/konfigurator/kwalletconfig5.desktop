@@ -154,6 +154,7 @@ Comment[x-test]=xxKDE Wallet Configurationxx
 Comment[zh_CN]=KDE 密码库配置
 Comment[zh_TW]=KDE 錢包設定
 X-KDE-Keywords=wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager
+X-KDE-Keywords[ar]=محفظة,مدير محفظة,أسرار,خدمة الأسرار,محفظتك,تشفير,تعمية,فك تشفير,تحكم,الوصول,كلمة السر,كلمة مرور,سرية
 X-KDE-Keywords[bg]=портфейл, попълване на формуляри, пароли, данни от формуляри, тайна служба, kwallet, kdewallet, kde портфейл, keepassxc, ключодържател, криптиране, декриптиране, blowfish, pgp, контрол на достъпа,конфиденциалност, мениджър на портфейл
 X-KDE-Keywords[ca]=cartera,omple formulari,contrasenyes,dades de formulari,servi de secrets,kwallet,kdewallet,cartera de kde,keepassxc,anell de claus, clauer,encriptatge,desencriptatge,blowfish,pgp,control d'accés,confidencial,gestor de carteres
 X-KDE-Keywords[ca@valencia]=cartera,òmpliga formulari,contrasenyes,dades de formulari,servi de secrets,kwallet,kdewallet,cartera de kde,keepassxc,anell de claus, clauer,encriptació,desencriptació,blowfish,pgp,control d'accés,confidencial,gestor de carteres
