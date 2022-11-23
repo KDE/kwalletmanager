@@ -2,7 +2,7 @@
 # Danish translation of kwalletmanager
 # Copyright (C)
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2003, 2004, 2005, 2006.
-# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2013, 2015, 2016.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2013, 2015, 2016, 2022.
 # Claus Christensen <claus_chr@webspeed.dk>, 2013.
 # scootergrisen, 2017.
 msgid ""
@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:51+0000\n"
-"PO-Revision-Date: 2017-11-06 16:00+0200\n"
-"Last-Translator: scootergrisen\n"
-"Language-Team: Danish\n"
+"PO-Revision-Date: 2022-11-22 18:08+0100\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -506,7 +507,7 @@ msgstr "Ignorer ugemte ændringer?"
 #: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Ignorér"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
