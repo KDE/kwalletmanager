@@ -215,11 +215,7 @@ bool KWalletManager::queryClose()
         if (!_tray) {
             qApp->quit();
         } else {
-#if KNOTIFICATIONS_VERSION >= QT_VERSION_CHECK(5, 91, 0)
             _tray->hideAssociatedWidget();
-#else
-            hide();
-#endif
         }
         return false;
     }
@@ -614,14 +610,8 @@ void KWalletManager::activateForStartLikeCall(bool showWindow)
     if (showWindow) {
         show();
     }
-#if KWINDOWSYSTEM_VERSION >= QT_VERSION_CHECK(5, 91, 0)
     KWindowSystem::updateStartupId(windowHandle());
-#else
-    if (KWindowSystem::isPlatformWayland()) {
-        KWindowSystem::setCurrentXdgActivationToken(qEnvironmentVariable("XDG_ACTIVATION_TOKEN"));
-        //
-    }
-#endif
+
     if (showWindow) {
         if (isMinimized())
             KWindowSystem::unminimizeWindow(winId());

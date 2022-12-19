@@ -7,21 +7,15 @@
 #include "../kwalletmanager_version.h"
 #include "konfigurator.h"
 
-#include <kauth_version.h>
-#include <KPluginFactory>
-#include <QInputDialog>
-#include <KWallet>
-#if KAUTH_VERSION >= QT_VERSION_CHECK(5, 92, 0)
 #include <KAuth/Action>
 #include <KAuth/ActionReply>
 #include <KAuth/ExecuteJob>
-#else
-#include <KAuthAction>
-#include <KAuthActionReply>
-#include <KAuthExecuteJob>
-#endif
 #include <KConfigGroup>
 #include <KMessageBox>
+#include <KPluginFactory>
+#include <KWallet>
+#include <QInputDialog>
+#include <kauth_version.h>
 
 #include <KAboutData>
 
