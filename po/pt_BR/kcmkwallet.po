@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-08 00:50+0000\n"
-"PO-Revision-Date: 2022-10-19 14:59-0300\n"
+"PO-Revision-Date: 2022-12-20 10:37-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -240,16 +240,15 @@ msgstr "Ocultar o ícone da área de notificação ao fechar a última carteira"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "Secret Service DBus API"
+msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Usar KWallet para interface do Secret Service"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -259,6 +258,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"A interface do Secret Service permite aos aplicativos armazenar senhas e "
+"outros dados confidenciais. Desabilite isto para permitir serviços de "
+"carteiras de terceiros como KeePassXC ou Chaveiro do GNOME Keyring o "
+"gerenciem."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
