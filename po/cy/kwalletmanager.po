@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ../cy/messages//kdeutils/kwalletmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:51+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandrakesoft.com>\n"
 "Language-Team: cy <LL@li.org>\n"
@@ -219,7 +219,7 @@ msgid "Try Again"
 msgstr "Ceisiwch Eto"
 
 #: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
-#: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
+#: kwalleteditor.cpp:806 kwalletmanager.cpp:379 kwalletmanager.cpp:381
 #, kde-format
 msgid "Do Not Try"
 msgstr ""
@@ -336,19 +336,19 @@ msgid ""
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
-#: kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:302
 #, fuzzy, kde-format
 #| msgid "&Delete Folder"
 msgid "Wallet"
 msgstr "Dile&u Plygell"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
 #, kde-format
 msgid "No wallets open."
 msgstr ""
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:233
+#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
 #, kde-format
 msgid "A wallet is open."
 msgstr ""
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Close &All Wallets"
 msgstr ""
 
-#: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
+#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid ""
@@ -393,107 +393,107 @@ msgid ""
 "Do you wish to force it closed?"
 msgstr ""
 
-#: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
+#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
 msgstr ""
 
-#: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
+#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
 msgstr ""
 
-#: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr ""
 
-#: kwalletmanager.cpp:298
+#: kwalletmanager.cpp:294
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr ""
 
-#: kwalletmanager.cpp:340
+#: kwalletmanager.cpp:336
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr ""
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:347
 #, fuzzy, kde-format
 #| msgid "&Delete Folder"
 msgid "New Wallet"
 msgstr "Dile&u Plygell"
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr ""
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Create new wallet"
 msgstr ""
 
-#: kwalletmanager.cpp:380 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr ""
 
-#: kwalletmanager.cpp:382 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
 #, kde-format
 msgid "Try New"
 msgstr ""
 
-#: kwalletmanager.cpp:415
+#: kwalletmanager.cpp:411
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr ""
 
-#: kwalletmanager.cpp:421
+#: kwalletmanager.cpp:417
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr ""
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:465
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "File name"
 msgstr "&Ail-enwi"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:483
 #, kde-format
 msgid "Select file"
 msgstr ""
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:493
 #, kde-format
 msgid "Failed to open file"
 msgstr ""
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:506
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:513
 #, kde-format
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr ""

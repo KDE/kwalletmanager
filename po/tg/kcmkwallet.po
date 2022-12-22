@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:50+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2019-09-29 12:30+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -32,55 +32,55 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "H_Abrorova@rambler.ru"
 
-#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#: konfigurator.cpp:42 konfigurator.cpp:270 konfigurator.cpp:272
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Модули Идоракунии Ҳамёнҳои KDE"
 
-#: konfigurator.cpp:52
+#: konfigurator.cpp:46
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "(c) 2003 George Staikos"
 
-#: konfigurator.cpp:53
+#: konfigurator.cpp:47
 #, fuzzy, kde-format
 #| msgid "(c) 2003 George Staikos"
 msgid "George Staikos"
 msgstr "(c) 2003 George Staikos"
 
-#: konfigurator.cpp:120
+#: konfigurator.cpp:114
 #, kde-format
 msgid "New Wallet"
 msgstr "Ҳамёни Нав"
 
-#: konfigurator.cpp:121
+#: konfigurator.cpp:115
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Марҳамат карда, барои ҳамёни нави худ ном интихоб кунед:"
 
-#: konfigurator.cpp:241 konfigurator.cpp:316
+#: konfigurator.cpp:235 konfigurator.cpp:310
 #, kde-format
 msgid "Always Allow"
 msgstr "Ҳамеша Иҷозат Додан"
 
-#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
 #, fuzzy, kde-format
 msgid "Always Deny"
 msgstr "Ҳамеша Иҷозат Додан"
 
-#: konfigurator.cpp:276
+#: konfigurator.cpp:270
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:278
+#: konfigurator.cpp:272
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:373
+#: konfigurator.cpp:367
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
@@ -88,7 +88,7 @@ msgstr ""
 "Ин модули танзимкунӣ ба шумо имконияти танзимкунии низоми KDE-и ҳамёнро "
 "медиҳад."
 
-#: konfigurator.cpp:382
+#: konfigurator.cpp:376
 #, kde-format
 msgid "&Delete"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:51+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2022-11-22 18:08+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -227,7 +227,7 @@ msgid "Try Again"
 msgstr "Forsøg igen"
 
 #: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
-#: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
+#: kwalleteditor.cpp:806 kwalletmanager.cpp:379 kwalletmanager.cpp:381
 #, kde-format
 msgid "Do Not Try"
 msgstr "Forsøg ikke"
@@ -350,18 +350,18 @@ msgstr ""
 "KDE's tegnebogsystem er ikke aktiveret. Vil du aktivere det? Ellers vil "
 "KWalletManager afslutte, da den ikke kan virke uden at læse tegnebøgerne."
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
-#: kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:302
 #, kde-format
 msgid "Wallet"
 msgstr "Tegnebog"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
 #, kde-format
 msgid "No wallets open."
 msgstr "Ingen tegnebøger at åbne."
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:233
+#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
 #, kde-format
 msgid "A wallet is open."
 msgstr "En tegnebog er åben."
@@ -396,7 +396,7 @@ msgstr "Indstil &tegnebog..."
 msgid "Close &All Wallets"
 msgstr "Luk &alle tegnebøger"
 
-#: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
+#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid ""
@@ -406,105 +406,105 @@ msgstr ""
 "Kan ikke lukke tegnebogen rent. Den bliver formodentlig brugt af et andet "
 "program. Ønsker du at tvinge den til at blive lukket?"
 
-#: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
+#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
 msgstr "Tving til lukning"
 
-#: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
+#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
 msgstr "Tving ikke"
 
-#: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Kan ikke tvinge tegnebogen til at blive lukket. Fejlkoden var %1."
 
-#: kwalletmanager.cpp:298
+#: kwalletmanager.cpp:294
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Fejl ved at åbne tegnebogen %1."
 
-#: kwalletmanager.cpp:340
+#: kwalletmanager.cpp:336
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Vælg venligst et navn for den nye tegnebog:"
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:347
 #, kde-format
 msgid "New Wallet"
 msgstr "Ny tegnebog"
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Tomt navn understøttes ikke. Vælg venligst et navn."
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Create new wallet"
 msgstr "Opret ny tegnebog"
 
-#: kwalletmanager.cpp:380 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Den tegnebog findes desværre allerede. Prøv et nyt navn?"
 
-#: kwalletmanager.cpp:382 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
 #, kde-format
 msgid "Try New"
 msgstr "Forsøg med nyt"
 
-#: kwalletmanager.cpp:415
+#: kwalletmanager.cpp:411
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Er du sikker på at du ønsker at slette tegnebogen '%1'?"
 
-#: kwalletmanager.cpp:421
+#: kwalletmanager.cpp:417
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Kan ikke slette tegnebogen. Fejlkoden var %1."
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:465
 #, kde-format
 msgid "File name"
 msgstr "Filnavn"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Kunne ikke åbne fil til skrivning"
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:483
 #, kde-format
 msgid "Select file"
 msgstr "Vælg fil"
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:493
 #, kde-format
 msgid "Failed to open file"
 msgstr "Kunne ikke åbne filen"
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:506
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Der findes allerede en tegnebog med navnet %1. Handling afbrudt"
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:513
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Kunne ikke kopiere filer"
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorer ugemte ændringer?"
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorér"

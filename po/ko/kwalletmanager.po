@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:51+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2020-04-21 00:37+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -229,7 +229,7 @@ msgid "Try Again"
 msgstr "다시 시도"
 
 #: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
-#: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
+#: kwalleteditor.cpp:806 kwalletmanager.cpp:379 kwalletmanager.cpp:381
 #, kde-format
 msgid "Do Not Try"
 msgstr "시도하지 않음"
@@ -352,18 +352,18 @@ msgstr ""
 "KDE 지갑 시스템이 활성화되지 않았습니다. 지갑을 활성화하시겠습니까? 활성화하"
 "지 않으면 지갑을 읽을 수 없기 때문에 KWalletManager를 종료해야 합니다."
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
-#: kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:302
 #, kde-format
 msgid "Wallet"
 msgstr "지갑"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
 #, kde-format
 msgid "No wallets open."
 msgstr "열린 지갑이 없습니다."
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:233
+#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
 #, kde-format
 msgid "A wallet is open."
 msgstr "지갑이 열려 있습니다."
@@ -398,7 +398,7 @@ msgstr "지갑 설정(&W)..."
 msgid "Close &All Wallets"
 msgstr "모든 지갑 닫기(&A)"
 
-#: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
+#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid ""
@@ -408,105 +408,105 @@ msgstr ""
 "지갑을 완전히 닫을 수 없습니다. 다른 프로그램에서 사용할 수도 있습니다. 강제"
 "로 닫으시겠습니까?"
 
-#: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
+#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
 msgstr "강제로 닫기"
 
-#: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
+#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
 msgstr "닫지 않음"
 
-#: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "강제로 지갑을 닫을 수 없습니다. 오류 코드는 %1입니다."
 
-#: kwalletmanager.cpp:298
+#: kwalletmanager.cpp:294
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "지갑 %1을(를) 여는 중 오류가 발생했습니다."
 
-#: kwalletmanager.cpp:340
+#: kwalletmanager.cpp:336
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "새 지갑의 이름을 입력하십시오:"
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:347
 #, kde-format
 msgid "New Wallet"
 msgstr "새 지갑"
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "빈 이름은 지원하지 않습니다. 다른 이름을 지정하십시오."
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Create new wallet"
 msgstr "새 지갑 만들기"
 
-#: kwalletmanager.cpp:380 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "그 지갑은 이미 존재합니다. 새 이름을 입력하시겠습니까?"
 
-#: kwalletmanager.cpp:382 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
 #, kde-format
 msgid "Try New"
 msgstr "새 이름 입력"
 
-#: kwalletmanager.cpp:415
+#: kwalletmanager.cpp:411
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "지갑 '%1'을(를) 삭제하시겠습니까?"
 
-#: kwalletmanager.cpp:421
+#: kwalletmanager.cpp:417
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "지갑을 삭제할 수 없습니다. 오류 코드는 %1입니다."
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:465
 #, kde-format
 msgid "File name"
 msgstr "파일 이름"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "파일에 쓰려고 열 수 없음"
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:483
 #, kde-format
 msgid "Select file"
 msgstr "파일 선택"
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:493
 #, kde-format
 msgid "Failed to open file"
 msgstr "파일을 열 수 없음"
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:506
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "지갑 %1이(가) 이미 존재하여 작업 중단됨"
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:513
 #, kde-format
 msgid "Failed to copy files"
 msgstr "파일을 복사할 수 없음"
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "저장하지 않은 변경 사항을 무시하시겠습니까?"
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:51+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2017-07-27 14:26+0100\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -225,7 +225,7 @@ msgid "Try Again"
 msgstr "Zkusit znovu"
 
 #: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
-#: kwalleteditor.cpp:806 kwalletmanager.cpp:383 kwalletmanager.cpp:385
+#: kwalleteditor.cpp:806 kwalletmanager.cpp:379 kwalletmanager.cpp:381
 #, kde-format
 msgid "Do Not Try"
 msgstr "Nezkoušet"
@@ -347,18 +347,18 @@ msgstr ""
 "Systém KDE Wallet není povolen. Chcete jej povolit? Pokud ne, KWalletManager "
 "bude ukončen jelikož bez čtení úschoven nemůže pracovat."
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
-#: kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:302
 #, kde-format
 msgid "Wallet"
 msgstr "Úschovna"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:306
+#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
 #, kde-format
 msgid "No wallets open."
 msgstr "Žádná úschovna není otevřena."
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:233
+#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
 #, kde-format
 msgid "A wallet is open."
 msgstr "Úschovna je otevřena."
@@ -393,7 +393,7 @@ msgstr "Nastavit ús&chovnu..."
 msgid "Close &All Wallets"
 msgstr "Z&avřít všechny úschovny"
 
-#: kwalletmanager.cpp:268 kwalletmanager.cpp:273 walletcontrolwidget.cpp:123
+#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid ""
@@ -403,105 +403,105 @@ msgstr ""
 "Nelze normálně uzavřít úschovnu. Pravděpodobně je používána jinou aplikací. "
 "Přejete si ji přesto uzavřít?"
 
-#: kwalletmanager.cpp:270 kwalletmanager.cpp:273 walletcontrolwidget.cpp:125
+#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Force Closure"
 msgstr "Přesto uzavřít"
 
-#: kwalletmanager.cpp:271 kwalletmanager.cpp:273 walletcontrolwidget.cpp:126
+#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
 #: walletcontrolwidget.cpp:128
 #, kde-format
 msgid "Do Not Force"
 msgstr "Nezavírat"
 
-#: kwalletmanager.cpp:282 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Nelze vynutit uzavření úschovny. Chybový kód: %1"
 
-#: kwalletmanager.cpp:298
+#: kwalletmanager.cpp:294
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Chyba při otevření úschovny %1."
 
-#: kwalletmanager.cpp:340
+#: kwalletmanager.cpp:336
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Prosím, zvolte název nové úschovny:"
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:347
 #, kde-format
 msgid "New Wallet"
 msgstr "Nová úschovna"
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Prázdný název není podporován. Prosím vyberte nový."
 
-#: kwalletmanager.cpp:373
+#: kwalletmanager.cpp:369
 #, kde-format
 msgid "Create new wallet"
 msgstr "Vytvořit novou úschovnu"
 
-#: kwalletmanager.cpp:380 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Taková úschovna již existuje. Zkusit nový název?"
 
-#: kwalletmanager.cpp:382 kwalletmanager.cpp:385
+#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
 #, kde-format
 msgid "Try New"
 msgstr "Zkusit nový"
 
-#: kwalletmanager.cpp:415
+#: kwalletmanager.cpp:411
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Opravdu si přejete smazat úschovnu '%1'?"
 
-#: kwalletmanager.cpp:421
+#: kwalletmanager.cpp:417
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Nelze smazat úschovnu. Chybový kód: %1"
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:465
 #, kde-format
 msgid "File name"
 msgstr "Název souboru"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Nelze otevřít soubor pro zápis"
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:483
 #, kde-format
 msgid "Select file"
 msgstr "Vybrat soubor"
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:493
 #, kde-format
 msgid "Failed to open file"
 msgstr "Soubor nelze otevřít"
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:506
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Úschovna s názvem %1 již existuje. Operace byla přerušena."
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:513
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Kopírování souborů selhalo"
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorovat neuložené změny?"
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr ""

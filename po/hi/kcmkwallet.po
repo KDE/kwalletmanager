@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:50+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2008-02-02 19:13+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@yahoo.com>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
@@ -28,60 +28,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in,"
 
-#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#: konfigurator.cpp:42 konfigurator.cpp:270 konfigurator.cpp:272
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "केडीई वॉलेट नियंत्रण मॉड्यूल"
 
-#: konfigurator.cpp:52
+#: konfigurator.cpp:46
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "(c) 2003 जॉर्ज स्टाइकॉस"
 
-#: konfigurator.cpp:53
+#: konfigurator.cpp:47
 #, kde-format
 msgid "George Staikos"
 msgstr "जॉर्ज स्टायकॉस"
 
-#: konfigurator.cpp:120
+#: konfigurator.cpp:114
 #, kde-format
 msgid "New Wallet"
 msgstr "नया बटुआ"
 
-#: konfigurator.cpp:121
+#: konfigurator.cpp:115
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "कृपया नया बटुआ के लिए एक नाम चुनें:"
 
-#: konfigurator.cpp:241 konfigurator.cpp:316
+#: konfigurator.cpp:235 konfigurator.cpp:310
 #, kde-format
 msgid "Always Allow"
 msgstr "हमेशा स्वीकारें"
 
-#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
 #, kde-format
 msgid "Always Deny"
 msgstr "सर्वदा नकारें"
 
-#: konfigurator.cpp:276
+#: konfigurator.cpp:270
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:278
+#: konfigurator.cpp:272
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:373
+#: konfigurator.cpp:367
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "यह कॉन्फ़िगरेशन मॉड्यूल आपको केडीई वॉलेट तंत्र को कॉन्फ़िगर करने देता है."
 
-#: konfigurator.cpp:382
+#: konfigurator.cpp:376
 #, kde-format
 msgid "&Delete"
 msgstr "मिटाएँ (&D)"

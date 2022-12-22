@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:50+0000\n"
+"POT-Creation-Date: 2022-12-22 00:51+0000\n"
 "PO-Revision-Date: 2022-07-11 18:38+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -34,47 +34,47 @@ msgid "Your emails"
 msgstr "teemu.rytilahti@kde-fi.org,ilpo@iki.fi"
 
 # pmap: =/elat=KDE-lompakon asetusosiosta/
-#: konfigurator.cpp:48 konfigurator.cpp:276 konfigurator.cpp:278
+#: konfigurator.cpp:42 konfigurator.cpp:270 konfigurator.cpp:272
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE-lompakon asetusosio"
 
-#: konfigurator.cpp:52
+#: konfigurator.cpp:46
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "© 2003 George Staikos"
 
-#: konfigurator.cpp:53
+#: konfigurator.cpp:47
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: konfigurator.cpp:120
+#: konfigurator.cpp:114
 #, kde-format
 msgid "New Wallet"
 msgstr "Uusi lompakko"
 
-#: konfigurator.cpp:121
+#: konfigurator.cpp:115
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Syötä uuden lompakon nimi:"
 
-#: konfigurator.cpp:241 konfigurator.cpp:316
+#: konfigurator.cpp:235 konfigurator.cpp:310
 #, kde-format
 msgid "Always Allow"
 msgstr "Salli aina"
 
-#: konfigurator.cpp:244 konfigurator.cpp:251 konfigurator.cpp:329
+#: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
 #, kde-format
 msgid "Always Deny"
 msgstr "Estä aina"
 
-#: konfigurator.cpp:276
+#: konfigurator.cpp:270
 #, kde-format
 msgid "Permission denied."
 msgstr "Käyttö estetty."
 
-#: konfigurator.cpp:278
+#: konfigurator.cpp:272
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -83,13 +83,13 @@ msgstr ""
 "Toiminnon todentaminen epäonnistui:\n"
 "%1"
 
-#: konfigurator.cpp:373
+#: konfigurator.cpp:367
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "Tässä voi muokata KDE:n lompakkojärjestelmän asetuksia."
 
-#: konfigurator.cpp:382
+#: konfigurator.cpp:376
 #, kde-format
 msgid "&Delete"
 msgstr "&Poista"
