@@ -1,23 +1,23 @@
 # translation of kcmkwallet.po to Romanian
 # Copyright (C) 2003, 2004 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013, 2020, 2021.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013, 2020, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:48+0000\n"
-"PO-Revision-Date: 2021-07-25 09:10+0100\n"
+"PO-Revision-Date: 2022-12-28 21:01+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -239,13 +239,13 @@ msgstr ""
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service DBus API"
-msgstr ""
+msgstr "API DBus pentru Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Enable Secret Service DBus API"
-msgstr ""
+msgstr "Activează API-ul DBus pentru Secret Service"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:315
