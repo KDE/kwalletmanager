@@ -504,7 +504,7 @@ msgstr "Ignorovat neuložené změny?"
 #: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Ignorovat"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
