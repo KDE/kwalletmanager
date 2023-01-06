@@ -1,406 +1,284 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY % English "INCLUDE">
 ]>
 
 <book id="kwallet5" lang="&language;">
 <bookinfo>
-<title
->Das Handbuch zu &kwallet5;</title>
+<title>The &kwallet5; Handbook</title>
 
 <authorgroup>
-<author
->&George.Staikos; &George.Staikos.mail; </author>
-<author
->&Lauri.Watts; &Lauri.Watts.mail; </author>
-<othercredit role="developer"
-><firstname
->George</firstname
-><surname
->Staikos</surname
-> <affiliation
-><address
->&George.Staikos.mail;</address
-></affiliation>
-<contrib
->Entwickler</contrib>
+<author>
+&George.Staikos; &George.Staikos.mail;
+</author>
+<author>
+&Lauri.Watts; &Lauri.Watts.mail;
+</author>
+<othercredit role="developer">
+<firstname>George</firstname><surname>Staikos</surname>
+<affiliation><address>&George.Staikos.mail;</address></affiliation>
+<contrib>Developer</contrib>
 </othercredit>
-<othercredit role="translator"
-><firstname
->Gregor</firstname
-><surname
->Zumstein</surname
-><affiliation
-><address
-><email
->gz@orchester-bremgarten.ch</email
-></address
-></affiliation
-><contrib
->Deutsche Übersetzung</contrib
-></othercredit
-> 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<legalnotice
->&FDLNotice;</legalnotice>
+<legalnotice>&FDLNotice;</legalnotice>
 
-<date
->2016-07-05</date>
-<releaseinfo
->Anwendungen 16.04</releaseinfo>
+<date>2016-07-05</date>
+<releaseinfo>Applications 16.04</releaseinfo>
 
 <abstract>
-<para
->Das Passwortspeicher-Subsystem erlaubt die bequeme und gleichzeitig sichere Aufbewahrung Ihrer Passwörter.</para>
+<para>
+The wallet subsystem provides a convenient and secure way to manage all your
+passwords.</para>
 
 </abstract>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->KWallet</keyword>
-<keyword
->Passwörter</keyword>
-<keyword
->Formulare</keyword>
+<keyword>KDE</keyword>
+<keyword>Kwallet</keyword>
+<keyword>passwords</keyword>
+<keyword>forms</keyword>
 </keywordset>
 
 </bookinfo>
 
 <chapter id="introduction">
-<title
->Einleitung</title>
+<title>Introduction</title>
 
-<para
->Computernutzer müssen eine riesige Datenmenge verwalten, ein Teil davon ist sicherheitsrelevant. Insbesondere müssen sie viele Zugangsdaten und Passwörter verwalten. Sich diese alle zu merken ist schwierig, sie auf Papier oder in einer Textdatei aufzuschreiben ist unsicher.</para>
+<para>Computer users have a very large amount of data to manage, some of
+which is sensitive.  In particular, you will typically have many passwords
+to manage.  Remembering them is difficult and writing them down on paper or in
+a text file is insecure.</para>
 
-<para
->&kwallet5; bietet eine sichere Möglichkeit, Passwörter und andere persönliche Informationen zu speichern. Damit muss sich der Benutzer nur noch ein einzelnes Passwort anstatt zahlloser verschiedener Passwörter und Anmeldedaten merken. </para>
+<para>&kwallet5; provides a secure way to store passwords and other secret information,
+allowing the user to remember only a single password instead of numerous different passwords and credentials.
+</para>
 
 <sect1 id="kwallet-create">
 
-<title
->Einen Passwortspeicher erstellen</title>
+<title>Create a Wallet</title>
 
-<para
->KWallet ist ein Speicher für Passwörter. Es ist normalerweise ausreichend, nur einen Passwortspeicher zu benutzen, der durch ein Hauptpasswort gesichert ist. Sie können eine große Anzahl von Passwörtern in Speichern mit &kwalletmanager5; organisieren.</para>
+<para>Wallet is a password storage. It is usually sufficient to have just one wallet secured by one master password but you can organize your large collection of passwords by wallets using &kwalletmanager5;.</para>
 
-<para
->Als Voreinstellung wird ein Passwortspeicher mit dem Namen <guilabel
->kdewallet</guilabel
-> zur Speicherung Ihrer Passwörter verwendet. Dieser Passwortspeicher wird durch Ihr Passwort zur Anmeldung abgesichert und wird automatisch bei der Anmeldung geöffnet, wenn „kwallet_pam“ installiert und richtig eingerichtet ist. Bei bestimmten Distributionen wie &eg; Archlinux ist „kwallet_pam“ nicht in der Voreinstellung installiert.</para>
+<para>By default a wallet named <guilabel>kdewallet</guilabel> will be used to store your passwords.
+This wallet is secured by your login password and will automatically be opened at login,
+if kwallet_pam is installed and properly configured. On certain distros (&eg; Archlinux) kwallet_pam is not installed by default</para>
 
 
-<para
->Andere Passwortspeicher müssen manuell geöffnet werden.</para>
+<para>Other wallets have to be opened manually.</para>
 
-<para
->Es gibt zwei Möglichkeiten, einen neuen Passwortspeicher zu erstellen:</para>
+<para>There are two ways to create a new wallet:</para>
 
 <itemizedlist>
-<listitem
-><para
->Verwenden Sie den Menüeintrag <menuchoice
-><guimenu
->Datei</guimenu
-><guimenuitem
->Neuen Passwortspeicher</guimenuitem
-></menuchoice
-> im &kwalletmanager5;</para
-></listitem>
+<listitem><para>Use the menu item <menuchoice><guimenu>File</guimenu><guimenuitem>New
+Wallet</guimenuitem></menuchoice> in the &kwalletmanager5;</para></listitem>
 
-<listitem
-><para
->Verwenden Sie den Knopf <guibutton
->Neu</guibutton
-> im &systemsettings;-Modul <guilabel
->Passwortverwaltung</guilabel
-></para
-></listitem>
+<listitem><para>Use the <guibutton>New</guibutton> button in the &systemsettings; module
+<guilabel>KDE Wallet</guilabel></para></listitem>
 </itemizedlist>
 
-<para
->Falls Sie bisher noch keinen Passwortspeicher erstellt haben, lesen Sie den Abschnitt <link linkend="kwallet-using"
->&kwallet5; benutzen</link
->. </para>
+<para>If you have not created a wallet yet, see section <link linkend="kwallet-using">Using &kwallet5;</link>.
+</para>
 
-<para
->&kwallet5; bietet zwei unterschiedliche Methoden, Ihre Daten zu speichern:</para>
+<para>&kwallet5; offers two different ways to store your data:</para>
 
 <screenshot>
-<screeninfo
->Verschlüsselung auswählen</screeninfo>
+<screeninfo>Select encryption</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Verschlüsselung auswählen</phrase
-></textobject>
+<imageobject><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
+<textobject><phrase>Select encryption</phrase></textobject>
 </mediaobject>
 </screenshot>
 
 <variablelist>
 
 <varlistentry>
-<term
->Blowfish-Verschlüsselung</term>
+<term>Blowfish encryption</term>
 <listitem>
-<para
->&kwallet5; speichert genau diese sicherheitsrelevanten Daten in einer mit starker Kryptografie verschlüsselten Datei, auf die alle Anwendungen zugreifen können. Die Daten werden durch ein von Ihnen festgelegtes Hauptpasswort geschützt.</para>
+<para>&kwallet5; saves this sensitive data for you in a strongly encrypted
+file, accessible by all applications, and protected with a master
+password that you define.</para>
 
 <screenshot>
-<screeninfo
->Einen Passwortspeicher mit Blowfish-Verschlüsselung erstellen</screeninfo>
+<screeninfo>Create a blowfish encrypted wallet</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Einen Passwortspeicher mit Blowfish-Verschlüsselung erstellen</phrase
-></textobject>
+<imageobject><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject><phrase>Create a blowfish encrypted wallet</phrase></textobject>
 </mediaobject>
 </screenshot>
 
-<para
->Die Daten werden mit dem <ulink url="http://www.schneier.com/blowfish.html"
->symmetrischen Blockverschlüsselungsalgorithmus Blowfish</ulink
-> verschlüsselt. Der Schlüsselalgorithmus wird aus dem <ulink url="http://www.ietf.org/rfc/rfc3174.txt"
->SHA-1-Hash-Wert</ulink
-> des Passworts berechnet, mit einer Schlüssellänge von 156 Bit (20 Byte). Aus den  Daten in der Passwortspeicher-Datei werden zusätzlich Hash-Werte mit SHA-1 berechnet und vor der Entschlüsselung und dem Zugriff von Programmen überprüft </para>
+<para>The data is encrypted with the
+<ulink url="http://www.schneier.com/blowfish.html">Blowfish symmetric block cipher algorithm</ulink>,
+the algorithm key is derived from the
+<ulink url="http://www.ietf.org/rfc/rfc3174.txt">SHA-1 hash</ulink>
+of the password, with a key length of 156 bits (20 bytes).
+The data into the wallet file is also hashed with SHA-1 and checked
+before the data is deciphered and accessible by the applications.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
->GPG-Verschlüsselung</term>
+<term>GPG encryption</term>
 <listitem>
-<para
->GnuPG verwendet einige sehr starke Verschlüsselungsalgorithmen und verwendet lange Schlüssel, die mit einer Passphrase geschützt sind.</para>
+<para>GnuPG offers some very strong encryption algorithms and uses passphrase protected long keys.</para>
 
 <screenshot>
-<screeninfo
->Kein GPG-Schlüssel gefunden</screeninfo>
+<screeninfo>No GPG key found</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Kein GPG-Schlüssel gefunden</phrase
-></textobject>
+<imageobject><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
+<textobject><phrase>No GPG key found</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para
->Das obere Bildschirmfoto zeigt die Situation, wenn kein GPG-Schlüssel gefunden im System wurde. Benutzen Sie in diesem Fall Anwendungen wie &kgpg; oder &kleopatra; zur Erzeugung eines Schlüssels und versuchen Sie es erneut.</para>
+<para>The screenshots above show the case where an encryption capable GPG key was not
+found on the system. Please use applications like &kgpg; or &kleopatra; to create a key and try again.</para>
 
-<para
->Wurde ein GPG-Schlüssel gefunden, dann können Sie im nächsten Dialog einen Schlüssel für Ihren neuen Passwortspeicher auswählen. </para>
+<para>If a GPG key was found you will get the next dialog where you can select a key to use for your new wallet.
+</para>
 <screenshot>
-<screeninfo
->Auswahl eines Schlüssels</screeninfo>
+<screeninfo>Select an encryption key</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Auswahl eines Schlüssels</phrase
-></textobject>
+<imageobject><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
+<textobject><phrase>Select an encryption key</phrase></textobject>
 </mediaobject>
 </screenshot>
 
-<para
->&kwallet5; verwendet dann GPG beim Speichern und Öffnen eines Passwortspeichers. Der Passphrasen-Dialog erscheint nur einmal. Sogar wenn der Passwortspeicher nach dem anfänglichen Öffnen geschlossen wird, erfolgt das nachfolgende Öffnen ohne erneute Abfrage der Passphrase während derselben Sitzung.  </para>
+<para>&kwallet5; will now use GPG when storing wallets and when opening them.
+The passphrase dialog only shows once. Even if the wallet is closed after initial open,
+subsequent opening will occur silently during the same session.
+</para>
 
-<para
->In einer Sitzung können beide Dateiformate gleichzeitig benutzt werden. &kwallet5; erkennt automatisch des Dateiformat und lädt das zugehörige Backend zur Verarbeitung.</para>
+<para>
+The same session can handle simultaneously both file formats. &kwallet5; will transparently detect
+the file format and load the correct backend to handle it.</para>
 
-<para
->Um Ihre sensiblen Daten aus einem klassischen Passwortspeicher mit dem neuen Backend zu benutzen, folgen Sie diesen Anweisungen:</para>
+<para>
+To use your sensitive data from your classic wallet with the new backend follow these steps:</para>
 
 <itemizedlist>
-<listitem
-><para
->Erstellen Sie einen neuen Passwortspeicher mit GPG-Verschlüsselung</para
-></listitem>
-<listitem
-><para
->Starten Sie &kwalletmanager5; mit &krunner; (<keycombo
->&Alt; <keycap
->F2</keycap
-></keycombo
->) oder dem Anwendungsstarter bzw Anwendungsmenü, öffnen Sie Ihren alten Passwortspeicher und wählen dann <menuchoice
-><guimenu
->Datei</guimenu
-> <guimenuitem
->Verschlüsselt exportieren</guimenuitem
-></menuchoice
->, um eine Archiv-Datei mit dem Inhalt des Passwortspeichers zu erzeugen. </para
-></listitem>
-<listitem
-><para
->Öffnen Sie den neuen Passwortspeicher und wählen Sie dann mit <menuchoice
-><guimenu
->Datei</guimenu
-> <guimenuitem
->Verschlüsselt importieren</guimenuitem
-></menuchoice
-> die vorher gespeicherte Datei.</para>
+<listitem><para>Create a new GPG based wallet</para></listitem>
+<listitem><para>Launch &kwalletmanager5; using &krunner; (<keycombo>&Alt; <keycap>F2</keycap></keycombo>)
+or other application launcher (menu) and select your old wallet.
+Then choose <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Export as encrypted</guimenuitem></menuchoice> to create an archive file with your sensitive data.
+</para></listitem>
+<listitem><para>Select the new GPG based wallet then choose <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Import encrypted</guimenuitem></menuchoice> and select the file you just saved.</para>
 </listitem>
 
-<listitem
-><para
->Gehen Sie in den &systemsettings; zur Seite <menuchoice
-><guimenu
->Benutzerkontodetails</guimenu
-> <guimenuitem
->Passwortverwaltung</guimenuitem
-></menuchoice
-> und wählen Sie den neu erstellte GPG-basierten Passwortspeicher im Kombinationsfeld <guilabel
->Standardpasswortspeicher</guilabel
->. </para
-></listitem>
+<listitem><para>Go to &systemsettings; <menuchoice><guimenu>Account Details</guimenu> <guimenuitem>KDE
+Wallet</guimenuitem></menuchoice> and select the newly created GPG based wallet from the <guilabel>Select
+wallet to use as default</guilabel> combobox.
+</para></listitem>
 </itemizedlist>
 
-<para
->Alternativ können Sie <guimenuitem
->Passwortspeicher importieren</guimenuitem
-> benutzen, aber dann müssen sie die <filename class="extension"
->.kwl</filename
->-Datei zu Ihrem alten Passwortspeicher auswählen, die sich im Ordner <filename class="directory"
->kwalletd</filename
-> in <userinput
->qtpaths --paths GenericDataLocation</userinput
-> befindet. </para>
+<para>Alternatively use <guimenuitem>Import a wallet</guimenuitem>
+but in that case you have to select the <filename class="extension">.kwl</filename> file corresponding
+to your old wallet, located in the folder <filename class="directory">kwalletd</filename>
+in <userinput>qtpaths --paths GenericDataLocation</userinput>.
+</para>
 </listitem>
 </varlistentry>
 
 </variablelist>
 
 <tip>
-<para
->Für sehr sicherheitsrelevante Aktionen sollten Sie einen Passwortspeicher für Passwörter im lokalen System und einen für Netzwerk-/Internet-Passwörter sowie Formulardaten benutzen. Standardmäßig werden allerdings alle Passwörter in einer einzigen Datei gehalten. Die Einstellungen hierzu können Sie im &systemsettings;-Modul von &kwallet5; vornehmen. Als Voreinstellung wird alles in einem Passwortspeicher namens <guilabel
->kdewallet</guilabel
-> gespeichert.</para>
+<para>&kwallet5; supports multiple wallets, so
+for the most secure operation, you should use one wallet for local
+passwords, and another for network passwords and form data.  You can
+configure this behavior in the &kwallet5; &systemsettings; module, however
+the default setting is to store everything in one wallet named <guilabel>kdewallet</guilabel>.</para>
 </tip>
 
-<para
->Ein Passwortspeicher ist per Voreinstellung geschlossen, das heißt, sie müssen ein Passwort angeben, um ihn zu öffnen. Sobald der Passwortspeicher geöffnet ist, kann jeder Benutzer den Inhalt lesen, dies kann ein Sicherheitsrisiko sein.</para>
+<para>A wallet is by default closed, which means that you must supply
+a password to open it. Once the wallet is opened, the contents can
+be read by any user process, so this may be a security issue.</para>
 </sect1>
 
 <sect1 id="kwallet-using">
-<title
->&kwallet5; benutzen</title>
+<title>Using &kwallet5;</title>
 
-<para
->Wenn Sie &eg; zur Webseite des &kde;-Fehlerverfolgungssystems gehen und das erste Mal die Anmeldedaten eingegeben haben, wird ein Dialog angezeigt, in dem die Speicherung des Passwortes in einem Passwortspeicher angeboten wird:</para>
+<para>If you visit &eg; the &kde; bugtracker and enter the login data for
+the first time, a dialog pops up offering to store the password in an
+encrypted wallet:</para>
 
 <screenshot>
-<screeninfo
->Anfrage zur Speicherung der Anmeldeinformationen</screeninfo>
+<screeninfo>Request to save login information</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Anfrage zur Speicherung der Anmeldeinformationen</phrase
-></textobject>
+<imageobject><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
+<textobject><phrase>Request to save login information</phrase></textobject>
 </mediaobject>
 </screenshot>
 
-<para
->Möchten Sie diese Informationen speichern, dann drücken Sie den Knopf <guibutton
->Speichern</guibutton
->. Haben Sie bis dahin noch keinen Passwortspeicher erstellt, wird im nächsten Dialog nach der Verschlüsselungs-Methode gefragt und dann ein Passwortspeicher namens kdewallet erstellt. </para>
+<para>If you want to store this information, select <guibutton>Store</guibutton>
+to proceed. In case you did not create a wallet so far, the next dialog asks for
+the encryption backend and creates a wallet named kdewallet.
+</para>
 
-<para
->Wenn Sie dieselbe Webseite das nächste Mal besuchen, fordert das Programm die Anmeldedaten vom Passwortspeicher an und füllt das Formular damit aus.</para>
+<para>Next time you visit the same website again, the application retrieves the login data
+from an open wallet and prefills the forms with these secrets.</para>
 
 <screenshot>
-<screeninfo
->Ausgefüllte Anmeldedaten</screeninfo>
+<screeninfo>Prefilled login information</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="prefilled-forms.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Ausgefüllte Anmeldedaten</phrase
-></textobject>
+<imageobject><imagedata fileref="prefilled-forms.png" format="PNG"/></imageobject>
+<textobject><phrase>Prefilled login information</phrase></textobject>
 </mediaobject>
 </screenshot>
 
-<para
->Ist der Passwortspeicher geschlossen, fordert das Programm das Öffnen des Passwortspeichers an. Geben Sie das Passwort für den Passwortspeicher ein und drücken Sie den Knopf <guibutton
->Öffnen</guibutton
->.</para>
+<para>If the wallet is closed the application requests to open the wallet.
+Enter the wallet password and click the <guibutton>Open</guibutton> button.</para>
 
 <screenshot>
-<screeninfo
->Die Öffnung des Passwortspeichers wird angefordert</screeninfo>
+<screeninfo>Request to open a wallet</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Die Öffnung des Passwortspeichers wird angefordert</phrase
-></textobject>
+<imageobject><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
+<textobject><phrase>Request to open a wallet</phrase></textobject>
 </mediaobject>
 </screenshot>
 
-<para
->Damit erhält das Programm Zugriff auf den Passwortspeicher, kann die Anmeldedaten darin lesen und sie in die Anmeldungsfelder dieser Webseite eintragen. Hat ein Programm erst einmal Zugriff auf den Passwortspeicher, kann es automatisch alle Anmeldeinformationen darin bei den zugehörigen Webseiten für Sie eintragen.</para>
+<para>This connects the application to the wallet, enables it to read the login data from the wallet
+and to restore the login information for this website. Once an application is connected to
+the wallet, it can automatically restore any login information stored in the wallet.</para>
 
 </sect1>
 
 </chapter>
 
 <chapter id="kwalletmanager5">
-<title
->&kwalletmanager5;</title>
+<title>&kwalletmanager5;</title>
 
-<para
->&kwalletmanager5; erfüllt eine Reihe von Aufgaben. Zuerst erlaubt Ihnen &kwalletmanager5; zu sehen, ob und welche Passwortspeicher offen sind und welche Anwendungen darauf zugreifen. Sie können den Zugriff einer Anwendung auf einen Passwortspeicher im &kwalletmanager5; unterbinden.</para>
+<para>&kwalletmanager5; serves a number of functions.  Firstly it allows you to see if
+any wallets are open, which wallets those are, and which applications are
+using each wallet.  You can disconnect an application's access to a wallet
+from within the &kwalletmanager5;.</para>
 
-<para
->Auch lassen sich hier die installierten Passwortspeicher verwalten und deren Inhalt ändern. Ebenso lassen sich neue Passwortspeicher hinzufügen oder bestehende Passwortspeicher löschen sowie deren Inhalt (Schlüssel ändern) bearbeiten.</para>
+<para>You may also manage the wallets installed on the system, creating and
+deleting wallets and manipulating their contents (changing keys, ...).</para>
 
-<para
->Das Programm &kwalletmanager5; wird mit <menuchoice
-> <guimenu
->Programme</guimenu
-><guisubmenu
->System</guisubmenu
-> <guimenuitem
->&kwalletmanager5; (Passwortverwaltung)</guimenuitem
-></menuchoice
-> aus dem Anwendungs-Starter aufgerufen. Alternativ starten Sie &krunner; mit dem Kurzbefehl <keycombo action="simul"
->&Alt;<keycap
->F2</keycap
-></keycombo
-> und geben dann den Befehl <command
->kwalletmanager5</command
-> ein.</para>
+<para>The &kwalletmanager5; application is launched with <menuchoice>
+<guimenu>Applications</guimenu><guisubmenu>System</guisubmenu>
+<guimenuitem>Wallet Management Tool</guimenuitem></menuchoice> from the
+application launcher.
+Alternatively start &krunner; with shortcut <keycombo
+action="simul">&Alt;<keycap>F2</keycap></keycombo> and enter
+<command>kwalletmanager5</command>.</para>
 
-<para
->Klicken Sie auf das Brieftaschensymbol im Systemabschnitt der Kontrollleiste, um das &kwalletmanager5;-Fenster zu öffnen.</para>
+<para>Click once on the system tray wallet icon to display the &kwalletmanager5;
+window.</para>
 <para>
 <screenshot>
-<screeninfo
->Hauptfenster mit einem Passwortspeicher</screeninfo>
+<screeninfo>Main window with one wallet</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="kwalletmanager.png"/>
 </imageobject>
 <textobject>
-<phrase
->Hauptfenster mit einem Passwortspeicher</phrase>
+<phrase>Main window with one wallet</phrase>
 </textobject>
-<caption
-><para
->Hauptfenster mit einem Passwortspeicher</para
-></caption>
+<caption><para>Main window with one wallet</para></caption>
 </mediaobject>
 </screenshot>
 </para>
@@ -411,156 +289,113 @@ Last code change with http://websvn.kde.org/?view=revision&revision=882694
 see also https://bugs.kde.org/show_bug.cgi?id=290309
 -->
 <sect1 id="kwalletmanager-wallet-window">
-<title
->Das Fenster zum Passwortspeicher</title>
+<title>The Wallet Window</title>
 
-<para
->Wenn Sie mehr als einen Passwortspeicher haben, werden alle verfügbaren Passwortspeicher links angezeigt.</para>
+<para>If you have more than one wallet all available wallets are shown on the left.</para>
 
-<para
->Ein Klick auf einen Passwortspeicher im Fenster von &kwalletmanager5; zeigt den Status und den Inhalt eines geöffneten Passwortspeicher. Ein Passwortspeicher kann beliebig viele Ordner enthalten, in denen Passwortdaten abgelegt werden können. Jeder Passwortspeicher enthält bereits die Ordner <quote
->Form Data</quote
-> und <quote
->Passwords</quote
->. </para>
+<para>Clicking on a wallet in the &kwalletmanager5; window will display
+that wallet's status and the contents of an opened wallet. A wallet may contain any number
+of folders, which allow storing of password information. By default a wallet
+will contain folders named Form Data and Passwords.
+</para>
 
 <screenshot>
-<screeninfo
->Hauptfenster mit zwei Passwortspeichern</screeninfo>
+<screeninfo>Main window with two wallets</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="kwallet-edit.png"/>
 </imageobject>
 <textobject>
-<phrase
->Hauptfenster mit zwei Passwortspeichern</phrase>
+<phrase>Main window with two wallets</phrase>
 </textobject>
-<caption
-><para
->Hauptfenster mit zwei Passwortspeichern</para
-></caption>
+<caption><para>Main window with two wallets</para></caption>
 </mediaobject>
 </screenshot>
-<para
->Benutzen Sie den Knöpf <guibutton
->Öffnen</guibutton
->, um den Inhalt eines geschlossenen Passwortspeichers anzuzeigen. Dazu müssen Sie das Hauptpasswort für den Passwortspeicher eingeben.</para>
+<para>Use <guibutton>Open</guibutton> to display the content of a closed wallet.
+You will be requested to enter the master password.</para>
 
 <sect2>
-<title
->Karteikarte Inhalte</title>
+<title>Contents tab</title>
 
-<para
->Auf der Karteikarte <guilabel
->Inhalte</guilabel
-> gibt es drei Abschnitte:</para>
+<para>The <guilabel>Contents</guilabel> tab has three sections:</para>
 
 <itemizedlist>
-<listitem
-><para
->Eine Suchleiste zur Filterung der Einträge im Passwortspeicher</para
-></listitem>
-<listitem
-><para
->Die im Passwortspeicher enthaltenen Ordner als Baumansicht. Klicken Sie auf die Symbole <guiicon
->&gt;</guiicon
-> / <guiicon
->v</guiicon
->, um die Baumansicht ein- oder auszuklappen.</para
-></listitem>
-<listitem
-><para
->Den Inhalt des ausgewählten Ordnereintrags auf der rechten Seite. Als Standard sind Passwort und Wert ausgeblendet. Um sie anzuzeigen und zu bearbeiten, aktivieren Sie <guilabel
->Werte anzeigen</guilabel
-> oder klicken Sie auf <guilabel
->Inhalt anzeigen</guilabel
->. </para
-></listitem>
+<listitem><para>A search line to filter the items of the current
+wallet</para></listitem>
+<listitem><para>The tree view of the folders contained in the wallet.
+Click the <guiicon>&gt;</guiicon> / <guiicon>v</guiicon> icons to expand or collapse
+the tree view.</para></listitem>
+<listitem><para>The contents of the selected folder entry at the right side.
+By default the password and value are hidden. To display and edit them enable
+<guilabel>Show values</guilabel> or click the <guilabel>Show Contents</guilabel> button.
+</para></listitem>
 </itemizedlist>
 
-<para
->Ordner können mit dem Kontextmenü hinzugefügt oder gelöscht werden. Wird ein Ordner ausgewählt, so werden die Ordnereinträge und die Übersicht aktualisiert. Wird ein Ordnereintrag ausgewählt, so wird der Inhaltsbereich aktualisiert und die Einträge können geändert werden.</para>
+<para>Folders may be added or deleted via the context menu, and selecting a folder will update
+the folder entry list and the summary display.  Selecting a folder entry
+will update the entry contents pane, and allow you to edit that
+entry.</para>
 
-<para
->Einträge können auch über das Kontextmenü für die Ordnereinträge hinzugefügt, umbenannt oder gelöscht werden.</para>
+<para>Entries may also be created, renamed or deleted via the context menu for the
+folder contents.</para>
 
-<para
->Alle Ordner und Einträge können auf andere Passwortspeicher respektive Ordner gezogen werden. Dies erlaubt es, einfach einen neuen Passwortspeicher anzulegen, die in einer anderen Umgebung verwendet werden kann. So kann zum Beispiel ein neuer Passwortspeicher angelegt und auf einen Wechselspeicher kopiert werden. So können wichtige Passwörter dorthin verschoben werden, sodass Sie sie überall zur Verfügung haben.</para>
+<para>All folders and entries may be dragged and dropped into other wallets
+or folders respectively.  This allows a user to easily package up a new
+wallet for transfer to another environment.  For instance, a new wallet
+could be created and copied onto a removable flash memory device.  Important
+passwords could be transferred there, so you have them available in other
+locations.</para>
 
 <sect3 id="kwallet-import-export">
-<title
->Importieren und Exportieren</title>
-<para
->Wenn Sie Ihre Passwörter auf ein anderes Gerät oder einen anderen Rechner übertragen möchten, benutzen Sie die Aktionen im Menü <guimenu
->Datei</guimenu
->. Mit <guimenuitem
->Verschlüsselt exportieren</guimenuitem
-> können Passwortspeicher in eine verschlüsselte Archiv-Datei exportiert werden. Beim Importieren dieser Archiv-Datei mit <guimenuitem
->Verschlüsselt importieren</guimenuitem
-> müssen Sie das Hauptpasswort des Passwortspeichers eingeben. </para>
-<para
->Als Alternative können Sie das Format <filename class="extension"
->.xml</filename
-> zum Übertragen des Inhalts eines Passwortspeicher verwenden. Bedenken Sie, dass alle Passwörter als lesbarer Text in diesem Format gespeichert werden. </para>
+<title>Import and Export</title>
+<para>If you want to transfer your secrets to another device or computer use
+the actions in the <guimenu>File</guimenu> menu. With <guimenuitem>Export as encrypted</guimenuitem>
+wallets can be exported into an encrypted archive file.
+Importing this archive file with <guimenuitem>Import encrypted</guimenuitem>
+you have to provide the master password of the wallet.
+</para>
+<para>Alternatively a <filename class="extension">.xml</filename> file can be used for transferring
+a wallet. Keep in mind that all secrets are stored as plain text in this file.
+</para>
 </sect3>
 
 <sect3 id="kwallet-adding-entries">
-<title
->Einträge manuell hinzufügen</title>
-<para
->Öffnen Sie das Kontextmenü mit der &RMB; auf <guilabel
->Paare</guilabel
-> in der <guilabel
->Ordner</guilabel
->-Baumansicht. Wählen Sie <guilabel
->Neu</guilabel
-> und geben dann einen Namen für den neuen Eintrag ein.</para>
-<para
->Auf der Karteikarte Inhalte wählen Sie <guilabel
->Neuer Ordner</guilabel
-> aus dem Kontextmenü der Einträge <quote
->Form Data</quote
-> oder <quote
->Passwords</quote
->. Für Passwörter klicken Sie dann auf <guilabel
->Inhalte anzeigen</guilabel
-> und geben das Passwort ein. Für Paare müssen Sie einen <guilabel
->Schlüssel</guilabel
-> und einen <guilabel
->Wert</guilabel
-> angeben. Klicken Sie auf den Knopf <guilabel
->Speichern</guilabel
->, um die neuen Einträge verschlüsselt in den Passwortspeicher einzufügen.  </para>
+<title>Adding Entries Manually</title>
+<para>Open the context menu with the &RMB; click on <guilabel>Maps</guilabel> or
+<guilabel>Passwords</guilabel> in the <guilabel>Folder</guilabel> tree view.
+Select <guimenuitem>New</guimenuitem> or <guimenuitem>New Folder</guimenuitem> and choose a name for the new entry.</para>
+<para>In the folder contents pane select <guilabel>New Folder</guilabel> from
+the context menu of <quote>Form Data</quote> or <quote>Passwords</quote>.
+For passwords click the <guilabel>Show Contents</guilabel> button, enter the new password.
+For Maps you have to add a <guilabel>Key</guilabel> and a <guilabel>Value</guilabel>.
+Click the <guilabel>Save</guilabel> button to store the new entries in the encrypted
+wallet file.
+</para>
 </sect3>
 </sect2>
 
 <sect2>
-<title
->Karteikarte Anwendungen</title>
+<title>Applications tab</title>
 <para>
 <screenshot>
-<screeninfo
->Karteikarte Anwendungen</screeninfo>
+<screeninfo>Applications tab</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="kwallet-applications.png"/>
 </imageobject>
 <textobject>
-<phrase
->Karteikarte Anwendungen</phrase>
+<phrase>Applications tab</phrase>
 </textobject>
-<caption
-><para
->Karteikarte Anwendungen</para
-></caption>
+<caption><para>Applications tab</para></caption>
 </mediaobject>
 </screenshot>
 </para>
-<para
->Die erste Liste zeigt alle Anwendungen, die gerade mit dem ausgewählten Passwortspeicher verbunden sind. Benutzen Sie den Knopf rechts neben jedem Eintrag, um die Verbindung der Anwendung zu trennen.</para>
+<para>The first list shows all applications currently connected to the selected wallet.
+Use the button at the right side of each entry to disconnect the application.</para>
 
-<para
->In der zweiten Liste werden alle Anwendungen angezeigt, deren Zugriff auf den Passwortspeicher autorisiert ist. Benutzen Sie den Knopf rechts neben jedem Eintrag in der Liste, um die Autorisierung zurückzuziehen. </para>
+<para>In the second list all applications are displayed which are authorized to access the wallet.
+Use the button right of each entry in the list to revoke the access.
+</para>
 <!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
 </sect2>
 </sect1>
@@ -568,193 +403,150 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </chapter>
 
 <chapter id="kwallet-kcontrol-module">
-<title
->&kwallet5; einrichten</title>
+<title>Configuring &kwallet5;</title>
 
 <sect1 id="wallet-preferences">
-<title
->Einstellungen für den Passwortspeicher</title>
+<title>Wallet Preferences</title>
 
-<para
->&kwallet5; besitzt einen Dialog mit diversen Einstellungen, der Ihnen die Anpassung von &kwallet5; an Ihre Bedürfnisse erlaubt. Die Standardeinstellungen sollten allerdings für die meisten Benutzer genügen.</para>
+<para>&kwallet5; contains a small configuration panel with several options
+that allow you to tune &kwallet5; to your personal preferences.  The
+default settings for &kwallet5; are sufficient for most users.</para>
 
-<para
->Markieren Sie das Ankreuzfeld, um das Passwortspeicher-Subsystem von &kde; zu aktivieren. Ist dieses Feld nicht markiert, ist &kwallet5; komplett deaktiviert und die anderen Einstellungen sind wirkungslos. &kwallet5; speichert dann auch keine Informationen und bietet keine Hilfe beim Ausfüllen von Formularen an.</para>
+<para>Check the box to enable or disable the &kde; wallet subsystem
+entirely.  If this box is unchecked, then &kwallet5; is entirely disabled and
+none of the other options here have any effect, nor will &kwallet5; record
+any information, or offer to fill in forms for you.</para>
 
 <variablelist>
-<title
-><guilabel
->Passwortspeicher schließen</guilabel
-></title>
+<title><guilabel>Close Wallet</guilabel></title>
 <varlistentry>
-<term
-><guilabel
->Bei Nichtgebrauch schließen nach:</guilabel
-></term>
+<term><guilabel>Close when unused for:</guilabel></term>
 <listitem>
-<para
->Schließt den Passwortspeicher nach einem Zeitraum ohne Aktivitäten. Ist diese Einstellung markiert, können Sie den gewünschten Zeitraum im Drehfeld einstellen; Die Voreinstellung ist 10 Minuten. Wird ein Passwortspeicher geschlossen, benötigen Sie für einen erneuten Zugriff das Passwort.</para>
+<para>Close the current wallet after a period of inactivity. If you check this
+option, set the period in the box, default is 10 minutes. When a wallet is
+closed, the password is needed to access it again.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Schließen, wenn der Bildschirmschoner aktiv wird</guilabel
-></term>
+<term><guilabel>Close when screensaver starts</guilabel></term>
 <listitem>
-<para
->Schließt den Passwortspeicher, sobald der Bildschirmschoner aktiv wird. Wird ein Passwortspeicher geschlossen, benötigen Sie für einen erneuten Zugriff das Passwort.</para>
+<para>Close the wallet as soon as the screen saver starts. When a wallet is
+closed, the password is needed to access it again.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Schließen, sobald keine Anwendung mehr darauf zugreift</guilabel
-></term>
+<term><guilabel>Close when last application stops using it</guilabel></term>
 <listitem>
-<para
->Schließt den Passwortspeicher, sobald keine Anwendung mehr darauf zugreift. Beachten Sie, dass der Passwortspeicher erst dann geschlossen wird, wenn alle Anwendungen, die darauf zugreifen die Verbindung gelöst haben. Wird ein Passwortspeicher geschlossen, benötigen Sie für einen erneuten Zugriff das Passwort.</para>
+<para>Close the wallet as soon as applications that use it have stopped. Note
+that your wallets will only be closed when all the applications that use it have
+stopped. When a wallet is closed, the password is needed to access it
+again.</para>
 </listitem>
 </varlistentry>
 </variablelist>
 
 <variablelist>
-<title
-><guilabel
->Automatische Wahl des Passwortspeichers</guilabel
-></title>
+<title><guilabel>Automatic Wallet Selection</guilabel></title>
 <varlistentry>
-<term
-><guilabel
->Standardpasswortspeicher:</guilabel
-></term>
+<term><guilabel>Select wallet to use as default:</guilabel></term>
 <listitem>
-<para
->Wählen Sie aus, welchen Passwortspeicher Sie als Voreinstellung verwenden möchten. Beachten Sie , dass nur der Passwortspeicher mit dem Namen <guilabel
->kdewallet</guilabel
-> automatisch bei der Anmeldung geöffnet wird, wenn das Passwort für den Passwortspeicher und die Anmeldung identisch sind. </para>
+<para>Select which wallet you want to use as default wallet.
+Please keep in mind that only the wallet named <guilabel>kdewallet</guilabel>
+will be opened automatically at login, if this wallet and your login
+password are identical.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Anderen Passwortspeicher für lokale Passwörter:</guilabel
-></term>
+<term><guilabel>Different wallet for local passwords:</guilabel></term>
 <listitem>
-<para
->Ist diese Einstellung markiert, wird für lokale Passwörter ein anderer Passwortspeicher verwendet.</para>
+<para>If checked, choose a different wallet for local passwords.</para>
 </listitem>
 </varlistentry>
 </variablelist>
 
 <variablelist>
-<title
-><guilabel
->Passwortverwaltung</guilabel
-></title>
+<title><guilabel>Wallet Manager</guilabel></title>
 <varlistentry>
-<term
-><guilabel
->Passwortverwaltung im Systembereich anzeigen</guilabel
-></term>
+<term><guilabel>Show manager in system tray</guilabel></term>
 <listitem>
-<para
->Aktiviert die Anzeige eines Symbols für die Passwortverwaltung im Systemabschnitt der Kontrollleiste.</para>
+<para>Enable the wallet manager to have its icon in the system tray.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Kontrollleistensymbol ausblenden, wenn der letzte Passwortspeicher geschlossen ist</guilabel
-></term>
+<term><guilabel>Hide System tray icon when last wallet
+closes</guilabel></term>
 <listitem>
-<para
->Ist kein Passwortspeicher mehr in Benutzung, wird das Symbol aus dem Systemabschnitt entfernt.</para>
+<para>When there is no wallet in use anymore, remove the wallet icon from the
+system tray.</para>
 </listitem>
 </varlistentry>
 </variablelist>
 
-<para
->Zuletzt gibt es auch noch den Knopf <guibutton
->Passwortverwaltung starten</guibutton
->, um diesen Dienst zu aktivieren.</para>
-<para
->Dieser Knopf wird nur dann angezeigt, wenn &kwalletmanager5; nicht ausgeführt wird.</para>
+<para>Finally, there is a button labeled <guibutton>Launch Wallet
+Manager</guibutton>, which does precisely that.</para>
+<para>This button is only visible if &kwalletmanager5; is not running</para>
 </sect1>
 
 <sect1 id="wallet-access-control">
-<title
->Zugriffsüberwachung</title>
+<title>Access Control</title>
 
-<para
->Auf dieser Seite gibt es nur eine Einstellung:</para>
+<para>There is only one option on this page:</para>
 
 <variablelist>
 <varlistentry>
-<term
-><guilabel
->Nachfragen, wenn eine Anwendung auf einen Passwortspeicher zugreifen will.</guilabel
-></term>
+<term><guilabel>Prompt when an application accesses a wallet</guilabel></term>
 <listitem>
-<para
->Nachfragen, wenn eine Anwendung auf einen geöffneten Passwortspeicher zugreifen will..</para>
+<para>Signal you when an application gains access to a wallet.</para>
 </listitem>
 </varlistentry>
 </variablelist>
 
-<para
->Darunter befindet sich eine Baumansicht mit den Zugriffsdaten und Regeln für den Passwortspeicher.</para>
+<para>Next there is a tree style view of the access controls for your wallets.</para>
 
 <screenshot>
-<screeninfo
->Zugriffsüberwachung</screeninfo>
+<screeninfo>Access Control</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="kwallet-access-control.png"/>
 </imageobject>
 <textobject>
-<phrase
->Zugriffsüberwachung</phrase>
+<phrase>Access Control</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 
-<para
->Klicken Sie mit der &LMBn; auf das kleine <guiicon
->&gt;</guiicon
->-Symbol neben den Namen eines Passwortspeichers, um den Baum zu öffnen. Sie sehen dann den Namen jeder Anwendung, die Zugriff auf den Passwortspeicher hat und die Richtlinien, die sie dafür festgelegt haben. Sie können keine Richtlinien ändern oder hinzufügen, einzig löschen können Sie einen Eintrag, wenn Sie mit der &RMBn; das Kontextmenü öffnen und darin <guimenuitem
->Löschen</guimenuitem
-> wählen oder die Taste <keycap
->Entf</keycap
-> drücken.</para>
+<para>Click with the &LMB; on the <guiicon>&gt;</guiicon> symbol beside a wallet name to
+expand the tree. You will see the name of each application that has asked
+for access to the wallet, and the policy you set for it.  You cannot edit
+policies here, or add them, but it is possible to delete an entry by &RMB;
+clicking on it and choosing <guimenuitem>Delete</guimenuitem> from the
+context menu that appears, or by simply selecting it and pressing the
+<keysym>Del</keysym> key.</para>
 
-<para
->Ein Programm, das den Passwortspeicher öffnen darf, kann auch alle darin enthaltenen Passwörter lesen.</para>
+<para>An application that has been allowed access to a wallet is granted access to
+all passwords stored inside.</para>
 
-<para
->Wenn Sie versehentlich eine Anwendung so eingerichtet haben,&kwallet5; nicht zu benutzen, löschen Sie die Regelung für diese Anwendung hier.</para>
+<para>If you erroneously configured an application not to use the &kwallet5;
+delete the policy for this application here.</para>
 <!-- FIXME difference to Revoke Authorization in kwallermanager?-->
-<para
->Beim nächsten Start dieser Anwendung können Sie dann eine neue Regelung für den Zugriff auf den Passwortspeicher festlegen. </para>
+<para>
+On the next start of this application you can define a new policy for access to the wallet.
+</para>
 <screenshot>
-<screeninfo
->Die Öffnung eines Passwortspeichers wird angefordert</screeninfo>
+<screeninfo>Access request to open a wallet</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="application-request-to-open-wallet.png"/>
 </imageobject>
 <textobject>
-<phrase
->Die Öffnung des Passwortspeichers wird angefordert</phrase>
+<phrase>Access request to open a wallet</phrase>
 </textobject>
-<caption
-><para
->Anforderung einer Anwendung zum Zugriff auf einen Passwortspeicher.</para
-></caption>
+<caption><para>An application requesting access to a wallet</para></caption>
 </mediaobject>
 </screenshot>
 
@@ -763,31 +555,30 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </chapter>
 
 <chapter id="advanced-features">
-<title
->Weitergehende Funktionen</title>
+<title>Advanced Features</title>
 
-<para
->Ein Passwortspeicher kann aus dem &kwalletmanager5;-Fenster auf ein Dateiverwaltungs-Fenster gezogen werden, um dort eine Kopie oder eine Verknüpfung anzulegen oder sie dorthin zu verschieben.</para>
+<para>Wallets can be dragged from the &kwalletmanager5; window.  This allows
+you to drag the wallet to a file browser window, where you can choose to
+copy, move, or link the wallet, as desired.</para>
 
-<para
->Verwenden Sie diese Möglichkeit, wenn Sie einen Passwortspeicher auf ein Wechselmedium wie einen USB-Stick kopieren wollen. So haben Sie Ihre Passwörter immer dabei, zu Hause, bei der Arbeit oder in den Ferien.</para>
+<para>You might use this to save a wallet to portable media, such as a
+USB keychain, so that you can take your passwords with you to work or
+on a vacation, and still have easy access to important sites.</para>
 
 </chapter>
 
 <chapter id="credits-and-license">
-<title
->Danksagungen und Lizenz</title>
+<title>Credits and License</title>
 
-<para
->&kwallet5; &copy; 2003 &George.Staikos;</para>
-<para
->Dokumentation &copy; &Lauri.Watts; und &George.Staikos;</para>
+<para>&kwallet5; &copy; 2003 &George.Staikos;</para>
+<para>Documentation &copy; &Lauri.Watts; and &George.Staikos;</para>
 
-<para
->Übersetzung Gregor Zumstein <email
->gz@orchester-bremgarten.ch</email
-></para
->  &underFDL; &underGPL; </chapter>
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;
+&underGPL;
+
+</chapter>
 
 &documentation.index;
 
