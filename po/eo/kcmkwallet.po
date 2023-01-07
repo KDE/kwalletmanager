@@ -1,13 +1,16 @@
 # Translation of kcmkwallet into esperanto.
+# e-aj mesaĝoj por "kwalletmanager"
+# Copyright (C) 2009 Free Software Foundation, Inc.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:51+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-06 22:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,22 +22,22 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Axel Rousseau"
+msgstr "Axel Rousseau, Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "axel@esperanto-jeunes.org"
+msgstr "axel@esperanto-jeunes.org, okellogg@users.sourceforge.net"
 
 #: konfigurator.cpp:42 konfigurator.cpp:270 konfigurator.cpp:272
 #, kde-format
 msgid "KDE Wallet Control Module"
-msgstr ""
+msgstr "KDE Monuja Stirmodulo"
 
 #: konfigurator.cpp:46
 #, kde-format
 msgid "(c) 2003 George Staikos"
-msgstr ""
+msgstr "(c) 2003 George Staikos"
 
 #: konfigurator.cpp:47
 #, kde-format
@@ -44,27 +47,27 @@ msgstr "George STAIKOS"
 #: konfigurator.cpp:114
 #, kde-format
 msgid "New Wallet"
-msgstr ""
+msgstr "Nova Monujo"
 
 #: konfigurator.cpp:115
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr ""
+msgstr "Bv. elektu nomon por la nova monujo:"
 
 #: konfigurator.cpp:235 konfigurator.cpp:310
 #, kde-format
 msgid "Always Allow"
-msgstr ""
+msgstr "Ĉiam Permesi"
 
 #: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
 #, kde-format
 msgid "Always Deny"
-msgstr ""
+msgstr "Ĉiam Malpermesi"
 
 #: konfigurator.cpp:270
 #, kde-format
 msgid "Permission denied."
-msgstr ""
+msgstr "Permeso neita."
 
 #: konfigurator.cpp:272
 #, kde-format
@@ -135,10 +138,9 @@ msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
-msgstr " min"
+msgstr " minutoj"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:99
@@ -152,7 +154,7 @@ msgstr ""
 #: walletconfigwidget.ui:102
 #, kde-format
 msgid "Close when screensaver starts"
-msgstr ""
+msgstr "Fermi kiam ekrankurteno startas"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:109
@@ -199,7 +201,7 @@ msgstr ""
 #: walletconfigwidget.ui:201
 #, kde-format
 msgid "Wallet Manager"
-msgstr ""
+msgstr "Monuja Mastrumilo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
 #: walletconfigwidget.ui:207
