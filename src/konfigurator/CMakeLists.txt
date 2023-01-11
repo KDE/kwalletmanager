@@ -18,7 +18,7 @@ target_link_libraries(kcm_kwallet5
     Qt${QT_MAJOR_VERSION}::DBus
 )
 
-install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
 
 ########### kauth helper ################
 add_executable(kcm_kwallet_helper5)
@@ -36,6 +36,3 @@ install(TARGETS kcm_kwallet_helper5 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(kcm_kwallet_helper5 org.kde.kcontrol.kcmkwallet5 root)
 kauth_install_actions(org.kde.kcontrol.kcmkwallet5 kwallet.actions)
 
-########### install files ###############
-
-install(FILES kwalletconfig5.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})

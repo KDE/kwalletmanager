@@ -32,7 +32,7 @@
 
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
-K_PLUGIN_FACTORY(KWalletFactory, registerPlugin<KWalletConfig>();)
+K_PLUGIN_CLASS_WITH_JSON(KWalletConfig, "kwalletconfig.json")
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
