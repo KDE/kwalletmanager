@@ -1,6 +1,9 @@
 {
     "KPlugin": {
         "Description": "KDE Wallet Configuration",
+        "Description[ca]": "Configuració de la cartera del KDE",
+        "Description[uk]": "Налаштування KWallet",
+        "Description[x-test]": "xxKDE Wallet Configurationxx",
         "Icon": "kwalletmanager",
         "Name": "KDE Wallet",
         "Name[ar]": "محفظة كدي",
