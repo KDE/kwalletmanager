@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:51+0000\n"
-"PO-Revision-Date: 2022-09-30 14:47+0200\n"
+"PO-Revision-Date: 2023-01-15 03:48+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -79,7 +79,7 @@ msgstr "შეცდომა ქმედების ავთენტიკ�
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
-msgstr ""
+msgstr "ეს კონფიგურაციის მოდული საშუალებას გაძლევთ, KDE Wallet-ი მოირგოთ."
 
 #: konfigurator.cpp:376
 #, kde-format
@@ -113,6 +113,8 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
+"უმჯობესია, დახუროთ საფულეები, როცა მათ არ იყენებთ, რათა სხვების მიერ მათი "
+"დათვალიერება თავიდან აიცილოთ."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:38
@@ -218,13 +220,13 @@ msgstr "სისტემის კუთხეში ხატულის გ
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "KWallet-ის გამოყენება Secret Service-ის ინტერფეისისთვის"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -234,6 +236,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Secret Service-ის ინტერფეისი აპლიკაციებს თავიანთი პაროლებისა და სხვა "
+"კონფიდენციალური მონაცემების შენახვის საშუალებას აძლევს. გამორთეთ ეს, რათა "
+"უფლება გქონდეთ გამოიყენოთ სხვა სერვისი (მაგ: KeePassXC ან GNOME Keyring)."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
