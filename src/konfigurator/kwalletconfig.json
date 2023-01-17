@@ -2,6 +2,8 @@
     "KPlugin": {
         "Description": "KDE Wallet Configuration",
         "Description[ar]": "ضبط محفظة كدي",
+        "Description[bg]": "Конфигуриране на Портфейл",
+        "Description[ca@valencia]": "Configureu la cartera de KDE",
         "Description[ca]": "Configuració de la cartera del KDE",
         "Description[es]": "Configuración de la cartera de KDE",
         "Description[eu]": "KDEren zorroaren konfigurazioa",
