@@ -483,7 +483,7 @@ msgstr "No s'ha pogut obrir el fitxer per a escriptura"
 #: kwalletmanager.cpp:483
 #, kde-format
 msgid "Select file"
-msgstr "Seleccioneu el fitxer"
+msgstr "Seleccioneu un fitxer"
 
 #: kwalletmanager.cpp:493
 #, kde-format
