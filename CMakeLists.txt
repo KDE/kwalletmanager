@@ -8,9 +8,9 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 project(kwalletmanager5 VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.92.0")
+set(KF_MIN_VERSION "5.92.0")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
@@ -35,10 +35,10 @@ ecm_setup_version(${RELEASE_SERVICE_VERSION} VARIABLE_PREFIX KWALLETMANAGER
 
 option(ENABLE_KAUTH "Enable KAuth support (Disabled for Flatpak builds)" ON)
 if (ENABLE_KAUTH)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED Auth)
+    find_package(KF5 ${KF_MIN_VERSION} REQUIRED Auth)
 endif()
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED
+find_package(KF5 ${KF_MIN_VERSION} REQUIRED
     Archive
     Config
     ConfigWidgets
