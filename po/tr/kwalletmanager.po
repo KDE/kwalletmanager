@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:51+0000\n"
-"PO-Revision-Date: 2023-01-18 22:29+0300\n"
+"PO-Revision-Date: 2023-01-21 15:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -355,8 +355,8 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
-"KDE Cüzdan sistemi etkin değil. Etkinleştirmemi ister misiniz? Aksi halde "
-"KWalletManager cüzdanları okumadan çalışamayacağından kapanacaktır."
+"KDE Cüzdan sistemi etkin değil. Etkinleştirmemi ister misiniz? Aksi halde K "
+"Cüzdan Yöneticisi, cüzdanları okumadan çalışamayacağından kapanacaktır."
 
 #: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
 #: kwalletmanager.cpp:302
@@ -464,7 +464,7 @@ msgstr "Üzgünüm, bu cüzdan mevcut. Değişik bir isim dene?"
 #: kwalletmanager.cpp:378 kwalletmanager.cpp:381
 #, kde-format
 msgid "Try New"
-msgstr "Yeniden Deneyin"
+msgstr "Yeni Bir Tane Dene"
 
 #: kwalletmanager.cpp:411
 #, kde-format
@@ -583,7 +583,7 @@ msgstr "KDE Cüzdan Yönetim Aracı"
 #: main.cpp:35
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "Telif Hakkı ©2013–2017, KWallet Yöneticisi yazarları"
+msgstr "Telif Hakkı ©2013–2017, K Cüzdan Yöneticisi yazarları"
 
 #: main.cpp:39
 #, kde-format
