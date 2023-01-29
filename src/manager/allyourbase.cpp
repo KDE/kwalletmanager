@@ -580,7 +580,11 @@ void KWalletEntryList::mouseMoveEvent(QMouseEvent *e)
 
 void KWalletEntryList::dropEvent(QDropEvent *e)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QTreeWidgetItem *i = itemAt(e->pos());
+#else
+    QTreeWidgetItem *i = itemAt(e->position().toPoint());
+#endif
     itemDropped(e, i);
 }
 
@@ -591,7 +595,11 @@ void KWalletEntryList::dragEnterEvent(QDragEnterEvent *e)
 
 void KWalletEntryList::dragMoveEvent(QDragMoveEvent *e)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QTreeWidgetItem *i = itemAt(e->pos());
+#else
+    QTreeWidgetItem *i = itemAt(e->position().toPoint());
+#endif
     e->ignore();
     if (i) {
         if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-entry")) ||

@@ -67,22 +67,23 @@ ecm_add_app_icon(kwalletmanager5 ICONS ${ICONS_SRCS})
 
 target_link_libraries(kwalletmanager5
     Qt${QT_MAJOR_VERSION}::Core
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::XmlGui #KActionCollection
-    KF5::ConfigWidgets
-    KF5::ItemViews
-    KF5::Wallet
-    KF5::DBusAddons
-    KF5::ConfigCore
-    KF5::Service
-    KF5::KIOCore
-    KF5::KIOGui
-    KF5::JobWidgets
-    KF5::Archive
-    KF5::Notifications
-    KF5::WindowSystem
-    KF5::Crash
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::XmlGui #KActionCollection
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::ItemViews
+    KF${KF_MAJOR_VERSION}::Wallet
+    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::Service
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::KIOGui
+    KF${KF_MAJOR_VERSION}::JobWidgets
+    KF${KF_MAJOR_VERSION}::Archive
+    KF${KF_MAJOR_VERSION}::Notifications
+    KF${KF_MAJOR_VERSION}::WindowSystem
+    KF${KF_MAJOR_VERSION}::Crash
+    KF${KF_MAJOR_VERSION}::Codecs
 )
 
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

@@ -25,6 +25,13 @@ include(ECMSetupVersion)
 include(ECMQtDeclareLoggingCategory)
 include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MAJOR_VERSION "5")
+endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
 
@@ -35,10 +42,10 @@ ecm_setup_version(${RELEASE_SERVICE_VERSION} VARIABLE_PREFIX KWALLETMANAGER
 
 option(ENABLE_KAUTH "Enable KAuth support (Disabled for Flatpak builds)" ON)
 if (ENABLE_KAUTH)
-    find_package(KF5 ${KF_MIN_VERSION} REQUIRED Auth)
+    find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED Auth)
 endif()
 
-find_package(KF5 ${KF_MIN_VERSION} REQUIRED
+find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
     Archive
     Config
     ConfigWidgets
@@ -58,7 +65,7 @@ find_package(KF5 ${KF_MIN_VERSION} REQUIRED
     Crash
 )
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2
+ecm_set_disabled_deprecation_versions(QT 6.4
     KF 5.100
 )
 

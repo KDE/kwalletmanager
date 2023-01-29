@@ -31,8 +31,8 @@
 #include <QAction>
 #include <QCommandLineParser>
 #include <QIcon>
-#include <QRegExp>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QRegExp>
 #include <QRegExpValidator>
 #endif
 #include <QDialog>
@@ -614,7 +614,7 @@ void KWalletManager::activateForStartLikeCall(bool showWindow)
 
     if (showWindow) {
         if (isMinimized())
-            KWindowSystem::unminimizeWindow(winId());
+            setWindowState(windowState() & ~Qt::WindowMinimized);
         else if (_tray && !isVisible()) // TODO: how does this relate to show() above?
             _tray->activate(QPoint());
     }
@@ -622,7 +622,7 @@ void KWalletManager::activateForStartLikeCall(bool showWindow)
     if (isVisible()) {
         if (!isActiveWindow()) {
             raise();
-            KWindowSystem::activateWindow(winId());
+            KWindowSystem::activateWindow(windowHandle());
         }
     }
 }
