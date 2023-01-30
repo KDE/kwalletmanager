@@ -38,8 +38,8 @@ Q_SIGNALS:
 private:
     QMap<QString, QString> &_map;
     int _contextRow;
-    KActionCollection *_ac;
-    QAction *_copyAct;
+    KActionCollection *_ac = nullptr;
+    QAction *_copyAct = nullptr;
 };
 
 #endif

@@ -42,7 +42,7 @@ public:
     void restoreName();
 
 public:
-    KWallet::Wallet *_wallet;
+    KWallet::Wallet *_wallet = nullptr;
 
 private:
     void setText(int, const QString &) {} // forbidden
@@ -81,7 +81,7 @@ public:
     void refreshItemsCount();
 
 public:
-    KWallet::Wallet *_wallet;
+    KWallet::Wallet *_wallet = nullptr;
 
 private:
     QString _name;
@@ -114,7 +114,7 @@ private:
     QMimeData *itemMimeData(const QTreeWidgetItem *i) const;
 
 public:
-    KWallet::Wallet *_wallet;
+    KWallet::Wallet *_wallet = nullptr;
     QPoint _mousePos;
 
 public Q_SLOTS:

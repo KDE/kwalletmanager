@@ -39,9 +39,9 @@ protected:
 
 private:
     QString             _walletName;
-    KWallet::Wallet    *_wallet;
-    KWalletEditor      *_walletEditor;
-    ApplicationsManager *_applicationsManager;
+    KWallet::Wallet    *_wallet = nullptr;
+    KWalletEditor      *_walletEditor = nullptr;
+    ApplicationsManager *_applicationsManager = nullptr;
 };
 
 #endif // WALLETCONTROLWIDGET_H
