@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-01-30 01:01+0000\n"
 "PO-Revision-Date: 2022-11-09 18:15+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -87,7 +87,7 @@ msgstr ""
 "Questo modulo di configurazione permette di configurare il sistema dei "
 "portafogli di KDE."
 
-#: konfigurator.cpp:376
+#: konfigurator.cpp:377 konfigurator.cpp:379
 #, kde-format
 msgid "&Delete"
 msgstr "&Elimina"

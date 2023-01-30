@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kcmkwallet.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-01-30 01:01+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -80,7 +80,7 @@ msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "Ceadaíonn an modúl cumraíochta seo duit an córas sparáin KDE a chumrú."
 
-#: konfigurator.cpp:376
+#: konfigurator.cpp:377 konfigurator.cpp:379
 #, kde-format
 msgid "&Delete"
 msgstr "&Scrios"

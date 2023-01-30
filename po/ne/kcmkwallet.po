@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-01-30 01:01+0000\n"
 "PO-Revision-Date: 2007-08-20 13:30+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -81,7 +81,7 @@ msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "यो कन्फिगरेसन मोड्युलले तपाईँलाई KDE वालेट प्रणाली कन्फिगर गर्न अनुमति दिन्छ ।"
 
-#: konfigurator.cpp:376
+#: konfigurator.cpp:377 konfigurator.cpp:379
 #, kde-format
 msgid "&Delete"
 msgstr "मेट्नुहोस्"

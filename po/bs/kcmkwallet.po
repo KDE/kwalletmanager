@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-01-30 01:01+0000\n"
 "PO-Revision-Date: 2015-01-07 00:17+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 "Ovaj konfiguracijski modul dopušta van da konfigurišete KDE sistem novčanika."
 
-#: konfigurator.cpp:376
+#: konfigurator.cpp:377 konfigurator.cpp:379
 #, kde-format
 msgid "&Delete"
 msgstr "O&briši"
