@@ -38,11 +38,11 @@ public Q_SLOTS:
     void newLocalWallet();
     void newNetworkWallet();
     void updateWalletLists();
-    QString newWallet();
     void deleteEntry();
     void customContextMenuRequested(const QPoint &pos);
 
 private:
+    QString newWallet();
     WalletConfigWidget *const _wcw;
     KSharedConfig::Ptr _cfg;
 };
