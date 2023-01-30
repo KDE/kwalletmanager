@@ -9,8 +9,7 @@
 #include "revokeauthbutton.h"
 
 AuthorizedApplicationsTable::AuthorizedApplicationsTable(QWidget *parent) :
-    QTableView(parent),
-    _wallet(nullptr)
+    QTableView(parent)
 {
 }
 

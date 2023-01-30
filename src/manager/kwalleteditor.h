@@ -92,26 +92,25 @@ private:
     KActionCollection *actionCollection();
 
     bool _nonLocal;
-    KWallet::Wallet *_w;
-    KWalletEntryList *_entryList;
+    KWallet::Wallet *_w = nullptr;
+    KWalletEntryList *_entryList = nullptr;
     static RegisterCreateActionsMethod _registerCreateActionMethod;
     static QAction *_newFolderAction, *_deleteFolderAction;
     static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
     static QAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
     static QAction *_copyPassAction;
-    QLabel *_details;
     QString _currentFolder;
     QMap<QString, QString> _currentMap; // save memory by storing
     // only the most recent map.
-    KWMapEditor *_mapEditor;
-    QCheckBox *_mapEditorShowHide;
+    KWMapEditor *_mapEditor = nullptr;
+    QCheckBox *_mapEditorShowHide = nullptr;
     bool _newWallet;
-    QMenu *_contextMenu;
-    QTreeWidgetItem *_displayedItem; // used to find old item when selection just changed
-    KActionCollection *_actionCollection;
-    QMenu *_controlMenu;
-    QMenu *_walletSubmenu;
-    KTreeWidgetSearchLine *_searchLine;
+    QMenu *_contextMenu = nullptr;
+    QTreeWidgetItem *_displayedItem = nullptr; // used to find old item when selection just changed
+    KActionCollection *_actionCollection = nullptr;
+    QMenu *_controlMenu = nullptr;
+    QMenu *_walletSubmenu = nullptr;
+    KTreeWidgetSearchLine *_searchLine = nullptr;
     static QAction *_alwaysShowContentsAction, *_alwaysHideContentsAction;
     bool _alwaysShowContents;
     bool _hasUnsavedChanges;

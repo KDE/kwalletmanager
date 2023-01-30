@@ -29,7 +29,7 @@ private Q_SLOTS:
 
 private:
     KSharedConfig::Ptr                      _cfg;
-    KWallet::Wallet                         *_wallet;
+    KWallet::Wallet                         *const _wallet;
     QMap<QString, QPersistentModelIndex>    _authorizedAppsIndexMap;
 };
 

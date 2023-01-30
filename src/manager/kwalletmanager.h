@@ -74,12 +74,12 @@ private:
 
 private:
     QCommandLineParser * const _commandLineParser;
-    KStatusNotifierItem *_tray;
-    bool _shuttingDown;
-    KWalletManagerWidget *_managerWidget;
-    OrgKdeKWalletInterface *m_kwalletdModule;
+    KStatusNotifierItem *_tray = nullptr;
+    bool _shuttingDown = false;
+    KWalletManagerWidget *_managerWidget = nullptr;
+    OrgKdeKWalletInterface *m_kwalletdModule = nullptr;
     QList<KXmlGuiWindow *> _windows;
-    bool _kwalletdLaunch;
+    bool _kwalletdLaunch = false;
     QAction *_walletsExportAction = nullptr;
 };
 

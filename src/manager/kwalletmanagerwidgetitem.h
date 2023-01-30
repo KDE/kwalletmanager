@@ -25,7 +25,7 @@ public:
     bool hasUnsavedChanges() const;
 
 private:
-    WalletControlWidget *_controlWidget;
+    WalletControlWidget *_controlWidget = nullptr;
     QString             _walletName;
 };
 
