@@ -43,7 +43,7 @@ public Q_SLOTS:
     void customContextMenuRequested(const QPoint &pos);
 
 private:
-    WalletConfigWidget *_wcw;
+    WalletConfigWidget *const _wcw;
     KSharedConfig::Ptr _cfg;
 };
 

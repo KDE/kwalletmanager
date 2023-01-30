@@ -35,8 +35,9 @@
 K_PLUGIN_CLASS_WITH_JSON(KWalletConfig, "kwalletconfig.json")
 
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args),
-      _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
+    : KCModule(parent, args)
+      , _wcw(new WalletConfigWidget(this))
+      , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
 {
     auto about = new KAboutData(QStringLiteral("kcmkwallet5"),
                                        i18n("KDE Wallet Control Module"),
@@ -52,7 +53,6 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
 
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(0, 0, 0, 0);
-    _wcw = new WalletConfigWidget(this);
     vbox->addWidget(_wcw);
 
     connect(_wcw->_enabled, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
