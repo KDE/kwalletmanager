@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-30 01:01+0000\n"
+"POT-Creation-Date: 2023-01-31 01:02+0000\n"
 "PO-Revision-Date: 2005-11-15 03:00+0800\n"
 "Last-Translator: MIMOS Open Source <opensource@mimos.my>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -26,17 +26,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "opensource@mimos.my"
 
-#: konfigurator.cpp:42 konfigurator.cpp:270 konfigurator.cpp:272
+#: konfigurator.cpp:43 konfigurator.cpp:270 konfigurator.cpp:272
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Modul Kawalan KDE Wallet "
 
-#: konfigurator.cpp:46
+#: konfigurator.cpp:47
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "(c) 2003 George Staikos"
 
-#: konfigurator.cpp:47
+#: konfigurator.cpp:48
 #, fuzzy, kde-format
 #| msgid "(c) 2003 George Staikos"
 msgid "George Staikos"

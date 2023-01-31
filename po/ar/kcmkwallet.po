@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-30 01:01+0000\n"
+"POT-Creation-Date: 2023-01-31 01:02+0000\n"
 "PO-Revision-Date: 2022-11-21 20:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,17 +33,17 @@ msgid "Your emails"
 msgstr ""
 "king_abdo@yahoo.com, dr.khaled.hosny@gmail.com, Fahad.alsaidi@gmail.com"
 
-#: konfigurator.cpp:42 konfigurator.cpp:270 konfigurator.cpp:272
+#: konfigurator.cpp:43 konfigurator.cpp:270 konfigurator.cpp:272
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "وحدة التحكم في محفظة كدى"
 
-#: konfigurator.cpp:46
+#: konfigurator.cpp:47
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "الحقوق محفوظة 2003 لجورج ستايكوس"
 
-#: konfigurator.cpp:47
+#: konfigurator.cpp:48
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
