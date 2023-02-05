@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:51+0000\n"
-"PO-Revision-Date: 2023-01-21 15:33+0300\n"
+"PO-Revision-Date: 2023-02-04 12:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -392,12 +392,12 @@ msgstr "Şifreli Olarak Dışa Aktar"
 #: kwalletmanager.cpp:161
 #, kde-format
 msgid "&Import encrypted"
-msgstr "&Şifreli Olarak İçe Aktar"
+msgstr "&Şifreliyi İçe Aktar"
 
 #: kwalletmanager.cpp:166
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "&Cüzdanı Yapılandır..."
+msgstr "&Cüzdan'ı Yapılandır..."
 
 #: kwalletmanager.cpp:174
 #, kde-format
@@ -449,7 +449,7 @@ msgstr "Yeni Cüzdan"
 #: kwalletmanager.cpp:373
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr "Boş isim desteklenmiyor. Lütfen bir tane seçin."
+msgstr "Cüzdanınıza bir ad vermelisiniz."
 
 #: kwalletmanager.cpp:373
 #, kde-format
@@ -573,7 +573,7 @@ msgstr "Yeni Girdi"
 #: main.cpp:31
 #, kde-format
 msgid "Wallet Manager"
-msgstr "Cüzdan Yönetici"
+msgstr "Cüzdan Yöneticisi"
 
 #: main.cpp:33
 #, kde-format
