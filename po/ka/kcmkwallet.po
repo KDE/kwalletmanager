@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-31 01:02+0000\n"
-"PO-Revision-Date: 2023-01-15 03:48+0100\n"
+"PO-Revision-Date: 2023-02-11 06:47+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -99,6 +99,8 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
+"<p>საფულე იოლ და დაცულ გზას გთავაზობთ თქვენი პაროლების სამართავად. ეს "
+"პარამეტრი მიუთითებს, გნებავთ ეს, თუ არა.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:25
@@ -130,6 +132,8 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
+"<p><b>საფულის დახურვა არააქტიურობის შემდეგ.</b><br>როცა საფულე დაიხურება, "
+"მასთან წვდომისთვის პაროლი ხელახლა უნდა შეიყვანოთ.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:49
@@ -150,6 +154,9 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
+"<p><b>საფულის დახურვა ეკრანის შემნახველის გაშვების შემდეგ.</b><br>როცა "
+"საფულე დაიხურება, მასთან წვდომისთვის პაროლის ხელახლა შეიყვანა იქნება საჭირო."
+"</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:102
@@ -166,6 +173,10 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
+"<p><b>საფულე დაიხურება მაშინვე, როგორც კი აპლიკაცია, რომელიც მას იყენებდა, "
+"მუშაობას დაასრულებს..</b><br>დაიმხსოვრეთ, რომ საფულე მხოლოდ მაშინ დახურება, "
+"როცა ყველა აპლიკაცია, რომელიც მას იყენებს, დაასრულებს მუშაობას.<br>როცა "
+"საფულე დაიხურება, მასთან წვდომისთვის პაროლის ხელახლა შეყვანა დაგჭირდებათ.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:112
