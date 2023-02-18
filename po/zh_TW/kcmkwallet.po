@@ -3,20 +3,21 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2007, 2008, 2009.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2013, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:48+0000\n"
-"PO-Revision-Date: 2016-11-10 14:17+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-18 02:01+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -143,10 +144,9 @@ msgstr "多久以後關閉："
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
-msgstr "分鐘"
+msgstr " 分鐘"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:99
@@ -229,13 +229,13 @@ msgstr "當最後一個錢包也關閉時從系統匣中移除"
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service DBus API"
-msgstr ""
+msgstr "秘密服務 DBus API"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Enable Secret Service DBus API"
-msgstr ""
+msgstr "啟用秘密服務 DBus API"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:315
