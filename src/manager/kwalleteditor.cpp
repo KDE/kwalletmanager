@@ -385,8 +385,8 @@ void KWalletEditor::deleteFolder()
                 return;
             }
 
-            int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()), QString(), KStandardGuiItem::del());
-            if (rc == KMessageBox::Continue) {
+            KMessageBox::ButtonCode buttonCode = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()), QString(), KStandardGuiItem::del());
+            if (buttonCode == KMessageBox::Continue) {
                 bool rc = _w->removeFolder(fi->name());
                 if (!rc) {
                     KMessageBox::error(this, i18n("Error deleting folder."));
