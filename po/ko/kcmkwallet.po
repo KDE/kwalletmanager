@@ -1,14 +1,14 @@
 # Translation of kcmkwallet to Korean.
 # Copyright (C) 2007 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdeutils package.
-# Shinjo Park <kde@peremen.name>, 2007, 2010, 2013, 2014, 2016, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2010, 2013, 2014, 2016, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-31 01:02+0000\n"
-"PO-Revision-Date: 2022-07-13 12:27+0200\n"
+"PO-Revision-Date: 2023-03-01 01:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -229,16 +229,15 @@ msgstr "마지막 지갑을 닫을 때 트레이 아이콘 숨기기"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "비밀 서비스 DBus API"
+msgstr "비밀 서비스"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "비밀 서비스로 KWallet 사용"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -248,6 +247,8 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"비밀 서비스는 암호나 다른 기밀 데이터를 저장할 수 있습니다. KeePassXC나 그놈 "
+"키 모음과 같은 제3자 서비스가 관리하게 하려면 비활성화하십시오."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
