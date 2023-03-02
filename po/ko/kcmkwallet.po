@@ -1,7 +1,7 @@
 # Translation of kcmkwallet to Korean.
 # Copyright (C) 2007 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdeutils package.
-# Shinjo Park <kde@peremen.name>, 2007, 2010, 2013, 2014, 2016, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2010, 2013, 2014, 2016, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""

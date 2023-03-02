@@ -1,14 +1,14 @@
 # Translation of kwalletmanager to Korean.
 # Copyright (C) 2007 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kwalletmanager package.
-# Shinjo Park <kde@peremen.name>, 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2020.
+# Shinjo Park <kde@peremen.name>, 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:51+0000\n"
-"PO-Revision-Date: 2020-04-21 00:37+0200\n"
+"PO-Revision-Date: 2023-03-01 01:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -509,7 +509,7 @@ msgstr "저장하지 않은 변경 사항을 무시하시겠습니까?"
 #: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "무시"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
