@@ -350,7 +350,7 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
-"نظام «محفظة كدي» غير مفعّل. أتريد منّي تفعيله؟ إن لم تفعل، فسيُنهى «مدير "
+"نظام «محفظة كِيدِي» غير مفعّل. أتريد منّي تفعيله؟ إن لم تفعل، فسيُنهى «مدير "
 "محفظتك» إذ أنّه لا يستطيع العمل دون قراءة المحفظات."
 
 #: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:233
@@ -573,7 +573,7 @@ msgstr "مدير محفظة"
 #: main.cpp:33
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "أداة لإدارة محفظة كدي"
+msgstr "أداة لإدارة محفظة كِيدِي"
 
 #: main.cpp:35
 #, kde-format
