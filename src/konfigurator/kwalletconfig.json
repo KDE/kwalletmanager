@@ -2,7 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_kwalletconfig5",
         "Description": "KDE Wallet Configuration",
-        "Description[ar]": "ضبط محفظة كدي",
+        "Description[ar]": "ضبط محفظة كِيدِي",
         "Description[az]": "KDE cüzdanı ayarları",
         "Description[bg]": "Конфигуриране на Портфейл",
         "Description[ca@valencia]": "Configureu la cartera de KDE",
@@ -32,7 +32,7 @@
         "Description[zh_CN]": "KDE 密码库配置",
         "Icon": "kwalletmanager",
         "Name": "KDE Wallet",
-        "Name[ar]": "محفظة كدي",
+        "Name[ar]": "محفظة كِيدِي",
         "Name[az]": "KDE cüzdanı",
         "Name[bg]": "Портфейл на KDE",
         "Name[br]": "Doug-paperoù KDE",
