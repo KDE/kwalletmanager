@@ -11,7 +11,7 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=personalization
 
 Name=KDE Wallet
-Name[ar]=محفظة كدي
+Name[ar]=محفظة كِيدِي
 Name[az]=KDE Cüzdanı
 Name[bg]=Портфейл на KDE
 Name[br]=Doug-paperoù KDE
@@ -82,7 +82,7 @@ Name[x-test]=xxKDE Walletxx
 Name[zh_CN]=KDE 密码库
 Name[zh_TW]=KDE 錢包
 Comment=KDE Wallet Configuration
-Comment[ar]=ضبط محفظة كدي
+Comment[ar]=ضبط محفظة كِيدِي
 Comment[az]=KDE Cüzdanı tənzimləməsi
 Comment[bg]=Конфигуриране на Портфейл
 Comment[br]=Kefluniadur Doug-paperoù KDE
