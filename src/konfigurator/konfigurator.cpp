@@ -30,15 +30,27 @@
 #include <QDBusConnectionInterface>
 #include <QVBoxLayout>
 
+#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 240, 0)
+#include <KAuth/Action>
+#endif
+
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 K_PLUGIN_CLASS_WITH_JSON(KWalletConfig, "kwalletconfig.json")
 
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
 KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
       , _wcw(new WalletConfigWidget(this))
       , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
+#else
+KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
+      , _wcw(new WalletConfigWidget(widget()))
+      , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
+#endif
 {
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     auto about = new KAboutData(QStringLiteral("kcmkwallet5"),
                                        i18n("KDE Wallet Control Module"),
                                        QStringLiteral(KWALLETMANAGER_VERSION_STRING),
@@ -49,9 +61,21 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
                      QString(),
                      QStringLiteral("staikos@kde.org"));
     setAboutData(about);
+#endif
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     setNeedsAuthorization(true);
-
+#else
+    setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmkwallet5.save"));
+    // We need to make manually
+    m_authAction = KAuth::Action(QLatin1String("org.kde.kcontrol.kcmkwallet5.save"));
+    m_authAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmkwallet5"));
+    m_authAction.setParentWidget(widget());
+#endif
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     auto vbox = new QVBoxLayout(this);
+#else
+    auto vbox = new QVBoxLayout(widget());
+#endif
     vbox->setContentsMargins(0, 0, 0, 0);
     vbox->addWidget(_wcw);
 
@@ -110,17 +134,25 @@ void KWalletConfig::updateWalletLists()
 QString KWalletConfig::newWallet()
 {
     bool ok;
-
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     const QString n = QInputDialog::getText(this, i18n("New Wallet"),
                                             i18n("Please choose a name for the new wallet:"),
                                             QLineEdit::Normal, QString(),
                                             &ok);
-
+#else
+    const QString n = QInputDialog::getText(widget(), i18n("New Wallet"),
+                                            i18n("Please choose a name for the new wallet:"),
+                                            QLineEdit::Normal, QString(),
+                                            &ok);
+#endif
     if (!ok) {
         return {};
     }
-
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     KWallet::Wallet *w = KWallet::Wallet::openWallet(n, topLevelWidget()->winId());
+#else
+    KWallet::Wallet *w = KWallet::Wallet::openWallet(n, widget()->topLevelWidget()->winId());
+#endif
     if (!w) {
         return {};
     }
@@ -139,8 +171,11 @@ void KWalletConfig::newLocalWallet()
     updateWalletLists();
 
     _wcw->_localWallet->setCurrentIndex(_wcw->_localWallet->findText(n));
-
-    Q_EMIT changed(true);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+        Q_EMIT changed(true);
+#else
+        setNeedsSave(true);
+#endif
 }
 
 void KWalletConfig::newNetworkWallet()
@@ -153,8 +188,11 @@ void KWalletConfig::newNetworkWallet()
     updateWalletLists();
 
     _wcw->_defaultWallet->setCurrentIndex(_wcw->_defaultWallet->findText(n));
-
-    Q_EMIT changed(true);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+        Q_EMIT changed(true);
+#else
+        setNeedsSave(true);
+#endif
 }
 
 void KWalletConfig::launchManager()
@@ -170,7 +208,11 @@ void KWalletConfig::launchManager()
 
 void KWalletConfig::configChanged()
 {
-    Q_EMIT changed(true);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+        Q_EMIT changed(true);
+#else
+        setNeedsSave(true);
+#endif
 }
 
 void KWalletConfig::load()
@@ -249,14 +291,21 @@ void KWalletConfig::load()
 
     KConfigGroup secretsAPIConfig(_cfg, "org.freedesktop.secrets");
     _wcw->_secretServiceAPI->setChecked(secretsAPIConfig.readEntry("apiEnabled", true));
-
-    Q_EMIT changed(false);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+        Q_EMIT changed(false);
+#else
+        setNeedsSave(false);
+#endif
 }
 
 void KWalletConfig::save()
 {
     QVariantMap args;
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     KAuth::Action action = authAction();
+#else
+    KAuth::Action action = m_authAction;
+#endif
     if (!action.isValid()) {
         qDebug() << "There's no authAction, not saving settings";
         return;
@@ -266,11 +315,19 @@ void KWalletConfig::save()
     KAuth::ExecuteJob *j = action.execute();
 
     if (!j->exec()) {
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
         if (j->error() == KAuth::ActionReply::AuthorizationDeniedError) {
             KMessageBox::error(this, i18n("Permission denied."), i18n("KDE Wallet Control Module"));
         } else {
             KMessageBox::error(this, i18n("Error while authenticating action:\n%1", j->errorString()), i18n("KDE Wallet Control Module"));
         }
+#else
+        if (j->error() == KAuth::ActionReply::AuthorizationDeniedError) {
+            KMessageBox::error(widget(), i18n("Permission denied."), i18n("KDE Wallet Control Module"));
+        } else {
+            KMessageBox::error(widget(), i18n("Error while authenticating action:\n%1", j->errorString()), i18n("KDE Wallet Control Module"));
+        }
+#endif
         load();
         return;
     }
@@ -340,8 +397,11 @@ void KWalletConfig::save()
         // this will eventually make kwalletd exit upon deactivation
         kwalletd.call(QStringLiteral("reconfigure"));
     }
-
-    Q_EMIT changed(false);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+        Q_EMIT changed(false);
+#else
+        setNeedsSave(false);
+#endif
 }
 
 void KWalletConfig::defaults()
@@ -359,19 +419,28 @@ void KWalletConfig::defaults()
     _wcw->_localWallet->setCurrentIndex(0);
     _wcw->_accessList->clear();
     _wcw->_secretServiceAPI->setChecked(true);
-    Q_EMIT changed(true);
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+        Q_EMIT changed(true);
+#else
+        setNeedsSave(true);
+#endif
 }
-
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
 QString KWalletConfig::quickHelp() const
 {
     return i18n("This configuration module allows you to configure the KDE wallet system.");
 }
+#endif
 
 void KWalletConfig::customContextMenuRequested(const QPoint &pos)
 {
     QTreeWidgetItem *item = _wcw->_accessList->itemAt(pos);
     if (item && item->parent()) {
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
         auto m = new QMenu(this);
+#else
+        auto m = new QMenu(widget());
+#endif
         m->setTitle(item->parent()->text(0));
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         m->addAction(i18n("&Delete"), this, &KWalletConfig::deleteEntry, Qt::Key_Delete);
@@ -388,7 +457,11 @@ void KWalletConfig::deleteEntry()
     QList<QTreeWidgetItem *> items = _wcw->_accessList->selectedItems();
     if (items.count() == 1 && items[0]) {
         delete items[0];
+#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
         Q_EMIT changed(true);
+#else
+        setNeedsSave(true);
+#endif
     }
 }
 
