@@ -30,10 +30,6 @@
 #include <QDBusConnectionInterface>
 #include <QVBoxLayout>
 
-#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 240, 0)
-#include <KAuth/Action>
-#endif
-
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
 K_PLUGIN_CLASS_WITH_JSON(KWalletConfig, "kwalletconfig.json")
