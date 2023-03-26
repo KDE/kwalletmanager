@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:51+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-03-25 16:19+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -88,10 +88,9 @@ msgstr "&Anstataŭigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
 #: kbetterthankdialogbase.ui:53
-#, fuzzy, kde-format
-#| msgid "Replace &all"
+#, kde-format
 msgid "Replace &All"
-msgstr "&Anstataŭigi ĉiujn"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _deny)
 #: kbetterthankdialogbase.ui:60
@@ -126,22 +125,19 @@ msgid "&Delete Folder"
 msgstr "&Forviŝu dosierujon"
 
 #: kwalleteditor.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Folder..."
+#, kde-format
 msgid "&Import a wallet..."
-msgstr "&Nova dosierujo..."
+msgstr ""
 
 #: kwalleteditor.cpp:206
-#, fuzzy, kde-format
-#| msgid "&Export..."
+#, kde-format
 msgid "&Import XML..."
-msgstr "E&ksportu..."
+msgstr ""
 
 #: kwalleteditor.cpp:209
-#, fuzzy, kde-format
-#| msgid "&Export..."
+#, kde-format
 msgid "&Export as XML..."
-msgstr "E&ksportu..."
+msgstr ""
 
 #: kwalleteditor.cpp:212
 #, kde-format
@@ -243,10 +239,9 @@ msgid ""
 msgstr ""
 
 #: kwalleteditor.cpp:553 kwalleteditor.cpp:893
-#, fuzzy, kde-format
-#| msgid "Passwords"
+#, kde-format
 msgid "Password: %1"
-msgstr "Pasvortoj"
+msgstr ""
 
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:895
 #, kde-format
@@ -345,10 +340,9 @@ msgstr ""
 
 #: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
 #: kwalletmanager.cpp:302
-#, fuzzy, kde-format
-#| msgid "KDE Wallet"
+#, kde-format
 msgid "Wallet"
-msgstr "KDE paperujo"
+msgstr ""
 
 #: kwalletmanager.cpp:101 kwalletmanager.cpp:302
 #, kde-format
@@ -361,16 +355,14 @@ msgid "A wallet is open."
 msgstr ""
 
 #: kwalletmanager.cpp:146 kwalletpopup.cpp:27
-#, fuzzy, kde-format
-#| msgid "&New Folder..."
+#, kde-format
 msgid "&New Wallet..."
-msgstr "&Nova dosierujo..."
+msgstr ""
 
 #: kwalletmanager.cpp:151
-#, fuzzy, kde-format
-#| msgid "&Delete Folder"
+#, kde-format
 msgid "&Delete Wallet..."
-msgstr "&Forviŝu dosierujon"
+msgstr ""
 
 #: kwalletmanager.cpp:156
 #, kde-format
@@ -428,11 +420,9 @@ msgid "Please choose a name for the new wallet:"
 msgstr ""
 
 #: kwalletmanager.cpp:347
-#, fuzzy, kde-format
-#| msgid "New Folder"
-#| msgid_plural "New Folder (%1)"
+#, kde-format
 msgid "New Wallet"
-msgstr "Nova dosierujo"
+msgstr ""
 
 #: kwalletmanager.cpp:369
 #, kde-format
@@ -465,10 +455,9 @@ msgid "Unable to delete the wallet. Error code was %1."
 msgstr ""
 
 #: kwalletmanager.cpp:465
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "File name"
-msgstr "&Renomi"
+msgstr ""
 
 #: kwalletmanager.cpp:472
 #, kde-format
@@ -600,10 +589,9 @@ msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
 #: main.cpp:46
-#, fuzzy, kde-format
-#| msgid "Original author and former maintainer"
+#, kde-format
 msgid "Developer and former maintainer"
-msgstr "Origina aŭtoro kaj iama vartisto"
+msgstr ""
 
 #: main.cpp:48
 #, kde-format
@@ -707,24 +695,3 @@ msgstr "&Malfari"
 #, kde-format
 msgid "&Save"
 msgstr "&Konservi"
-
-#, fuzzy
-#~| msgid "&New Folder..."
-#~ msgid "Open Wallet..."
-#~ msgstr "&Nova dosierujo..."
-
-#, fuzzy
-#~| msgid "George Staikos"
-#~ msgid "(c) 2003,2004 George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid "Maintainer"
-#~ msgstr "Prizorganto"
-
-#~ msgid "&Export..."
-#~ msgstr "E&ksportu..."
-
-#, fuzzy
-#~| msgid "Change &Password..."
-#~ msgid "Change password..."
-#~ msgstr "Ŝanĝi &pasvorton..."
