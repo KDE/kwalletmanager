@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-31 01:02+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2023-02-16 09:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -28,47 +28,48 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukas@kde.org"
 
-#: konfigurator.cpp:43 konfigurator.cpp:270 konfigurator.cpp:272
+#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
+#: konfigurator.cpp:322 konfigurator.cpp:324
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Ovládací modul úschovny KDE"
 
-#: konfigurator.cpp:47
+#: konfigurator.cpp:55
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "(c) 2003 George Staikos"
 
-#: konfigurator.cpp:48
+#: konfigurator.cpp:56
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: konfigurator.cpp:114
+#: konfigurator.cpp:134 konfigurator.cpp:139
 #, kde-format
 msgid "New Wallet"
 msgstr "Nová úschovna"
 
-#: konfigurator.cpp:115
+#: konfigurator.cpp:135 konfigurator.cpp:140
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Prosím, zvolte název nové úschovny:"
 
-#: konfigurator.cpp:235 konfigurator.cpp:310
+#: konfigurator.cpp:273 konfigurator.cpp:363
 #, kde-format
 msgid "Always Allow"
 msgstr "Vždy povolit"
 
-#: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
+#: konfigurator.cpp:276 konfigurator.cpp:283 konfigurator.cpp:376
 #, kde-format
 msgid "Always Deny"
 msgstr "Vždy zakázat"
 
-#: konfigurator.cpp:270
+#: konfigurator.cpp:316 konfigurator.cpp:322
 #, kde-format
 msgid "Permission denied."
 msgstr "Odepřen přístup."
 
-#: konfigurator.cpp:272
+#: konfigurator.cpp:318 konfigurator.cpp:324
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -77,13 +78,13 @@ msgstr ""
 "Chyba při ověřování činnosti:\n"
 "%1"
 
-#: konfigurator.cpp:367
+#: konfigurator.cpp:427
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "Tento konfigurační modul vám umožní nastavit systém KDE úschoven."
 
-#: konfigurator.cpp:377 konfigurator.cpp:379
+#: konfigurator.cpp:442 konfigurator.cpp:444
 #, kde-format
 msgid "&Delete"
 msgstr "&Smazat"

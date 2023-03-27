@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2020-10-04 00:03+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -472,43 +472,43 @@ msgstr "Sigur doriți să ștergeți portofelul „%1”?"
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Imposibil de șters portofelul. Codul de eroare a fost %1."
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Denumire fișier"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Deschiderea fișierului pentru scriere a eșuat"
 
-#: kwalletmanager.cpp:483
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Alege fișier"
 
-#: kwalletmanager.cpp:493
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "Deschiderea fișierului a eșuat"
 
-#: kwalletmanager.cpp:506
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Portofelul cu denumirea %1 există deja. Operațiune abandonată."
 
-#: kwalletmanager.cpp:513
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Copierea fișierelor a eșuat"
 
-#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Se ignoră modificările nesalvate?"
 
-#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr ""

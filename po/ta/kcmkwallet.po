@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-31 01:02+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2022-11-08 20:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -26,47 +26,48 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "prem4ever_1983@yahoo.com"
 
-#: konfigurator.cpp:43 konfigurator.cpp:270 konfigurator.cpp:272
+#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
+#: konfigurator.cpp:322 konfigurator.cpp:324
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE சுறுக்குப்பை  கட்டுப்பாட்டுக்கூறு "
 
-#: konfigurator.cpp:47
+#: konfigurator.cpp:55
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr ""
 
-#: konfigurator.cpp:48
+#: konfigurator.cpp:56
 #, kde-format
 msgid "George Staikos"
 msgstr ""
 
-#: konfigurator.cpp:114
+#: konfigurator.cpp:134 konfigurator.cpp:139
 #, kde-format
 msgid "New Wallet"
 msgstr "புதிய சுறுக்குப்பை"
 
-#: konfigurator.cpp:115
+#: konfigurator.cpp:135 konfigurator.cpp:140
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr " புதிய சுறுக்குப்பைக்காக த்யவு செய்து ஒரு பதிய பெயரை தெர்ந்தெடுக்க "
 
-#: konfigurator.cpp:235 konfigurator.cpp:310
+#: konfigurator.cpp:273 konfigurator.cpp:363
 #, kde-format
 msgid "Always Allow"
 msgstr "எப்போதும் அனுமதி"
 
-#: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
+#: konfigurator.cpp:276 konfigurator.cpp:283 konfigurator.cpp:376
 #, kde-format
 msgid "Always Deny"
 msgstr "எப்போதும் மறு"
 
-#: konfigurator.cpp:270
+#: konfigurator.cpp:316 konfigurator.cpp:322
 #, kde-format
 msgid "Permission denied."
 msgstr "அனுமதி மறுக்கப்பட்டது."
 
-#: konfigurator.cpp:272
+#: konfigurator.cpp:318 konfigurator.cpp:324
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -75,13 +76,13 @@ msgstr ""
 "செயலுக்கு உரிமை வழங்குவதில் சிக்கல்:\n"
 "%1"
 
-#: konfigurator.cpp:367
+#: konfigurator.cpp:427
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "சுறுக்குபையை முறைமை உள்ளமைவுபடுத்த இந்த  உள்ளமைவுகூறு  உதவுகிறது."
 
-#: konfigurator.cpp:377 konfigurator.cpp:379
+#: konfigurator.cpp:442 konfigurator.cpp:444
 #, kde-format
 msgid "&Delete"
 msgstr "&நீக்கு"

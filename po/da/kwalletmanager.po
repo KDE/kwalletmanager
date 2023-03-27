@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2022-11-22 18:08+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -468,43 +468,43 @@ msgstr "Er du sikker på at du ønsker at slette tegnebogen '%1'?"
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Kan ikke slette tegnebogen. Fejlkoden var %1."
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Filnavn"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Kunne ikke åbne fil til skrivning"
 
-#: kwalletmanager.cpp:483
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Vælg fil"
 
-#: kwalletmanager.cpp:493
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "Kunne ikke åbne filen"
 
-#: kwalletmanager.cpp:506
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Der findes allerede en tegnebog med navnet %1. Handling afbrudt"
 
-#: kwalletmanager.cpp:513
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Kunne ikke kopiere filer"
 
-#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorer ugemte ændringer?"
 
-#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorér"

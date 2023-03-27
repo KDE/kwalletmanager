@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2022-11-10 20:49+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -481,45 +481,45 @@ msgstr "Soll der Passwortspeicher „%1“ wirklich gelöscht werden?"
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Der Passwortspeicher kann nicht gelöscht werden. Fehlercode: %1"
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Dateiname"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Die Datei lässt sich nicht zum Lesen öffnen"
 
-#: kwalletmanager.cpp:483
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Datei auswählen"
 
-#: kwalletmanager.cpp:493
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "Die Datei kann nicht geöffnet werden"
 
-#: kwalletmanager.cpp:506
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 "Ein Passwortspeicher mit dem Namen %1 existiert bereits. Die Operation wird "
 "abgebrochen"
 
-#: kwalletmanager.cpp:513
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Dateien können nicht kopiert werden"
 
-#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ungespeicherte Änderungen ignorieren?"
 
-#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorieren"

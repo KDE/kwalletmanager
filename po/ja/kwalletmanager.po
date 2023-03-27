@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2019-04-21 12:35-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -475,43 +475,43 @@ msgstr "本当にウォレット “%1” を削除しますか？"
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "ウォレットを削除できませんでした。エラーコード: %1"
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "ファイル名"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:483
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "ファイルを選択"
 
-#: kwalletmanager.cpp:493
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "ファイルを開けません"
 
-#: kwalletmanager.cpp:506
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "%1という名前のウォレットは既に存在しています、操作は中止されました"
 
-#: kwalletmanager.cpp:513
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "ファイルのコピーに失敗"
 
-#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "未保存の変更を破棄しますか？"
 
-#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr ""

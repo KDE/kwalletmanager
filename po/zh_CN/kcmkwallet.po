@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-31 01:02+0000\n"
-"PO-Revision-Date: 2023-03-11 04:52\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
+"PO-Revision-Date: 2023-03-26 02:18\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -27,47 +27,48 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "i@guoyunhe.me, tysontan@tysontan.com"
 
-#: konfigurator.cpp:43 konfigurator.cpp:270 konfigurator.cpp:272
+#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
+#: konfigurator.cpp:322 konfigurator.cpp:324
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE 密码库控制模块"
 
-#: konfigurator.cpp:47
+#: konfigurator.cpp:55
 #, kde-format
 msgid "(c) 2003 George Staikos"
 msgstr "(c) 2003 George Staikos"
 
-#: konfigurator.cpp:48
+#: konfigurator.cpp:56
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: konfigurator.cpp:114
+#: konfigurator.cpp:134 konfigurator.cpp:139
 #, kde-format
 msgid "New Wallet"
 msgstr "新建密码库"
 
-#: konfigurator.cpp:115
+#: konfigurator.cpp:135 konfigurator.cpp:140
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "请选择新密码库的名称："
 
-#: konfigurator.cpp:235 konfigurator.cpp:310
+#: konfigurator.cpp:273 konfigurator.cpp:363
 #, kde-format
 msgid "Always Allow"
 msgstr "总是允许"
 
-#: konfigurator.cpp:238 konfigurator.cpp:245 konfigurator.cpp:323
+#: konfigurator.cpp:276 konfigurator.cpp:283 konfigurator.cpp:376
 #, kde-format
 msgid "Always Deny"
 msgstr "总是拒绝"
 
-#: konfigurator.cpp:270
+#: konfigurator.cpp:316 konfigurator.cpp:322
 #, kde-format
 msgid "Permission denied."
 msgstr "权限被拒绝。"
 
-#: konfigurator.cpp:272
+#: konfigurator.cpp:318 konfigurator.cpp:324
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -76,13 +77,13 @@ msgstr ""
 "身份验证操作出错：\n"
 "%1"
 
-#: konfigurator.cpp:367
+#: konfigurator.cpp:427
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "此配置模块用于配置 KDE 密码库系统。"
 
-#: konfigurator.cpp:377 konfigurator.cpp:379
+#: konfigurator.cpp:442 konfigurator.cpp:444
 #, kde-format
 msgid "&Delete"
 msgstr "删除(&D)"

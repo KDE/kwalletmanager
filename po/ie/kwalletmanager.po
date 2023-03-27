@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -456,43 +456,43 @@ msgstr ""
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr ""
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Nómine de file"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:476
 #, fuzzy, kde-format
 msgid "Failed to open file for writing"
 msgstr "Ne successat aperter un file por scrition: %1"
 
-#: kwalletmanager.cpp:483
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Selecter un file"
 
-#: kwalletmanager.cpp:493
+#: kwalletmanager.cpp:497
 #, fuzzy, kde-format
 msgid "Failed to open file"
 msgstr "Ne posset aperter un file"
 
-#: kwalletmanager.cpp:506
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 
-#: kwalletmanager.cpp:513
+#: kwalletmanager.cpp:517
 #, fuzzy, kde-format
 msgid "Failed to copy files"
 msgstr "Copiar li files"
 
-#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, fuzzy, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Avise: íngardat modificationes"
 
-#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorar"
