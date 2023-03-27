@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-31 01:02+0000\n"
-"PO-Revision-Date: 2023-03-11 04:55\n"
+"PO-Revision-Date: 2023-03-26 02:20\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -226,16 +226,15 @@ msgstr "所有密码库关闭后隐藏系统托盘图标"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "密码服务 DBus API"
+msgstr "密码服务"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "使用 KWallet 作为密码服务接口"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -245,6 +244,8 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"密码服务接口允许应用程序存储密码和其他保密数据。禁用它以允许第三方密码库服"
+"务，如 KeePassXC 或 GNOME 密钥环来管理它。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
@@ -281,6 +282,3 @@ msgstr "策略"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "启动密码库管理器(&L)"
-
-#~ msgid "Enable Secret Service DBus API"
-#~ msgstr "启用密码服务 DBus API"
