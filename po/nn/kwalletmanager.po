@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-03-27 00:52+0000\n"
 "PO-Revision-Date: 2022-10-30 09:41+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -470,43 +470,43 @@ msgstr "Er du sikker på at du vil sletta lommeboka «%1»?"
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Klarte ikkje sletta lommeboka. Feilkoden var %1."
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:469
 #, kde-format
 msgid "File name"
 msgstr "Filnamn"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Klarte ikkje opna fila for skriving"
 
-#: kwalletmanager.cpp:483
+#: kwalletmanager.cpp:487
 #, kde-format
 msgid "Select file"
 msgstr "Vel fil"
 
-#: kwalletmanager.cpp:493
+#: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
 msgstr "Klarte ikkje opna fila"
 
-#: kwalletmanager.cpp:506
+#: kwalletmanager.cpp:510
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Det finst alt ei lommebok med namnet %1. Handlinga vart avbroten."
 
-#: kwalletmanager.cpp:513
+#: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Klarte ikkje kopiera filer"
 
-#: kwalletmanager.cpp:527 kwalletmanager.cpp:529 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorer ulagra endringar?"
 
-#: kwalletmanager.cpp:527 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorer"
