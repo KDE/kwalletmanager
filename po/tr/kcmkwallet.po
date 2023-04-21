@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-27 00:52+0000\n"
-"PO-Revision-Date: 2023-02-04 14:04+0300\n"
+"PO-Revision-Date: 2023-04-20 15:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -199,7 +199,7 @@ msgstr "Otomatik Cüzdan Seçimi"
 #: walletconfigwidget.ui:128
 #, kde-format
 msgid "Select wallet to use as default:"
-msgstr "Öntanımlı olarak kullanılacak cüzdanı seçin:"
+msgstr "Öntanımlı olarak kullanılacak cüzdanı seç:"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
