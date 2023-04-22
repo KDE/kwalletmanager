@@ -252,15 +252,15 @@
 
 <listitem
 ><para
->&systemsettings;'na gidin; <menuchoice
+>&systemsettings; <menuchoice
 ><guimenu
 >Hesap Ayrıntıları</guimenu
 > <guimenuitem
 >KDE Cüzdan</guimenuitem
 ></menuchoice
-> ve <guilabel
->Öntanımlı olarak kullanılacak cüzdanı seçin</guilabel
-> açılır kutusundan yeni oluşturulan GPG tabanlı cüzdanı seçin. </para
+> yolunu izleyin ve <guilabel
+>Öntanımlı olarak kullanılacak cüzdanı seç</guilabel
+> çoklu kutusundan yeni oluşturulan GPG tabanlı cüzdanı seçin. </para
 ></listitem>
 </itemizedlist>
 
@@ -628,7 +628,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <varlistentry>
 <term
 ><guilabel
->Öntanımlı olarak kullanılacak cüzdanı seçin:</guilabel
+>Öntanımlı olarak kullanılacak cüzdanı seç:</guilabel
 ></term>
 <listitem>
 <para
