@@ -201,12 +201,15 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
 
     _mergeAction = actionCollection->addAction(QStringLiteral("wallet_merge"));
     _mergeAction->setText(i18n("&Import a wallet..."));
+    _mergeAction->setEnabled(false);
 
     _importAction = actionCollection->addAction(QStringLiteral("wallet_import"));
     _importAction->setText(i18n("&Import XML..."));
+    _importAction->setEnabled(false);
 
     _exportAction = actionCollection->addAction(QStringLiteral("wallet_export"));
     _exportAction->setText(i18n("&Export as XML..."));
+    _exportAction->setEnabled(false);
 
     _copyPassAction = actionCollection->addAction(QStringLiteral("copy_action"));
     _copyPassAction->setText(i18n("&Copy"));
