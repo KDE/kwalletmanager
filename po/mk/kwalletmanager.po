@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-04-27 02:46+0000\n"
 "PO-Revision-Date: 2007-02-21 11:43+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -134,187 +134,187 @@ msgstr "&Избриши папка"
 msgid "&Import a wallet..."
 msgstr "&Спои паричник..."
 
-#: kwalleteditor.cpp:206
+#: kwalleteditor.cpp:207
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Внеси XML..."
 
-#: kwalleteditor.cpp:209
+#: kwalleteditor.cpp:211
 #, fuzzy, kde-format
 #| msgid "&Import XML..."
 msgid "&Export as XML..."
 msgstr "&Внеси XML..."
 
-#: kwalleteditor.cpp:212
+#: kwalleteditor.cpp:215
 #, kde-format
 msgid "&Copy"
 msgstr ""
 
-#: kwalleteditor.cpp:217
+#: kwalleteditor.cpp:220
 #, kde-format
 msgid "&New..."
 msgstr "&Нов..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:225
 #, kde-format
 msgid "&Rename"
 msgstr "&Преименувај"
 
-#: kwalleteditor.cpp:227 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:230 kwalletpopup.cpp:65
 #, fuzzy, kde-format
 msgid "&Delete"
 msgstr "&Избриши папка"
 
-#: kwalleteditor.cpp:232
+#: kwalleteditor.cpp:235
 #, fuzzy, kde-format
 #| msgid "Show &Contents"
 msgid "Always show contents"
 msgstr "Покажи с&одржина"
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:239
 #, fuzzy, kde-format
 #| msgid "Hide &Contents"
 msgid "Always hide contents"
 msgstr "Скриј &содржина"
 
-#: kwalleteditor.cpp:345
+#: kwalleteditor.cpp:348
 #, kde-format
 msgid "Passwords"
 msgstr "Лозинки"
 
-#: kwalleteditor.cpp:346
+#: kwalleteditor.cpp:349
 #, kde-format
 msgid "Maps"
 msgstr "Мапи"
 
-#: kwalleteditor.cpp:347
+#: kwalleteditor.cpp:350
 #, kde-format
 msgid "Binary Data"
 msgstr "Бинарни податоци"
 
-#: kwalleteditor.cpp:348
+#: kwalleteditor.cpp:351
 #, kde-format
 msgid "Unknown"
 msgstr "Непознато"
 
-#: kwalleteditor.cpp:388
+#: kwalleteditor.cpp:391
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr ""
 "Дали сте сигурни дека сакате да ја избришете папката „%1“ од паричникот?"
 
-#: kwalleteditor.cpp:392
+#: kwalleteditor.cpp:395
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Грешка при бришењето на папката."
 
-#: kwalleteditor.cpp:411
+#: kwalleteditor.cpp:414
 #, kde-format
 msgid "New Folder"
 msgstr "Нова папка"
 
-#: kwalleteditor.cpp:412
+#: kwalleteditor.cpp:415
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Изберете име за новата папка:"
 
-#: kwalleteditor.cpp:423 kwalleteditor.cpp:428
+#: kwalleteditor.cpp:426 kwalleteditor.cpp:431
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Се извинувам, тоа име на папка се користи. Ќе се обидете повторно?"
 
-#: kwalleteditor.cpp:425 kwalleteditor.cpp:428 kwalleteditor.cpp:803
-#: kwalleteditor.cpp:806
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:431 kwalleteditor.cpp:806
+#: kwalleteditor.cpp:809
 #, kde-format
 msgid "Try Again"
 msgstr "Обиди се повторно"
 
-#: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
-#: kwalleteditor.cpp:806 kwalletmanager.cpp:379 kwalletmanager.cpp:381
+#: kwalleteditor.cpp:429 kwalleteditor.cpp:431 kwalleteditor.cpp:807
+#: kwalleteditor.cpp:809 kwalletmanager.cpp:379 kwalletmanager.cpp:381
 #, kde-format
 msgid "Do Not Try"
 msgstr "Не се обидувај"
 
-#: kwalleteditor.cpp:472
+#: kwalleteditor.cpp:475
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Грешка при зачувување на елемент. Код за грешка: %1"
 
-#: kwalleteditor.cpp:499
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
 
-#: kwalleteditor.cpp:553 kwalleteditor.cpp:893
+#: kwalleteditor.cpp:556 kwalleteditor.cpp:896
 #, kde-format
 msgid "Password: %1"
 msgstr "Лозинка: %1"
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:895
+#: kwalleteditor.cpp:573 kwalleteditor.cpp:898
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Мапа со име - вредност: %1"
 
-#: kwalleteditor.cpp:580 kwalleteditor.cpp:897
+#: kwalleteditor.cpp:583 kwalleteditor.cpp:900
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Бинарни податоци: %1"
 
-#: kwalleteditor.cpp:788
+#: kwalleteditor.cpp:791
 #, kde-format
 msgid "New Entry"
 msgstr "Нов елемент"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:792
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Изберете име за новиот елемент:"
 
-#: kwalleteditor.cpp:801 kwalleteditor.cpp:806
+#: kwalleteditor.cpp:804 kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Се извинувам, тој елемент веќе постои. Ќе се обидете повторно?"
 
-#: kwalleteditor.cpp:828 kwalleteditor.cpp:837
+#: kwalleteditor.cpp:831 kwalleteditor.cpp:840
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Настана неочекувана грешка при обидот да се додаде новиот елемент"
 
-#: kwalleteditor.cpp:889
+#: kwalleteditor.cpp:892
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Настана неочекувана грешка при обидот да се преименува новиот елемент"
 
-#: kwalleteditor.cpp:909
+#: kwalleteditor.cpp:912
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Дали сте сигурни дека сакате да го избришете елементот „%1“?"
 
-#: kwalleteditor.cpp:913
+#: kwalleteditor.cpp:916
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Настана неочекувана грешка при обидот да се избрише новиот елемент"
 
-#: kwalleteditor.cpp:941
+#: kwalleteditor.cpp:944
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Не можам да го отворам бараниот паричник."
 
-#: kwalleteditor.cpp:977
+#: kwalleteditor.cpp:980
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Не можам да пристапам кон XML-датотеката „<b>%1</b>“."
 
-#: kwalleteditor.cpp:984
+#: kwalleteditor.cpp:987
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Не можам да пристапам кон паричникот „<b>%1</b>“."
 
-#: kwalleteditor.cpp:1015 kwalleteditor.cpp:1045 kwalleteditor.cpp:1079
-#: kwalleteditor.cpp:1161
+#: kwalleteditor.cpp:1018 kwalleteditor.cpp:1048 kwalleteditor.cpp:1082
+#: kwalleteditor.cpp:1164
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -323,22 +323,22 @@ msgstr ""
 "Папката „<b>%1</b>“ веќе содржи елемент „<b>%2</b>“.  Дали сакате да го "
 "замените?"
 
-#: kwalleteditor.cpp:1119
+#: kwalleteditor.cpp:1122
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Не можам да пристапам кон XML-датотеката „<b>%1</b>“."
 
-#: kwalleteditor.cpp:1125
+#: kwalleteditor.cpp:1128
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Грешка при читањето на XML-датотеката „<b>%1</b>“ за внес."
 
-#: kwalleteditor.cpp:1131
+#: kwalleteditor.cpp:1134
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Грешка: XML-датотеката не содржи паричник."
 
-#: kwalleteditor.cpp:1282
+#: kwalleteditor.cpp:1285
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."

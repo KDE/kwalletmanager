@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:51+0000\n"
+"POT-Creation-Date: 2023-04-27 02:46+0000\n"
 "PO-Revision-Date: 2023-04-16 12:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -130,109 +130,109 @@ msgstr "删除文件夹(&D)"
 msgid "&Import a wallet..."
 msgstr "导入密码库(&I)..."
 
-#: kwalleteditor.cpp:206
+#: kwalleteditor.cpp:207
 #, kde-format
 msgid "&Import XML..."
 msgstr "导入 XML(&I)..."
 
-#: kwalleteditor.cpp:209
+#: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Export as XML..."
 msgstr "导出为 XML(&E)..."
 
-#: kwalleteditor.cpp:212
+#: kwalleteditor.cpp:215
 #, kde-format
 msgid "&Copy"
 msgstr "复制(&C)"
 
-#: kwalleteditor.cpp:217
+#: kwalleteditor.cpp:220
 #, kde-format
 msgid "&New..."
 msgstr "新建(&N)..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:225
 #, kde-format
 msgid "&Rename"
 msgstr "重命名(&R)"
 
-#: kwalleteditor.cpp:227 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:230 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
 msgstr "删除(&D)"
 
-#: kwalleteditor.cpp:232
+#: kwalleteditor.cpp:235
 #, kde-format
 msgid "Always show contents"
 msgstr "总是显示内容"
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:239
 #, kde-format
 msgid "Always hide contents"
 msgstr "总是隐藏内容"
 
-#: kwalleteditor.cpp:345
+#: kwalleteditor.cpp:348
 #, kde-format
 msgid "Passwords"
 msgstr "密码"
 
-#: kwalleteditor.cpp:346
+#: kwalleteditor.cpp:349
 #, kde-format
 msgid "Maps"
 msgstr "映射"
 
-#: kwalleteditor.cpp:347
+#: kwalleteditor.cpp:350
 #, kde-format
 msgid "Binary Data"
 msgstr "二进制数据"
 
-#: kwalleteditor.cpp:348
+#: kwalleteditor.cpp:351
 #, kde-format
 msgid "Unknown"
 msgstr "未知"
 
-#: kwalleteditor.cpp:388
+#: kwalleteditor.cpp:391
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "您确定要删除密码库中的文件夹“%1”吗？"
 
-#: kwalleteditor.cpp:392
+#: kwalleteditor.cpp:395
 #, kde-format
 msgid "Error deleting folder."
 msgstr "删除文件夹时出错。"
 
-#: kwalleteditor.cpp:411
+#: kwalleteditor.cpp:414
 #, kde-format
 msgid "New Folder"
 msgstr "新建文件夹"
 
-#: kwalleteditor.cpp:412
+#: kwalleteditor.cpp:415
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "请选择新文件夹的名称："
 
-#: kwalleteditor.cpp:423 kwalleteditor.cpp:428
+#: kwalleteditor.cpp:426 kwalleteditor.cpp:431
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "对不起，已存在同名文件夹。您想要重试吗？"
 
-#: kwalleteditor.cpp:425 kwalleteditor.cpp:428 kwalleteditor.cpp:803
-#: kwalleteditor.cpp:806
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:431 kwalleteditor.cpp:806
+#: kwalleteditor.cpp:809
 #, kde-format
 msgid "Try Again"
 msgstr "重试"
 
-#: kwalleteditor.cpp:426 kwalleteditor.cpp:428 kwalleteditor.cpp:804
-#: kwalleteditor.cpp:806 kwalletmanager.cpp:379 kwalletmanager.cpp:381
+#: kwalleteditor.cpp:429 kwalleteditor.cpp:431 kwalleteditor.cpp:807
+#: kwalleteditor.cpp:809 kwalletmanager.cpp:379 kwalletmanager.cpp:381
 #, kde-format
 msgid "Do Not Try"
 msgstr "不重试"
 
-#: kwalleteditor.cpp:472
+#: kwalleteditor.cpp:475
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "保存条目时出错。错误代码：%1"
 
-#: kwalleteditor.cpp:499
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -241,95 +241,95 @@ msgstr ""
 "当前项目的内容已被更改。\n"
 "您想要保存这些更改吗？"
 
-#: kwalleteditor.cpp:553 kwalleteditor.cpp:893
+#: kwalleteditor.cpp:556 kwalleteditor.cpp:896
 #, kde-format
 msgid "Password: %1"
 msgstr "密码：%1"
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:895
+#: kwalleteditor.cpp:573 kwalleteditor.cpp:898
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "名称-值映射：%1"
 
-#: kwalleteditor.cpp:580 kwalleteditor.cpp:897
+#: kwalleteditor.cpp:583 kwalleteditor.cpp:900
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "二进制数据：%1"
 
-#: kwalleteditor.cpp:788
+#: kwalleteditor.cpp:791
 #, kde-format
 msgid "New Entry"
 msgstr "新建条目"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:792
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "请选择新条目的名称："
 
-#: kwalleteditor.cpp:801 kwalleteditor.cpp:806
+#: kwalleteditor.cpp:804 kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "对不起，已存在同名条目。您想要重试吗？"
 
-#: kwalleteditor.cpp:828 kwalleteditor.cpp:837
+#: kwalleteditor.cpp:831 kwalleteditor.cpp:840
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "尝试添加新条目时发生意外错误"
 
-#: kwalleteditor.cpp:889
+#: kwalleteditor.cpp:892
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "尝试重命名条目时发生意外错误"
 
-#: kwalleteditor.cpp:909
+#: kwalleteditor.cpp:912
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "您确定要删除项目“%1”吗？"
 
-#: kwalleteditor.cpp:913
+#: kwalleteditor.cpp:916
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "尝试删除条目时发生意外错误"
 
-#: kwalleteditor.cpp:941
+#: kwalleteditor.cpp:944
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "无法打开请求的密码库。"
 
-#: kwalleteditor.cpp:977
+#: kwalleteditor.cpp:980
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "无法为下载“<b>%1</b>”创建临时文件。"
 
-#: kwalleteditor.cpp:984
+#: kwalleteditor.cpp:987
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "无法访问密码库“<b>%1</b>”。"
 
-#: kwalleteditor.cpp:1015 kwalleteditor.cpp:1045 kwalleteditor.cpp:1079
-#: kwalleteditor.cpp:1161
+#: kwalleteditor.cpp:1018 kwalleteditor.cpp:1048 kwalleteditor.cpp:1082
+#: kwalleteditor.cpp:1164
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr "文件夹“<b>%1</b>”已经包含条目“<b>%2</b>”。您想要替换它吗？"
 
-#: kwalleteditor.cpp:1119
+#: kwalleteditor.cpp:1122
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "无法访问 XML 文件“<b>%1</b>”。"
 
-#: kwalleteditor.cpp:1125
+#: kwalleteditor.cpp:1128
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "读取 XML 文件“<b>%1</b>”作为输入出错。"
 
-#: kwalleteditor.cpp:1131
+#: kwalleteditor.cpp:1134
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "错误：XML 文件不包含密码库。"
 
-#: kwalleteditor.cpp:1282
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "无法存储到“<b>%1</b>”。"
