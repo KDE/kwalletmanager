@@ -4,13 +4,13 @@
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008.
 # Marce Villarino <mvillarino@gmail.com>, 2009, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-31 01:02+0000\n"
-"PO-Revision-Date: 2019-10-08 13:47+0200\n"
+"PO-Revision-Date: 2023-04-28 20:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.07.70\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -151,10 +151,9 @@ msgstr "Pechar cando non se use por máis de:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
-msgstr " min"
+msgstr " minutos"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:99
@@ -239,13 +238,13 @@ msgstr "Agochar a icona da bandexa cando peche a última das carteiras"
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Servizo de segredos"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Usar KWallet como interface do servizo de segredos"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -255,6 +254,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"A interface do servizo de segredos permite ás aplicacións almacenar "
+"contrasinais e outros datos confidenciais. Desactive isto para permitir que "
+"o xestionen no seu lugar servizos de carteira de terceiras partes como "
+"KeePassXC ou GNOME Keyring."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
