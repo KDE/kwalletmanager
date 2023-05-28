@@ -25,7 +25,7 @@
  *  KWalletFolderItem - ListView items to represent kwallet folders
  */
 KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, const QString &name, int entries)
-    : QTreeWidgetItem(parent, KWalletFolderItemClass), _wallet(w), _name(name), _entries(entries)
+    : QTreeWidgetItem(parent, KWalletFolderItemClass), _wallet(w), _name(name), _entries(entries), m_services(KService::allServices())
 {
     setText(0, QStringLiteral("%1 (%2)").arg(_name).arg(_entries));
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled);
@@ -34,7 +34,13 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, co
 
 QIcon KWalletFolderItem::getFolderIcon() const
 {
-    return QIcon::fromTheme(_name, QIcon::fromTheme(_name.toLower(), QIcon::fromTheme(QStringLiteral("folder"))));
+    for (auto service : m_services) {
+        if (service->name().compare(_name, Qt::CaseSensitivity::CaseInsensitive) == 0 && !service->icon().isEmpty()) {
+            return QIcon::fromTheme(service->icon());
+        }
+    }
+
+    return QIcon::fromTheme(_name, QIcon::fromTheme(QStringLiteral("folder")));
 }
 
 void KWalletFolderItem::refresh()

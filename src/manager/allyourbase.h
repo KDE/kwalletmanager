@@ -9,6 +9,7 @@
 #define ALLYOURBASE_H
 
 #include <KWallet>
+#include <KService>
 #include <QListWidget>
 
 #include <QPixmap>
@@ -86,6 +87,7 @@ public:
 private:
     QString _name;
     int _entries;
+    KService::List m_services;
 };
 
 class KWalletEntryList : public QTreeWidget
