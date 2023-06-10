@@ -30,7 +30,7 @@ public:
 #if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     explicit KWalletConfig(QWidget *parent = nullptr, const QVariantList & = QVariantList());
 #else
-    explicit KWalletConfig(QObject *parent, const KPluginMetaData &data, const QVariantList & = QVariantList());
+    explicit KWalletConfig(QObject *parent, const KPluginMetaData &data);
 #endif
     ~KWalletConfig() override;
 

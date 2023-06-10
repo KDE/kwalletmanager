@@ -40,8 +40,8 @@ KWalletConfig::KWalletConfig(QWidget *parent, const QVariantList &args)
       , _wcw(new WalletConfigWidget(this))
       , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
 #else
-KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
       , _wcw(new WalletConfigWidget(widget()))
       , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
 #endif
