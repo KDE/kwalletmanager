@@ -34,6 +34,7 @@
         "Description[vi]": "Cấu hình Ví KDE",
         "Description[x-test]": "xxKDE Wallet Configurationxx",
         "Description[zh_CN]": "KDE 密码库配置",
+        "Description[zh_TW]": "KDE 錢包設定",
         "Icon": "kwalletmanager",
         "Name": "KDE Wallet",
         "Name[ar]": "محفظة كِيدِي",
