@@ -14,6 +14,7 @@
   <name xml:lang="de">KWalletManager</name>
   <name xml:lang="el">KWalletManager</name>
   <name xml:lang="en-GB">KWalletManager</name>
+  <name xml:lang="eo">KWalletManager</name>
   <name xml:lang="es">KWalletManager</name>
   <name xml:lang="et">KWalletManager</name>
   <name xml:lang="eu">KWalletManager</name>
@@ -57,6 +58,7 @@
   <summary xml:lang="de">Dienstprogramm zur Passwortverwaltung</summary>
   <summary xml:lang="el">Εργαλείο διαχείρισης πορτοφολιού</summary>
   <summary xml:lang="en-GB">Wallet Management Tool</summary>
+  <summary xml:lang="eo">Monuj-Administrilo</summary>
   <summary xml:lang="es">Herramienta de gestión de carteras</summary>
   <summary xml:lang="et">Turvalaegaste haldur</summary>
   <summary xml:lang="eu">Zorroa kudeatzeko tresna</summary>
