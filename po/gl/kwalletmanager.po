@@ -169,7 +169,7 @@ msgstr "&Eliminar"
 #: kwalleteditor.cpp:235
 #, kde-format
 msgid "Always show contents"
-msgstr "Mostrar sempre o contido"
+msgstr "Amosar sempre o contido"
 
 #: kwalleteditor.cpp:239
 #, kde-format
@@ -622,7 +622,7 @@ msgstr "Desenvolvedor"
 #: main.cpp:57
 #, kde-format
 msgid "Show window on startup"
-msgstr "Mostrar a xanela no inicio"
+msgstr "Amosar a xanela no inicio"
 
 #: main.cpp:58
 #, kde-format
@@ -698,7 +698,7 @@ msgstr "Agochar o &contido"
 #: walletwidget.ui:185 walletwidget.ui:233
 #, kde-format
 msgid "Show &Contents"
-msgstr "Mostrar o &contido"
+msgstr "Amosar o &contido"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
 #: walletwidget.ui:296
