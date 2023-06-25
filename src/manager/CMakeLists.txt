@@ -92,4 +92,6 @@ add_subdirectory(icons)
 
 ########### install files ###############
 
-install(FILES kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
+if (QT_MAJOR_VERSION STREQUAL "5")
+    install(FILES kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
+endif()
