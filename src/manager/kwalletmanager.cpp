@@ -438,7 +438,7 @@ void KWalletManager::setupWallet()
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("kwalletconfig5")});
 #else
-    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell6"), {QStringLiteral("kwalletconfig5")});
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell6"), {QStringLiteral("kcm_kwallet5")});
 #endif
     job->start();
 }
