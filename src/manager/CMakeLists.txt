@@ -48,7 +48,7 @@ ecm_qt_declare_logging_category(kwalletmanager5
 				CATEGORY_NAME org.kde.kwalletmanager DESCRIPTION "kwalletmanager" EXPORT KWALLETMANAGER)
 
 qt_add_dbus_interface(kwalletmanager_SRCS
-    ${KWALLET_DBUS_INTERFACES_DIR}/kf5_org.kde.KWallet.xml kwallet_interface
+    ${KWALLET_DBUS_INTERFACES_DIR}/kf${QT_MAJOR_VERSION}_org.kde.KWallet.xml kwallet_interface
 )
 target_sources(kwalletmanager5 PRIVATE ${kwalletmanager_SRCS})
 
