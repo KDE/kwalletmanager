@@ -192,4 +192,4 @@ void WalletControlWidget::showEvent(QShowEvent *)
 {
 }
 
-
+#include "moc_walletcontrolwidget.cpp"

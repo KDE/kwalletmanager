@@ -53,4 +53,4 @@ void ConnectedAppModel::removeApp(const QString &appName)
     }
 }
 
-
+#include "moc_connectedappmodel.cpp"

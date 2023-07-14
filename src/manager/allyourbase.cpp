@@ -691,4 +691,4 @@ public:
     }
 };
 
-
+#include "moc_allyourbase.cpp"

@@ -1351,3 +1351,5 @@ bool KWalletEditor::hasUnsavedChanges() const
 {
     return _hasUnsavedChanges;
 }
+
+#include "moc_kwalleteditor.cpp"

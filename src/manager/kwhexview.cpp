@@ -92,3 +92,5 @@ void KWHexView::resizeEvent(QResizeEvent* e)
     QPlainTextEdit::resizeEvent(e);
     if (e->size() != e->oldSize()) showData();
 }
+
+#include "moc_kwhexview.cpp"

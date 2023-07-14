@@ -46,4 +46,4 @@ void AuthorizedApplicationsTable::resizeEvent(QResizeEvent *resizeEvent)
     QAbstractItemView::resizeEvent(resizeEvent);
 }
 
-
+#include "moc_authorizedapplicationstable.cpp"

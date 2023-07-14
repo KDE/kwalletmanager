@@ -37,3 +37,5 @@ bool KWalletManagerWidgetItem::hasUnsavedChanges() const
 {
     return (_controlWidget ? _controlWidget->hasUnsavedChanges() : false);
 }
+
+#include "moc_kwalletmanagerwidgetitem.cpp"

@@ -630,3 +630,5 @@ void KWalletManager::activateForStartLikeCall(bool showWindow)
         }
     }
 }
+
+#include "moc_kwalletmanager.cpp"

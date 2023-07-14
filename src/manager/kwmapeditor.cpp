@@ -227,4 +227,4 @@ void KWMapEditor::copy()
     }
 }
 
-
+#include "moc_kwmapeditor.cpp"

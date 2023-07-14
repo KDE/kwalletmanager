@@ -462,3 +462,5 @@ void KWalletConfig::deleteEntry()
 }
 
 #include "konfigurator.moc"
+
+#include "moc_konfigurator.cpp"

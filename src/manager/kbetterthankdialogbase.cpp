@@ -48,3 +48,4 @@ void KBetterThanKDialogBase::reject()
     setResult(4);
 }
 
+#include "moc_kbetterthankdialogbase.cpp"

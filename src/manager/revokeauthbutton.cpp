@@ -22,4 +22,4 @@ void RevokeAuthButton::onClicked()
     Q_EMIT appRevoked(_appName);
 }
 
-
+#include "moc_revokeauthbutton.cpp"

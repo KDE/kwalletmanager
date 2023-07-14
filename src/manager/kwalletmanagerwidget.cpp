@@ -207,3 +207,5 @@ bool KWalletManagerWidget::hasUnsavedChanges(const QString &name) const
         return it.value()->hasUnsavedChanges();
     }
 }
+
+#include "moc_kwalletmanagerwidget.cpp"

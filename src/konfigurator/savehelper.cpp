@@ -21,3 +21,5 @@ ActionReply SaveHelper::save(const QVariantMap &args)
 }
 
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmkwallet5", SaveHelper)
+
+#include "moc_savehelper.cpp"
