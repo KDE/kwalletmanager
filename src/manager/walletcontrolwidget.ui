@@ -68,9 +68,7 @@
      </property>
      <widget class="QWidget" name="_contentsTab">
       <attribute name="icon">
-       <iconset theme="wallet-closed">
-        <normaloff/>
-       </iconset>
+       <iconset theme="wallet-closed"/>
       </attribute>
       <attribute name="title">
        <string>Contents</string>
@@ -107,9 +105,7 @@
      </widget>
      <widget class="QWidget" name="_appsTab">
       <attribute name="icon">
-       <iconset theme="start-here-kde">
-        <normaloff/>
-       </iconset>
+       <iconset theme="start-here-kde"/>
       </attribute>
       <attribute name="title">
        <string>Applications</string>
