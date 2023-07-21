@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 00:52+0000\n"
+"POT-Creation-Date: 2023-07-21 00:53+0000\n"
 "PO-Revision-Date: 2021-09-14 13:46+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -675,13 +675,13 @@ msgid "Change Password..."
 msgstr "A jelszó megváltoztatása…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:76
+#: walletcontrolwidget.ui:74
 #, kde-format
 msgid "Contents"
 msgstr "Tartalom"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:115
+#: walletcontrolwidget.ui:111
 #, kde-format
 msgid "Applications"
 msgstr "Alkalmazások"

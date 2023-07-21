@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kwalletmanager.pot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 00:52+0000\n"
+"POT-Creation-Date: 2023-07-21 00:53+0000\n"
 "PO-Revision-Date: 2004-09-21 18:36+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -687,14 +687,14 @@ msgid "Change Password..."
 msgstr "Kemmañ an &Tremenger ..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:76
+#: walletcontrolwidget.ui:74
 #, fuzzy, kde-format
 #| msgid "Hide &Contents"
 msgid "Contents"
 msgstr "Kuzhat an &endalc'had"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:115
+#: walletcontrolwidget.ui:111
 #, kde-format
 msgid "Applications"
 msgstr ""

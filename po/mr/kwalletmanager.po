@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 00:52+0000\n"
+"POT-Creation-Date: 2023-07-21 00:53+0000\n"
 "PO-Revision-Date: 2013-04-06 12:34+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -670,13 +670,13 @@ msgid "Change Password..."
 msgstr "गुप्तशब्द बदला (&P)..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:76
+#: walletcontrolwidget.ui:74
 #, kde-format
 msgid "Contents"
 msgstr "मजकूर"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:115
+#: walletcontrolwidget.ui:111
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
