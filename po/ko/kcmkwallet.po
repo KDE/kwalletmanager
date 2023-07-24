@@ -175,15 +175,15 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
-"<p><b>마지막으로 지갑을 사용한 프로그램이 종료되면 닫기.</b><br />지갑을 사용"
-"하는 모든 프로그램이 종료되어야만 지갑이 닫힙니다.<br />지갑이 닫힌 후에는 암"
-"호를 입력해야 접근할 수 있습니다.</p>"
+"<p><b>마지막으로 지갑을 사용한 앱이 종료되면 닫기.</b><br />지갑을 사용하는 "
+"모든 앱이 종료되어야만 지갑이 닫힙니다.<br />지갑이 닫힌 후에는 암호를 입력해"
+"야 접근할 수 있습니다.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:112
 #, kde-format
 msgid "Close when last application stops using it"
-msgstr "마지막으로 사용한 프로그램이 종료되면 닫기"
+msgstr "마지막으로 사용한 앱이 종료되면 닫기"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
 #: walletconfigwidget.ui:122
@@ -261,7 +261,7 @@ msgstr "접근 제어"
 #: walletconfigwidget.ui:334
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr "프로그램이 지갑에 접근할 때 알려 주기(&P)"
+msgstr "앱이 지갑에 접근할 때 알려 주기(&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:348
@@ -273,7 +273,7 @@ msgstr "지갑"
 #: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
-msgstr "프로그램"
+msgstr "앱"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:370

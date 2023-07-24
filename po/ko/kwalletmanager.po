@@ -75,13 +75,13 @@ msgstr ""
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr "다음 프로그램이 이 지갑에 연결되어 있습니다:"
+msgstr "다음 앱이 이 지갑에 연결되어 있습니다:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
 #, kde-format
 msgid "These applications are authorized to access this wallet:"
-msgstr "다음 프로그램이 이 지갑에 접근을 허가받았습니다:"
+msgstr "다음 앱이 이 지갑에 접근을 허가받았습니다:"
 
 #: disconnectappbutton.cpp:16
 #, kde-format
@@ -405,8 +405,8 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
-"지갑을 완전히 닫을 수 없습니다. 다른 프로그램에서 사용할 수도 있습니다. 강제"
-"로 닫으시겠습니까?"
+"지갑을 완전히 닫을 수 없습니다. 다른 앱에서 사용할 수도 있습니다. 강제로 닫으"
+"시겠습니까?"
 
 #: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
 #: walletcontrolwidget.cpp:128
@@ -685,7 +685,7 @@ msgstr "내용"
 #: walletcontrolwidget.ui:111
 #, kde-format
 msgid "Applications"
-msgstr "프로그램"
+msgstr "앱"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:142
