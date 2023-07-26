@@ -4,13 +4,13 @@
 # Copyright (C) 2003, 2004, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Mattias Newzella <newzella@linux.nu>, 2003, 2004.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2007, 2008, 2009, 2013, 2014, 2016, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2007, 2008, 2009, 2013, 2014, 2016, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-27 00:52+0000\n"
-"PO-Revision-Date: 2022-08-03 10:13+0200\n"
+"PO-Revision-Date: 2023-07-25 09:20+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -233,16 +233,15 @@ msgstr "Dölj ikonen i systembrickan när den sista plånboken stängs"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
-#, fuzzy, kde-format
-#| msgid "Secret Service DBus API"
+#, kde-format
 msgid "Secret Service"
-msgstr "Secret Service DBus-programmeringsgränssnitt"
+msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Använd plånboken som Secret Service-gränssnitt"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -252,6 +251,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Secret Service-gränssnittet låter program lagra lösenord och annan "
+"konfidentiell data. Inaktivera det för att låta plånbokstjänster från tredje "
+"part såsom eePassXC eller GNOME nyckelring hantera det istället."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
