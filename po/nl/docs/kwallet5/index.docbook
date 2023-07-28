@@ -201,7 +201,7 @@
 >&kwallet5; zal nu GPG gebruiken bij het opslaan in portefeuilles en wanneer u ze opent. De dialoog voor de wachtwoordzin toont er slechts één. Zelfs als de portefeuille is gesloten na initieel openen, zal een volgende opening stil plaatsvinden gedurende dezelfde sessie. </para>
 
 <para
->Dezelfde sessie kan tegelijk beide bestandsformaten behandelen. &kwallet5; zal transparent het bestandsformaat detecteren en de juiste backend laden om het te behandelen.</para>
+>Dezelfde sessie kan tegelijk beide bestandsformaten behandelen. &kwallet5; zal transparant het bestandsformaat detecteren en de juiste backend laden om het te behandelen.</para>
 
 <para
 >Om uw gevoelige gegevens te gebruiken vanuit uw klassieke portefeuille met de nieuwe backend volgt u deze stappen:</para>
