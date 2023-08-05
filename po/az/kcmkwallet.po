@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-27 00:52+0000\n"
+"POT-Creation-Date: 2023-08-05 00:49+0000\n"
 "PO-Revision-Date: 2022-11-11 12:15+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,8 +27,8 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
-#: konfigurator.cpp:322 konfigurator.cpp:324
+#: konfigurator.cpp:51 konfigurator.cpp:323 konfigurator.cpp:325
+#: konfigurator.cpp:329 konfigurator.cpp:331
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE Cüzdana Nəzarət Modulu"
@@ -43,32 +43,32 @@ msgstr "(c) 2003 George Staikos"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: konfigurator.cpp:134 konfigurator.cpp:139
+#: konfigurator.cpp:141 konfigurator.cpp:146
 #, kde-format
 msgid "New Wallet"
 msgstr "Yeni cüzdan"
 
-#: konfigurator.cpp:135 konfigurator.cpp:140
+#: konfigurator.cpp:142 konfigurator.cpp:147
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Yeni cüzdan üçün ad seçin:"
 
-#: konfigurator.cpp:273 konfigurator.cpp:363
+#: konfigurator.cpp:280 konfigurator.cpp:370
 #, kde-format
 msgid "Always Allow"
 msgstr "Həmişə icazə vermək"
 
-#: konfigurator.cpp:276 konfigurator.cpp:283 konfigurator.cpp:376
+#: konfigurator.cpp:283 konfigurator.cpp:290 konfigurator.cpp:383
 #, kde-format
 msgid "Always Deny"
 msgstr "Həmişə qadağan etmək"
 
-#: konfigurator.cpp:316 konfigurator.cpp:322
+#: konfigurator.cpp:323 konfigurator.cpp:329
 #, kde-format
 msgid "Permission denied."
 msgstr "İcazə verilmədi."
 
-#: konfigurator.cpp:318 konfigurator.cpp:324
+#: konfigurator.cpp:325 konfigurator.cpp:331
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -77,14 +77,14 @@ msgstr ""
 "Kimlik doğrulaması zamanı xəta:\n"
 "%1"
 
-#: konfigurator.cpp:427
+#: konfigurator.cpp:434
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr ""
 "Bu tənzimləmə modulu,həmişə KDE cüzdanı sistemini tənzimləməyə imkan verir."
 
-#: konfigurator.cpp:442 konfigurator.cpp:444
+#: konfigurator.cpp:449 konfigurator.cpp:451
 #, kde-format
 msgid "&Delete"
 msgstr "&silin"
