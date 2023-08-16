@@ -86,6 +86,10 @@ target_link_libraries(kwalletmanager5
     KF${KF_MAJOR_VERSION}::Codecs
 )
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(kwalletmanager5 KF6::StatusNotifierItem)
+endif()
+
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 add_subdirectory(icons)

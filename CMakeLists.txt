@@ -65,6 +65,10 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
     Crash
 )
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
+endif()
+
 ecm_set_disabled_deprecation_versions(QT 6.4
     KF 5.100
 )
