@@ -61,18 +61,7 @@ KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
 #if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     setNeedsAuthorization(true);
 #else
-    setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmkwallet5.save"));
-    // We need to make manually
-    m_authAction = KAuth::Action(QLatin1String("org.kde.kcontrol.kcmkwallet5.save"));
-    m_authAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmkwallet5"));
-
-#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
-    m_authAction.setParentWidget(widget());
-#else
-    widget()->window()->winId();
-    m_authAction.setParentWindow(widget()->window()->windowHandle());
-#endif
-
+  setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmkwallet5.save"));
 #endif
 #if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     auto vbox = new QVBoxLayout(this);
@@ -307,7 +296,11 @@ void KWalletConfig::save()
 #if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
     KAuth::Action action = authAction();
 #else
-    KAuth::Action action = m_authAction;
+    KAuth::Action action(QLatin1String("org.kde.kcontrol.kcmkwallet5.save"));
+    action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmkwallet5"));
+
+    widget()->window()->winId();
+    action.setParentWindow(widget()->window()->windowHandle());
 #endif
     if (!action.isValid()) {
         qDebug() << "There's no authAction, not saving settings";

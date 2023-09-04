@@ -54,9 +54,6 @@ private:
     QString newWallet();
     WalletConfigWidget *const _wcw;
     KSharedConfig::Ptr _cfg;
-#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 240, 0)
-    KAuth::Action m_authAction;
-#endif
 };
 
 #endif
