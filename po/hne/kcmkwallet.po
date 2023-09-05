@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:49+0000\n"
+"POT-Creation-Date: 2023-09-05 00:48+0000\n"
 "PO-Revision-Date: 2009-03-01 12:27+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -29,8 +29,8 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in,"
 
-#: konfigurator.cpp:51 konfigurator.cpp:323 konfigurator.cpp:325
-#: konfigurator.cpp:329 konfigurator.cpp:331
+#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
+#: konfigurator.cpp:322 konfigurator.cpp:324
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "केडीई वालेट नियंत्रन माड्यूल"
@@ -45,45 +45,45 @@ msgstr "(c) 2003 जार्ज स्टाइकास"
 msgid "George Staikos"
 msgstr "जार्ज स्टायकास"
 
-#: konfigurator.cpp:141 konfigurator.cpp:146
+#: konfigurator.cpp:130 konfigurator.cpp:135
 #, kde-format
 msgid "New Wallet"
 msgstr "नवा बटुआ"
 
-#: konfigurator.cpp:142 konfigurator.cpp:147
+#: konfigurator.cpp:131 konfigurator.cpp:136
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "किरपा करके, नवा बटुआ बर एक नाम चुनव:"
 
-#: konfigurator.cpp:280 konfigurator.cpp:370
+#: konfigurator.cpp:269 konfigurator.cpp:363
 #, kde-format
 msgid "Always Allow"
 msgstr "हमेसा स्वीकारव"
 
-#: konfigurator.cpp:283 konfigurator.cpp:290 konfigurator.cpp:383
+#: konfigurator.cpp:272 konfigurator.cpp:279 konfigurator.cpp:376
 #, kde-format
 msgid "Always Deny"
 msgstr "सर्वदा नकारें"
 
-#: konfigurator.cpp:323 konfigurator.cpp:329
+#: konfigurator.cpp:316 konfigurator.cpp:322
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:325 konfigurator.cpp:331
+#: konfigurator.cpp:318 konfigurator.cpp:324
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:434
+#: konfigurator.cpp:427
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
 msgstr "ये कान्फिगरेसन माड्यूल आप मन ल केडीई वालेट तंत्र ल कान्फिगर करन देथे ."
 
-#: konfigurator.cpp:449 konfigurator.cpp:451
+#: konfigurator.cpp:442 konfigurator.cpp:444
 #, kde-format
 msgid "&Delete"
 msgstr "मेटाव (&D)"

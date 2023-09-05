@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 00:49+0000\n"
+"POT-Creation-Date: 2023-09-05 00:48+0000\n"
 "PO-Revision-Date: 2022-11-08 13:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -32,8 +32,8 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "oneugene@ukr.net"
 
-#: konfigurator.cpp:51 konfigurator.cpp:323 konfigurator.cpp:325
-#: konfigurator.cpp:329 konfigurator.cpp:331
+#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
+#: konfigurator.cpp:322 konfigurator.cpp:324
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Модуль керування торбинками KDE"
@@ -48,32 +48,32 @@ msgstr "© George Staikos, 2003"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: konfigurator.cpp:141 konfigurator.cpp:146
+#: konfigurator.cpp:130 konfigurator.cpp:135
 #, kde-format
 msgid "New Wallet"
 msgstr "Нова торбинка"
 
-#: konfigurator.cpp:142 konfigurator.cpp:147
+#: konfigurator.cpp:131 konfigurator.cpp:136
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Виберіть, будь ласка, назву для торбинки:"
 
-#: konfigurator.cpp:280 konfigurator.cpp:370
+#: konfigurator.cpp:269 konfigurator.cpp:363
 #, kde-format
 msgid "Always Allow"
 msgstr "Завжди дозволяти"
 
-#: konfigurator.cpp:283 konfigurator.cpp:290 konfigurator.cpp:383
+#: konfigurator.cpp:272 konfigurator.cpp:279 konfigurator.cpp:376
 #, kde-format
 msgid "Always Deny"
 msgstr "Завжди відмовляти"
 
-#: konfigurator.cpp:323 konfigurator.cpp:329
+#: konfigurator.cpp:316 konfigurator.cpp:322
 #, kde-format
 msgid "Permission denied."
 msgstr "Доступ заборонено."
 
-#: konfigurator.cpp:325 konfigurator.cpp:331
+#: konfigurator.cpp:318 konfigurator.cpp:324
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -82,7 +82,7 @@ msgstr ""
 "Помилка під час виконання дії з розпізнавання:\n"
 "%1"
 
-#: konfigurator.cpp:434
+#: konfigurator.cpp:427
 #, kde-format
 msgid ""
 "This configuration module allows you to configure the KDE wallet system."
@@ -90,7 +90,7 @@ msgstr ""
 "За допомогою цього модуля ви можете налаштувати систему робити з торбинками "
 "у KDE."
 
-#: konfigurator.cpp:449 konfigurator.cpp:451
+#: konfigurator.cpp:442 konfigurator.cpp:444
 #, kde-format
 msgid "&Delete"
 msgstr "&Вилучити"
