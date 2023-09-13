@@ -70,7 +70,7 @@ if (QT_MAJOR_VERSION STREQUAL "6")
 endif()
 
 ecm_set_disabled_deprecation_versions(QT 6.5
-    KF 5.240
+    KF 5.100
 )
 
 add_subdirectory( doc )
