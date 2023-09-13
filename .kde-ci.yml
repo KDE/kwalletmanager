@@ -25,27 +25,5 @@ Dependencies:
     'frameworks/kcrash': '@latest-kf6'
     'frameworks/kstatusnotifieritem': '@latest-kf6'
 
-- 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
-  'require':
-    'frameworks/extra-cmake-modules': '@stable'
-    'frameworks/kcoreaddons': '@stable'
-    'frameworks/kconfig': '@stable'
-    'frameworks/ki18n': '@stable'
-    'frameworks/kio': '@stable'
-    'frameworks/kdbusaddons': '@stable' 
-    'frameworks/knotifications': '@stable'
-    'frameworks/kwidgetsaddons': '@stable'
-    'frameworks/kdoctools': '@stable'
-    'frameworks/karchive': '@stable'
-    'frameworks/kauth': '@stable'
-    'frameworks/kservice': '@stable'     
-    'frameworks/kwallet': '@stable'
-    'frameworks/kconfigwidgets': '@stable'
-    'frameworks/kxmlgui': '@stable'
-    'frameworks/kcmutils': '@stable'
-    'frameworks/ktextwidgets': '@stable'
-    'frameworks/kwindowsystem': '@stable'
-    'frameworks/kcrash': '@stable'
-
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD']
