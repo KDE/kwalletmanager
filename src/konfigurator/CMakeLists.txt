@@ -9,13 +9,13 @@ ki18n_wrap_ui(kcm_kwallet5 walletconfigwidget.ui )
 
 
 target_link_libraries(kcm_kwallet5
-    Qt${QT_MAJOR_VERSION}::Core
-    KF${KF_MAJOR_VERSION}::AuthCore
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::KCMUtils
-    KF${KF_MAJOR_VERSION}::Wallet
-    KF${KF_MAJOR_VERSION}::I18n
-    Qt${QT_MAJOR_VERSION}::DBus
+    Qt6::Core
+    KF6::AuthCore
+    KF6::CoreAddons
+    KF6::KCMUtils
+    KF6::Wallet
+    KF6::I18n
+    Qt6::DBus
 )
 
 install(TARGETS kcm_kwallet5  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
@@ -25,10 +25,10 @@ add_executable(kcm_kwallet_helper5)
 target_sources(kcm_kwallet_helper5 PRIVATE savehelper.cpp savehelper.h)
 
 target_link_libraries(kcm_kwallet_helper5
-    Qt${QT_MAJOR_VERSION}::Core
-    KF${KF_MAJOR_VERSION}::AuthCore
-    KF${KF_MAJOR_VERSION}::Wallet
-    KF${KF_MAJOR_VERSION}::CoreAddons
+    Qt6::Core
+    KF6::AuthCore
+    KF6::Wallet
+    KF6::CoreAddons
 )
 
 install(TARGETS kcm_kwallet_helper5 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})

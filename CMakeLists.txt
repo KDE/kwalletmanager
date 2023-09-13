@@ -7,8 +7,8 @@ set (RELEASE_SERVICE_VERSION_MICRO "70")
 set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
 project(kwalletmanager5 VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.92.0")
+set(QT_MIN_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -25,15 +25,7 @@ include(ECMSetupVersion)
 include(ECMQtDeclareLoggingCategory)
 include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.5.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
 
 ## Generate header with version number
 ecm_setup_version(${RELEASE_SERVICE_VERSION} VARIABLE_PREFIX KWALLETMANAGER
@@ -42,10 +34,10 @@ ecm_setup_version(${RELEASE_SERVICE_VERSION} VARIABLE_PREFIX KWALLETMANAGER
 
 option(ENABLE_KAUTH "Enable KAuth support (Disabled for Flatpak builds)" ON)
 if (ENABLE_KAUTH)
-    find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED Auth)
+    find_package(KF6 ${KF_MIN_VERSION} REQUIRED Auth)
 endif()
 
-find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     Archive
     Config
     ConfigWidgets
@@ -65,12 +57,10 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
     Crash
 )
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
-endif()
+find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 6.5
-    KF 5.100
+    KF 5.240.0
 )
 
 add_subdirectory( doc )

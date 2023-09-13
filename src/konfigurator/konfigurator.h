@@ -10,9 +10,7 @@
 #include <KCModule>
 #include <KSharedConfig>
 #include "ui_walletconfigwidget.h"
-#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 240, 0)
 #include <KAuth/Action>
-#endif
 
 class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
 {
@@ -27,19 +25,12 @@ class KWalletConfig : public KCModule
 {
     Q_OBJECT
 public:
-#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
-    explicit KWalletConfig(QWidget *parent = nullptr, const QVariantList & = QVariantList());
-#else
     explicit KWalletConfig(QObject *parent, const KPluginMetaData &data);
-#endif
     ~KWalletConfig() override;
 
     void load() override;
     void save() override;
     void defaults() override;
-#if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
-    QString quickHelp() const override;
-#endif
 
 public Q_SLOTS:
     void configChanged();

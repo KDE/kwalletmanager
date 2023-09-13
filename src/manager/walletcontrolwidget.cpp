@@ -101,37 +101,21 @@ void WalletControlWidget::onOpenClose()
     // TODO create some fancy animation here to make _walletEditor appear or dissapear in a fancy way
     if (_wallet) {
         if (hasUnsavedChanges()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             int choice = KMessageBox::warningTwoActions(this, i18n("Ignore unsaved changes?"), {}, KGuiItem(i18n("Ignore")), KStandardGuiItem::cancel());
-#else
-            int choice = KMessageBox::warningYesNo(this, i18n("Ignore unsaved changes?"));
-#endif
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             if (choice == KMessageBox::ButtonCode::SecondaryAction) {
-#else
-            if (choice == KMessageBox::No) {
-#endif
                 return;
             }
         }
         // Wallet is open, attempt close it
         int rc = KWallet::Wallet::closeWallet(_walletName, false);
         if (rc != 0) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             rc = KMessageBox::warningTwoActions(
                 this,
                 i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"),
                 QString(),
                 KGuiItem(i18n("Force Closure")),
                 KGuiItem(i18n("Do Not Force")));
-#else
-            rc = KMessageBox::warningYesNo(this, i18n("Unable to close wallet cleanly. It is probably in use by other applications. Do you wish to force it closed?"), QString(), KGuiItem(i18n("Force Closure")), KGuiItem(i18n("Do Not Force")));
-#endif
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             if (rc == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-            if (rc == KMessageBox::Yes) {
-#endif
                 rc = KWallet::Wallet::closeWallet(_walletName, true);
                 if (rc != 0) {
                     KMessageBox::error(this, i18n("Unable to force the wallet closed. Error code was %1.", rc));

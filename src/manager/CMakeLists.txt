@@ -48,7 +48,7 @@ ecm_qt_declare_logging_category(kwalletmanager5
 				CATEGORY_NAME org.kde.kwalletmanager DESCRIPTION "kwalletmanager" EXPORT KWALLETMANAGER)
 
 qt_add_dbus_interface(kwalletmanager_SRCS
-    ${KWALLET_DBUS_INTERFACES_DIR}/kf${QT_MAJOR_VERSION}_org.kde.KWallet.xml kwallet_interface
+    ${KWALLET_DBUS_INTERFACES_DIR}/kf6_org.kde.KWallet.xml kwallet_interface
 )
 target_sources(kwalletmanager5 PRIVATE ${kwalletmanager_SRCS})
 
@@ -66,24 +66,24 @@ ecm_add_app_icon(kwalletmanager5 ICONS ${ICONS_SRCS})
 
 
 target_link_libraries(kwalletmanager5
-    Qt${QT_MAJOR_VERSION}::Core
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::XmlGui #KActionCollection
-    KF${KF_MAJOR_VERSION}::ConfigWidgets
-    KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::Wallet
-    KF${KF_MAJOR_VERSION}::DBusAddons
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::Service
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::KIOGui
-    KF${KF_MAJOR_VERSION}::JobWidgets
-    KF${KF_MAJOR_VERSION}::Archive
-    KF${KF_MAJOR_VERSION}::Notifications
-    KF${KF_MAJOR_VERSION}::WindowSystem
-    KF${KF_MAJOR_VERSION}::Crash
-    KF${KF_MAJOR_VERSION}::Codecs
+    Qt6::Core
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::XmlGui #KActionCollection
+    KF6::ConfigWidgets
+    KF6::ItemViews
+    KF6::Wallet
+    KF6::DBusAddons
+    KF6::ConfigCore
+    KF6::Service
+    KF6::KIOCore
+    KF6::KIOGui
+    KF6::JobWidgets
+    KF6::Archive
+    KF6::Notifications
+    KF6::WindowSystem
+    KF6::Crash
+    KF6::Codecs
 )
 
 if (QT_MAJOR_VERSION STREQUAL "6")

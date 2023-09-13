@@ -224,23 +224,15 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream &ds)
     QString folder;
     ds >> folder;
     if (_wallet->hasFolder(folder)) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         int rc = KMessageBox::warningTwoActionsCancel(nullptr,
                                                       i18n("A folder by the name '%1' already exists.  What would you like to do?", folder),
                                                       QString(),
                                                       KStandardGuiItem::cont(),
                                                       KGuiItem(i18n("Replace")));
-#else
-        int rc = KMessageBox::warningYesNoCancel(nullptr, i18n("A folder by the name '%1' already exists.  What would you like to do?", folder), QString(), KStandardGuiItem::cont(), KGuiItem(i18n("Replace")));
-#endif
         if (rc == KMessageBox::Cancel) {
             return false;
         }
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (rc == KMessageBox::ButtonCode::SecondaryAction) {
-#else
-        if (rc == KMessageBox::No) {
-#endif
             _wallet->removeFolder(folder);
             _wallet->createFolder(folder);
         }
@@ -580,11 +572,7 @@ void KWalletEntryList::mouseMoveEvent(QMouseEvent *e)
 
 void KWalletEntryList::dropEvent(QDropEvent *e)
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QTreeWidgetItem *i = itemAt(e->pos());
-#else
     QTreeWidgetItem *i = itemAt(e->position().toPoint());
-#endif
     itemDropped(e, i);
 }
 
@@ -595,11 +583,7 @@ void KWalletEntryList::dragEnterEvent(QDragEnterEvent *e)
 
 void KWalletEntryList::dragMoveEvent(QDragMoveEvent *e)
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QTreeWidgetItem *i = itemAt(e->pos());
-#else
     QTreeWidgetItem *i = itemAt(e->position().toPoint());
-#endif
     e->ignore();
     if (i) {
         if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-entry")) ||
