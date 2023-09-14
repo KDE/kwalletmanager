@@ -55,9 +55,8 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     WindowSystem
     XmlGui
     Crash
+    StatusNotifierItem
 )
-
-find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 6.5
     KF 5.240.0

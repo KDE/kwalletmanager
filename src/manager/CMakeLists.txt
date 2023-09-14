@@ -84,11 +84,8 @@ target_link_libraries(kwalletmanager5
     KF6::WindowSystem
     KF6::Crash
     KF6::Codecs
+    KF6::StatusNotifierItem
 )
-
-if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(kwalletmanager5 KF6::StatusNotifierItem)
-endif()
 
 install(TARGETS kwalletmanager5  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
@@ -96,6 +93,3 @@ add_subdirectory(icons)
 
 ########### install files ###############
 
-if (QT_MAJOR_VERSION STREQUAL "5")
-    install(FILES kwalletmanager5_show.desktop  DESTINATION ${KDE_INSTALL_KSERVICESDIR})
-endif()
