@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:53+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-11-20 22:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -38,32 +38,32 @@ msgstr "teemu.rytilahti@kde-fi.org,ilpo@iki.fi,translator@legisign.org"
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Tietue ”%1” on jo olemassa.  Haluatko jatkaa?"
 
-#: allyourbase.cpp:229 allyourbase.cpp:234
+#: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Kansio ”%1” on jo olemassa.  Mitä haluaisit tehdä?"
 
-#: allyourbase.cpp:232 allyourbase.cpp:234
+#: allyourbase.cpp:231
 #, kde-format
 msgid "Replace"
 msgstr "Korvaa"
 
-#: allyourbase.cpp:349
+#: allyourbase.cpp:341
 #, kde-format
 msgid "Folders"
 msgstr "Kansiot"
 
-#: allyourbase.cpp:383
+#: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Sattui odottamaton virhe yritettäessä pudottaa tietuetta"
 
-#: allyourbase.cpp:459
+#: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Sattui odottamaton virhe yritettäessä pudottaa tietuetta"
 
-#: allyourbase.cpp:483
+#: allyourbase.cpp:475
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -219,30 +219,28 @@ msgstr "Uusi kansio"
 msgid "Please choose a name for the new folder:"
 msgstr "Valitse uuden kansion nimi:"
 
-#: kwalleteditor.cpp:426 kwalleteditor.cpp:431
+#: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Tämän niminen kansio on jo olemassa. Yritä uudelleen."
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:431 kwalleteditor.cpp:806
-#: kwalleteditor.cpp:809
+#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
 msgid "Try Again"
 msgstr "Yritä uudelleen"
 
-#: kwalleteditor.cpp:429 kwalleteditor.cpp:431 kwalleteditor.cpp:807
-#: kwalleteditor.cpp:809 kwalletmanager.cpp:379 kwalletmanager.cpp:381
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
 #, kde-format
 msgid "Do Not Try"
 msgstr "Älä yritä"
 
-#: kwalleteditor.cpp:475
+#: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Virhe tallennettaessa tietuetta. Virhekoodi: %1"
 
 # Vapaa suomennos selkeyden vuoksi.
-#: kwalleteditor.cpp:502
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -251,73 +249,73 @@ msgstr ""
 "Nykyisessä tietueessa on tallentamattomia muutoksia.\n"
 "Haluatko tallentaa ne?"
 
-#: kwalleteditor.cpp:556 kwalleteditor.cpp:896
+#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
 #, kde-format
 msgid "Password: %1"
 msgstr "Salasana: %1"
 
-#: kwalleteditor.cpp:573 kwalleteditor.cpp:898
+#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Nimi-arvo-kartta: %1"
 
-#: kwalleteditor.cpp:583 kwalleteditor.cpp:900
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binaaridata: %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:778
 #, kde-format
 msgid "New Entry"
 msgstr "Uusi tietue"
 
-#: kwalleteditor.cpp:792
+#: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Valitse nimi uudelle tietueelle:"
 
-#: kwalleteditor.cpp:804 kwalleteditor.cpp:809
+#: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Tämän niminen tietue on jo olemassa. Yritä uudelleen."
 
-#: kwalleteditor.cpp:831 kwalleteditor.cpp:840
+#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Odottamaton virhe tapahtui yritettäessä lisätä uutta tietuetta"
 
-#: kwalleteditor.cpp:892
+#: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Tapahtui odottamaton virhe yritettäessä muuttaa tietueen nimeä"
 
-#: kwalleteditor.cpp:912
+#: kwalleteditor.cpp:891
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Haluatko varmasti poistaa tietueen ”%1”?"
 
-#: kwalleteditor.cpp:916
+#: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Odottamaton virhe tapahtui yritettäessä poistaa tietuetta"
 
-#: kwalleteditor.cpp:944
+#: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Ei voitu avata pyydettyä lompakkoa."
 
-#: kwalleteditor.cpp:980
+#: kwalleteditor.cpp:959
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Väliaikaistiedostoa ei saatu luotua kohteen lataamiseksi: ”<b>%1</b>”"
 
-#: kwalleteditor.cpp:987
+#: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Lompakkoon ”<b>%1</b>” ei päästy."
 
-#: kwalleteditor.cpp:1018 kwalleteditor.cpp:1048 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1164
+#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
+#: kwalleteditor.cpp:1143
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -325,27 +323,27 @@ msgid ""
 msgstr ""
 "Kansio ”<b>%1</b>” sisältää jo lompakon ”<b>%2</b>”. Haluatko korvata sen?"
 
-#: kwalleteditor.cpp:1122
+#: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Ei voitu käsitellä XML-tiedostoa ”<b>%1</b>”."
 
-#: kwalleteditor.cpp:1128
+#: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Ei voitu lukea XML-tiedostoa ”<b>%1</b>” syötteeksi."
 
-#: kwalleteditor.cpp:1134
+#: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Virhe: XML-tiedosto ei sisällä lompakkoa."
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1264
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Ei voitu tallentaa kohteeseen ”<b>%1</b>”."
 
-#: kwalletmanager.cpp:73
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -354,54 +352,53 @@ msgstr ""
 "KDE:n lompakkojärjestelmä ei ole käytössä. Haluatko ottaa sen käyttöön? Jos "
 "et, KWalletManager sulkeutuu, koska se ei voi toimia lukematta lompakoita."
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
-#: kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:282
 #, kde-format
 msgid "Wallet"
 msgstr "Lompakko"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
 #, kde-format
 msgid "No wallets open."
 msgstr "Yhtään lompakkoa ei ole auki."
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
 #, kde-format
 msgid "A wallet is open."
 msgstr "Yksi lompakko on auki."
 
-#: kwalletmanager.cpp:146 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Uusi lompakko…"
 
-#: kwalletmanager.cpp:151
+#: kwalletmanager.cpp:139
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Poista lompakko…"
 
-#: kwalletmanager.cpp:156
+#: kwalletmanager.cpp:144
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Vie salattuna"
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Tuo salatut tiedot"
 
-#: kwalletmanager.cpp:166
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "&Lompakon asetukset…"
 
-#: kwalletmanager.cpp:174
+#: kwalletmanager.cpp:162
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Sulje k&aikki lompakot"
 
-#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -410,105 +407,102 @@ msgstr ""
 "Lompakkoa ei voitu sulkea puhtaasti. Tämä voi johtua siitä, että jokin "
 "ohjelma käyttää lompakkoa. Haluatko pakottaa lompakon sulkeutumaan?"
 
-#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "Pakota sulkeutumaan"
 
-#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "Älä pakota"
 
-#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ei voitu pakottaa lompakkoa sulkeutumaan. Virhekoodi oli %1."
 
-#: kwalletmanager.cpp:294
+#: kwalletmanager.cpp:274
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Virhe avattaessa lompakkoa %1."
 
-#: kwalletmanager.cpp:336
+#: kwalletmanager.cpp:316
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Anna uudelle lompakolle nimi:"
 
-#: kwalletmanager.cpp:347
+#: kwalletmanager.cpp:324
 #, kde-format
 msgid "New Wallet"
 msgstr "Uusi lompakko"
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Tyhjää nimeä ei tueta. Valitse uusi."
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Create new wallet"
 msgstr "Luo uusi lompakko"
 
-#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Saman niminen lompakko on jo olemassa. Yritä uudestaan."
 
-#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:351
 #, kde-format
 msgid "Try New"
 msgstr "Yritä nyt"
 
-#: kwalletmanager.cpp:411
+#: kwalletmanager.cpp:377
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Haluatko varmasti poistaa lompakon ”%1”?"
 
-#: kwalletmanager.cpp:417
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Ei voitu poistaa lompakkoa. Virhekoodi oli %1."
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:431
 #, kde-format
 msgid "File name"
 msgstr "Tiedostonimi"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:438
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Tiedoston avaaminen kirjoittamista varten epäonnistui"
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:449
 #, kde-format
 msgid "Select file"
 msgstr "Valitse tiedosto"
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:459
 #, kde-format
 msgid "Failed to open file"
 msgstr "Tiedoston avaaminen epäonnistui"
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Lompakko nimeltä %1 on jo olemassa. Toiminto keskeytetty"
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:479
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Tiedostojen kopiointi epäonnistui"
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
-#: walletcontrolwidget.cpp:107
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Hylätäänkö tallentamattomat muutokset?"
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr "Sivuuta"
@@ -568,72 +562,72 @@ msgstr "&Uusi tietue"
 
 # pmap: =/gen=KDE:n lompakonhallinnan/
 # pmap: =/elat=KDE:n lompakonhallinnasta/
-#: main.cpp:31
+#: main.cpp:27
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Lompakonhallinta"
 
-#: main.cpp:33
+#: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE:n lompakonhallinta"
 
-#: main.cpp:35
+#: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Tekijänoikeudet © 2013–17 KWallet Managerin tekijät"
 
-#: main.cpp:39
+#: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:40
+#: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
 msgstr "Ylläpitäjä, käyttöliittymän uudelleenjärjestely"
 
-#: main.cpp:42
+#: main.cpp:38
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:43
+#: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Alkuperäinen tekijä ja entinen ylläpitäjä"
 
-#: main.cpp:45
+#: main.cpp:41
 #, kde-format
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:46
+#: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Kehittäjä ja entinen ylläpitäjä"
 
-#: main.cpp:48
+#: main.cpp:44
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:49
+#: main.cpp:45
 #, kde-format
 msgid "Developer"
 msgstr "Kehittäjä"
 
-#: main.cpp:57
+#: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
 msgstr "Näytä ikkuna käynnistyksessä"
 
-#: main.cpp:58
+#: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Vain kwalletd:n käytettäväksi tarkoitettu"
 
-#: main.cpp:59
+#: main.cpp:55
 #, kde-format
 msgid "A wallet name"
 msgstr "Lompakon nimi"

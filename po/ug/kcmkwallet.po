@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-05 00:48+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -27,61 +27,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
-#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
-#: konfigurator.cpp:322 konfigurator.cpp:324
-#, kde-format
-msgid "KDE Wallet Control Module"
-msgstr ""
-
-#: konfigurator.cpp:55
-#, kde-format
-msgid "(c) 2003 George Staikos"
-msgstr ""
-
-#: konfigurator.cpp:56
-#, kde-format
-msgid "George Staikos"
-msgstr "George Staikos"
-
-#: konfigurator.cpp:130 konfigurator.cpp:135
+#: konfigurator.cpp:102
 #, kde-format
 msgid "New Wallet"
 msgstr "يېڭى ھەميان"
 
-#: konfigurator.cpp:131 konfigurator.cpp:136
+#: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "يېڭى ھەميانغا  ئات تاللاڭ:"
 
-#: konfigurator.cpp:269 konfigurator.cpp:363
+#: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
 msgid "Always Allow"
 msgstr "ئىزچىل يول قوي"
 
-#: konfigurator.cpp:272 konfigurator.cpp:279 konfigurator.cpp:376
+#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
 #, kde-format
 msgid "Always Deny"
 msgstr ""
 
-#: konfigurator.cpp:316 konfigurator.cpp:322
+#: konfigurator.cpp:257
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:318 konfigurator.cpp:324
+#: konfigurator.cpp:257 konfigurator.cpp:259
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr ""
+
+#: konfigurator.cpp:259
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:427
-#, kde-format
-msgid ""
-"This configuration module allows you to configure the KDE wallet system."
-msgstr ""
-
-#: konfigurator.cpp:442 konfigurator.cpp:444
+#: konfigurator.cpp:357
 #, kde-format
 msgid "&Delete"
 msgstr "ئۆچۈر(&D)"
@@ -271,6 +254,9 @@ msgstr "تۈزۈم"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr ""
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
 
 #~ msgid "kcmkwallet"
 #~ msgstr "kcmkwallet"

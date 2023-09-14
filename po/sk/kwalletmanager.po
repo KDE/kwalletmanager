@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:53+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2017-07-31 21:29+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -33,32 +33,32 @@ msgstr "visnovsky@kde.org,jose1711@gmail.com,misurel@gmail.com"
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Položka s názvom '%1' už existuje. Chcete pokračovať?"
 
-#: allyourbase.cpp:229 allyourbase.cpp:234
+#: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Priečinok s názvom '%1' už existuje. Čo chcete urobiť?"
 
-#: allyourbase.cpp:232 allyourbase.cpp:234
+#: allyourbase.cpp:231
 #, kde-format
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: allyourbase.cpp:349
+#: allyourbase.cpp:341
 #, kde-format
 msgid "Folders"
 msgstr "Priečinky"
 
-#: allyourbase.cpp:383
+#: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Pri pokuse o ťahanie položky nastala neočakávaná chyba"
 
-#: allyourbase.cpp:459
+#: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Pri pokuse o ťahanie položky nastala neočakávaná chyba"
 
-#: allyourbase.cpp:483
+#: allyourbase.cpp:475
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -213,29 +213,27 @@ msgstr "Nový priečinok"
 msgid "Please choose a name for the new folder:"
 msgstr "Prosím, vyberte názov pre nový priečinok:"
 
-#: kwalleteditor.cpp:426 kwalleteditor.cpp:431
+#: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Ľutujem, ale tento názov priečinku sa už používa. Skúsiť znovu?"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:431 kwalleteditor.cpp:806
-#: kwalleteditor.cpp:809
+#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
 msgid "Try Again"
 msgstr "Skúsiť znovu"
 
-#: kwalleteditor.cpp:429 kwalleteditor.cpp:431 kwalleteditor.cpp:807
-#: kwalleteditor.cpp:809 kwalletmanager.cpp:379 kwalletmanager.cpp:381
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
 #, kde-format
 msgid "Do Not Try"
 msgstr "Neskúšať"
 
-#: kwalleteditor.cpp:475
+#: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Chyba pri ukladaní položky. Kód chyby: %1"
 
-#: kwalleteditor.cpp:502
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -244,73 +242,73 @@ msgstr ""
 "Obsah aktuálnej položky bol zmenený.\n"
 "Chcete uložiť zmeny?"
 
-#: kwalleteditor.cpp:556 kwalleteditor.cpp:896
+#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
 #, kde-format
 msgid "Password: %1"
 msgstr "Heslo: %1"
 
-#: kwalleteditor.cpp:573 kwalleteditor.cpp:898
+#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Mapa pomenovaných hodnôt: %1"
 
-#: kwalleteditor.cpp:583 kwalleteditor.cpp:900
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binárne dáta: %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:778
 #, kde-format
 msgid "New Entry"
 msgstr "Nová položka"
 
-#: kwalleteditor.cpp:792
+#: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Prosím, vyberte názov pre novú položku:"
 
-#: kwalleteditor.cpp:804 kwalleteditor.cpp:809
+#: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Ľutujem, ale táto položka už existuje. Skúsiť znovu?"
 
-#: kwalleteditor.cpp:831 kwalleteditor.cpp:840
+#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Pri pokuse o pridanie novej položky nastala neočakávaná chyba"
 
-#: kwalleteditor.cpp:892
+#: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Pri pokuse o premenovanie položky nastala neočakávaná chyba"
 
-#: kwalleteditor.cpp:912
+#: kwalleteditor.cpp:891
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Naozaj chcete odstrániť položku '%1'?"
 
-#: kwalleteditor.cpp:916
+#: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Pri pokuse o odstránenie položky nastala neočakávaná chyba"
 
-#: kwalleteditor.cpp:944
+#: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Nepodarilo sa otvoriť požadovaný wallet."
 
-#: kwalleteditor.cpp:980
+#: kwalleteditor.cpp:959
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Nepodarilo sa vytvoriť dočasný súbor pre sťahovanie '<b>%1</b>'."
 
-#: kwalleteditor.cpp:987
+#: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Nepodarilo sa pristúpiť na wallet '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1018 kwalleteditor.cpp:1048 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1164
+#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
+#: kwalleteditor.cpp:1143
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -318,27 +316,27 @@ msgid ""
 msgstr ""
 "Priečinok '<b>%1</b>' už obsahuje položku '<b>%2</b>'. Chcete ju nahradiť?"
 
-#: kwalleteditor.cpp:1122
+#: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Nepodarilo sa otvoriť XML súbor '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1128
+#: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Chyba pri čítaní XML súboru '<b>%1</b>' pre vstup."
 
-#: kwalleteditor.cpp:1134
+#: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Chyba: XML súbor neobsahuje wallet."
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1264
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Nepodarilo sa uložiť na '<b>%1</b>'."
 
-#: kwalletmanager.cpp:73
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -347,54 +345,53 @@ msgstr ""
 "Systém KDE Wallet nie je povolený. Chcete ho povoliť? Ak nie, KWalletManager "
 "sa ukončí, lebo nedokáže pracovať bez čítania peňaženiek."
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
-#: kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:282
 #, kde-format
 msgid "Wallet"
 msgstr "Wallet"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
 #, kde-format
 msgid "No wallets open."
 msgstr "Neotvorené žiadne wallety."
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
 #, kde-format
 msgid "A wallet is open."
 msgstr "Wallet je otvorený."
 
-#: kwalletmanager.cpp:146 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Nový wallet..."
 
-#: kwalletmanager.cpp:151
+#: kwalletmanager.cpp:139
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "Odstrániť peňaženku..."
 
-#: kwalletmanager.cpp:156
+#: kwalletmanager.cpp:144
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Exportovať ako šifrované"
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Import encrypted"
 msgstr "Importovať šifrované"
 
-#: kwalletmanager.cpp:166
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Nastaviť &wallet..."
 
-#: kwalletmanager.cpp:174
+#: kwalletmanager.cpp:162
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Zavrieť &všetky"
 
-#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -403,105 +400,102 @@ msgstr ""
 "Nepodarilo sa správne zavrieť wallet. Pravdepodobne ho používajú iné "
 "aplikácie. Chcete zavretie vynútiť?"
 
-#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "Vynútiť zavretie"
 
-#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "Nevynucovať"
 
-#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Nepodarilo sa vynútiť zatvorenie walletu. Kód chyby bol %1."
 
-#: kwalletmanager.cpp:294
+#: kwalletmanager.cpp:274
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Chyba pri otváraní walletu %1."
 
-#: kwalletmanager.cpp:336
+#: kwalletmanager.cpp:316
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Prosím, vyberte názov pre nový wallet:"
 
-#: kwalletmanager.cpp:347
+#: kwalletmanager.cpp:324
 #, kde-format
 msgid "New Wallet"
 msgstr "Nový wallet"
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Prázdny názov nie je podporovaný. Prosím, vyberte nový."
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Create new wallet"
 msgstr "Vytvoriť novú peňaženku"
 
-#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Ľutujem, ale tento wallet už existuje. Skúsiť nový názov?"
 
-#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:351
 #, kde-format
 msgid "Try New"
 msgstr "Skúsiť nový"
 
-#: kwalletmanager.cpp:411
+#: kwalletmanager.cpp:377
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Naozaj chcete odstrániť wallet '%1'?"
 
-#: kwalletmanager.cpp:417
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Nepodarilo sa odstrániť wallet. Kód chyby bol %1."
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:431
 #, kde-format
 msgid "File name"
 msgstr "Názov súboru"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:438
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Zlyhalo otvorenie súboru na zápis"
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:449
 #, kde-format
 msgid "Select file"
 msgstr "Vyberte súbor"
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:459
 #, kde-format
 msgid "Failed to open file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Peňaženka s názvom %1 už existuje, operácia zrušená."
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:479
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Zlyhalo kopírovanie súborov"
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
-#: walletcontrolwidget.cpp:107
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorovať neuložené zmeny?"
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -559,72 +553,72 @@ msgstr "Odstrániť položku"
 msgid "&New Entry"
 msgstr "&Nová položka"
 
-#: main.cpp:31
+#: main.cpp:27
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Správca Wallet"
 
-#: main.cpp:33
+#: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "Nástroj pre správu KDE Wallet"
 
-#: main.cpp:35
+#: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright ©2013–2017, Autori KWallet Manager"
 
-#: main.cpp:39
+#: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:40
+#: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
 msgstr "Vývojár, používateľské rozhranie a refactoring"
 
-#: main.cpp:42
+#: main.cpp:38
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:43
+#: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Pôvodný autor a predošlý správca"
 
-#: main.cpp:45
+#: main.cpp:41
 #, kde-format
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:46
+#: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Vývojár a bývalý správca"
 
-#: main.cpp:48
+#: main.cpp:44
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:49
+#: main.cpp:45
 #, kde-format
 msgid "Developer"
 msgstr "Vývojár"
 
-#: main.cpp:57
+#: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
 msgstr "Zobraziť okno pri štarte"
 
-#: main.cpp:58
+#: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Iba pre použitie kwalletd"
 
-#: main.cpp:59
+#: main.cpp:55
 #, kde-format
 msgid "A wallet name"
 msgstr "Názov walletu"

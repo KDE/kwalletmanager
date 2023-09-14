@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-05 00:48+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2023-05-24 01:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -30,48 +30,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "turkishprogram@xposta.com, emir_sari@icloud.com"
 
-#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
-#: konfigurator.cpp:322 konfigurator.cpp:324
-#, kde-format
-msgid "KDE Wallet Control Module"
-msgstr "KDE Cüzdan Denetim Modülü"
-
-#: konfigurator.cpp:55
-#, kde-format
-msgid "(c) 2003 George Staikos"
-msgstr "(c) 2003 George Staikos"
-
-#: konfigurator.cpp:56
-#, kde-format
-msgid "George Staikos"
-msgstr "George Staikos"
-
-#: konfigurator.cpp:130 konfigurator.cpp:135
+#: konfigurator.cpp:102
 #, kde-format
 msgid "New Wallet"
 msgstr "Yeni Cüzdan"
 
-#: konfigurator.cpp:131 konfigurator.cpp:136
+#: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Yeni cüzdan için lütfen bir ad seçin:"
 
-#: konfigurator.cpp:269 konfigurator.cpp:363
+#: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
 msgid "Always Allow"
 msgstr "Her Zaman Kabul Et"
 
-#: konfigurator.cpp:272 konfigurator.cpp:279 konfigurator.cpp:376
+#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
 #, kde-format
 msgid "Always Deny"
 msgstr "Her Zaman Reddet"
 
-#: konfigurator.cpp:316 konfigurator.cpp:322
+#: konfigurator.cpp:257
 #, kde-format
 msgid "Permission denied."
 msgstr "İzin reddedildi."
 
-#: konfigurator.cpp:318 konfigurator.cpp:324
+#: konfigurator.cpp:257 konfigurator.cpp:259
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "KDE Cüzdan Denetim Modülü"
+
+#: konfigurator.cpp:259
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -80,13 +69,7 @@ msgstr ""
 "İşlemin kimliğini doğrularken hata oluştu:\n"
 "%1"
 
-#: konfigurator.cpp:427
-#, kde-format
-msgid ""
-"This configuration module allows you to configure the KDE wallet system."
-msgstr "Ayar modülü KDE cüzdan sistemini ayarlamanıza izin verir."
-
-#: konfigurator.cpp:442 konfigurator.cpp:444
+#: konfigurator.cpp:357
 #, kde-format
 msgid "&Delete"
 msgstr "&Sil"
@@ -292,6 +275,16 @@ msgstr "Politika"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Cüzdan Yöneticisini Ça&lıştır"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Ayar modülü KDE cüzdan sistemini ayarlamanıza izin verir."
 
 #~ msgid "Enable Secret Service DBus API"
 #~ msgstr "Gizli Hizmet DBus API'yi etkinleştir"

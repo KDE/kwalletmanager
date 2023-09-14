@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-05 00:48+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2009-06-05 09:32+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -30,61 +30,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
 
-#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
-#: konfigurator.cpp:322 konfigurator.cpp:324
-#, kde-format
-msgid "KDE Wallet Control Module"
-msgstr "ម៉ូឌុល​ត្រួតពិនិត្យ​កាបូ​ប​របស់ KDE"
-
-#: konfigurator.cpp:55
-#, kde-format
-msgid "(c) 2003 George Staikos"
-msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៣ ដោយ George Staikos"
-
-#: konfigurator.cpp:56
-#, kde-format
-msgid "George Staikos"
-msgstr "George Staikos"
-
-#: konfigurator.cpp:130 konfigurator.cpp:135
+#: konfigurator.cpp:102
 #, kde-format
 msgid "New Wallet"
 msgstr "កាបូប​ថ្មី"
 
-#: konfigurator.cpp:131 konfigurator.cpp:136
+#: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "សូម​ជ្រើស​ឈ្មោះ​មួយ សម្រាប់​កាបូប​ថ្មី ៖"
 
-#: konfigurator.cpp:269 konfigurator.cpp:363
+#: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
 msgid "Always Allow"
 msgstr "អនុញ្ញាត​ជានិច្ច"
 
-#: konfigurator.cpp:272 konfigurator.cpp:279 konfigurator.cpp:376
+#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
 #, kde-format
 msgid "Always Deny"
 msgstr "បដិសេធ​ជានិច្ច"
 
-#: konfigurator.cpp:316 konfigurator.cpp:322
+#: konfigurator.cpp:257
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:318 konfigurator.cpp:324
+#: konfigurator.cpp:257 konfigurator.cpp:259
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "ម៉ូឌុល​ត្រួតពិនិត្យ​កាបូ​ប​របស់ KDE"
+
+#: konfigurator.cpp:259
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:427
-#, kde-format
-msgid ""
-"This configuration module allows you to configure the KDE wallet system."
-msgstr "ម៉ូឌុល​កំណត់​រចនា​សម្ព័ន្ធ​នេះអនុញ្ញាត​ឲ្យ​អ្នក​កំណត់​រចនា​សម្ព័ន្ធ​ប្រព័ន្ធ​កាបូប​របស់ KDE ។"
-
-#: konfigurator.cpp:442 konfigurator.cpp:444
+#: konfigurator.cpp:357
 #, kde-format
 msgid "&Delete"
 msgstr "លុប"
@@ -290,6 +273,16 @@ msgstr "គោលការណ៍"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "បើក​ដំណើរការ​កម្មវិធី​គ្រប់គ្រង​កាបូប"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៣ ដោយ George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "ម៉ូឌុល​កំណត់​រចនា​សម្ព័ន្ធ​នេះអនុញ្ញាត​ឲ្យ​អ្នក​កំណត់​រចនា​សម្ព័ន្ធ​ប្រព័ន្ធ​កាបូប​របស់ KDE ។"
 
 #~ msgid "kcmkwallet"
 #~ msgstr "kcmkwallet"

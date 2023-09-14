@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:53+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2019-11-11 00:05+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -34,32 +34,32 @@ msgstr "qiilaq69@gmail.com"
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Kirje '%1' on juba olemas. Kas jätkata?"
 
-#: allyourbase.cpp:229 allyourbase.cpp:234
+#: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Sahtel '%1' on juba olemas. Mida siis nüüd ette võtta?"
 
-#: allyourbase.cpp:232 allyourbase.cpp:234
+#: allyourbase.cpp:231
 #, kde-format
 msgid "Replace"
 msgstr "Asenda"
 
-#: allyourbase.cpp:349
+#: allyourbase.cpp:341
 #, kde-format
 msgid "Folders"
 msgstr "Sahtlid"
 
-#: allyourbase.cpp:383
+#: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Elemendi lohistamisel tekkis ootamatu viga"
 
-#: allyourbase.cpp:459
+#: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Kirje lohistamisel tekkis ootamatu viga"
 
-#: allyourbase.cpp:483
+#: allyourbase.cpp:475
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -214,29 +214,27 @@ msgstr "Uus sahtel"
 msgid "Please choose a name for the new folder:"
 msgstr "Palun anna uuele sahtlile nimi:"
 
-#: kwalleteditor.cpp:426 kwalleteditor.cpp:431
+#: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Vabandust, sellise nimega sahtel on juba olemas. Uus katse?"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:431 kwalleteditor.cpp:806
-#: kwalleteditor.cpp:809
+#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
 msgid "Try Again"
 msgstr "Proovi uuesti"
 
-#: kwalleteditor.cpp:429 kwalleteditor.cpp:431 kwalleteditor.cpp:807
-#: kwalleteditor.cpp:809 kwalletmanager.cpp:379 kwalletmanager.cpp:381
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ära proovi"
 
-#: kwalleteditor.cpp:475
+#: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Viga kirje salvestamisel. Veakood: %1"
 
-#: kwalleteditor.cpp:502
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -245,73 +243,73 @@ msgstr ""
 "Aktiivse elemendi sisu on muudetud.\n"
 "Kas salvestada muudatused?"
 
-#: kwalleteditor.cpp:556 kwalleteditor.cpp:896
+#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
 #, kde-format
 msgid "Password: %1"
 msgstr "Parool: %1"
 
-#: kwalleteditor.cpp:573 kwalleteditor.cpp:898
+#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Nime-väärtuse tabel: %1"
 
-#: kwalleteditor.cpp:583 kwalleteditor.cpp:900
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binaarandmed: %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:778
 #, kde-format
 msgid "New Entry"
 msgstr "Uus kirje"
 
-#: kwalleteditor.cpp:792
+#: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Palun anna uuele kirjele nimi:"
 
-#: kwalleteditor.cpp:804 kwalleteditor.cpp:809
+#: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Vabandust, sellise nimega kirje on juba olemas. Uus katse?"
 
-#: kwalleteditor.cpp:831 kwalleteditor.cpp:840
+#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Uue kirje lisamisel tekkis ootamatu viga"
 
-#: kwalleteditor.cpp:892
+#: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Kirje nime muutmisel tekkis ootamatu viga"
 
-#: kwalleteditor.cpp:912
+#: kwalleteditor.cpp:891
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Kas tõesti kõrvaldada element '%1'?"
 
-#: kwalleteditor.cpp:916
+#: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Kirje kustutamisel tekkis ootamatu viga"
 
-#: kwalleteditor.cpp:944
+#: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Soovitud turvalaeka avamine nurjus."
 
-#: kwalleteditor.cpp:980
+#: kwalleteditor.cpp:959
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Ajutise faili loomine \"<b>%1</b>\" allalaadimiseks nurjus."
 
-#: kwalleteditor.cpp:987
+#: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Ligipääs laekale \"<b>%1</b>\" nurjus."
 
-#: kwalleteditor.cpp:1018 kwalleteditor.cpp:1048 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1164
+#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
+#: kwalleteditor.cpp:1143
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -320,27 +318,27 @@ msgstr ""
 "Sahtel '<b>%1</b>' sisaldab juba kirjet '<b>%2</b>'. Kas soovid selle "
 "asendada?"
 
-#: kwalleteditor.cpp:1122
+#: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Ligipääs XML-failile '<b>%1</b>' nurjus."
 
-#: kwalleteditor.cpp:1128
+#: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Viga XML-faili '<b>%1</b>' lugemisel sisendina."
 
-#: kwalleteditor.cpp:1134
+#: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Viga: XML-fail ei sisalda turvalaegast."
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1264
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Salvestamine asukohta \"<b>%1</b>\" nurjus."
 
-#: kwalletmanager.cpp:73
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -350,54 +348,53 @@ msgstr ""
 "Kui mitte, siis turvalaeka haldur lõpetab töö, sest ilma turvalaekaid "
 "lugemata see töötada ei saa."
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
-#: kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:282
 #, kde-format
 msgid "Wallet"
 msgstr "Turvalaegas"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
 #, kde-format
 msgid "No wallets open."
 msgstr "Ükski laegas pole avatud."
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
 #, kde-format
 msgid "A wallet is open."
 msgstr "Laegas on avatud."
 
-#: kwalletmanager.cpp:146 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Uus turvalaegas..."
 
-#: kwalletmanager.cpp:151
+#: kwalletmanager.cpp:139
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "K&ustuta laegas..."
 
-#: kwalletmanager.cpp:156
+#: kwalletmanager.cpp:144
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Ekspordi krüptitult"
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Impordi krüptitult"
 
-#: kwalletmanager.cpp:166
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "&Seadista turvalaegast...."
 
-#: kwalletmanager.cpp:174
+#: kwalletmanager.cpp:162
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Sulge &kõik laekad"
 
-#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -406,106 +403,103 @@ msgstr ""
 "Turvalaeka korralik sulgemine nurjus. Tõenäoliselt kasutab seda veel mõni "
 "rakendus. Kas soovid laeka jõuga sulgeda?"
 
-#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "Sulge jõuga"
 
-#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ära kasuta jõudu"
 
-#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Turvalaeka jõuga sulgemine nurjus. Veakood oli %1."
 
-#: kwalletmanager.cpp:294
+#: kwalletmanager.cpp:274
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Viga turvalaeka %1 avamisel."
 
-#: kwalletmanager.cpp:336
+#: kwalletmanager.cpp:316
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Palun anna uuele turvalaekale nimi:"
 
-#: kwalletmanager.cpp:347
+#: kwalletmanager.cpp:324
 #, kde-format
 msgid "New Wallet"
 msgstr "Uus turvalaegas"
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Nimi ei tohi puududa. Palun vali nimi."
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Create new wallet"
 msgstr "Uue turvalaeka loomine"
 
-#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr ""
 "Vabandust, sellise nimega laegas on juba olemas. Kas proovid mõnda muud nime?"
 
-#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:351
 #, kde-format
 msgid "Try New"
 msgstr "Proovi uut nime"
 
-#: kwalletmanager.cpp:411
+#: kwalletmanager.cpp:377
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Kas ikka kindlasti kõrvaldada turvalaegas '%1'?"
 
-#: kwalletmanager.cpp:417
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Turvalaeka kõrvaldamine nurjus. Veakood oli %1."
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:431
 #, kde-format
 msgid "File name"
 msgstr "Failinimi"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:438
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Faili avamine kirjutamiseks nurjus"
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:449
 #, kde-format
 msgid "Select file"
 msgstr "Faili valimine"
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:459
 #, kde-format
 msgid "Failed to open file"
 msgstr "Faili avamine nurjus"
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Turvalaegas nimega %1 on juba olemas, toiming katkestatakse"
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:479
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Failide kopeerimine nurjus"
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
-#: walletcontrolwidget.cpp:107
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Kas eirata salvestama muudatusi?"
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -563,72 +557,72 @@ msgstr "Kustuta kirje"
 msgid "&New Entry"
 msgstr "&Uus kirje"
 
-#: main.cpp:31
+#: main.cpp:27
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Turvalaeka haldur"
 
-#: main.cpp:33
+#: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE turvalaeka haldur"
 
-#: main.cpp:35
+#: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Autoriõigus ©2013–2017, KWallet Manageri autorid"
 
-#: main.cpp:39
+#: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:40
+#: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
 msgstr "Hooldaja, kasutajaliidese ümbertöötamine"
 
-#: main.cpp:42
+#: main.cpp:38
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:43
+#: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Algne autor ja endine hooldaja"
 
-#: main.cpp:45
+#: main.cpp:41
 #, kde-format
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:46
+#: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Arendaja ja endine hooldaja"
 
-#: main.cpp:48
+#: main.cpp:44
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:49
+#: main.cpp:45
 #, kde-format
 msgid "Developer"
 msgstr "Arendaja"
 
-#: main.cpp:57
+#: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
 msgstr "Käivitamisel näidatakse akent"
 
-#: main.cpp:58
+#: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Ainult kwalletd jaoks"
 
-#: main.cpp:59
+#: main.cpp:55
 #, kde-format
 msgid "A wallet name"
 msgstr "Turvalaeka nimi"

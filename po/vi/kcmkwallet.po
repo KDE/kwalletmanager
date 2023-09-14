@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-05 00:48+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-11-14 14:59+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -27,48 +27,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "phu.nguyen@kdemail.net"
 
-#: konfigurator.cpp:51 konfigurator.cpp:316 konfigurator.cpp:318
-#: konfigurator.cpp:322 konfigurator.cpp:324
-#, kde-format
-msgid "KDE Wallet Control Module"
-msgstr "Khối điều khiển Ví KDE"
-
-#: konfigurator.cpp:55
-#, kde-format
-msgid "(c) 2003 George Staikos"
-msgstr "(c) 2003 George Staikos"
-
-#: konfigurator.cpp:56
-#, kde-format
-msgid "George Staikos"
-msgstr "George Staikos"
-
-#: konfigurator.cpp:130 konfigurator.cpp:135
+#: konfigurator.cpp:102
 #, kde-format
 msgid "New Wallet"
 msgstr "Ví mới"
 
-#: konfigurator.cpp:131 konfigurator.cpp:136
+#: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Vui lòng chọn tên cho ví mới:"
 
-#: konfigurator.cpp:269 konfigurator.cpp:363
+#: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
 msgid "Always Allow"
 msgstr "Luôn cho phép"
 
-#: konfigurator.cpp:272 konfigurator.cpp:279 konfigurator.cpp:376
+#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
 #, kde-format
 msgid "Always Deny"
 msgstr "Luôn từ chối"
 
-#: konfigurator.cpp:316 konfigurator.cpp:322
+#: konfigurator.cpp:257
 #, kde-format
 msgid "Permission denied."
 msgstr "Truy cập bị từ chối."
 
-#: konfigurator.cpp:318 konfigurator.cpp:324
+#: konfigurator.cpp:257 konfigurator.cpp:259
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "Khối điều khiển Ví KDE"
+
+#: konfigurator.cpp:259
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -77,13 +66,7 @@ msgstr ""
 "Lỗi khi xác thực hành động:\n"
 "%1"
 
-#: konfigurator.cpp:427
-#, kde-format
-msgid ""
-"This configuration module allows you to configure the KDE wallet system."
-msgstr "Khối cấu hình này cho phép bạn cấu hình hệ thống ví KDE."
-
-#: konfigurator.cpp:442 konfigurator.cpp:444
+#: konfigurator.cpp:357
 #, kde-format
 msgid "&Delete"
 msgstr "&Xoá"
@@ -287,6 +270,16 @@ msgstr "Chính sách"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Khởi chạy trình quản lí ví"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Khối cấu hình này cho phép bạn cấu hình hệ thống ví KDE."
 
 #~ msgid "Enable Secret Service DBus API"
 #~ msgstr "Bật API DBus dịch vụ Bí mật"

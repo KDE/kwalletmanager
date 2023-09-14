@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:13+0200\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2016-11-23 19:27+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -31,47 +31,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: konfigurator.cpp:57 konfigurator.cpp:282 konfigurator.cpp:284
-#, kde-format
-msgid "KDE Wallet Control Module"
-msgstr "KDE‑ov kontrolni modul novčanika"
-
-#: konfigurator.cpp:61
-#, kde-format
-msgid "(c) 2003 George Staikos"
-msgstr "© 2003, Džordž Stajkos"
-
-#: konfigurator.cpp:62
-#, kde-format
-msgid "George Staikos"
-msgstr "Džordž Stajkos"
-
-#: konfigurator.cpp:130
+#: konfigurator.cpp:102
 #, kde-format
 msgid "New Wallet"
 msgstr "Novi novčanik"
 
-#: konfigurator.cpp:131
+#: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Izaberite ime za novi novčanik:"
 
-#: konfigurator.cpp:251 konfigurator.cpp:322
+#: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
 msgid "Always Allow"
 msgstr "Uvek dozvoli"
 
-#: konfigurator.cpp:254 konfigurator.cpp:261 konfigurator.cpp:335
+#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
 #, kde-format
 msgid "Always Deny"
 msgstr "Uvek odbij"
 
-#: konfigurator.cpp:282
+#: konfigurator.cpp:257
 #, kde-format
 msgid "Permission denied."
 msgstr "Dozvola odbijena."
 
-#: konfigurator.cpp:284
+#: konfigurator.cpp:257 konfigurator.cpp:259
+#, kde-format
+msgid "KDE Wallet Control Module"
+msgstr "KDE‑ov kontrolni modul novčanika"
+
+#: konfigurator.cpp:259
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -80,13 +70,7 @@ msgstr ""
 "Greška pri autentifikovanju radnje:\n"
 "%1"
 
-#: konfigurator.cpp:375
-#, kde-format
-msgid ""
-"This configuration module allows you to configure the KDE wallet system."
-msgstr "Ovaj modul vam omogućava da podesite KDE‑ov sistem novčanika."
-
-#: konfigurator.cpp:384
+#: konfigurator.cpp:357
 #, kde-format
 msgid "&Delete"
 msgstr "&Obriši"
@@ -148,8 +132,9 @@ msgstr "Zatvori ako se ne koristi:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, kde-format
-msgid " min"
+#, fuzzy, kde-format
+#| msgid " min"
+msgid " minutes"
 msgstr " min."
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
@@ -231,38 +216,69 @@ msgstr "Prikaži menadžer u sistemskoj kaseti"
 msgid "Hide system tray icon when last wallet closes"
 msgstr "Sakrij ikonicu sistemske kasete po zatvaranju poslednjeg novčanika"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#: walletconfigwidget.ui:263
+#, kde-format
+msgid "Secret Service"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
+#: walletconfigwidget.ui:269
+#, kde-format
+msgid "Use KWallet for the Secret Service interface"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: walletconfigwidget.ui:279
+#, kde-format
+msgid ""
+"The Secret Service interface lets applications store passwords and other "
+"confidential data. Disable this to allow third-party wallet services such as "
+"KeePassXC or GNOME Keyring to manage it instead."
+msgstr ""
+
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:280
+#: walletconfigwidget.ui:328
 #, kde-format
 msgid "Access Control"
 msgstr "Upravljanje pristupom"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:286
+#: walletconfigwidget.ui:334
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "&Pitaj kada program pristupi novčaniku"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:300
+#: walletconfigwidget.ui:348
 #, kde-format
 msgid "Wallet"
 msgstr "novčanik"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:311
+#: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
 msgstr "program"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:322
+#: walletconfigwidget.ui:370
 #, kde-format
 msgid "Policy"
 msgstr "smernica"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:358
+#: walletconfigwidget.ui:406
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Pokreni &menadžer novčanika"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "© 2003, Džordž Stajkos"
+
+#~ msgid "George Staikos"
+#~ msgstr "Džordž Stajkos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Ovaj modul vam omogućava da podesite KDE‑ov sistem novčanika."

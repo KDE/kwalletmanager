@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:53+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2010-12-14 11:03+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -31,32 +31,32 @@ msgstr "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.in
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "មាន​ធាតុ​ដែល​មាន​ឈ្មោះ '%1' រួចហើយ ។ តើ​អ្នក​ចង់​បន្ត​ឬ​ទេ ?"
 
-#: allyourbase.cpp:229 allyourbase.cpp:234
+#: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "មាន​ថត​ដែល​មាន​ឈ្មោះ '%1' ​រួចហើយ ។ តើ​អ្នក​ចង់​បន្ត​ឬ​ទេ ?"
 
-#: allyourbase.cpp:232 allyourbase.cpp:234
+#: allyourbase.cpp:231
 #, kde-format
 msgid "Replace"
 msgstr "ជំនួស"
 
-#: allyourbase.cpp:349
+#: allyourbase.cpp:341
 #, kde-format
 msgid "Folders"
 msgstr "ថត"
 
-#: allyourbase.cpp:383
+#: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "កំហុស​ដែល​មិន​រំពឹង​មួយ​​បាន​កើតឡើង ខណៈពេល​ព្យាយាម​ជម្រុះ​វត្ថុ"
 
-#: allyourbase.cpp:459
+#: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "កំហុស​ដែល​មិន​រំពឹង​មួយ​បាាន​កើតឡើង ខណៈពេល​ព្យាយាម​ជម្រុះ​ធាតុ"
 
-#: allyourbase.cpp:483
+#: allyourbase.cpp:475
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -214,29 +214,27 @@ msgstr "ថតថ្មី"
 msgid "Please choose a name for the new folder:"
 msgstr "សូម​ជ្រើស​ឈ្មោះ​មួយ សម្រាប់​ថត​ថ្មី ។"
 
-#: kwalleteditor.cpp:426 kwalleteditor.cpp:431
+#: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "សុំទោស ឈ្មោះ​ថត​នោះ​ប្រើ​រួចហើយ ។ ព្យាយាម​ម្តងទៀត ?"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:431 kwalleteditor.cpp:806
-#: kwalleteditor.cpp:809
+#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
 msgid "Try Again"
 msgstr "ព្យាយាម​ម្តងទៀត"
 
-#: kwalleteditor.cpp:429 kwalleteditor.cpp:431 kwalleteditor.cpp:807
-#: kwalleteditor.cpp:809 kwalletmanager.cpp:379 kwalletmanager.cpp:381
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
 #, kde-format
 msgid "Do Not Try"
 msgstr "កុំ​ព្យាយាម"
 
-#: kwalleteditor.cpp:475
+#: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "​កំហុស​ក្នុង​ការរក្សាទុក​ធាតុ ។ កូដ​កំហុស ៖ %1"
 
-#: kwalleteditor.cpp:502
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -245,158 +243,157 @@ msgstr ""
 "មាតិកា​របស​ធាតុ​បច្ចុប្បន្ន​​បាន​ផ្លាស់ប្ដូរ ។\n"
 "តើ​អ្នក​ចង់​រក្សាទុក​ការ​ផ្លាស់ប្ដូរ​ដែរឬទេ ?"
 
-#: kwalleteditor.cpp:556 kwalleteditor.cpp:896
+#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
 #, kde-format
 msgid "Password: %1"
 msgstr "ពាក្យ​សម្ងាត់ ៖ %1"
 
-#: kwalleteditor.cpp:573 kwalleteditor.cpp:898
+#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "ផែនទី​តម្លៃ​ឈ្មោះ ៖ %1"
 
-#: kwalleteditor.cpp:583 kwalleteditor.cpp:900
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "ទិន្នន័យ​គោលពីរ ៖ %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:778
 #, kde-format
 msgid "New Entry"
 msgstr "ធាតុ​ថ្មី"
 
-#: kwalleteditor.cpp:792
+#: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "សូម​ជ្រើស​ឈ្មោះ​មួយ​សម្រាប់​ធាតុ​ថ្មី ៖"
 
-#: kwalleteditor.cpp:804 kwalleteditor.cpp:809
+#: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "សូម​អភ័យទោស មាន​ធាតុ​នោះ​រួច​ហើយ​ ។ ព្យាយាម​ម្ដង​ទៀត ?"
 
-#: kwalleteditor.cpp:831 kwalleteditor.cpp:840
+#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "កំហុស​ដែលមិន​រំពឹង​ទុក​មួយ​បាន​កើត​ឡើង ខណៈពេល​ព្យាយាម​បន្ថែមធាតុ​ថ្មី"
 
-#: kwalleteditor.cpp:892
+#: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "កំហុស​ដែល​មិន​រំពឹង​ទុក​មួយ​បាន​កើត​ឡើង​ ខណៈពេល​ព្យាយាម​ប្ដូរ​ឈ្មោះ​ធាតុ"
 
-#: kwalleteditor.cpp:912
+#: kwalleteditor.cpp:891
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "តើ​អ្នក​ប្រាកដ​ជា​ចង់​លុប​ធាតុ '%1' ឬ ?"
 
-#: kwalleteditor.cpp:916
+#: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "កំហុស​ដែល​មិន​រំពឹង​ទុក​មួយ​បាន​កើត​ឡើង​ ខណៈ​ពេល​ព្យាយាម​លុប​ធាតុ"
 
-#: kwalleteditor.cpp:944
+#: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "មិន​អាច​បើក​កាបូប​ដែល​បាន​ស្នើ ។"
 
-#: kwalleteditor.cpp:980
+#: kwalleteditor.cpp:959
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "មិន​អាច​ចូល​ដំណើរការឯកសារ XML '<b>%1</b>' ។"
 
-#: kwalleteditor.cpp:987
+#: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "មិន​អាច​ចូល​ដំណើរការ​កាបូប '<b>%1</b>' ។"
 
-#: kwalleteditor.cpp:1018 kwalleteditor.cpp:1048 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1164
+#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
+#: kwalleteditor.cpp:1143
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr "មាន​ថត '<b>%1</b>' ដែល​មាន​ធាតុ '<b>%2</b>' រួច​ហើយ ។ តើ​អ្នក​ចង់​ជំនួស​វា​ទេ ។"
 
-#: kwalleteditor.cpp:1122
+#: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "មិន​អាច​ចូល​ដំណើរការឯកសារ XML '<b>%1</b>' ។"
 
-#: kwalleteditor.cpp:1128
+#: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "កំហុស​ក្នុងការ​អាន​ឯកសារ XML'<b>%1</b>' សម្រាប់​ការ​បញ្ចូល ។"
 
-#: kwalleteditor.cpp:1134
+#: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "កំហុស ៖ ឯកសារ XML មិនមាន​កាបូប ។"
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1264
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "មិន​អាច​ចូល​ដំណើរការ​កាបូប '<b>%1</b>' ។"
 
-#: kwalletmanager.cpp:73
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:108 kwalletmanager.cpp:229
-#: kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:282
 #, fuzzy, kde-format
 #| msgid "KDE Wallet"
 msgid "Wallet"
 msgstr "​កាបូប​របស់ KDE"
 
-#: kwalletmanager.cpp:101 kwalletmanager.cpp:302
+#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
 #, kde-format
 msgid "No wallets open."
 msgstr "គ្មាន​កាបូប​បើក ។"
 
-#: kwalletmanager.cpp:108 kwalletmanager.cpp:229
+#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
 #, kde-format
 msgid "A wallet is open."
 msgstr "កាបូប​ត្រូវ​បើក ។"
 
-#: kwalletmanager.cpp:146 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "កាបូប​ថ្មី..."
 
-#: kwalletmanager.cpp:151
+#: kwalletmanager.cpp:139
 #, fuzzy, kde-format
 #| msgid "Delete Wallet"
 msgid "&Delete Wallet..."
 msgstr "លុប​កាបូប"
 
-#: kwalletmanager.cpp:156
+#: kwalletmanager.cpp:144
 #, kde-format
 msgid "Export as encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Import encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:166
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "កំណត់​រចនា​សម្ព័ន្ធ​កាបូប..."
 
-#: kwalletmanager.cpp:174
+#: kwalletmanager.cpp:162
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "​បិទ​កាបូប​ទាំងអស់"
 
-#: kwalletmanager.cpp:264 kwalletmanager.cpp:269 walletcontrolwidget.cpp:123
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -404,106 +401,103 @@ msgid ""
 msgstr ""
 "មិន​អាច​បិទ​កាបូប​ដោយ​ស្អាត ។ វា​ប្រហែល​ជា​កំពុង​ប្រើ​ដោយ​កម្មវិធី​ផ្សេងៗ ។ តើ​អ្នក​ពិត​ជា​ចង់​បង្ខំ​ឲ្យ​វា​បិទ​ឬ ?"
 
-#: kwalletmanager.cpp:266 kwalletmanager.cpp:269 walletcontrolwidget.cpp:125
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "បង្ខំ​ឲ្យ​បិទ"
 
-#: kwalletmanager.cpp:267 kwalletmanager.cpp:269 walletcontrolwidget.cpp:126
-#: walletcontrolwidget.cpp:128
+#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "កុំ​បង្ខំ"
 
-#: kwalletmanager.cpp:278 walletcontrolwidget.cpp:137
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "មិន​​អាច​បង្ខំ​កាបូប​ដែល​បាន​បិទ ។ កូដ​កំហុស​គឺ %1 ។"
 
-#: kwalletmanager.cpp:294
+#: kwalletmanager.cpp:274
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "កំហុស​ក្នុង​កា​របើក​កាបូប %1 ។"
 
-#: kwalletmanager.cpp:336
+#: kwalletmanager.cpp:316
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "សូម​ជ្រើស​ឈ្មោះ​សម្រាប់​កាបូប​ថ្មី ៖"
 
-#: kwalletmanager.cpp:347
+#: kwalletmanager.cpp:324
 #, kde-format
 msgid "New Wallet"
 msgstr "កាបូបថ្មី"
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr ""
 
-#: kwalletmanager.cpp:369
+#: kwalletmanager.cpp:343
 #, kde-format
 msgid "Create new wallet"
 msgstr ""
 
-#: kwalletmanager.cpp:376 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "សូម​អភ័យទោស មាន​កាបូប​រួចហើយ ។ ព្យាយាម​ឈ្មោះ​ថ្មី ?"
 
-#: kwalletmanager.cpp:378 kwalletmanager.cpp:381
+#: kwalletmanager.cpp:351
 #, kde-format
 msgid "Try New"
 msgstr "ព្យាយាម​ថ្មី"
 
-#: kwalletmanager.cpp:411
+#: kwalletmanager.cpp:377
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "តើ​អ្នក​ពិត​ជា​ចង់​លុប​កាបូប '%1' ឬ ?"
 
-#: kwalletmanager.cpp:417
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "មិន​អាច​លុប​កាបូប ។ កូដ​កំហុស​គឺ %1 ។"
 
-#: kwalletmanager.cpp:469
+#: kwalletmanager.cpp:431
 #, fuzzy, kde-format
 #| msgid "A wallet name"
 msgid "File name"
 msgstr "ឈ្មោះ​កាបូប"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:438
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:487
+#: kwalletmanager.cpp:449
 #, kde-format
 msgid "Select file"
 msgstr ""
 
-#: kwalletmanager.cpp:497
+#: kwalletmanager.cpp:459
 #, kde-format
 msgid "Failed to open file"
 msgstr ""
 
-#: kwalletmanager.cpp:510
+#: kwalletmanager.cpp:472
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 
-#: kwalletmanager.cpp:517
+#: kwalletmanager.cpp:479
 #, kde-format
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
-#: walletcontrolwidget.cpp:107
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:531 walletcontrolwidget.cpp:105
+#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -562,74 +556,74 @@ msgstr "ធាតុ​ថ្មី"
 msgid "&New Entry"
 msgstr "ធាតុ​ថ្មី"
 
-#: main.cpp:31
+#: main.cpp:27
 #, fuzzy, kde-format
 #| msgid "KDE Wallet Manager"
 msgid "Wallet Manager"
 msgstr "កម្មវិធី​គ្រប់គ្រង​កាបូប​របស់ KDE"
 
-#: main.cpp:33
+#: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "ឧបករណ៍​គ្រប់គ្រង​កាបូប​របស់ KDE"
 
-#: main.cpp:35
+#: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr ""
 
-#: main.cpp:39
+#: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
 msgstr ""
 
-#: main.cpp:40
+#: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
 msgstr ""
 
-#: main.cpp:42
+#: main.cpp:38
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:43
+#: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "អ្នក​និពន្ធ​ដើម​ និង​អ្នកថែទាំ​ពី​មុន"
 
-#: main.cpp:45
+#: main.cpp:41
 #, kde-format
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:46
+#: main.cpp:42
 #, fuzzy, kde-format
 #| msgid "Original author and former maintainer"
 msgid "Developer and former maintainer"
 msgstr "អ្នក​និពន្ធ​ដើម​ និង​អ្នកថែទាំ​ពី​មុន"
 
-#: main.cpp:48
+#: main.cpp:44
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:49
+#: main.cpp:45
 #, kde-format
 msgid "Developer"
 msgstr "អ្នក​អភិវឌ្ឍ"
 
-#: main.cpp:57
+#: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
 msgstr "បង្ហាញ​បង្អួច​នៅ​ពេល​ចាប់ផ្ដើម"
 
-#: main.cpp:58
+#: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "សម្រាប់​តែ​ប្រើ​ដោយ kwalletd"
 
-#: main.cpp:59
+#: main.cpp:55
 #, kde-format
 msgid "A wallet name"
 msgstr "ឈ្មោះ​កាបូប"
