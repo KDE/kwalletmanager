@@ -75,12 +75,9 @@ target_link_libraries(kwalletmanager5
     KF6::Wallet
     KF6::DBusAddons
     KF6::ConfigCore
-    KF6::Service
     KF6::KIOCore
     KF6::KIOGui
-    KF6::JobWidgets
     KF6::Archive
-    KF6::Notifications
     KF6::WindowSystem
     KF6::Crash
     KF6::Codecs

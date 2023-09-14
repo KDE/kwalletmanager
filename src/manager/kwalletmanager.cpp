@@ -19,7 +19,6 @@
 #include <KConfig>
 #include <KMessageBox>
 #include <KStandardAction>
-#include <knotifications_version.h>
 #include <KStatusNotifierItem>
 #include <KWallet>
 #include <KXMLGUIFactory>

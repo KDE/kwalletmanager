@@ -45,12 +45,8 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     DBusAddons
     DocTools
     I18n
-    JobWidgets
     KCMUtils
     KIO
-    Notifications
-    Service
-    TextWidgets
     Wallet
     WindowSystem
     XmlGui
