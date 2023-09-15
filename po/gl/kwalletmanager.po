@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-04-28 20:17+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -226,7 +226,7 @@ msgstr "Síntoo, ese nome de cartafol xa está en uso. Desexa intentalo de novo?
 msgid "Try Again"
 msgstr "Intentalo de novo"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:351
 #, kde-format
 msgid "Do Not Try"
 msgstr "Non intentalo"
@@ -340,7 +340,7 @@ msgstr "Erro: O ficheiro XML non contén unha carteira."
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Non se pode almacenar en «<b>%1</b>»."
 
-#: kwalletmanager.cpp:65
+#: kwalletmanager.cpp:64
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -350,53 +350,53 @@ msgstr ""
 "contrario, sairase do xestor de carteiras de KDE, dado que non pode "
 "funcionar se non pode ler carteiras."
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
-#: kwalletmanager.cpp:282
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:216
+#: kwalletmanager.cpp:281
 #, kde-format
 msgid "Wallet"
 msgstr "Carteira"
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:281
 #, kde-format
 msgid "No wallets open."
 msgstr "Non hai ningunha carteira aberta."
 
-#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:216
 #, kde-format
 msgid "A wallet is open."
 msgstr "Hai unha carteira aberta."
 
-#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:133 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Nova carteira…"
 
-#: kwalletmanager.cpp:139
+#: kwalletmanager.cpp:138
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Eliminar a carteira…"
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:143
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Exportar cifrada"
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:148
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Importar cifrada"
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:153
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Configurar a &carteira…"
 
-#: kwalletmanager.cpp:162
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Pechar &todas as carteiras"
 
-#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:250 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -405,102 +405,102 @@ msgstr ""
 "Non se pode pechar a carteira limpamente, probabelmente estea en uso por "
 "outras aplicacións. Desexa forzala a pecharse?"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:252 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "Forzar o peche"
 
-#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "Non forzar"
 
-#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Non se pode forzar a carteira a pecharse. O código de erro foi %1."
 
-#: kwalletmanager.cpp:274
+#: kwalletmanager.cpp:273
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Ocorreu un erro ao abrir a carteira %1."
 
-#: kwalletmanager.cpp:316
+#: kwalletmanager.cpp:315
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Por favor, escolla un novo nome para a nova carteira:"
 
-#: kwalletmanager.cpp:324
+#: kwalletmanager.cpp:323
 #, kde-format
 msgid "New Wallet"
 msgstr "Nova carteira"
 
-#: kwalletmanager.cpp:343
+#: kwalletmanager.cpp:342
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Non se permiten nomes baleiros. Seleccione outro nome."
 
-#: kwalletmanager.cpp:343
+#: kwalletmanager.cpp:342
 #, kde-format
 msgid "Create new wallet"
 msgstr "Crear unha nova carteira"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Síntoo, a carteira xa existe. Desexa intentalo cun novo nome?"
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:350
 #, kde-format
 msgid "Try New"
 msgstr "Intentar cun novo"
 
-#: kwalletmanager.cpp:377
+#: kwalletmanager.cpp:376
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Está seguro de que quere eliminar a carteira «%1»?"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Non se pode eliminar a carteira. O código do erro foi %1."
 
-#: kwalletmanager.cpp:431
+#: kwalletmanager.cpp:430
 #, kde-format
 msgid "File name"
 msgstr "Nome do ficheiro"
 
-#: kwalletmanager.cpp:438
+#: kwalletmanager.cpp:437
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Non se puido abrir o ficheiro para escritura."
 
-#: kwalletmanager.cpp:449
+#: kwalletmanager.cpp:448
 #, kde-format
 msgid "Select file"
 msgstr "Escolla un ficheiro"
 
-#: kwalletmanager.cpp:459
+#: kwalletmanager.cpp:458
 #, kde-format
 msgid "Failed to open file"
 msgstr "Non se puido abrir o ficheiro."
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:471
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Xa existe unha carteira chamada %1. Interrompeuse a operación."
 
-#: kwalletmanager.cpp:479
+#: kwalletmanager.cpp:478
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Non se puideron copiar os ficheiros."
 
-#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorar os cambios sen gardar?"
 
-#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorar"

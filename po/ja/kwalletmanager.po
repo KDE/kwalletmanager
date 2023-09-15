@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2019-04-21 12:35-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -232,7 +232,7 @@ msgstr ""
 msgid "Try Again"
 msgstr "再入力"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:351
 #, kde-format
 msgid "Do Not Try"
 msgstr "入力しない"
@@ -346,60 +346,60 @@ msgstr "エラー: XML ファイルにウォレットはありません。"
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "<resource>%1</resource> に保存できません。"
 
-#: kwalletmanager.cpp:65
+#: kwalletmanager.cpp:64
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
-#: kwalletmanager.cpp:282
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:216
+#: kwalletmanager.cpp:281
 #, kde-format
 msgid "Wallet"
 msgstr "ウォレット"
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:281
 #, kde-format
 msgid "No wallets open."
 msgstr "開いているウォレットはありません。"
 
-#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:216
 #, kde-format
 msgid "A wallet is open."
 msgstr "一つのウォレットが開いています。"
 
-#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:133 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "新しいウォレット(&N)..."
 
-#: kwalletmanager.cpp:139
+#: kwalletmanager.cpp:138
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "ウォレットを削除(&D)..."
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:143
 #, kde-format
 msgid "Export as encrypted"
 msgstr "暗号化してエクスポート"
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:148
 #, kde-format
 msgid "&Import encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:153
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "ウォレットを設定(&W)..."
 
-#: kwalletmanager.cpp:162
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "すべてのウォレットを閉じる(&A)"
 
-#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:250 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -408,104 +408,104 @@ msgstr ""
 "ウォレットを正しく閉じられません。他のアプリケーションで使用されている可能性"
 "があります。強制的に閉じますか？"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:252 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "強制的に閉じる"
 
-#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "強制しない"
 
-#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "ウォレットを強制的に閉じられませんでした。エラーコード: %1"
 
-#: kwalletmanager.cpp:274
+#: kwalletmanager.cpp:273
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "ウォレット “%1” を開くときにエラーが発生しました。"
 
-#: kwalletmanager.cpp:316
+#: kwalletmanager.cpp:315
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "新しいウォレットに名前を付けてください:"
 
-#: kwalletmanager.cpp:324
+#: kwalletmanager.cpp:323
 #, kde-format
 msgid "New Wallet"
 msgstr "新しいウォレット"
 
-#: kwalletmanager.cpp:343
+#: kwalletmanager.cpp:342
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "空の名前はサポートされていません。新しいものを選択してください。"
 
-#: kwalletmanager.cpp:343
+#: kwalletmanager.cpp:342
 #, kde-format
 msgid "Create new wallet"
 msgstr "新しいウォレットを作成"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr ""
 "同じ名前のウォレットが既に存在します。他の名前を入力しますか？|/|$[set-"
 "answers yes '入力する(&Y)' no '入力しない(&N)']"
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:350
 #, kde-format
 msgid "Try New"
 msgstr "別の名前を入力"
 
-#: kwalletmanager.cpp:377
+#: kwalletmanager.cpp:376
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "本当にウォレット “%1” を削除しますか？"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "ウォレットを削除できませんでした。エラーコード: %1"
 
-#: kwalletmanager.cpp:431
+#: kwalletmanager.cpp:430
 #, kde-format
 msgid "File name"
 msgstr "ファイル名"
 
-#: kwalletmanager.cpp:438
+#: kwalletmanager.cpp:437
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:449
+#: kwalletmanager.cpp:448
 #, kde-format
 msgid "Select file"
 msgstr "ファイルを選択"
 
-#: kwalletmanager.cpp:459
+#: kwalletmanager.cpp:458
 #, kde-format
 msgid "Failed to open file"
 msgstr "ファイルを開けません"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:471
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "%1という名前のウォレットは既に存在しています、操作は中止されました"
 
-#: kwalletmanager.cpp:479
+#: kwalletmanager.cpp:478
 #, kde-format
 msgid "Failed to copy files"
 msgstr "ファイルのコピーに失敗"
 
-#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "未保存の変更を破棄しますか？"
 
-#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr ""

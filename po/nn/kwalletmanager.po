@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2022-10-30 09:41+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -226,7 +226,7 @@ msgstr "Mappenamnet er alt i bruk. Vil du prøva på nytt?"
 msgid "Try Again"
 msgstr "Prøv på nytt"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:352
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:351
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ikkje prøv"
@@ -340,7 +340,7 @@ msgstr "Feil: XML-fila inneheld ikkje noka lommebok."
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Klarte ikkje lagra til «<b>%1</b>»."
 
-#: kwalletmanager.cpp:65
+#: kwalletmanager.cpp:64
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -350,53 +350,53 @@ msgstr ""
 "KWalletManager avslutta, då programmet ikkje kan fungera dersom det ikkje "
 "får lesa lommebøker."
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:96 kwalletmanager.cpp:217
-#: kwalletmanager.cpp:282
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:216
+#: kwalletmanager.cpp:281
 #, kde-format
 msgid "Wallet"
 msgstr "Lommebok"
 
-#: kwalletmanager.cpp:89 kwalletmanager.cpp:282
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:281
 #, kde-format
 msgid "No wallets open."
 msgstr "Ingen lommebøker er opne."
 
-#: kwalletmanager.cpp:96 kwalletmanager.cpp:217
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:216
 #, kde-format
 msgid "A wallet is open."
 msgstr "Ei lommebok er open."
 
-#: kwalletmanager.cpp:134 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:133 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Ny lommebok …"
 
-#: kwalletmanager.cpp:139
+#: kwalletmanager.cpp:138
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Slett lommebok …"
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:143
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Eksporter kryptert"
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:148
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Importer kryptert"
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:153
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Set opp &lommebok …"
 
-#: kwalletmanager.cpp:162
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Lukk &alle lommebøkene"
 
-#: kwalletmanager.cpp:251 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:250 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -405,102 +405,102 @@ msgstr ""
 "Klarar ikkje lukka lommeboka skikkeleg. Det er truleg andre program som "
 "brukar ho nett no. Vil du tvangslukka ho?"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:252 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "Tving lukking"
 
-#: kwalletmanager.cpp:254 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ikkje tving"
 
-#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Klarar ikkje tvangslukka lommeboka. Feilkoden var %1."
 
-#: kwalletmanager.cpp:274
+#: kwalletmanager.cpp:273
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Fel ved opning av lommeboka %1."
 
-#: kwalletmanager.cpp:316
+#: kwalletmanager.cpp:315
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Vel namn på den nye lommeboka:"
 
-#: kwalletmanager.cpp:324
+#: kwalletmanager.cpp:323
 #, kde-format
 msgid "New Wallet"
 msgstr "Ny lommebok"
 
-#: kwalletmanager.cpp:343
+#: kwalletmanager.cpp:342
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Tomme namn er ikkje støtta. Vel eit anna namn."
 
-#: kwalletmanager.cpp:343
+#: kwalletmanager.cpp:342
 #, kde-format
 msgid "Create new wallet"
 msgstr "Lag ny lommebok"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Lommeboka finst frå før. Vil du prøva med eit anna namn?"
 
-#: kwalletmanager.cpp:351
+#: kwalletmanager.cpp:350
 #, kde-format
 msgid "Try New"
 msgstr "Prøv nytt namn"
 
-#: kwalletmanager.cpp:377
+#: kwalletmanager.cpp:376
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Er du sikker på at du vil sletta lommeboka «%1»?"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Klarte ikkje sletta lommeboka. Feilkoden var %1."
 
-#: kwalletmanager.cpp:431
+#: kwalletmanager.cpp:430
 #, kde-format
 msgid "File name"
 msgstr "Filnamn"
 
-#: kwalletmanager.cpp:438
+#: kwalletmanager.cpp:437
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Klarte ikkje opna fila for skriving"
 
-#: kwalletmanager.cpp:449
+#: kwalletmanager.cpp:448
 #, kde-format
 msgid "Select file"
 msgstr "Vel fil"
 
-#: kwalletmanager.cpp:459
+#: kwalletmanager.cpp:458
 #, kde-format
 msgid "Failed to open file"
 msgstr "Klarte ikkje opna fila"
 
-#: kwalletmanager.cpp:472
+#: kwalletmanager.cpp:471
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Det finst alt ei lommebok med namnet %1. Handlinga vart avbroten."
 
-#: kwalletmanager.cpp:479
+#: kwalletmanager.cpp:478
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Klarte ikkje kopiera filer"
 
-#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorer ulagra endringar?"
 
-#: kwalletmanager.cpp:492 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorer"
