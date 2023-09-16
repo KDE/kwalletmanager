@@ -268,13 +268,3 @@ msgstr "Chování"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "S&pustit správce úschovny..."
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "(c) 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr "Tento konfigurační modul vám umožní nastavit systém KDE úschoven."
