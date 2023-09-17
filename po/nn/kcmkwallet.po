@@ -271,13 +271,3 @@ msgstr "Reglar"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Køyr lommebokhandsamaren"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "© 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr "Med denne modulen kan du setja opp KDE-lommeboksystemet."
