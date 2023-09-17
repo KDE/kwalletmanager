@@ -320,7 +320,7 @@ void KWalletManager::createWallet()
     }
     // TODO port to QRegularExpressionValidator
     QDialog nameDialog(this);
-    nameDialog.setWindowTitle(i18n("New Wallet"));
+    nameDialog.setWindowTitle(i18nc("@title:window", "New Wallet"));
     nameDialog.setLayout(new QVBoxLayout);
     nameDialog.layout()->addWidget(new QLabel(txt));
     auto lineEdit = new QLineEdit;
