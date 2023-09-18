@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-18 02:00+0000\n"
 "PO-Revision-Date: 2022-11-11 18:36+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -428,7 +428,9 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Veldu nafn á nýja veskið:"
 
 #: kwalletmanager.cpp:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nýtt veski"
 

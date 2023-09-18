@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-18 02:00+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -417,7 +417,9 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Provide un nómine del nov Porta-papere:"
 
 #: kwalletmanager.cpp:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nov Porta-papere"
 

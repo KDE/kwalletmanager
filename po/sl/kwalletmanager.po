@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-18 02:00+0000\n"
 "PO-Revision-Date: 2022-10-17 07:53+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -430,7 +430,9 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Izberite ime za novo listnico:"
 
 #: kwalletmanager.cpp:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nova listnica"
 

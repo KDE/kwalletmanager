@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-18 02:00+0000\n"
 "PO-Revision-Date: 2013-09-20 03:17+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -430,7 +430,9 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Жаңа әмияннің атауын таңдаңыз:"
 
 #: kwalletmanager.cpp:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Жаңа әмиян"
 

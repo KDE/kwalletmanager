@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ../cy/messages//kdeutils/kwalletmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-18 02:00+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandrakesoft.com>\n"
 "Language-Team: cy <LL@li.org>\n"
@@ -418,6 +418,7 @@ msgstr ""
 #: kwalletmanager.cpp:323
 #, fuzzy, kde-format
 #| msgid "&Delete Folder"
+msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Dile&u Plygell"
 
