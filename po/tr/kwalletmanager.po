@@ -437,8 +437,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Yeni cüzdan için bir ad girin:"
 
 #: kwalletmanager.cpp:323
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Yeni Cüzdan"
@@ -713,19 +712,3 @@ msgstr "&Geri Al"
 #, kde-format
 msgid "&Save"
 msgstr "&Kaydet"
-
-#~ msgid "Open Wallet..."
-#~ msgstr "Cüzdan Aç..."
-
-#~ msgid "Error opening XML file '<b>%1</b>' for input."
-#~ msgstr "'<b>%1</b>' XML dosyası girdi için açılamıyor."
-
-#~ msgid ""
-#~ "This is a binary data entry.  It cannot be edited as its format is "
-#~ "unknown and application specific."
-#~ msgstr ""
-#~ "Bu bir ikili veri girdisi. Biçimi bilinmediği ve uygulamaya bağlı olduğu "
-#~ "için düzenlenemez."
-
-#~ msgid "(c) 2003,2004 George Staikos"
-#~ msgstr "(c) 2003,2004 George Staikos"
