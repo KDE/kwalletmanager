@@ -105,7 +105,7 @@
 <para
 >Per omissió, s'emprarà una cartera anomenada <guilabel
 >kdewallet</guilabel
-> per emmagatzemar les vostres contrasenyes. Aquesta cartera està assegurada per la vostra contrasenya d'inici de sessió i s'obrirà automàticament en iniciar la sessió, si hi ha instal·lat el «kwallet_pam» i està configurat correctament. En certes distribucions (&pex;, Archlinux) el «kwallet_pam» no està instal·lat per omissió.</para>
+> per a emmagatzemar les vostres contrasenyes. Aquesta cartera està assegurada per la vostra contrasenya d'inici de sessió i s'obrirà automàticament en iniciar la sessió, si hi ha instal·lat el «kwallet_pam» i està configurat correctament. En certes distribucions (&pex;, Archlinux) el «kwallet_pam» no està instal·lat per omissió.</para>
 
 
 <para
@@ -142,7 +142,7 @@
 >. </para>
 
 <para
->El &kwallet5; ofereix dues maneres diferents per emmagatzemar les vostres dades:</para>
+>El &kwallet5; ofereix dues maneres diferents per a emmagatzemar les vostres dades:</para>
 
 <screenshot>
 <screeninfo
@@ -181,7 +181,7 @@
 
 <para
 >Les dades són encriptades amb l'<ulink url="http://www.schneier.com/blowfish.html"
->algoritme de xifrat de blocs simètrics Blowfish</ulink
+>algoritme de xifratge de blocs simètrics Blowfish</ulink
 >, la clau algorítmica deriva del <ulink url="http://www.ietf.org/rfc/rfc3174.txt"
 >hash SHA-1</ulink
 > de la contrasenya, amb una longitud de clau de 156 bits (20 bytes). Les dades dins del fitxer de cartera també estan xifrades amb SHA-1, i es comproven abans de ser desxifrades i posades a disposició de les aplicacions. </para>
@@ -208,10 +208,10 @@
 </mediaobject>
 </screenshot>
 <para
->Les captures de pantalla anteriors mostren el cas on no s'ha trobat al sistema una clau GPG capaç d'encriptar. Utilitzeu aplicacions com &kgpg; o &kleopatra; per crear una clau i torneu-ho a provar.</para>
+>Les captures de pantalla anteriors mostren el cas on no s'ha trobat al sistema una clau GPG capaç d'encriptar. Utilitzeu aplicacions com &kgpg; o &kleopatra; per a crear una clau i torneu-ho a provar.</para>
 
 <para
->Si no es troba una clau GPG obtindreu el següent diàleg, des d'on podreu seleccionar una clau a utilitzar per a la vostra nova cartera. </para>
+>Si no es troba una clau GPG obtindreu el següent diàleg, des d'on podreu seleccionar una clau a utilitzar per a la vostra cartera nova. </para>
 <screenshot>
 <screeninfo
 >Selecció d'una clau d'encriptatge</screeninfo>
@@ -232,12 +232,12 @@
 >La mateixa sessió pot gestionar simultàniament els dos formats de fitxer. El &kwallet5; detectarà de forma transparent el format de fitxer i carregarà el dorsal correcte per a gestionar-lo.</para>
 
 <para
->Per utilitzar les dades confidencials de la vostra cartera clàssica amb el nou dorsal feu el següent:</para>
+>Per a utilitzar les dades confidencials de la vostra cartera clàssica amb el dorsal nou feu el següent:</para>
 
 <itemizedlist>
 <listitem
 ><para
->Creeu una nova cartera basada en GPG.</para
+>Creeu una cartera nova basada en GPG.</para
 ></listitem>
 <listitem
 ><para
@@ -255,7 +255,7 @@
 ></listitem>
 <listitem
 ><para
->Seleccioneu la nova cartera basada en GPG, a continuació escolliu <menuchoice
+>Seleccioneu la cartera nova basada en GPG, a continuació escolliu <menuchoice
 ><guimenu
 >Fitxer</guimenu
 > <guimenuitem
@@ -272,7 +272,7 @@
 > <guimenuitem
 >Cartera del KDE</guimenuitem
 ></menuchoice
-> i seleccioneu la nova cartera basada en GPG que acabeu de crear des del quadre combinat <guilabel
+> i seleccioneu la cartera nova basada en GPG que acabeu de crear des del quadre combinat <guilabel
 >Seleccioneu la cartera a usar per defecte</guilabel
 >. </para
 ></listitem>
@@ -295,13 +295,13 @@
 
 <tip>
 <para
->El &kwallet5; permet emprar més d'una cartera, per fer l'operació més segura, hauríeu d'utilitzar una cartera per a les contrasenyes locals i una altra per a les contrasenyes de xarxa i dades dels formularis. Ho podeu configurar al mòdul &kwallet5; de l'&systemsettings;. Tanmateix, per defecte s'emmagatzemarà tot en una cartera anomenada <guilabel
+>El &kwallet5; permet emprar més d'una cartera, per a fer l'operació més segura, hauríeu d'utilitzar una cartera per a les contrasenyes locals i una altra per a les contrasenyes de xarxa i dades dels formularis. Ho podeu configurar al mòdul &kwallet5; de l'&systemsettings;. Tanmateix, per defecte s'emmagatzemarà tot en una cartera anomenada <guilabel
 >kdewallet</guilabel
 >.</para>
 </tip>
 
 <para
->Les carteres, per defecte, estan tancades, cosa que significa que heu de proporcionar una contrasenya per obrir-les. Un cop oberta una cartera, el seu contingut pot ser llegit per qualsevol procés d'usuari, de manera que es pot tractar d'una qüestió de seguretat.</para>
+>Les carteres, per defecte, estan tancades, cosa que significa que heu de proporcionar una contrasenya per a obrir-les. Un cop oberta una cartera, el seu contingut pot ser llegit per qualsevol procés d'usuari, de manera que es pot tractar d'una qüestió de seguretat.</para>
 </sect1>
 
 <sect1 id="kwallet-using">
@@ -352,13 +352,13 @@
 
 <screenshot>
 <screeninfo
->Petició per obrir una cartera</screeninfo>
+>Petició per a obrir una cartera</screeninfo>
 <mediaobject>
 <imageobject
 ><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
 <textobject
 ><phrase
->Petició per obrir una cartera</phrase
+>Petició per a obrir una cartera</phrase
 ></textobject>
 </mediaobject>
 </screenshot>
@@ -389,7 +389,7 @@
 > <guimenuitem
 >Eina de gestió de carteres</guimenuitem
 ></menuchoice
-> des del llançador d'aplicacions. Altrament també podeu iniciar &krunner; amb la drecera <keycombo action="simul"
+> des del llançador d'aplicacions. Altrament, també podeu iniciar el &krunner; amb la drecera <keycombo action="simul"
 >&Alt;<keycap
 >F2</keycap
 ></keycombo
@@ -468,7 +468,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <itemizedlist>
 <listitem
 ><para
->Una línia de cerca per filtrar els elements de la cartera actual</para
+>Una línia de cerca per a filtrar els elements de la cartera actual</para
 ></listitem>
 <listitem
 ><para
@@ -480,7 +480,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></listitem>
 <listitem
 ><para
->El contingut de la carpeta seleccionada al costat dret. Per omissió, la contrasenya i el valor restaran ocults. Per mostrar-los i editar-los activeu <guilabel
+>El contingut de la carpeta seleccionada al costat dret. Per omissió, la contrasenya i el valor restaran ocults. Per a mostrar-los i editar-los activeu <guilabel
 >Mostra els valors</guilabel
 > o feu clic al botó <guilabel
 >Mostra el contingut</guilabel
@@ -495,7 +495,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >També es poden crear, reanomenar o suprimir les entrades mitjançant el menú contextual del contingut de la carpeta.</para>
 
 <para
->Totes les carpetes i entrades es poden arrossegar i deixar anar a altres carteres o carpetes respectivament. Això us permet empaquetar una cartera nova per transferir-la a un altre entorn. Per exemple, es pot crear una cartera nova i copiar-la a un dispositiu de memòria flaix extraïble. Hi podeu transferir contrasenyes importants per tenir-les disponibles en altres llocs.</para>
+>Totes les carpetes i entrades es poden arrossegar i deixar anar a altres carteres o carpetes respectivament. Això us permet empaquetar una cartera nova per a transferir-la a un altre entorn. Per exemple, es pot crear una cartera nova i copiar-la a un dispositiu de memòria flaix extraïble. Hi podeu transferir contrasenyes importants per a tenir-les disponibles en altres llocs.</para>
 
 <sect3 id="kwallet-import-export">
 <title
@@ -544,7 +544,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Valor</guilabel
 >. Feu clic al botó <guilabel
 >Desa</guilabel
-> per emmagatzemar les noves entrades al fitxer de la carpeta encriptada. </para>
+> per a emmagatzemar les entrades noves al fitxer de la carpeta encriptada. </para>
 </sect3>
 </sect2>
 
@@ -574,7 +574,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >La primera llista mostra totes les aplicacions connectades a la carpeta seleccionada. Utilitzeu el botó al costat dret de cada entrada per a desconnectar l'aplicació.</para>
 
 <para
->A la segona llista es mostren totes les aplicacions que estan autoritzades per accedir a la carpeta. Utilitzeu el botó dret de cada entrada a la llista per a revocar l'accés. </para>
+>A la segona llista es mostren totes les aplicacions que estan autoritzades a accedir a la carpeta. Utilitzeu el botó dret de cada entrada a la llista per a revocar l'accés. </para>
 <!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
 </sect2>
 </sect1>
@@ -593,7 +593,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >El &kwallet5; conté un petit tauler de configuració amb diverses opcions que us permet adequar el &kwallet5; a les vostres preferències personals. L'arranjament per defecte del &kwallet5; és suficient per a la majoria dels usuaris.</para>
 
 <para
->Seleccioneu la casella per activar o desactivar del tot el subsistema de carteres del &kde;. Si aquesta casella no està seleccionada, el &kwallet5; està completament desactivat i no tindrà efecte cap de les altres opcions. El &kwallet5; no emmagatzemarà cap mena d'informació ni s'oferirà per omplir-vos formularis.</para>
+>Seleccioneu la casella per a activar o desactivar del tot el subsistema de carteres del &kde;. Si aquesta casella no està seleccionada, el &kwallet5; està completament desactivat i no tindrà efecte cap de les altres opcions. El &kwallet5; no emmagatzemarà cap mena d'informació ni s'oferirà per a omplir-vos formularis.</para>
 
 <variablelist>
 <title
@@ -618,7 +618,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></term>
 <listitem>
 <para
->Tanca la cartera així que s'inicia l'estalvi de pantalla. Quan la cartera està tancada, es necessita la contrasenya per tornar-hi a accedir.</para>
+>Tanca la cartera així que s'inicia l'estalvi de pantalla. Quan la cartera està tancada, es necessita la contrasenya per a tornar-hi a accedir.</para>
 </listitem>
 </varlistentry>
 
@@ -629,7 +629,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></term>
 <listitem>
 <para
->Tanca la cartera així que s'aturin les aplicacions que la utilitzen. Fixeu-vos que la cartera només es tancarà quan s'hagin aturat totes les aplicacions que la utilitzen. Quan una cartera està tancada, cal introduir la contrasenya per tornar-hi a accedir.</para>
+>Tanca la cartera així que s'aturin les aplicacions que la utilitzen. Fixeu-vos que la cartera només es tancarà quan s'hagin aturat totes les aplicacions que la utilitzen. Quan una cartera està tancada, cal introduir la contrasenya per a tornar-hi a accedir.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -747,7 +747,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >.</para>
 
 <para
->Una aplicació que se li ha permès l'accés a una cartera té permís per accedir a totes les contrasenyes que conté.</para>
+>Una aplicació que se li ha permès l'accés a una cartera té permís per a accedir a totes les contrasenyes que conté.</para>
 
 <para
 >Si heu configurat erròniament una aplicació que no utilitza el &kwallet5;, suprimiu aquí la política per aquesta aplicació.</para>
@@ -756,14 +756,14 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >En el següent inici d'aquesta aplicació podreu definir una nova política d'accés a la cartera. </para>
 <screenshot>
 <screeninfo
->Petició per obrir una cartera</screeninfo>
+>Petició per a obrir una cartera</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="application-request-to-open-wallet.png"/>
 </imageobject>
 <textobject>
 <phrase
->Petició per obrir una cartera</phrase>
+>Petició per a obrir una cartera</phrase>
 </textobject>
 <caption
 ><para
@@ -784,7 +784,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Es poden arrossegar carteres des de la finestra del &kwalletmanager5;. Això us permet arrossegar una cartera a una finestra d'un navegador de fitxers, on podeu copiar-la, moure-la o crear-hi un enllaç.</para>
 
 <para
->Podeu emprar això per desar una cartera en un suport portàtil, com ara un clauer USB. Així podreu emportar-vos les vostres contrasenyes a la feina o de vacances i continuar accedint a llocs importants de manera còmoda.</para>
+>Podeu emprar això per a desar una cartera en un suport portàtil, com ara un clauer USB. Així podreu emportar-vos les vostres contrasenyes a la feina o de vacances i continuar accedint a llocs importants de manera còmoda.</para>
 
 </chapter>
 
