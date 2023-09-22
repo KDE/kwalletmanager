@@ -3,14 +3,14 @@
 # Federico Cozzi <federicocozzi@federicocozzi.it>, 2004, 2005.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2005.
 # Nicola Ruggero <nicola@nxnt.org>, 2005, 2006, 2008, 2009, 2011, 2013.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2015, 2022.
+# SPDX-FileCopyrightText: 2015, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-18 02:00+0000\n"
-"PO-Revision-Date: 2022-10-18 10:01+0200\n"
+"PO-Revision-Date: 2023-09-19 14:24+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -429,8 +429,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Scegli un nome per il nuovo portafogli:"
 
 #: kwalletmanager.cpp:323
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nuovo portafogli"
