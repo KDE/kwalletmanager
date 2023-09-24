@@ -139,7 +139,7 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kwalletmanager</url>
   <url type="donation">https://www.kde.org/community/donations/?app=kwalletmanager&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=kwallet5</url>
-  <url type="homepage">https://utils.kde.org/projects/kwalletmanager/</url>
+  <url type="homepage">https://apps.kde.org/kwalletmanager5</url>
   <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
