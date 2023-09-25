@@ -4,14 +4,14 @@
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2017.
-# Adrián Chaves <adrian@chaves.io>, 2017, 2019, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2023 Adrián Chaves <adrian@chaves.io>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-18 02:00+0000\n"
-"PO-Revision-Date: 2023-04-28 20:17+0200\n"
+"PO-Revision-Date: 2023-09-24 14:53+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,12 +34,12 @@ msgstr "xabigf@gmx.net, mvillarino@users.sourceforge.net, adrian@chaves.io"
 #: allyourbase.cpp:203
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "Xa existe unha entrada co nome «%1». Desexa continuar?"
+msgstr "Xa existe unha entrada co nome «%1». Quere continuar?"
 
 #: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "Xa existe un cartafol co nome «%1». Que desexa facer?"
+msgstr "Xa existe un cartafol co nome «%1». Que quere facer?"
 
 #: allyourbase.cpp:231
 #, kde-format
@@ -54,12 +54,12 @@ msgstr "Cartafoles"
 #: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr "Ocorreu un erro inesperado ao intentar soltar o elemento"
+msgstr "Produciuse un erro inesperado ao intentar soltar o elemento"
 
 #: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
-msgstr "Ocorreu un erro inesperado ao intentar soltar a entrada"
+msgstr "Produciuse un erro inesperado ao intentar soltar a entrada"
 
 #: allyourbase.cpp:475
 #, kde-format
@@ -67,8 +67,8 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-"Ocorreu un erro inesperado ao intentar eliminar o cartafol orixinal, pero o "
-"cartafol copiouse"
+"Produciuse un erro inesperado ao intentar eliminar o cartafol orixinal, pero "
+"o cartafol copiouse"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
@@ -119,7 +119,7 @@ msgstr "Buscar"
 #: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
-msgstr "Mo&strar os valores"
+msgstr "Amo&sar os valores"
 
 #: kwalleteditor.cpp:196
 #, kde-format
@@ -214,12 +214,12 @@ msgstr "Novo cartafol"
 #: kwalleteditor.cpp:415
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Por favor, escolla un nome para o novo cartafol:"
+msgstr "Escolla un nome para o novo cartafol:"
 
 #: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr "Síntoo, ese nome de cartafol xa está en uso. Desexa intentalo de novo?"
+msgstr "Ese nome de cartafol xa está en uso. Quere intentalo de novo?"
 
 #: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
@@ -234,7 +234,7 @@ msgstr "Non intentalo"
 #: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr "Ocorreu un erro ao gardar a entrada. Código do erro: %1"
+msgstr "Produciuse un erro ao gardar a entrada. Código do erro: %1"
 
 #: kwalleteditor.cpp:489
 #, kde-format
@@ -268,22 +268,22 @@ msgstr "Nova entrada"
 #: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr "Por favor, escolla un nome para a nova entrada:"
+msgstr "Escolla un nome para a nova entrada:"
 
 #: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr "Síntoo, esa entrada xa existe. Desexa intentalo de novo?"
+msgstr "Esa entrada xa existe. Quere intentalo de novo?"
 
 #: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr "Ocorreu un erro inesperado ao intentar engadir a nova entrada"
+msgstr "Produciuse un erro inesperado ao intentar engadir a nova entrada"
 
 #: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr "Ocorreu un erro inesperado ao intentar renomear a entrada."
+msgstr "Produciuse un erro inesperado ao intentar renomear a entrada."
 
 #: kwalleteditor.cpp:891
 #, kde-format
@@ -293,22 +293,22 @@ msgstr "Está seguro de que quere eliminar o elemento «%1»?"
 #: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr "Ocorreu un erro inesperado ao intentar eliminar a entrada"
+msgstr "Produciuse un erro inesperado ao intentar eliminar a entrada"
 
 #: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
-msgstr "Non se pode abrir a carteira solicitada."
+msgstr "Non é posíbel abrir a carteira solicitada."
 
 #: kwalleteditor.cpp:959
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr "Non se pode crear un ficheiro temporal para descargar «<b>%1</b>»."
+msgstr "Non é posíbel crear un ficheiro temporal para descargar «<b>%1</b>»."
 
 #: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr "Non se pode acceder á carteira «<b>%1</b>»."
+msgstr "Non é posíbel acceder á carteira «<b>%1</b>»."
 
 #: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
 #: kwalleteditor.cpp:1143
@@ -317,18 +317,17 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
-"O cartafol «<b>%1</b>» xa contén unha entrada «<b>%2</b>». Desexa "
-"substituíla?"
+"O cartafol «<b>%1</b>» xa contén unha entrada «<b>%2</b>». Quere substituíla?"
 
 #: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "Non se pode acceder ao ficheiro XML «<b>%1</b>»."
+msgstr "Non é posíbel acceder ao ficheiro XML «<b>%1</b>»."
 
 #: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "Ocorreu un erro ao ler o ficheiro «<b>%1</b>» como entrada."
+msgstr "Produciuse un erro ao ler o ficheiro «<b>%1</b>» como entrada."
 
 #: kwalleteditor.cpp:1113
 #, kde-format
@@ -338,7 +337,7 @@ msgstr "Erro: O ficheiro XML non contén unha carteira."
 #: kwalleteditor.cpp:1264
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "Non se pode almacenar en «<b>%1</b>»."
+msgstr "Non é posíbel almacenar en «<b>%1</b>»."
 
 #: kwalletmanager.cpp:64
 #, kde-format
@@ -402,8 +401,8 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
-"Non se pode pechar a carteira limpamente, probabelmente estea en uso por "
-"outras aplicacións. Desexa forzala a pecharse?"
+"Non é posíbel pechar a carteira limpamente, probabelmente estea en uso por "
+"outras aplicacións. Quere forzala a pecharse?"
 
 #: kwalletmanager.cpp:252 walletcontrolwidget.cpp:116
 #, kde-format
@@ -418,21 +417,20 @@ msgstr "Non forzar"
 #: kwalletmanager.cpp:257 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr "Non se pode forzar a carteira a pecharse. O código de erro foi %1."
+msgstr "Non é posíbel forzar a carteira a pecharse. O código de erro foi %1."
 
 #: kwalletmanager.cpp:273
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr "Ocorreu un erro ao abrir a carteira %1."
+msgstr "Produciuse un erro ao abrir a carteira %1."
 
 #: kwalletmanager.cpp:315
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Por favor, escolla un novo nome para a nova carteira:"
+msgstr "Escolla un novo nome para a nova carteira:"
 
 #: kwalletmanager.cpp:323
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nova carteira"
@@ -450,7 +448,7 @@ msgstr "Crear unha nova carteira"
 #: kwalletmanager.cpp:348
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr "Síntoo, a carteira xa existe. Desexa intentalo cun novo nome?"
+msgstr "A carteira xa existe. Quere intentalo cun novo nome?"
 
 #: kwalletmanager.cpp:350
 #, kde-format
@@ -465,7 +463,7 @@ msgstr "Está seguro de que quere eliminar a carteira «%1»?"
 #: kwalletmanager.cpp:382
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr "Non se pode eliminar a carteira. O código do erro foi %1."
+msgstr "Non é posíbel eliminar a carteira. O código do erro foi %1."
 
 #: kwalletmanager.cpp:430
 #, kde-format
@@ -568,12 +566,12 @@ msgstr "Xestor de carteiras"
 #: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "Xestor de contrasinais de KDE"
+msgstr "Ferramenta de xestión de carteiras de KDE"
 
 #: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "© 2013-2017 Autores de KWallet Manager"
+msgstr "© 2013-2017 Persoas autoras de KWallet Manager"
 
 #: main.cpp:35
 #, kde-format
@@ -583,7 +581,7 @@ msgstr "Valentin Rusu"
 #: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
-msgstr "Mantedor, revisión da interface de usuario"
+msgstr "Mantemento, revisión da interface."
 
 #: main.cpp:38
 #, kde-format
@@ -593,7 +591,7 @@ msgstr "George Staikos"
 #: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr "Autor orixinal e antigo mantedor"
+msgstr "Autoría orixinal e mantemento anterior."
 
 #: main.cpp:41
 #, kde-format
@@ -603,7 +601,7 @@ msgstr "Michael Leupold"
 #: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr "Desenvolvedor e antigo mantedor"
+msgstr "Desenvolvemento e mantemento anterior."
 
 #: main.cpp:44
 #, kde-format
@@ -613,7 +611,7 @@ msgstr "Isaac Clerencia"
 #: main.cpp:45
 #, kde-format
 msgid "Developer"
-msgstr "Desenvolvedor"
+msgstr "Desenvolvemento."
 
 #: main.cpp:53
 #, kde-format
