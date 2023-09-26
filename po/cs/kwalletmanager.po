@@ -426,11 +426,10 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Prosím, zvolte název nové úschovny:"
 
 #: kwalletmanager.cpp:323
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
-msgstr "Nová úschovna"
+msgstr ""
 
 #: kwalletmanager.cpp:342
 #, kde-format
