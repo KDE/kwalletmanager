@@ -138,5 +138,6 @@
     "X-KDE-Keywords[x-test]": "xxwalletxx,xxform fillxx,xxpasswordsxx,xxform dataxx,xxsecret servicexx,xxkwalletxx,xxkdewalletxx,xxkde walletxx,xxkeepassxcxx,xxkeyringxx,xxencryptionxx,xxdecryptionxx,xxblowfishxx,xxpgpxx,xxaccess controlxx,xxconfidentialxx,xxwallet managerxx",
     "X-KDE-Keywords[zh_TW]": "wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager,錢包,密碼,秘密,鑰匙圈",
     "X-KDE-ParentApp": "kcontrol",
-    "X-KDE-System-Settings-Parent-Category": "personalization"
+    "X-KDE-System-Settings-Parent-Category": "security-privacy",
+    "X-KDE-Weight": 30
 }
