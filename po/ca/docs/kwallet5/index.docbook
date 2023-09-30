@@ -89,7 +89,7 @@
 >Introducció</title>
 
 <para
->Els usuaris d'ordinadors tenen una gran quantitat de dades per gestionar, algunes de les quals són de naturalesa delicada. En concret, és habitual que hàgiu de gestionar moltes contrasenyes. Recordar-les és difícil, apuntar-les en un paper o en un fitxer de text no és gaire segur.</para>
+>Els usuaris d'ordinadors tenen una gran quantitat de dades per a gestionar, algunes de les quals són de naturalesa delicada. En concret, és habitual que hàgiu de gestionar moltes contrasenyes. Recordar-les és difícil, apuntar-les en un paper o en un fitxer de text no és gaire segur.</para>
 
 <para
 >El &kwallet5; proporciona una forma segura d'emmagatzemar les contrasenyes i altra informació secreta, i això permet a l'usuari recordar una única contrasenya en comptes de nombroses contrasenyes i credencials diferents. </para>
@@ -607,7 +607,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></term>
 <listitem>
 <para
->Tanca la cartera actual després d'un període d'inactivitat. Si marqueu aquesta opció, indiqueu el període al quadre; el valor per defecte és 10 minuts. Quan una cartera està tancada, cal introduir la contrasenya per tornar-hi a accedir.</para>
+>Tanca la cartera actual després d'un període d'inactivitat. Si marqueu aquesta opció, indiqueu el període al quadre; el valor per defecte és 10 minuts. Quan una cartera està tancada, cal introduir la contrasenya per a tornar-hi a accedir.</para>
 </listitem>
 </varlistentry>
 
@@ -740,7 +740,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <para
 >Feu clic amb el &BER; sobre el símbol <guiicon
 >&gt;</guiicon
-> que hi ha al costat del nom d'una cartera per expandir-la en arbre. Veureu el nom de cada aplicació que ha demanat accés a la cartera i la política que heu establert per a cadascuna. Aquí no podeu editar les polítiques o afegir-ne de noves, però podeu suprimir una entrada fent-hi clic amb el &BDR; al damunt i triant <guimenuitem
+> que hi ha al costat del nom d'una cartera per a expandir-la en arbre. Veureu el nom de cada aplicació que ha demanat accés a la cartera i la política que heu establert per a cadascuna. Aquí no podeu editar les polítiques o afegir-ne de noves, però podeu suprimir una entrada fent-hi clic amb el &BDR; al damunt i triant <guimenuitem
 >Suprimeix</guimenuitem
 > al menú contextual que apareixerà, o simplement seleccionant l'entrada i prement la tecla <keycap
 >Supr</keycap
