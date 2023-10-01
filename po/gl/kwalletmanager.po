@@ -477,7 +477,7 @@ msgstr "Nome do ficheiro"
 #: kwalletmanager.cpp:476
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr "Non se puido abrir o ficheiro para escritura."
+msgstr "Non foi posíbel abrir o ficheiro para escritura."
 
 #: kwalletmanager.cpp:487
 #, kde-format
@@ -487,7 +487,7 @@ msgstr "Escolla un ficheiro"
 #: kwalletmanager.cpp:497
 #, kde-format
 msgid "Failed to open file"
-msgstr "Non se puido abrir o ficheiro."
+msgstr "Non foi posíbel abrir o ficheiro."
 
 #: kwalletmanager.cpp:510
 #, kde-format
@@ -497,7 +497,7 @@ msgstr "Xa existe unha carteira chamada %1. Interrompeuse a operación."
 #: kwalletmanager.cpp:517
 #, kde-format
 msgid "Failed to copy files"
-msgstr "Non se puideron copiar os ficheiros."
+msgstr "Non foi posíbel copiar os ficheiros."
 
 #: kwalletmanager.cpp:531 kwalletmanager.cpp:533 walletcontrolwidget.cpp:105
 #: walletcontrolwidget.cpp:107

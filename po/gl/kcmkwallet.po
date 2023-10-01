@@ -227,7 +227,7 @@ msgstr "Xestor de carteiras"
 #: walletconfigwidget.ui:207
 #, kde-format
 msgid "Show manager in system tray"
-msgstr "Amosar o xestor na bandexa do sistema."
+msgstr "Amosar o xestor na área de notificación."
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
 #: walletconfigwidget.ui:235
