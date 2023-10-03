@@ -118,6 +118,13 @@ void KWalletManager::configUI() {
     m_kwalletdModule = new org::kde::KWallet(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd5"), QDBusConnection::sessionBus());
     connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this,
             &KWalletManager::possiblyRescan);
+    connect(QDBusConnection::sessionBus().interface(),
+            &QDBusConnectionInterface::callWithCallbackFailed, this,
+            [this](const QDBusError error, const QDBusMessage call) {
+              if (call.interface() == QStringLiteral("org.kde.KWallet")) {
+                _managerWidget->setErrorMessage(error.message());
+              }
+            });
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::allWalletsClosed, this, &KWalletManager::allWalletsClosed);
     connect(m_kwalletdModule, SIGNAL(walletClosed(QString)),
             this, SLOT(updateWalletDisplay()));

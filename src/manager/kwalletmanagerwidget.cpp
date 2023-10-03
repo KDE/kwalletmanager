@@ -10,12 +10,12 @@
 #include "kwallet_interface.h"
 #include "kwalletmanager_debug.h"
 
-
-#include <KWallet>
-#include <QUrl>
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <KWallet>
 #include <QDragEnterEvent>
+#include <QUrl>
+#include <QVBoxLayout>
 
 KWalletManagerWidget::KWalletManagerWidget(QWidget *parent, Qt::WindowFlags /*flags*/):
     KPageWidget(parent)
@@ -74,6 +74,25 @@ void KWalletManagerWidget::updateWalletDisplay(const QString &selectWallet /* = 
 
     if (!selectWallet.isEmpty()) {
         setCurrentPage(_walletPages[selectWallet]);
+    } else {
+        if (_errorItem == nullptr) {
+            auto placeholderWidget = new QWidget();
+
+            auto layout = new QVBoxLayout();
+            placeholderWidget->setLayout(layout);
+
+            _errorLabel =
+                new QLabel(i18n("An unknown error occurred when connecting to "
+                                "the KWallet service."));
+            _errorLabel->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+            layout->addWidget(_errorLabel);
+
+            _errorItem = new KPageWidgetItem(placeholderWidget);
+
+            addPage(_errorItem);
+        }
+
+        setCurrentPage(_errorItem);
     }
     alreadyUpdating = false;
 }
@@ -205,6 +224,14 @@ bool KWalletManagerWidget::hasUnsavedChanges(const QString &name) const
                 return false;
         }
         return it.value()->hasUnsavedChanges();
+    }
+}
+
+void KWalletManagerWidget::setErrorMessage(const QString &message) {
+    if (_errorLabel != nullptr) {
+        _errorLabel->setText(i18n(
+            "An error occurred when connecting to the KWallet service:\n%1",
+            message));
     }
 }
 

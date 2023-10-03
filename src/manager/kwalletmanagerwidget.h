@@ -8,6 +8,7 @@
 #define KWALLETMANAGERWIDGET_H
 
 #include <KPageWidget>
+#include <QLabel>
 
 class QUrl;
 class QDropEvent;
@@ -30,7 +31,9 @@ public:
     QString activeWalletName() const;
     bool hasUnsavedChanges(const QString& name) const;
 
-protected:
+    void setErrorMessage(const QString &message);
+
+  protected:
     void dragEnterEvent(QDragEnterEvent *e) override;
     void dragMoveEvent(QDragMoveEvent *e) override;
     void dropEvent(QDropEvent *e) override;
@@ -43,6 +46,8 @@ private:
 
     using WalletPagesHash = QHash<QString, KWalletManagerWidgetItem *>;
     WalletPagesHash _walletPages;
+    KPageWidgetItem *_errorItem = nullptr;
+    QLabel *_errorLabel = nullptr;
 };
 
 #endif // KWALLETMANAGERWIDGET_H
