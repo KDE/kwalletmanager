@@ -208,4 +208,9 @@ bool KWalletManagerWidget::hasUnsavedChanges(const QString &name) const
     }
 }
 
+bool KWalletManagerWidget::showPageHeader() const
+{
+    return _walletPages.size() != 1;
+}
+
 #include "moc_kwalletmanagerwidget.cpp"
