@@ -58,6 +58,7 @@ void WalletControlWidget::onSetupWidget()
     if (_wallet) {
         connect(_wallet, &KWallet::Wallet::walletClosed, this, &WalletControlWidget::onWalletClosed);
         _openClose->setText(i18n("&Close"));
+        _openClose->setIcon(QIcon::fromTheme(QStringLiteral("wallet-closed")));
 
         if (!_walletEditor) {
             _walletEditor = new KWalletEditor(_editorFrame);
@@ -78,6 +79,7 @@ void WalletControlWidget::onSetupWidget()
         _tabs->setTabIcon(0, QIcon::fromTheme(QLatin1String("wallet-open")).pixmap(16));
     } else {
         _openClose->setText(i18n("&Open..."));
+        _openClose->setIcon(QIcon::fromTheme(QStringLiteral("wallet-open")));
 
         if (_walletEditor) {
             _walletEditor->setVisible(false);
