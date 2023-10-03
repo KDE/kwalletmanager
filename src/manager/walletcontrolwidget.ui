@@ -11,9 +11,6 @@
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <property name="margin">
-    <number>0</number>
-   </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
@@ -26,13 +23,6 @@
        </property>
        <property name="text">
         <string>KSqueezedTextLabel</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="_openClose">
-       <property name="text">
-        <string>Open...</string>
        </property>
       </widget>
      </item>
@@ -51,6 +41,13 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="_openClose">
+       <property name="text">
+        <string>Open...</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="_changePassword">

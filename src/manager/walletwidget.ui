@@ -50,8 +50,8 @@
      </widget>
      <widget class="QWidget" name="layout3">
       <layout class="QVBoxLayout" name="verticalLayout_4">
-       <property name="margin">
-        <number>0</number>
+       <property name="leftMargin">
+        <number>-1</number>
        </property>
        <item>
         <layout class="QHBoxLayout">
