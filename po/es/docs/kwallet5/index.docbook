@@ -150,7 +150,7 @@
 >Cifrado Blowfish</term>
 <listitem>
 <para
->&kwallet5; guarda estos datos confidenciales por usted en un archivo cifrado con mucha seguridad, al que pueden acceder todas las aplicaciones, y protegido con la contraseña maestra de su elección.</para>
+>&kwallet5; guarda estos datos confidenciales en un archivo cifrado con mucha seguridad, al que pueden acceder todas las aplicaciones, y protegido con la contraseña maestra de su elección.</para>
 
 <screenshot>
 <screeninfo
@@ -194,7 +194,7 @@
 </mediaobject>
 </screenshot>
 <para
->Las capturas de pantalla anteriores muestran un caso en el que no se ha encontrado en el sistema una clave GPG que permitía cifrar datos. Por favor, use aplicaciones como &kgpg; o &kleopatra; para crear una clave y vuelva a intentarlo de nuevo.</para>
+>Las capturas de pantalla anteriores muestran un caso en el que no se ha encontrado en el sistema una clave GPG que permitía cifrar datos. Use aplicaciones como &kgpg; o &kleopatra; para crear una clave y vuelva a intentarlo de nuevo.</para>
 
 <para
 >Si no se encuentra una clave GPG, se le mostrará e siguiente diálogo, en el que podrá seleccionar la clave a usar en la nueva cartera. </para>
@@ -375,7 +375,7 @@
 > <guimenuitem
 >Herramienta de gestión de carteras</guimenuitem
 ></menuchoice
-> del lanzador de aplicaciones. También puede iniciar &krunner; con el acceso de teclado <keycombo action="simul"
+> del lanzador de aplicaciones. También puede iniciar &krunner; con el atajo de teclado <keycombo action="simul"
 >&Alt;<keycap
 >F2</keycap
 ></keycombo
@@ -579,7 +579,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >&kwallet5; contiene un pequeño panel de configuración con algunas opciones que le permiten afinar &kwallet5; según sus preferencias personales. Las opciones por omisión de &kwallet5; son suficientes para la mayoría de usuarios.</para>
 
 <para
->Marque la casilla para activar o desactivar completamente el sistema de carteras de &kde;. Si esta casilla está sin marcar, &kwallet5; estará completamente desactivado y ninguna de las restantes opciones tendrá efecto, y &kwallet5; no guardará ninguna información, ni rellenará los formularios por usted.</para>
+>Marque la casilla para activar o desactivar completamente el sistema de carteras de &kde;. Si esta casilla está sin marcar, &kwallet5; estará completamente desactivado y ninguna de las restantes opciones tendrá efecto, y &kwallet5; no guardará ninguna información ni rellenará los formularios.</para>
 
 <variablelist>
 <title
@@ -739,7 +739,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Si ha configurado erróneamente una aplicación para que no use &kwallet5;, borre aquí la política para dicha aplicación.</para>
 <!-- FIXME difference to Revoke Authorization in kwallermanager?-->
 <para
->En el siguiente arranque de esta aplicación, usted puede definir una nueva política para acceder a la cartera. </para>
+>En el siguiente arranque de esta aplicación puede definir una nueva política para acceder a la cartera. </para>
 <screenshot>
 <screeninfo
 >Petición de acceso para abrir una cartera</screeninfo>
