@@ -272,15 +272,3 @@ msgstr "ポリシー"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "ウォレットマネージャを起動(&L)"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "(c) 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr ""
-#~ "この設定モジュールを使って KDE のウォレットシステムを設定することができま"
-#~ "す。"
