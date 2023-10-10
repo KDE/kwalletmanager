@@ -323,17 +323,17 @@ msgstr ""
 #: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "No s'ha pogut accedir en el fitxer XML «<b>%1</b>»."
+msgstr "No s'ha pogut accedir al fitxer en XML «<b>%1</b>»."
 
 #: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "S'ha produït un error en llegir el fitxer XML «<b>%1</b>»."
+msgstr "S'ha produït un error en llegir el fitxer en XML «<b>%1</b>»."
 
 #: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
-msgstr "S'ha produït un error: El fitxer XML no conté cap cartera."
+msgstr "S'ha produït un error: El fitxer en XML no conté cap cartera."
 
 #: kwalleteditor.cpp:1264
 #, kde-format
