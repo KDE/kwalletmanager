@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-18 02:00+0000\n"
+"POT-Creation-Date: 2023-10-18 01:43+0000\n"
 "PO-Revision-Date: 2023-09-18 06:38+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -228,7 +228,7 @@ msgstr "Žal je to ime mape že v uporabi. Ali želite poskusiti znova?"
 msgid "Try Again"
 msgstr "Poskusi znova"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:351
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ne poskusi"
@@ -349,53 +349,53 @@ msgstr ""
 "Sistem listnic za KDE ni omogočen, ali ga želite omogočiti? Če to ne "
 "storite, se bo KWalletManager končal, saj ne more delati brez branja listnic."
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:216
-#: kwalletmanager.cpp:281
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
+#: kwalletmanager.cpp:288
 #, kde-format
 msgid "Wallet"
 msgstr "Listnica"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:281
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:288
 #, kde-format
 msgid "No wallets open."
 msgstr "Ni nobene odprte listnice."
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:216
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #, kde-format
 msgid "A wallet is open."
 msgstr "Odprta je listnica."
 
-#: kwalletmanager.cpp:133 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Nova listnica ..."
 
-#: kwalletmanager.cpp:138
+#: kwalletmanager.cpp:145
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "Iz&briši listnico ..."
 
-#: kwalletmanager.cpp:143
+#: kwalletmanager.cpp:150
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Izvozi šifrirano"
 
-#: kwalletmanager.cpp:148
+#: kwalletmanager.cpp:155
 #, kde-format
 msgid "&Import encrypted"
 msgstr "Uvoz&i šifrirano"
 
-#: kwalletmanager.cpp:153
+#: kwalletmanager.cpp:160
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Nastavi &listnico ..."
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:168
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Zapri &vse listnice"
 
-#: kwalletmanager.cpp:250 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -404,103 +404,103 @@ msgstr ""
 "Listnice se ne da lepo zapreti. Verjetno jo uporablja drug program. Ali jo "
 "želite prisilno zapreti?"
 
-#: kwalletmanager.cpp:252 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "Prisilno zapri"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ne prisili"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Listnice se ne da lepo zapreti. Koda napake je %1."
 
-#: kwalletmanager.cpp:273
+#: kwalletmanager.cpp:280
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Napaka med odpiranjem listnice %1."
 
-#: kwalletmanager.cpp:315
+#: kwalletmanager.cpp:322
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Izberite ime za novo listnico:"
 
-#: kwalletmanager.cpp:323
+#: kwalletmanager.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nova listnica"
 
-#: kwalletmanager.cpp:342
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Prazno ime ni podprto. Izberite novega."
 
-#: kwalletmanager.cpp:342
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
 msgstr "Ustvari novo listnico"
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Žal ta listnica že obstaja. Boste poskusili z novim imenom?"
 
-#: kwalletmanager.cpp:350
+#: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
 msgstr "Poskusi novo"
 
-#: kwalletmanager.cpp:376
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Ali ste prepričani, da želite izbrisati listnico »%1«?"
 
-#: kwalletmanager.cpp:382
+#: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Ni bilo mogoče izbrisati listnice. Koda napake je %1."
 
-#: kwalletmanager.cpp:430
+#: kwalletmanager.cpp:437
 #, kde-format
 msgid "File name"
 msgstr "Ime datoteke"
 
-#: kwalletmanager.cpp:437
+#: kwalletmanager.cpp:444
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Odpiranje datoteke za pisanje ni uspelo"
 
-#: kwalletmanager.cpp:448
+#: kwalletmanager.cpp:455
 #, kde-format
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: kwalletmanager.cpp:458
+#: kwalletmanager.cpp:465
 #, kde-format
 msgid "Failed to open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
 
-#: kwalletmanager.cpp:471
+#: kwalletmanager.cpp:478
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Listnica z imenom %1 že obstaja, Opravilo prekinjeno"
 
-#: kwalletmanager.cpp:478
+#: kwalletmanager.cpp:485
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Datotek ni bilo mogoče kopirati"
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Prezrem neshranjene spremembe?"
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr "Prezri"
@@ -522,6 +522,12 @@ msgstr "&Nastavitve"
 #, kde-format
 msgid "&Help"
 msgstr "&Pomoč"
+
+#: kwalletmanagerwidget.cpp:224
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
+msgstr ""
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-18 02:00+0000\n"
+"POT-Creation-Date: 2023-10-18 01:43+0000\n"
 "PO-Revision-Date: 2019-02-10 08:29-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -221,7 +221,7 @@ msgstr "ਅਫਸੋਸ, ਉਹ ਫੋਲਡਰ ਵਰਤੋਂ ਵਿੱਚ ਹ
 msgid "Try Again"
 msgstr "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:351
+#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
 msgstr "ਕੋਸ਼ਿਸ਼ ਨਾ ਕਰੋ"
@@ -343,53 +343,53 @@ msgid ""
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:216
-#: kwalletmanager.cpp:281
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
+#: kwalletmanager.cpp:288
 #, kde-format
 msgid "Wallet"
 msgstr "ਵਾਲਿਟ"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:281
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:288
 #, kde-format
 msgid "No wallets open."
 msgstr "ਕੋਈ ਵਾਲਿਟ ਨਹੀਂ ਖੁੱਲਾ ਹੈ।"
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:216
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #, kde-format
 msgid "A wallet is open."
 msgstr "ਇੱਕ ਵਾਲਿਟ ਖੁੱਲਾ ਹੈ।"
 
-#: kwalletmanager.cpp:133 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "ਨਵਾਂ ਵਾਲਿਟ(&N)..."
 
-#: kwalletmanager.cpp:138
+#: kwalletmanager.cpp:145
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "...ਵਾਲਿਟ ਹਟਾਓ(&D)"
 
-#: kwalletmanager.cpp:143
+#: kwalletmanager.cpp:150
 #, kde-format
 msgid "Export as encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:148
+#: kwalletmanager.cpp:155
 #, kde-format
 msgid "&Import encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:153
+#: kwalletmanager.cpp:160
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "ਵਾਲਿਟ ਸੰਰਚਨਾ(&W)..."
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:168
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "ਸਭ ਵਾਲਿਟ ਬੰਦ ਕਰੋ(&A)"
 
-#: kwalletmanager.cpp:250 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -398,104 +398,104 @@ msgstr ""
 "ਵਾਲਿਟ ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਸਾਫ਼ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਹ ਸ਼ਾਇਦ ਕਿਸੇ ਹੋਰ ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਵਰਤਿਆ ਜਾ "
 "ਰਿਹਾ ਹੈ। ਕੀ ਤੁਸੀਂ ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kwalletmanager.cpp:252 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
 msgstr "ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰੋ"
 
-#: kwalletmanager.cpp:253 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
 msgstr "ਧੱਕਾ ਨਾ ਕਰੋ"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "ਵਾਲਿਟ ਨੂੰ ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰਨ ਲਈ ਅਸਮਰੱਥ। ਗਲਤੀ ਕੋਡ %1।"
 
-#: kwalletmanager.cpp:273
+#: kwalletmanager.cpp:280
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "ਵਾਲਿਟ %1 ਖੋਲ੍ਹਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
 
-#: kwalletmanager.cpp:315
+#: kwalletmanager.cpp:322
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "ਨਵੇਂ ਵਾਲਿਟ ਲਈ ਇੱਕ ਨਾਂ ਚੁਣੋ ਜੀ:"
 
-#: kwalletmanager.cpp:323
+#: kwalletmanager.cpp:330
 #, fuzzy, kde-format
 #| msgid "New Wallet"
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "ਨਵਾਂ ਵਾਲਿਟ"
 
-#: kwalletmanager.cpp:342
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr ""
 
-#: kwalletmanager.cpp:342
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
 msgstr ""
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "ਅਫ਼ਸੋਸ, ਉਹ ਵਾਲਿਟ ਤਾਂ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਵੱਖਰੇ ਨਾਂ ਨਾਲ ਕੋਸ਼ਿਸ ਕਰਨੀ ਹੈ?"
 
-#: kwalletmanager.cpp:350
+#: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
 msgstr "ਨਵੇਂ ਨਾਲ ਕੋਸ਼ਿਸ਼"
 
-#: kwalletmanager.cpp:376
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "ਕੀ ਤੁਸੀਂ '%1' ਵਾਲਿਟ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kwalletmanager.cpp:382
+#: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "ਵਾਲਿਟ ਹਟਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ। ਗਲਤੀ ਕੋਡ %1 ਸੀ।"
 
-#: kwalletmanager.cpp:430
+#: kwalletmanager.cpp:437
 #, kde-format
 msgid "File name"
 msgstr "ਫਾਇਲ ਨਾਂ"
 
-#: kwalletmanager.cpp:437
+#: kwalletmanager.cpp:444
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:448
+#: kwalletmanager.cpp:455
 #, kde-format
 msgid "Select file"
 msgstr ""
 
-#: kwalletmanager.cpp:458
+#: kwalletmanager.cpp:465
 #, kde-format
 msgid "Failed to open file"
 msgstr ""
 
-#: kwalletmanager.cpp:471
+#: kwalletmanager.cpp:478
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 
-#: kwalletmanager.cpp:478
+#: kwalletmanager.cpp:485
 #, kde-format
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -517,6 +517,12 @@ msgstr "ਸੈਟਿੰਗ(&S)"
 #, kde-format
 msgid "&Help"
 msgstr "ਮਦਦ(&H)"
+
+#: kwalletmanagerwidget.cpp:224
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
+msgstr ""
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
