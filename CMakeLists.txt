@@ -54,7 +54,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     StatusNotifierItem
 )
 
-ecm_set_disabled_deprecation_versions(QT 6.5
+ecm_set_disabled_deprecation_versions(QT 6.6
     KF 5.240.0
 )
 
