@@ -2,6 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 # Anıl Özbek <ozbekanil@gmail.com>, 2013.
 # Ayhan Yalçınsoy <dellpardus@hotmail.com>, 2008.
 # Ayşe Genç <ayse@uludag.org.tr>, 2005.
@@ -12,13 +13,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2011-2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2017.
 # Yıldız Kardeşler <turkishprogram@xposta.com>, 2003.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-10-05 13:06+0300\n"
+"PO-Revision-Date: 2023-10-18 13:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,7 +42,7 @@ msgstr "tulliana@gmail.com, volkangezer@gmail.com"
 #: allyourbase.cpp:203
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "'%1' adını taşıyan bir girdi var. Sürdürmek istiyor musunuz?"
+msgstr "'%1' adlı bir girdi halihazırda var. Sürdürmek ister misiniz?"
 
 #: allyourbase.cpp:228
 #, kde-format
@@ -260,12 +261,12 @@ msgstr "Parola: %1"
 #: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr "Ad-Değer Haritası: %1"
+msgstr "Ad-Değer haritası: %1"
 
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
-msgstr "İkili Veri: %1"
+msgstr "İkili veri: %1"
 
 #: kwalleteditor.cpp:778
 #, kde-format
@@ -390,7 +391,7 @@ msgstr "Şifreli Olarak Dışa Aktar"
 #: kwalletmanager.cpp:155
 #, kde-format
 msgid "&Import encrypted"
-msgstr "&Şifreliyi İçe Aktar"
+msgstr "&Şifreli Olarak İçe Aktar"
 
 #: kwalletmanager.cpp:160
 #, kde-format
@@ -455,7 +456,8 @@ msgstr "Yeni cüzdan oluştur"
 #: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr "Üzgünüm, bu cüzdan mevcut. Değişik bir isim dene?"
+msgstr ""
+"Üzgünüm, bu cüzdan halihazırda var. Başka bir ad denemek ister misiniz?"
 
 #: kwalletmanager.cpp:357
 #, kde-format
@@ -534,7 +536,7 @@ msgstr "&Yardım"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "K Cüzdan hizmetine bağlanırken bir hata oluştu:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
@@ -604,7 +606,7 @@ msgstr "George Staikos"
 #: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr "Asıl yazar ve daha önce projeyi yürüten"
+msgstr "Özgün yazar ve önceki bakımcı"
 
 #: main.cpp:41
 #, kde-format
@@ -614,7 +616,7 @@ msgstr "Michael Leupold"
 #: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr "Geliştirici ve daha önce projeyi yürüten"
+msgstr "Geliştirici ve önceki bakımcı"
 
 #: main.cpp:44
 #, kde-format
@@ -634,7 +636,7 @@ msgstr "Başlangıçta pencereyi göster"
 #: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr "Yalnızca kwalletd tarafından kullanım için"
+msgstr "Yalnızca kwalletd kullanımı için"
 
 #: main.cpp:55
 #, kde-format
@@ -705,7 +707,7 @@ msgstr "İçeriği &Gizle"
 #: walletwidget.ui:185 walletwidget.ui:233
 #, kde-format
 msgid "Show &Contents"
-msgstr "İçeriği Göster"
+msgstr "İç&eriği Göster"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
 #: walletwidget.ui:296

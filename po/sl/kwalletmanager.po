@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-09-18 06:38+0200\n"
+"PO-Revision-Date: 2023-10-18 07:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -93,25 +93,25 @@ msgstr "Prekini povezavo"
 #: kbetterthankdialogbase.ui:43
 #, kde-format
 msgid "&Replace"
-msgstr "&Zamenjaj"
+msgstr "Zamenjaj"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
 #: kbetterthankdialogbase.ui:53
 #, kde-format
 msgid "Replace &All"
-msgstr "Zamenjaj &vse"
+msgstr "Zamenjaj vse"
 
 #. i18n: ectx: property (text), widget (QPushButton, _deny)
 #: kbetterthankdialogbase.ui:60
 #, kde-format
 msgid "&Skip"
-msgstr "&Preskoči"
+msgstr "Preskoči"
 
 #. i18n: ectx: property (text), widget (QPushButton, _denyForever)
 #: kbetterthankdialogbase.ui:67
 #, kde-format
 msgid "Skip A&ll"
-msgstr "Preskoči vs&e"
+msgstr "Preskoči vse"
 
 #: kwalleteditor.cpp:87
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Poišči"
 #: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
-msgstr "Pri&kaži vrednosti"
+msgstr "Prikaži vrednosti"
 
 #: kwalleteditor.cpp:196
 #, kde-format
@@ -131,12 +131,12 @@ msgstr "&Nova mapa..."
 #: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
-msgstr "Iz&briši mapo"
+msgstr "Izbriši mapo"
 
 #: kwalleteditor.cpp:203
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "Uvoz&i listnico ..."
+msgstr "Uvoz&i listnico..."
 
 #: kwalleteditor.cpp:207
 #, kde-format
@@ -146,12 +146,12 @@ msgstr "Uvoz&i XML..."
 #: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Export as XML..."
-msgstr "I&zvozi kot XML..."
+msgstr "Izvozi kot XML..."
 
 #: kwalleteditor.cpp:215
 #, kde-format
 msgid "&Copy"
-msgstr "&Kopiraj"
+msgstr "Kopiraj"
 
 #: kwalleteditor.cpp:220
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "P&reimenuj"
 #: kwalleteditor.cpp:230 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
-msgstr "I&zbriši"
+msgstr "Izbriši"
 
 #: kwalleteditor.cpp:235
 #, kde-format
@@ -368,12 +368,12 @@ msgstr "Odprta je listnica."
 #: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Nova listnica ..."
+msgstr "&Nova listnica..."
 
 #: kwalletmanager.cpp:145
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "Iz&briši listnico ..."
+msgstr "Izbriši listnico..."
 
 #: kwalletmanager.cpp:150
 #, kde-format
@@ -388,12 +388,12 @@ msgstr "Uvoz&i šifrirano"
 #: kwalletmanager.cpp:160
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "Nastavi &listnico ..."
+msgstr "Nastavi listnico..."
 
 #: kwalletmanager.cpp:168
 #, kde-format
 msgid "Close &All Wallets"
-msgstr "Zapri &vse listnice"
+msgstr "Zapri vse listnice"
 
 #: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
 #, kde-format
@@ -509,25 +509,25 @@ msgstr "Prezri"
 #: kwalletmanager.rc:4
 #, kde-format
 msgid "&File"
-msgstr "&Datoteka"
+msgstr "Datoteka"
 
 #. i18n: ectx: Menu (settings)
 #: kwalletmanager.rc:17
 #, kde-format
 msgid "&Settings"
-msgstr "&Nastavitve"
+msgstr "Nastavitve"
 
 #. i18n: ectx: Menu (help)
 #: kwalletmanager.rc:20
 #, kde-format
 msgid "&Help"
-msgstr "&Pomoč"
+msgstr "Pomoč"
 
 #: kwalletmanagerwidget.cpp:224
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Pri povezovanju s storitvijo KWallet je prišlo do napake:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
@@ -537,12 +537,12 @@ msgstr "&Odpri ..."
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "Spremeni &geslo ..."
+msgstr "Spremeni geslo..."
 
 #: kwalletpopup.cpp:53
 #, kde-format
 msgid "Disconnec&t"
-msgstr "Pre&kini povezavo"
+msgstr "Prekini povezavo"
 
 #: kwmapeditor.cpp:129
 #, kde-format
