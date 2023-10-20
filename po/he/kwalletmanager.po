@@ -1,63 +1,61 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# SPDX-FileCopyrightText: 2012, 2013, 2018, 2020, 2023 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-10-19 09:19+0200\n"
-"Last-Translator: giovanni <g.sora@tiscali.it>\n"
-"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
-"Language: ia\n"
+"PO-Revision-Date: 2023-10-20 00:18+0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Giovanni Sora"
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "g.sora@tiscali.it"
+msgstr "kde-l10n-he@kde.org"
 
 #: allyourbase.cpp:203
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "Un elemento con le nomine '%1' ja existe. Tu vole continuar?"
+msgstr "כבר קיימת רשומה בשם ‚%1’. להמשיך?"
 
 #: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "Un dossier con le nomine '%1' ja existe. Que tu vole facer?"
+msgstr "כבר קיימת תיקייה בשם ‚%1’. מה כדאי לעשות?"
 
 #: allyourbase.cpp:231
 #, kde-format
 msgid "Replace"
-msgstr "Reimplacia"
+msgstr "להחליף"
 
 #: allyourbase.cpp:341
 #, kde-format
 msgid "Folders"
-msgstr "Dossieres"
+msgstr "תיקיות"
 
 #: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr ""
-"Un error inexpectate occurreva durante que on cercava deponer le elemento"
+msgstr "אירעה שגיאה בלתי צפויה בעת ניסיון גרירת הפריט"
 
 #: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
-msgstr ""
-"Un error inexpectate occurreva durante que on cercava deponer le entrata"
+msgstr "אירעה שגיאה בלתי צפויה בעת ניסיון גרירת הרשומה"
 
 #: allyourbase.cpp:475
 #, kde-format
@@ -65,174 +63,174 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-"Un error inexpectate occurreva durante que on cercava deler le dossier "
-"original, ma le dossier ha essite copiate con successo"
+"אירעה שגיאה בלתי צפויה בעת ניסיון מחיקת התיקייה המקורית אך התיקייה הועתקה "
+"בהצלחה"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr "Iste applicationes es currentemente connectite a iste portafolio:"
+msgstr "יישומים אלו כרגע מחוברים לארנק הזה:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
 #, kde-format
 msgid "These applications are authorized to access this wallet:"
-msgstr "Iste applicationes es authorisate pro acceder a iste portafolio:"
+msgstr "היישומים האלו מורשים לגשת לארנק:"
 
 #: disconnectappbutton.cpp:16
 #, kde-format
 msgid "Disconnect"
-msgstr "Disconnecte"
+msgstr "ניתוק"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
 #, kde-format
 msgid "&Replace"
-msgstr "&Reimplacia"
+msgstr "ה&חלפה"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
 #: kbetterthankdialogbase.ui:53
 #, kde-format
 msgid "Replace &All"
-msgstr "R&eimplacia Toto"
+msgstr "החלפה של ה&כול"
 
 #. i18n: ectx: property (text), widget (QPushButton, _deny)
 #: kbetterthankdialogbase.ui:60
 #, kde-format
 msgid "&Skip"
-msgstr "&Salta"
+msgstr "&דילוג"
 
 #. i18n: ectx: property (text), widget (QPushButton, _denyForever)
 #: kbetterthankdialogbase.ui:67
 #, kde-format
 msgid "Skip A&ll"
-msgstr "Salta &Toto"
+msgstr "די&לוג על הכול"
 
 #: kwalleteditor.cpp:87
 #, kde-format
 msgid "Search"
-msgstr "Cerca"
+msgstr "חיפוש"
 
 #: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
-msgstr "Mon&stra valores"
+msgstr "ה&צגת ערכים"
 
 #: kwalleteditor.cpp:196
 #, kde-format
 msgid "&New Folder..."
-msgstr "&Nove dossier..."
+msgstr "&תיקייה חדשה…"
 
 #: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
-msgstr "&Dele  dossier"
+msgstr "מחיקת &תיקייה"
 
 #: kwalleteditor.cpp:203
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "&Importa un portafolio..."
+msgstr "יי&בוא ארנק…"
 
 #: kwalleteditor.cpp:207
 #, kde-format
 msgid "&Import XML..."
-msgstr "&Importa XML..."
+msgstr "יי&בוא XML…"
 
 #: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Export as XML..."
-msgstr "&Exporta como XML..."
+msgstr "יי&צוא כ־XML…"
 
 #: kwalleteditor.cpp:215
 #, kde-format
 msgid "&Copy"
-msgstr "&Copia"
+msgstr "ה&עתקה"
 
 #: kwalleteditor.cpp:220
 #, kde-format
 msgid "&New..."
-msgstr "&Nove ..."
+msgstr "&חדש…"
 
 #: kwalleteditor.cpp:225
 #, kde-format
 msgid "&Rename"
-msgstr "&Renomina"
+msgstr "&שינוי שם"
 
 #: kwalleteditor.cpp:230 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
-msgstr "&Dele"
+msgstr "מחי&קה"
 
 #: kwalleteditor.cpp:235
 #, kde-format
 msgid "Always show contents"
-msgstr "Monstra sempre contentos"
+msgstr "תמיד להציג את התוכן"
 
 #: kwalleteditor.cpp:239
 #, kde-format
 msgid "Always hide contents"
-msgstr "Cela sempre contentos"
+msgstr "תמיד להסתיר את התוכן"
 
 #: kwalleteditor.cpp:348
 #, kde-format
 msgid "Passwords"
-msgstr "Contrasignos"
+msgstr "סיסמאות"
 
 #: kwalleteditor.cpp:349
 #, kde-format
 msgid "Maps"
-msgstr "Mappas"
+msgstr "מפות"
 
 #: kwalleteditor.cpp:350
 #, kde-format
 msgid "Binary Data"
-msgstr "Datos binari"
+msgstr "נתונים בינריים"
 
 #: kwalleteditor.cpp:351
 #, kde-format
 msgid "Unknown"
-msgstr "Incognite"
+msgstr "לא ידוע"
 
 #: kwalleteditor.cpp:391
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr "Tu es secur que tu vole dler le dossier '%1' ex le portafolio?"
+msgstr "למחוק את התיקייה ‚%1’ מהארנק?"
 
 #: kwalleteditor.cpp:395
 #, kde-format
 msgid "Error deleting folder."
-msgstr "Error durante que on deleva dossier."
+msgstr "שגיאה במחיקת תיקייה."
 
 #: kwalleteditor.cpp:414
 #, kde-format
 msgid "New Folder"
-msgstr "Nove dossier"
+msgstr "תיקייה חדשה"
 
 #: kwalleteditor.cpp:415
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Pro favor tu selige un nomine pro le nove dossier:"
+msgstr "נא לבחור שם לתיקייה החדשה:"
 
 #: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr "Desolate, ille nomine de dossier es ja in uso. Tu prova de nove?"
+msgstr "שם התיקייה הזה כבר בשימוש, עמך הסליחה. לנסות שוב?"
 
 #: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
 msgid "Try Again"
-msgstr "Essaya de nove"
+msgstr "לנסות שוב"
 
 #: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
-msgstr "Non essaya"
+msgstr "לא לנסות"
 
 #: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr "Error durante que on salveguardava entrata. Codice de error: %1"
+msgstr "שגיאה בשמירת רשומה. קוד שגיאה: %1"
 
 #: kwalleteditor.cpp:489
 #, kde-format
@@ -240,75 +238,73 @@ msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
-"Le contentos del elemento currente ha cambiate.\n"
-"Tu vole salveguardar modificationes?"
+"תוכן הפריט הנוכחי השתנה.\n"
+"לשמור את השינויים?"
 
 #: kwalleteditor.cpp:543 kwalleteditor.cpp:875
 #, kde-format
 msgid "Password: %1"
-msgstr "Contrasigno: %1"
+msgstr "סיסמה: %1"
 
 #: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr "Mappa de Nomine-Valor: %1"
+msgstr "מפת שם-ערך: %1"
 
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
-msgstr "Datos binari: %1"
+msgstr "נתונים בינריים: %1"
 
 #: kwalleteditor.cpp:778
 #, kde-format
 msgid "New Entry"
-msgstr "Nove entrata"
+msgstr "רשומה חדשה"
 
 #: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr "Pro favor tu selige un nomine pro le nove entrata:"
+msgstr "נא לבחור שם לרשומה החדשה:"
 
 #: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr "Desolate,ille entrata ja existe. Tu prova de nove?"
+msgstr "הרשומה כבר קיימת, עמך הסליחה. לנסות שוב?"
 
 #: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr ""
-"Un error inexpectate occurreva durante que on cercava adder le nove entrata"
+msgstr "אירעה שגיאה בלתי צפויה בניסיון להוסיף את הרשומה החדשה"
 
 #: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr ""
-"Un error inexpectate occurreva durante que on cercava renominar le entrata"
+msgstr "אירעה שגיאה בלתי צפויה בניסיון לשנות את שם הרשומה"
 
 #: kwalleteditor.cpp:891
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr "Tu es secur que tu vole deler le elemento '%1'?"
+msgstr "למחוק את הפריט ‚%1’?"
 
 #: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr "Un error inexpectate occurreva durante que on cercava deler le entrata"
+msgstr "אירעה שגיאה בלתי צפויה בניסיון למחוק את הרשומה"
 
 #: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
-msgstr "Incapace de aperir le requirite portafolio."
+msgstr "לא ניתן לפתוח את הארנק הנבחר."
 
 #: kwalleteditor.cpp:959
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr "Incapacea crear un file temporanee per discargar '<b>%1</b>'."
+msgstr "לא ניתן ליצור קובץ זמני להורדת ‚<b>%1</b>’."
 
 #: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr "Incapace de acceder a  portafolio '<b>%1</b>'."
+msgstr "לא ניתן לגשת לארנק ‚<b>%1</b>’."
 
 #: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
 #: kwalleteditor.cpp:1143
@@ -316,30 +312,27 @@ msgstr "Incapace de acceder a  portafolio '<b>%1</b>'."
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
-msgstr ""
-"Dossier '<b>%1</b>' ja contine un entrata '<b>%2</b>'. Tu vole reimplaciar "
-"lo?"
+msgstr "התיקייה ‚<b>%1</b>’ כבר מכילה רשומה בשם ‚<b>%2</b>’.  להחליף אותה?"
 
 #: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "Incapace de acceder a file XML '<b>%1</b>'."
+msgstr "לא ניתן לגשת לקובץ ה־XML‏ ‚<b>%1</b>’."
 
 #: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr ""
-"Error durante que on aperiva per leger  file XML '<b>%1</b> per ingresso."
+msgstr "שגיאה בקריאת קובץ ה־XML‏ ‚<b>%1</b>’ כקלט."
 
 #: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
-msgstr "Error: file XML non contine un portafolio."
+msgstr "שגיאה: קובץ ה־XML לא מכיל ארנק."
 
 #: kwalleteditor.cpp:1264
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "Incapace de memorisar in '<b>%1</b>'."
+msgstr "לא ניתן לאחסן אל ‚<b>%1</b>’."
 
 #: kwalletmanager.cpp:64
 #, kde-format
@@ -347,55 +340,54 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
-"Le systema de KDE Wallet non es activate. Tu vole que io lo activa? Si no, "
-"le Gerente de KWallet abandonara proque illo non pote functionar sin leger "
-"le portafolios"
+"מערכת הארנקים של KDE לא פעילה. להפעיל אותה? אם לא, KWalletManager ייסגר "
+"כיוון שלא יכול לפעול מבלי לקרוא את הארנקים."
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #: kwalletmanager.cpp:288
 #, kde-format
 msgid "Wallet"
-msgstr "Portafolio"
+msgstr "ארנק"
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:288
 #, kde-format
 msgid "No wallets open."
-msgstr "Nulle portafolio aperite."
+msgstr "אין ארנקים פתוחים."
 
 #: kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #, kde-format
 msgid "A wallet is open."
-msgstr "Un portafolio es aperite."
+msgstr "ארנק פתוח."
 
 #: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Nove portafolio..."
+msgstr "ארנק &חדש…"
 
 #: kwalletmanager.cpp:145
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "%Dele portafolio..."
+msgstr "מחי&קת ארנק…"
 
 #: kwalletmanager.cpp:150
 #, kde-format
 msgid "Export as encrypted"
-msgstr "Exporta como cryptate"
+msgstr "ייצוא כמוצפן"
 
 #: kwalletmanager.cpp:155
 #, kde-format
 msgid "&Import encrypted"
-msgstr "&Importa cryptate"
+msgstr "יי&בוא מוצפן"
 
 #: kwalletmanager.cpp:160
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "Configura &Portafolio..."
+msgstr "ה&גדרת ארנק…"
 
 #: kwalletmanager.cpp:168
 #, kde-format
 msgid "Close &All Wallets"
-msgstr "Claude &Tote Portafolios"
+msgstr "סגירת &כל הארנקים"
 
 #: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
 #, kde-format
@@ -403,249 +395,248 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
-"Incapace de clauder portafolio con munditia. Probabilemente il es in uso per "
-"altere applicationes. Tu vole fortiar lo a claudite?"
+"לא ניתן לסגור את הארנק בצורה נקייה. כנראה שהוא בשימוש של יישום אחר. לאלץ את "
+"סגירתו?"
 
 #: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
-msgstr "Fortia clausura"
+msgstr "לאלץ סגירה"
 
 #: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
-msgstr "Non fortia"
+msgstr "לא לאלץ"
 
 #: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr ""
-"Incapace de fortiar a claudite le portafolio. Codice de error esseva %1"
+msgstr "לא ניתן לאלץ את סגירת הארנק. קוד השגיאה היה %1."
 
 #: kwalletmanager.cpp:280
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr "Error durante que on aperiva portafolio %1."
+msgstr "שגיאה בפתיחת הארנק %1."
 
 #: kwalletmanager.cpp:322
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Pro favor selige un nomine per le nove portafolio:"
+msgstr "נא לבחור שם לארנק החדש:"
 
 #: kwalletmanager.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
-msgstr "Nove portafolio"
+msgstr "ארנק חדש"
 
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr "Vacue nomine non es supportate. Pro favor selige un nove."
+msgstr "אין תמיכה בשם ריק. נא לבחור בשם חדש."
 
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
-msgstr "Crea un nove portafolio"
+msgstr "יצירת ארנק חדש"
 
 #: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr "Desolate, le portafolio ja existe. Tu prova con un altere nomine?"
+msgstr "הארנק כבר קיים. לנסות שם חדש?"
 
 #: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
-msgstr "Essaya nove"
+msgstr "לנסות חדש"
 
 #: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr "Tu es secur que tu vole deler le portafolio '%1'?"
+msgstr "למחוק את הארנק ‚%1’?"
 
 #: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr "Incapace de deler le portafolio. Codice de error esseva %1"
+msgstr "לא ניתן למחוק את הארנק. קוד השגיאה היה %1."
 
 #: kwalletmanager.cpp:437
 #, kde-format
 msgid "File name"
-msgstr "Nomine de file"
+msgstr "שם קובץ"
 
 #: kwalletmanager.cpp:444
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr "Il falleva a aperir  file pro scriber"
+msgstr "פתיחת הקובץ לכתיבה נכשלה"
 
 #: kwalletmanager.cpp:455
 #, kde-format
 msgid "Select file"
-msgstr "Selige File"
+msgstr "בחירת קובץ"
 
 #: kwalletmanager.cpp:465
 #, kde-format
 msgid "Failed to open file"
-msgstr "Falleva a aperir file"
+msgstr "פתיחת הקובץ נכשלה"
 
 #: kwalletmanager.cpp:478
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr "Portafolio nominate %1 ja existe. Operation abortate"
+msgstr "כבר קיים ארנק בשם %1, הפעולה בוטלה"
 
 #: kwalletmanager.cpp:485
 #, kde-format
 msgid "Failed to copy files"
-msgstr "Il falleva a copiar files"
+msgstr "העתקת הקבצים נכשלה"
 
 #: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
-msgstr "Ignora modificationes non salveguardate?"
+msgstr "להתעלם משינויים שלא נשמרו?"
 
 #: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
-msgstr "Ignora"
+msgstr "להתעלם"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
 #, kde-format
 msgid "&File"
-msgstr "&File"
+msgstr "&קובץ"
 
 #. i18n: ectx: Menu (settings)
 #: kwalletmanager.rc:17
 #, kde-format
 msgid "&Settings"
-msgstr "Preferentia&s"
+msgstr "ה&גדרות"
 
 #. i18n: ectx: Menu (help)
 #: kwalletmanager.rc:20
 #, kde-format
 msgid "&Help"
-msgstr "Ad&juta"
+msgstr "ע&זרה"
 
 #: kwalletmanagerwidget.cpp:224
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr "Un error occurreva quando on connecteva al servicio de KWallet:<nl/>%1"
+msgstr "אירעה שגיאה בהתחברות לשירות KWallet:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
 msgid "&Open..."
-msgstr "&Aperi ..."
+msgstr "&פתיחה…"
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "Cambia &Contrasigno..."
+msgstr "החלפת &סיסמה…"
 
 #: kwalletpopup.cpp:53
 #, kde-format
 msgid "Disconnec&t"
-msgstr "Disconnec&te"
+msgstr "&ניתוק"
 
 #: kwmapeditor.cpp:129
 #, kde-format
 msgid "Key"
-msgstr "Clave"
+msgstr "מפתח"
 
 #: kwmapeditor.cpp:129
 #, kde-format
 msgid "Value"
-msgstr "Valor"
+msgstr "ערך"
 
 #: kwmapeditor.cpp:147 kwmapeditor.cpp:196
 #, kde-format
 msgid "Delete Entry"
-msgstr "Dele entrata"
+msgstr "מחיקת רשומה"
 
 #: kwmapeditor.cpp:216
 #, kde-format
 msgid "&New Entry"
-msgstr "&Nove entrata"
+msgstr "&רשומה חדשה"
 
 #: main.cpp:27
 #, kde-format
 msgid "Wallet Manager"
-msgstr "Gerente de portafolio"
+msgstr "מנהל ארנקים"
 
 #: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "Instrumento per gerer portafolio de KDE"
+msgstr "כלי לניהול ארנקי KDE"
 
 #: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "Copyright ©2013–2017, Autores de Gestor de KWallet"
+msgstr "כל הזכויות שמורות ©2013–2017, יוצרי מנהל KWallet"
 
 #: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
-msgstr "Valentin Rusu"
+msgstr "ולנטין רוסו"
 
 #: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
-msgstr "Mantenitor - refactoring de interfacie usator"
+msgstr "מתחזק, עיצוב מחדש של ממשק המשתמש"
 
 #: main.cpp:38
 #, kde-format
 msgid "George Staikos"
-msgstr "George Staikos"
+msgstr "ג׳ורג׳ סטייקוס"
 
 #: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr "Autor original e mantenitor precedente"
+msgstr "יוצר מקורי ומתחזק לשעבר"
 
 #: main.cpp:41
 #, kde-format
 msgid "Michael Leupold"
-msgstr "Michael Leupold"
+msgstr "מייקל לויפולד"
 
 #: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr "Disveloppator e mantenitor precedente"
+msgstr "מפתח ומתחזק לשעבר"
 
 #: main.cpp:44
 #, kde-format
 msgid "Isaac Clerencia"
-msgstr "Isaac Clerencia"
+msgstr "אייזק קלרנסיה"
 
 #: main.cpp:45
 #, kde-format
 msgid "Developer"
-msgstr "Developpator"
+msgstr "מפתח"
 
 #: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
-msgstr "Monstra fenestra al initio"
+msgstr "הצגת חלון בפתיחה"
 
 #: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr "Solmente per uso de kwalletd"
+msgstr "לשימוש kwalletd בלבד"
 
 #: main.cpp:55
 #, kde-format
 msgid "A wallet name"
-msgstr "Un nomine de portafolio"
+msgstr "שם ארנק"
 
 #: revokeauthbutton.cpp:16
 #, kde-format
 msgid "Revoke Authorization"
-msgstr "Revoca authorisation"
+msgstr "שלילת אישור"
 
 #: walletcontrolwidget.cpp:60
 #, kde-format
 msgid "&Close"
-msgstr "&Claude"
+msgstr "&סגירה"
 
 #: walletcontrolwidget.cpp:77
 #, kde-format
@@ -653,12 +644,12 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open"
-msgstr "Le portafolio ' %1'  es currentemente aperite."
+msgstr "הארנק ‚%1’ פתוח כרגע"
 
 #: walletcontrolwidget.cpp:94
 #, kde-format
 msgid "The wallet is currently closed"
-msgstr "Le portafolio es currentemente claudite"
+msgstr "הארנק סגור כרגע"
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:28
@@ -670,84 +661,47 @@ msgstr "KSqueezedTextLabel"
 #: walletcontrolwidget.ui:35
 #, kde-format
 msgid "Open..."
-msgstr "Aperi ..."
+msgstr "פתיחה…"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:58
 #, kde-format
 msgid "Change Password..."
-msgstr "Cambia contrasigno..."
+msgstr "החלפת סיסמה…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:74
 #, kde-format
 msgid "Contents"
-msgstr "Contentos"
+msgstr "תוכן"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
 #: walletcontrolwidget.ui:111
 #, kde-format
 msgid "Applications"
-msgstr "Applicationes"
+msgstr "יישומים"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:142
 #, kde-format
 msgid "Hide &Contents"
-msgstr "Cela &Contentos"
+msgstr "הסתרת &תוכן"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
 #: walletwidget.ui:185 walletwidget.ui:233
 #, kde-format
 msgid "Show &Contents"
-msgstr "Monstra &Contentos"
+msgstr "הצגת &תוכן"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
 #: walletwidget.ui:296
 #, kde-format
 msgid "&Undo"
-msgstr "Ann&ulla"
+msgstr "ה&חזרה"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
 #: walletwidget.ui:306
 #, kde-format
 msgid "&Save"
-msgstr "&Salveguarda"
-
-#~ msgid "Open Wallet..."
-#~ msgstr "Aperi portafolio..."
-
-#~ msgid "Error opening XML file '<b>%1</b>' for input."
-#~ msgstr "Error durante que on aperiva file XML '<b>%1</b> per ingresso."
-
-#~ msgid ""
-#~ "This is a binary data entry.  It cannot be edited as its format is "
-#~ "unknown and application specific."
-#~ msgstr ""
-#~ "Isto es un entrata de datos binari. Il non pote essere modificate proque "
-#~ "su formato es incognite e specific de application."
-
-#~ msgid "(c) 2003,2004 George Staikos"
-#~ msgstr "(c) 2003,2004 George Staikos"
-
-#~ msgid "Maintainer"
-#~ msgstr "Mantenitor"
-
-#~ msgid "&Export..."
-#~ msgstr "&Exporta..."
-
-#, fuzzy
-#~| msgid "Change &Password..."
-#~ msgid "Change password..."
-#~ msgstr "Cambia &Contrasigno..."
-
-#~ msgid "That wallet file already exists.  You cannot overwrite wallets."
-#~ msgstr "Le portafolio ja existe.Tu non pote superscriber portafolios"
-
-#~ msgid ""
-#~ "This wallet was forced closed.  You must reopen it to continue working "
-#~ "with it."
-#~ msgstr ""
-#~ "Iste portafolio esseva fortiate a claudite. Tu debe reaperir lo pro "
-#~ "continuar travaliar con illo."
+msgstr "&שמירה"
