@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-09-19 19:10+0200\n"
+"PO-Revision-Date: 2023-10-19 12:03+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -559,6 +559,7 @@ msgstr "&Aide"
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
+"Une erreur est survenue lors de la connexion au service de KWallet :<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
