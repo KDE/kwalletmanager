@@ -1,11 +1,11 @@
 # Translation for kcmkwallet.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2022 This file is copyright:
+# Copyright (C) 2003-2023 This file is copyright:
 # This file is distributed under the same license as the kwalletmanager package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003, 2005.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2004, 2005, 2008, 2009, 2014, 2017, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2004, 2005, 2008, 2009, 2014, 2017, 2021, 2022, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
