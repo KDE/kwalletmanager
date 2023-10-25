@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
     KCrash::initialize();
-    KLocalizedString::setApplicationDomain("kwalletmanager");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("kwalletmanager"));
 
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
 
