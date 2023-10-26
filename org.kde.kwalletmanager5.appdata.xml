@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>KWalletManager</name>
   <name xml:lang="ar">مدير محفظتك</name>
+  <name xml:lang="ast">KWalletManager</name>
   <name xml:lang="az">KDE Cüzdanı İdarəetməsi</name>
   <name xml:lang="bg">KWalletManager</name>
   <name xml:lang="ca">KWalletManager</name>
@@ -50,6 +51,7 @@
   <name xml:lang="zh-TW">KWalletManager</name>
   <summary>Wallet Management Tool</summary>
   <summary xml:lang="ar">1</summary>
+  <summary xml:lang="ast">Ferramienta pa la xestión de carteres</summary>
   <summary xml:lang="az">KDE Cüzdanı İdarəetmə Vasitəsi</summary>
   <summary xml:lang="bg">Инструмент за настройване на Портфейл</summary>
   <summary xml:lang="ca">Eina per a la gestió de carteres</summary>
