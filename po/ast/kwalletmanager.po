@@ -1,62 +1,61 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2016, 2017, 2023 Vít Pelčák <vit@pelcak.org>
-# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
 #
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-10-19 10:33+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2023-10-25 11:45+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr "Softastur"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr "alministradores@softastur.org"
 
 #: allyourbase.cpp:203
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "Složka pojmenovaná '%1' již existuje. Přejete si pokračovat?"
+msgstr ""
 
 #: allyourbase.cpp:228
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "Složka pojmenovaná '%1' již existuje. Co si přejete udělat?"
+msgstr ""
 
 #: allyourbase.cpp:231
 #, kde-format
 msgid "Replace"
-msgstr "Nahradit"
+msgstr ""
 
 #: allyourbase.cpp:341
 #, kde-format
 msgid "Folders"
-msgstr "Složky"
+msgstr ""
 
 #: allyourbase.cpp:375
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr "Nastal neočekávaná chyba při pokusu o upuštění položky"
+msgstr ""
 
 #: allyourbase.cpp:451
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
-msgstr "Nastal neočekávaná chyba při pokusu o upuštění záznamu"
+msgstr ""
 
 #: allyourbase.cpp:475
 #, kde-format
@@ -64,174 +63,172 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-"Nastal neočekávaná chyba při pokusu o smazání původní složky, ale složka "
-"byla úspěšně zkopírována"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr "Tyto aplikace jsou momentálně připojeny k této úschovně:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
 #, kde-format
 msgid "These applications are authorized to access this wallet:"
-msgstr "Tyto aplikace jsou oprávněny přistupovat k úschovně:"
+msgstr ""
 
 #: disconnectappbutton.cpp:16
 #, kde-format
 msgid "Disconnect"
-msgstr "Odpojit"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
 #, kde-format
 msgid "&Replace"
-msgstr "Nah&radit"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
 #: kbetterthankdialogbase.ui:53
 #, kde-format
 msgid "Replace &All"
-msgstr "N&ahradit vše"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _deny)
 #: kbetterthankdialogbase.ui:60
 #, kde-format
 msgid "&Skip"
-msgstr "Pře&skočit"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _denyForever)
 #: kbetterthankdialogbase.ui:67
 #, kde-format
 msgid "Skip A&ll"
-msgstr "Přeskoči&t vše"
+msgstr ""
 
 #: kwalleteditor.cpp:87
 #, kde-format
 msgid "Search"
-msgstr "Hledat"
+msgstr ""
 
 #: kwalleteditor.cpp:96
 #, kde-format
 msgid "&Show values"
-msgstr "Zo&brazit hodnoty"
+msgstr ""
 
 #: kwalleteditor.cpp:196
 #, kde-format
 msgid "&New Folder..."
-msgstr "&Nová složka..."
+msgstr ""
 
 #: kwalleteditor.cpp:200
 #, kde-format
 msgid "&Delete Folder"
-msgstr "&Smazat složku"
+msgstr ""
 
 #: kwalleteditor.cpp:203
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "&Importovat úschovnu..."
+msgstr ""
 
 #: kwalleteditor.cpp:207
 #, kde-format
 msgid "&Import XML..."
-msgstr "&Importovat XML..."
+msgstr ""
 
 #: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Export as XML..."
-msgstr "&Exportovat do XML..."
+msgstr ""
 
 #: kwalleteditor.cpp:215
 #, kde-format
 msgid "&Copy"
-msgstr "&Kopírovat"
+msgstr ""
 
 #: kwalleteditor.cpp:220
 #, kde-format
 msgid "&New..."
-msgstr "&Nový..."
+msgstr ""
 
 #: kwalleteditor.cpp:225
 #, kde-format
 msgid "&Rename"
-msgstr "&Přejmenovat"
+msgstr ""
 
 #: kwalleteditor.cpp:230 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
-msgstr "&Smazat"
+msgstr ""
 
 #: kwalleteditor.cpp:235
 #, kde-format
 msgid "Always show contents"
-msgstr "Vždy zobrazit obsah"
+msgstr ""
 
 #: kwalleteditor.cpp:239
 #, kde-format
 msgid "Always hide contents"
-msgstr "Vždy skrýt obsah"
+msgstr ""
 
 #: kwalleteditor.cpp:348
 #, kde-format
 msgid "Passwords"
-msgstr "Hesla"
+msgstr "Contraseñes"
 
 #: kwalleteditor.cpp:349
 #, kde-format
 msgid "Maps"
-msgstr "Mapy"
+msgstr ""
 
 #: kwalleteditor.cpp:350
 #, kde-format
 msgid "Binary Data"
-msgstr "Binární data"
+msgstr "Datos binarios"
 
 #: kwalleteditor.cpp:351
 #, kde-format
 msgid "Unknown"
-msgstr "Neznámé"
+msgstr ""
 
 #: kwalleteditor.cpp:391
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr "Opravdu si přejete odstranit složku '%1' z úschovny?"
+msgstr ""
 
 #: kwalleteditor.cpp:395
 #, kde-format
 msgid "Error deleting folder."
-msgstr "Chyba při mazání složky."
+msgstr ""
 
 #: kwalleteditor.cpp:414
 #, kde-format
 msgid "New Folder"
-msgstr "Nová složka"
+msgstr ""
 
 #: kwalleteditor.cpp:415
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Prosím, zvolte název pro novou složku:"
+msgstr ""
 
 #: kwalleteditor.cpp:425
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr "Takový název složky je již používán. Zkusit znovu?"
+msgstr ""
 
 #: kwalleteditor.cpp:427 kwalleteditor.cpp:792
 #, kde-format
 msgid "Try Again"
-msgstr "Zkusit znovu"
+msgstr ""
 
 #: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
-msgstr "Nezkoušet"
+msgstr ""
 
 #: kwalleteditor.cpp:467
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr "Chyba při ukládání položky. Chybový kód: %1"
+msgstr ""
 
 #: kwalleteditor.cpp:489
 #, kde-format
@@ -239,73 +236,71 @@ msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
-"Obsah této položky byl změněn.\n"
-"Přejete si tyto změny uložit?"
 
 #: kwalleteditor.cpp:543 kwalleteditor.cpp:875
 #, kde-format
 msgid "Password: %1"
-msgstr "Heslo: %1"
+msgstr ""
 
 #: kwalleteditor.cpp:560 kwalleteditor.cpp:877
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr "Mapa jméno-hodnota: %1"
+msgstr ""
 
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:879
 #, kde-format
 msgid "Binary Data: %1"
-msgstr "Binární Data: %1"
+msgstr ""
 
 #: kwalleteditor.cpp:778
 #, kde-format
 msgid "New Entry"
-msgstr "Nová položka"
+msgstr ""
 
 #: kwalleteditor.cpp:779
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr "Prosím, zvolte název nové položky:"
+msgstr ""
 
 #: kwalleteditor.cpp:790
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr "Taková položka již existuje. Zkusit znovu?"
+msgstr ""
 
 #: kwalleteditor.cpp:810 kwalleteditor.cpp:819
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr "Nastal neočekávaná chyba při pokusu o přidání nového záznamu"
+msgstr ""
 
 #: kwalleteditor.cpp:871
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr "Nastal neočekávaná chyba při pokusu o přejmenování záznamu"
+msgstr ""
 
 #: kwalleteditor.cpp:891
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr "Opravdu si přejete smazat položku '%1'?"
+msgstr ""
 
 #: kwalleteditor.cpp:895
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr "Nastal neočekávaná chyba při pokusu o smazání záznamu"
+msgstr ""
 
 #: kwalleteditor.cpp:923
 #, kde-format
 msgid "Unable to open the requested wallet."
-msgstr "Nelze otevřít požadovanou úschovnu."
+msgstr ""
 
 #: kwalleteditor.cpp:959
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr "Nelze vytvořit dočasný soubor pro stažení '<b>%1</b>'."
+msgstr ""
 
 #: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr "Nelze přistupovat k úschovně <b>%1</b>."
+msgstr ""
 
 #: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
 #: kwalleteditor.cpp:1143
@@ -314,27 +309,26 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
-"Složka <b>%1</b> již obsahuje položku <b>%2</b>. Přejete si ji nahradit?"
 
 #: kwalleteditor.cpp:1101
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "Nelze přistupovat ke XML souboru <b>%1</b>."
+msgstr ""
 
 #: kwalleteditor.cpp:1107
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "Chyba při čtení XML souboru <b>%1</b> pro vstup."
+msgstr ""
 
 #: kwalleteditor.cpp:1113
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
-msgstr "Chyba: XML soubor neobsahuje úschovnu."
+msgstr ""
 
 #: kwalleteditor.cpp:1264
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "Nelze ukládat do '<b>%1</b>'."
+msgstr ""
 
 #: kwalletmanager.cpp:64
 #, kde-format
@@ -342,54 +336,52 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
-"Systém KDE Wallet není povolen. Chcete jej povolit? Pokud ne, KWalletManager "
-"bude ukončen jelikož bez čtení úschoven nemůže pracovat."
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #: kwalletmanager.cpp:288
 #, kde-format
 msgid "Wallet"
-msgstr "Úschovna"
+msgstr ""
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:288
 #, kde-format
 msgid "No wallets open."
-msgstr "Žádná úschovna není otevřena."
+msgstr ""
 
 #: kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #, kde-format
 msgid "A wallet is open."
-msgstr "Úschovna je otevřena."
+msgstr ""
 
 #: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Nová úschovna..."
+msgstr ""
 
 #: kwalletmanager.cpp:145
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "&Smazat úschovnu..."
+msgstr ""
 
 #: kwalletmanager.cpp:150
 #, kde-format
 msgid "Export as encrypted"
-msgstr "Exportovat jako zašifrované"
+msgstr ""
 
 #: kwalletmanager.cpp:155
 #, kde-format
 msgid "&Import encrypted"
-msgstr "&Importovat zašifrováno"
+msgstr ""
 
 #: kwalletmanager.cpp:160
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "Nastavit ús&chovnu..."
+msgstr ""
 
 #: kwalletmanager.cpp:168
 #, kde-format
 msgid "Close &All Wallets"
-msgstr "Z&avřít všechny úschovny"
+msgstr ""
 
 #: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
 #, kde-format
@@ -397,248 +389,246 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
-"Nelze normálně uzavřít úschovnu. Pravděpodobně je používána jinou aplikací. "
-"Přejete si ji přesto uzavřít?"
 
 #: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
 #, kde-format
 msgid "Force Closure"
-msgstr "Přesto uzavřít"
+msgstr ""
 
 #: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Do Not Force"
-msgstr "Nezavírat"
+msgstr ""
 
 #: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr "Nelze vynutit uzavření úschovny. Chybový kód: %1"
+msgstr ""
 
 #: kwalletmanager.cpp:280
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr "Chyba při otevření úschovny %1."
+msgstr ""
 
 #: kwalletmanager.cpp:322
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Prosím, zvolte název nové úschovny:"
+msgstr ""
 
 #: kwalletmanager.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
-msgstr "Nová úschovna"
+msgstr ""
 
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr "Prázdný název není podporován. Prosím vyberte nový."
+msgstr ""
 
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
-msgstr "Vytvořit novou úschovnu"
+msgstr ""
 
 #: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr "Taková úschovna již existuje. Zkusit nový název?"
+msgstr ""
 
 #: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
-msgstr "Zkusit nový"
+msgstr ""
 
 #: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr "Opravdu si přejete smazat úschovnu '%1'?"
+msgstr ""
 
 #: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr "Nelze smazat úschovnu. Chybový kód: %1"
+msgstr ""
 
 #: kwalletmanager.cpp:437
 #, kde-format
 msgid "File name"
-msgstr "Název souboru"
+msgstr ""
 
 #: kwalletmanager.cpp:444
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr "Nelze otevřít soubor pro zápis"
+msgstr ""
 
 #: kwalletmanager.cpp:455
 #, kde-format
 msgid "Select file"
-msgstr "Vybrat soubor"
+msgstr ""
 
 #: kwalletmanager.cpp:465
 #, kde-format
 msgid "Failed to open file"
-msgstr "Soubor nelze otevřít"
+msgstr ""
 
 #: kwalletmanager.cpp:478
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr "Úschovna s názvem %1 již existuje. Operace byla přerušena."
+msgstr ""
 
 #: kwalletmanager.cpp:485
 #, kde-format
 msgid "Failed to copy files"
-msgstr "Kopírování souborů selhalo"
+msgstr ""
 
 #: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore unsaved changes?"
-msgstr "Ignorovat neuložené změny?"
+msgstr ""
 
 #: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
 #, kde-format
 msgid "Ignore"
-msgstr "Ignorovat"
+msgstr ""
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
 #, kde-format
 msgid "&File"
-msgstr "&Soubor"
+msgstr ""
 
 #. i18n: ectx: Menu (settings)
 #: kwalletmanager.rc:17
 #, kde-format
 msgid "&Settings"
-msgstr "Na&stavení"
+msgstr ""
 
 #. i18n: ectx: Menu (help)
 #: kwalletmanager.rc:20
 #, kde-format
 msgid "&Help"
-msgstr "&Nápověda"
+msgstr ""
 
 #: kwalletmanagerwidget.cpp:224
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr "Při připojování ke službě KWallet nastala chyba:<nl/>%1"
+msgstr ""
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
 #, kde-format
 msgid "&Open..."
-msgstr "&Otevřít..."
+msgstr ""
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "Změnit &heslo..."
+msgstr ""
 
 #: kwalletpopup.cpp:53
 #, kde-format
 msgid "Disconnec&t"
-msgstr "Odpoji&t"
+msgstr ""
 
 #: kwmapeditor.cpp:129
 #, kde-format
 msgid "Key"
-msgstr "Klíč"
+msgstr ""
 
 #: kwmapeditor.cpp:129
 #, kde-format
 msgid "Value"
-msgstr "Hodnota"
+msgstr ""
 
 #: kwmapeditor.cpp:147 kwmapeditor.cpp:196
 #, kde-format
 msgid "Delete Entry"
-msgstr "Smazat záznam"
+msgstr ""
 
 #: kwmapeditor.cpp:216
 #, kde-format
 msgid "&New Entry"
-msgstr "&Nová položka"
+msgstr ""
 
 #: main.cpp:27
 #, kde-format
 msgid "Wallet Manager"
-msgstr "Správce úschovny"
+msgstr ""
 
 #: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "Správce úschovny KDE"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "Autorská práva ©2013–2017, Autoři programu KWallet Manager"
+msgstr ""
 
 #: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
-msgstr "Valentin Rusu"
+msgstr ""
 
 #: main.cpp:36
 #, kde-format
 msgid "Maintainer, user interface refactoring"
-msgstr "Správce, přepis uživatelského rozhraní"
+msgstr ""
 
 #: main.cpp:38
 #, kde-format
 msgid "George Staikos"
-msgstr "George Staikos"
+msgstr ""
 
 #: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr "Původní autor a dřívější správce"
+msgstr ""
 
 #: main.cpp:41
 #, kde-format
 msgid "Michael Leupold"
-msgstr "Michael Leupold"
+msgstr ""
 
 #: main.cpp:42
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr "Vývojář a dřívější správce"
+msgstr ""
 
 #: main.cpp:44
 #, kde-format
 msgid "Isaac Clerencia"
-msgstr "Isaac Clerencia"
+msgstr ""
 
 #: main.cpp:45
 #, kde-format
 msgid "Developer"
-msgstr "Vývojář"
+msgstr ""
 
 #: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
-msgstr "Zobrazit okno při spuštění"
+msgstr ""
 
 #: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr "Pouze pro využití programem 'kwalletd'"
+msgstr ""
 
 #: main.cpp:55
 #, kde-format
 msgid "A wallet name"
-msgstr "Název úschovny"
+msgstr ""
 
 #: revokeauthbutton.cpp:16
 #, kde-format
 msgid "Revoke Authorization"
-msgstr "Odvolat oprávnění"
+msgstr ""
 
 #: walletcontrolwidget.cpp:60
 #, kde-format
 msgid "&Close"
-msgstr "&Zavřít"
+msgstr ""
 
 #: walletcontrolwidget.cpp:77
 #, kde-format
@@ -646,64 +636,64 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open"
-msgstr "Úschovna '%1' je otevřena."
+msgstr ""
 
 #: walletcontrolwidget.cpp:94
 #, kde-format
 msgid "The wallet is currently closed"
-msgstr "Úschovna je momentálně uzavřena"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:28
 #, kde-format
 msgid "KSqueezedTextLabel"
-msgstr "KSqueezedTextLabel"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
 #: walletcontrolwidget.ui:35
 #, kde-format
 msgid "Open..."
-msgstr "Otevřít..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:58
 #, kde-format
 msgid "Change Password..."
-msgstr "Změnit heslo..."
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:74
 #, kde-format
 msgid "Contents"
-msgstr "Obsah"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
 #: walletcontrolwidget.ui:111
 #, kde-format
 msgid "Applications"
-msgstr "Aplikace"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:142
 #, kde-format
 msgid "Hide &Contents"
-msgstr "Skrýt o&bsah"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
 #: walletwidget.ui:185 walletwidget.ui:233
 #, kde-format
 msgid "Show &Contents"
-msgstr "Zobrazit o&bsah"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
 #: walletwidget.ui:296
 #, kde-format
 msgid "&Undo"
-msgstr "&Zpět"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
 #: walletwidget.ui:306
 #, kde-format
 msgid "&Save"
-msgstr "&Uložit"
+msgstr ""
