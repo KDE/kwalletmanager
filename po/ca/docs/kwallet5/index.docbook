@@ -532,11 +532,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <para
 >A la subfinestra de la carpeta de continguts seleccioneu <guilabel
 >Carpeta nova</guilabel
-> des del menú contextual de <quote
->De les dades</quote
-> o <quote
->Contrasenyes</quote
->. Per a les contrasenyes feu clic al botó <guilabel
+> des del menú contextual de «De les dades» o «Contrasenyes». Per a les contrasenyes feu clic al botó <guilabel
 >Mostra el contingut</guilabel
 >, introduïu la nova contrasenya. Per a les correspondències cal que afegiu una <guilabel
 >Clau</guilabel
