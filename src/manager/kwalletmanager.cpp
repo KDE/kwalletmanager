@@ -56,7 +56,7 @@ KWalletManager::KWalletManager(QCommandLineParser *commandLineParser)
 
 void KWalletManager::beginConfiguration() {
     KConfig cfg(QStringLiteral("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
-    KConfigGroup walletConfigGroup(&cfg, "Wallet");
+    KConfigGroup walletConfigGroup(&cfg, QStringLiteral("Wallet"));
     if (walletConfigGroup.readEntry("Enabled", true)){
         QTimer::singleShot(0, this, &KWalletManager::configUI);
     } else {
@@ -78,7 +78,7 @@ void KWalletManager::beginConfiguration() {
 void KWalletManager::configUI() {
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KWalletManager"), this, QDBusConnection::ExportScriptableSlots);
     KConfig cfg(QStringLiteral("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
-    KConfigGroup walletConfigGroup(&cfg, "Wallet");
+    KConfigGroup walletConfigGroup(&cfg, QStringLiteral("Wallet"));
     if (walletConfigGroup.readEntry("Launch Manager", false)) {
         _tray = new KStatusNotifierItem(this);
         _tray->setObjectName(QStringLiteral("kwalletmanager tray"));
@@ -294,7 +294,7 @@ void KWalletManager::allWalletsClosed()
 void KWalletManager::possiblyQuit()
 {
     KConfig _cfg(QStringLiteral("kwalletrc"));
-    KConfigGroup cfg(&_cfg, "Wallet");
+    KConfigGroup cfg(&_cfg, QStringLiteral("Wallet"));
     if (_windows.isEmpty() &&
             !isVisible() &&
             !cfg.readEntry("Leave Manager Open", false) &&

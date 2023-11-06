@@ -100,7 +100,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
     box->addWidget(_mapEditor);
 
     // load splitter size
-    KConfigGroup cg(KSharedConfig::openConfig(), "WalletEditor");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("WalletEditor"));
     QList<int> splitterSize = cg.readEntry("SplitterSize", QList<int>());
     if (splitterSize.size() != 2) {
         splitterSize.clear();
@@ -138,7 +138,7 @@ KWalletEditor::~KWalletEditor()
     Q_EMIT enableWalletActions(false);
     Q_EMIT enableContextFolderActions(false);
     // save splitter size
-    KConfigGroup cg(KSharedConfig::openConfig(), "WalletEditor");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("WalletEditor"));
     cg.writeEntry("SplitterSize", _splitter->sizes());
     cg.writeEntry("AlwaysShowContents", _alwaysShowContents);
     cg.sync();

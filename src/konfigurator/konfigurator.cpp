@@ -159,7 +159,7 @@ void KWalletConfig::configChanged()
 
 void KWalletConfig::load()
 {
-    KConfigGroup config(_cfg, "Wallet");
+    KConfigGroup config(_cfg, QStringLiteral("Wallet"));
     _wcw->_enabled->setChecked(config.readEntry("Enabled", true));
     _wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", false));
     _wcw->_launchManager->setChecked(config.readEntry("Launch Manager", false));
@@ -190,8 +190,8 @@ void KWalletConfig::load()
         _wcw->_localWalletSelected->setChecked(false);
     }
     _wcw->_accessList->clear();
-    KConfigGroup ad(_cfg, "Auto Deny");
-    KConfigGroup aa(_cfg, "Auto Allow");
+    KConfigGroup ad(_cfg, QStringLiteral("Auto Deny"));
+    KConfigGroup aa(_cfg, QStringLiteral("Auto Allow"));
     QStringList denykeys = ad.entryMap().keys();
     const QStringList keys = aa.entryMap().keys();
     for (QStringList::const_iterator i = keys.begin(); i != keys.end(); ++i) {
@@ -202,10 +202,10 @@ void KWalletConfig::load()
         path.append(QStringLiteral("/kwalletd/%1.kwl").arg(walletName));
         if (!QFile::exists(path)) {
             // if the wallet no longer exists, delete the entries from the configuration file and skip to next entry
-            KConfigGroup cfgAllow = KSharedConfig::openConfig(QStringLiteral("kwalletrc"))->group("Auto Allow");
+            KConfigGroup cfgAllow = KSharedConfig::openConfig(QStringLiteral("kwalletrc"))->group(QStringLiteral("Auto Allow"));
             cfgAllow.deleteEntry(walletName);
 
-            KConfigGroup cfgDeny = KSharedConfig::openConfig(QStringLiteral("kwalletrc"))->group("Auto Deny");
+            KConfigGroup cfgDeny = KSharedConfig::openConfig(QStringLiteral("kwalletrc"))->group(QStringLiteral("Auto Deny"));
             cfgDeny.deleteEntry(walletName);
             continue;
         }
@@ -231,7 +231,7 @@ void KWalletConfig::load()
     }
     _wcw->_accessList->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
 
-    KConfigGroup secretsAPIConfig(_cfg, "org.freedesktop.secrets");
+    KConfigGroup secretsAPIConfig(_cfg, QStringLiteral("org.freedesktop.secrets"));
     _wcw->_secretServiceAPI->setChecked(secretsAPIConfig.readEntry("apiEnabled", true));
         setNeedsSave(false);
 }
@@ -262,7 +262,7 @@ void KWalletConfig::save()
         return;
     }
 
-    KConfigGroup config(_cfg, "Wallet");
+    KConfigGroup config(_cfg, QStringLiteral("Wallet"));
     config.writeEntry("Enabled", _wcw->_enabled->isChecked());
     config.writeEntry("Launch Manager", _wcw->_launchManager->isChecked());
     config.writeEntry("Leave Manager Open", !_wcw->_autocloseManager->isChecked());
@@ -286,9 +286,9 @@ void KWalletConfig::save()
     }
 
     // FIXME: won't survive a language change
-    _cfg->deleteGroup("Auto Allow");
-    _cfg->deleteGroup("Auto Deny");
-    config  = _cfg->group("Auto Allow");
+    _cfg->deleteGroup(QStringLiteral("Auto Allow"));
+    _cfg->deleteGroup(QStringLiteral("Auto Deny"));
+    config  = _cfg->group(QStringLiteral("Auto Allow"));
     for (int i = 0; i < _wcw->_accessList->topLevelItemCount(); ++i) {
         QTreeWidgetItem *parentItem = _wcw->_accessList->topLevelItem(i);
         QStringList al;
@@ -301,7 +301,7 @@ void KWalletConfig::save()
         config.writeEntry(parentItem->text(0), al);
     }
 
-    config = _cfg->group("Auto Deny");
+    config = _cfg->group(QStringLiteral("Auto Deny"));
     for (int i = 0; i < _wcw->_accessList->topLevelItemCount(); ++i) {
         QTreeWidgetItem *parentItem = _wcw->_accessList->topLevelItem(i);
         QStringList al;
@@ -314,7 +314,7 @@ void KWalletConfig::save()
         config.writeEntry(parentItem->text(0), al);
     }
 
-    KConfigGroup secretsAPIConfig(_cfg, "org.freedesktop.secrets");
+    KConfigGroup secretsAPIConfig(_cfg, QStringLiteral("org.freedesktop.secrets"));
     secretsAPIConfig.writeEntry("apiEnabled", _wcw->_secretServiceAPI->isChecked());
 
     _cfg->sync();

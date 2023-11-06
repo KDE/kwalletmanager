@@ -18,7 +18,7 @@ AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
     // TODO: handle "Auto Deny" applications
     // KConfigGroup ad(_cfg, "Auto Deny");
 
-    KConfigGroup aa(_cfg, "Auto Allow");
+    KConfigGroup aa(_cfg, QStringLiteral("Auto Allow"));
     QString walletName = _wallet->walletName();
     const QStringList keys = aa.entryMap().keys();
     for (const QString &cfgWalletName : keys) {
@@ -58,7 +58,7 @@ void AuthorizedAppModel::saveConfig()
         appList << item(r)->text();
     }
     QString walletName = _wallet->walletName();
-    KConfigGroup config(_cfg, "Auto Allow");
+    KConfigGroup config(_cfg, QStringLiteral("Auto Allow"));
     config.deleteEntry(walletName);
     config.writeEntry(_wallet->walletName(), appList);
     _cfg->sync();
