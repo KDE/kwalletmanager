@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-11-07 21:27+0100\n"
+"PO-Revision-Date: 2023-11-12 00:58+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -351,7 +351,7 @@ msgstr ""
 #: kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #, kde-format
 msgid "A wallet is open."
-msgstr ""
+msgstr "Hai una cartera abierta."
 
 #: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
@@ -413,13 +413,13 @@ msgstr ""
 #: kwalletmanager.cpp:322
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr ""
+msgstr "Escueyi un nome nuevu pa la carpeta:"
 
 #: kwalletmanager.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
-msgstr ""
+msgstr "Cartera nueva"
 
 #: kwalletmanager.cpp:349
 #, kde-format
