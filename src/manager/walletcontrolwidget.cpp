@@ -74,7 +74,7 @@ void WalletControlWidget::onSetupWidget()
         _applicationsManager->setWallet(_wallet);
 
         _changePassword->setEnabled(true);
-        _stateLabel->setText(i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open", _walletName));
+        _stateLabel->setText(i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open.", _walletName));
         _tabs->setTabIcon(0, QIcon::fromTheme(QLatin1String("wallet-open")).pixmap(16));
     } else {
         _openClose->setText(i18n("&Open..."));
@@ -91,7 +91,7 @@ void WalletControlWidget::onSetupWidget()
             _applicationsManager = nullptr;
         }
         _changePassword->setEnabled(false);
-        _stateLabel->setText(i18n("The wallet is currently closed"));
+        _stateLabel->setText(i18n("The wallet is currently closed."));
         _tabs->setTabIcon(0, QIcon::fromTheme(QStringLiteral("wallet-closed")).pixmap(16));
     }
 }

@@ -81,12 +81,23 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
 
     auto box = new QVBoxLayout(_entryListFrame);
     box->setContentsMargins(0, 0, 0, 0);
+    box->setSpacing(0);
     _entryList = new KWalletEntryList(_entryListFrame, QStringLiteral("Wallet Entry List"));
     _entryList->setContextMenuPolicy(Qt::CustomContextMenu);
-    _searchLine = new KTreeWidgetSearchLine(_entryListFrame, _entryList);
+    _entryList->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::TopEdge}));
+    auto lineWrapper = new QWidget(_entryList);
+    auto lineWrapperLayout = new QVBoxLayout(lineWrapper);
+    lineWrapperLayout->setContentsMargins(
+        style()->pixelMetric(QStyle::PM_LayoutLeftMargin),
+        style()->pixelMetric(QStyle::PM_LayoutTopMargin),
+        style()->pixelMetric(QStyle::PM_LayoutRightMargin),
+        style()->pixelMetric(QStyle::PM_LayoutBottomMargin)
+    );
+    _searchLine = new KTreeWidgetSearchLine(lineWrapper, _entryList);
     _searchLine->setPlaceholderText(i18n("Search"));
     connect(_searchLine, &KTreeWidgetSearchLine::textChanged, this, &KWalletEditor::onSearchTextChanged);
-    box->addWidget(_searchLine);
+    lineWrapperLayout->addWidget(_searchLine);
+    box->addWidget(lineWrapper);
     box->addWidget(_entryList);
 
     _entryStack->setEnabled(true);
