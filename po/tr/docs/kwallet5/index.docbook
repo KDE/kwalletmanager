@@ -91,7 +91,7 @@
 <para
 >Öntanımlı olarak, parolalarınızı depolamak için <guilabel
 >kdewallet</guilabel
-> adlı bir cüzdan kullanılacaktır. Bu cüzdan, oturum açma parolanız tarafından güvence altına alınmıştır ve kwallet_pam yüklenmiş ve doğru şekilde yapılandırılmışsa oturum açma sırasında otomatik olarak açılacaktır. Belirli dağıtımlarda (örn. Archlinux) kwallet_pam öntanımlı olarak kurulu değildir</para>
+> adlı bir cüzdan kullanılacaktır. Bu cüzdan, oturum açma parolanız tarafından güvence altına alınmıştır ve kwallet_pam yüklenmiş ve doğru şekilde yapılandırılmışsa oturum açma sırasında kendiliğinden açılacaktır. Belirli dağıtımlarda (örn. Archlinux) kwallet_pam öntanımlı olarak kurulu değildir</para>
 
 
 <para
@@ -350,7 +350,7 @@
 </screenshot>
 
 <para
->Bu, uygulamayı cüzdana bağlar, cüzdandan oturum açma verilerini okumasını ve bu web sitesi için oturum açma bilgilerini geri yüklemesini sağlar. Bir uygulama cüzdana bağlandığında, cüzdanda saklanan tüm giriş bilgilerini otomatik olarak geri yükleyebilir.</para>
+>Bu, uygulamayı cüzdana bağlar, cüzdandan oturum açma verilerini okumasını ve bu web sitesi için oturum açma bilgilerini geri yüklemesini sağlar. Bir uygulama cüzdana bağlandığında, cüzdanda saklanan tüm giriş bilgilerini kendiliğinden geri yükleyebilir.</para>
 
 </sect1>
 
@@ -634,7 +634,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <para
 >Hangi cüzdanı öntanımlı cüzdan olarak kullanmak istediğinizi seçin. Yalnızca <guilabel
 >kdewallet</guilabel
-> adlı cüzdanın oturum açma sırasında bu cüzdan ve oturum açma şifreniz aynı ise.otomatik olarak açılacağını unutmayın. </para>
+> adlı cüzdanın oturum açma sırasında bu cüzdan ve oturum açma şifreniz aynı ise.kendiliğinden açılacağını unutmayın. </para>
 </listitem>
 </varlistentry>
 
