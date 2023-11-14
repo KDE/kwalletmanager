@@ -209,7 +209,7 @@ bool KWalletManager::queryClose()
         if (!_tray) {
             qApp->quit();
         } else {
-            _tray->hideAssociatedWidget();
+            _tray->hideAssociatedWindow();
         }
         return false;
     }
