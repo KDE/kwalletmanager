@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-18 01:43+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2019-02-10 08:29-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -106,132 +106,132 @@ msgstr "ਛੱਡੋ(&S)"
 msgid "Skip A&ll"
 msgstr "ਸਭ ਛੱਡੋ(&l)"
 
-#: kwalleteditor.cpp:87
+#: kwalleteditor.cpp:97
 #, kde-format
 msgid "Search"
 msgstr "ਖੋਜ"
 
-#: kwalleteditor.cpp:96
+#: kwalleteditor.cpp:107
 #, kde-format
 msgid "&Show values"
 msgstr "ਮੁੱਲ ਵੇਖੋ(&S)"
 
-#: kwalleteditor.cpp:196
+#: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
 msgstr "...ਨਵਾਂ ਫੋਲਡਰ(&N)"
 
-#: kwalleteditor.cpp:200
+#: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Delete Folder"
 msgstr "ਫੋਲਡਰ ਹਟਾਓ(&D)"
 
-#: kwalleteditor.cpp:203
+#: kwalleteditor.cpp:214
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "...ਵਾਲਿਟ ਇੰਪੋਰਟ ਕਰੋ(&I)"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
 msgstr "XML ਇੰਪੋਰਟ(&I)..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Export as XML..."
 msgstr "...XML ਇੰਪੋਰਟ(&E)"
 
-#: kwalleteditor.cpp:215
+#: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Copy"
 msgstr "ਕਾਪੀ ਕਰੋ(&C)"
 
-#: kwalleteditor.cpp:220
+#: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
 msgstr "ਨਵਾਂ(&N)..."
 
-#: kwalleteditor.cpp:225
+#: kwalleteditor.cpp:236
 #, kde-format
 msgid "&Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
-#: kwalleteditor.cpp:230 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
 msgstr "ਹਟਾਓ(&D)"
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:246
 #, kde-format
 msgid "Always show contents"
 msgstr "ਹਮੇਸ਼ਾ ਸਮੱਗਰੀ ਵੇਖਾਓ"
 
-#: kwalleteditor.cpp:239
+#: kwalleteditor.cpp:250
 #, kde-format
 msgid "Always hide contents"
 msgstr "ਹਮੇਸ਼ਾ ਸਮੱਗਰੀ ਓਹਲੇ"
 
-#: kwalleteditor.cpp:348
+#: kwalleteditor.cpp:359
 #, kde-format
 msgid "Passwords"
 msgstr "ਪਾਸਵਰਡ"
 
-#: kwalleteditor.cpp:349
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Maps"
 msgstr "ਨਕਸ਼ੇ"
 
-#: kwalleteditor.cpp:350
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Binary Data"
 msgstr "ਬਾਈਨਰੀ ਡਾਟਾ"
 
-#: kwalleteditor.cpp:351
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Unknown"
 msgstr "ਅਣਪਛਾਤਾ"
 
-#: kwalleteditor.cpp:391
+#: kwalleteditor.cpp:402
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "ਕੀ ਤੁਸੀਂ ਵਾਲਿਟ ਤੋਂ ਫੋਲਡਰ '%1' ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kwalleteditor.cpp:395
+#: kwalleteditor.cpp:406
 #, kde-format
 msgid "Error deleting folder."
 msgstr "ਫੋਲਡਰ ਹਟਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
 
-#: kwalleteditor.cpp:414
+#: kwalleteditor.cpp:425
 #, kde-format
 msgid "New Folder"
 msgstr "ਨਵਾਂ ਫੋਲਡਰ"
 
-#: kwalleteditor.cpp:415
+#: kwalleteditor.cpp:426
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "ਨਵੇਂ ਫੋਲਡਰ ਲਈ ਇੱਕ ਨਾਂ ਚੁਣੋ ਜੀ:"
 
-#: kwalleteditor.cpp:425
+#: kwalleteditor.cpp:436
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "ਅਫਸੋਸ, ਉਹ ਫੋਲਡਰ ਵਰਤੋਂ ਵਿੱਚ ਹੈ। ਫੇਰ ਟਰਾਈ ਕਰਨੀ ਹੈ?"
 
-#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
+#: kwalleteditor.cpp:438 kwalleteditor.cpp:803
 #, kde-format
 msgid "Try Again"
 msgstr "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
 msgstr "ਕੋਸ਼ਿਸ਼ ਨਾ ਕਰੋ"
 
-#: kwalleteditor.cpp:467
+#: kwalleteditor.cpp:478
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "ਐਂਟਰੀ ਸੰਭਾਲਣ ਦੌਰਾਨ ਗਲਤੀ। ਗਲਤੀ ਕੋਡ: %1"
 
-#: kwalleteditor.cpp:489
+#: kwalleteditor.cpp:500
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -240,74 +240,74 @@ msgstr ""
 "ਮੌਜੂਦਾ ਆਈਟਮ ਦੀ ਸਮੱਗਰੀ ਬਦਲੀ ਗਈ ਹੈ।\n"
 "ਕੀ ਤੁਸੀਂ ਬਦਲਾਅ ਸੰਭਾਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
+#: kwalleteditor.cpp:554 kwalleteditor.cpp:886
 #, kde-format
 msgid "Password: %1"
 msgstr "ਪਾਸਵਰਡ: %1"
 
-#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:888
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "ਨਵਾਂ-ਮੁੱਲ ਮੈਪ: %1"
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:890
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "ਬਾਈਨਰੀ ਡਾਟਾ: %1"
 
-#: kwalleteditor.cpp:778
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "New Entry"
 msgstr "ਨਵੀਂ ਐਂਟਰੀ"
 
-#: kwalleteditor.cpp:779
+#: kwalleteditor.cpp:790
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "ਨਵੀਂ ਐਂਟਰੀ ਲਈ ਇੱਕ ਨਾਂ ਚੁਣੋ ਜੀ:"
 
-#: kwalleteditor.cpp:790
+#: kwalleteditor.cpp:801
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "ਅਫਸੋਸ, ਪਰ ਐਂਟਰੀ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ, ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰਨੀ ਹੈ?"
 
-#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
+#: kwalleteditor.cpp:821 kwalleteditor.cpp:830
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "ਨਵੀਂ ਐਂਟਰੀ ਸ਼ਾਮਲ ਕਰਨ ਦੇ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: kwalleteditor.cpp:871
+#: kwalleteditor.cpp:882
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "ਐਂਟਰੀ ਨਾਂ ਬਦਲਣ ਦੇ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: kwalleteditor.cpp:891
+#: kwalleteditor.cpp:902
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "ਕੀ ਤੁਸੀਂ %1 ਆਈਟਮ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kwalleteditor.cpp:895
+#: kwalleteditor.cpp:906
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "ਐਂਟਰੀ ਹਟਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: kwalleteditor.cpp:923
+#: kwalleteditor.cpp:934
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "ਮੰਗਿਆ ਵਾਲਿਟ ਖੋਲ੍ਹਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
-#: kwalleteditor.cpp:959
+#: kwalleteditor.cpp:970
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "XML ਫਾਇਲ '<b>%1</b>' ਅਸੈੱਸ ਕਰਨ ਲਈ ਅਸਮੱਰਥ।"
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "ਵਾਲਿਟ '<b>%1</b>' ਅਸੈੱਸ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
 
-#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
-#: kwalleteditor.cpp:1143
+#: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
+#: kwalleteditor.cpp:1154
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -316,22 +316,22 @@ msgstr ""
 "ਫੋਲਡਰ '<b>%1</b>' ਵਿੱਚ ਐਂਟਰੀ '<b>%2</b>' ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲਣਾ ਚਾਹੁੰਦੇ "
 "ਹੋ?"
 
-#: kwalleteditor.cpp:1101
+#: kwalleteditor.cpp:1112
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "XML ਫਾਇਲ '<b>%1</b>' ਅਸੈੱਸ ਕਰਨ ਲਈ ਅਸਮੱਰਥ।"
 
-#: kwalleteditor.cpp:1107
+#: kwalleteditor.cpp:1118
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "ਇੰਪੁੱਟ ਲਈ XML ਫਾਇਲ '<b>%1</b>' ਪੜ੍ਹਨ ਲਈ ਗਲਤੀ ਹੈ।"
 
-#: kwalleteditor.cpp:1113
+#: kwalleteditor.cpp:1124
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "ਗਲਤੀ: XML ਫਾਇਲ ਵਿੱਚ ਵਾਲਿਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: kwalleteditor.cpp:1264
+#: kwalleteditor.cpp:1275
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "'<b>%1</b>' ਲਈ ਸੰਭਾਲਣ ਵਾਸਤੇ ਅਸਮਰੱਥ ਹੈ।"
@@ -641,69 +641,74 @@ msgid "&Close"
 msgstr "ਬੰਦ ਕਰੋ(&C)"
 
 #: walletcontrolwidget.cpp:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+#| "wallet name)"
+#| msgid "The '%1' wallet is currently open"
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
-msgid "The '%1' wallet is currently open"
+msgid "The '%1' wallet is currently open."
 msgstr "'%1' ਵਾਲਿਟ ਪਹਿਲਾਂ ਹੀ ਖੁੱਲ੍ਹਾ ਹੈ"
 
 #: walletcontrolwidget.cpp:94
-#, kde-format
-msgid "The wallet is currently closed"
+#, fuzzy, kde-format
+#| msgid "The wallet is currently closed"
+msgid "The wallet is currently closed."
 msgstr "ਵਾਲਿਟ ਇਸ ਸਮੇਂ ਬੰਦ ਹੈ"
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
-#: walletcontrolwidget.ui:28
+#: walletcontrolwidget.ui:31
 #, kde-format
 msgid "KSqueezedTextLabel"
 msgstr "KSqueezedTextLabel"
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
-#: walletcontrolwidget.ui:35
+#: walletcontrolwidget.ui:54
 #, kde-format
 msgid "Open..."
 msgstr "...ਖੋਲ੍ਹੋ"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
-#: walletcontrolwidget.ui:58
+#: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
 msgstr "...ਪਾਸਵਰਡ ਬਦਲੋ"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:74
+#: walletcontrolwidget.ui:80
 #, kde-format
 msgid "Contents"
 msgstr "ਸਮੱਗਰੀ"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:111
+#: walletcontrolwidget.ui:117
 #, kde-format
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
-#: walletwidget.ui:142
+#: walletwidget.ui:159
 #, kde-format
 msgid "Hide &Contents"
 msgstr "ਸਮੱਗਰੀ ਓਹਲੇ(&C)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:185 walletwidget.ui:233
+#: walletwidget.ui:202 walletwidget.ui:250
 #, kde-format
 msgid "Show &Contents"
 msgstr "ਸਮੱਗਰੀ ਵੇਖੋ(&C)"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:296
+#: walletwidget.ui:318
 #, kde-format
 msgid "&Undo"
 msgstr "ਵਾਪਸ(&U)"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:306
+#: walletwidget.ui:328
 #, kde-format
 msgid "&Save"
 msgstr "ਸੰਭਾਲੋ(&S)"

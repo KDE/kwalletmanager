@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-18 01:43+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -106,227 +106,227 @@ msgstr "&Omisser"
 msgid "Skip A&ll"
 msgstr "O&mni"
 
-#: kwalleteditor.cpp:87
+#: kwalleteditor.cpp:97
 #, kde-format
 msgid "Search"
 msgstr "Serchar"
 
-#: kwalleteditor.cpp:96
+#: kwalleteditor.cpp:107
 #, fuzzy, kde-format
 msgid "&Show values"
 msgstr "Monstrar valores in _bites"
 
-#: kwalleteditor.cpp:196
+#: kwalleteditor.cpp:207
 #, fuzzy, kde-format
 msgid "&New Folder..."
 msgstr "Crear un fólder…"
 
-#: kwalleteditor.cpp:200
+#: kwalleteditor.cpp:211
 #, fuzzy, kde-format
 msgid "&Delete Folder"
 msgstr "Remover li fól_der..."
 
-#: kwalleteditor.cpp:203
+#: kwalleteditor.cpp:214
 #, fuzzy, kde-format
 msgid "&Import a wallet..."
 msgstr "Porta-papere"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:218
 #, fuzzy, kde-format
 msgid "&Import XML..."
 msgstr "&XML"
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:222
 #, fuzzy, kde-format
 msgid "&Export as XML..."
 msgstr "Exportar"
 
-#: kwalleteditor.cpp:215
+#: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Copy"
 msgstr "&Copiar"
 
-#: kwalleteditor.cpp:220
+#: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
 msgstr "&Crear"
 
-#: kwalleteditor.cpp:225
+#: kwalleteditor.cpp:236
 #, kde-format
 msgid "&Rename"
 msgstr "Re&nominar"
 
-#: kwalleteditor.cpp:230 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
 #, kde-format
 msgid "&Delete"
 msgstr "&Remover"
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:246
 #, fuzzy, kde-format
 msgid "Always show contents"
 msgstr "Monstrar li contenete"
 
-#: kwalleteditor.cpp:239
+#: kwalleteditor.cpp:250
 #, fuzzy, kde-format
 msgid "Always hide contents"
 msgstr "Sempre"
 
-#: kwalleteditor.cpp:348
+#: kwalleteditor.cpp:359
 #, kde-format
 msgid "Passwords"
 msgstr "Contrasignes"
 
-#: kwalleteditor.cpp:349
+#: kwalleteditor.cpp:360
 #, fuzzy, kde-format
 msgid "Maps"
 msgstr "Land-cartes"
 
-#: kwalleteditor.cpp:350
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Binary Data"
 msgstr "Binari"
 
-#: kwalleteditor.cpp:351
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Unknown"
 msgstr "Ínconosset"
 
-#: kwalleteditor.cpp:391
+#: kwalleteditor.cpp:402
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr ""
 
-#: kwalleteditor.cpp:395
+#: kwalleteditor.cpp:406
 #, fuzzy, kde-format
 msgid "Error deleting folder."
 msgstr "Un errore evenit durante deletion."
 
-#: kwalleteditor.cpp:414
+#: kwalleteditor.cpp:425
 #, fuzzy, kde-format
 msgid "New Folder"
 msgstr "Crear un fólder"
 
-#: kwalleteditor.cpp:415
+#: kwalleteditor.cpp:426
 #, fuzzy, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Provide un altri nómine por li nov fólder."
 
-#: kwalleteditor.cpp:425
+#: kwalleteditor.cpp:436
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr ""
 
-#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
+#: kwalleteditor.cpp:438 kwalleteditor.cpp:803
 #, kde-format
 msgid "Try Again"
 msgstr "Repenar denov"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
 #, fuzzy, kde-format
 msgid "Do Not Try"
 msgstr "Ne usar e ne devenir un servicie D-Bus"
 
-#: kwalleteditor.cpp:467
+#: kwalleteditor.cpp:478
 #, fuzzy, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Ínconosset errore. Code %1"
 
-#: kwalleteditor.cpp:489
+#: kwalleteditor.cpp:500
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
 
-#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
+#: kwalleteditor.cpp:554 kwalleteditor.cpp:886
 #, kde-format
 msgid "Password: %1"
 msgstr "Contrasigne: %1:"
 
-#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:888
 #, fuzzy, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Un branche con li nómine «%1» ja existe."
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:890
 #, fuzzy, kde-format
 msgid "Binary Data: %1"
 msgstr "Vor programma GnuPG es: %1"
 
-#: kwalleteditor.cpp:778
+#: kwalleteditor.cpp:789
 #, fuzzy, kde-format
 msgid "New Entry"
 msgstr "Nov inscrition"
 
-#: kwalleteditor.cpp:779
+#: kwalleteditor.cpp:790
 #, fuzzy, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Provide un nómine del nov Porta-papere:"
 
-#: kwalleteditor.cpp:790
+#: kwalleteditor.cpp:801
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr ""
 
-#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
+#: kwalleteditor.cpp:821 kwalleteditor.cpp:830
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr ""
 
-#: kwalleteditor.cpp:871
+#: kwalleteditor.cpp:882
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr ""
 
-#: kwalleteditor.cpp:891
+#: kwalleteditor.cpp:902
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr ""
 
-#: kwalleteditor.cpp:895
+#: kwalleteditor.cpp:906
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr ""
 
-#: kwalleteditor.cpp:923
+#: kwalleteditor.cpp:934
 #, fuzzy, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Ne successat remover li demandat cookies."
 
-#: kwalleteditor.cpp:959
+#: kwalleteditor.cpp:970
 #, fuzzy, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "<b>Errore:</b> Ne successat crear un temporari file «%1»."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr ""
 
-#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
-#: kwalleteditor.cpp:1143
+#: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
+#: kwalleteditor.cpp:1154
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
 
-#: kwalleteditor.cpp:1101
+#: kwalleteditor.cpp:1112
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr ""
 
-#: kwalleteditor.cpp:1107
+#: kwalleteditor.cpp:1118
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr ""
 
-#: kwalleteditor.cpp:1113
+#: kwalleteditor.cpp:1124
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr ""
 
-#: kwalleteditor.cpp:1264
+#: kwalleteditor.cpp:1275
 #, fuzzy, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "<b>Actualisation ne successat.</b>"
@@ -637,65 +637,65 @@ msgstr "C&luder"
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
-msgid "The '%1' wallet is currently open"
+msgid "The '%1' wallet is currently open."
 msgstr "Aperter un terminal in li apertet fólder"
 
 #: walletcontrolwidget.cpp:94
 #, fuzzy, kde-format
-msgid "The wallet is currently closed"
+msgid "The wallet is currently closed."
 msgstr "Porta-papere de KDE"
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
-#: walletcontrolwidget.ui:28
+#: walletcontrolwidget.ui:31
 #, kde-format
 msgid "KSqueezedTextLabel"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
-#: walletcontrolwidget.ui:35
+#: walletcontrolwidget.ui:54
 #, fuzzy, kde-format
 msgid "Open..."
 msgstr "_Open"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
-#: walletcontrolwidget.ui:58
+#: walletcontrolwidget.ui:61
 #, fuzzy, kde-format
 msgid "Change Password..."
 msgstr "Ca_mbiar li contrasigne"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:74
+#: walletcontrolwidget.ui:80
 #, fuzzy, kde-format
 msgid "Contents"
 msgstr "Contenete"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:111
+#: walletcontrolwidget.ui:117
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "Applicationes"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
-#: walletwidget.ui:142
+#: walletwidget.ui:159
 #, fuzzy, kde-format
 msgid "Hide &Contents"
 msgstr "Celar"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:185 walletwidget.ui:233
+#: walletwidget.ui:202 walletwidget.ui:250
 #, fuzzy, kde-format
 msgid "Show &Contents"
 msgstr "Monstrar li contenete"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:296
+#: walletwidget.ui:318
 #, fuzzy, kde-format
 msgid "&Undo"
 msgstr "&Defar"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:306
+#: walletwidget.ui:328
 #, fuzzy, kde-format
 msgid "&Save"
 msgstr "_Salvar"

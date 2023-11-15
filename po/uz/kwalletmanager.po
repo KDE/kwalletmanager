@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-18 01:43+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2006-12-17 13:39+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -108,213 +108,213 @@ msgstr "Oʻ&tkazib yuborish"
 msgid "Skip A&ll"
 msgstr "Hammasini oʻtka&zib yuborish"
 
-#: kwalleteditor.cpp:87
+#: kwalleteditor.cpp:97
 #, kde-format
 msgid "Search"
 msgstr ""
 
-#: kwalleteditor.cpp:96
+#: kwalleteditor.cpp:107
 #, kde-format
 msgid "&Show values"
 msgstr "Qiymatlarni &koʻrsatish"
 
-#: kwalleteditor.cpp:196
+#: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Yangi jild..."
 
-#: kwalleteditor.cpp:200
+#: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Delete Folder"
 msgstr "Ji&ldni oʻchirish"
 
-#: kwalleteditor.cpp:203
+#: kwalleteditor.cpp:214
 #, fuzzy, kde-format
 #| msgid "&Merge Wallet..."
 msgid "&Import a wallet..."
 msgstr "Qopchiqni &birlashtirish"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
 msgstr "XML'ni &import qilish"
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:222
 #, fuzzy, kde-format
 #| msgid "&Import XML..."
 msgid "&Export as XML..."
 msgstr "XML'ni &import qilish"
 
-#: kwalleteditor.cpp:215
+#: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Copy"
 msgstr ""
 
-#: kwalleteditor.cpp:220
+#: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
 msgstr "Ya&ngi..."
 
-#: kwalleteditor.cpp:225
+#: kwalleteditor.cpp:236
 #, kde-format
 msgid "&Rename"
 msgstr "&Nomini oʻzgartirish"
 
-#: kwalleteditor.cpp:230 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
 #, fuzzy, kde-format
 msgid "&Delete"
 msgstr "Ji&ldni oʻchirish"
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:246
 #, fuzzy, kde-format
 #| msgid "Show &Contents"
 msgid "Always show contents"
 msgstr "Tarkibini &koʻrsatish"
 
-#: kwalleteditor.cpp:239
+#: kwalleteditor.cpp:250
 #, fuzzy, kde-format
 #| msgid "Hide &Contents"
 msgid "Always hide contents"
 msgstr "Tarkibini &bekitish"
 
-#: kwalleteditor.cpp:348
+#: kwalleteditor.cpp:359
 #, kde-format
 msgid "Passwords"
 msgstr "Maxfiy soʻzlar"
 
-#: kwalleteditor.cpp:349
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Maps"
 msgstr ""
 
-#: kwalleteditor.cpp:350
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Binary Data"
 msgstr ""
 
-#: kwalleteditor.cpp:351
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Unknown"
 msgstr "Nomaʼlum"
 
-#: kwalleteditor.cpp:391
+#: kwalleteditor.cpp:402
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Rostdan qopchiqdan '%1' nomli jildni oʻchirishni istaysizmi?"
 
-#: kwalleteditor.cpp:395
+#: kwalleteditor.cpp:406
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Jildni oʻchirishda xato roʻy berdi."
 
-#: kwalleteditor.cpp:414
+#: kwalleteditor.cpp:425
 #, kde-format
 msgid "New Folder"
 msgstr "Yangi jild"
 
-#: kwalleteditor.cpp:415
+#: kwalleteditor.cpp:426
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Iltimos yangi jild uchun nom tanlang:"
 
-#: kwalleteditor.cpp:425
+#: kwalleteditor.cpp:436
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr ""
 "Uzr, jild nomi allaqachon foydalanishda. Boshqadan urinib koʻrishni "
 "istaysizmi?"
 
-#: kwalleteditor.cpp:427 kwalleteditor.cpp:792
+#: kwalleteditor.cpp:438 kwalleteditor.cpp:803
 #, kde-format
 msgid "Try Again"
 msgstr "Urinib koʻrish"
 
-#: kwalleteditor.cpp:428 kwalleteditor.cpp:793 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
 msgstr "Urinib koʻrilmasin"
 
-#: kwalleteditor.cpp:467
+#: kwalleteditor.cpp:478
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Yozuvni saqlashda xato roʻy berdi. Xato kodi: %1"
 
-#: kwalleteditor.cpp:489
+#: kwalleteditor.cpp:500
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
 
-#: kwalleteditor.cpp:543 kwalleteditor.cpp:875
+#: kwalleteditor.cpp:554 kwalleteditor.cpp:886
 #, kde-format
 msgid "Password: %1"
 msgstr "Maxfiy soʻz: %1"
 
-#: kwalleteditor.cpp:560 kwalleteditor.cpp:877
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:888
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr ""
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:879
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:890
 #, kde-format
 msgid "Binary Data: %1"
 msgstr ""
 
-#: kwalleteditor.cpp:778
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "New Entry"
 msgstr "Yangi yozuv"
 
-#: kwalleteditor.cpp:779
+#: kwalleteditor.cpp:790
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Iltimos yangi yozuv uchun nom tanlang:"
 
-#: kwalleteditor.cpp:790
+#: kwalleteditor.cpp:801
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr ""
 "Uzr, ushbu yozuv allaqachon mavjud. Boshqadan urinib koʻrishni istaysizmi?"
 
-#: kwalleteditor.cpp:810 kwalleteditor.cpp:819
+#: kwalleteditor.cpp:821 kwalleteditor.cpp:830
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Yangi yozuv qoʻshilayotganda kutilmagan xato roʻy berdi."
 
-#: kwalleteditor.cpp:871
+#: kwalleteditor.cpp:882
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Yozuvning nomi oʻzgartirilayotganda kutilmagan xato roʻy berdi."
 
-#: kwalleteditor.cpp:891
+#: kwalleteditor.cpp:902
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Rostdan '%1' yozuvni oʻchirishni istaysizmi?"
 
-#: kwalleteditor.cpp:895
+#: kwalleteditor.cpp:906
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Yozuv oʻchirilayotganda kutilmagan xato roʻy berdi."
 
-#: kwalleteditor.cpp:923
+#: kwalleteditor.cpp:934
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Soʻralgan qopchiqni ochib boʻlmadi."
 
-#: kwalleteditor.cpp:959
+#: kwalleteditor.cpp:970
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "'<b>%1</b>' XML fayliga murojaat qilib boʻlmadi."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "'<b>%1</b>' qopchigʻiga murojaat qilib boʻlmadi."
 
-#: kwalleteditor.cpp:997 kwalleteditor.cpp:1027 kwalleteditor.cpp:1061
-#: kwalleteditor.cpp:1143
+#: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
+#: kwalleteditor.cpp:1154
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -323,22 +323,22 @@ msgstr ""
 "'<b>%1</b>' jildida '<b>%2</b>' yozuvi allaqachon mavjud. Uni almashtirishni "
 "istaysizmi?"
 
-#: kwalleteditor.cpp:1101
+#: kwalleteditor.cpp:1112
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "'<b>%1</b>' XML fayliga murojaat qilib boʻlmadi."
 
-#: kwalleteditor.cpp:1107
+#: kwalleteditor.cpp:1118
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "'<b>%1</b>' XML faylni oʻqishda xato roʻy berdi."
 
-#: kwalleteditor.cpp:1113
+#: kwalleteditor.cpp:1124
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Xato: XML fayli tarkibida qopchiq mavjud emas."
 
-#: kwalleteditor.cpp:1264
+#: kwalleteditor.cpp:1275
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."
@@ -664,67 +664,68 @@ msgstr ""
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
-msgid "The '%1' wallet is currently open"
+msgid "The '%1' wallet is currently open."
 msgstr "KDE qopchiq: Qopchiq ochiq."
 
 #: walletcontrolwidget.cpp:94
-#, kde-format
-msgid "The wallet is currently closed"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "KDE Wallet: A wallet is open."
+msgid "The wallet is currently closed."
+msgstr "KDE qopchiq: Qopchiq ochiq."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
-#: walletcontrolwidget.ui:28
+#: walletcontrolwidget.ui:31
 #, kde-format
 msgid "KSqueezedTextLabel"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
-#: walletcontrolwidget.ui:35
+#: walletcontrolwidget.ui:54
 #, fuzzy, kde-format
 msgid "Open..."
 msgstr "Ya&ngi..."
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
-#: walletcontrolwidget.ui:58
+#: walletcontrolwidget.ui:61
 #, fuzzy, kde-format
 #| msgid "Change &Password..."
 msgid "Change Password..."
 msgstr "&Maxfiy soʻzni oʻzgartirish"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:74
+#: walletcontrolwidget.ui:80
 #, fuzzy, kde-format
 #| msgid "Hide &Contents"
 msgid "Contents"
 msgstr "Tarkibini &bekitish"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:111
+#: walletcontrolwidget.ui:117
 #, kde-format
 msgid "Applications"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
-#: walletwidget.ui:142
+#: walletwidget.ui:159
 #, kde-format
 msgid "Hide &Contents"
 msgstr "Tarkibini &bekitish"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:185 walletwidget.ui:233
+#: walletwidget.ui:202 walletwidget.ui:250
 #, kde-format
 msgid "Show &Contents"
 msgstr "Tarkibini &koʻrsatish"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:296
+#: walletwidget.ui:318
 #, kde-format
 msgid "&Undo"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:306
+#: walletwidget.ui:328
 #, kde-format
 msgid "&Save"
 msgstr ""
