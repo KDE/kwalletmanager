@@ -650,12 +650,12 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open"
-msgstr "La cartera «%1» està oberta actualment"
+msgstr "La cartera «%1» està oberta"
 
 #: walletcontrolwidget.cpp:94
 #, kde-format
 msgid "The wallet is currently closed"
-msgstr "La cartera està tancada actualment"
+msgstr "La cartera està tancada"
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:28
