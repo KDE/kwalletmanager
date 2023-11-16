@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:40+0000\n"
-"PO-Revision-Date: 2023-10-18 11:28+0200\n"
+"PO-Revision-Date: 2023-11-15 10:03+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -647,22 +647,17 @@ msgid "&Close"
 msgstr "&Tanca"
 
 #: walletcontrolwidget.cpp:77
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "La cartera «%1» està oberta actualment"
+msgstr "La cartera «%1» està oberta actualment."
 
 #: walletcontrolwidget.cpp:94
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "La cartera està tancada actualment"
+msgstr "La cartera està tancada actualment."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31

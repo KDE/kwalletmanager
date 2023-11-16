@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:40+0000\n"
-"PO-Revision-Date: 2023-10-18 07:30+0200\n"
+"PO-Revision-Date: 2023-11-15 07:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -645,22 +645,17 @@ msgid "&Close"
 msgstr "&Zapri"
 
 #: walletcontrolwidget.cpp:77
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Trenutno je odprta listnica '%1'"
+msgstr "Listnica '%1' je trenutno odprta."
 
 #: walletcontrolwidget.cpp:94
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Listnica je trenutno zaprta"
+msgstr "Listnica je trenutno zaprta."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
