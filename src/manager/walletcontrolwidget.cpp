@@ -20,10 +20,7 @@
 
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
     QWidget(parent),
-    _walletName(walletName),
-    _wallet(nullptr),
-    _walletEditor(nullptr),
-    _applicationsManager(nullptr)
+    _walletName(walletName)
 {
     setupUi(this);
     onSetupWidget();

@@ -34,7 +34,7 @@ Q_SIGNALS:
     void walletChangePassword(const QString &walletName);
 
 private:
-    QString _walletName;
+    const QString _walletName;
 };
 
 #endif

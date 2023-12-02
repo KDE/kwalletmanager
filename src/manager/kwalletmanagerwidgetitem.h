@@ -26,7 +26,7 @@ public:
 
 private:
     WalletControlWidget *_controlWidget = nullptr;
-    QString             _walletName;
+    const QString             _walletName;
 };
 
 #endif // KWALLETMANAGERWIDGETITEM_H

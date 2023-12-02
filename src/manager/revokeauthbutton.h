@@ -27,8 +27,8 @@ Q_SIGNALS:
     void appRevoked(const QString&);
 
 private:
-    QString             _appName;
-    KWallet::Wallet     *_wallet = nullptr;
+    const QString             _appName;
+    KWallet::Wallet     *const _wallet;
 };
 
 #endif // REVOKEAUTHBUTTON_H
