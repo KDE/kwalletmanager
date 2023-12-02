@@ -11,10 +11,7 @@
 
 
 ApplicationsManager::ApplicationsManager(QWidget *parent):
-    QWidget(parent),
-    _wallet(nullptr),
-    _connectedAppsModel(nullptr),
-    _authorizedAppModel(nullptr)
+    QWidget(parent)
 {
     setupUi(this);
 }

@@ -32,7 +32,7 @@ KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, co
     setIcon(0, getFolderIcon());
 }
 
-QIcon KWalletFolderItem::getFolderIcon()
+QIcon KWalletFolderItem::getFolderIcon() const
 {
     return QIcon::fromTheme(_name, QIcon::fromTheme(_name.toLower(), QIcon::fromTheme(QStringLiteral("folder"))));
 }
@@ -76,12 +76,12 @@ KWalletContainerItem *KWalletFolderItem::getContainer(KWallet::Wallet::EntryType
     return nullptr;
 }
 
-bool KWalletFolderItem::contains(const QString &key)
+bool KWalletFolderItem::contains(const QString &key) const
 {
     return (getItem(key) != nullptr);
 }
 
-QTreeWidgetItem *KWalletFolderItem::getItem(const QString &key)
+QTreeWidgetItem *KWalletFolderItem::getItem(const QString &key) const
 {
     for (int i = 0; i < childCount(); ++i) {
         auto ci = dynamic_cast<KWalletContainerItem *>(child(i));
@@ -126,12 +126,12 @@ KWallet::Wallet::EntryType KWalletContainerItem::entryType()
     return _type;
 }
 
-bool KWalletContainerItem::contains(const QString &key)
+bool KWalletContainerItem::contains(const QString &key) const
 {
     return getItem(key) != nullptr;
 }
 
-QTreeWidgetItem *KWalletContainerItem::getItem(const QString &key)
+QTreeWidgetItem *KWalletContainerItem::getItem(const QString &key) const
 {
     for (int i = 0; i < childCount(); ++i) {
         auto entryItem = dynamic_cast<KWalletEntryItem *>(child(i));
@@ -598,7 +598,7 @@ void KWalletEntryList::dragMoveEvent(QDragMoveEvent *e)
     }
 }
 
-KWalletFolderItem *KWalletEntryList::getFolder(const QString &name)
+KWalletFolderItem *KWalletEntryList::getFolder(const QString &name) const
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         auto fi = dynamic_cast<KWalletFolderItem *>(topLevelItem(i));

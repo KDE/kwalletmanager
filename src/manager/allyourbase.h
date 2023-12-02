@@ -57,8 +57,8 @@ public:
 
 public:
     KWallet::Wallet::EntryType entryType();
-    bool contains(const QString &itemKey);
-    QTreeWidgetItem *getItem(const QString &itemKey);
+    bool contains(const QString &itemKey) const;
+    QTreeWidgetItem *getItem(const QString &itemKey) const;
 
 private:
     KWallet::Wallet::EntryType _type;
@@ -75,9 +75,9 @@ public:
     QString name() const;
     void refresh();
     KWalletContainerItem *getContainer(KWallet::Wallet::EntryType type);
-    QIcon getFolderIcon();
-    bool contains(const QString &itemKey);
-    QTreeWidgetItem *getItem(const QString &itemKey);
+    QIcon getFolderIcon() const;
+    bool contains(const QString &itemKey) const;
+    QTreeWidgetItem *getItem(const QString &itemKey) const;
     void refreshItemsCount();
 
 public:
@@ -97,7 +97,7 @@ public:
     ~KWalletEntryList() override;
 
     bool existsFolder(const QString &name);
-    KWalletFolderItem *getFolder(const QString &name);
+    KWalletFolderItem *getFolder(const QString &name) const;
     void setWallet(KWallet::Wallet *w);
 
 protected:
