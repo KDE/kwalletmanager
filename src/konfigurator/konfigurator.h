@@ -6,7 +6,6 @@
 
 #ifndef _KWALLETKONFIGURATOR_H
 #define _KWALLETKONFIGURATOR_H
-#include "kcmutils_version.h"
 #include <KCModule>
 #include <KSharedConfig>
 #include "ui_walletconfigwidget.h"
