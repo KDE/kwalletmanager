@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kwalletmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2023-12-03 01:37+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -399,7 +399,7 @@ msgstr "Cumraigh &Sparán..."
 msgid "Close &All Wallets"
 msgstr "Dún G&ach Sparán"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -408,17 +408,17 @@ msgstr ""
 "Ní féidir an sparán a dhúnadh gan stró. Is dócha go bhfuil sé in úsáid ag "
 "feidhmchláir eile. An bhfuil fonn ort é a dhúnadh le lámh láidir?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Dún le Lámh Láidir"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ná Dún le Lámh Láidir"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ní féidir an sparán a dhúnadh le lámh láidir. Cód earráide: %1."
@@ -501,12 +501,12 @@ msgstr ""
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -535,7 +535,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
 msgstr "&Oscail..."
@@ -648,12 +648,12 @@ msgstr "Ainm sparáin"
 msgid "Revoke Authorization"
 msgstr ""
 
-#: walletcontrolwidget.cpp:60
+#: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
 msgstr ""
 
-#: walletcontrolwidget.cpp:77
+#: walletcontrolwidget.cpp:74
 #, fuzzy, kde-format
 #| msgid "A wallet is open."
 msgctxt ""
@@ -662,7 +662,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Tá sparán oscailte."
 
-#: walletcontrolwidget.cpp:94
+#: walletcontrolwidget.cpp:91
 #, fuzzy, kde-format
 #| msgid "A wallet is open."
 msgid "The wallet is currently closed."
@@ -709,19 +709,19 @@ msgstr "Folaigh an t&Inneachar"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:202 walletwidget.ui:250
+#: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
 msgstr "T&aispeáin Inneachar"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:318
+#: walletwidget.ui:324
 #, kde-format
 msgid "&Undo"
 msgstr "&Cealaigh"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:328
+#: walletwidget.ui:334
 #, kde-format
 msgid "&Save"
 msgstr "&Sábháil"

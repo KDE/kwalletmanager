@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2023-12-03 01:37+0000\n"
 "PO-Revision-Date: 2023-10-12 18:19+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -398,7 +398,7 @@ msgstr "&Lompakon asetukset…"
 msgid "Close &All Wallets"
 msgstr "Sulje k&aikki lompakot"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -407,17 +407,17 @@ msgstr ""
 "Lompakkoa ei voitu sulkea puhtaasti. Tämä voi johtua siitä, että jokin "
 "ohjelma käyttää lompakkoa. Haluatko pakottaa lompakon sulkeutumaan?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Pakota sulkeutumaan"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "Älä pakota"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ei voitu pakottaa lompakkoa sulkeutumaan. Virhekoodi oli %1."
@@ -498,12 +498,12 @@ msgstr "Lompakko nimeltä %1 on jo olemassa. Toiminto keskeytetty"
 msgid "Failed to copy files"
 msgstr "Tiedostojen kopiointi epäonnistui"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Hylätäänkö tallentamattomat muutokset?"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr "Sivuuta"
@@ -532,7 +532,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
 msgstr "&Avaa…"
@@ -644,12 +644,12 @@ msgstr "Lompakon nimi"
 msgid "Revoke Authorization"
 msgstr "Peru valtuutus"
 
-#: walletcontrolwidget.cpp:60
+#: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
 msgstr "&Sulje"
 
-#: walletcontrolwidget.cpp:77
+#: walletcontrolwidget.cpp:74
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -661,7 +661,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Lompakko ”%1” on tällä hetkellä auki"
 
-#: walletcontrolwidget.cpp:94
+#: walletcontrolwidget.cpp:91
 #, fuzzy, kde-format
 #| msgid "The wallet is currently closed"
 msgid "The wallet is currently closed."
@@ -705,19 +705,19 @@ msgstr "Piilota &sisältö"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:202 walletwidget.ui:250
+#: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
 msgstr "&Näytä sisältö"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:318
+#: walletwidget.ui:324
 #, kde-format
 msgid "&Undo"
 msgstr "&Kumoa"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:328
+#: walletwidget.ui:334
 #, kde-format
 msgid "&Save"
 msgstr "&Tallenna"

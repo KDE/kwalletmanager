@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2023-12-03 01:37+0000\n"
 "PO-Revision-Date: 2023-11-16 07:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -391,7 +391,7 @@ msgstr "Agordi &Wallet..."
 msgid "Close &All Wallets"
 msgstr "Fermi Ĉi&ujn Monujojn"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -400,17 +400,17 @@ msgstr ""
 "Ne eblas pure fermi monujon. Ĝi verŝajne estas uzata de aliaj aplikoj. Ĉu vi "
 "volas devigi ĝin fermi?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Forto Fermo"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ne Devigi"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ne eblas devigi la monujon fermita. Erarkodo estis %1."
@@ -491,12 +491,12 @@ msgstr "Monujo nomita %1 jam ekzistas, Operacio ĉesigita"
 msgid "Failed to copy files"
 msgstr "Malsukcesis kopii dosierojn"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ĉu ignori nekonservitajn ŝanĝojn?"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr "Ignori"
@@ -525,7 +525,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "Eraro okazis konektante al la KWallet-servo:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
 msgstr "&Malfermi..."
@@ -635,12 +635,12 @@ msgstr "Nomo de monujo"
 msgid "Revoke Authorization"
 msgstr "Revoki Rajton"
 
-#: walletcontrolwidget.cpp:60
+#: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
 msgstr "F&ermi"
 
-#: walletcontrolwidget.cpp:77
+#: walletcontrolwidget.cpp:74
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -648,7 +648,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "La monujo '%1' estas nuntempe malfermita."
 
-#: walletcontrolwidget.cpp:94
+#: walletcontrolwidget.cpp:91
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "La monujo estas nuntempe fermita"
@@ -691,19 +691,19 @@ msgstr "Kaŝi &Enhavon"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:202 walletwidget.ui:250
+#: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
 msgstr "Montri &Enhavon"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:318
+#: walletwidget.ui:324
 #, kde-format
 msgid "&Undo"
 msgstr "&Malfari"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:328
+#: walletwidget.ui:334
 #, kde-format
 msgid "&Save"
 msgstr "Kon&servi"

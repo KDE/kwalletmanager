@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2023-12-03 01:37+0000\n"
 "PO-Revision-Date: 2023-11-16 14:15+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -393,7 +393,7 @@ msgstr "&Настройки на Портфейл..."
 msgid "Close &All Wallets"
 msgstr "Затваряне на &всички"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -402,17 +402,17 @@ msgstr ""
 "Портфейлът не може да бъде затворен нормално. Най-вероятно се използва от "
 "друга програма. Искате ли въпреки това портфейлът да бъде затворен?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Затваряне"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "Без затваряне"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Грешка при затваряне на портфейл. Код на грешката %1."
@@ -493,12 +493,12 @@ msgstr "Портфейл с име %1 вече съществува, прекъ�
 msgid "Failed to copy files"
 msgstr "Неуспешно копиране на файловете"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "&Игнориране на незапазените промени?"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr "Пренебрегване"
@@ -527,7 +527,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "Възникна грешка при свързването с услугата на KWallet:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
 msgstr "&Отваряне..."
@@ -637,12 +637,12 @@ msgstr "Име на портфейл"
 msgid "Revoke Authorization"
 msgstr "Анулиране на удостоверение"
 
-#: walletcontrolwidget.cpp:60
+#: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
 msgstr "&Затваряне"
 
-#: walletcontrolwidget.cpp:77
+#: walletcontrolwidget.cpp:74
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -650,7 +650,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Портфейлът \"%1\" вече е отворен"
 
-#: walletcontrolwidget.cpp:94
+#: walletcontrolwidget.cpp:91
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Портфейлът в момента е затворен"
@@ -693,19 +693,19 @@ msgstr "Скриване на &съдържанието"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:202 walletwidget.ui:250
+#: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
 msgstr "Показване на &съдържанието"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:318
+#: walletwidget.ui:324
 #, kde-format
 msgid "&Undo"
 msgstr "&Отмяна"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:328
+#: walletwidget.ui:334
 #, kde-format
 msgid "&Save"
 msgstr "&Запис"

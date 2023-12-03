@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2023-12-03 01:37+0000\n"
 "PO-Revision-Date: 2023-11-15 20:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -397,7 +397,7 @@ msgstr "Налаштувати &торбинки…"
 msgid "Close &All Wallets"
 msgstr "Закрити &всі торбинки"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -406,17 +406,17 @@ msgstr ""
 "Не вдається замкнути торбинку. Можливо, її використовують інші програми. "
 "Бажаєте примусово замкнути її?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Примусово закрити"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "Не примушувати"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Не вдається примусово замкнути торбинку. Код помилки:%1."
@@ -497,12 +497,12 @@ msgstr "Торбинка із назвою %1 вже існує. Дію скас
 msgid "Failed to copy files"
 msgstr "Не вдалося скопіювати файли"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ігнорувати незбережені зміни?"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr "Ігнорувати"
@@ -533,7 +533,7 @@ msgstr ""
 "Під час спроби встановити з'єднання зі службою KWallet сталася помилка:<nl/>"
 "%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
 msgstr "&Відкрити…"
@@ -643,12 +643,12 @@ msgstr "Назва торбинки"
 msgid "Revoke Authorization"
 msgstr "Відкликати доступ"
 
-#: walletcontrolwidget.cpp:60
+#: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
 msgstr "&Закрити"
 
-#: walletcontrolwidget.cpp:77
+#: walletcontrolwidget.cpp:74
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -656,7 +656,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Зараз торбинку «%1» відкрито."
 
-#: walletcontrolwidget.cpp:94
+#: walletcontrolwidget.cpp:91
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Зараз торбинку закрито."
@@ -699,19 +699,19 @@ msgstr "Сховати &вміст"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:202 walletwidget.ui:250
+#: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
 msgstr "Показати &вміст"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:318
+#: walletwidget.ui:324
 #, kde-format
 msgid "&Undo"
 msgstr "&Вернути"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:328
+#: walletwidget.ui:334
 #, kde-format
 msgid "&Save"
 msgstr "&Зберегти"

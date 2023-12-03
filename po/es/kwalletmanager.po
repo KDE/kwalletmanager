@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2023-12-03 01:37+0000\n"
 "PO-Revision-Date: 2023-11-17 00:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -395,7 +395,7 @@ msgstr "Con&figurar cartera..."
 msgid "Close &All Wallets"
 msgstr "Cerrar &todas las carteras"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -404,17 +404,17 @@ msgstr ""
 "Es imposible cerrar la cartera limpiamente. Es probable que esté siendo "
 "usada por otras aplicaciones. ¿Desea forzar su cierre?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:116
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Forzar cierre"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "No forzar"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:121
+#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Es imposible forzar el cierre de la cartera. Código de error: %1."
@@ -495,12 +495,12 @@ msgstr "La cartera llamada %1 ya existe. Operación interrumpida."
 msgid "Failed to copy files"
 msgstr "Ha fallado la copia de archivos"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "¿Ignorar los cambios sin guardar?"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:104
+#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorar"
@@ -529,7 +529,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "Ha ocurrido un error al conectarse al servicio KWallet:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:80
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
 msgstr "&Abrir..."
@@ -639,12 +639,12 @@ msgstr "Un nombre de cartera"
 msgid "Revoke Authorization"
 msgstr "Revocar autorización"
 
-#: walletcontrolwidget.cpp:60
+#: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
 msgstr "&Cerrar"
 
-#: walletcontrolwidget.cpp:77
+#: walletcontrolwidget.cpp:74
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -652,7 +652,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "La cartera «%1» está abierta actualmente."
 
-#: walletcontrolwidget.cpp:94
+#: walletcontrolwidget.cpp:91
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "La cartera está cerrada actualmente."
@@ -695,19 +695,19 @@ msgstr "Ocultar &contenido"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:202 walletwidget.ui:250
+#: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
 msgstr "Mostrar &contenido"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:318
+#: walletwidget.ui:324
 #, kde-format
 msgid "&Undo"
 msgstr "&Deshacer"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:328
+#: walletwidget.ui:334
 #, kde-format
 msgid "&Save"
 msgstr "&Guardar"
