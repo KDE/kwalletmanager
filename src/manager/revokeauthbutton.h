@@ -18,15 +18,13 @@ class RevokeAuthButton : public QPushButton
 {
     Q_OBJECT
 public:
-    RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet);
-
-private Q_SLOTS:
-    void onClicked();
+    explicit RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet);
 
 Q_SIGNALS:
     void appRevoked(const QString&);
 
 private:
+    void onClicked();
     const QString             _appName;
     KWallet::Wallet     *const _wallet;
 };
