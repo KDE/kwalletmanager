@@ -122,7 +122,7 @@ KWMapEditor::KWMapEditor(QMap<QString, QString> &map, QWidget *parent)
 {
     setItemDelegate(new KWMapEditorDelegate(this));
     _ac = new KActionCollection(this);
-    _copyAct = KStandardAction::copy(this, SLOT(copy()), _ac);
+    _copyAct = KStandardAction::copy(this, &KWMapEditor::copy, _ac);
     connect(this, &KWMapEditor::itemChanged, this, &KWMapEditor::dirty);
     connect(this, &KWMapEditor::customContextMenuRequested, this, &KWMapEditor::contextMenu);
     setSelectionMode(NoSelection);
