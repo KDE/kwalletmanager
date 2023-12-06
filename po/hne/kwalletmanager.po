@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2009-03-01 12:38+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -162,7 +162,7 @@ msgstr "नवा... (&N)"
 msgid "&Rename"
 msgstr "नाम बदलव (&R)"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, kde-format
 msgid "&Delete"
 msgstr "मेटाव (&D)"
@@ -546,7 +546,7 @@ msgstr "खोलव... (&O)"
 msgid "Change &Password..."
 msgstr "पासवर्ड बदलव... (&P)"
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "डिस्कनेक्ट (&t)"

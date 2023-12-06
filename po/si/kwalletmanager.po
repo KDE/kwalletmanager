@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2011-11-30 23:30+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -159,7 +159,7 @@ msgstr "නව... (&N)"
 msgid "&Rename"
 msgstr "ප්‍රතිනම් (&R)"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, kde-format
 msgid "&Delete"
 msgstr "මකන්න (&D)"
@@ -541,7 +541,7 @@ msgstr "විවෘත කරන්න (&O)..."
 msgid "Change &Password..."
 msgstr "මුරපදය වෙනස් කරන්න... (&P)"
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "විසන්ධි කරන්න (&t)"

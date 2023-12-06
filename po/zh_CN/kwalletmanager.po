@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -155,7 +155,7 @@ msgstr "新建(&N)..."
 msgid "&Rename"
 msgstr "重命名(&R)"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, kde-format
 msgid "&Delete"
 msgstr "删除(&D)"
@@ -530,7 +530,7 @@ msgstr "打开(&O)..."
 msgid "Change &Password..."
 msgstr "更改密码(&P)..."
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "断开(&T)"

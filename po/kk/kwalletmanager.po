@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2013-09-20 03:17+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -160,7 +160,7 @@ msgstr "&Жаңа..."
 msgid "&Rename"
 msgstr "Атауын өзге&рту"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, kde-format
 msgid "&Delete"
 msgstr "Ө&шіру"
@@ -541,7 +541,7 @@ msgstr "&Ашу..."
 msgid "Change &Password..."
 msgstr "&Парольді өзгерту..."
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "Ажыра&ту"

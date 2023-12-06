@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2023-10-21 11:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -164,7 +164,7 @@ msgstr "&Nowy..."
 msgid "&Rename"
 msgstr "&Zmień nazwę"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, kde-format
 msgid "&Delete"
 msgstr "&Usuń"
@@ -542,7 +542,7 @@ msgstr "&Otwórz..."
 msgid "Change &Password..."
 msgstr "Zmień &hasło..."
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "&Rozłącz"

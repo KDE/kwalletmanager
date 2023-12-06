@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2005-03-24 01:18-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team:  <tamilpc@ambalam.com>\n"
@@ -157,7 +157,7 @@ msgstr "&புதிய..."
 msgid "&Rename"
 msgstr "&மறுபெயர்"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, fuzzy, kde-format
 msgid "&Delete"
 msgstr "&ஆவணமத்தை அழி"
@@ -541,7 +541,7 @@ msgstr "&புதிய..."
 msgid "Change &Password..."
 msgstr "கடவுச்சொல்லை மாற்று..."
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "&துண்டி"

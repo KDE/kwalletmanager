@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-03 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:40+0000\n"
 "PO-Revision-Date: 2019-02-10 08:29-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -156,7 +156,7 @@ msgstr "ਨਵਾਂ(&N)..."
 msgid "&Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:65
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
 #, kde-format
 msgid "&Delete"
 msgstr "ਹਟਾਓ(&D)"
@@ -534,7 +534,7 @@ msgstr "ਖੋਲ੍ਹੋ(&O)..."
 msgid "Change &Password..."
 msgstr "ਪਾਸਵਰਡ ਬਦਲੋ(&P)..."
 
-#: kwalletpopup.cpp:53
+#: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
 msgstr "ਡਿਸ-ਕਨੈਕਟ(&t)"
