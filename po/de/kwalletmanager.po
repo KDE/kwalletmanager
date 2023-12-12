@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2022-11-10 20:49+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -32,38 +32,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gz@orchester-bremgarten.ch"
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr ""
 "Ein Eintrag mit dem Namen „%1“ existiert bereits. Möchten Sie fortfahren?"
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Ein Ordner namens „%1“ existiert bereits. Wie möchten Sie fortfahren?"
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, kde-format
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, kde-format
 msgid "Folders"
 msgstr "Ordner"
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Beim Ablegen des Eintrags ist ein Fehler aufgetreten."
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Beim Ablegen des Eintrags ist ein Fehler aufgetreten."
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "

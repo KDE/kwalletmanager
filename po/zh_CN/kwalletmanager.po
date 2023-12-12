@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2023-12-09 09:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,37 +27,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "i@guoyunhe.me, tds00@qq.com"
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "名称为“%1”的条目已存在。您想要继续吗？"
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "名称为“%1”的文件夹已存在。您想要怎么做？"
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, kde-format
 msgid "Replace"
 msgstr "替换"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, kde-format
 msgid "Folders"
 msgstr "文件夹"
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "尝试拖放项目时发生意外错误"
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "尝试拖放条目时发生意外错误"
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "

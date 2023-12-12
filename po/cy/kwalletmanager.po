@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ../cy/messages//kdeutils/kwalletmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandrakesoft.com>\n"
 "Language-Team: cy <LL@li.org>\n"
@@ -22,37 +22,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kyfieithu@dotmon.com"
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr ""
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr ""
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, fuzzy, kde-format
 msgid "Replace"
 msgstr "A&mnewid"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, kde-format
 msgid "Folders"
 msgstr "Plygyll"
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr ""
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr ""
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "

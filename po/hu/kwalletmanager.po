@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2021-09-14 13:46+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,37 +29,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Már létezik '%1' nevű bejegyzés. Tovább szeretne lépni?"
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Már létezik '%1' nevű mappa. Mit szeretne tenni?"
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, kde-format
 msgid "Replace"
 msgstr "Csere"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, kde-format
 msgid "Folders"
 msgstr "Könyvtárak"
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Nem várt hiba történt elem ejtésekor"
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Nem várt hiba történt a bejegyzés ejtésekor"
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "

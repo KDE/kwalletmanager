@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2005-03-24 01:18-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team:  <tamilpc@ambalam.com>\n"
@@ -26,37 +26,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "chris_loyola2003@yahoo.com"
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, fuzzy, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "'%1 என்ற பெயருடைய ஆவணம் ஏற்க்கணவே உள்ளது. நீங்கள் எண்ண செய்ய விரும்புகிறீர்கள்?"
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "'%1 என்ற பெயருடைய ஆவணம் ஏற்க்கணவே உள்ளது. நீங்கள் எண்ண செய்ய விரும்புகிறீர்கள்?"
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, fuzzy, kde-format
 msgid "Replace"
 msgstr "&இடம் மாற்று"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, fuzzy, kde-format
 msgid "Folders"
 msgstr "கோப்புறை "
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr ""
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr ""
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "

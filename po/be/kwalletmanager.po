@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2007-04-04 17:15+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -29,37 +29,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, fuzzy, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Запіс з імем '%1' ужо існуе. Вы жадаеце працягнуць?"
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, fuzzy, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Тэчка з імем '%1' ужо існуе. Што вы жадаеце зрабіць?"
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, fuzzy, kde-format
 msgid "Replace"
 msgstr "Замяніць"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, fuzzy, kde-format
 msgid "Folders"
 msgstr "Тэчкі"
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Памылка перацягвання элемента"
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Памылка перацягвання запісу"
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, fuzzy, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "

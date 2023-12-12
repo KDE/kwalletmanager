@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-12 01:39+0000\n"
 "PO-Revision-Date: 2022-10-22 19:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -36,37 +36,37 @@ msgstr ""
 "king_abdo@yahoo.com,munzir@kacst.edu.sa,dr.khaled.hosny@gmail.com, Fahad."
 "alsaidi@gmail.com"
 
-#: allyourbase.cpp:203
+#: allyourbase.cpp:209
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "هناك مدخلة بالاسم ’%1‘ بالفعل. أتريد المتابعة؟"
 
-#: allyourbase.cpp:228
+#: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "هناك مجلّد بالاسم ’%1‘ بالفعل. ما الذي تريد فعله؟"
 
-#: allyourbase.cpp:231
+#: allyourbase.cpp:237
 #, kde-format
 msgid "Replace"
 msgstr "استبدله"
 
-#: allyourbase.cpp:341
+#: allyourbase.cpp:347
 #, kde-format
 msgid "Folders"
 msgstr "المجلّدات"
 
-#: allyourbase.cpp:375
+#: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "حدث خطأ غير متوقّع عند محاولة إفلات العنصر"
 
-#: allyourbase.cpp:451
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "حدث خطأ غير متوقّع عند محاولة إفلات المدخلة"
 
-#: allyourbase.cpp:475
+#: allyourbase.cpp:481
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
