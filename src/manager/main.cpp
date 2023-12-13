@@ -33,7 +33,7 @@ int main(int argc, char **argv)
                  QStringLiteral("https://apps.kde.org/kwalletmanager5"));
 
     aboutData.addAuthor(i18n("Valentin Rusu"),
-                        i18n("Maintainer, user interface refactoring"),
+                        i18n("Former Maintainer, user interface refactoring"),
                         QStringLiteral("kde@rusu.info"));
     aboutData.addAuthor(i18n("George Staikos"),
                         i18n("Original author and former maintainer"),
