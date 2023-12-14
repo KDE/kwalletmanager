@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-12 01:39+0000\n"
+"POT-Creation-Date: 2023-12-14 01:37+0000\n"
 "PO-Revision-Date: 2013-09-20 03:17+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -588,8 +588,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, kde-format
-msgid "Maintainer, user interface refactoring"
+#, fuzzy, kde-format
+#| msgid "Maintainer, user interface refactoring"
+msgid "Former Maintainer, user interface refactoring"
 msgstr "Жетілдірушісі, пайдаланушы интерфейс рефакторингі"
 
 #: main.cpp:38

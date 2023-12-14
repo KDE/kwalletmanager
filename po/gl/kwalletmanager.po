@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-12 01:39+0000\n"
+"POT-Creation-Date: 2023-12-14 01:37+0000\n"
 "PO-Revision-Date: 2023-11-15 18:42+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -585,8 +585,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, kde-format
-msgid "Maintainer, user interface refactoring"
+#, fuzzy, kde-format
+#| msgid "Maintainer, user interface refactoring"
+msgid "Former Maintainer, user interface refactoring"
 msgstr "Mantemento, revisión da interface."
 
 #: main.cpp:38

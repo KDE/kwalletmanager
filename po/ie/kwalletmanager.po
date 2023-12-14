@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-12 01:39+0000\n"
+"POT-Creation-Date: 2023-12-14 01:37+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -574,7 +574,7 @@ msgstr "Valentin Rusu"
 
 #: main.cpp:36
 #, fuzzy, kde-format
-msgid "Maintainer, user interface refactoring"
+msgid "Former Maintainer, user interface refactoring"
 msgstr "Die Benutzeroberfläche konnte nicht geladen werden"
 
 #: main.cpp:38
