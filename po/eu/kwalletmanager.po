@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-11-25 18:38+0100\n"
+"PO-Revision-Date: 2023-12-14 18:35+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -590,10 +590,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Arduraduna, erabiltzaile-interfazearen berregituratzea"
+msgstr "Aurreko arduraduna, erabiltzaile-interfazearen berregituratzea"
 
 #: main.cpp:38
 #, kde-format

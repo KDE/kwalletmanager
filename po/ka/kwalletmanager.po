@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-11-16 04:44+0100\n"
+"PO-Revision-Date: 2023-12-14 05:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -584,10 +584,9 @@ msgid "Valentin Rusu"
 msgstr "ვალენტინ რუსუ"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "პროექტის წამყვანი, მომხმარებლის ინტერფეისის გადალაგება"
+msgstr "ყოფილი პროექტის წამყვანი, მომხმარებლის ინტერფეისის გადალაგება"
 
 #: main.cpp:38
 #, kde-format
