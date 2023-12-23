@@ -13,7 +13,7 @@
 # Guillaume Pujol <guill.p@gmail.com>, 2007.
 # Amine Say <aminesay@yahoo.fr>, 2009.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2009.
-# SPDX-FileCopyrightText: 2013, 2022, 2023 xavier <xavier.besnard@neuf.fr>
+# SPDX-FileCopyrightText: 2013, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 #
