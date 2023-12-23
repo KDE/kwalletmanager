@@ -13,7 +13,7 @@
 # Jean-Jacques FINAZZI <mrjay01@users.sourceforge.net>, 2008.
 # Mickael Sibelle <kimael@gmail.com>, 2008.
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2009.
-# xavier <xavier.besnard@neuf.fr>, 2013, 2021, 2022.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013, 2021, 2022.
 # Bruno Patri <bruno.patri@gmail.com>, 2013.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 #
