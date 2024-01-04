@@ -2,31 +2,31 @@
 # Tamas Szanto <taszanto@gmail.com>, 2003.
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2019.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2021-09-14 13:45+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-01-03 10:48+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kiszel Kristóf,Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kiszel.kristof@gmail.com,taszanto@gmail.com"
+msgstr "ulysses@fsf.hu"
 
 #: konfigurator.cpp:102
 #, kde-format
@@ -220,13 +220,13 @@ msgstr "A paneltálca ikon elrejtése az utolsó nyitott tároló bezárásakor"
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Titkoskód-szolgáltatás"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "KWallet használata titkoskód-szolgáltatás interfészként"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -236,6 +236,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"A titkoskód-szolgáltató interfész lehetővé teszi az alkalmazásoknak "
+"jelszavak és más bizalmas adatok tárolását. Kapcsolja ki, ha szeretné "
+"lehetővé tenni harmadik féltől származó alkalmazásoknak, például a KeePassXC-"
+"nek vagy a GNOME kulcstartónak azok kezelését."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
