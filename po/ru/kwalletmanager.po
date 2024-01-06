@@ -10,13 +10,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2016, 2018.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Olga Mironova <omiro@basealt.ru>, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-02-19 13:57+0300\n"
+"PO-Revision-Date: 2024-01-05 21:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -439,8 +439,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Укажите имя нового бумажника:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Новый бумажник"
@@ -537,7 +536,7 @@ msgstr "&Справка"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Не удалось подключиться к службе KWallet:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
@@ -595,10 +594,10 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Сопровождающий; перепроектирование пользовательского интерфейса"
+msgstr ""
+"Прежний сопровождающий; перепроектирование пользовательского интерфейса"
 
 #: main.cpp:38
 #, kde-format
@@ -656,22 +655,17 @@ msgid "&Close"
 msgstr "&Закрыть"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Бумажник «%1» открыт"
+msgstr "Бумажник «%1» открыт."
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Этот бумажник закрыт"
+msgstr "Этот бумажник закрыт."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
