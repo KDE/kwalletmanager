@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2022-11-18 14:44+0200\n"
+"PO-Revision-Date: 2024-01-13 18:05+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -180,7 +180,7 @@ msgid "Passwords"
 msgstr "Slaptažodžiai"
 
 #: kwalleteditor.cpp:360
-#, fuzzy, kde-format
+#, kde-format
 msgid "Maps"
 msgstr "Žemėlapiai"
 
@@ -249,7 +249,7 @@ msgid "Password: %1"
 msgstr "Slaptažodis: %1"
 
 #: kwalleteditor.cpp:571 kwalleteditor.cpp:888
-#, fuzzy, kde-format
+#, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Vardo-reikšmės atvaizdis: %1"
 
@@ -428,8 +428,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Pasirinkite naujos slaptažodinės pavadinimą:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nauja slaptažodinė"
@@ -526,7 +525,7 @@ msgstr "&Pagalba"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Klaida jungiantis prie KWallet tarnybos:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
@@ -584,10 +583,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Prižiūrėtojas, naudotojo sąsajos perdarymas"
+msgstr "Buvęs prižiūrėtojas, naudotojo sąsajos perdarymas"
 
 #: main.cpp:38
 #, kde-format
@@ -645,22 +643,17 @@ msgid "&Close"
 msgstr "&Užverti"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Šiuo metu slaptažodinė „%1“ yra atverta"
+msgstr "Šiuo metu slaptažodinė „%1“ yra atverta."
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Šiuo metu slaptažodinė yra užverta"
+msgstr "Šiuo metu slaptažodinė yra užverta."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
