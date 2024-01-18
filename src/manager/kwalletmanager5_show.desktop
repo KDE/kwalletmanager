@@ -76,4 +76,4 @@ MimeType=application/x-kwallet;
 InitialPreference=6
 Icon=kwalletmanager
 Type=Service
-X-KDE-StartupNotify=true
+StartupNotify=true
