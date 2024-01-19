@@ -276,13 +276,3 @@ msgstr "Политика"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Стартиране на мениджъра"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "(c) 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr "От тук може да настроите системата Портфейл."
