@@ -1,20 +1,20 @@
 # translation of kcmkwallet.po to Punjabi
 #
 # Amanpreet Singh Brar <aalam@redhat.com>, 2005.
-# A S Alam <aalam@users.sf.net>, 2007, 2010, 2014, 2019.
+# SPDX-FileCopyrightText: 2007, 2010, 2014, 2019, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2019-02-10 08:26-0800\n"
-"Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2024-01-28 19:16-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -25,17 +25,17 @@ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alam.yellow@gmail.com"
+msgstr "aalam@punlinux.org"
 
 #: konfigurator.cpp:102
 #, kde-format
 msgid "New Wallet"
-msgstr "ਨਵਾਂ ਵਾਲਿਟ"
+msgstr "ਨਵਾਂ ਵਾਲਟ"
 
 #: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "ਨਵੇਂ ਵਾਲਿਟ ਲਈ ਇੱਕ ਨਾਂ ਚੁਣੋ ਜੀ:"
+msgstr "ਨਵੇਂ ਵਾਲਟ ਲਈ ਇੱਕ ਨਾਂ ਚੁਣੋ ਜੀ:"
 
 #: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
@@ -55,7 +55,7 @@ msgstr "ਇਜਾਜ਼ਤ ਲਈ ਪਾਬੰਦੀ ਹੈ।"
 #: konfigurator.cpp:257 konfigurator.cpp:259
 #, kde-format
 msgid "KDE Wallet Control Module"
-msgstr "KDE ਵਾਲਿਟ ਕੰਟਰੋਲ ਮੋਡੀਊਲ"
+msgstr "KDE ਵਾਲਟ ਕੰਟਰੋਲ ਮੋਡੀਊਲ"
 
 #: konfigurator.cpp:259
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "ਹਟਾਓ(&D)"
 #: walletconfigwidget.ui:16
 #, kde-format
 msgid "Wallet Preferences"
-msgstr "ਵਾਲਿਟ ਪਸੰਦ"
+msgstr "ਵਾਲਟ ਪਸੰਦ"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:22
@@ -84,14 +84,14 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>ਵਾਲਿਟ ਸਬ-ਸਿਸਟਮ ਤੁਹਾਡੇ ਸਭ ਪਾਸਵਰਡ ਦੇ ਪਰਬੰਧ ਲਈ ਅਸਾਨ ਅਤੇ ਸੁਰੱਖਿਅਤ ਢੰਗ ਦਿੰਦਾ ਹੈ ਹੈ। ਤੁਸੀਂ "
-"ਇਸ ਦੀ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ ਕਿ ਕੀ ਇਸ ਨੂੰ ਇਸ ਸਿਸਟਮ ਵਿੱਚ ਇਸ ਚੋਣ ਨਾਲ ਵਰਤਣਾ ਹੈ।</p>"
+"<p>ਵਾਲਟ ਸਬ-ਸਿਸਟਮ ਤੁਹਾਡੇ ਸਭ ਪਾਸਵਰਡ ਦੇ ਪਰਬੰਧ ਲਈ ਅਸਾਨ ਅਤੇ ਸੁਰੱਖਿਅਤ ਢੰਗ ਦਿੰਦਾ ਹੈ ਹੈ। ਤੁਸੀਂ ਇਸ "
+"ਦੀ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ ਕਿ ਕੀ ਇਸ ਨੂੰ ਇਸ ਸਿਸਟਮ ਵਿੱਚ ਇਸ ਚੋਣ ਨਾਲ ਵਰਤਣਾ ਹੈ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:25
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
-msgstr "KD&E ਵਾਲਿਟ ਸਬ-ਸਿਸਟਮ ਯੋਗ"
+msgstr "KD&E ਵਾਲਟ ਸਬ-ਸਿਸਟਮ ਯੋਗ"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:35
@@ -100,14 +100,14 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
-"ਜਦੋਂ ਤੁਸੀਂ ਆਪਣੇ ਵਾਲਿਟ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰ ਰਹੇ ਹੋਵੇਂ ਤਾਂ ਹੋਰਾਂ ਨੂੰ ਉਸ ਨੂੰ ਵੇਖਣ ਜਾਂ ਗਲਤ ਵਰਤੋਂ ਕਰਨ ਦੇਣ ਤੋਂ "
-"ਰੋਕਣ ਲਈ ਇਸ ਨੂੰ ਬੰਦ ਕਰੋ ਦਿਓ।"
+"ਜਦੋਂ ਤੁਸੀਂ ਆਪਣੇ ਵਾਲਟ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰ ਰਹੇ ਹੋਵੇਂ ਤਾਂ ਹੋਰਾਂ ਨੂੰ ਉਸ ਨੂੰ ਵੇਖਣ ਜਾਂ ਗਲਤ ਵਰਤੋਂ ਕਰਨ ਦੇਣ ਤੋਂ ਰੋਕਣ "
+"ਲਈ ਇਸ ਨੂੰ ਬੰਦ ਕਰੋ ਦਿਓ।"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:38
 #, kde-format
 msgid "Close Wallet"
-msgstr "ਵਾਲਿਟ ਬੰਦ ਕਰੋ"
+msgstr "ਵਾਲਟ ਬੰਦ ਕਰੋ"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -117,8 +117,8 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>ਕੁਝ ਦੇਰ ਦੀ ਗ਼ੈਰ-ਸਰਗਰਮੀ ਦੇ ਬਾਅਦ ਵਾਲਿਟ ਬੰਦ ਕਰ ਦਿਉ।</b><br>ਜਦੋਂ ਵਾਲਿਟ ਬੰਦ ਹੋ ਜਾਵੇਗਾ "
-"ਤਾਂ ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਫੇਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਪਵੇਗੀ।</p>"
+"<p><b>ਕੁਝ ਦੇਰ ਦੀ ਗ਼ੈਰ-ਸਰਗਰਮੀ ਦੇ ਬਾਅਦ ਵਾਲਟ ਬੰਦ ਕਰ ਦਿਉ।</b><br>ਜਦੋਂ ਵਾਲਟ ਬੰਦ ਹੋ ਜਾਵੇਗਾ ਤਾਂ "
+"ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਫੇਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਪਵੇਗੀ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:49
@@ -128,8 +128,7 @@ msgstr "ਜਦੋਂ ਨਾ-ਵਰਤਿਆ ਜਾਵੇ ਤਾਂ ਬੰਦ:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
 msgstr " ਮਿੰਟ"
 
@@ -140,8 +139,8 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>ਜਿਵੇਂ ਹੀ ਸਕਰੀਨ-ਸੇਵਰ ਸ਼ੁਰੂ ਹੋਵੇ ਤਾਂ ਵਾਲਿਟ ਬੰਦ ਕਰ ਦਿਉ।</b><br>ਜਦੋਂ ਵਾਲਿਟ ਬੰਦ ਹੋ ਜਾਵੇਗਾ "
-"ਤਾਂ ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਫੇਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਪਵੇਗੀ।</p>"
+"<p><b>ਜਿਵੇਂ ਹੀ ਸਕਰੀਨ-ਸੇਵਰ ਸ਼ੁਰੂ ਹੋਵੇ ਤਾਂ ਵਾਲਟ ਬੰਦ ਕਰ ਦਿਉ।</b><br>ਜਦੋਂ ਵਾਲਟ ਬੰਦ ਹੋ ਜਾਵੇਗਾ ਤਾਂ "
+"ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਫੇਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਪਵੇਗੀ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:102
@@ -158,9 +157,9 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
-"<p><b>ਜਿਵੇਂ ਹੀ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਾਲਿਟ ਨੂੰ ਵਰਤਣਾ ਬੰਦ ਕਰਨ ਤਾਂ ਵਾਲਿਟ ਬੰਦ ਕਰੋ।</b> <br>ਯਾਦ ਰੱਖੋ ਕਿ "
-"ਤੁਹਾਡਾ ਵਾਲਿਟ ਤਾਂ ਹੀ ਬੰਦ ਹੋਵੇਗਾ, ਜਦੋਂ ਸਭ ਐਪਲੀਕੇਸ਼ਨ ਇਸ ਨੂੰ ਵਰਤਣਾ ਬੰਦ ਕਰ ਦੇਣਗੀਆਂ।<br>ਜਦੋਂ ਇਕਵਾਰ "
-"ਵਾਲਿਟ ਬੰਦ ਹੋ ਗਿਆ ਤਾਂ ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਫੇਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਪਵੇਗੀ।</p>"
+"<p><b>ਜਿਵੇਂ ਹੀ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਾਲਟ ਨੂੰ ਵਰਤਣਾ ਬੰਦ ਕਰਨ ਤਾਂ ਵਾਲਟ ਬੰਦ ਕਰੋ।</b> <br>ਯਾਦ ਰੱਖੋ ਕਿ "
+"ਤੁਹਾਡਾ ਵਾਲਟ ਤਾਂ ਹੀ ਬੰਦ ਹੋਵੇਗਾ, ਜਦੋਂ ਸਭ ਐਪਲੀਕੇਸ਼ਨ ਇਸ ਨੂੰ ਵਰਤਣਾ ਬੰਦ ਕਰ ਦੇਣਗੀਆਂ।<br>ਜਦੋਂ ਇਕਵਾਰ "
+"ਵਾਲਟ ਬੰਦ ਹੋ ਗਿਆ ਤਾਂ ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਫੇਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਪਵੇਗੀ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:112
@@ -172,13 +171,13 @@ msgstr "ਜਦੋਂ ਆਖਰੀ ਐਪਲੀਕੇਸ਼ਨ ਨੇ ਵਰਤ�
 #: walletconfigwidget.ui:122
 #, kde-format
 msgid "Automatic Wallet Selection"
-msgstr "ਆਟੋਮੈਟਿਕ ਵਾਲਿਟ ਚੋਣ"
+msgstr "ਆਟੋਮੈਟਿਕ ਵਾਲਟ ਚੋਣ"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: walletconfigwidget.ui:128
 #, kde-format
 msgid "Select wallet to use as default:"
-msgstr "ਡਿਫਾਲਟ ਰੂਪ ਵਿੱਚ ਵਰਤਣ ਲਈ ਵਾਲਿਟ ਚੁਣੋ:"
+msgstr "ਡਿਫਾਲਟ ਰੂਪ ਵਿੱਚ ਵਰਤਣ ਲਈ ਵਾਲਟ ਚੁਣੋ:"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
@@ -191,13 +190,13 @@ msgstr "ਨਵਾਂ..."
 #: walletconfigwidget.ui:168
 #, kde-format
 msgid "Different wallet for local passwords:"
-msgstr "ਲੋਕਲ ਪਾਸਵਰਡਾਂ ਲਈ ਵੱਖਰਾ ਵਾਲਿਟ:"
+msgstr "ਲੋਕਲ ਪਾਸਵਰਡਾਂ ਲਈ ਵੱਖਰਾ ਵਾਲਟ:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:201
 #, kde-format
 msgid "Wallet Manager"
-msgstr "ਵਾਲਿਟ ਮੈਨੇਜਰ"
+msgstr "ਵਾਲਟ ਮੈਨੇਜਰ"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
 #: walletconfigwidget.ui:207
@@ -209,13 +208,13 @@ msgstr "ਸਿਸਟਮ ਟਰੇ ਵਿੱਚ ਮੈਨੇਜਰ ਵੇਖੋ"
 #: walletconfigwidget.ui:235
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr "ਜਦੋਂ ਵਾਲਿਟ ਬੰਦ ਹੋਵੇ ਤਾਂ ਸਿਸਟਮ ਟਰੇ ਆਈਕਾਨ ਓਹਲੇ"
+msgstr "ਜਦੋਂ ਵਾਲਟ ਬੰਦ ਹੋਵੇ ਤਾਂ ਸਿਸਟਮ ਟਰੇ ਆਈਕਾਨ ਓਹਲੇ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "ਗੁਪਤ ਸੇਵਾ"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
@@ -242,13 +241,13 @@ msgstr "ਪਹੁੰਚ ਕੰਟਰੋਲ"
 #: walletconfigwidget.ui:334
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr "ਜਦੋਂ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਇੱਕ ਵਾਲਿਟ ਨੂੰ ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੇ ਤਾਂ ਪੁੱਛੋ(&P)"
+msgstr "ਜਦੋਂ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਇੱਕ ਵਾਲਟ ਨੂੰ ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੇ ਤਾਂ ਪੁੱਛੋ(&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:348
 #, kde-format
 msgid "Wallet"
-msgstr "ਵਾਲਿਟ"
+msgstr "ਵਾਲਟ"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:359
@@ -266,7 +265,7 @@ msgstr "ਪਾਲਸੀ"
 #: walletconfigwidget.ui:406
 #, kde-format
 msgid "&Launch Wallet Manager"
-msgstr "ਵਾਲਿਟ ਮੈਨੇਜਰ ਚਲਾਓ(&L)"
+msgstr "ਵਾਲਟ ਮੈਨੇਜਰ ਚਲਾਓ(&L)"
 
 #~ msgid "(c) 2003 George Staikos"
 #~ msgstr "(c) 2003 ਜਾਰਜ ਸਟਾਕੋਸ"
