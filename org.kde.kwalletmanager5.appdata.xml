@@ -34,7 +34,7 @@
   <name xml:lang="lt">KWalletManager</name>
   <name xml:lang="nl">KWalletManager</name>
   <name xml:lang="nn">KWalletManager</name>
-  <name xml:lang="pa">ਕੇਵਾਲਿਟ-ਮੈਨੇਜਰ</name>
+  <name xml:lang="pa">ਕੇ-ਵਾਲਟ-ਮੈਨੇਜਰ</name>
   <name xml:lang="pl">Zarządzanie portfelem</name>
   <name xml:lang="pt">KWalletManager</name>
   <name xml:lang="pt-BR">KWalletManager</name>
@@ -80,7 +80,7 @@
   <summary xml:lang="lt">Slaptažodinių tvarkymo įrankis</summary>
   <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
   <summary xml:lang="nn">Wallet-administrasjonsverktøy</summary>
-  <summary xml:lang="pa">ਵਾਲਿਟ ਇੰਤਜ਼ਾਮ ਟੂਲ</summary>
+  <summary xml:lang="pa">ਵਾਲਟ ਇੰਤਜ਼ਾਮ ਟੂਲ</summary>
   <summary xml:lang="pl">Zarządzania portfelem</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
   <summary xml:lang="pt-BR">Ferramenta para gerenciamento de carteiras</summary>
