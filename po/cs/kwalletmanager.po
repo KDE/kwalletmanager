@@ -581,10 +581,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Správce, přepis uživatelského rozhraní"
+msgstr ""
 
 #: main.cpp:38
 #, kde-format
@@ -642,22 +641,17 @@ msgid "&Close"
 msgstr "&Zavřít"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Úschovna '%1' je otevřena."
+msgstr ""
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Úschovna je momentálně uzavřena"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
