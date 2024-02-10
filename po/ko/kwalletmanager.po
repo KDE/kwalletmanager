@@ -1,14 +1,14 @@
 # Translation of kwalletmanager to Korean.
 # Copyright (C) 2007 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kwalletmanager package.
-# Shinjo Park <kde@peremen.name>, 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2020, 2023.
+# SPDX-FileCopyrightText: 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2020, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-10-08 23:33+0200\n"
+"PO-Revision-Date: 2024-02-10 00:11+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -528,7 +528,7 @@ msgstr "도움말(&H)"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "KWallet 서비스에 연결하는 중 오류 발생:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
@@ -586,10 +586,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "개발자 - 사용자 인터페이스 리팩토링"
+msgstr "이전 관리자, 사용자 인터페이스 리팩토링"
 
 #: main.cpp:38
 #, kde-format
@@ -647,11 +646,7 @@ msgid "&Close"
 msgstr "닫기(&C)"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
@@ -659,10 +654,9 @@ msgid "The '%1' wallet is currently open."
 msgstr "지갑 '%1'이(가) 열려 있습니다."
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "지갑이 닫혀 있습니다"
+msgstr "지갑이 닫혀 있습니다."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
