@@ -1,13 +1,13 @@
 # translation of kwalletmanager.po to icelandic
 # Björgvin Ragnarsson <nifgraup@hotmail.com>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
-# Sveinn í Felli <sveinki@nett.is>, 2009, 2022, 2023.
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-10-03 10:28+0000\n"
+"PO-Revision-Date: 2024-02-19 09:41+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -525,7 +525,7 @@ msgstr "&Hjálp"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Villa kom upp við að tenggjast við KWallet-þjónustuna:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
@@ -583,10 +583,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Umsjónarmaður, endurhönnun notendaviðmóts"
+msgstr "Fyrrverandi umsjónarmaður, endurhönnun notendaviðmóts"
 
 #: main.cpp:38
 #, kde-format
@@ -644,22 +643,17 @@ msgid "&Close"
 msgstr "&Loka"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Veskið '%1' er núna opið"
+msgstr "Veskið '%1' er núna opið."
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Veskið er lokað í augnablikinu"
+msgstr "Veskið er lokað í augnablikinu."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
