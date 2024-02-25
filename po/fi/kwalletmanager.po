@@ -4,7 +4,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005, 2006.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2015.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2017, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2017, 2022, 2023, 2024.
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-12-11 18:03+0200\n"
+"PO-Revision-Date: 2024-02-14 18:51+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -590,10 +590,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Ylläpitäjä, käyttöliittymän uudelleenjärjestely"
+msgstr "Aiempi ylläpitäjä, käyttöliittymän uudelleenjärjestely"
 
 #: main.cpp:38
 #, kde-format
