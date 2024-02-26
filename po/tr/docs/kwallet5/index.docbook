@@ -183,13 +183,13 @@
 
 <screenshot>
 <screeninfo
->Bulunan GPG anahtarı yok</screeninfo>
+>GPG anahtarı bulunamadı</screeninfo>
 <mediaobject>
 <imageobject
 ><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
 <textobject
 ><phrase
->Bulunan GPG anahtarı yok</phrase
+>GPG anahtarı bulunamadı</phrase
 ></textobject>
 </mediaobject>
 </screenshot>
