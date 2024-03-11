@@ -58,9 +58,9 @@ int main(int argc, char **argv)
 
     KDBusService dbssvc(KDBusService::Unique);
 
-    KWalletManager wm(&parser);
-    QObject::connect(&dbssvc, &KDBusService::activateRequested, &wm, &KWalletManager::handleActivate);
-    QObject::connect(&dbssvc, &KDBusService::openRequested, &wm, &KWalletManager::handleOpen);
+    auto wm = new KWalletManager(&parser);
+    QObject::connect(&dbssvc, &KDBusService::activateRequested, wm, &KWalletManager::handleActivate);
+    QObject::connect(&dbssvc, &KDBusService::openRequested, wm, &KWalletManager::handleOpen);
 
     return a.exec();
 }
