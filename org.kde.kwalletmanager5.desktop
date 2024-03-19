@@ -164,5 +164,3 @@ Type=Application
 Categories=Qt;KDE;System;Security;
 X-DocPath=kwallet5/index.html
 DBusActivatable=true
-X-DBUS-StartupType=Unique
-X-DBUS-ServiceName=org.kde.kwalletmanager5
