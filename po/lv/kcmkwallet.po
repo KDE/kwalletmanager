@@ -6,31 +6,32 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2009-06-07 20:51+0300\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-04-10 19:14+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Rihards Priedītis"
+msgstr "Rihards Priedītis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "RPrieditis@inbox.lv"
+msgstr "RPrieditis@inbox.lv, toms.trasuns@posteo.net"
 
 #: konfigurator.cpp:102
 #, kde-format
@@ -40,7 +41,7 @@ msgstr "Jauns maks"
 #: konfigurator.cpp:103
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Lūdzu norādiet jaunā maka nosaukumu:"
+msgstr "Norādiet jaunā maka nosaukumu:"
 
 #: konfigurator.cpp:219 konfigurator.cpp:297
 #, kde-format
@@ -55,12 +56,12 @@ msgstr "Vienmēr liegt"
 #: konfigurator.cpp:257
 #, kde-format
 msgid "Permission denied."
-msgstr ""
+msgstr "Piekļuve ir liegta."
 
 #: konfigurator.cpp:257 konfigurator.cpp:259
 #, kde-format
 msgid "KDE Wallet Control Module"
-msgstr "KDE Maka kontroles modulis"
+msgstr "KDE maka kontroles modulis"
 
 #: konfigurator.cpp:259
 #, kde-format
@@ -68,6 +69,8 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
+"Kļūda, veicot autentifikācijas darbību:\n"
+"%1"
 
 #: konfigurator.cpp:357
 #, kde-format
@@ -78,21 +81,17 @@ msgstr "&Dzēst"
 #: walletconfigwidget.ui:16
 #, kde-format
 msgid "Wallet Preferences"
-msgstr "Maka preferences"
+msgstr "Maka iestatījumi"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>The wallet subsystem provides a convenient and secure way to manage "
-#| "all your passwords.  This option specifies whether or not you want to use "
-#| "it.</p>"
+#, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>Maka apakšsistēma nodrošina veidu kā ērti un droši pārvaldīt visas jūsu "
-"paroles. Šī opcija regulē vai vēlaties to izmantot.</p>"
+"<p>Maka apakšsistēma nodrošina ērtu un droši visu jūsu paroļu pārvaldību. Šī "
+"opcija regulē vai vēlaties to izmantot.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:25
@@ -107,8 +106,7 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
-"Labāk ir aizvērt savu maku, kad neesat pie datora, lai neļautu citiem to "
-"izmantot."
+"Ieteicams maku aizvērt, kad atstājat datoru, lai citi neredzētu tā saturu."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:38
@@ -135,10 +133,9 @@ msgstr "Aizvērt, kad neizmanto:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
-msgstr " min."
+msgstr " minūtes"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:99
@@ -147,14 +144,14 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Aizvērt maku, pie ekrānsaudzētāja palaišanas.</b>Kad maks ir aizvērts, "
+"<p><b>Aizvērt maku, kad ieslēdzas ekrānsaudzētājs.</b>Kad maks ir aizvērts, "
 "būs nepieciešama parole maka atvēršanai.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:102
 #, kde-format
 msgid "Close when screensaver starts"
-msgstr "Aizvērt pie ekrānsaudzētāja palaišanas"
+msgstr "Aizvērt, kad ieslēdzas ekrānsaudzētājs"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:109
@@ -165,10 +162,10 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
-"<p><b>Aizvērt maku, kad nav vairs lietotņu, kuras to izmanto.</"
-"b><br>Atceraties, maki aizvērsies tikai tad, kad visas lietotnes, kas "
-"toizmanto, būs beigušas darbu.<br>Kad maks ir aizvērts, būs nepieciešama "
-"parole maka atvēršanai.</p>"
+"<p><b>Aizvērt maku, kad neviena lietotne to vairs neizmanto.</"
+"b><br>Ievērojiet, ka jūsu maks aizvērsies tikai tad, kad to būs beigušas "
+"izmantot visas lietotnes.<br>Lai maku atkal atvērtu, būs jāievada maka "
+"parole.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:112
@@ -180,7 +177,7 @@ msgstr "Aizvērt, kad pēdējā lietotne beidz izmantot"
 #: walletconfigwidget.ui:122
 #, kde-format
 msgid "Automatic Wallet Selection"
-msgstr "Automātiska maku atlase"
+msgstr "Automātiska maka atlasīšana"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: walletconfigwidget.ui:128
@@ -205,7 +202,7 @@ msgstr "Cits maks vietējai parolei:"
 #: walletconfigwidget.ui:201
 #, kde-format
 msgid "Wallet Manager"
-msgstr "Maka pārvaldnieks"
+msgstr "Maku pārvaldnieks"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
 #: walletconfigwidget.ui:207
@@ -217,19 +214,19 @@ msgstr "Rādīt pārvaldnieku sistēmas joslā"
 #: walletconfigwidget.ui:235
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr "Slēpt sistēmas joslas ikonu pie pēdējā maka aizvēršanas"
+msgstr "Slēpt sistēmas joslas ikonu, aizverot pēdējo maku"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Slepenais serviss"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Izmanto „KWallet“ slepenā servisa saskarnei"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -239,19 +236,21 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Slepenā servisa saskarne ļauj programmām uzglabāt paroles un citu "
+"konfidenciālo informāciju. To izslēdziet, lai tās tā vietā pārvaldītu ļautu "
+"trešo pušu maku servisiem, piemēram, „KeePassXC“ vai „GNOME Keyring“."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
 #, kde-format
 msgid "Access Control"
-msgstr "Pieejas vadība"
+msgstr "Pieejas kontrole"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
 #: walletconfigwidget.ui:334
-#, fuzzy, kde-format
-#| msgid "&Prompt when an application accesses an open wallet"
+#, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr "&Jautāt, kad lietotne piekļūst atvērtam makam"
+msgstr "&Jautāt, kad programma piekļūst makam"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:348
@@ -263,7 +262,7 @@ msgstr "Maks"
 #: walletconfigwidget.ui:359
 #, kde-format
 msgid "Application"
-msgstr "Lietotne"
+msgstr "Programma"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:370

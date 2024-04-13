@@ -6,41 +6,42 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2009-06-07 20:59+0300\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-04-10 19:37+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Rihards Priedītis"
+msgstr "Rihards Priedītis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "RPrieditis@inbox.lv"
+msgstr "RPrieditis@inbox.lv, toms.trasuns@posteo.net"
 
 #: allyourbase.cpp:209
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "Ieraksts ar nosaukumu \"%1\" jau eksistē. Vai vēlaties turpināt?"
+msgstr "Ieraksts ar nosaukumu „%1“ jau pastāv. Vai vēlaties turpināt?"
 
 #: allyourbase.cpp:234
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "Mape ar nosaukumu \"%1\" jau eksistē. Vai vēlaties turpināt?"
+msgstr "Mape ar nosaukumu „%1“ jau pastāv. Vai vēlaties turpināt?"
 
 #: allyourbase.cpp:237
 #, kde-format
@@ -55,12 +56,12 @@ msgstr "Mapes"
 #: allyourbase.cpp:381
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr "Notika negaidīta kļūda mēģinot nomest vienumu"
+msgstr "Notika negaidīta kļūda, mēģinot nomest vienumu"
 
 #: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
-msgstr "Notika negaidīta kļūda mēģinot nomest ierakstu"
+msgstr "Notika negaidīta kļūda, mēģinot nomest ierakstu"
 
 #: allyourbase.cpp:481
 #, kde-format
@@ -68,26 +69,25 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-"Notika negaidīta kļūda mēģinot dzēst sākotnējo mapi, bet mape jau ir "
-"veiksmīgi pārkopēta"
+"Notika negaidīta kļūda, mēģinot dzēst sākotnējo mapi, tomēr mape jau ir "
+"pārkopēta"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr ""
+msgstr "Šo maku šobrīd izmanto šīs programmas:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
 #, kde-format
 msgid "These applications are authorized to access this wallet:"
-msgstr ""
+msgstr "Šīm programmām ir tiesības piekļūt šim makam:"
 
 #: disconnectappbutton.cpp:16
-#, fuzzy, kde-format
-#| msgid "Disconnec&t"
+#, kde-format
 msgid "Disconnect"
-msgstr "A&tvienoties"
+msgstr "Atvienot"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -116,7 +116,7 @@ msgstr "Iz&laist visu"
 #: kwalleteditor.cpp:97
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Meklēt"
 
 #: kwalleteditor.cpp:107
 #, kde-format
@@ -134,10 +134,9 @@ msgid "&Delete Folder"
 msgstr "&Dzēst mapi"
 
 #: kwalleteditor.cpp:214
-#, fuzzy, kde-format
-#| msgid "&Merge Wallet..."
+#, kde-format
 msgid "&Import a wallet..."
-msgstr "&Apvienot makus..."
+msgstr "&Importēt maku..."
 
 #: kwalleteditor.cpp:218
 #, kde-format
@@ -145,15 +144,14 @@ msgid "&Import XML..."
 msgstr "&Importēt XML..."
 
 #: kwalleteditor.cpp:222
-#, fuzzy, kde-format
-#| msgid "&Import XML..."
+#, kde-format
 msgid "&Export as XML..."
-msgstr "&Importēt XML..."
+msgstr "&Eksportēt kā XML..."
 
 #: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Copy"
-msgstr ""
+msgstr "&Kopēt"
 
 #: kwalleteditor.cpp:231
 #, kde-format
@@ -171,21 +169,19 @@ msgid "&Delete"
 msgstr "&Dzēst"
 
 #: kwalleteditor.cpp:246
-#, fuzzy, kde-format
-#| msgid "Show &Contents"
+#, kde-format
 msgid "Always show contents"
-msgstr "Rādīt &saturu"
+msgstr "Vienmēr rādīt saturu"
 
 #: kwalleteditor.cpp:250
-#, fuzzy, kde-format
-#| msgid "Hide &Contents"
+#, kde-format
 msgid "Always hide contents"
-msgstr "Slēpt &saturu"
+msgstr "Vienmēr slēpt saturu"
 
 #: kwalleteditor.cpp:359
 #, kde-format
 msgid "Passwords"
-msgstr "Parole"
+msgstr "Paroles"
 
 #: kwalleteditor.cpp:360
 #, kde-format
@@ -205,7 +201,7 @@ msgstr "Nezināms"
 #: kwalleteditor.cpp:402
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr "Esat drošs, ka vēlaties dzēst mapi \"%1\" no maka?"
+msgstr "Vai tiešām vēlaties dzēst maka mapi „%1“?"
 
 #: kwalleteditor.cpp:406
 #, kde-format
@@ -220,17 +216,17 @@ msgstr "Jauna mape"
 #: kwalleteditor.cpp:426
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Lūdzu izvēlaties jaunās mapes nosaukumu:"
+msgstr "Izvēlaties jaunās mapes nosaukumu:"
 
 #: kwalleteditor.cpp:436
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr "Mapes nosaukums jau tiek lietots. Mēģināt vēlreiz?"
+msgstr "Mapes nosaukums jau tiek lietots. Vai mēģināsiet vēlreiz?"
 
 #: kwalleteditor.cpp:438 kwalleteditor.cpp:803
 #, kde-format
 msgid "Try Again"
-msgstr "Mēģināt velreiz"
+msgstr "Mēģināt vēlreiz"
 
 #: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
 #, kde-format
@@ -240,7 +236,7 @@ msgstr "Nemēģināt"
 #: kwalleteditor.cpp:478
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr "Kļūda saglabājot ierakstu. Kļūdas kods: %1"
+msgstr "Kļūda, saglabājot ierakstu. Kļūdas kods: %1"
 
 #: kwalleteditor.cpp:500
 #, kde-format
@@ -248,6 +244,8 @@ msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
+"Šī vienuma saturs ir mainījies.\n"
+"Vai vēlaties saglabāt izmaiņas?"
 
 #: kwalleteditor.cpp:554 kwalleteditor.cpp:886
 #, kde-format
@@ -257,7 +255,7 @@ msgstr "Parole: %1"
 #: kwalleteditor.cpp:571 kwalleteditor.cpp:888
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr "Nosaukuma-vērtības karte: %1"
+msgstr "Nosaukuma un vērtības karte: %1"
 
 #: kwalleteditor.cpp:581 kwalleteditor.cpp:890
 #, kde-format
@@ -272,32 +270,32 @@ msgstr "Jauns ieraksts"
 #: kwalleteditor.cpp:790
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr "Lūdzu norādiet jaunā ieraksta nosaukumu:"
+msgstr "Norādiet jaunā ieraksta nosaukumu:"
 
 #: kwalleteditor.cpp:801
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr "Ieraksts jau eksistē. Mēģināt vēlreiz?"
+msgstr "Šāds ieraksts jau pastāv. Vai mēģināsiet vēlreiz?"
 
 #: kwalleteditor.cpp:821 kwalleteditor.cpp:830
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr "Notika negaidīta kļūda mēģinot pievienot jaunu ierakstu"
+msgstr "Notika negaidīta kļūda, mēģinot pievienot jaunu ierakstu"
 
 #: kwalleteditor.cpp:882
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr "Notika negaidīta kļūda mēģinot pārdēvēt ierakstu"
+msgstr "Notika negaidīta kļūda, mēģinot pārdēvēt ierakstu"
 
 #: kwalleteditor.cpp:902
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr "Esat drošs, ka vēlaties dzēst vienumu \"%1\"?"
+msgstr "Vai tiešām vēlaties dzēst vienumu „%1“?"
 
 #: kwalleteditor.cpp:906
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr "Notika negaidīta kļūda mēģinot dzēst ierakstu"
+msgstr "Notika negaidīta kļūda, mēģinot dzēst ierakstu"
 
 #: kwalleteditor.cpp:934
 #, kde-format
@@ -305,15 +303,14 @@ msgid "Unable to open the requested wallet."
 msgstr "Nevar atvērt pieprasīto maku."
 
 #: kwalleteditor.cpp:970
-#, fuzzy, kde-format
-#| msgid "Unable to access XML file '<b>%1</b>'."
+#, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr "Nevar piekļūt XML failam \"<b>%1</b>\"."
+msgstr "Nevar izveidot pagaidu datni, lai lejupielādētu „<b>%1</b>“."
 
 #: kwalleteditor.cpp:977
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr "Nevar piekļūt makam \"<b>%1</b>\"."
+msgstr "Nevar piekļūt makam „<b>%1</b>“."
 
 #: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
 #: kwalleteditor.cpp:1154
@@ -322,28 +319,27 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
-"Mape \"<b>%1</b>\" jau satur ierakstu \"<b>%2</b>\". Vai vēlaties aivietot?"
+"Mape „<b>%1</b>“ jau satur ierakstu „<b>%2</b>“. Vai vēlaties to aizvietot?"
 
 #: kwalleteditor.cpp:1112
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "Nevar piekļūt XML failam \"<b>%1</b>\"."
+msgstr "Nevar piekļūt XML datnei „<b>%1</b>“."
 
 #: kwalleteditor.cpp:1118
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "Kļūda lasot XML failu \"<b>%1</b>\" ievadam."
+msgstr "Kļūda, lasot XML datni „<b>%1</b>“ ievadei."
 
 #: kwalleteditor.cpp:1124
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
-msgstr "Kļūda: XML fails nesatur maku."
+msgstr "Kļūda: XML datne nesatur maku."
 
 #: kwalleteditor.cpp:1275
-#, fuzzy, kde-format
-#| msgid "Unable to access wallet '<b>%1</b>'."
+#, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "Nevar piekļūt makam \"<b>%1</b>\"."
+msgstr "Nevar saglabāt „<b>%1</b>“."
 
 #: kwalletmanager.cpp:64
 #, kde-format
@@ -351,13 +347,14 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
+"KDE maka sistēma nav ieslēgta. Vai vēlaties to ieslēgt? Ja nevēlaties, "
+"„KWalletManager“ izslēgsies, jo tas nevar darboties, nelasot makus."
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
 #: kwalletmanager.cpp:288
-#, fuzzy, kde-format
-#| msgid "KDE Wallet"
+#, kde-format
 msgid "Wallet"
-msgstr "KDE maks"
+msgstr "Maks"
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:288
 #, kde-format
@@ -375,20 +372,19 @@ msgid "&New Wallet..."
 msgstr "&Jauns maks..."
 
 #: kwalletmanager.cpp:145
-#, fuzzy, kde-format
-#| msgid "Delete Wallet"
+#, kde-format
 msgid "&Delete Wallet..."
-msgstr "Dzēst maku"
+msgstr "&Dzēst maku..."
 
 #: kwalletmanager.cpp:150
 #, kde-format
 msgid "Export as encrypted"
-msgstr ""
+msgstr "Eksportēt šifrētu"
 
 #: kwalletmanager.cpp:155
 #, kde-format
 msgid "&Import encrypted"
-msgstr ""
+msgstr "&Importēt šifrētu"
 
 #: kwalletmanager.cpp:160
 #, kde-format
@@ -406,37 +402,36 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
-"Nevar tīri aizvērt maku. To iespējams lieto, kāda lietotne. Vēlaties "
-"uzspiest aizvēršanu?"
+"Nevar tīri aizvērt maku. Iespējams, to lieto kāda programma. Vai aizvērt "
+"piespiedu kārtā?"
 
 #: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
-msgstr "Uzspiest aizvēršanu"
+msgstr "Aizvērt piespiedu kārtā"
 
 #: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
-msgstr "Neuzspiest"
+msgstr "Mēģināt aizvērt tīri"
 
 #: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr "Nevar uzspiest maka aizvēršanu. Kļūdas kods %1."
+msgstr "Nevar aizvērt maku piespiedu kārtā. Kļūdas kods ir „%1“."
 
 #: kwalletmanager.cpp:280
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr "Kļūda atverot maku %1."
+msgstr "Kļūda, atverot maku „%1“."
 
 #: kwalletmanager.cpp:322
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Lūdzu norādiet jaunā maka nosaukumu:"
+msgstr "Norādiet jaunā maka nosaukumu:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Jauns maks"
@@ -444,85 +439,84 @@ msgstr "Jauns maks"
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr ""
+msgstr "Programma neatbalsta tukšus nosaukumus. Izdomājiet jaunu."
 
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
-msgstr ""
+msgstr "Izveidot jaunu maku"
 
 #: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr "Maks jau tiek lietots. Mēģināt jaunu nosaukumu?"
+msgstr "Šāds maks jau tiek lietots. Vai mēģināt jaunu nosaukumu?"
 
 #: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
-msgstr "Mēģināt"
+msgstr "Mēģināt jaunu"
 
 #: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr "Esat drošs, ka vēlaies dzēst maku \"%1\"?"
+msgstr "Vai tiešām vēlaties dzēst maku „%1“?"
 
 #: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr "Nevar dzēst maku. Kļūda kods %1."
+msgstr "Nevar dzēst maku. Kļūda kods ir %1."
 
 #: kwalletmanager.cpp:437
-#, fuzzy, kde-format
-#| msgid "A wallet name"
+#, kde-format
 msgid "File name"
-msgstr "Maka nosaukums"
+msgstr "Datnes nosaukums"
 
 #: kwalletmanager.cpp:444
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr ""
+msgstr "Neizdevās atvērt saiti rakstīšanai"
 
 #: kwalletmanager.cpp:455
 #, kde-format
 msgid "Select file"
-msgstr ""
+msgstr "Atlasīt datni"
 
 #: kwalletmanager.cpp:465
 #, kde-format
 msgid "Failed to open file"
-msgstr ""
+msgstr "Neizdevās atvērt datni"
 
 #: kwalletmanager.cpp:478
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr ""
+msgstr "Maks ar nosaukumu „%1“ jau pastāv. Darbība atcelta."
 
 #: kwalletmanager.cpp:485
 #, kde-format
 msgid "Failed to copy files"
-msgstr ""
+msgstr "Neizdevās nokopēt datnes"
 
 #: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
-msgstr ""
+msgstr "Vai ignorēt nesaglabātās izmaiņas?"
 
 #: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Ignorēt"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
 #, kde-format
 msgid "&File"
-msgstr "&Fails"
+msgstr "&Datne"
 
 #. i18n: ectx: Menu (settings)
 #: kwalletmanager.rc:17
 #, kde-format
 msgid "&Settings"
-msgstr "Ie&statījumi"
+msgstr "&Iestatījumi"
 
 #. i18n: ectx: Menu (help)
 #: kwalletmanager.rc:20
@@ -534,12 +528,12 @@ msgstr "&Palīdzība"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Notikusi kļūda, mēģinot savienoties ar „KWallet“ servisu:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
-msgstr "&Atvērt"
+msgstr "&Atvērt..."
 
 #: kwalletpopup.cpp:38
 #, kde-format
@@ -562,10 +556,9 @@ msgid "Value"
 msgstr "Vērtība"
 
 #: kwmapeditor.cpp:147 kwmapeditor.cpp:196
-#, fuzzy, kde-format
-#| msgid "New Entry"
+#, kde-format
 msgid "Delete Entry"
-msgstr "Jauns ieraksts"
+msgstr "Dzēst ierakstu"
 
 #: kwmapeditor.cpp:216
 #, kde-format
@@ -573,30 +566,29 @@ msgid "&New Entry"
 msgstr "&Jauns ieraksts"
 
 #: main.cpp:27
-#, fuzzy, kde-format
-#| msgid "KDE Wallet Manager"
+#, kde-format
 msgid "Wallet Manager"
-msgstr "KDE Maka pārvaldnieks"
+msgstr "Maku pārvaldnieks"
 
 #: main.cpp:29
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "KDE Maka pārvaldības rīks"
+msgstr "KDE maku pārvaldības rīks"
 
 #: main.cpp:31
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr ""
+msgstr "Autortiesības ©2013—2017, „KWallet Manager“ autori"
 
 #: main.cpp:35
 #, kde-format
 msgid "Valentin Rusu"
-msgstr ""
+msgstr "Valentin Rusu"
 
 #: main.cpp:36
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr ""
+msgstr "Kādreizējais uzturētājs, lietotāja saskarnes pārrakstīšana"
 
 #: main.cpp:38
 #, kde-format
@@ -606,7 +598,7 @@ msgstr "George Staikos"
 #: main.cpp:39
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr "Sakotnējais autors un iepriekšējais uzturētājs"
+msgstr "Sākotnējais autors un kādreizējais uzturētājs"
 
 #: main.cpp:41
 #, kde-format
@@ -614,10 +606,9 @@ msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
 #: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "Original author and former maintainer"
+#, kde-format
 msgid "Developer and former maintainer"
-msgstr "Sakotnējais autors un iepriekšējais uzturētājs"
+msgstr "Izstrādātājs un kādreizējais uzturētājs"
 
 #: main.cpp:44
 #, kde-format
@@ -632,12 +623,12 @@ msgstr "Izstrādātājs"
 #: main.cpp:53
 #, kde-format
 msgid "Show window on startup"
-msgstr "Rādīt logu pie sāknēšanas"
+msgstr "Ieslēdzoties parādīt logu"
 
 #: main.cpp:54
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr "Tikai kwalletd lietošanai"
+msgstr "Tikai „kwalletd“ lietošanai"
 
 #: main.cpp:55
 #, kde-format
@@ -647,60 +638,55 @@ msgstr "Maka nosaukums"
 #: revokeauthbutton.cpp:16
 #, kde-format
 msgid "Revoke Authorization"
-msgstr ""
+msgstr "Atsaukt autorizāciju"
 
 #: walletcontrolwidget.cpp:57
 #, kde-format
 msgid "&Close"
-msgstr ""
+msgstr "&Aizvērt"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "A wallet is open."
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Maks ir atvērts."
+msgstr "„%1“ maks šobrīd ir atvērts."
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "A wallet is open."
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Maks ir atvērts."
+msgstr "Maks šobrīd ir aizvērts."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
 #, kde-format
 msgid "KSqueezedTextLabel"
-msgstr ""
+msgstr "KSqueezedTextLabel"
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
 #: walletcontrolwidget.ui:54
-#, fuzzy, kde-format
-#| msgid "&Open..."
+#, kde-format
 msgid "Open..."
-msgstr "&Atvērt"
+msgstr "&Atvērt..."
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
-#, fuzzy, kde-format
-#| msgid "Change &Password..."
+#, kde-format
 msgid "Change Password..."
-msgstr "Mainīt &paroli..."
+msgstr "Mainīt paroli..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80
-#, fuzzy, kde-format
-#| msgid "Hide &Contents"
+#, kde-format
 msgid "Contents"
-msgstr "Slēpt &saturu"
+msgstr "Saturs"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
 #: walletcontrolwidget.ui:117
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Programmas"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
