@@ -29,7 +29,7 @@ public:
     bool openWallet(const QString &name);
 
     QString activeWalletName() const;
-    bool hasUnsavedChanges(const QString& name) const;
+    bool hasUnsavedChanges(const QString &name) const;
 
     void setErrorMessage(const QString &message);
 
@@ -51,4 +51,3 @@ private:
 };
 
 #endif // KWALLETMANAGERWIDGET_H
-

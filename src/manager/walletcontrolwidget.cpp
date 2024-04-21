@@ -5,22 +5,21 @@
 */
 
 #include "walletcontrolwidget.h"
-#include "kwalleteditor.h"
 #include "applicationsmanager.h"
+#include "kwalleteditor.h"
 #include "kwalletmanager_debug.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <QMenu>
 #include <KWallet>
-
+#include <QMenu>
 
 #include <QTimer>
 #include <kwidgetsaddons_version.h>
 
-WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName):
-    QWidget(parent),
-    _walletName(walletName)
+WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName)
+    : QWidget(parent)
+    , _walletName(walletName)
 {
     setupUi(this);
     onSetupWidget();
@@ -71,7 +70,8 @@ void WalletControlWidget::onSetupWidget()
         _applicationsManager->setWallet(_wallet);
 
         _changePassword->setEnabled(true);
-        _stateLabel->setText(i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open.", _walletName));
+        _stateLabel->setText(
+            i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open.", _walletName));
         _tabs->setTabIcon(0, QIcon::fromTheme(QLatin1String("wallet-open")).pixmap(16));
     } else {
         _openClose->setText(i18n("&Open..."));
@@ -137,20 +137,20 @@ void WalletControlWidget::onWalletClosed()
 
 void WalletControlWidget::updateWalletDisplay()
 {
-//     QList<QAction*> existingActions = _disconnect->actions();
-//     QList<QAction*>::const_iterator i = existingActions.constBegin();
-//     QList<QAction*>::const_iterator ie = existingActions.constEnd();
-//     for ( ; i != ie; i++ ) {
-//         _disconnect->removeAction(*i);
-//     }
-//
+    //     QList<QAction*> existingActions = _disconnect->actions();
+    //     QList<QAction*>::const_iterator i = existingActions.constBegin();
+    //     QList<QAction*>::const_iterator ie = existingActions.constEnd();
+    //     for ( ; i != ie; i++ ) {
+    //         _disconnect->removeAction(*i);
+    //     }
+    //
 }
 
 void WalletControlWidget::onDisconnectApplication()
 {
     auto a = qobject_cast<QAction *>(sender());
     Q_ASSERT(a);
-    if (a)  {
+    if (a) {
         KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
     }
 }

@@ -27,7 +27,8 @@ void KBetterThanKDialogBase::setLabel(const QString &label)
 }
 
 KBetterThanKDialogBase::KBetterThanKDialogBase(QWidget *parent)
-    : QDialog(parent), Ui_KBetterThanKDialogBase()
+    : QDialog(parent)
+    , Ui_KBetterThanKDialogBase()
 {
     setupUi(this);
     connect(_allowOnce, &QPushButton::clicked, this, &KBetterThanKDialogBase::clicked);

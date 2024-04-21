@@ -27,8 +27,8 @@ private Q_SLOTS:
     void onClicked();
 
 private:
-    QString             _appName;
-    KWallet::Wallet     *const _wallet;
+    QString _appName;
+    KWallet::Wallet *const _wallet;
 };
 
 #endif // DISCONNECTAPPBUTTON_H

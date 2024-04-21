@@ -7,8 +7,8 @@
 #ifndef AUTHORIZEDAPPMODEL_H
 #define AUTHORIZEDAPPMODEL_H
 
-#include <QStandardItemModel>
 #include <KSharedConfig>
+#include <QStandardItemModel>
 
 namespace KWallet
 {
@@ -28,9 +28,9 @@ private Q_SLOTS:
     void saveConfig();
 
 private:
-    KSharedConfig::Ptr                      _cfg;
-    KWallet::Wallet                         *const _wallet;
-    QMap<QString, QPersistentModelIndex>    _authorizedAppsIndexMap;
+    KSharedConfig::Ptr _cfg;
+    KWallet::Wallet *const _wallet;
+    QMap<QString, QPersistentModelIndex> _authorizedAppsIndexMap;
 };
 
 #endif // AUTHORIZEDAPPMODEL_H

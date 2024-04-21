@@ -9,7 +9,8 @@
 
 #include <QTextStream>
 
-KWHexView::KWHexView(QWidget* parent): QPlainTextEdit(parent)
+KWHexView::KWHexView(QWidget *parent)
+    : QPlainTextEdit(parent)
 {
     setReadOnly(true);
     setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
@@ -24,9 +25,7 @@ static QString toHex(It it, It end)
     QString text;
     QTextStream ts(&text);
 
-    ts <<
-          Qt::hex
-       << qSetFieldWidth(2) << qSetPadChar(QLatin1Char('0'));
+    ts << Qt::hex << qSetFieldWidth(2) << qSetPadChar(QLatin1Char('0'));
 
     while (it < end) {
         const auto sEnd = qMin(it + hexStride, end);
@@ -43,8 +42,9 @@ static QString toText(It begin, It end)
 {
     QString text = QString::fromLatin1(begin, end - begin);
 
-    for (auto &ch: text)
-        if (!ch.isPrint()) ch = QLatin1Char('.');
+    for (auto &ch : text)
+        if (!ch.isPrint())
+            ch = QLatin1Char('.');
 
     return text;
 }
@@ -53,8 +53,8 @@ int KWHexView::calculateStride()
 {
     const auto w = viewport()->width();
     const auto em = fontMetrics().averageCharWidth();
-    const auto chars =  w / em - 1;
-    auto stride =  chars / 3 / hexStride * hexStride;
+    const auto chars = w / em - 1;
+    auto stride = chars / 3 / hexStride * hexStride;
 
     while (stride * 3 + (stride / hexStride) + 1 > chars)
         stride -= hexStride;
@@ -62,7 +62,7 @@ int KWHexView::calculateStride()
     return qMax(static_cast<int>(hexStride), stride);
 }
 
-void KWHexView::setData(const QByteArray& ba)
+void KWHexView::setData(const QByteArray &ba)
 {
     data = ba;
     showData();
@@ -87,10 +87,11 @@ void KWHexView::showData()
     setPlainText(text);
 }
 
-void KWHexView::resizeEvent(QResizeEvent* e)
+void KWHexView::resizeEvent(QResizeEvent *e)
 {
     QPlainTextEdit::resizeEvent(e);
-    if (e->size() != e->oldSize()) showData();
+    if (e->size() != e->oldSize())
+        showData();
 }
 
 #include "moc_kwhexview.cpp"

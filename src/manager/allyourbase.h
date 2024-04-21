@@ -8,24 +8,24 @@
 #ifndef ALLYOURBASE_H
 #define ALLYOURBASE_H
 
-#include <KWallet>
 #include <KService>
+#include <KWallet>
 #include <QListWidget>
 
-#include <QPixmap>
-#include <QDropEvent>
 #include <QDragEnterEvent>
+#include <QDropEvent>
 #include <QMouseEvent>
+#include <QPixmap>
 #include <QTreeWidget>
 
-#define KWALLETENTRYMAGIC ((quint32) 0x6B776C65)
-#define KWALLETFOLDERMAGIC ((quint32) 0x6B776C66)
+#define KWALLETENTRYMAGIC ((quint32)0x6B776C65)
+#define KWALLETFOLDERMAGIC ((quint32)0x6B776C66)
 
 enum KWalletListItemClasses {
     KWalletFolderItemClass = QTreeWidgetItem::UserType,
     KWalletContainerItemClass,
     KWalletEntryItemClass,
-    KWalletUnknownClass
+    KWalletUnknownClass,
 };
 
 class KWalletEntryItem : public QTreeWidgetItem
@@ -46,7 +46,9 @@ public:
     KWallet::Wallet *_wallet = nullptr;
 
 private:
-    void setText(int, const QString &) {} // forbidden
+    void setText(int, const QString &)
+    {
+    } // forbidden
     QString m_name;
 };
 

@@ -10,10 +10,10 @@
 #include <KWallet>
 #include <QTimer>
 
-AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet):
-    QStandardItemModel(),
-    _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals)),
-    _wallet(wallet)
+AuthorizedAppModel::AuthorizedAppModel(KWallet::Wallet *wallet)
+    : QStandardItemModel()
+    , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
+    , _wallet(wallet)
 {
     // TODO: handle "Auto Deny" applications
     // KConfigGroup ad(_cfg, "Auto Deny");

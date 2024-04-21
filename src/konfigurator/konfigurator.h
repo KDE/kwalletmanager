@@ -6,15 +6,16 @@
 
 #ifndef _KWALLETKONFIGURATOR_H
 #define _KWALLETKONFIGURATOR_H
-#include <KCModule>
-#include <KSharedConfig>
 #include "ui_walletconfigwidget.h"
 #include <KAuth/Action>
+#include <KCModule>
+#include <KSharedConfig>
 
 class WalletConfigWidget : public QWidget, public Ui::WalletConfigWidget
 {
 public:
-    WalletConfigWidget(QWidget *parent) : QWidget(parent)
+    WalletConfigWidget(QWidget *parent)
+        : QWidget(parent)
     {
         setupUi(this);
     }

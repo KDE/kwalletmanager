@@ -23,7 +23,7 @@ protected:
     void resizeEvent(QResizeEvent *resizeEvent) override;
 
 private:
-    KWallet::Wallet     *_wallet = nullptr;
+    KWallet::Wallet *_wallet = nullptr;
 };
 
 #endif // CONNECTEDAPPLICATIONSTABLE_H

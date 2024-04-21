@@ -32,7 +32,6 @@ public:
     explicit RegisterCreateActionsMethod(CreateActionsMethod method);
 
     static void createActions(KActionCollection *actionCollection);
-
 };
 
 #endif // REGISTERCREATEACTIONMETHOD_H

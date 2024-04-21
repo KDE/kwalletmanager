@@ -27,9 +27,9 @@ public:
     void setWallet(KWallet::Wallet *wallet);
 
 private:
-    KWallet::Wallet     *_wallet = nullptr;
-    ConnectedAppModel   *_connectedAppsModel = nullptr;
-    AuthorizedAppModel  *_authorizedAppModel = nullptr;
+    KWallet::Wallet *_wallet = nullptr;
+    ConnectedAppModel *_connectedAppsModel = nullptr;
+    AuthorizedAppModel *_authorizedAppModel = nullptr;
 };
 
 #endif // APPLICATIONSMANAGER_H

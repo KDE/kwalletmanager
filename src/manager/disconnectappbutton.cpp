@@ -9,8 +9,9 @@
 #include <KLocalizedString>
 #include <KWallet>
 
-DisconnectAppButton::DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet) :
-    _appName(appName), _wallet(wallet)
+DisconnectAppButton::DisconnectAppButton(const QString &appName, KWallet::Wallet *wallet)
+    : _appName(appName)
+    , _wallet(wallet)
 {
     setObjectName(QStringLiteral("Disconnect_%1").arg(appName));
     setText(i18n("Disconnect"));

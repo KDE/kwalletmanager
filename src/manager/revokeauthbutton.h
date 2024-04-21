@@ -21,12 +21,12 @@ public:
     explicit RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet);
 
 Q_SIGNALS:
-    void appRevoked(const QString&);
+    void appRevoked(const QString &);
 
 private:
     void onClicked();
-    const QString             _appName;
-    KWallet::Wallet     *const _wallet;
+    const QString _appName;
+    KWallet::Wallet *const _wallet;
 };
 
 #endif // REVOKEAUTHBUTTON_H

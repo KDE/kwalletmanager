@@ -15,11 +15,11 @@ class KWHexView : public QPlainTextEdit
     Q_OBJECT
 
 public:
-    explicit KWHexView(QWidget* parent = nullptr);
+    explicit KWHexView(QWidget *parent = nullptr);
     void setData(const QByteArray &ba);
 
 protected:
-    void resizeEvent(QResizeEvent* e) override;
+    void resizeEvent(QResizeEvent *e) override;
 
 private:
     QByteArray data;

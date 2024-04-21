@@ -38,9 +38,9 @@ protected:
     void showEvent(QShowEvent *) override;
 
 private:
-    const QString             _walletName;
-    KWallet::Wallet    *_wallet = nullptr;
-    KWalletEditor      *_walletEditor = nullptr;
+    const QString _walletName;
+    KWallet::Wallet *_wallet = nullptr;
+    KWalletEditor *_walletEditor = nullptr;
     ApplicationsManager *_applicationsManager = nullptr;
 };
 

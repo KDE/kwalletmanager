@@ -25,9 +25,9 @@ public Q_SLOTS:
     void removeApp(const QString &);
 
 private:
-    KWallet::Wallet                         *const _wallet;
-    QStringList                             _connectedApps;
-    QMap<QString, QPersistentModelIndex>    _connectedAppsIndexMap;
+    KWallet::Wallet *const _wallet;
+    QStringList _connectedApps;
+    QMap<QString, QPersistentModelIndex> _connectedAppsIndexMap;
 };
 
 #endif // CONNECTEDAPPMODEL_H

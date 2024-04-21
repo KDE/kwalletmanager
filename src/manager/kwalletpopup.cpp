@@ -6,20 +6,20 @@
 
 #include "kwalletpopup.h"
 
-#include <KStandardAction>
 #include <KActionCollection>
-#include <QAction>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KStandardAction>
 #include <KWallet>
-
+#include <QAction>
 
 KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString &name)
-    : QMenu(parent), _walletName(wallet)
+    : QMenu(parent)
+    , _walletName(wallet)
 {
     addSection(wallet);
     setObjectName(name);
-    auto ac = new KActionCollection(this/*, "kwallet context actions"*/);
+    auto ac = new KActionCollection(this /*, "kwallet context actions"*/);
     ac->setObjectName(QStringLiteral("kwallet context actions"));
     QAction *act;
 
@@ -51,8 +51,7 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString
         act->setText(i18n("Disconnec&t"));
     }
 
-    act = KStandardAction::close(this,
-                                 SLOT(closeWallet()), ac);
+    act = KStandardAction::close(this, SLOT(closeWallet()), ac);
     ac->addAction(QStringLiteral("wallet_close"), act);
     // FIXME: let's track this inside the manager so we don't need a dcop
     //        roundtrip here.
@@ -98,7 +97,7 @@ void KWalletPopup::disconnectApp()
 {
     auto a = qobject_cast<QAction *>(sender());
     Q_ASSERT(a);
-    if (a)     {
+    if (a) {
         KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
     }
 }

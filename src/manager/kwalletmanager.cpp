@@ -5,35 +5,35 @@
 */
 
 #include "kwalletmanager.h"
-#include "kwalletmanagerwidget.h"
-#include "kwalletpopup.h"
-#include "kwalleteditor.h"
 #include "allyourbase.h"
 #include "kwallet_interface.h"
-#include "registercreateactionmethod.h"
+#include "kwalleteditor.h"
 #include "kwalletmanager_debug.h"
+#include "kwalletmanagerwidget.h"
+#include "kwalletpopup.h"
+#include "registercreateactionmethod.h"
 
-#include <kwindowsystem_version.h>
-#include <KWindowSystem>
-#include <KLocalizedString>
+#include <KActionCollection>
 #include <KConfig>
+#include <KConfigGroup>
+#include <KIO/CommandLauncherJob>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardAction>
 #include <KStatusNotifierItem>
-#include <KWallet>
-#include <KXMLGUIFactory>
-#include <KActionCollection>
-#include <KConfigGroup>
 #include <KTar>
-#include <KIO/CommandLauncherJob>
+#include <KWallet>
+#include <KWindowSystem>
+#include <KXMLGUIFactory>
+#include <kwindowsystem_version.h>
 
 #include <QAction>
 #include <QCommandLineParser>
-#include <QIcon>
 #include <QDialog>
 #include <QFile>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QIcon>
 #include <QLineEdit>
 #include <QMimeDatabase>
 #include <QMimeType>
@@ -54,10 +54,11 @@ KWalletManager::KWalletManager(QCommandLineParser *commandLineParser)
     processParsedCommandLine(ProgramStart);
 }
 
-void KWalletManager::beginConfiguration() {
-    KConfig cfg(QStringLiteral("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
+void KWalletManager::beginConfiguration()
+{
+    KConfig cfg(QStringLiteral("kwalletrc")); // not sure why this setting isn't in kwalletmanagerrc...
     KConfigGroup walletConfigGroup(&cfg, QStringLiteral("Wallet"));
-    if (walletConfigGroup.readEntry("Enabled", true)){
+    if (walletConfigGroup.readEntry("Enabled", true)) {
         QTimer::singleShot(0, this, &KWalletManager::configUI);
     } else {
         int rc = KMessageBox::warningTwoActions(this,
@@ -75,9 +76,10 @@ void KWalletManager::beginConfiguration() {
     }
 }
 
-void KWalletManager::configUI() {
+void KWalletManager::configUI()
+{
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KWalletManager"), this, QDBusConnection::ExportScriptableSlots);
-    KConfig cfg(QStringLiteral("kwalletrc"));    // not sure why this setting isn't in kwalletmanagerrc...
+    KConfig cfg(QStringLiteral("kwalletrc")); // not sure why this setting isn't in kwalletmanagerrc...
     KConfigGroup walletConfigGroup(&cfg, QStringLiteral("Wallet"));
     if (walletConfigGroup.readEntry("Launch Manager", false)) {
         _tray = new KStatusNotifierItem(this);
@@ -86,7 +88,7 @@ void KWalletManager::configUI() {
         _tray->setStatus(KStatusNotifierItem::Passive);
         _tray->setIconByName(QStringLiteral("wallet-closed"));
         _tray->setToolTip(QStringLiteral("wallet-closed"), i18n("Wallet"), i18n("No wallets open."));
-        //connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
+        // connect(_tray, SIGNAL(quitSelected()), SLOT(shuttingDown()));
         const QStringList wl = KWallet::Wallet::walletList();
         bool isOpen = false;
         for (QStringList::ConstIterator it = wl.begin(), end = wl.end(); it != end; ++it) {
@@ -113,21 +115,20 @@ void KWalletManager::configUI() {
     setCentralWidget(_managerWidget);
     setAutoSaveSettings(QStringLiteral("MainWindow"), true);
     QFontMetrics fm = fontMetrics();
-    _managerWidget->setMinimumSize(16*fm.height(), 18*fm.height());
+    _managerWidget->setMinimumSize(16 * fm.height(), 18 * fm.height());
 
     m_kwalletdModule = new org::kde::KWallet(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd5"), QDBusConnection::sessionBus());
-    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this,
-            &KWalletManager::possiblyRescan);
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, &KWalletManager::possiblyRescan);
     connect(QDBusConnection::sessionBus().interface(),
-            &QDBusConnectionInterface::callWithCallbackFailed, this,
+            &QDBusConnectionInterface::callWithCallbackFailed,
+            this,
             [this](const QDBusError error, const QDBusMessage call) {
-              if (call.interface() == QStringLiteral("org.kde.KWallet")) {
-                _managerWidget->setErrorMessage(error.message());
-              }
+                if (call.interface() == QStringLiteral("org.kde.KWallet")) {
+                    _managerWidget->setErrorMessage(error.message());
+                }
             });
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::allWalletsClosed, this, &KWalletManager::allWalletsClosed);
-    connect(m_kwalletdModule, SIGNAL(walletClosed(QString)),
-            this, SLOT(updateWalletDisplay()));
+    connect(m_kwalletdModule, SIGNAL(walletClosed(QString)), this, SLOT(updateWalletDisplay()));
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletOpened, this, &KWalletManager::aWalletWasOpened);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletDeleted, this, &KWalletManager::updateWalletDisplay);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletListDirty, this, &KWalletManager::updateWalletDisplay);
@@ -178,13 +179,13 @@ void KWalletManager::configUI() {
     setStandardToolBarMenuEnabled(false);
 
     if (_tray) {
-//        _tray->show();
+        // _tray->show();
     } else {
         show();
     }
 
     _walletsExportAction->setDisabled(KWallet::Wallet::walletList().isEmpty());
-    qApp->setObjectName(QStringLiteral("kwallet"));   // hack to fix docs
+    qApp->setObjectName(QStringLiteral("kwallet")); // hack to fix docs
 }
 
 KWalletManager::~KWalletManager()
@@ -295,10 +296,7 @@ void KWalletManager::possiblyQuit()
 {
     KConfig _cfg(QStringLiteral("kwalletrc"));
     KConfigGroup cfg(&_cfg, QStringLiteral("Wallet"));
-    if (_windows.isEmpty() &&
-            !isVisible() &&
-            !cfg.readEntry("Leave Manager Open", false) &&
-            _kwalletdLaunch) {
+    if (_windows.isEmpty() && !isVisible() && !cfg.readEntry("Leave Manager Open", false) && _kwalletdLaunch) {
         qApp->quit();
     }
 }
@@ -322,7 +320,8 @@ void KWalletManager::createWallet()
     QString txt = i18n("Please choose a name for the new wallet:");
 
     if (!KWallet::Wallet::isEnabled()) {
-        // FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString(), i18n("Enable"), i18n("Keep Disabled"));
+        // FIXME: KMessageBox::warningYesNo(this, i1_8n("KWallet is not enabled.  Do you want to enable it?"), QString(), i18n("Enable"), i18n("Keep
+        // Disabled"));
         return;
     }
     // TODO port to QRegularExpressionValidator
@@ -360,7 +359,7 @@ void KWalletManager::createWallet()
                 return;
             }
             lineEdit->clear();
-        } else  {
+        } else {
             break;
         }
     } while (true);
@@ -415,7 +414,6 @@ void KWalletManager::closeAllWallets()
 {
     if (hasUnsavedChanges() && !canIgnoreUnsavedChanges()) {
         return;
-
     }
 
     m_kwalletdModule->closeAllWallets();
@@ -429,12 +427,12 @@ void KWalletManager::exportWallets()
 
     Q_ASSERT(dir.exists());
 
-    const QStringList filesList = dir.entryList(QStringList() << QStringLiteral("*.kwl") << QStringLiteral("*.salt"),
-                                                QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    const QStringList filesList =
+        dir.entryList(QStringList() << QStringLiteral("*.kwl") << QStringLiteral("*.salt"), QDir::Files | QDir::Readable | QDir::NoSymLinks);
 
     Q_ASSERT(!filesList.isEmpty());
 
-    const QString destination = QFileDialog::getSaveFileName(this,i18n("File name"));
+    const QString destination = QFileDialog::getSaveFileName(this, i18n("File name"));
     if (destination.isEmpty()) {
         return;
     }
@@ -470,22 +468,19 @@ void KWalletManager::importWallets()
     const QStringList archiveEntries = archiveDir->entries();
 
     for (int i = 0; i < archiveEntries.size(); i++) {
-        if (QFile::exists(destinationDir + archiveEntries.at(i))
-                && archiveEntries.at(i).endsWith(QLatin1String(".kwl"))) {
+        if (QFile::exists(destinationDir + archiveEntries.at(i)) && archiveEntries.at(i).endsWith(QLatin1String(".kwl"))) {
             QString walletName = archiveEntries.at(i);
             // remove ".kwl"
             walletName.chop(4);
-            KMessageBox::error(this, i18n("Wallet named %1 already exists, Operation aborted",
-                                          walletName));
+            KMessageBox::error(this, i18n("Wallet named %1 already exists, Operation aborted", walletName));
             return;
         }
     }
 
     if (!archiveDir->copyTo(destinationDir, false)) {
-        KMessageBox::error(this,i18n("Failed to copy files"));
+        KMessageBox::error(this, i18n("Failed to copy files"));
         return;
     }
-
 }
 
 bool KWalletManager::hasUnsavedChanges(const QString &name) const
@@ -548,7 +543,7 @@ void KWalletManager::processParsedCommandLine(CommandLineOrigin commandLineOrigi
 void KWalletManager::handleOpen(const QList<QUrl> &urls)
 {
     QStringList localFiles;
-    for (const QUrl& url : urls) {
+    for (const QUrl &url : urls) {
         localFiles.append(url.toLocalFile());
     }
     tryOpenWalletFiles(localFiles);

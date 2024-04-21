@@ -25,6 +25,9 @@ include(ECMSetupVersion)
 include(ECMQtDeclareLoggingCategory)
 include(ECMGenerateDBusServiceFile)
 include(ECMDeprecationSettings)
+include(KDEClangFormat)
+include(KDEGitCommitHooks)
+
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
 
 ## Generate header with version number
@@ -81,3 +84,8 @@ ecm_qt_install_logging_categories(
 ki18n_install(po)
 kdoctools_install(po)
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)

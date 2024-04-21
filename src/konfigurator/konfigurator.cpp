@@ -4,8 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "../kwalletmanager_version.h"
 #include "konfigurator.h"
+#include "../kwalletmanager_version.h"
 
 #include <KAuth/Action>
 #include <KAuth/ActionReply>
@@ -19,15 +19,15 @@
 
 #include <KAboutData>
 
-#include <QDebug>
 #include <QCheckBox>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusInterface>
+#include <QDebug>
+#include <QFile>
 #include <QMenu>
 #include <QProcess>
-#include <QFile>
 #include <QPushButton>
-#include <QDBusConnection>
-#include <QDBusInterface>
-#include <QDBusConnectionInterface>
 #include <QVBoxLayout>
 
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
@@ -36,10 +36,10 @@ K_PLUGIN_CLASS_WITH_JSON(KWalletConfig, "kwalletconfig.json")
 
 KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
-      , _wcw(new WalletConfigWidget(widget()))
-      , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
+    , _wcw(new WalletConfigWidget(widget()))
+    , _cfg(KSharedConfig::openConfig(QStringLiteral("kwalletrc"), KConfig::NoGlobals))
 {
-  setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmkwallet5.save"));
+    setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmkwallet5.save"));
     auto vbox = new QVBoxLayout(widget());
     vbox->setContentsMargins(0, 0, 0, 0);
     vbox->addWidget(_wcw);
@@ -68,7 +68,6 @@ KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kwalletmanager"))) {
         _wcw->_launch->hide();
     }
-
 }
 
 KWalletConfig::~KWalletConfig() = default;
@@ -99,10 +98,7 @@ void KWalletConfig::updateWalletLists()
 QString KWalletConfig::newWallet()
 {
     bool ok;
-    const QString n = QInputDialog::getText(widget(), i18n("New Wallet"),
-                                            i18n("Please choose a name for the new wallet:"),
-                                            QLineEdit::Normal, QString(),
-                                            &ok);
+    const QString n = QInputDialog::getText(widget(), i18n("New Wallet"), i18n("Please choose a name for the new wallet:"), QLineEdit::Normal, QString(), &ok);
     if (!ok) {
         return {};
     }
@@ -125,7 +121,7 @@ void KWalletConfig::newLocalWallet()
     updateWalletLists();
 
     _wcw->_localWallet->setCurrentIndex(_wcw->_localWallet->findText(n));
-        setNeedsSave(true);
+    setNeedsSave(true);
 }
 
 void KWalletConfig::newNetworkWallet()
@@ -138,7 +134,7 @@ void KWalletConfig::newNetworkWallet()
     updateWalletLists();
 
     _wcw->_defaultWallet->setCurrentIndex(_wcw->_defaultWallet->findText(n));
-        setNeedsSave(true);
+    setNeedsSave(true);
 }
 
 void KWalletConfig::launchManager()
@@ -154,7 +150,7 @@ void KWalletConfig::launchManager()
 
 void KWalletConfig::configChanged()
 {
-        setNeedsSave(true);
+    setNeedsSave(true);
 }
 
 void KWalletConfig::load()
@@ -163,7 +159,7 @@ void KWalletConfig::load()
     _wcw->_enabled->setChecked(config.readEntry("Enabled", true));
     _wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", false));
     _wcw->_launchManager->setChecked(config.readEntry("Launch Manager", false));
-    _wcw->_autocloseManager->setChecked(! config.readEntry("Leave Manager Open", false));
+    _wcw->_autocloseManager->setChecked(!config.readEntry("Leave Manager Open", false));
     _wcw->_screensaverLock->setChecked(config.readEntry("Close on Screensaver", false));
     _wcw->_autoclose->setChecked(!config.readEntry("Leave Open", true));
     _wcw->_closeIdle->setChecked(config.readEntry("Close When Idle", false));
@@ -233,7 +229,7 @@ void KWalletConfig::load()
 
     KConfigGroup secretsAPIConfig(_cfg, QStringLiteral("org.freedesktop.secrets"));
     _wcw->_secretServiceAPI->setChecked(secretsAPIConfig.readEntry("apiEnabled", true));
-        setNeedsSave(false);
+    setNeedsSave(false);
 }
 
 void KWalletConfig::save()
@@ -288,7 +284,7 @@ void KWalletConfig::save()
     // FIXME: won't survive a language change
     _cfg->deleteGroup(QStringLiteral("Auto Allow"));
     _cfg->deleteGroup(QStringLiteral("Auto Deny"));
-    config  = _cfg->group(QStringLiteral("Auto Allow"));
+    config = _cfg->group(QStringLiteral("Auto Allow"));
     for (int i = 0; i < _wcw->_accessList->topLevelItemCount(); ++i) {
         QTreeWidgetItem *parentItem = _wcw->_accessList->topLevelItem(i);
         QStringList al;
@@ -327,7 +323,7 @@ void KWalletConfig::save()
         // this will eventually make kwalletd exit upon deactivation
         kwalletd.call(QStringLiteral("reconfigure"));
     }
-        setNeedsSave(false);
+    setNeedsSave(false);
 }
 
 void KWalletConfig::defaults()
@@ -345,7 +341,7 @@ void KWalletConfig::defaults()
     _wcw->_localWallet->setCurrentIndex(0);
     _wcw->_accessList->clear();
     _wcw->_secretServiceAPI->setChecked(true);
-        setNeedsSave(true);
+    setNeedsSave(true);
 }
 
 void KWalletConfig::customContextMenuRequested(const QPoint &pos)

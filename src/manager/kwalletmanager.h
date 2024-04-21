@@ -29,10 +29,10 @@ public:
     ~KWalletManager() override;
 
     void kwalletdLaunch();
-    bool hasUnsavedChanges(const QString& name = QString()) const;
+    bool hasUnsavedChanges(const QString &name = QString()) const;
     bool canIgnoreUnsavedChanges();
-    void handleActivate(const QStringList& arguments, const QString &workingDirectory);
-    void handleOpen(const QList<QUrl>& urls);
+    void handleActivate(const QStringList &arguments, const QString &workingDirectory);
+    void handleOpen(const QList<QUrl> &urls);
 
 public Q_SLOTS:
     void createWallet();
@@ -41,7 +41,7 @@ public Q_SLOTS:
     void changeWalletPassword(const QString &walletName);
     void openWallet(const QString &walletName);
     void openWalletFile(const QString &path);
-//         void openWallet(QListWidgetItem *item);
+    // void openWallet(QListWidgetItem *item);
     void contextMenu(const QPoint &pos);
     void walletCreated(const QString &walletName);
 
@@ -49,7 +49,7 @@ protected:
     bool queryClose() override;
 
 private:
-public Q_SLOTS: //dbus
+public Q_SLOTS: // dbus
     Q_SCRIPTABLE void allWalletsClosed();
     Q_SCRIPTABLE void updateWalletDisplay();
     Q_SCRIPTABLE void aWalletWasOpened();
@@ -73,7 +73,7 @@ private:
     void processParsedCommandLine(CommandLineOrigin commandLineOrigin);
 
 private:
-    QCommandLineParser * const _commandLineParser;
+    QCommandLineParser *const _commandLineParser;
     KStatusNotifierItem *_tray = nullptr;
     bool _shuttingDown = false;
     KWalletManagerWidget *_managerWidget = nullptr;

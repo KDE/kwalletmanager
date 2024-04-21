@@ -8,8 +8,8 @@
 #include "authorizedappmodel.h"
 #include "revokeauthbutton.h"
 
-AuthorizedApplicationsTable::AuthorizedApplicationsTable(QWidget *parent) :
-    QTableView(parent)
+AuthorizedApplicationsTable::AuthorizedApplicationsTable(QWidget *parent)
+    : QTableView(parent)
 {
 }
 

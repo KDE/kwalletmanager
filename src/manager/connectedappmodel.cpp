@@ -9,10 +9,9 @@
 
 #include <KWallet>
 
-
-ConnectedAppModel::ConnectedAppModel(KWallet::Wallet *wallet):
-    QStandardItemModel(),
-    _wallet(wallet)
+ConnectedAppModel::ConnectedAppModel(KWallet::Wallet *wallet)
+    : QStandardItemModel()
+    , _wallet(wallet)
 {
     refresh();
 }

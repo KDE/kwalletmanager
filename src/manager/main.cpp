@@ -7,13 +7,13 @@
 #include "../kwalletmanager_version.h"
 #include "kwalletmanager.h"
 
+#include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedString>
-#include <KAboutData>
 
+#include <KCrash>
 #include <QApplication>
 #include <QCommandLineParser>
-#include <KCrash>
 
 int main(int argc, char **argv)
 {
@@ -32,18 +32,10 @@ int main(int argc, char **argv)
                  QString(),
                  QStringLiteral("https://apps.kde.org/kwalletmanager5"));
 
-    aboutData.addAuthor(i18n("Valentin Rusu"),
-                        i18n("Former Maintainer, user interface refactoring"),
-                        QStringLiteral("kde@rusu.info"));
-    aboutData.addAuthor(i18n("George Staikos"),
-                        i18n("Original author and former maintainer"),
-                        QStringLiteral("staikos@kde.org"));
-    aboutData.addAuthor(i18n("Michael Leupold"),
-                        i18n("Developer and former maintainer"),
-                        QStringLiteral("lemma@confuego.org"));
-    aboutData.addAuthor(i18n("Isaac Clerencia"),
-                        i18n("Developer"),
-                        QStringLiteral("isaac@warp.es"));
+    aboutData.addAuthor(i18n("Valentin Rusu"), i18n("Former Maintainer, user interface refactoring"), QStringLiteral("kde@rusu.info"));
+    aboutData.addAuthor(i18n("George Staikos"), i18n("Original author and former maintainer"), QStringLiteral("staikos@kde.org"));
+    aboutData.addAuthor(i18n("Michael Leupold"), i18n("Developer and former maintainer"), QStringLiteral("lemma@confuego.org"));
+    aboutData.addAuthor(i18n("Isaac Clerencia"), i18n("Developer"), QStringLiteral("isaac@warp.es"));
 
     KAboutData::setApplicationData(aboutData);
 
@@ -64,4 +56,3 @@ int main(int argc, char **argv)
 
     return a.exec();
 }
-

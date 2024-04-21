@@ -8,9 +8,9 @@
 #include "allyourbase.h"
 #include "kwalletmanager_debug.h"
 
+#include <KIO/StoredTransferJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
-#include <KIO/StoredTransferJob>
 #include <KMessageBox>
 #include <QUrl>
 
@@ -25,7 +25,11 @@
  *  KWalletFolderItem - ListView items to represent kwallet folders
  */
 KWalletFolderItem::KWalletFolderItem(KWallet::Wallet *w, QTreeWidget *parent, const QString &name, int entries)
-    : QTreeWidgetItem(parent, KWalletFolderItemClass), _wallet(w), _name(name), _entries(entries), m_services(KService::allServices())
+    : QTreeWidgetItem(parent, KWalletFolderItemClass)
+    , _wallet(w)
+    , _name(name)
+    , _entries(entries)
+    , m_services(KService::allServices())
 {
     setText(0, QStringLiteral("%1 (%2)").arg(_name).arg(_entries));
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled);
@@ -104,8 +108,7 @@ QTreeWidgetItem *KWalletFolderItem::getItem(const QString &key) const
 
 bool KWalletFolderItem::acceptDrop(const QMimeData *mime) const
 {
-    return mime->hasFormat(QStringLiteral("application/x-kwallet-entry")) ||
-           mime->hasFormat(QStringLiteral("text/uri-list"));
+    return mime->hasFormat(QStringLiteral("application/x-kwallet-entry")) || mime->hasFormat(QStringLiteral("text/uri-list"));
 }
 
 QString KWalletFolderItem::name() const
@@ -120,7 +123,8 @@ KWalletFolderItem::~KWalletFolderItem() = default;
  *  passwords, maps, ...
  */
 KWalletContainerItem::KWalletContainerItem(QTreeWidgetItem *parent, const QString &name, KWallet::Wallet::EntryType entryType)
-    : QTreeWidgetItem(parent, QStringList() << name, KWalletContainerItemClass), _type(entryType)
+    : QTreeWidgetItem(parent, QStringList() << name, KWalletContainerItemClass)
+    , _type(entryType)
 {
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEnabled);
 }
@@ -152,7 +156,9 @@ QTreeWidgetItem *KWalletContainerItem::getItem(const QString &key) const
  *  KWalletEntryItem - ListView items to represent kwallet entries
  */
 KWalletEntryItem::KWalletEntryItem(KWallet::Wallet *w, QTreeWidgetItem *parent, const QString &ename)
-    : QTreeWidgetItem(parent, QStringList() << ename, KWalletEntryItemClass), _wallet(w), m_name(ename)
+    : QTreeWidgetItem(parent, QStringList() << ename, KWalletEntryItemClass)
+    , _wallet(w)
+    , m_name(ename)
 {
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsEditable | Qt::ItemIsDragEnabled | Qt::ItemIsEnabled);
 }
@@ -174,7 +180,8 @@ void KWalletEntryItem::restoreName()
  * KWalletItem - IconView items to represent wallets
  */
 KWalletItem::KWalletItem(QListWidget *parent, const QString &walletName)
-    : QListWidgetItem(QIcon::fromTheme(QStringLiteral("wallet-closed")), walletName, parent), _open(false)
+    : QListWidgetItem(QIcon::fromTheme(QStringLiteral("wallet-closed")), walletName, parent)
+    , _open(false)
 {
     setFlags(flags() | Qt::ItemIsDropEnabled);
 }
@@ -198,7 +205,7 @@ static bool decodeEntry(KWallet::Wallet *_wallet, QDataStream &ds)
     quint32 magic;
     ds >> magic;
     if (magic != KWALLETENTRYMAGIC) {
-        qCDebug(KWALLETMANAGER_LOG) << "bad magic" ;
+        qCDebug(KWALLETMANAGER_LOG) << "bad magic";
         return false;
     }
     QString name;
@@ -224,7 +231,7 @@ static bool decodeFolder(KWallet::Wallet *_wallet, QDataStream &ds)
     quint32 magic;
     ds >> magic;
     if (magic != KWALLETFOLDERMAGIC) {
-        qCDebug(KWALLETMANAGER_LOG) << "bad magic" ;
+        qCDebug(KWALLETMANAGER_LOG) << "bad magic";
         return false;
     }
     QString folder;
@@ -267,15 +274,12 @@ void KWalletItem::processDropEvent(QDropEvent *e)
     // down which might lead to the event data getting deleted
     KWalletEntryList *el = nullptr;
     Qt::DropAction proposedAction = e->proposedAction();
-    if (e->source() && e->source()->parent() &&
-            !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList") &&
-            (proposedAction != Qt::CopyAction)) {
-
+    if (e->source() && e->source()->parent() && !strcmp(e->source()->parent()->metaObject()->className(), "KWalletEntryList")
+        && (proposedAction != Qt::CopyAction)) {
         el = dynamic_cast<KWalletEntryList *>(e->source()->parent());
     }
 
-    if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-folder")) ||
-            e->mimeData()->hasFormat(QStringLiteral("text/uri-list"))) {
+    if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-folder")) || e->mimeData()->hasFormat(QStringLiteral("text/uri-list"))) {
         // FIXME: don't allow the drop if the wallet name is the same
         KWallet::Wallet *_wallet = KWallet::Wallet::openWallet(text(), listWidget()->topLevelWidget()->winId());
         if (!_wallet) {
@@ -321,10 +325,9 @@ void KWalletItem::processDropEvent(QDropEvent *e)
         _wallet->setFolder(saveFolder);
         delete _wallet;
 
-        //delete the folder from the source if we were moving
+        // delete the folder from the source if we were moving
         if (el) {
-            auto fi =
-                dynamic_cast<KWalletFolderItem *>(el->currentItem());
+            auto fi = dynamic_cast<KWalletFolderItem *>(el->currentItem());
             if (fi) {
                 el->_wallet->removeFolder(fi->name());
             }
@@ -339,8 +342,8 @@ void KWalletItem::processDropEvent(QDropEvent *e)
  *  KWalletEntryList - A listview to store wallet entries
  */
 KWalletEntryList::KWalletEntryList(QWidget *parent, const QString &name)
-    : QTreeWidget(parent),
-      _wallet(nullptr)
+    : QTreeWidget(parent)
+    , _wallet(nullptr)
 {
     setObjectName(name);
     setColumnCount(1);
@@ -354,7 +357,7 @@ KWalletEntryList::KWalletEntryList(QWidget *parent, const QString &name)
 
 KWalletEntryList::~KWalletEntryList() = default;
 
-//returns true if the item has been dropped successfully
+// returns true if the item has been dropped successfully
 void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
 {
     bool ok = true;
@@ -372,10 +375,9 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
         return;
     }
 
-    //detect if we are dragging from kwallet itself
+    // detect if we are dragging from kwallet itself
     qCDebug(KWALLETMANAGER_LOG) << e->source() << e->source()->metaObject()->className();
     if (e->source() && !strcmp(e->source()->metaObject()->className(), "KWalletEntryList")) {
-
         el = dynamic_cast<KWalletEntryList *>(e->source());
         if (!el) {
             KMessageBox::error(this, i18n("An unexpected error occurred trying to drop the item"));
@@ -385,9 +387,8 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
     }
 
     if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-entry"))) {
-        //do nothing if we are in the same folder
-        if (sel && sel->parent()->parent() ==
-                KWalletEntryList::getItemFolder(item)) {
+        // do nothing if we are in the same folder
+        if (sel && sel->parent()->parent() == KWalletEntryList::getItemFolder(item)) {
             e->ignore();
             return;
         }
@@ -399,7 +400,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
         }
         e->accept();
     } else if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-folder"))) {
-        //do nothing if we are in the same wallet
+        // do nothing if we are in the same wallet
         if (this == el) {
             e->ignore();
             return;
@@ -441,7 +442,7 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
         } else if (data.startsWith(folderMagic)) {
             isEntry = false;
         } else {
-            qCDebug(KWALLETMANAGER_LOG) << "bad magic" ;
+            qCDebug(KWALLETMANAGER_LOG) << "bad magic";
             return;
         }
     } else {
@@ -462,23 +463,24 @@ void KWalletEntryList::itemDropped(QDropEvent *e, QTreeWidgetItem *item)
         ok = decodeEntry(_wallet, ds);
         _wallet->setFolder(saveFolder);
         fi->refresh();
-        //delete source if we were moving, i.e., we are dragging
-        //from kwalletmanager and Control is not pressed
+        // delete source if we were moving, i.e., we are dragging
+        // from kwalletmanager and Control is not pressed
         if (ok && el && proposedAction != Qt::CopyAction && sel) {
             el->_wallet->removeEntry(sel->text(0));
             delete sel;
         }
     } else {
         ok = decodeFolder(_wallet, ds);
-        //delete source if we were moving, i.e., we are dragging
-        //from kwalletmanager and Control is not pressed
+        // delete source if we were moving, i.e., we are dragging
+        // from kwalletmanager and Control is not pressed
         if (ok && el && proposedAction != Qt::CopyAction && sel) {
             auto fi = dynamic_cast<KWalletFolderItem *>(sel);
             if (fi) {
                 el->_wallet->removeFolder(fi->name());
                 delete sel;
             } else {
-                KMessageBox::error(this, i18n("An unexpected error occurred trying to delete the original folder, but the folder has been copied successfully"));
+                KMessageBox::error(this,
+                                   i18n("An unexpected error occurred trying to delete the original folder, but the folder has been copied successfully"));
             }
         }
     }
@@ -592,14 +594,12 @@ void KWalletEntryList::dragMoveEvent(QDragMoveEvent *e)
     QTreeWidgetItem *i = itemAt(e->position().toPoint());
     e->ignore();
     if (i) {
-        if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-entry")) ||
-                e->mimeData()->hasFormat(QStringLiteral("text/uri-list"))) {
+        if (e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-entry")) || e->mimeData()->hasFormat(QStringLiteral("text/uri-list"))) {
             e->accept();
         }
     }
-    if ((e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-folder")) &&
-            e->source() != viewport()) ||
-            e->mimeData()->hasFormat(QStringLiteral("text/uri-list"))) {
+    if ((e->mimeData()->hasFormat(QStringLiteral("application/x-kwallet-folder")) && e->source() != viewport())
+        || e->mimeData()->hasFormat(QStringLiteral("text/uri-list"))) {
         e->accept();
     }
 }
@@ -639,7 +639,7 @@ void KWalletEntryList::selectFirstVisible()
         if (!item->isHidden()) {
             // if it's a leaf, then select it and quit
             if (item->childCount() == 0) {
-//                 qCDebug(KWALLETMANAGER_LOG) << "selecting " << item->text(0);
+                //                 qCDebug(KWALLETMANAGER_LOG) << "selecting " << item->text(0);
                 setCurrentItem(item);
                 break;
             }
@@ -652,7 +652,7 @@ void KWalletEntryList::refreshItemsCount()
     QTreeWidgetItemIterator it(this);
     while (*it) {
         QTreeWidgetItem *item = *it++;
-        auto fi = dynamic_cast< KWalletFolderItem * >(item);
+        auto fi = dynamic_cast<KWalletFolderItem *>(item);
         if (fi) {
             fi->refreshItemsCount();
         }
@@ -662,7 +662,8 @@ void KWalletEntryList::refreshItemsCount()
 class ReturnPressedFilter : public QObject
 {
 public:
-    ReturnPressedFilter(QListWidget *parent) : QObject(parent)
+    ReturnPressedFilter(QListWidget *parent)
+        : QObject(parent)
     {
         parent->installEventFilter(this);
     }

@@ -5,14 +5,14 @@
 */
 
 #include "connectedapplicationstable.h"
-#include "disconnectappbutton.h"
 #include "connectedappmodel.h"
+#include "disconnectappbutton.h"
 
 #include <KLocalizedString>
 #include <QPushButton>
 
-ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget *parent):
-    QTableView(parent)
+ConnectedApplicationsTable::ConnectedApplicationsTable(QWidget *parent)
+    : QTableView(parent)
 {
 }
 

@@ -7,10 +7,10 @@
 #include "revokeauthbutton.h"
 #include <KLocalizedString>
 
-RevokeAuthButton::RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet):
-    QPushButton(),
-    _appName(appName),
-    _wallet(wallet)
+RevokeAuthButton::RevokeAuthButton(const QString &appName, KWallet::Wallet *wallet)
+    : QPushButton()
+    , _appName(appName)
+    , _wallet(wallet)
 {
     setObjectName(QStringLiteral("Revoke_%1").arg(appName));
     setText(i18n("Revoke Authorization"));

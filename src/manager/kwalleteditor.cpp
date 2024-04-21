@@ -6,31 +6,31 @@
 */
 
 #include "kwalleteditor.h"
+#include "allyourbase.h"
 #include "kbetterthankdialogbase.h"
 #include "kwmapeditor.h"
-#include "allyourbase.h"
 
+#include <KActionCollection>
+#include <KCodecs>
+#include <KConfigGroup>
+#include <KIO/StoredTransferJob>
+#include <KJobWidgets>
+#include <KMessageBox>
+#include <KSqueezedTextLabel>
+#include <KStandardAction>
 #include <QAction>
 #include <QDialog>
 #include <QInputDialog>
-#include <KIO/StoredTransferJob>
-#include <KJobWidgets>
-#include <KActionCollection>
-#include <KCodecs>
-#include <KMessageBox>
 #include <QMenu>
-#include <KSqueezedTextLabel>
-#include <KStandardAction>
-#include <KConfigGroup>
 
-#include <QTemporaryFile>
-#include <KXMLGUIFactory>
 #include <KSharedConfig>
+#include <KXMLGUIFactory>
+#include <QTemporaryFile>
 
-#include <KToolBar>
 #include <KLocalizedString>
-#include <QIcon>
+#include <KToolBar>
 #include <KTreeWidgetSearchLine>
+#include <QIcon>
 
 #include <QCheckBox>
 #include <QClipboard>
@@ -40,8 +40,8 @@
 #include <QFileDialog>
 #include <QList>
 #include <QPushButton>
-#include <QStack>
 #include <QSet>
+#include <QStack>
 #include <QTimer>
 #include <QToolButton>
 #include <QVBoxLayout>
@@ -66,7 +66,10 @@ QAction *KWalletEditor::_alwaysHideContentsAction = nullptr;
 RegisterCreateActionsMethod KWalletEditor::_registerCreateActionMethod(&KWalletEditor::createActions);
 
 KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
-    : QWidget(parent), _displayedItem(nullptr), _actionCollection(nullptr), _alwaysShowContents(false)
+    : QWidget(parent)
+    , _displayedItem(nullptr)
+    , _actionCollection(nullptr)
+    , _alwaysShowContents(false)
 {
     setupUi(this);
     setObjectName(name);
@@ -87,12 +90,10 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
     _entryList->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::TopEdge}));
     auto lineWrapper = new QWidget(_entryList);
     auto lineWrapperLayout = new QVBoxLayout(lineWrapper);
-    lineWrapperLayout->setContentsMargins(
-        style()->pixelMetric(QStyle::PM_LayoutLeftMargin),
-        style()->pixelMetric(QStyle::PM_LayoutTopMargin),
-        style()->pixelMetric(QStyle::PM_LayoutRightMargin),
-        style()->pixelMetric(QStyle::PM_LayoutBottomMargin)
-    );
+    lineWrapperLayout->setContentsMargins(style()->pixelMetric(QStyle::PM_LayoutLeftMargin),
+                                          style()->pixelMetric(QStyle::PM_LayoutTopMargin),
+                                          style()->pixelMetric(QStyle::PM_LayoutRightMargin),
+                                          style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
     _searchLine = new KTreeWidgetSearchLine(lineWrapper, _entryList);
     _searchLine->setPlaceholderText(i18n("Search"));
     connect(_searchLine, &KTreeWidgetSearchLine::textChanged, this, &KWalletEditor::onSearchTextChanged);
@@ -139,7 +140,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
     _passwordValue->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
 
     _binaryViewShow->setChecked(_alwaysShowContents);
-//    createActions();
+    //    createActions();
     // TODO: remove kwalleteditor.rc file
 }
 
@@ -381,7 +382,7 @@ void KWalletEditor::updateFolderList(bool checkEntries)
         _entryList->setEnabled(true);
     }
 
-    //check if the current folder has been removed
+    // check if the current folder has been removed
     if (!fl.contains(_currentFolder)) {
         _currentFolder.clear();
         _entryTitle->clear();
@@ -399,7 +400,11 @@ void KWalletEditor::deleteFolder()
                 return;
             }
 
-            KMessageBox::ButtonCode buttonCode = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()), QString(), KStandardGuiItem::del());
+            KMessageBox::ButtonCode buttonCode =
+                KMessageBox::warningContinueCancel(this,
+                                                   i18n("Are you sure you wish to delete the folder '%1' from the wallet?", fi->name()),
+                                                   QString(),
+                                                   KStandardGuiItem::del());
             if (buttonCode == KMessageBox::Continue) {
                 bool rc = _w->removeFolder(fi->name());
                 if (!rc) {
@@ -422,10 +427,7 @@ void KWalletEditor::createFolder()
         bool ok;
 
         do {
-            n = QInputDialog::getText(this, i18n("New Folder"),
-                                      i18n("Please choose a name for the new folder:"),
-                                      QLineEdit::Normal, QString(),
-                                      &ok);
+            n = QInputDialog::getText(this, i18n("New Folder"), i18n("Please choose a name for the new folder:"), QLineEdit::Normal, QString(), &ok);
 
             if (!ok) {
                 return;
@@ -522,8 +524,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
 
     if (item) {
         // set the context menu's title
-        _contextMenu->addSection(_contextMenu->fontMetrics().elidedText(
-                                   item->text(0), Qt::ElideMiddle, 200));
+        _contextMenu->addSection(_contextMenu->fontMetrics().elidedText(item->text(0), Qt::ElideMiddle, 200));
 
         // TODO rtti
         switch (item->type()) {
@@ -551,8 +552,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                 QString pass;
                 if (_w->readPassword(item->text(0), pass) == 0) {
                     _entryStack->setCurrentIndex(4);
-                    _entryName->setText(i18n("Password: %1",
-                                             item->text(0)));
+                    _entryName->setText(i18n("Password: %1", item->text(0)));
                     _passwordValue->setText(pass);
                     _saveChanges->setEnabled(false);
                     _undoChanges->setEnabled(false);
@@ -578,8 +578,7 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
                 _entryStack->setCurrentIndex(3);
                 QByteArray ba;
                 if (_w->readEntry(item->text(0), ba) == 0) {
-                    _entryName->setText(i18n("Binary Data: %1",
-                                             item->text(0)));
+                    _entryName->setText(i18n("Binary Data: %1", item->text(0)));
                     _saveChanges->setEnabled(false);
                     _undoChanges->setEnabled(false);
                     _hasUnsavedChanges = false;
@@ -770,7 +769,7 @@ void KWalletEditor::newEntry()
 
     KWalletFolderItem *fi;
 
-    //set the folder where we're trying to create the new entry
+    // set the folder where we're trying to create the new entry
     if (_w && item) {
         QTreeWidgetItem *p = item;
         if (p->type() == KWalletEntryItemClass) {
@@ -786,10 +785,7 @@ void KWalletEditor::newEntry()
     }
 
     do {
-        n = QInputDialog::getText(this, i18n("New Entry"),
-                                  i18n("Please choose a name for the new entry:"),
-                                  QLineEdit::Normal, QString(),
-                                  &ok);
+        n = QInputDialog::getText(this, i18n("New Entry"), i18n("Please choose a name for the new entry:"), QLineEdit::Normal, QString(), &ok);
 
         if (!ok) {
             return;
@@ -899,7 +895,8 @@ void KWalletEditor::deleteEntry()
 {
     QTreeWidgetItem *item = _entryList->currentItem();
     if (_w && item) {
-        int rc = KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)), QString(), KStandardGuiItem::del());
+        int rc =
+            KMessageBox::warningContinueCancel(this, i18n("Are you sure you wish to delete the item '%1'?", item->text(0)), QString(), KStandardGuiItem::del());
         if (rc == KMessageBox::Continue) {
             auto fi = dynamic_cast<KWalletFolderItem *>(item->parent()->parent());
             if (!fi) {
@@ -999,13 +996,15 @@ void KWalletEditor::importWallet()
             QMap<QString, QMap<QString, QString>> map = w->mapList(&readMap);
             QSet<QString> mergedkeys; // prevents re-merging already merged entries.
             if (readMap) {
-                QMap<QString, QMap<QString, QString> >::ConstIterator me;
+                QMap<QString, QMap<QString, QString>>::ConstIterator me;
                 for (me = map.constBegin(); me != map.constEnd(); ++me) {
                     bool hasEntry = _w->hasEntry(me.key());
                     if (hasEntry && mp == Prompt) {
                         KBetterThanKDialogBase *bd;
                         bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), me.key().toHtmlEscaped()));
+                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
+                                          f->toHtmlEscaped(),
+                                          me.key().toHtmlEscaped()));
                         mp = static_cast<MergePlan>(bd->exec());
                         delete bd;
                         bool ok = false;
@@ -1035,7 +1034,9 @@ void KWalletEditor::importWallet()
                     bool hasEntry = _w->hasEntry(pe.key());
                     if (hasEntry && mp == Prompt) {
                         auto bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), pe.key().toHtmlEscaped()));
+                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
+                                          f->toHtmlEscaped(),
+                                          pe.key().toHtmlEscaped()));
                         mp = static_cast<MergePlan>(bd->exec());
                         delete bd;
                         bool ok = false;
@@ -1069,7 +1070,9 @@ void KWalletEditor::importWallet()
                     bool hasEntry = _w->hasEntry(ee.key());
                     if (hasEntry && mp == Prompt) {
                         auto bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", f->toHtmlEscaped(), ee.key().toHtmlEscaped()));
+                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
+                                          f->toHtmlEscaped(),
+                                          ee.key().toHtmlEscaped()));
                         mp = static_cast<MergePlan>(bd->exec());
                         delete bd;
                         bool ok = false;
@@ -1151,7 +1154,9 @@ void KWalletEditor::importXML()
             bool hasEntry = _w->hasEntry(ename);
             if (hasEntry && mp == Prompt) {
                 auto bd = new KBetterThanKDialogBase(this);
-                bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?", fname.toHtmlEscaped(), ename.toHtmlEscaped()));
+                bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
+                                  fname.toHtmlEscaped(),
+                                  ename.toHtmlEscaped()));
                 mp = static_cast<MergePlan>(bd->exec());
                 delete bd;
                 bool ok = false;

@@ -11,9 +11,9 @@
 #include <KWallet>
 #include <QIcon>
 
-KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget *widgetParent, const QString &walletName):
-    KPageWidgetItem(_controlWidget = new WalletControlWidget(widgetParent, walletName), walletName),
-    _walletName(walletName)
+KWalletManagerWidgetItem::KWalletManagerWidgetItem(QWidget *widgetParent, const QString &walletName)
+    : KPageWidgetItem(_controlWidget = new WalletControlWidget(widgetParent, walletName), walletName)
+    , _walletName(walletName)
 {
     updateWalletDisplay();
 }

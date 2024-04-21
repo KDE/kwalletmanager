@@ -9,7 +9,6 @@
 
 #include <QMenu>
 
-
 class KWalletPopup : public QMenu
 {
     Q_OBJECT

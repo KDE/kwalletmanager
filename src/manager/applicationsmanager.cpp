@@ -5,13 +5,12 @@
 */
 
 #include "applicationsmanager.h"
-#include "connectedappmodel.h"
 #include "authorizedappmodel.h"
+#include "connectedappmodel.h"
 #include <KWallet>
 
-
-ApplicationsManager::ApplicationsManager(QWidget *parent):
-    QWidget(parent)
+ApplicationsManager::ApplicationsManager(QWidget *parent)
+    : QWidget(parent)
 {
     setupUi(this);
 }

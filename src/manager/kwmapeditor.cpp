@@ -6,19 +6,19 @@
 
 #include "kwmapeditor.h"
 
-#include <QAction>
 #include <KActionCollection>
-#include <QIcon>
 #include <KLocalizedString>
-#include <QMenu>
 #include <KStandardAction>
 #include <KWindowSystem>
+#include <QAction>
+#include <QIcon>
+#include <QMenu>
 #include <QTextEdit>
 
 #include <QApplication>
 #include <QClipboard>
-#include <QItemDelegate>
 #include <QFocusEvent>
+#include <QItemDelegate>
 #include <QKeyEvent>
 #include <QPointer>
 #include <QToolButton>
@@ -26,7 +26,9 @@
 class InlineEditor : public QTextEdit
 {
 public:
-    InlineEditor(KWMapEditor *p) : QTextEdit(), _p(p)
+    InlineEditor(KWMapEditor *p)
+        : QTextEdit()
+        , _p(p)
     {
         setAttribute(Qt::WA_DeleteOnClose);
         setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
@@ -68,7 +70,8 @@ protected:
 class KWMapEditorDelegate : public QItemDelegate
 {
 public:
-    KWMapEditorDelegate(KWMapEditor *parent) : QItemDelegate(parent)
+    KWMapEditorDelegate(KWMapEditor *parent)
+        : QItemDelegate(parent)
     {
     }
 
@@ -118,7 +121,8 @@ public:
 };
 
 KWMapEditor::KWMapEditor(QMap<QString, QString> &map, QWidget *parent)
-    : QTableWidget(0, 3, parent), _map(map)
+    : QTableWidget(0, 3, parent)
+    , _map(map)
 {
     setItemDelegate(new KWMapEditorDelegate(this));
     _ac = new KActionCollection(this);

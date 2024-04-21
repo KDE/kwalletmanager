@@ -8,8 +8,8 @@
 #ifndef KWALLETEDITOR_H
 #define KWALLETEDITOR_H
 
-#include "ui_walletwidget.h"
 #include "registercreateactionmethod.h"
+#include "ui_walletwidget.h"
 
 #include <KWallet>
 
