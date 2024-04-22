@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
 
-    KAboutData aboutData(QStringLiteral("kwalletmanager5"),
+    KAboutData aboutData(QStringLiteral("kwalletmanager"),
                  i18n("Wallet Manager"),
                  QStringLiteral(KWALLETMANAGER_VERSION_STRING),
                  i18n("KDE Wallet Management Tool"),
