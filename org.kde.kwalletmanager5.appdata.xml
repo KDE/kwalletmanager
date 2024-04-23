@@ -32,9 +32,10 @@
   <name xml:lang="ka">KWalletManager</name>
   <name xml:lang="ko">KWalletManager</name>
   <name xml:lang="lt">KWalletManager</name>
+  <name xml:lang="lv">KWalletManager</name>
   <name xml:lang="nl">KWalletManager</name>
   <name xml:lang="nn">KWalletManager</name>
-  <name xml:lang="pa">ਕੇਵਾਲਿਟ-ਮੈਨੇਜਰ</name>
+  <name xml:lang="pa">ਕੇ-ਵਾਲਟ-ਮੈਨੇਜਰ</name>
   <name xml:lang="pl">Zarządzanie portfelem</name>
   <name xml:lang="pt">KWalletManager</name>
   <name xml:lang="pt-BR">KWalletManager</name>
@@ -78,9 +79,10 @@
   <summary xml:lang="ka">საფულის მართვის ხელსაწყო</summary>
   <summary xml:lang="ko">지갑 관리 도구</summary>
   <summary xml:lang="lt">Slaptažodinių tvarkymo įrankis</summary>
+  <summary xml:lang="lv">Maku pārvaldības rīks</summary>
   <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
   <summary xml:lang="nn">Wallet-administrasjonsverktøy</summary>
-  <summary xml:lang="pa">ਵਾਲਿਟ ਇੰਤਜ਼ਾਮ ਟੂਲ</summary>
+  <summary xml:lang="pa">ਵਾਲਟ ਇੰਤਜ਼ਾਮ ਟੂਲ</summary>
   <summary xml:lang="pl">Zarządzania portfelem</summary>
   <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
   <summary xml:lang="pt-BR">Ferramenta para gerenciamento de carteiras</summary>
@@ -124,6 +126,7 @@
     <p xml:lang="ka">KWalletManager პროგრამაა, რომელიც თქვენს სისტემაში პაროლების მართვაში დაგეხმარება. საფულის ქვესისტემის გამოყენება არა მხოლოდ თქვენი პაროლების უსაფრთხოდ შენახვაზე ზრუნავს, არამედ იმაზე, ვის აქვს მასზე წვდომა.</p>
     <p xml:lang="ko">KWalletManager는 시스템에 저장된 암호를 관리하는 도구입니다. KDE 프레임워크의 지갑 하위 시스템을 사용하면 사용자 비밀 데이터를 관리할 수 있으며, 지갑 시스템을 사용하는 앱에서 사용하는 암호를 안전하게 저장할 수 있습니다.</p>
     <p xml:lang="lt">KWalletManager yra įrankis, skirtas tvarkyti slaptažodžius jūsų sistemoje. Šis įrankis, naudodamas Frameworks slaptažodinių posistemį ne tik leidžia jums saugoti savo paslaptis, bet taip pat leidžia tvarkyti ir gauti prieigą prie slaptažodžių iš kiekvienos programos, kuri integruota su slaptažodine.</p>
+    <p xml:lang="lv">„KWalletManager“ ir rīks sistēmas paroļu pārvaldībai. Izmantojot „Frameworks“ maku apakšsistēmu, tas palīdz ne vien saglabāt noslēpumus, bet arī piekļūt un pārvaldīt katras maku sistēmā integrētās programmas paroles.</p>
     <p xml:lang="nl">KWalletManager is een hulpmiddel om de wachtwoorden op uw systeem te beheren. Door het portefeuille subsysteem van Frameworks te gebruiken stelt het u niet alleen in staat om uw eigen geheimen te bewaren maar ook om toegang tot en de wachtwoorden van elke toepassing die integreert met de portefeuille te beheren.</p>
     <p xml:lang="nn">KWalletManager er eit verktøy for å administera passord på systemet. Det brukar lommeboksystemet frå KDE Frameworks som, i tillegg til å lagra dine eigne passord, lèt deg lesa og handsama passorda til program som nyttar lommeboksystemet.</p>
     <p xml:lang="pl">Zarządzanie portfelem jest narzędziem do zarządzania hasłami w twoim systemie. Używając podsystemu portfela umożliwia ci nie tylko zachowanie poufności, lecz także dostęp i zarządzanie hasłami w każdej aplikacji, która integruje portfel.</p>
