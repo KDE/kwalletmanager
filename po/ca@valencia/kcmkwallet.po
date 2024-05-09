@@ -193,7 +193,7 @@ msgstr "Seleccioneu la cartera que s'ha d'utilitzar de manera predeterminada:"
 #: walletconfigwidget.ui:161 walletconfigwidget.ui:191
 #, kde-format
 msgid "New..."
-msgstr "Nova..."
+msgstr "Nova…"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:168
@@ -280,15 +280,3 @@ msgstr "Política"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Inicia el gestor de carteres"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "(c) 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr ""
-#~ "Este mòdul de configuració permet configurar el sistema de carteres de "
-#~ "KDE."
