@@ -125,7 +125,7 @@ msgstr "Mo&stra els valors"
 #: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
-msgstr "Carpeta &nova..."
+msgstr "Carpeta &nova…"
 
 #: kwalleteditor.cpp:211
 #, kde-format
@@ -135,17 +135,17 @@ msgstr "Sup&rimix la carpeta"
 #: kwalleteditor.cpp:214
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "&Importa una cartera..."
+msgstr "&Importa una cartera…"
 
 #: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
-msgstr "&Importa XML..."
+msgstr "&Importa XML…"
 
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Export as XML..."
-msgstr "&Exporta com a XML..."
+msgstr "&Exporta com a XML…"
 
 #: kwalleteditor.cpp:226
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "&Copia"
 #: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
-msgstr "&Nova..."
+msgstr "&Nova…"
 
 #: kwalleteditor.cpp:236
 #, kde-format
@@ -368,12 +368,12 @@ msgstr "Hi ha una cartera oberta."
 #: kwalletmanager.cpp:140 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "Cartera &nova..."
+msgstr "Cartera &nova…"
 
 #: kwalletmanager.cpp:145
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "Sup&rimix la cartera..."
+msgstr "Sup&rimix la cartera…"
 
 #: kwalletmanager.cpp:150
 #, kde-format
@@ -388,7 +388,7 @@ msgstr "&Importa'n una d'encriptada"
 #: kwalletmanager.cpp:160
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "Configura les &carteres..."
+msgstr "Configura les &carteres…"
 
 #: kwalletmanager.cpp:168
 #, kde-format
@@ -533,12 +533,12 @@ msgstr "S'ha produït un error en connectar amb el servei de KWallet:<nl/>%1"
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
 msgid "&Open..."
-msgstr "O&bri..."
+msgstr "O&bri…"
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "Can&via la contrasenya..."
+msgstr "Can&via la contrasenya…"
 
 #: kwalletpopup.cpp:51
 #, kde-format
@@ -668,13 +668,13 @@ msgstr "KSqueezedTextLabel"
 #: walletcontrolwidget.ui:54
 #, kde-format
 msgid "Open..."
-msgstr "Obri..."
+msgstr "Obri…"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
-msgstr "Canvia la contrasenya..."
+msgstr "Canvia la contrasenya…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80
