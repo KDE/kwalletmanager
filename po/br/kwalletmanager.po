@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kwalletmanager.pot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-14 01:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2004-09-21 18:36+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tvignaud@mandriva.com, jdrapier@club-internet.fr"
 
-#: allyourbase.cpp:209
+#: allyourbase.cpp:216
 #, fuzzy, kde-format
 #| msgid ""
 #| "A folder by the name '%1' already exists.  What would you like to do?"
@@ -33,34 +33,34 @@ msgstr ""
 "Ur renkell a vez graet « %1 » dioutañ a zo c'hoazh. Petra e fell deoc'h "
 "d'ober ?"
 
-#: allyourbase.cpp:234
+#: allyourbase.cpp:241
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr ""
 "Ur renkell a vez graet « %1 » dioutañ a zo c'hoazh. Petra e fell deoc'h "
 "d'ober ?"
 
-#: allyourbase.cpp:237
+#: allyourbase.cpp:244
 #, kde-format
 msgid "Replace"
 msgstr "Erlec'hiañ"
 
-#: allyourbase.cpp:347
+#: allyourbase.cpp:350
 #, kde-format
 msgid "Folders"
 msgstr "Renkelloù"
 
-#: allyourbase.cpp:381
+#: allyourbase.cpp:383
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr ""
 
-#: allyourbase.cpp:457
+#: allyourbase.cpp:458
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr ""
 
-#: allyourbase.cpp:481
+#: allyourbase.cpp:483
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -79,7 +79,7 @@ msgstr ""
 msgid "These applications are authorized to access this wallet:"
 msgstr ""
 
-#: disconnectappbutton.cpp:16
+#: disconnectappbutton.cpp:17
 #, fuzzy, kde-format
 #| msgid "Disconnec&t"
 msgid "Disconnect"
@@ -109,403 +109,403 @@ msgstr "&Tremen e-biou"
 msgid "Skip A&ll"
 msgstr "Tremen an ho&ll re"
 
-#: kwalleteditor.cpp:97
+#: kwalleteditor.cpp:98
 #, kde-format
 msgid "Search"
 msgstr ""
 
-#: kwalleteditor.cpp:107
+#: kwalleteditor.cpp:108
 #, kde-format
 msgid "&Show values"
 msgstr "&Diskouez ar gwerzhioù"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:208
 #, kde-format
 msgid "&New Folder..."
 msgstr "Renkell &nevez ..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:212
 #, kde-format
 msgid "&Delete Folder"
 msgstr "&Distruj ar renkell"
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:215
 #, fuzzy, kde-format
 #| msgid "&New Wallet..."
 msgid "&Import a wallet..."
 msgstr "Doug-paperoù &nevez ..."
 
-#: kwalleteditor.cpp:218
+#: kwalleteditor.cpp:219
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Enporzh XML ..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:223
 #, fuzzy, kde-format
 #| msgid "&Import XML..."
 msgid "&Export as XML..."
 msgstr "&Enporzh XML ..."
 
-#: kwalleteditor.cpp:226
+#: kwalleteditor.cpp:227
 #, kde-format
 msgid "&Copy"
 msgstr ""
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:232
 #, kde-format
 msgid "&New..."
 msgstr "&Nevez ..."
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:237
 #, kde-format
 msgid "&Rename"
 msgstr "&Adenvel"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
+#: kwalleteditor.cpp:242 kwalletpopup.cpp:62
 #, kde-format
 msgid "&Delete"
 msgstr "&Distruj"
 
-#: kwalleteditor.cpp:246
+#: kwalleteditor.cpp:247
 #, fuzzy, kde-format
 #| msgid "Show &Contents"
 msgid "Always show contents"
 msgstr "Diskouez an &endalc'had"
 
-#: kwalleteditor.cpp:250
+#: kwalleteditor.cpp:251
 #, fuzzy, kde-format
 #| msgid "Hide &Contents"
 msgid "Always hide contents"
 msgstr "Kuzhat an &endalc'had"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Passwords"
 msgstr "Tremengerioù"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Maps"
 msgstr "Kartennoù"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Binary Data"
 msgstr "Roadoù binarel"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Unknown"
 msgstr "Dianav"
 
-#: kwalleteditor.cpp:402
+#: kwalleteditor.cpp:405
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr ""
 "Ha sur oc'h bezañ mennet da zilemel ar renkell '%1' eus an doug-paperoù ?"
 
-#: kwalleteditor.cpp:406
+#: kwalleteditor.cpp:411
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Fazi en ur dilemel ar renkell."
 
-#: kwalleteditor.cpp:425
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "New Folder"
 msgstr "Renkell nevez"
 
-#: kwalleteditor.cpp:426
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Dibabit un anv evit ar renkell nevez mar plij :"
 
-#: kwalleteditor.cpp:436
+#: kwalleteditor.cpp:438
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr ""
 
-#: kwalleteditor.cpp:438 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:799
 #, kde-format
 msgid "Try Again"
 msgstr "Klask adarre"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:800 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ne glaskit ket"
 
-#: kwalleteditor.cpp:478
+#: kwalleteditor.cpp:480
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Fazi en ur enrollañ ar vouetadur. Kod fazi : %1"
 
-#: kwalleteditor.cpp:500
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
 
-#: kwalleteditor.cpp:554 kwalleteditor.cpp:886
+#: kwalleteditor.cpp:555 kwalleteditor.cpp:882
 #, kde-format
 msgid "Password: %1"
 msgstr "Tremenger : %1"
 
-#: kwalleteditor.cpp:571 kwalleteditor.cpp:888
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:884
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr ""
 
-#: kwalleteditor.cpp:581 kwalleteditor.cpp:890
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:886
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Roadoù binarel : %1"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:788
 #, kde-format
 msgid "New Entry"
 msgstr "Bouetadur nevez"
 
-#: kwalleteditor.cpp:790
+#: kwalleteditor.cpp:788
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Dibabit un anv evit ar bouetadur nevez mar plij :"
 
-#: kwalleteditor.cpp:801
+#: kwalleteditor.cpp:797
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr ""
 
-#: kwalleteditor.cpp:821 kwalleteditor.cpp:830
+#: kwalleteditor.cpp:817 kwalleteditor.cpp:826
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr ""
 
-#: kwalleteditor.cpp:882
+#: kwalleteditor.cpp:878
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr ""
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:899
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Ha sur oc'h bezañ mennet da zilemel an dra '%1' ?"
 
-#: kwalleteditor.cpp:906
+#: kwalleteditor.cpp:903
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr ""
 
-#: kwalleteditor.cpp:934
+#: kwalleteditor.cpp:931
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "N'em eus ket digeriñ an doug-paperoù goulennet."
 
-#: kwalleteditor.cpp:970
+#: kwalleteditor.cpp:967
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "N'eo ket possubl da voned ar restr XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:977
+#: kwalleteditor.cpp:974
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "N'eo ket possubl da voned an Doug-paperoù '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1154
+#: kwalleteditor.cpp:1005 kwalleteditor.cpp:1037 kwalleteditor.cpp:1073
+#: kwalleteditor.cpp:1157
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
 
-#: kwalleteditor.cpp:1112
+#: kwalleteditor.cpp:1115
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "N'eo ket possubl da voned ar restr XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1118
+#: kwalleteditor.cpp:1121
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Fazi en ur lenn ar restr enkas XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1124
+#: kwalleteditor.cpp:1127
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr ""
 
-#: kwalleteditor.cpp:1275
+#: kwalleteditor.cpp:1280
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "N'eo ket possubl da voned an Doug-paperoù '<b>%1</b>'."
 
-#: kwalletmanager.cpp:64
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
-#: kwalletmanager.cpp:288
+#: kwalletmanager.cpp:90 kwalletmanager.cpp:97 kwalletmanager.cpp:224
+#: kwalletmanager.cpp:289
 #, fuzzy, kde-format
 #| msgid "KDE Wallet Manager"
 msgid "Wallet"
 msgstr "Merour KDE an dougoù-paperoù"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:288
+#: kwalletmanager.cpp:90 kwalletmanager.cpp:289
 #, fuzzy, kde-format
 #| msgid "KDE Wallet: No wallets open."
 msgid "No wallets open."
 msgstr "KDE Wallet : N'eus doug-paperoù digor ebet."
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:223
+#: kwalletmanager.cpp:97 kwalletmanager.cpp:224
 #, fuzzy, kde-format
 #| msgid "KDE Wallet: A wallet is open."
 msgid "A wallet is open."
 msgstr "KDE Wallet : digor eo un doug-paperoù."
 
-#: kwalletmanager.cpp:140 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:141 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "Doug-paperoù &nevez ..."
 
-#: kwalletmanager.cpp:145
+#: kwalletmanager.cpp:146
 #, fuzzy, kde-format
 #| msgid "New Wallet"
 msgid "&Delete Wallet..."
 msgstr "Doug-paperoù nevez"
 
-#: kwalletmanager.cpp:150
+#: kwalletmanager.cpp:151
 #, kde-format
 msgid "Export as encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:155
+#: kwalletmanager.cpp:156
 #, kde-format
 msgid "&Import encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:160
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Kefluniañ &Wallet ..."
 
-#: kwalletmanager.cpp:168
+#: kwalletmanager.cpp:169
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Serriñ an h&oll Dougoù-paperoù"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr ""
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:114
 #, fuzzy, kde-format
 #| msgid "Do Not Try"
 msgid "Do Not Force"
 msgstr "Ne glaskit ket"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
+#: kwalletmanager.cpp:265 walletcontrolwidget.cpp:118
 #, fuzzy, kde-format
 #| msgid "Unable to delete the wallet. Error code was %1."
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "N'hellan ket dilemel an doug-paperoù. %1 e oa kod ar fazi."
 
-#: kwalletmanager.cpp:280
+#: kwalletmanager.cpp:281
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Fazi en ur zigeriñ an doug-paperoù %1."
 
-#: kwalletmanager.cpp:322
+#: kwalletmanager.cpp:320
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Dibabit un anv evit an doug-paperoù nevez mar plij :"
 
-#: kwalletmanager.cpp:330
+#: kwalletmanager.cpp:329
 #, fuzzy, kde-format
 #| msgid "New Wallet"
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Doug-paperoù nevez"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr ""
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Create new wallet"
 msgstr ""
 
-#: kwalletmanager.cpp:355
+#: kwalletmanager.cpp:354
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr ""
 
-#: kwalletmanager.cpp:357
+#: kwalletmanager.cpp:356
 #, kde-format
 msgid "Try New"
 msgstr "Klask unan nevez"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Ha sur oc'h bezañ mennet da zilemel an doug-paperoù '%1' ?"
 
-#: kwalletmanager.cpp:389
+#: kwalletmanager.cpp:388
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "N'hellan ket dilemel an doug-paperoù. %1 e oa kod ar fazi."
 
-#: kwalletmanager.cpp:437
+#: kwalletmanager.cpp:435
 #, fuzzy, kde-format
 #| msgid "A wallet name"
 msgid "File name"
 msgstr "Anv un doug-paperoù"
 
-#: kwalletmanager.cpp:444
+#: kwalletmanager.cpp:442
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:455
+#: kwalletmanager.cpp:453
 #, kde-format
 msgid "Select file"
 msgstr ""
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:463
 #, kde-format
 msgid "Failed to open file"
 msgstr ""
 
-#: kwalletmanager.cpp:478
+#: kwalletmanager.cpp:475
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 
-#: kwalletmanager.cpp:485
+#: kwalletmanager.cpp:481
 #, kde-format
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -528,7 +528,7 @@ msgstr "&Kefluniadur"
 msgid "&Help"
 msgstr "&Skoazell"
 
-#: kwalletmanagerwidget.cpp:224
+#: kwalletmanagerwidget.cpp:222
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
@@ -549,23 +549,23 @@ msgstr "Kemmañ an &Tremenger ..."
 msgid "Disconnec&t"
 msgstr "Digev&reañ"
 
-#: kwmapeditor.cpp:129
+#: kwmapeditor.cpp:133
 #, kde-format
 msgid "Key"
 msgstr "Alc'hwez"
 
-#: kwmapeditor.cpp:129
+#: kwmapeditor.cpp:133
 #, kde-format
 msgid "Value"
 msgstr "Gwerzh"
 
-#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
 #| msgid "New Entry"
 msgid "Delete Entry"
 msgstr "Bouetadur nevez"
 
-#: kwmapeditor.cpp:216
+#: kwmapeditor.cpp:220
 #, kde-format
 msgid "&New Entry"
 msgstr "Bouetadur &nevez"
@@ -591,55 +591,55 @@ msgstr ""
 msgid "Valentin Rusu"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "(c) 2003,2004 George Staikos"
 msgid "George Staikos"
 msgstr "(c) 2003,2004 George Staikos"
 
-#: main.cpp:39
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Primary author and maintainer"
 msgid "Original author and former maintainer"
 msgstr "Oberour kentañ ha ratreer"
 
-#: main.cpp:41
+#: main.cpp:37
 #, kde-format
 msgid "Michael Leupold"
 msgstr ""
 
-#: main.cpp:42
+#: main.cpp:37
 #, fuzzy, kde-format
 #| msgid "Primary author and maintainer"
 msgid "Developer and former maintainer"
 msgstr "Oberour kentañ ha ratreer"
 
-#: main.cpp:44
+#: main.cpp:38
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:38
 #, kde-format
 msgid "Developer"
 msgstr "Diorrer"
 
-#: main.cpp:53
+#: main.cpp:45
 #, kde-format
 msgid "Show window on startup"
 msgstr "Diskouez ar prenestr pa loc'her"
 
-#: main.cpp:54
+#: main.cpp:46
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr ""
 
-#: main.cpp:55
+#: main.cpp:47
 #, kde-format
 msgid "A wallet name"
 msgstr "Anv un doug-paperoù"
@@ -649,7 +649,7 @@ msgstr "Anv un doug-paperoù"
 msgid "Revoke Authorization"
 msgstr ""
 
-#: walletcontrolwidget.cpp:57
+#: walletcontrolwidget.cpp:56
 #, kde-format
 msgid "&Close"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-14 01:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2007-04-04 17:15+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -29,37 +29,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: allyourbase.cpp:209
+#: allyourbase.cpp:216
 #, fuzzy, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Запіс з імем '%1' ужо існуе. Вы жадаеце працягнуць?"
 
-#: allyourbase.cpp:234
+#: allyourbase.cpp:241
 #, fuzzy, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Тэчка з імем '%1' ужо існуе. Што вы жадаеце зрабіць?"
 
-#: allyourbase.cpp:237
+#: allyourbase.cpp:244
 #, fuzzy, kde-format
 msgid "Replace"
 msgstr "Замяніць"
 
-#: allyourbase.cpp:347
+#: allyourbase.cpp:350
 #, fuzzy, kde-format
 msgid "Folders"
 msgstr "Тэчкі"
 
-#: allyourbase.cpp:381
+#: allyourbase.cpp:383
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Памылка перацягвання элемента"
 
-#: allyourbase.cpp:457
+#: allyourbase.cpp:458
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Памылка перацягвання запісу"
 
-#: allyourbase.cpp:481
+#: allyourbase.cpp:483
 #, fuzzy, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -78,7 +78,7 @@ msgstr ""
 msgid "These applications are authorized to access this wallet:"
 msgstr ""
 
-#: disconnectappbutton.cpp:16
+#: disconnectappbutton.cpp:17
 #, fuzzy, kde-format
 msgid "Disconnect"
 msgstr "Адключыцца"
@@ -107,205 +107,205 @@ msgstr "Прапусціць"
 msgid "Skip A&ll"
 msgstr "Прапусціць усё"
 
-#: kwalleteditor.cpp:97
+#: kwalleteditor.cpp:98
 #, kde-format
 msgid "Search"
 msgstr ""
 
-#: kwalleteditor.cpp:107
+#: kwalleteditor.cpp:108
 #, fuzzy, kde-format
 msgid "&Show values"
 msgstr "Паказаць значэнні"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:208
 #, fuzzy, kde-format
 msgid "&New Folder..."
 msgstr "Новая тэчка..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:212
 #, fuzzy, kde-format
 msgid "&Delete Folder"
 msgstr "Выдаліць тэчку"
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:215
 #, fuzzy, kde-format
 msgid "&Import a wallet..."
 msgstr "Зліццё папернікаў..."
 
-#: kwalleteditor.cpp:218
+#: kwalleteditor.cpp:219
 #, fuzzy, kde-format
 msgid "&Import XML..."
 msgstr "Імпарт у XML..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:223
 #, fuzzy, kde-format
 msgid "&Export as XML..."
 msgstr "Імпарт у XML..."
 
-#: kwalleteditor.cpp:226
+#: kwalleteditor.cpp:227
 #, kde-format
 msgid "&Copy"
 msgstr ""
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:232
 #, fuzzy, kde-format
 msgid "&New..."
 msgstr "Стварыць..."
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:237
 #, fuzzy, kde-format
 msgid "&Rename"
 msgstr "Пераназваць"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
+#: kwalleteditor.cpp:242 kwalletpopup.cpp:62
 #, fuzzy, kde-format
 msgid "&Delete"
 msgstr "Выдаліць тэчку"
 
-#: kwalleteditor.cpp:246
+#: kwalleteditor.cpp:247
 #, fuzzy, kde-format
 msgid "Always show contents"
 msgstr "Паказаць утрыманне"
 
-#: kwalleteditor.cpp:250
+#: kwalleteditor.cpp:251
 #, fuzzy, kde-format
 msgid "Always hide contents"
 msgstr "Схаваць утрыманне"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:360
 #, fuzzy, kde-format
 msgid "Passwords"
 msgstr "Паролі"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:361
 #, fuzzy, kde-format
 msgid "Maps"
 msgstr "Адпаведнасці"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:362
 #, fuzzy, kde-format
 msgid "Binary Data"
 msgstr "Двайковыя дадзеныя"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:363
 #, fuzzy, kde-format
 msgid "Unknown"
 msgstr "Невядома"
 
-#: kwalleteditor.cpp:402
+#: kwalleteditor.cpp:405
 #, fuzzy, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Выдаліць тэчку '%1' з паперніка?"
 
-#: kwalleteditor.cpp:406
+#: kwalleteditor.cpp:411
 #, fuzzy, kde-format
 msgid "Error deleting folder."
 msgstr "Памылка выдалення тэчкі."
 
-#: kwalleteditor.cpp:425
+#: kwalleteditor.cpp:430
 #, fuzzy, kde-format
 msgid "New Folder"
 msgstr "Новая тэчка"
 
-#: kwalleteditor.cpp:426
+#: kwalleteditor.cpp:430
 #, fuzzy, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Пакажыце імя для новай тэчкі:"
 
-#: kwalleteditor.cpp:436
+#: kwalleteditor.cpp:438
 #, fuzzy, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Гэтае імя тэчкі ўжо выкарыстоўваецца. Жадаеце паспрабаваць яшчэ раз?"
 
-#: kwalleteditor.cpp:438 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:799
 #, fuzzy, kde-format
 msgid "Try Again"
 msgstr "Паспрабаваць зноў"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:800 kwalletmanager.cpp:357
 #, fuzzy, kde-format
 msgid "Do Not Try"
 msgstr "Адмяніць"
 
-#: kwalleteditor.cpp:478
+#: kwalleteditor.cpp:480
 #, fuzzy, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Памылка захавання запісу. Код памылкі: %1"
 
-#: kwalleteditor.cpp:500
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
 
-#: kwalleteditor.cpp:554 kwalleteditor.cpp:886
+#: kwalleteditor.cpp:555 kwalleteditor.cpp:882
 #, fuzzy, kde-format
 msgid "Password: %1"
 msgstr "Пароль: %1"
 
-#: kwalleteditor.cpp:571 kwalleteditor.cpp:888
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:884
 #, fuzzy, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Карта імя-значэнне: %1"
 
-#: kwalleteditor.cpp:581 kwalleteditor.cpp:890
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:886
 #, fuzzy, kde-format
 msgid "Binary Data: %1"
 msgstr "Двайковыя дадзеныя: %1"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:788
 #, fuzzy, kde-format
 msgid "New Entry"
 msgstr "Новы запіс"
 
-#: kwalleteditor.cpp:790
+#: kwalleteditor.cpp:788
 #, fuzzy, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Пакажыце імя для новага запісу:"
 
-#: kwalleteditor.cpp:801
+#: kwalleteditor.cpp:797
 #, fuzzy, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Гэты запіс ужо існуе. Жадаеце паспрабаваць яшчэ раз?"
 
-#: kwalleteditor.cpp:821 kwalleteditor.cpp:830
+#: kwalleteditor.cpp:817 kwalleteditor.cpp:826
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Памылка дадання запісу"
 
-#: kwalleteditor.cpp:882
+#: kwalleteditor.cpp:878
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Памылка пераназвання запісу"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:899
 #, fuzzy, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Выдаліць запіс '%1'?"
 
-#: kwalleteditor.cpp:906
+#: kwalleteditor.cpp:903
 #, fuzzy, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Памылка выдалення запісу"
 
-#: kwalleteditor.cpp:934
+#: kwalleteditor.cpp:931
 #, fuzzy, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Немагчыма адкрыць запытаны папернік."
 
-#: kwalleteditor.cpp:970
+#: kwalleteditor.cpp:967
 #, fuzzy, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Немагчыма адкрыць файл XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:977
+#: kwalleteditor.cpp:974
 #, fuzzy, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Немагчыма адкрыць папернік '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1154
+#: kwalleteditor.cpp:1005 kwalleteditor.cpp:1037 kwalleteditor.cpp:1073
+#: kwalleteditor.cpp:1157
 #, fuzzy, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -313,80 +313,80 @@ msgid ""
 msgstr ""
 "Тэчка '<b>%1</b>' ужо ўтрымоўвае запіс '<b>%2</b>'. Вы жадаеце перапісаць яе?"
 
-#: kwalleteditor.cpp:1112
+#: kwalleteditor.cpp:1115
 #, fuzzy, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Немагчыма адкрыць файл XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1118
+#: kwalleteditor.cpp:1121
 #, fuzzy, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Немагчыма адкрыць файл XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1124
+#: kwalleteditor.cpp:1127
 #, fuzzy, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Памылка: паказаны файл XML не ўтрымоўвае папернік."
 
-#: kwalleteditor.cpp:1275
+#: kwalleteditor.cpp:1280
 #, fuzzy, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Немагчыма адкрыць папернік '<b>%1</b>'."
 
-#: kwalletmanager.cpp:64
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
-#: kwalletmanager.cpp:288
+#: kwalletmanager.cpp:90 kwalletmanager.cpp:97 kwalletmanager.cpp:224
+#: kwalletmanager.cpp:289
 #, fuzzy, kde-format
 msgid "Wallet"
 msgstr "Мэнэджэр папернікаў KDE"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:288
+#: kwalletmanager.cpp:90 kwalletmanager.cpp:289
 #, fuzzy, kde-format
 msgid "No wallets open."
 msgstr "Папернік KDE: няма адчыненых папернікаў."
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:223
+#: kwalletmanager.cpp:97 kwalletmanager.cpp:224
 #, fuzzy, kde-format
 msgid "A wallet is open."
 msgstr "Папернік KDE: папернік адчынены."
 
-#: kwalletmanager.cpp:140 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:141 kwalletpopup.cpp:27
 #, fuzzy, kde-format
 msgid "&New Wallet..."
 msgstr "Новы папернік..."
 
-#: kwalletmanager.cpp:145
+#: kwalletmanager.cpp:146
 #, fuzzy, kde-format
 msgid "&Delete Wallet..."
 msgstr "Новы папернік"
 
-#: kwalletmanager.cpp:150
+#: kwalletmanager.cpp:151
 #, kde-format
 msgid "Export as encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:155
+#: kwalletmanager.cpp:156
 #, kde-format
 msgid "&Import encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:160
+#: kwalletmanager.cpp:161
 #, fuzzy, kde-format
 msgid "Configure &Wallet..."
 msgstr "Наладзіць папернік..."
 
-#: kwalletmanager.cpp:168
+#: kwalletmanager.cpp:169
 #, fuzzy, kde-format
 msgid "Close &All Wallets"
 msgstr "Зачыніць усе папернікі"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:111
 #, fuzzy, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -395,103 +395,103 @@ msgstr ""
 "Не атрымліваецца зачыніць папернік без памылак. Гэта бывае, калі ён "
 "выкарыстоўваецца іншымі прыкладаннямі. Жадаеце зачыніць яго прымусова?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:113
 #, fuzzy, kde-format
 msgid "Force Closure"
 msgstr "Зачыніць"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:114
 #, fuzzy, kde-format
 msgid "Do Not Force"
 msgstr "Не зачыняць"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
+#: kwalletmanager.cpp:265 walletcontrolwidget.cpp:118
 #, fuzzy, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Немагчыма прымусова зачыніць папернік. Код памылкі: %1."
 
-#: kwalletmanager.cpp:280
+#: kwalletmanager.cpp:281
 #, fuzzy, kde-format
 msgid "Error opening wallet %1."
 msgstr "Памылка адкрыцця паперніка %1."
 
-#: kwalletmanager.cpp:322
+#: kwalletmanager.cpp:320
 #, fuzzy, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Пакажыце імя для новага паперніка:"
 
-#: kwalletmanager.cpp:330
+#: kwalletmanager.cpp:329
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Новы папернік"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr ""
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Create new wallet"
 msgstr ""
 
-#: kwalletmanager.cpp:355
+#: kwalletmanager.cpp:354
 #, fuzzy, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Папернік з гэтым імем ужо існуе. Жадаеце паказаць іншае імя?"
 
-#: kwalletmanager.cpp:357
+#: kwalletmanager.cpp:356
 #, fuzzy, kde-format
 msgid "Try New"
 msgstr "Стварыць новы"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, fuzzy, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Выдаліць папернік '%1'?"
 
-#: kwalletmanager.cpp:389
+#: kwalletmanager.cpp:388
 #, fuzzy, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Немагчыма выдаліць папернік. Код памылкі: %1."
 
-#: kwalletmanager.cpp:437
+#: kwalletmanager.cpp:435
 #, fuzzy, kde-format
 msgid "File name"
 msgstr "Імя паперніка"
 
-#: kwalletmanager.cpp:444
+#: kwalletmanager.cpp:442
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr ""
 
-#: kwalletmanager.cpp:455
+#: kwalletmanager.cpp:453
 #, kde-format
 msgid "Select file"
 msgstr ""
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:463
 #, kde-format
 msgid "Failed to open file"
 msgstr ""
 
-#: kwalletmanager.cpp:478
+#: kwalletmanager.cpp:475
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
 
-#: kwalletmanager.cpp:485
+#: kwalletmanager.cpp:481
 #, kde-format
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -514,7 +514,7 @@ msgstr ""
 msgid "&Help"
 msgstr ""
 
-#: kwalletmanagerwidget.cpp:224
+#: kwalletmanagerwidget.cpp:222
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
@@ -535,22 +535,22 @@ msgstr "Змяніць пароль..."
 msgid "Disconnec&t"
 msgstr "Адключыцца"
 
-#: kwmapeditor.cpp:129
+#: kwmapeditor.cpp:133
 #, fuzzy, kde-format
 msgid "Key"
 msgstr "Ключ"
 
-#: kwmapeditor.cpp:129
+#: kwmapeditor.cpp:133
 #, fuzzy, kde-format
 msgid "Value"
 msgstr "Значэнне"
 
-#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
 msgid "Delete Entry"
 msgstr "Новы запіс"
 
-#: kwmapeditor.cpp:216
+#: kwmapeditor.cpp:220
 #, fuzzy, kde-format
 msgid "&New Entry"
 msgstr "Новы запіс"
@@ -575,52 +575,52 @@ msgstr ""
 msgid "Valentin Rusu"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:36
 #, fuzzy, kde-format
 msgid "George Staikos"
 msgstr "(c) 2003,2004 Джордж Стэйкос (George Staikos)"
 
-#: main.cpp:39
+#: main.cpp:36
 #, fuzzy, kde-format
 msgid "Original author and former maintainer"
 msgstr "Асноўны аўтар і каардынатар"
 
-#: main.cpp:41
+#: main.cpp:37
 #, kde-format
 msgid "Michael Leupold"
 msgstr ""
 
-#: main.cpp:42
+#: main.cpp:37
 #, fuzzy, kde-format
 msgid "Developer and former maintainer"
 msgstr "Асноўны аўтар і каардынатар"
 
-#: main.cpp:44
+#: main.cpp:38
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:38
 #, fuzzy, kde-format
 msgid "Developer"
 msgstr "Распрацоўнік"
 
-#: main.cpp:53
+#: main.cpp:45
 #, fuzzy, kde-format
 msgid "Show window on startup"
 msgstr "Паказваць акно пры запуску"
 
-#: main.cpp:54
+#: main.cpp:46
 #, fuzzy, kde-format
 msgid "For use by kwalletd only"
 msgstr "Толькі для выкарыстання дэманам паперніка kwalletd"
 
-#: main.cpp:55
+#: main.cpp:47
 #, fuzzy, kde-format
 msgid "A wallet name"
 msgstr "Імя паперніка"
@@ -630,7 +630,7 @@ msgstr "Імя паперніка"
 msgid "Revoke Authorization"
 msgstr ""
 
-#: walletcontrolwidget.cpp:57
+#: walletcontrolwidget.cpp:56
 #, kde-format
 msgid "&Close"
 msgstr ""

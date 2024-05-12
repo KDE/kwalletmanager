@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-14 01:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2023-12-14 15:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -39,37 +39,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tulliana@gmail.com, volkangezer@gmail.com"
 
-#: allyourbase.cpp:209
+#: allyourbase.cpp:216
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "'%1' adlı bir girdi halihazırda var. Sürdürmek ister misiniz?"
 
-#: allyourbase.cpp:234
+#: allyourbase.cpp:241
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "'%1' adlı bir klasör halihazırda var. Ne yapmak istiyorsunuz?"
 
-#: allyourbase.cpp:237
+#: allyourbase.cpp:244
 #, kde-format
 msgid "Replace"
 msgstr "Değiştir"
 
-#: allyourbase.cpp:347
+#: allyourbase.cpp:350
 #, kde-format
 msgid "Folders"
 msgstr "Klasörler"
 
-#: allyourbase.cpp:381
+#: allyourbase.cpp:383
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Ögeyi taşımaya çalışırken beklenmedik bir hata oluştu"
 
-#: allyourbase.cpp:457
+#: allyourbase.cpp:458
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Girdiyi taşımaya çalışırken beklenmedik bir hata oluştu"
 
-#: allyourbase.cpp:481
+#: allyourbase.cpp:483
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -90,7 +90,7 @@ msgstr "Bu uygulamalar şu anda bu cüzdana bağlı:"
 msgid "These applications are authorized to access this wallet:"
 msgstr "Bu uygulamaların bu cüzdana erişim yetkisi vardır:"
 
-#: disconnectappbutton.cpp:16
+#: disconnectappbutton.cpp:17
 #, kde-format
 msgid "Disconnect"
 msgstr "Bağlantıyı Kes"
@@ -119,132 +119,132 @@ msgstr "&Atla"
 msgid "Skip A&ll"
 msgstr "Tümünü &Atla"
 
-#: kwalleteditor.cpp:97
+#: kwalleteditor.cpp:98
 #, kde-format
 msgid "Search"
 msgstr "Ara"
 
-#: kwalleteditor.cpp:107
+#: kwalleteditor.cpp:108
 #, kde-format
 msgid "&Show values"
 msgstr "&Değerleri göster"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:208
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Yeni Klasör..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:212
 #, kde-format
 msgid "&Delete Folder"
 msgstr "&Klasörü Sil"
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:215
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "&Cüzdan İçe Aktar..."
 
-#: kwalleteditor.cpp:218
+#: kwalleteditor.cpp:219
 #, kde-format
 msgid "&Import XML..."
 msgstr "XML Olarak İçe Aktar..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:223
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&XML Olarak Dışa Aktar..."
 
-#: kwalleteditor.cpp:226
+#: kwalleteditor.cpp:227
 #, kde-format
 msgid "&Copy"
 msgstr "Ko&pyala"
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:232
 #, kde-format
 msgid "&New..."
 msgstr "&Yeni..."
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:237
 #, kde-format
 msgid "&Rename"
 msgstr "Yeniden Adlandı&r"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:63
+#: kwalleteditor.cpp:242 kwalletpopup.cpp:62
 #, kde-format
 msgid "&Delete"
 msgstr "&Sil"
 
-#: kwalleteditor.cpp:246
+#: kwalleteditor.cpp:247
 #, kde-format
 msgid "Always show contents"
 msgstr "Her zaman içeriği göster"
 
-#: kwalleteditor.cpp:250
+#: kwalleteditor.cpp:251
 #, kde-format
 msgid "Always hide contents"
 msgstr "Her zaman içeriği gizle"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Passwords"
 msgstr "Parolalar"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Maps"
 msgstr "Haritalar"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Binary Data"
 msgstr "İkili Veri"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: kwalleteditor.cpp:402
+#: kwalleteditor.cpp:405
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "'%1' adlı klasörü cüzdandan silmek istediğinizden emin misiniz?"
 
-#: kwalleteditor.cpp:406
+#: kwalleteditor.cpp:411
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Klasör silinirken hata."
 
-#: kwalleteditor.cpp:425
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "New Folder"
 msgstr "Yeni Klasör"
 
-#: kwalleteditor.cpp:426
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Yeni klasör için bir ad girin:"
 
-#: kwalleteditor.cpp:436
+#: kwalleteditor.cpp:438
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Üzgünüm, bu klasör adı kullanılıyor. Yeniden deneyin."
 
-#: kwalleteditor.cpp:438 kwalleteditor.cpp:803
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:799
 #, kde-format
 msgid "Try Again"
 msgstr "Yeniden Dene"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:804 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:800 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "Denemeyin"
 
-#: kwalleteditor.cpp:478
+#: kwalleteditor.cpp:480
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Girdi kaydetme hatası. Hata kodu: %1"
 
-#: kwalleteditor.cpp:500
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -253,73 +253,73 @@ msgstr ""
 "Geçerli ögenin içeriği değiştirildi.\n"
 "Değişiklikleri kaydetmek istiyor musunuz?"
 
-#: kwalleteditor.cpp:554 kwalleteditor.cpp:886
+#: kwalleteditor.cpp:555 kwalleteditor.cpp:882
 #, kde-format
 msgid "Password: %1"
 msgstr "Parola: %1"
 
-#: kwalleteditor.cpp:571 kwalleteditor.cpp:888
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:884
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Ad-Değer haritası: %1"
 
-#: kwalleteditor.cpp:581 kwalleteditor.cpp:890
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:886
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "İkili veri: %1"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:788
 #, kde-format
 msgid "New Entry"
 msgstr "Yeni Girdi"
 
-#: kwalleteditor.cpp:790
+#: kwalleteditor.cpp:788
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Yeni girdi için ad seçin:"
 
-#: kwalleteditor.cpp:801
+#: kwalleteditor.cpp:797
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Üzgünüm, bu girdi halihazırda var. Yeniden denensin mi?"
 
-#: kwalleteditor.cpp:821 kwalleteditor.cpp:830
+#: kwalleteditor.cpp:817 kwalleteditor.cpp:826
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Yeni bir giriş eklemeye çalışırken beklenmedik bir hata oluştu"
 
-#: kwalleteditor.cpp:882
+#: kwalleteditor.cpp:878
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Girdi'yi yeniden adlandırırken beklenmedik bir hata oluştu"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:899
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Seçili '%1' ögesini silmek istediğinizden emin misiniz?"
 
-#: kwalleteditor.cpp:906
+#: kwalleteditor.cpp:903
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Girdi'yi silmeye çalışırken beklenmedik bir hata oluştu"
 
-#: kwalleteditor.cpp:934
+#: kwalleteditor.cpp:931
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "İstenilen cüzdan açılamıyor."
 
-#: kwalleteditor.cpp:970
+#: kwalleteditor.cpp:967
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "'<b>%1</b>' indirmesi için geçici dosya oluşturma başarısız."
 
-#: kwalleteditor.cpp:977
+#: kwalleteditor.cpp:974
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "'<b>%1</b>' cüzdanına erişilemiyor."
 
-#: kwalleteditor.cpp:1008 kwalleteditor.cpp:1038 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1154
+#: kwalleteditor.cpp:1005 kwalleteditor.cpp:1037 kwalleteditor.cpp:1073
+#: kwalleteditor.cpp:1157
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -328,27 +328,27 @@ msgstr ""
 "'<b>%1</b>' klasörü zaten bir '<b>%2</b>' girdisi içeriyor. Değiştirmek "
 "ister misiniz?"
 
-#: kwalleteditor.cpp:1112
+#: kwalleteditor.cpp:1115
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "'<b>%1</b>' XML dosyasına erişilemiyor."
 
-#: kwalleteditor.cpp:1118
+#: kwalleteditor.cpp:1121
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "'<b>%1</b>' XML dosyası girdi için okunamıyor."
 
-#: kwalleteditor.cpp:1124
+#: kwalleteditor.cpp:1127
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Hata: XML dosyası bir cüzdan içermiyor."
 
-#: kwalleteditor.cpp:1275
+#: kwalleteditor.cpp:1280
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "'<b>%1</b>' içerisinde depolama başarısız."
 
-#: kwalletmanager.cpp:64
+#: kwalletmanager.cpp:65
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -357,53 +357,53 @@ msgstr ""
 "KDE Cüzdan sistemi etkin değil. Etkinleştirmemi ister misiniz? Aksi halde K "
 "Cüzdan Yöneticisi, cüzdanları okumadan çalışamayacağından kapanacaktır."
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:223
-#: kwalletmanager.cpp:288
+#: kwalletmanager.cpp:90 kwalletmanager.cpp:97 kwalletmanager.cpp:224
+#: kwalletmanager.cpp:289
 #, kde-format
 msgid "Wallet"
 msgstr "Cüzdan"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:288
+#: kwalletmanager.cpp:90 kwalletmanager.cpp:289
 #, kde-format
 msgid "No wallets open."
 msgstr "Açık cüzdan yok."
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:223
+#: kwalletmanager.cpp:97 kwalletmanager.cpp:224
 #, kde-format
 msgid "A wallet is open."
 msgstr "Bir cüzdan açık."
 
-#: kwalletmanager.cpp:140 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:141 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Yeni Cüzdan..."
 
-#: kwalletmanager.cpp:145
+#: kwalletmanager.cpp:146
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Cüzdanı Sil..."
 
-#: kwalletmanager.cpp:150
+#: kwalletmanager.cpp:151
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Şifreli Olarak Dışa Aktar"
 
-#: kwalletmanager.cpp:155
+#: kwalletmanager.cpp:156
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Şifreli Olarak İçe Aktar"
 
-#: kwalletmanager.cpp:160
+#: kwalletmanager.cpp:161
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "&Cüzdan'ı Yapılandır..."
 
-#: kwalletmanager.cpp:168
+#: kwalletmanager.cpp:169
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Tüm Cüzdanları Kapat"
 
-#: kwalletmanager.cpp:257 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:111
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -412,104 +412,104 @@ msgstr ""
 "Cüzdan temiz olarak kapatılamıyor. Büyük bir ihtimalle diğer programlar "
 "tarafından kullanılıyor. Kapanmaya zorlansın mı?"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Force Closure"
 msgstr "Kapanmaya Zorla"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:114
 #, kde-format
 msgid "Do Not Force"
 msgstr "Zorlamayın"
 
-#: kwalletmanager.cpp:264 walletcontrolwidget.cpp:118
+#: kwalletmanager.cpp:265 walletcontrolwidget.cpp:118
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Cüzdan kapatılmaya zorlanamıyor. Hata kodu %1."
 
-#: kwalletmanager.cpp:280
+#: kwalletmanager.cpp:281
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Cüzdan açma hatası %1."
 
-#: kwalletmanager.cpp:322
+#: kwalletmanager.cpp:320
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Yeni cüzdan için bir ad girin:"
 
-#: kwalletmanager.cpp:330
+#: kwalletmanager.cpp:329
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Yeni Cüzdan"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Cüzdanınıza bir ad vermelisiniz."
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Create new wallet"
 msgstr "Yeni cüzdan oluştur"
 
-#: kwalletmanager.cpp:355
+#: kwalletmanager.cpp:354
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr ""
 "Üzgünüm, bu cüzdan halihazırda var. Başka bir ad denemek ister misiniz?"
 
-#: kwalletmanager.cpp:357
+#: kwalletmanager.cpp:356
 #, kde-format
 msgid "Try New"
 msgstr "Yeni Bir Tane Dene"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "'%1' adlı cüzdanı silmek istediğinizden emin misiniz?"
 
-#: kwalletmanager.cpp:389
+#: kwalletmanager.cpp:388
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Cüzdan silinemiyor. Hata kodu %1."
 
-#: kwalletmanager.cpp:437
+#: kwalletmanager.cpp:435
 #, kde-format
 msgid "File name"
 msgstr "Dosya adı"
 
-#: kwalletmanager.cpp:444
+#: kwalletmanager.cpp:442
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Dosya yazma için açılamadı"
 
-#: kwalletmanager.cpp:455
+#: kwalletmanager.cpp:453
 #, kde-format
 msgid "Select file"
 msgstr "Dosya seç"
 
-#: kwalletmanager.cpp:465
+#: kwalletmanager.cpp:463
 #, kde-format
 msgid "Failed to open file"
 msgstr "Dosya açılamadı"
 
-#: kwalletmanager.cpp:478
+#: kwalletmanager.cpp:475
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "%1 adlı bir cüzdan halihazırda var, işlem iptal edildi"
 
-#: kwalletmanager.cpp:485
+#: kwalletmanager.cpp:481
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Dosya kopyalama başarısız oldu"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Kaydedilmemiş değişiklikleri yok sayıyor musunuz?"
 
-#: kwalletmanager.cpp:498 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
 #, kde-format
 msgid "Ignore"
 msgstr "Yok Say"
@@ -532,7 +532,7 @@ msgstr "Ayar&lar"
 msgid "&Help"
 msgstr "&Yardım"
 
-#: kwalletmanagerwidget.cpp:224
+#: kwalletmanagerwidget.cpp:222
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
@@ -553,22 +553,22 @@ msgstr "&Parolayı Değiştir..."
 msgid "Disconnec&t"
 msgstr "Bağlantıyı Kes"
 
-#: kwmapeditor.cpp:129
+#: kwmapeditor.cpp:133
 #, kde-format
 msgid "Key"
 msgstr "Anahtar"
 
-#: kwmapeditor.cpp:129
+#: kwmapeditor.cpp:133
 #, kde-format
 msgid "Value"
 msgstr "Değer"
 
-#: kwmapeditor.cpp:147 kwmapeditor.cpp:196
+#: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, kde-format
 msgid "Delete Entry"
 msgstr "Girdiyi Sil"
 
-#: kwmapeditor.cpp:216
+#: kwmapeditor.cpp:220
 #, kde-format
 msgid "&New Entry"
 msgstr "Yeni Girdi"
@@ -593,52 +593,52 @@ msgstr "Telif Hakkı ©2013–2017, K Cüzdan Yöneticisi yazarları"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr "Önceki bakımcı - kullanıcı arayüzünün yeniden düzenlenmesi"
 
-#: main.cpp:38
+#: main.cpp:36
 #, kde-format
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:39
+#: main.cpp:36
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Özgün yazar ve önceki bakımcı"
 
-#: main.cpp:41
+#: main.cpp:37
 #, kde-format
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:42
+#: main.cpp:37
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Geliştirici ve önceki bakımcı"
 
-#: main.cpp:44
+#: main.cpp:38
 #, kde-format
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:45
+#: main.cpp:38
 #, kde-format
 msgid "Developer"
 msgstr "Geliştirici"
 
-#: main.cpp:53
+#: main.cpp:45
 #, kde-format
 msgid "Show window on startup"
 msgstr "Başlangıçta pencereyi göster"
 
-#: main.cpp:54
+#: main.cpp:46
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Yalnızca kwalletd kullanımı için"
 
-#: main.cpp:55
+#: main.cpp:47
 #, kde-format
 msgid "A wallet name"
 msgstr "Bir cüzdan adı"
@@ -648,7 +648,7 @@ msgstr "Bir cüzdan adı"
 msgid "Revoke Authorization"
 msgstr "Yetkilendirmeyi İptal Et"
 
-#: walletcontrolwidget.cpp:57
+#: walletcontrolwidget.cpp:56
 #, kde-format
 msgid "&Close"
 msgstr "&Kapat"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2022-11-11 12:15+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,37 +27,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: konfigurator.cpp:102
+#: konfigurator.cpp:101
 #, kde-format
 msgid "New Wallet"
 msgstr "Yeni cüzdan"
 
-#: konfigurator.cpp:103
+#: konfigurator.cpp:101
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Yeni cüzdan üçün ad seçin:"
 
-#: konfigurator.cpp:219 konfigurator.cpp:297
+#: konfigurator.cpp:215 konfigurator.cpp:293
 #, kde-format
 msgid "Always Allow"
 msgstr "Həmişə icazə vermək"
 
-#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
+#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
 #, kde-format
 msgid "Always Deny"
 msgstr "Həmişə qadağan etmək"
 
-#: konfigurator.cpp:257
+#: konfigurator.cpp:253
 #, kde-format
 msgid "Permission denied."
 msgstr "İcazə verilmədi."
 
-#: konfigurator.cpp:257 konfigurator.cpp:259
+#: konfigurator.cpp:253 konfigurator.cpp:255
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE Cüzdana Nəzarət Modulu"
 
-#: konfigurator.cpp:259
+#: konfigurator.cpp:255
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -66,7 +66,7 @@ msgstr ""
 "Kimlik doğrulaması zamanı xəta:\n"
 "%1"
 
-#: konfigurator.cpp:357
+#: konfigurator.cpp:353
 #, kde-format
 msgid "&Delete"
 msgstr "&silin"

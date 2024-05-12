@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2014-02-20 12:31+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -28,44 +28,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
-#: konfigurator.cpp:102
+#: konfigurator.cpp:101
 #, kde-format
 msgid "New Wallet"
 msgstr "Nieg Knipp"
 
-#: konfigurator.cpp:103
+#: konfigurator.cpp:101
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Bitte giff en Naam för de niege Knipp an:"
 
-#: konfigurator.cpp:219 konfigurator.cpp:297
+#: konfigurator.cpp:215 konfigurator.cpp:293
 #, kde-format
 msgid "Always Allow"
 msgstr "Jümmers verlöven"
 
-#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
+#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
 #, kde-format
 msgid "Always Deny"
 msgstr "Jümmers torüchwiesen"
 
-#: konfigurator.cpp:257
+#: konfigurator.cpp:253
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:257 konfigurator.cpp:259
+#: konfigurator.cpp:253 konfigurator.cpp:255
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Kuntrullmoduul för de KDE-Knippen"
 
-#: konfigurator.cpp:259
+#: konfigurator.cpp:255
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:357
+#: konfigurator.cpp:353
 #, kde-format
 msgid "&Delete"
 msgstr "&Wegdoon"

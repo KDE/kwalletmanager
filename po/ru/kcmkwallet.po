@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2023-04-15 13:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -41,37 +41,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "batalov@twiga.kz, omiro@basealt.ru"
 
-#: konfigurator.cpp:102
+#: konfigurator.cpp:101
 #, kde-format
 msgid "New Wallet"
 msgstr "Новый бумажник"
 
-#: konfigurator.cpp:103
+#: konfigurator.cpp:101
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Укажите имя нового бумажника:"
 
-#: konfigurator.cpp:219 konfigurator.cpp:297
+#: konfigurator.cpp:215 konfigurator.cpp:293
 #, kde-format
 msgid "Always Allow"
 msgstr "Разрешать всегда"
 
-#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
+#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
 #, kde-format
 msgid "Always Deny"
 msgstr "Запрещать всегда"
 
-#: konfigurator.cpp:257
+#: konfigurator.cpp:253
 #, kde-format
 msgid "Permission denied."
 msgstr "Доступ запрещён."
 
-#: konfigurator.cpp:257 konfigurator.cpp:259
+#: konfigurator.cpp:253 konfigurator.cpp:255
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Модуль управления бумажниками KDE"
 
-#: konfigurator.cpp:259
+#: konfigurator.cpp:255
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -80,7 +80,7 @@ msgstr ""
 "Ошибка аутентификации:\n"
 "%1"
 
-#: konfigurator.cpp:357
+#: konfigurator.cpp:353
 #, kde-format
 msgid "&Delete"
 msgstr "&Удалить"

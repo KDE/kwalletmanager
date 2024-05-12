@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2024-05-12 00:41+0000\n"
 "PO-Revision-Date: 2023-07-31 10:24+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -30,37 +30,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: konfigurator.cpp:102
+#: konfigurator.cpp:101
 #, kde-format
 msgid "New Wallet"
 msgstr "Ny plånbok"
 
-#: konfigurator.cpp:103
+#: konfigurator.cpp:101
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Välj ett namn för den nya plånboken:"
 
-#: konfigurator.cpp:219 konfigurator.cpp:297
+#: konfigurator.cpp:215 konfigurator.cpp:293
 #, kde-format
 msgid "Always Allow"
 msgstr "Tillåt alltid"
 
-#: konfigurator.cpp:222 konfigurator.cpp:229 konfigurator.cpp:310
+#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
 #, kde-format
 msgid "Always Deny"
 msgstr "Neka alltid"
 
-#: konfigurator.cpp:257
+#: konfigurator.cpp:253
 #, kde-format
 msgid "Permission denied."
 msgstr "Rättigheter saknas."
 
-#: konfigurator.cpp:257 konfigurator.cpp:259
+#: konfigurator.cpp:253 konfigurator.cpp:255
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE:s inställningsmodul för plånbok"
 
-#: konfigurator.cpp:259
+#: konfigurator.cpp:255
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -69,7 +69,7 @@ msgstr ""
 "Fel när åtgärd skulle behörighetskontrolleras:\n"
 "%1"
 
-#: konfigurator.cpp:357
+#: konfigurator.cpp:353
 #, kde-format
 msgid "&Delete"
 msgstr "&Ta bort"
