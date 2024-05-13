@@ -15,7 +15,6 @@
 #include <QMenu>
 
 #include <QTimer>
-#include <kwidgetsaddons_version.h>
 
 WalletControlWidget::WalletControlWidget(QWidget *parent, const QString &walletName)
     : QWidget(parent)

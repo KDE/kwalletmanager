@@ -49,7 +49,6 @@
 
 #include <cassert>
 #include <cstdlib>
-#include <kwidgetsaddons_version.h>
 
 QAction *KWalletEditor::_newFolderAction = nullptr;
 QAction *KWalletEditor::_deleteFolderAction = nullptr;

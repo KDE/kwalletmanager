@@ -15,7 +15,6 @@
 #include <KPluginFactory>
 #include <KWallet>
 #include <QInputDialog>
-#include <kauth_version.h>
 
 #include <KAboutData>
 

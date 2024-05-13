@@ -19,7 +19,6 @@
 #include <QDrag>
 #include <QIcon>
 #include <QMimeData>
-#include <kwidgetsaddons_version.h>
 
 /****************
  *  KWalletFolderItem - ListView items to represent kwallet folders

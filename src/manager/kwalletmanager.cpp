@@ -25,7 +25,6 @@
 #include <KWallet>
 #include <KWindowSystem>
 #include <KXMLGUIFactory>
-#include <kwindowsystem_version.h>
 
 #include <QAction>
 #include <QCommandLineParser>
@@ -38,7 +37,6 @@
 #include <QMimeDatabase>
 #include <QMimeType>
 #include <QTimer>
-#include <kwidgetsaddons_version.h>
 
 KWalletManager::KWalletManager(QCommandLineParser *commandLineParser)
     : KXmlGuiWindow()
