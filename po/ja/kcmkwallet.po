@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2014-09-21 00:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -28,44 +28,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "okushi@kde.gr.jp"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "New Wallet"
 msgstr "新しいウォレット"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "新しいウォレットに名前を付けてください:"
 
-#: konfigurator.cpp:215 konfigurator.cpp:293
+#: konfigurator.cpp:214 konfigurator.cpp:292
 #, kde-format
 msgid "Always Allow"
 msgstr "常に許可"
 
-#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
+#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
 #, kde-format
 msgid "Always Deny"
 msgstr "常に拒否"
 
-#: konfigurator.cpp:253
+#: konfigurator.cpp:252
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:253 konfigurator.cpp:255
+#: konfigurator.cpp:252 konfigurator.cpp:254
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE ウォレット コントロール モジュール"
 
-#: konfigurator.cpp:255
+#: konfigurator.cpp:254
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:353
+#: konfigurator.cpp:352
 #, kde-format
 msgid "&Delete"
 msgstr "削除(&D)"

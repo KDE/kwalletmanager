@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2023-02-18 00:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,37 +30,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "New Wallet"
 msgstr "新的錢包"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "請選擇新錢包的名稱："
 
-#: konfigurator.cpp:215 konfigurator.cpp:293
+#: konfigurator.cpp:214 konfigurator.cpp:292
 #, kde-format
 msgid "Always Allow"
 msgstr "總是允許"
 
-#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
+#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
 #, kde-format
 msgid "Always Deny"
 msgstr "總是拒絕"
 
-#: konfigurator.cpp:253
+#: konfigurator.cpp:252
 #, kde-format
 msgid "Permission denied."
 msgstr "權限不足。"
 
-#: konfigurator.cpp:253 konfigurator.cpp:255
+#: konfigurator.cpp:252 konfigurator.cpp:254
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE Wallet 控制模組"
 
-#: konfigurator.cpp:255
+#: konfigurator.cpp:254
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -69,7 +69,7 @@ msgstr ""
 "當授權動作時發生錯誤：\n"
 "%1"
 
-#: konfigurator.cpp:353
+#: konfigurator.cpp:352
 #, kde-format
 msgid "&Delete"
 msgstr "刪除(&D)"

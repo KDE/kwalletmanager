@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2022-03-19 08:06+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -29,37 +29,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dirgitadevina@yahoo.co.id,wantoyek@gmail.com,linerly@protonmail.com"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "New Wallet"
 msgstr "Dompet Baru"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Silakan memilih sebuah nama untuk dompet baru:"
 
-#: konfigurator.cpp:215 konfigurator.cpp:293
+#: konfigurator.cpp:214 konfigurator.cpp:292
 #, kde-format
 msgid "Always Allow"
 msgstr "Selalu Diperbolehkan"
 
-#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
+#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
 #, kde-format
 msgid "Always Deny"
 msgstr "Selalu Tolak"
 
-#: konfigurator.cpp:253
+#: konfigurator.cpp:252
 #, kde-format
 msgid "Permission denied."
 msgstr "Perizinan ditolak."
 
-#: konfigurator.cpp:253 konfigurator.cpp:255
+#: konfigurator.cpp:252 konfigurator.cpp:254
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Modul Kendali Dompet KDE"
 
-#: konfigurator.cpp:255
+#: konfigurator.cpp:254
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -68,7 +68,7 @@ msgstr ""
 "Error selagi aksi pengautentikasian:\n"
 "%1"
 
-#: konfigurator.cpp:353
+#: konfigurator.cpp:352
 #, kde-format
 msgid "&Delete"
 msgstr "&Hapus"

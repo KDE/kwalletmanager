@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2013-09-30 03:12+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -28,44 +28,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sairan@computer.org"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "New Wallet"
 msgstr "Жаңа әмиян"
 
-#: konfigurator.cpp:101
+#: konfigurator.cpp:100
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Жаңа әмияннің атауын таңдаңыз:"
 
-#: konfigurator.cpp:215 konfigurator.cpp:293
+#: konfigurator.cpp:214 konfigurator.cpp:292
 #, kde-format
 msgid "Always Allow"
 msgstr "Әрқашанда рұқсат ету"
 
-#: konfigurator.cpp:218 konfigurator.cpp:225 konfigurator.cpp:306
+#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
 #, kde-format
 msgid "Always Deny"
 msgstr "Әрқашанда рұқсат етпеу"
 
-#: konfigurator.cpp:253
+#: konfigurator.cpp:252
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:253 konfigurator.cpp:255
+#: konfigurator.cpp:252 konfigurator.cpp:254
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE әмиянын басқару модулі"
 
-#: konfigurator.cpp:255
+#: konfigurator.cpp:254
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:353
+#: konfigurator.cpp:352
 #, kde-format
 msgid "&Delete"
 msgstr "Ө&шіру"

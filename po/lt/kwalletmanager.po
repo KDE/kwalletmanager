@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2024-01-13 18:05+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -28,37 +28,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dgvirtual@akl.lt,liudas@akmc.lt, <>"
 
-#: allyourbase.cpp:216
+#: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
 msgstr "Įrašas, pavadinimu „%1 jau yra. Ar norite tęsti?"
 
-#: allyourbase.cpp:241
+#: allyourbase.cpp:240
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
 msgstr "Aplankas, pavadinimu \"%1\" jau yra.  Ką norėtumėte daryti?"
 
-#: allyourbase.cpp:244
+#: allyourbase.cpp:243
 #, kde-format
 msgid "Replace"
 msgstr "Pakeisti"
 
-#: allyourbase.cpp:350
+#: allyourbase.cpp:349
 #, kde-format
 msgid "Folders"
 msgstr "Aplankai"
 
-#: allyourbase.cpp:383
+#: allyourbase.cpp:382
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
 msgstr "Bandant tempti elementą, įvyko netikėta klaida"
 
-#: allyourbase.cpp:458
+#: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr "Bandant tempti įrašą, įvyko netikėta klaida"
 
-#: allyourbase.cpp:483
+#: allyourbase.cpp:482
 #, kde-format
 msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
@@ -109,132 +109,132 @@ msgstr "Pra&leisti"
 msgid "Skip A&ll"
 msgstr "Pra&leisti visus"
 
-#: kwalleteditor.cpp:98
+#: kwalleteditor.cpp:97
 #, kde-format
 msgid "Search"
 msgstr "Ieškoti"
 
-#: kwalleteditor.cpp:108
+#: kwalleteditor.cpp:107
 #, kde-format
 msgid "&Show values"
 msgstr "&Rodyti reiškmes"
 
-#: kwalleteditor.cpp:208
+#: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Naujas aplankas..."
 
-#: kwalleteditor.cpp:212
+#: kwalleteditor.cpp:211
 #, kde-format
 msgid "&Delete Folder"
 msgstr "&Ištrinti aplanką"
 
-#: kwalleteditor.cpp:215
+#: kwalleteditor.cpp:214
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "&Importuoti slaptažodinę..."
 
-#: kwalleteditor.cpp:219
+#: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Importuoti XML..."
 
-#: kwalleteditor.cpp:223
+#: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&Eksportuoti kaip XML..."
 
-#: kwalleteditor.cpp:227
+#: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopijuoti"
 
-#: kwalleteditor.cpp:232
+#: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
 msgstr "&Nauja..."
 
-#: kwalleteditor.cpp:237
+#: kwalleteditor.cpp:236
 #, kde-format
 msgid "&Rename"
 msgstr "Pe&rvadinti"
 
-#: kwalleteditor.cpp:242 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:62
 #, kde-format
 msgid "&Delete"
 msgstr "&Ištrinti"
 
-#: kwalleteditor.cpp:247
+#: kwalleteditor.cpp:246
 #, kde-format
 msgid "Always show contents"
 msgstr "Visada rodyti turinį"
 
-#: kwalleteditor.cpp:251
+#: kwalleteditor.cpp:250
 #, kde-format
 msgid "Always hide contents"
 msgstr "Visada slėpti turinį"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:359
 #, kde-format
 msgid "Passwords"
 msgstr "Slaptažodžiai"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Maps"
 msgstr "Žemėlapiai"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Binary Data"
 msgstr "Dvejetainiai duomenys"
 
-#: kwalleteditor.cpp:363
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: kwalleteditor.cpp:405
+#: kwalleteditor.cpp:404
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Ar tikrai norite ištrinti aplanką „%1“ iš slaptažodinės?"
 
-#: kwalleteditor.cpp:411
+#: kwalleteditor.cpp:410
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Klaida ištrinant aplanką."
 
-#: kwalleteditor.cpp:430
+#: kwalleteditor.cpp:429
 #, kde-format
 msgid "New Folder"
 msgstr "Naujas aplankas"
 
-#: kwalleteditor.cpp:430
+#: kwalleteditor.cpp:429
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Pasirinkite naujo aplanko pavadinimą:"
 
-#: kwalleteditor.cpp:438
+#: kwalleteditor.cpp:437
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Deja, aplankas tokiu pavadinimu jau yra. Bandyti dar kartą?"
 
-#: kwalleteditor.cpp:440 kwalleteditor.cpp:799
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:798
 #, kde-format
 msgid "Try Again"
 msgstr "Bandyti dar kartą"
 
-#: kwalleteditor.cpp:441 kwalleteditor.cpp:800 kwalletmanager.cpp:357
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:799 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "Nebandyti"
 
-#: kwalleteditor.cpp:480
+#: kwalleteditor.cpp:479
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Klaida įrašant įrašą. Klaidos kodas: %1"
 
-#: kwalleteditor.cpp:502
+#: kwalleteditor.cpp:501
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -243,73 +243,73 @@ msgstr ""
 "Dabartinio elemento turinys pasikeitė.\n"
 "Ar norite įrašyti pakeitimus?"
 
-#: kwalleteditor.cpp:555 kwalleteditor.cpp:882
+#: kwalleteditor.cpp:554 kwalleteditor.cpp:881
 #, kde-format
 msgid "Password: %1"
 msgstr "Slaptažodis: %1"
 
-#: kwalleteditor.cpp:571 kwalleteditor.cpp:884
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:883
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Vardo-reikšmės atvaizdis: %1"
 
-#: kwalleteditor.cpp:581 kwalleteditor.cpp:886
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:885
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Dvejetainiai duomenys: %1"
 
-#: kwalleteditor.cpp:788
+#: kwalleteditor.cpp:787
 #, kde-format
 msgid "New Entry"
 msgstr "Naujas įrašas"
 
-#: kwalleteditor.cpp:788
+#: kwalleteditor.cpp:787
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Pasirinkite naujo įrašo pavadinimą:"
 
-#: kwalleteditor.cpp:797
+#: kwalleteditor.cpp:796
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Deja, toks įrašas jau yra. Bandyti dar kartą?"
 
-#: kwalleteditor.cpp:817 kwalleteditor.cpp:826
+#: kwalleteditor.cpp:816 kwalleteditor.cpp:825
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Bandant pridėti naują įrašą, įvyko netikėta klaida"
 
-#: kwalleteditor.cpp:878
+#: kwalleteditor.cpp:877
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Bandant pervadinti įrašą, įvyko netikėta klaida"
 
-#: kwalleteditor.cpp:899
+#: kwalleteditor.cpp:898
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Ar tikrai norite ištrinti elementą „%1“?"
 
-#: kwalleteditor.cpp:903
+#: kwalleteditor.cpp:902
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Bandant ištrinti įrašą įvyko netikėta klaida"
 
-#: kwalleteditor.cpp:931
+#: kwalleteditor.cpp:930
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Nepavyko atverti prašomos slaptažodinės."
 
-#: kwalleteditor.cpp:967
+#: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Nepavyko sukurti laikinojo failo, skirto atsisiųsti \"<b>%1</b>\"."
 
-#: kwalleteditor.cpp:974
+#: kwalleteditor.cpp:973
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Nepavyko gauti prieigos prie slaptažodinės „<b>%1</b>“."
 
-#: kwalleteditor.cpp:1005 kwalleteditor.cpp:1037 kwalleteditor.cpp:1073
-#: kwalleteditor.cpp:1157
+#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
+#: kwalleteditor.cpp:1156
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -317,27 +317,27 @@ msgid ""
 msgstr ""
 "Aplanke „<b>%1</b>“ jau yra įrašas „<b>%2</b>“.  Ar norite jį pakeisti?"
 
-#: kwalleteditor.cpp:1115
+#: kwalleteditor.cpp:1114
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Nepavyko gauti prieigos prie XML failo „<b>%1</b>“."
 
-#: kwalleteditor.cpp:1121
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Klaida įvesčiai skaitant XML failą „<b>%1</b>“."
 
-#: kwalleteditor.cpp:1127
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Klaida: XML faile nėra slaptažodinės."
 
-#: kwalleteditor.cpp:1280
+#: kwalleteditor.cpp:1279
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Nepavyksta saugoti į „<b>%1</b>“."
 
-#: kwalletmanager.cpp:65
+#: kwalletmanager.cpp:63
 #, kde-format
 msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
@@ -347,53 +347,53 @@ msgstr ""
 "KWalletManager baigs savo darbą, nes ji negali tęsti be neperskaičius "
 "slaptažodinių."
 
-#: kwalletmanager.cpp:90 kwalletmanager.cpp:97 kwalletmanager.cpp:224
-#: kwalletmanager.cpp:289
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:222
+#: kwalletmanager.cpp:287
 #, kde-format
 msgid "Wallet"
 msgstr "Slaptažodinė"
 
-#: kwalletmanager.cpp:90 kwalletmanager.cpp:289
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:287
 #, kde-format
 msgid "No wallets open."
 msgstr "Nėra atvertų slaptažodinių."
 
-#: kwalletmanager.cpp:97 kwalletmanager.cpp:224
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:222
 #, kde-format
 msgid "A wallet is open."
 msgstr "Slaptažodinė atverta."
 
-#: kwalletmanager.cpp:141 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:139 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Nauja slaptažodinė..."
 
-#: kwalletmanager.cpp:146
+#: kwalletmanager.cpp:144
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Ištrinti slaptažodinę..."
 
-#: kwalletmanager.cpp:151
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Eksportuoti kaip šifruotą"
 
-#: kwalletmanager.cpp:156
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Importuoti šifruotą"
 
-#: kwalletmanager.cpp:161
+#: kwalletmanager.cpp:159
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Konfigūruoti &slaptažodinę..."
 
-#: kwalletmanager.cpp:169
+#: kwalletmanager.cpp:167
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Užverti &visas slaptažodines"
 
-#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:111
+#: kwalletmanager.cpp:256 walletcontrolwidget.cpp:110
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -402,103 +402,103 @@ msgstr ""
 "Nepavyko tvarkingai užverti slaptažodinės. Greičiausiai, ja naudoja kitos "
 "programos. Ar norite ją užverti priverstinai?"
 
-#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:112
 #, kde-format
 msgid "Force Closure"
 msgstr "Užverti priverstinai"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:114
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Do Not Force"
 msgstr "Neužverti priverstinai"
 
-#: kwalletmanager.cpp:265 walletcontrolwidget.cpp:118
+#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Nepavyko priverstinai užverti slaptažodinės. Klaidos kodas buvo %1."
 
-#: kwalletmanager.cpp:281
+#: kwalletmanager.cpp:279
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Klaida atveriant slaptažodinę %1."
 
-#: kwalletmanager.cpp:320
+#: kwalletmanager.cpp:318
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Pasirinkite naujos slaptažodinės pavadinimą:"
 
-#: kwalletmanager.cpp:329
+#: kwalletmanager.cpp:327
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nauja slaptažodinė"
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:346
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Tuščias pavadinimas nepalaikomas. Pasirinkite naują."
 
-#: kwalletmanager.cpp:348
+#: kwalletmanager.cpp:346
 #, kde-format
 msgid "Create new wallet"
 msgstr "Sukurti naują slaptažodinę"
 
-#: kwalletmanager.cpp:354
+#: kwalletmanager.cpp:352
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Deja, tokia slaptažodinė jau yra. Bandyti naują pavadinimą?"
 
-#: kwalletmanager.cpp:356
+#: kwalletmanager.cpp:354
 #, kde-format
 msgid "Try New"
 msgstr "Bandyti naują"
 
-#: kwalletmanager.cpp:382
+#: kwalletmanager.cpp:380
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Ar tikrai norite ištrinti slaptažodinę „%1“?"
 
-#: kwalletmanager.cpp:388
+#: kwalletmanager.cpp:386
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Nepavyko ištrinti slaptažodinės. Klaidos kodas buvo %1."
 
-#: kwalletmanager.cpp:435
+#: kwalletmanager.cpp:433
 #, kde-format
 msgid "File name"
 msgstr "Failo pavadinimas"
 
-#: kwalletmanager.cpp:442
+#: kwalletmanager.cpp:440
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Nepavyko atverti failo rašymui"
 
-#: kwalletmanager.cpp:453
+#: kwalletmanager.cpp:451
 #, kde-format
 msgid "Select file"
 msgstr "Pasirinkti failą"
 
-#: kwalletmanager.cpp:463
+#: kwalletmanager.cpp:461
 #, kde-format
 msgid "Failed to open file"
 msgstr "Nepavyko atverti failo"
 
-#: kwalletmanager.cpp:475
+#: kwalletmanager.cpp:473
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Slaptažodinė pavadinimu %1 jau yra, operation nutraukta"
 
-#: kwalletmanager.cpp:481
+#: kwalletmanager.cpp:479
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Nepavyko nukopijuoti failų"
 
-#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Nepaisyti neįrašytų pakeitimų?"
 
-#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:101
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore"
 msgstr "Nepaisyti"
@@ -527,7 +527,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "Klaida jungiantis prie KWallet tarnybos:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
 msgid "&Open..."
 msgstr "At&verti..."
@@ -637,12 +637,12 @@ msgstr "Slaptažodinės pavadinimas"
 msgid "Revoke Authorization"
 msgstr "Panaikinti įgaliojimus"
 
-#: walletcontrolwidget.cpp:56
+#: walletcontrolwidget.cpp:55
 #, kde-format
 msgid "&Close"
 msgstr "&Užverti"
 
-#: walletcontrolwidget.cpp:74
+#: walletcontrolwidget.cpp:73
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -650,7 +650,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Šiuo metu slaptažodinė „%1“ yra atverta."
 
-#: walletcontrolwidget.cpp:91
+#: walletcontrolwidget.cpp:90
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Šiuo metu slaptažodinė yra užverta."

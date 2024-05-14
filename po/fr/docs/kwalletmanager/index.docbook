@@ -1,0 +1,788 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+
+<book id="kwallet5" lang="&language;">
+<bookinfo>
+<title
+>Manuel utilisateur de &kwallet5;</title>
+
+<authorgroup>
+<author
+>&George.Staikos; &George.Staikos.mail; </author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail; </author>
+<othercredit role="developer"
+><firstname
+>George</firstname
+><surname
+>Staikos</surname
+> <affiliation
+><address
+>&George.Staikos.mail;</address
+></affiliation>
+<contrib
+>Développeur</contrib>
+</othercredit>
+&traducteurAlviseCavallari;&traducteurGerardDelafond; &traducteurLudovicGrossard;&traducteurRobertJacolin;&traducteurStanislasZeller; 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>05-07-2016</date>
+<releaseinfo
+>Applications 16.04</releaseinfo>
+
+<abstract>
+<para
+>Le sous-système de portefeuille fournit une manière pratique et sûre de gérer tous vos mots de passe.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KWallet</keyword>
+<keyword
+>mots de passe</keyword>
+<keyword
+>formulaires</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduction</title>
+
+<para
+>Les utilisateurs d'ordinateurs ont une très grande quantité de données à gérer, dont certaines sont sensibles. En particulier, vous aurez généralement beaucoup de mots de passe à gérer. S'en souvenir est difficile, et les écrire sur un papier n'est pas sûr.</para>
+
+<para
+>&kwallet5; fournit une méthode sécurisée pour enregistrer les mots de passe ainsi que d'autres informations secrètes, permettant à l'utilisateur de ne se souvenir que d'un seul mot de passe au lieux de plusieurs mots de passe et identifiants. </para>
+
+<sect1 id="kwallet-create">
+
+<title
+>Créer un portefeuille</title>
+
+<para
+>Le portefeuille est une sauvegarde de mots de passe. Il suffit généralement d'avoir un seul portefeuille sécurisé par un mot de passe principal. Mais vous pouvez organiser votre grande collection de mots de passe par des portefeuilles en utilisant &kwalletmanager5;.</para>
+
+<para
+>Par défaut, un portefeuille nommé <guilabel
+>kdewallet</guilabel
+> sera utilisé pour enregistrer vos mots de passe. Ce portefeuille est sécurisé par votre mot de passe de connexion et sera automatiquement ouvert à la connexion, si le module « kwallet_pam » est installé et correctement configuré. Sur certaines distributions (&pex; Archlinux), ce module n'est pas installé par défaut.</para>
+
+
+<para
+>Les autres portefeuilles doivent être ouverts manuellement.</para>
+
+<para
+>Il y a deux façons de créer un nouveau portefeuille :</para>
+
+<itemizedlist>
+<listitem
+><para
+>Utiliser l'élément de menu <menuchoice
+><guimenu
+>Fichier</guimenu
+><guimenuitem
+>Nouveau portefeuille</guimenuitem
+></menuchoice
+> du &kwalletmanager5;</para
+></listitem>
+
+<listitem
+><para
+>Utilisez le bouton <guibutton
+>Nouveau</guibutton
+> dans le module <guilabel
+>Portefeuille de KDE</guilabel
+> de la &configurationDuSysteme;.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Si vous n'avez pas encore créé de portefeuille, veuillez consulter la section <link linkend="kwallet-using"
+>Utilisation de &kwallet5;</link
+>. </para>
+
+<para
+>&kwallet5; propose deux manières différentes pour enregistrer vos données :</para>
+
+<screenshot>
+<screeninfo
+>Sélection du chiffrement</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Sélection du chiffrement</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+
+<varlistentry>
+<term
+>chiffrement Blowfish</term>
+<listitem>
+<para
+>&kwallet5; enregistre ces données sensibles pour vous dans un fichier fortement chiffré, accessible par toutes les application et protégé par un mot de passe principal que vous pouvez définir.</para>
+
+<screenshot>
+<screeninfo
+>Créer un portefeuille avec chiffrement « Blowfish » </screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Créer un portefeuille avec chiffrement Blowfish</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Les données sont chiffrées avec <ulink url="http://wwwschneier.com/blowfish.html"
+>l'algorithme de chiffrement symétrique par blocs Blowfish</ulink
+> ; la clé d'algorithme est issue du <ulink url="http://www.ietf.org/rfc/rfc3174.txt"
+>hachage SHA-1</ulink
+> du mot de passe, avec une longueur de clé de 156 bits (20 octets). Les données dans le fichier de portefeuille sont également hachées avec l'algorithme SHA-1 et vérifiées avant d'être déchiffrées et mises à disposition pour les applications. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Chiffrement GPG</term>
+<listitem>
+<para
+>GnuPG offre des algorithmes de chiffrement très solides, et utilise des clés longues protégées par phrase de passe.</para>
+
+<screenshot>
+<screeninfo
+>Aucune clé GPG trouvée</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Aucune clé GPG trouvée</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Les copies d'écran ci-dessus montrent le cas où il a été impossible de trouver une clé capable de chiffrement « GPG » sur le système. Veuillez utiliser des applications telles que &kgpg; ou &kleopatra; pour créer une clé et réessayer.</para>
+
+<para
+>Si une clé GPG a été trouvée, vous aurez la boîte de dialogue suivante qui vous permettra de choisir parmi les clés à utiliser pour votre nouveau portefeuille. </para>
+<screenshot>
+<screeninfo
+>Sélectionnez une clé de chiffrement</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Sélectionnez une clé de chiffrement</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&kwallet5; utilisera désormais « GPG » pour l'enregistrement et l'ouverture des portefeuilles. La boîte de dialogue de la phrase de passe s'affichera une seule fois. Même si le portefeuille est fermé après l'ouverture initiale, il se rouvrira successivement de manière silencieuse tout au long de la même session. </para>
+
+<para
+>La même session peut gérer simultanément les deux formats de fichiers. &kwallet5; détectera de manière transparente, le format de fichier et chargera le bon moteur pour le traiter.</para>
+
+<para
+>Veuillez suivre les étapes suivantes pour utiliser les données sensibles de votre portefeuille classique avec le nouveau moteur de traitement :</para>
+
+<itemizedlist>
+<listitem
+><para
+>Créer un nouveau portefeuille avec chiffrement GPG</para
+></listitem>
+<listitem
+><para
+>Veuillez démarrer &kwalletmanager5; en utilisant &krunner; (<keycombo
+>&Alt; <keycap
+>F2</keycap
+></keycombo
+>) ou un autre lanceur d'applications (menu) et sélectionner votre ancien portefeuille. Ensuite, veuillez sélectionner <menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Exporter sous forme chiffrée</guimenuitem
+></menuchoice
+> afin de créer un fichier d'archive contenant vos données sensibles. </para
+></listitem>
+<listitem
+><para
+>Veuillez sélectionner le nouveau portefeuille avec chiffrement « GPG », ensuite <menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Importer avec chiffrement</guimenuitem
+></menuchoice
+> et enfin, sélectionner le fichier que vous venez d'enregistrer.</para>
+</listitem>
+
+<listitem
+><para
+>Allez dans la &configurationDuSysteme;, <menuchoice
+><guimenu
+>Détails du compte</guimenu
+> <guimenuitem
+>Portefeuille de KDE</guimenuitem
+></menuchoice
+>, et sélectionnez le nouveau portefeuille avec chiffrement GPG depuis la liste déroulante <guilabel
+>Choisissez le portefeuille à utiliser par défaut</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>De façon alternative, veuillez utiliser <guimenuitem
+>Importer un portefeuille</guimenuitem
+>. Mais dans ce cas, vous devrez sélectionner le fichier avec l'extension <filename class="extension"
+>.kwl</filename
+>, correspondant à votre ancien portefeuille, situé dans <filename class="directory"
+>kwalletd</filename
+> dans <userinput
+>qtpaths --paths GenericDataLocation</userinput
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<tip>
+<para
+>&kwallet5; gère plusieurs portefeuilles, donc pour les opérations les plus sécurisées, vous devriez utiliser un portefeuille pour les mots de passe locaux et un autre pour les mots de passe réseau et les données de formulaires. Vous pouvez configurer ce comportement dans le module &kwallet5; de la &configurationDuSysteme;. Cependant, le paramétrage par défaut est de tout enregistrer dans un seul portefeuille nommé <guilabel
+>kdewallet</guilabel
+>.</para>
+</tip>
+
+<para
+>Un portefeuille est fermé par défaut, ce qui signifie que vous devez fournir un mot de passe pour l'ouvrir. Une fois le portefeuille ouvert, son contenu peut être lu par n'importe quel processus utilisateur, ce qui pourrait être un problème de sécurité.</para>
+</sect1>
+
+<sect1 id="kwallet-using">
+<title
+>Utilisation de &kwallet5;</title>
+
+<para
+>Si vous visitez &pex; le traceur de bogues de &kde; et saisissez un identifiant pour la première fois, une boîte de dialogue vous donne la possibilité de stocker le mot de passe dans une portefeuille chiffré : </para>
+
+<screenshot>
+<screeninfo
+>Demande pour enregistrer les informations de connexion</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Demande pour enregistrer les informations de connexion</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Sélectionnez le bouton <guibutton
+>Stocker</guibutton
+> si vous souhaitez enregistrer cette information. Au cas où vous n'avez pas encore créé de portefeuille, la boîte de dialogue suivante vous demandera de spécifier le moteur de traitement et créera un portefeuille nommé « kdewallet ». </para>
+
+<para
+>La prochaine fois que vous visiterez le même site Internet, l'application retrouvera les données de connexion à partir d'un portefeuille ouvert et préremplira les formulaires avec les éléments secrets.</para>
+
+<screenshot>
+<screeninfo
+>Informations préremplies de connexion</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="prefilled-forms.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Informations préremplies de connexion</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Si le portefeuille est fermé, l'application fera une demande d'ouverture du portefeuille. Veuillez saisir le mot de passe du portefeuille et cliquer sur le bouton <guibutton
+>Ouvrir</guibutton
+>.</para>
+
+<screenshot>
+<screeninfo
+>Demande pour ouvrir le portefeuille</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Demande pour ouvrir le portefeuille</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>L'application se connecte au portefeuille, l'active pour lire l'identifiant et restaure les informations pour ce site web. Une fois que l'application est connectée au portefeuille, elle peut automatiquement restaurer n'importe quel identifiant stocké dans le portefeuille.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="kwalletmanager5">
+<title
+>&kwalletmanager5;</title>
+
+<para
+>&kwalletmanager5; réalise plusieurs fonctions. D'abord, il vous permet de voir si n'importe quel portefeuille est ouvert, l'identification des portefeuilles et quelles applications utilisent chaque portefeuille. Vous pouvez déconnecter l'accès d'une application à un portefeuille depuis le &kwalletmanager5;.</para>
+
+<para
+>Vous pouvez aussi gérer les portefeuilles installés sur le système, créant et supprimant les portefeuilles et manipulant leur contenu (modifier les clés...).</para>
+
+<para
+>L'application &kwalletmanager5; est lancée avec <menuchoice
+> <guimenu
+>Applications</guimenu
+><guisubmenu
+>Système</guisubmenu
+> <guimenuitem
+>Outil de gestion de portefeuilles</guimenuitem
+></menuchoice
+> depuis le lanceur d'applications. De façon alternative, vous pouvez aussi lancer &krunner; avec le raccourci <keycombo action="simul"
+>&Alt;<keycap
+>F2</keycap
+></keycombo
+> et saisir <command
+>kwalletmanager5</command
+>.</para>
+
+<para
+>Veuillez cliquer une fois sur l'icône de portefeuille dans la boîte à miniatures pour afficher la fenêtre de &kwalletmanager5;.</para>
+<para>
+<screenshot>
+<screeninfo
+>La fenêtre principale avec un portefeuille</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwalletmanager.png"/>
+</imageobject>
+<textobject>
+<phrase
+>La fenêtre principale avec un portefeuille</phrase>
+</textobject>
+<caption
+><para
+>La fenêtre principale avec un portefeuille</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<!--FIXME
+How to get assistant "First Use"? kwalletwizardpageintro.ui
+Last code change with http://websvn.kde.org/?view=revision&revision=882694
+see also https://bugs.kde.org/show_bug.cgi?id=290309
+-->
+<sect1 id="kwalletmanager-wallet-window">
+<title
+>La fenêtre du portefeuille</title>
+
+<para
+>Si vous avez plus d'un portefeuille, tous ceux disponibles sont affichés sur le côté gauche.</para>
+
+<para
+>Un clic sur un portefeuille dans la fenêtre de &kwalletmanager5; permettra d'afficher l'état de ce portefeuille ainsi que son contenu si le portefeuille est ouvert. Un portefeuille peut contenir un nombre quelconque de dossiers, qui permettent d'enregistrer les informations sur les mots de passe. Par défaut, un portefeuille contiendra les dossiers nommés « Données de formulaires » et « Mots de passe ». </para>
+
+<screenshot>
+<screeninfo
+>La fenêtre principale avec deux portefeuilles</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-edit.png"/>
+</imageobject>
+<textobject>
+<phrase
+>La fenêtre principale avec deux portefeuilles</phrase>
+</textobject>
+<caption
+><para
+>La fenêtre principale avec deux portefeuilles</para
+></caption>
+</mediaobject>
+</screenshot>
+<para
+>Utilisez <guibutton
+>Ouvrir</guibutton
+> pour afficher le contenu d'un portefeuille. Il vous sera demandé de saisir le mot de passe principal.</para>
+
+<sect2>
+<title
+>Onglet « Contenu »</title>
+
+<para
+>L'onglet <guilabel
+>Contenu</guilabel
+> contient trois sections : </para>
+
+<itemizedlist>
+<listitem
+><para
+>Une ligne de recherche pour filtrer les éléments du portefeuille actuel</para
+></listitem>
+<listitem
+><para
+>La vue arborescente des dossiers contenus dans le portefeuille. Cliquez sur les icônes <guiicon
+>&gt;</guiicon
+> / <guiicon
+>v</guiicon
+> pour développer ou replier la vue arborescente.</para
+></listitem>
+<listitem
+><para
+>Sur le coté droit, le contenu du dossier sélectionné. Par défaut, le mot de passe et la valeur sont cachés. Pour les afficher et modifier, activez <guilabel
+>Afficher les valeurs</guilabel
+> ou cliquez sur le bouton <guilabel
+>Afficher le contenu</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>Les dossiers peuvent être ajoutés ou supprimés grâce au menu contextuel. La sélection d'un dossier mettra à jour la liste des entrées du dossier et affichera un sommaire. La sélection d'une entrée de dossier mettra à jour le panneau de contenu des entrées sera mis à jour et vous permettra de modifier cette entrée.</para>
+
+<para
+>Les entrées peuvent aussi être créées, renommées ou supprimées grâce au menu contextuel pour le contenu des dossiers.</para>
+
+<para
+>Tous les dossiers et entrées peuvent être glissés / déposés dans les autres portefeuilles ou dossiers respectivement. Ceci permet à un utilisateur d'empaqueter facilement un nouveau portefeuille pour un transfert vers un autre environnement. Par exemple, un nouveau portefeuille peut être créé et copié sur une périphérique flash amovible. Les mots de passe importants peuvent être transférés ici, de telle manière que vous les rendiez disponibles dans d'autres emplacements.</para>
+
+<sect3 id="kwallet-import-export">
+<title
+>Importer et Exporter</title>
+<para
+>Si vous souhaitez transférer vos clés secrètes vers un autre périphérique ou ordinateur, veuillez utiliser les actions du menu <guimenu
+>Fichier</guimenu
+>. Avec l'action <guimenuitem
+>Exporter sous forme chiffrée</guimenuitem
+>, les portefeuilles peuvent être exportés vers un fichier chiffré. Pour importer ce fichier d'archive avec <guimenuitem
+>Importer sous forme chiffrée</guimenuitem
+>, vous devrez fournir le mot de passe principal du portefeuille. </para>
+<para
+>De même, un fichier <filename class="extension"
+>.xml</filename
+> peut être utilisé pour transférer un portefeuille. Veuillez prendre note que dans ce fichier toutes les clés secrètes sont enregistrées en texte simple. </para>
+</sect3>
+
+<sect3 id="kwallet-adding-entries">
+<title
+>Ajout manuel d'entrées.</title>
+<para
+>Veuillez ouvrir le menu contextuel avec le &BDS; et cliquer sur <guilabel
+>Cartes</guilabel
+> ou <guilabel
+>Mots de passe</guilabel
+> dans la vue en arborescence des <guilabel
+>Dossiers</guilabel
+>. Sélectionnez <guimenuitem
+>Nouveau</guimenuitem
+>et choisissez un nom pour la nouvelle entrée.</para>
+<para
+>Dans le panneau de contenu du dossier, veuillez sélectionner <guilabel
+>Nouveau dossier</guilabel
+> à partir du menu contextuel de <quote
+>Données de formulaire</quote
+> ou <quote
+>Mots de passe</quote
+>. Pour des mots de passe, veuillez d'abord cliquer sur le bouton <guilabel
+>Afficher le contenu</guilabel
+> puis saisir ensuite le nouveau mot de passe. Pour les cartes, vous devez ajouter une <guilabel
+>Clé</guilabel
+> et une <guilabel
+>Valeur</guilabel
+>. Cliquez sur le bouton <guilabel
+>Enregistrer</guilabel
+> pour mémoriser les nouvelles entrées dans le fichier chiffré de portefeuille. </para>
+</sect3>
+</sect2>
+
+<sect2>
+<title
+>L'onglet Applications</title>
+<para>
+<screenshot>
+<screeninfo
+>L'onglet Applications</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-applications.png"/>
+</imageobject>
+<textobject>
+<phrase
+>L'onglet Applications</phrase>
+</textobject>
+<caption
+><para
+>L'onglet Applications</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+<para
+>La première liste montre toutes les applications qui sont actuellement connectées au portefeuille sélectionné. Utilisez le bouton à droite de chaque entrée pour déconnecter l'application.</para>
+
+<para
+>Dans la seconde liste, toutes les applications qui sont autorisées à accéder au portefeuille sont affichées. Utilisez le bouton à droite de chaque entrée pour révoquer l'accès. </para>
+<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
+</sect2>
+</sect1>
+
+</chapter>
+
+<chapter id="kwallet-kcontrol-module">
+<title
+>Configuration de &kwallet5;</title>
+
+<sect1 id="wallet-preferences">
+<title
+>Préférences du portefeuille</title>
+
+<para
+>&kwallet5; contient un petit panneau de configuration avec plusieurs options vous permettant de le régler selon vos préférences personnelles. Les réglages par défaut de &kwallet5; sont suffisants pour la plupart des utilisateurs.</para>
+
+<para
+>Veuillez cocher la case pour l'activation ou désactivation complète du sous-système de portefeuille de &kde;. Si cette case est non cochée, &kwallet5; est totalement désactivé et aucune des autres options ici n'a le moindre effet et &kwallet5; n'enregistrera aucune information et ne vous proposera aucun remplissage de formulaires pour vous.</para>
+
+<variablelist>
+<title
+><guilabel
+>Fermeture du portefeuille</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Fermer si inutilisé pendant : </guilabel
+></term>
+<listitem>
+<para
+>Ferme le portefeuille actuel après une période d'inactivité. Si vous cochez cette option, réglez la durée dans la boîte. La valeur par défaut est 10 minutes. Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire pour l'ouvrir de nouveau.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Fermer lorsque l'économiseur d'écran démarre</guilabel
+></term>
+<listitem>
+<para
+>Ferme le portefeuille dès que l'écran de veille démarre. Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire pour l'ouvrir à nouveau.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Fermer lorsque la dernière application arrête de l'utiliser</guilabel
+></term>
+<listitem>
+<para
+>Ferme le portefeuille dès que toutes les applications qui l'utilisent sont terminées. Remarquez que vos portefeuilles ne seront fermés que lorsque toutes les applications qui l'utilisent seront arrêtées. Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire pour l'ouvrir à nouveau.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>Sélection automatique du portefeuille</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Choisissez le portefeuille à utiliser par défaut : </guilabel
+></term>
+<listitem>
+<para
+>Sélectionnez le portefeuille que vous souhaitez utiliser comme portefeuille par défaut. Veuillez garder à l'esprit que seul le portefeuille nommé <guilabel
+>kdewallet</guilabel
+> sera ouvert automatiquement à la connexion, si ce portefeuille et votre mot de passe de connexion sont identiques. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Portefeuille différent pour les mots de passe locaux : </guilabel
+></term>
+<listitem>
+<para
+>Si cette option est cochée, choisit un portefeuille différent pour les mots de passe locaux.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>Gestionnaire de portefeuilles</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Afficher le gestionnaire dans la boîte à miniatures</guilabel
+></term>
+<listitem>
+<para
+>Permet l'affichage de l'icône du gestionnaire de portefeuilles dans la boîte à miniatures.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Cacher l'icône de la boîte à miniatures lorsque le dernier portefeuille est fermé</guilabel
+></term>
+<listitem>
+<para
+>Lorsqu'il n'y a plus de portefeuille en cours d'utilisation, enlève l'icône du portefeuille dans la boîte à miniatures.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Enfin, il y a un bouton libellé <guibutton
+>Lancer le gestionnaire de portefeuille</guibutton
+>, qui fait précisément ceci.</para>
+<para
+>Ce bouton n'est visible que lorsque &kwalletmanager5; n'est pas en cours d'exécution.</para>
+</sect1>
+
+<sect1 id="wallet-access-control">
+<title
+>Contrôle d'accès</title>
+
+<para
+>Il n'y a qu'une option sur cette page : </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Demander une confirmation lorsqu'une application accède à un portefeuille</guilabel
+></term>
+<listitem>
+<para
+>Vous signale quand une application accède à un portefeuille</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Ensuite, il y a un affichage en arborescence pour les contrôles d'accès de vos portefeuilles.</para>
+
+<screenshot>
+<screeninfo
+>Contrôle d'accès</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-access-control.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Contrôle d'accès</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Cliquez avec le &BGS; sur le symbole <guiicon
+>&gt;</guiicon
+> à côté du nom d'un portefeuille pour développer l'arborescence. Vous verrez le nom de chaque application qui a demandé l'accès au portefeuille, et la politique qui lui est affectée. Vous ne pouvez pas modifier les politiques ici, ou en ajouter, mais il est possible de supprimer une entrée en cliquant dessus avec le &BDS; et en choisissant <guimenuitem
+>Supprimer</guimenuitem
+> dans le menu contextuel qui apparaît, ou simplement en la sélectionnant et en actionnant la touche <keycap
+>Suppr</keycap
+>.</para>
+
+<para
+>Une application qui a reçu l'autorisation d'accéder à un portefeuille peut accéder à la totalité des mots de passe qui sont stockés dans celui-ci.</para>
+
+<para
+>Si vous avez configuré par erreur une application pour qu'elle n'utilise pas &kwalletmanager5;, vous pouvez effacer ici la règle pour cette application.</para>
+<!-- FIXME difference to Revoke Authorization in kwallermanager?-->
+<para
+>Au prochain démarrage de cette application, vous pourrez définir une nouvelle règle d'accès au portefeuille. </para>
+<screenshot>
+<screeninfo
+>Demande d'accès pour ouvrir le portefeuille</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="application-request-to-open-wallet.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Demande d'accès pour ouvrir le portefeuille</phrase>
+</textobject>
+<caption
+><para
+>Une application demande accès à un portefeuille</para
+></caption>
+</mediaobject>
+</screenshot>
+
+</sect1>
+
+</chapter>
+
+<chapter id="advanced-features">
+<title
+>Fonctionnalités avancées</title>
+
+<para
+>Les portefeuilles peuvent être utilisés avec un glisser depuis la fenêtre du &kwalletmanager5;. Ceci vous permet de faire glisser le portefeuille vers la fenêtre d'un gestionnaire de fichiers, où vous pouvez choisir de copier, déplacer ou lier le portefeuille, comme vous le voulez.</para>
+
+<para
+>Vous devriez utiliser ceci pour enregistrer un portefeuille sur un média portable, comme une clé USB, de manière à pouvoir emmener vos mots de passe avec vous au travail ou en vacances, et toujours avoir accès aux sites importants.</para>
+
+</chapter>
+
+<chapter id="credits-and-license">
+<title
+>Remerciements et licence</title>
+
+<para
+>&kwallet5; &copy; 2003 &George.Staikos;</para>
+<para
+>Documentation &copy; &Lauri.Watts; et &George.Staikos;</para>
+
+<para
+>Traduction française par &AlviseCavallari;, &GerardDelafond;, &LudovicGrossard;, &RobertJacolin; et &StanislasZeller;.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->
