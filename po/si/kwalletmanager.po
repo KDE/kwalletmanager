@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2011-11-30 23:30+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -585,6 +585,7 @@ msgstr ""
 
 #: main.cpp:35
 #, kde-format
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
@@ -594,7 +595,9 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "George Staikos"
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
@@ -604,7 +607,9 @@ msgid "Original author and former maintainer"
 msgstr "මුල් කතෲ හා හිටපු පරිපාලක"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Michael Leupold"
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
@@ -615,7 +620,9 @@ msgid "Developer and former maintainer"
 msgstr "මුල් කතෲ හා හිටපු පරිපාලක"
 
 #: main.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Isaac Clerencia"
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2010-05-01 10:15+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -586,6 +586,7 @@ msgstr ""
 
 #: main.cpp:35
 #, kde-format
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
@@ -595,7 +596,9 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "George Staikos"
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
@@ -605,7 +608,9 @@ msgid "Original author and former maintainer"
 msgstr "ผู้เขียนดั้งเดิมและผู้ดูแลก่อนหน้านี้"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Michael Leupold"
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
@@ -616,7 +621,9 @@ msgid "Developer and former maintainer"
 msgstr "ผู้เขียนดั้งเดิมและผู้ดูแลก่อนหน้านี้"
 
 #: main.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Isaac Clerencia"
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 

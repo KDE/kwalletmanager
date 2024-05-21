@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -592,6 +592,7 @@ msgstr ""
 
 #: main.cpp:35
 #, kde-format
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
@@ -601,7 +602,9 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "George Staikos"
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "जॉर्ज स्टायकॉस"
 
@@ -613,6 +616,7 @@ msgstr "प्राथमिक लेखक तथा मेंटेनर"
 
 #: main.cpp:37
 #, kde-format
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr ""
 
@@ -623,7 +627,9 @@ msgid "Developer and former maintainer"
 msgstr "प्राथमिक लेखक तथा मेंटेनर"
 
 #: main.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Isaac Clerencia"
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "इसाक क्लेरेंसिया"
 

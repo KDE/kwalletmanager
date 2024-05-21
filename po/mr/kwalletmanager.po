@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2013-04-06 12:34+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -574,7 +574,9 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr ""
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Valentin Rusu"
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "व्हेलेन्टिन रुसु"
 
@@ -584,7 +586,9 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "George Staikos"
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "जॉर्ज स्टैकोस"
 
@@ -594,7 +598,9 @@ msgid "Original author and former maintainer"
 msgstr "मूळ लेखक व पूर्वीचा पालक"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Michael Leupold"
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "माइकेल ल्युपोल्ड"
 
@@ -605,7 +611,9 @@ msgid "Developer and former maintainer"
 msgstr "मूळ लेखक व पूर्वीचा पालक"
 
 #: main.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Isaac Clerencia"
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "इझाक क्लेरेन्सिया"
 

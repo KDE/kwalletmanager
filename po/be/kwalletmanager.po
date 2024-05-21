@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2007-04-04 17:15+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -572,6 +572,7 @@ msgstr ""
 
 #: main.cpp:35
 #, kde-format
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
@@ -582,6 +583,7 @@ msgstr ""
 
 #: main.cpp:36
 #, fuzzy, kde-format
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "(c) 2003,2004 Джордж Стэйкос (George Staikos)"
 
@@ -592,6 +594,7 @@ msgstr "Асноўны аўтар і каардынатар"
 
 #: main.cpp:37
 #, kde-format
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr ""
 
@@ -602,6 +605,7 @@ msgstr "Асноўны аўтар і каардынатар"
 
 #: main.cpp:38
 #, kde-format
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr ""
 

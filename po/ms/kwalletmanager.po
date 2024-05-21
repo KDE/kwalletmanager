@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2005-11-17 11:28+0800\n"
 "Last-Translator: MIMOS Open Source <opensource@mimos.my\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -583,6 +583,7 @@ msgstr ""
 
 #: main.cpp:35
 #, kde-format
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
@@ -594,6 +595,7 @@ msgstr ""
 #: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "(c) 2003,2004 George Staikos"
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "(c) 2003,2004 George Staikos"
 
@@ -605,6 +607,7 @@ msgstr "Pengarang dan penyenggara utama"
 
 #: main.cpp:37
 #, kde-format
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr ""
 
@@ -616,6 +619,7 @@ msgstr "Pengarang dan penyenggara utama"
 
 #: main.cpp:38
 #, kde-format
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr ""
 

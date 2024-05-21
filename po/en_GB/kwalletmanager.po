@@ -4,21 +4,21 @@
 # Malcolm Hunter <malcolm.hunter@gmx.co.uk>, 2003, 2004, 2005, 2006.
 # Jonathan Riddell <kde-en-gb@jriddell.org>, 2004.
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2004, 2005, 2009, 2010, 2015.
-# Steve Allewell <steve.allewell@gmail.com>, 2016, 2017, 2022.
+# SPDX-FileCopyrightText: 2016, 2017, 2022, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
-"PO-Revision-Date: 2022-12-31 15:38+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"PO-Revision-Date: 2024-05-20 19:33+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -429,8 +429,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Please choose a name for the new wallet:"
 
 #: kwalletmanager.cpp:327
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "New Wallet"
@@ -527,7 +526,7 @@ msgstr "&Help"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "An error occurred when connecting to the KWallet service:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
@@ -580,18 +579,21 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright ©2013–2017, KWallet Manager authors"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Valentin Rusu"
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Maintainer, user interface refactoring"
+msgstr "Former Maintainer, user interface refactoring"
 
 #: main.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "George Staikos"
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
@@ -601,7 +603,9 @@ msgid "Original author and former maintainer"
 msgstr "Original author and former maintainer"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Michael Leupold"
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
@@ -611,7 +615,9 @@ msgid "Developer and former maintainer"
 msgstr "Developer and former maintainer"
 
 #: main.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Isaac Clerencia"
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
@@ -646,22 +652,17 @@ msgid "&Close"
 msgstr "&Close"
 
 #: walletcontrolwidget.cpp:73
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "The '%1' wallet is currently open"
+msgstr "The '%1' wallet is currently open."
 
 #: walletcontrolwidget.cpp:90
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "The wallet is currently closed"
+msgstr "The wallet is currently closed."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31

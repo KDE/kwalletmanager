@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-21 00:42+0000\n"
 "PO-Revision-Date: 2005-09-23 17:14+0500\n"
 "Last-Translator: Victor Ibragimov <youth_opportunities@tajikngo.org>\n"
 "Language-Team: Tajik\n"
@@ -591,6 +591,7 @@ msgstr ""
 
 #: main.cpp:35
 #, kde-format
+msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
@@ -601,6 +602,7 @@ msgstr ""
 
 #: main.cpp:36
 #, fuzzy, kde-format
+msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "(c) 2003 George Staikos"
 
@@ -612,6 +614,7 @@ msgstr "Муаллифи асосӣ ва ҳамроҳии ҷорӣ"
 
 #: main.cpp:37
 #, kde-format
+msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr ""
 
@@ -623,6 +626,7 @@ msgstr "Муаллифи асосӣ ва ҳамроҳии ҷорӣ"
 
 #: main.cpp:38
 #, kde-format
+msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr ""
 
