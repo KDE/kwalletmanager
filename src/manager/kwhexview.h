@@ -20,6 +20,7 @@ public:
 
 protected:
     void resizeEvent(QResizeEvent *e) override;
+    QMimeData *createMimeDataFromSelection() const override;
 
 private:
     QByteArray data;

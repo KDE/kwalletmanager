@@ -5,6 +5,7 @@
 */
 
 #include "kwmapeditor.h"
+#include "clipboardutils.h"
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -16,7 +17,6 @@
 #include <QTextEdit>
 
 #include <QApplication>
-#include <QClipboard>
 #include <QFocusEvent>
 #include <QItemDelegate>
 #include <QKeyEvent>
@@ -227,7 +227,7 @@ void KWMapEditor::copy()
 {
     QTableWidgetItem *twi = item(_contextRow, 2);
     if (twi) {
-        QApplication::clipboard()->setText(twi->text());
+        setPasswordToClipboard(twi->text());
     }
 }
 

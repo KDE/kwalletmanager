@@ -6,7 +6,10 @@
 */
 
 #include "kwhexview.h"
+#include "clipboardutils.h"
 
+#include <QMimeData>
+#include <QPlainTextEdit>
 #include <QTextStream>
 
 KWHexView::KWHexView(QWidget *parent)
@@ -92,6 +95,13 @@ void KWHexView::resizeEvent(QResizeEvent *e)
     QPlainTextEdit::resizeEvent(e);
     if (e->size() != e->oldSize())
         showData();
+}
+
+QMimeData *KWHexView::createMimeDataFromSelection() const
+{
+    QMimeData *mimeData = QPlainTextEdit::createMimeDataFromSelection();
+    setPasswordHintToMimeData(mimeData);
+    return mimeData;
 }
 
 #include "moc_kwhexview.cpp"

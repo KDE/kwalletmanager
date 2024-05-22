@@ -185,7 +185,7 @@
               </layout>
              </item>
              <item>
-              <widget class="QTextEdit" name="_passwordValue">
+              <widget class="KWTextEdit" name="_passwordValue">
                <property name="acceptRichText">
                 <bool>false</bool>
                </property>
@@ -353,6 +353,11 @@
    <class>KWHexView</class>
    <extends>QPlainTextEdit</extends>
    <header>kwhexview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KWTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>kwtextedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

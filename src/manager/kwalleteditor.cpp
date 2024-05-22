@@ -7,6 +7,7 @@
 
 #include "kwalleteditor.h"
 #include "allyourbase.h"
+#include "clipboardutils.h"
 #include "kbetterthankdialogbase.h"
 #include "kwmapeditor.h"
 
@@ -33,7 +34,6 @@
 #include <QIcon>
 
 #include <QCheckBox>
-#include <QClipboard>
 #include <QDomDocument>
 #include <QDomElement>
 #include <QDomNode>
@@ -755,7 +755,7 @@ void KWalletEditor::copyPassword()
     if (_w && item) {
         QString pass;
         if (_w->readPassword(item->text(0), pass) == 0) {
-            QApplication::clipboard()->setText(pass);
+            setPasswordToClipboard(pass);
         }
     }
 }

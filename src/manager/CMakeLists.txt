@@ -10,6 +10,7 @@ target_sources(kwalletmanager5 PRIVATE
     kwalletpopup.cpp
     kwalleteditor.cpp
     kwmapeditor.cpp
+    kwtextedit.cpp
     allyourbase.cpp
     kbetterthankdialogbase.cpp
     registercreateactionmethod.cpp
@@ -20,6 +21,7 @@ target_sources(kwalletmanager5 PRIVATE
     authorizedappmodel.cpp
     authorizedapplicationstable.cpp
     revokeauthbutton.cpp
+    clipboardutils.cpp
     kwalletmanager.h
     kwalletmanagerwidget.h
     walletcontrolwidget.h
@@ -37,7 +39,9 @@ target_sources(kwalletmanager5 PRIVATE
     registercreateactionmethod.h
     disconnectappbutton.h
     kwmapeditor.h
+    kwtextedit.h
     applicationsmanager.h
+    clipboardutils.h
 
     kwalletmanager.qrc
 )
