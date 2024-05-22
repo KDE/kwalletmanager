@@ -4,21 +4,21 @@
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006, 2007, 2010.
 # Kristof Bal <kristof.bal@gmail.com>, 2008.
-# SPDX-FileCopyrightText: 2009, 2023 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+# SPDX-FileCopyrightText: 2009, 2023, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2013, 2015, 2016, 2017, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:42+0000\n"
-"PO-Revision-Date: 2023-12-14 11:26+0100\n"
+"PO-Revision-Date: 2024-05-21 10:26+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -26,7 +26,7 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Wilbert Berendsen - 2003; 2004,Tom Albers - 2004,Rinse de Vries - 2005 tot "
-"2007,Freek de Kruijf - 2013 tot 2017;2022 t/m 2023"
+"2007,Freek de Kruijf - 2013 tot 2017;2022 t/m 2024"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -597,8 +597,7 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright ©2013–2017, de auteurs van KWallet Manager"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -609,8 +608,7 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr "Voormalig onderhouder, herontwerp van gebruikersinterface"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -621,8 +619,7 @@ msgid "Original author and former maintainer"
 msgstr "Oorspronkelijke auteur en voormalig onderhouder"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -633,8 +630,7 @@ msgid "Developer and former maintainer"
 msgstr "Ontwikkelaar en voormalig onderhouder"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"

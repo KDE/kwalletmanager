@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:42+0000\n"
-"PO-Revision-Date: 2024-05-20 00:04+0300\n"
+"PO-Revision-Date: 2024-05-21 13:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -42,12 +42,12 @@ msgstr "tulliana@gmail.com, volkangezer@gmail.com"
 #: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "'%1' adlı bir girdi halihazırda var. Sürdürmek ister misiniz?"
+msgstr "“%1” adlı bir girdi halihazırda var. Sürdürmek ister misiniz?"
 
 #: allyourbase.cpp:240
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "'%1' adlı bir klasör halihazırda var. Ne yapmak istiyorsunuz?"
+msgstr "“%1” adlı bir klasör halihazırda var. Ne yapmak istersiniz?"
 
 #: allyourbase.cpp:243
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "&Değerleri göster"
 #: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
-msgstr "&Yeni Klasör..."
+msgstr "&Yeni Klasör…"
 
 #: kwalleteditor.cpp:211
 #, kde-format
@@ -142,17 +142,17 @@ msgstr "&Klasörü Sil"
 #: kwalleteditor.cpp:214
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "&Cüzdan İçe Aktar..."
+msgstr "&Cüzdan İçe Aktar…"
 
 #: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
-msgstr "XML Olarak İçe Aktar..."
+msgstr "XML İçe Aktar…"
 
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Export as XML..."
-msgstr "&XML Olarak Dışa Aktar..."
+msgstr "&XML Olarak Dışa Aktar…"
 
 #: kwalleteditor.cpp:226
 #, kde-format
@@ -162,7 +162,7 @@ msgstr "Ko&pyala"
 #: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
-msgstr "&Yeni..."
+msgstr "&Yeni…"
 
 #: kwalleteditor.cpp:236
 #, kde-format
@@ -207,7 +207,7 @@ msgstr "Bilinmeyen"
 #: kwalleteditor.cpp:404
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr "'%1' adlı klasörü cüzdandan silmek istediğinizden emin misiniz?"
+msgstr "“%1” adlı klasörü cüzdandan silmek istediğinizden emin misiniz?"
 
 #: kwalleteditor.cpp:410
 #, kde-format
@@ -261,7 +261,7 @@ msgstr "Parola: %1"
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:883
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr "Ad-Değer haritası: %1"
+msgstr "Ad–değer haritası: %1"
 
 #: kwalleteditor.cpp:580 kwalleteditor.cpp:885
 #, kde-format
@@ -291,17 +291,17 @@ msgstr "Yeni bir giriş eklemeye çalışırken beklenmedik bir hata oluştu"
 #: kwalleteditor.cpp:877
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr "Girdi'yi yeniden adlandırırken beklenmedik bir hata oluştu"
+msgstr "Girdiyi yeniden adlandırırken beklenmedik bir hata oluştu"
 
 #: kwalleteditor.cpp:898
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr "Seçili '%1' ögesini silmek istediğinizden emin misiniz?"
+msgstr "Seçili “%1” ögesini silmek istediğinizden emin misiniz?"
 
 #: kwalleteditor.cpp:902
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr "Girdi'yi silmeye çalışırken beklenmedik bir hata oluştu"
+msgstr "Girdiyi silmeye çalışırken beklenmedik bir hata oluştu"
 
 #: kwalleteditor.cpp:930
 #, kde-format
@@ -311,12 +311,12 @@ msgstr "İstenilen cüzdan açılamıyor."
 #: kwalleteditor.cpp:966
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr "'<b>%1</b>' indirmesi için geçici dosya oluşturma başarısız."
+msgstr "“<b>%1</b>” indirmesi için geçici dosya oluşturulamıyor."
 
 #: kwalleteditor.cpp:973
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr "'<b>%1</b>' cüzdanına erişilemiyor."
+msgstr "“<b>%1</b>” cüzdanına erişilemiyor."
 
 #: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
 #: kwalleteditor.cpp:1156
@@ -325,18 +325,18 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
-"'<b>%1</b>' klasörü zaten bir '<b>%2</b>' girdisi içeriyor. Değiştirmek "
-"ister misiniz?"
+"“<b>%1</b>” klasörü halihazırda bir “<b>%2</b>” girdisi içeriyor. "
+"Değiştirmek istiyor musunuz?"
 
 #: kwalleteditor.cpp:1114
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "'<b>%1</b>' XML dosyasına erişilemiyor."
+msgstr "“<b>%1</b>” XML dosyasına erişilemiyor."
 
 #: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "'<b>%1</b>' XML dosyası girdi için okunamıyor."
+msgstr "“<b>%1</b>” XML dosyası girdi için okunamıyor."
 
 #: kwalleteditor.cpp:1126
 #, kde-format
@@ -346,7 +346,7 @@ msgstr "Hata: XML dosyası bir cüzdan içermiyor."
 #: kwalleteditor.cpp:1279
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "'<b>%1</b>' içerisinde depolama başarısız."
+msgstr "“<b>%1</b>” konumuna depolanamıyor."
 
 #: kwalletmanager.cpp:63
 #, kde-format
@@ -376,12 +376,12 @@ msgstr "Bir cüzdan açık."
 #: kwalletmanager.cpp:139 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Yeni Cüzdan..."
+msgstr "&Yeni Cüzdan…"
 
 #: kwalletmanager.cpp:144
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "&Cüzdanı Sil..."
+msgstr "&Cüzdanı Sil…"
 
 #: kwalletmanager.cpp:149
 #, kde-format
@@ -396,7 +396,7 @@ msgstr "&Şifreli Olarak İçe Aktar"
 #: kwalletmanager.cpp:159
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "&Cüzdan'ı Yapılandır..."
+msgstr "&Cüzdan’ı Yapılandır…"
 
 #: kwalletmanager.cpp:167
 #, kde-format
@@ -467,7 +467,7 @@ msgstr "Yeni Bir Tane Dene"
 #: kwalletmanager.cpp:380
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr "'%1' adlı cüzdanı silmek istediğinizden emin misiniz?"
+msgstr "“%1” adlı cüzdanı silmek istediğinizden emin misiniz?"
 
 #: kwalletmanager.cpp:386
 #, kde-format
@@ -541,12 +541,12 @@ msgstr "K Cüzdan hizmetine bağlanırken bir hata oluştu:<nl/>%1"
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
 msgid "&Open..."
-msgstr "&Aç..."
+msgstr "&Aç…"
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "&Parolayı Değiştir..."
+msgstr "&Parolayı Değiştir…"
 
 #: kwalletpopup.cpp:51
 #, kde-format
@@ -589,8 +589,7 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Telif Hakkı ©2013–2017, K Cüzdan Yöneticisi yazarları"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -598,11 +597,10 @@ msgstr "Valentin Rusu"
 #: main.cpp:35
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Önceki bakımcı - kullanıcı arayüzünün yeniden düzenlenmesi"
+msgstr "Önceki bakımcı — kullanıcı arayüzünün yeniden düzenlenmesi"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -613,8 +611,7 @@ msgid "Original author and former maintainer"
 msgstr "Özgün yazar ve önceki bakımcı"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -625,8 +622,7 @@ msgid "Developer and former maintainer"
 msgstr "Geliştirici ve önceki bakımcı"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
@@ -667,7 +663,7 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "'%1' cüzdanı şu anda açık."
+msgstr "“%1” cüzdanı şu anda açık."
 
 #: walletcontrolwidget.cpp:90
 #, kde-format
@@ -684,13 +680,13 @@ msgstr "KSqueezedTextLabel"
 #: walletcontrolwidget.ui:54
 #, kde-format
 msgid "Open..."
-msgstr "Aç..."
+msgstr "Aç…"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
-msgstr "Parolayı Değiştir..."
+msgstr "Parolayı Değiştir…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80
