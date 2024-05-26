@@ -114,10 +114,7 @@
         "Name[wa]": "Poite-manoye KDE",
         "Name[x-test]": "xxKDE Walletxx",
         "Name[zh_CN]": "KDE 密码库",
-        "Name[zh_TW]": "KDE 錢包",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "KDE 錢包"
     },
     "X-DocPath": "kwallet5/kwallet-kcontrol-module.html",
     "X-KDE-Keywords": "wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager",
