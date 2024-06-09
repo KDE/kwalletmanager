@@ -3,21 +3,21 @@
 # Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Mattias Newzella <newzella@linux.nu>, 2004.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2006, 2007, 2008, 2009.
+# SPDX-FileCopyrightText: 2004, 2006, 2007, 2008, 2009, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
 # Stefan Asserhall <stefan.asserhall@bredband.net>, 2005, 2010, 2013, 2015, 2016, 2017, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-14 01:37+0000\n"
-"PO-Revision-Date: 2023-07-31 10:24+0200\n"
+"PO-Revision-Date: 2024-06-08 15:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -430,8 +430,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Välj ett namn för den nya plånboken:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Ny plånbok"
@@ -528,7 +527,7 @@ msgstr "&Hjälp"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Ett fel uppstod vid anslutning till plånbokstjänsten:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:77
 #, kde-format
@@ -586,10 +585,9 @@ msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Underhåll, omstrukturering av användargränssnitt"
+msgstr "Tidigare underhåll, omstrukturering av användargränssnitt"
 
 #: main.cpp:38
 #, kde-format
@@ -647,22 +645,17 @@ msgid "&Close"
 msgstr "Stän&g"
 
 #: walletcontrolwidget.cpp:74
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Plånboken '%1' är för närvarande öppen"
+msgstr "Plånboken '%1' är för närvarande öppen."
 
 #: walletcontrolwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Plånboken är för närvarande stängd"
+msgstr "Plånboken är för närvarande stängd."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
