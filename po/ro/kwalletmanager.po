@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:42+0000\n"
-"PO-Revision-Date: 2024-02-24 15:55+0000\n"
+"PO-Revision-Date: 2024-06-09 13:03+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -584,8 +584,7 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Drept de autor ©2013–2017, Autorii KWallet Manager"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -596,8 +595,7 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr "Fost responsabil, reproiectarea interfeței cu utilizatorul"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -608,8 +606,7 @@ msgid "Original author and former maintainer"
 msgstr "Autor original și fost responsabil"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -620,8 +617,7 @@ msgid "Developer and former maintainer"
 msgstr "Dezvoltator și fost responsabil"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
