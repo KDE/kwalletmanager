@@ -3,6 +3,9 @@
   <id>org.kde.kwalletmanager5</id>
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
   <name>KWalletManager</name>
   <name xml:lang="ar">مدير محفظتك</name>
   <name xml:lang="ast">KWalletManager</name>
