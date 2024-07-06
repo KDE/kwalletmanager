@@ -218,7 +218,7 @@ msgstr "密码服务"
 #: walletconfigwidget.ui:269
 #, kde-format
 msgid "Use KWallet for the Secret Service interface"
-msgstr "使用 KWallet 作为密码服务接口"
+msgstr "使用 KWallet 密码库作为密码服务接口"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: walletconfigwidget.ui:279
@@ -228,8 +228,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"密码服务接口允许应用程序存储密码和其他保密数据。禁用它以允许第三方密码库服"
-"务，如 KeePassXC 或 GNOME 密钥环来管理它。"
+"密码服务接口用于为应用程序存储密码以及其他保密数据。如果要使用第三方密码库服"
+"务来管理密码服务接口，例如 KeePassXC 或者 GNOME 密钥环，请禁用 KWallet 密码库"
+"服务。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
