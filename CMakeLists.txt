@@ -7,8 +7,8 @@ set (RELEASE_SERVICE_VERSION_MICRO "70")
 set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
 project(kwalletmanager5 VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "6.5.0")
-set(KF_MIN_VERSION "5.240.0")
+set(QT_MIN_VERSION "6.7.0")
+set(KF_MIN_VERSION "6.3.0")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -58,8 +58,8 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     Service
 )
 
-ecm_set_disabled_deprecation_versions(QT 6.6
-    KF 5.240.0
+ecm_set_disabled_deprecation_versions(QT 6.7
+    KF 6.4.0
 )
 
 add_subdirectory( doc )
