@@ -104,7 +104,7 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
 
     box = new QVBoxLayout(_entryStack->widget(2));
     box->setContentsMargins(0, 0, 0, 0);
-    _mapEditorShowHide = new QCheckBox(i18n("&Show values"), _entryStack->widget(2));
+    _mapEditorShowHide = new QCheckBox(i18nc("@option:check", "&Show values"), _entryStack->widget(2));
     connect(_mapEditorShowHide, &QCheckBox::toggled, this, &KWalletEditor::showHideMapEditorValue);
     _mapEditor = new KWMapEditor(_currentMap, _entryStack->widget(2));
     box->addWidget(_mapEditorShowHide);
