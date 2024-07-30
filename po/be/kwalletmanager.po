@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2007-04-04 17:15+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -114,6 +114,7 @@ msgstr ""
 
 #: kwalleteditor.cpp:107
 #, fuzzy, kde-format
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Паказаць значэнні"
 
@@ -547,6 +548,7 @@ msgstr "Значэнне"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Новы запіс"
 

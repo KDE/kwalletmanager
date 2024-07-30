@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2024-05-23 08:34+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -117,7 +117,9 @@ msgid "Search"
 msgstr "Buscar"
 
 #: kwalleteditor.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Show values"
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Amo&sar os valores"
 
@@ -555,7 +557,9 @@ msgid "Value"
 msgstr "Valor"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Entry"
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Eliminar a entrada"
 

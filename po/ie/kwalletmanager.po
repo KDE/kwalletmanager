@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -113,6 +113,7 @@ msgstr "Serchar"
 
 #: kwalleteditor.cpp:107
 #, fuzzy, kde-format
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Monstrar valores in _bites"
 
@@ -544,6 +545,7 @@ msgstr "Valore"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Ne successat remover un element: %1"
 

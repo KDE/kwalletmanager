@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2009-03-01 12:38+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -116,7 +116,9 @@ msgid "Search"
 msgstr ""
 
 #: kwalleteditor.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Show values"
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "मूल्य देखाव (&S)"
 
@@ -564,6 +566,7 @@ msgstr "मान"
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
 #| msgid "New Entry"
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "नवा एन्ट्री"
 

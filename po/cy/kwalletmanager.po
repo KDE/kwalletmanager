@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ../cy/messages//kdeutils/kwalletmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandrakesoft.com>\n"
 "Language-Team: cy <LL@li.org>\n"
@@ -108,6 +108,7 @@ msgstr ""
 
 #: kwalleteditor.cpp:107
 #, kde-format
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr ""
 
@@ -544,6 +545,7 @@ msgstr "Gwerth"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Dile&u Plygell"
 

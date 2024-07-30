@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2024-05-21 10:08+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -116,7 +116,9 @@ msgid "Search"
 msgstr "Cerca"
 
 #: kwalleteditor.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Show values"
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Mon&stra valores"
 
@@ -559,7 +561,9 @@ msgid "Value"
 msgstr "Valor"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Entry"
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Dele entrata"
 

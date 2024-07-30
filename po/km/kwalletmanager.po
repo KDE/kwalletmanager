@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2010-12-14 11:03+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -111,7 +111,9 @@ msgid "Search"
 msgstr ""
 
 #: kwalleteditor.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Show values"
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "បង្ហាញ​តម្លៃ"
 
@@ -556,6 +558,7 @@ msgstr "តម្លៃ"
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
 #| msgid "New Entry"
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "ធាតុ​ថ្មី"
 

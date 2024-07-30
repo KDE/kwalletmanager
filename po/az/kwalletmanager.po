@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2022-10-17 23:41+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -113,7 +113,9 @@ msgid "Search"
 msgstr "Axtarış"
 
 #: kwalleteditor.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Show values"
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Dəyərləri gö&stərmək"
 
@@ -553,7 +555,9 @@ msgid "Value"
 msgstr "Dəyər"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Entry"
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Girişi silmək"
 

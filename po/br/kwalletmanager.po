@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kwalletmanager.pot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:44+0000\n"
 "PO-Revision-Date: 2004-09-21 18:36+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -115,7 +115,9 @@ msgid "Search"
 msgstr ""
 
 #: kwalleteditor.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Show values"
+msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Diskouez ar gwerzhioù"
 
@@ -562,6 +564,7 @@ msgstr "Gwerzh"
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
 #, fuzzy, kde-format
 #| msgid "New Entry"
+msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Bouetadur nevez"
 
