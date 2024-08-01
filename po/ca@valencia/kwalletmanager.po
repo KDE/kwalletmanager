@@ -2,7 +2,7 @@
 # Copyright (C) 2003-2024 This_file_is_part_of_KDE
 #
 # Albert Astals Cid <aacid@kde.org>, 2003, 2004.
-# Josep M. Ferrer <txemaq@gmail.com>, 2005, 2006, 2007, 2008, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2005, 2006, 2007, 2008, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Joan Maspons <joanmaspons@gmail.com>, 2009.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2016, 2017, 2020, 2022.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:44+0000\n"
-"PO-Revision-Date: 2024-05-21 15:44+0200\n"
+"PO-Revision-Date: 2024-07-30 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -118,8 +118,7 @@ msgid "Search"
 msgstr "Busca"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Mo&stra els valors"
@@ -227,7 +226,7 @@ msgstr "Este nom de directori ja s'utilitza. Voleu tornar-ho a intentar?"
 #: kwalleteditor.cpp:439 kwalleteditor.cpp:798
 #, kde-format
 msgid "Try Again"
-msgstr "Torna-ho a intentar"
+msgstr "Torneu-ho a provar"
 
 #: kwalleteditor.cpp:440 kwalleteditor.cpp:799 kwalletmanager.cpp:355
 #, kde-format
@@ -558,8 +557,7 @@ msgid "Value"
 msgstr "Valor"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Suprimix l'entrada"
