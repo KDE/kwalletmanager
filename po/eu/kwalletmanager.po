@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:44+0000\n"
-"PO-Revision-Date: 2024-07-09 11:38+0200\n"
+"PO-Revision-Date: 2024-08-03 11:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -121,11 +121,10 @@ msgid "Search"
 msgstr "Bilatu"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
-msgstr "&Erakutsi balioak"
+msgstr "Erakut&si balioak"
 
 #: kwalleteditor.cpp:207
 #, kde-format
@@ -562,8 +561,7 @@ msgid "Value"
 msgstr "Balioa"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Ezabatu sarrera"
