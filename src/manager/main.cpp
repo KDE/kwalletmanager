@@ -18,7 +18,6 @@
 int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
-    KCrash::initialize();
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("kwalletmanager"));
 
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
@@ -38,7 +37,7 @@ int main(int argc, char **argv)
     aboutData.addAuthor(i18nc("@info:credit", "Isaac Clerencia"), i18n("Developer"), QStringLiteral("isaac@warp.es"));
 
     KAboutData::setApplicationData(aboutData);
-
+    KCrash::initialize();
     QCommandLineParser parser;
 
     aboutData.setupCommandLine(&parser);
