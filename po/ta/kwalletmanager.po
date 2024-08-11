@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2005-03-24 01:18-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team:  <tamilpc@ambalam.com>\n"
@@ -570,80 +570,80 @@ msgstr "புதிய உள்ளீடு"
 msgid "&New Entry"
 msgstr "&புதிய உள்ளீடு"
 
-#: main.cpp:27
+#: main.cpp:26
 #, fuzzy, kde-format
 #| msgid "KDE Wallet Manager"
 msgid "Wallet Manager"
 msgstr "KDE சுருக்குபை மேளாளர்."
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE சுருக்குபை மேளாளர் கருவி."
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "(c) 2003,2004 George Staikos"
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "(c) 2003,2004 ஜார்ஜ் ஸ்டைகோஸ்"
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "Primary author and maintainer"
 msgid "Original author and former maintainer"
 msgstr "ஆரம்ப எழுத்தாளர் மற்றும் பாதுகாவளர்"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Primary author and maintainer"
 msgid "Developer and former maintainer"
 msgstr "ஆரம்ப எழுத்தாளர் மற்றும் பாதுகாவளர்"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgid "Show window on startup"
 msgstr "துவக்கத்தில் சாளரத்தைக் காட்டு"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "kwalletdஆல் மட்டும் பயன்படுத்திய"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "A wallet name"
 msgstr "ஒரு சிறு பை பெயர்"

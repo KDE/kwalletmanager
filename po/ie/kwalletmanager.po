@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -554,80 +554,80 @@ msgstr "Ne successat remover un element: %1"
 msgid "&New Entry"
 msgstr "Nov inscrition"
 
-#: main.cpp:27
+#: main.cpp:26
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Gerente del Porta-papere"
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "Gerente del Porta-papere de KDE"
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright ©2013–2017, Li autores del gerente de KWallet"
 
-#: main.cpp:35
+#: main.cpp:34
 #, fuzzy, kde-format
 #| msgid "Valentin Rusu"
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:35
+#: main.cpp:34
 #, fuzzy, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr "Die Benutzeroberfläche konnte nicht geladen werden"
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "George Staikos"
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 msgid "Original author and former maintainer"
 msgstr "Autor e anteyan mantenetor"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Michael Leupold"
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 msgid "Developer and former maintainer"
 msgstr "Autor e anteyan mantenetor"
 
-#: main.cpp:38
+#: main.cpp:37
 #, fuzzy, kde-format
 #| msgid "Isaac Clerencia"
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr "Developator"
 
-#: main.cpp:45
+#: main.cpp:44
 #, fuzzy, kde-format
 msgid "Show window on startup"
 msgstr "Centrar li fenestre al inicie."
 
-#: main.cpp:46
+#: main.cpp:45
 #, fuzzy, kde-format
 msgid "For use by kwalletd only"
 msgstr "&Usar solmen li preferet clav-paroles"
 
-#: main.cpp:47
+#: main.cpp:46
 #, fuzzy, kde-format
 msgid "A wallet name"
 msgstr "Porta-papere"

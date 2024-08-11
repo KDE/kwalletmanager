@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2007-09-09 11:22+0545\n"
 "Last-Translator: Narayan Kumar Magar <narayan@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -576,81 +576,81 @@ msgstr "नयाँ प्रविष्टि"
 msgid "&New Entry"
 msgstr "नयाँ प्रविष्टि"
 
-#: main.cpp:27
+#: main.cpp:26
 #, fuzzy, kde-format
 #| msgid "KDE Wallet Manager"
 msgid "Wallet Manager"
 msgstr "केडीई वालेट प्रबन्धक"
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "केडीई वालेट व्यवस्थापन उपकरण"
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "George Staikos"
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "जर्ज स्टाकोस"
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "Primary author and maintainer"
 msgid "Original author and former maintainer"
 msgstr "प्राथमिक लेखक र सम्भारकर्ता"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Primary author and maintainer"
 msgid "Developer and former maintainer"
 msgstr "प्राथमिक लेखक र सम्भारकर्ता"
 
-#: main.cpp:38
+#: main.cpp:37
 #, fuzzy, kde-format
 #| msgid "Isaac Clerencia"
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "इसाक क्लेरेन्सिया"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr "विकासकर्ता"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgid "Show window on startup"
 msgstr "सुरुआतमा सञ्झ्याल देखाउनुहोस्"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "केडीई वालेटद्वारा मात्र प्रयोग गर्नका लागि"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "A wallet name"
 msgstr "वालेट नाम"

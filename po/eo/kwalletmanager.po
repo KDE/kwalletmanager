@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2024-07-30 21:06+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -562,76 +562,76 @@ msgstr "Forigi eron"
 msgid "&New Entry"
 msgstr "&Nova Eniro"
 
-#: main.cpp:27
+#: main.cpp:26
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Monujo-Manaĝero"
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE Monujo-Administra Ilo"
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Kopirajto ©2013–2017, aŭtoroj de KWallet Manager"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr "Antaŭa Prizorganto, refactoring de uzantinterfaco"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Origina aŭtoro kaj iama vartisto"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Ellaboranto kaj iama prizorganto"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr "Kreinto"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgid "Show window on startup"
 msgstr "Montri fenestron ĉe ekfunkciigo"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Nur por uzo de kwalletd"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "A wallet name"
 msgstr "Nomo de monujo"

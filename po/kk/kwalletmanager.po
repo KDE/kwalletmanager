@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2013-09-20 03:17+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -570,82 +570,82 @@ msgstr "Жазуды өшіру"
 msgid "&New Entry"
 msgstr "&Жаңа жазу"
 
-#: main.cpp:27
+#: main.cpp:26
 #, fuzzy, kde-format
 #| msgid "KDE Wallet Manager"
 msgid "Wallet Manager"
 msgstr "KDE әмиян менеджері"
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE әмиян басқару құралы"
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, fuzzy, kde-format
 #| msgid "Valentin Rusu"
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:35
+#: main.cpp:34
 #, fuzzy, kde-format
 #| msgid "Maintainer, user interface refactoring"
 msgid "Former Maintainer, user interface refactoring"
 msgstr "Жетілдірушісі, пайдаланушы интерфейс рефакторингі"
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "George Staikos"
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Бастапқы авторы мен бұрынғы жетілдірушісі"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Michael Leupold"
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Құрастырушысы мен бұрынғы жетілдірушісі"
 
-#: main.cpp:38
+#: main.cpp:37
 #, fuzzy, kde-format
 #| msgid "Isaac Clerencia"
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr "Құрастырушысы"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgid "Show window on startup"
 msgstr "Бастағанда терезесі көрсетілсін"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Тек kwalletd қызметтің қолдануы үшін"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "A wallet name"
 msgstr "Әмияннің атауы"

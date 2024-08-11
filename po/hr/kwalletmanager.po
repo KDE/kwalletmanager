@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2011-07-22 17:01+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -578,81 +578,81 @@ msgid "&New Entry"
 msgstr "&Novi unos"
 
 # pmap: =/nom=KDE-ov upravitelj novčanika/gen=KDE-ovog upravitelja novčanika/dat=KDE-ovom upravitelju novčanika/aku=KDE-ovog upravitelja novčanika/ins=KDE-ovim upraviteljem novčanika/_r=m/_b=j/
-#: main.cpp:27
+#: main.cpp:26
 #, fuzzy, kde-format
 #| msgid "KDE Wallet Manager"
 msgid "Wallet Manager"
 msgstr "KDE-ov upravitelj novčanika"
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE-ov alat za upravljanje novčanikom"
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr ""
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:35
 #, fuzzy, kde-format
 #| msgid "George Staikos"
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Izvorni autor i bivši održavatelj"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Michael Leupold"
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Original author and former maintainer"
 msgid "Developer and former maintainer"
 msgstr "Izvorni autor i bivši održavatelj"
 
-#: main.cpp:38
+#: main.cpp:37
 #, fuzzy, kde-format
 #| msgid "Isaac Clerencia"
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr "Razvijatelj"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgid "Show window on startup"
 msgstr "Prikaži prozor pri pokretanju"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Ovo će koristiti samo kwalletd"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "A wallet name"
 msgstr "Ime novčanik"

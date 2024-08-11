@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:44+0000\n"
+"POT-Creation-Date: 2024-08-11 00:43+0000\n"
 "PO-Revision-Date: 2024-05-29 09:42+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -568,76 +568,76 @@ msgstr "Bejegyzés törlése"
 msgid "&New Entry"
 msgstr "Ú&j bejegyzés"
 
-#: main.cpp:27
+#: main.cpp:26
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Jelszókezelő"
 
-#: main.cpp:29
+#: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
 msgstr "KDE-alapú program jelszavak biztonságos kezeléséhez"
 
-#: main.cpp:31
+#: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright © A KWallet szerzői, 2013-2017."
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
 msgstr "Korábbi karbantartó, felhasználói felület újraírása"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Original author and former maintainer"
 msgstr "Az eredeti szerző, korábbi karbantartó"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Fejlesztő és korábbi karbantartó"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Developer"
 msgstr "Fejlesztő"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgid "Show window on startup"
 msgstr "Az ablak jelenjen meg indításkor"
 
-#: main.cpp:46
+#: main.cpp:45
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Csak a kwalletd használhatja"
 
-#: main.cpp:47
+#: main.cpp:46
 #, kde-format
 msgid "A wallet name"
 msgstr "A tároló neve"
