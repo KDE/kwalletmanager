@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-11 00:43+0000\n"
-"PO-Revision-Date: 2024-05-24 01:00+0300\n"
+"PO-Revision-Date: 2024-08-12 16:03+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -115,11 +115,10 @@ msgid "Search"
 msgstr "Ieškoti"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
-msgstr "&Rodyti reiškmes"
+msgstr "&Rodyti reikšmes"
 
 #: kwalleteditor.cpp:207
 #, kde-format
@@ -555,8 +554,7 @@ msgid "Value"
 msgstr "Reikšmė"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Ištrinti įrašą"
