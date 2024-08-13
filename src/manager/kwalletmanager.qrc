@@ -1,6 +1,6 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
-    <qresource prefix="/kxmlgui5/kwalletmanager5">
+    <qresource prefix="/kxmlgui5/kwalletmanager">
         <file>kwalletmanager.rc</file>
     </qresource>
 </RCC>
