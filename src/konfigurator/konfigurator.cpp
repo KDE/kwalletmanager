@@ -60,8 +60,15 @@ KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
     connect(_wcw->_accessList, &QTreeWidget::customContextMenuRequested, this, &KWalletConfig::customContextMenuRequested);
     connect(_wcw->_secretServiceAPI, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
 
+    QStyle *style = widget()->style();
+    _wcw->launchButtonBar->setContentsMargins(style->pixelMetric(QStyle::PM_LayoutLeftMargin),
+                                              0,
+                                              style->pixelMetric(QStyle::PM_LayoutRightMargin),
+                                              style->pixelMetric(QStyle::PM_LayoutBottomMargin));
+
     _wcw->_accessList->setAllColumnsShowFocus(true);
     _wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
+    _wcw->tabWidget2->tabBar()->setExpanding(true);
     updateWalletLists();
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kwalletmanager"))) {
