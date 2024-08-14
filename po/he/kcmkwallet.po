@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-08-14 00:42+0000\n"
 "PO-Revision-Date: 2024-05-05 11:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,37 +28,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "New Wallet"
 msgstr "ארנק חדש"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "נא לבחור שם לארנק החדש:"
 
-#: konfigurator.cpp:214 konfigurator.cpp:292
+#: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
 msgid "Always Allow"
 msgstr "תמיד לאשר"
 
-#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
+#: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
 #, kde-format
 msgid "Always Deny"
 msgstr "תמיד לדחות"
 
-#: konfigurator.cpp:252
+#: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
 msgstr "ההרשאה נדחתה."
 
-#: konfigurator.cpp:252 konfigurator.cpp:254
+#: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "מודול שליטה בארנקי KDE"
 
-#: konfigurator.cpp:254
+#: konfigurator.cpp:261
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -67,19 +67,19 @@ msgstr ""
 "שגיאה בפעולת אימות:\n"
 "%1"
 
-#: konfigurator.cpp:352
+#: konfigurator.cpp:359
 #, kde-format
 msgid "&Delete"
 msgstr "מ&חיקה"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: walletconfigwidget.ui:16
+#: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
 msgstr "העדפות ארנק"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:22
+#: walletconfigwidget.ui:33
 #, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
@@ -89,13 +89,13 @@ msgstr ""
 "מציינת האם להשתמש בה או לא.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:25
+#: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
 msgstr "ה&פעלת תת־מערכת הארנק של KDE"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:35
+#: walletconfigwidget.ui:49
 #, kde-format
 msgid ""
 "It is best to close your wallets when you are not using them to prevent "
@@ -105,52 +105,20 @@ msgstr ""
 "בהם."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:38
+#: walletconfigwidget.ui:52
 #, kde-format
-msgid "Close Wallet"
+msgid "Close Behavior"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
+#: walletconfigwidget.ui:69
+#, fuzzy, kde-format
+#| msgid "Close Wallet"
+msgid "Close wallet:"
 msgstr "סגירת ארנק"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
-#, kde-format
-msgid ""
-"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
-"closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>לסגור ארנק לאחר משך חוסר פעילות.</b><br>כאשר ארנק נסגר צריך למלא סיסמה "
-"כדי לגשת אליו שוב.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:49
-#, kde-format
-msgid "Close when unused for:"
-msgstr "לסגור כשלא היה בשימוש למשך:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:62
-#, kde-format
-msgid " minutes"
-msgstr " דקות"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:99
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>לסגור את הארנק עם הפעלת שומר המסך.</b><br>כשארנק נסגר צריך סיסמה כדי "
-"לגשת אליו שוב.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:102
-#, kde-format
-msgid "Close when screensaver starts"
-msgstr "לסגור עם הפעלת שומר המסך"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:109
+#: walletconfigwidget.ui:76
 #, kde-format
 msgid ""
 "<p><b>Close wallet as soon as applications that use it have stopped.</"
@@ -163,68 +131,112 @@ msgstr ""
 "צריך סיסמה כדי לגשת אליו שוב.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:112
-#, kde-format
-msgid "Close when last application stops using it"
+#: walletconfigwidget.ui:79
+#, fuzzy, kde-format
+#| msgid "Close when last application stops using it"
+msgid "When last application stops using it"
 msgstr "לסגור כשהיישום האחרון מסיים להשתמש בו"
 
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:86
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>לסגור את הארנק עם הפעלת שומר המסך.</b><br>כשארנק נסגר צריך סיסמה כדי "
+"לגשת אליו שוב.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:89
+#, fuzzy, kde-format
+#| msgid "Close when screensaver starts"
+msgid "When screensaver starts"
+msgstr "לסגור עם הפעלת שומר המסך"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>לסגור ארנק לאחר משך חוסר פעילות.</b><br>כאשר ארנק נסגר צריך למלא סיסמה "
+"כדי לגשת אליו שוב.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:99
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "When unused for:"
+msgstr "לסגור כשלא היה בשימוש למשך:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:121
+#, kde-format
+msgid " minutes"
+msgstr " דקות"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:122
+#: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "בחירת ארנק אוטומטית"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: walletconfigwidget.ui:128
-#, kde-format
-msgid "Select wallet to use as default:"
-msgstr "נא לבחור ארנק לשימוש כברירת מחדל:"
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:165
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "ארנק שונה לסיסמאות מקומיות:"
 
-#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
-#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
 #, kde-format
 msgid "New..."
 msgstr "חדש…"
 
-#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:168
+#. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
+#: walletconfigwidget.ui:211
 #, kde-format
-msgid "Different wallet for local passwords:"
-msgstr "ארנק שונה לסיסמאות מקומיות:"
+msgid "Default wallet:"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:201
+#: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
 msgstr "מנהל ארנקים"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:207
+#: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "הצגת מנהל במגש המערכת"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:235
+#: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "הסתרת הסמל במגש המערכת עם סגירת הארנק האחרון"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:263
+#: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
 msgstr "השירות החשאי"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:269
-#, kde-format
-msgid "Use KWallet for the Secret Service interface"
+#: walletconfigwidget.ui:331
+#, fuzzy, kde-format
+#| msgid "Use KWallet for the Secret Service interface"
+msgid "Use &KWallet for the Secret Service interface"
 msgstr "להשתמש ב־KWallet לממשק השירות החשאי"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: walletconfigwidget.ui:279
+#. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
+#: walletconfigwidget.ui:341
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -236,37 +248,40 @@ msgstr ""
 "או צרור המפתחות של GNOME לנהל אותם במקום."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:328
+#: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
 msgstr "בקרת גישה"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:334
+#: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "להו&דיע כשיישום ניגש לארנק"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:348
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Wallet"
 msgstr "ארנק"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:359
+#: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
 msgstr "יישום"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:370
+#: walletconfigwidget.ui:418
 #, kde-format
 msgid "Policy"
 msgstr "מדיניות"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:406
+#: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "ה&פעלת מנהל הארנקים"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "נא לבחור ארנק לשימוש כברירת מחדל:"

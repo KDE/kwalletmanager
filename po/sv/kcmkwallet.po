@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-08-14 00:42+0000\n"
 "PO-Revision-Date: 2023-07-31 10:24+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -30,37 +30,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "New Wallet"
 msgstr "Ny plånbok"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Välj ett namn för den nya plånboken:"
 
-#: konfigurator.cpp:214 konfigurator.cpp:292
+#: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
 msgid "Always Allow"
 msgstr "Tillåt alltid"
 
-#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
+#: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
 #, kde-format
 msgid "Always Deny"
 msgstr "Neka alltid"
 
-#: konfigurator.cpp:252
+#: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
 msgstr "Rättigheter saknas."
 
-#: konfigurator.cpp:252 konfigurator.cpp:254
+#: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE:s inställningsmodul för plånbok"
 
-#: konfigurator.cpp:254
+#: konfigurator.cpp:261
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -69,19 +69,19 @@ msgstr ""
 "Fel när åtgärd skulle behörighetskontrolleras:\n"
 "%1"
 
-#: konfigurator.cpp:352
+#: konfigurator.cpp:359
 #, kde-format
 msgid "&Delete"
 msgstr "&Ta bort"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: walletconfigwidget.ui:16
+#: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
 msgstr "Inställning av plånbok"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:22
+#: walletconfigwidget.ui:33
 #, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
@@ -91,13 +91,13 @@ msgstr ""
 "lösenord. Det här alternativet anger om du vill använda det eller inte.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:25
+#: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
 msgstr "Aktivera &KDE:s plånbokssystem"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:35
+#: walletconfigwidget.ui:49
 #, kde-format
 msgid ""
 "It is best to close your wallets when you are not using them to prevent "
@@ -107,52 +107,20 @@ msgstr ""
 "förhindra andra att titta i dem eller använda dem."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:38
+#: walletconfigwidget.ui:52
 #, kde-format
-msgid "Close Wallet"
+msgid "Close Behavior"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
+#: walletconfigwidget.ui:69
+#, fuzzy, kde-format
+#| msgid "Close Wallet"
+msgid "Close wallet:"
 msgstr "Stäng plånbok"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
-#, kde-format
-msgid ""
-"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
-"closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>Stäng plånbok efter en viss tid utan aktivitet.</b><br>När en plånbok "
-"är stängd, behövs lösenordet för att komma åt den igen.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:49
-#, kde-format
-msgid "Close when unused for:"
-msgstr "Stäng om oanvänd i:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:62
-#, kde-format
-msgid " minutes"
-msgstr " minuter"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:99
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>Stäng plånbok så fort skärmsläckaren startar.</b><br>När en plånbok är "
-"stängd, behövs lösenordet för att komma åt den igen.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:102
-#, kde-format
-msgid "Close when screensaver starts"
-msgstr "Stäng när skärmsläckaren startar"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:109
+#: walletconfigwidget.ui:76
 #, kde-format
 msgid ""
 "<p><b>Close wallet as soon as applications that use it have stopped.</"
@@ -166,68 +134,112 @@ msgstr ""
 "den igen.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:112
-#, kde-format
-msgid "Close when last application stops using it"
+#: walletconfigwidget.ui:79
+#, fuzzy, kde-format
+#| msgid "Close when last application stops using it"
+msgid "When last application stops using it"
 msgstr "Stäng när det sista programmet slutar använda den"
 
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:86
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Stäng plånbok så fort skärmsläckaren startar.</b><br>När en plånbok är "
+"stängd, behövs lösenordet för att komma åt den igen.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:89
+#, fuzzy, kde-format
+#| msgid "Close when screensaver starts"
+msgid "When screensaver starts"
+msgstr "Stäng när skärmsläckaren startar"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Stäng plånbok efter en viss tid utan aktivitet.</b><br>När en plånbok "
+"är stängd, behövs lösenordet för att komma åt den igen.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:99
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "When unused for:"
+msgstr "Stäng om oanvänd i:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:121
+#, kde-format
+msgid " minutes"
+msgstr " minuter"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:122
+#: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "Automatiskt val av plånbok"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: walletconfigwidget.ui:128
-#, kde-format
-msgid "Select wallet to use as default:"
-msgstr "Välj plånbok som ska användas som standard:"
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:165
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "Alternativ plånbok för lokala lösenord:"
 
-#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
-#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
 #, kde-format
 msgid "New..."
 msgstr "Ny..."
 
-#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:168
+#. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
+#: walletconfigwidget.ui:211
 #, kde-format
-msgid "Different wallet for local passwords:"
-msgstr "Alternativ plånbok för lokala lösenord:"
+msgid "Default wallet:"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:201
+#: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Plånbokshantering"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:207
+#: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "Visa hanterare i aktivitetsfält"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:235
+#: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "Dölj ikonen i systembrickan när den sista plånboken stängs"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:263
+#: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
 msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:269
-#, kde-format
-msgid "Use KWallet for the Secret Service interface"
+#: walletconfigwidget.ui:331
+#, fuzzy, kde-format
+#| msgid "Use KWallet for the Secret Service interface"
+msgid "Use &KWallet for the Secret Service interface"
 msgstr "Använd plånboken som Secret Service-gränssnitt"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: walletconfigwidget.ui:279
+#. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
+#: walletconfigwidget.ui:341
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -239,40 +251,43 @@ msgstr ""
 "part såsom eePassXC eller GNOME nyckelring hantera det istället."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:328
+#: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
 msgstr "Åtkomstkontroll"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:334
+#: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "Fråga när ett &program använder en plånbok"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:348
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Wallet"
 msgstr "Plånbok"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:359
+#: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
 msgstr "Program"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:370
+#: walletconfigwidget.ui:418
 #, kde-format
 msgid "Policy"
 msgstr "Princip"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:406
+#: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Sta&rta plånbokshantering"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Välj plånbok som ska användas som standard:"
 
 #~ msgid "(c) 2003 George Staikos"
 #~ msgstr "© 2003 George Staikos"

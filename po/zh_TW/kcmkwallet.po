@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-08-14 00:42+0000\n"
 "PO-Revision-Date: 2023-02-18 00:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,37 +30,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "New Wallet"
 msgstr "新的錢包"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "請選擇新錢包的名稱："
 
-#: konfigurator.cpp:214 konfigurator.cpp:292
+#: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
 msgid "Always Allow"
 msgstr "總是允許"
 
-#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
+#: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
 #, kde-format
 msgid "Always Deny"
 msgstr "總是拒絕"
 
-#: konfigurator.cpp:252
+#: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
 msgstr "權限不足。"
 
-#: konfigurator.cpp:252 konfigurator.cpp:254
+#: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE Wallet 控制模組"
 
-#: konfigurator.cpp:254
+#: konfigurator.cpp:261
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -69,19 +69,19 @@ msgstr ""
 "當授權動作時發生錯誤：\n"
 "%1"
 
-#: konfigurator.cpp:352
+#: konfigurator.cpp:359
 #, kde-format
 msgid "&Delete"
 msgstr "刪除(&D)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: walletconfigwidget.ui:16
+#: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
 msgstr "錢包設定"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:22
+#: walletconfigwidget.ui:33
 #, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
@@ -91,13 +91,13 @@ msgstr ""
 "系統。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:25
+#: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
 msgstr "開啟 KDE wallet 子系統(&E)"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:35
+#: walletconfigwidget.ui:49
 #, kde-format
 msgid ""
 "It is best to close your wallets when you are not using them to prevent "
@@ -105,50 +105,20 @@ msgid ""
 msgstr "如果您不使用這個錢包，最好將它關閉，以避免其他人看到與使用它。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:38
+#: walletconfigwidget.ui:52
 #, kde-format
-msgid "Close Wallet"
+msgid "Close Behavior"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
+#: walletconfigwidget.ui:69
+#, fuzzy, kde-format
+#| msgid "Close Wallet"
+msgid "Close wallet:"
 msgstr "關閉錢包"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
-#, kde-format
-msgid ""
-"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
-"closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>當一陣子未使用之後關閉錢包</b><br/>錢包關閉後，要再使用需要密碼。</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:49
-#, kde-format
-msgid "Close when unused for:"
-msgstr "多久以後關閉："
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:62
-#, kde-format
-msgid " minutes"
-msgstr " 分鐘"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:99
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>當螢幕保護程式起動時關閉</b><br/>錢包關閉後，要再使用需要密碼。</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:102
-#, kde-format
-msgid "Close when screensaver starts"
-msgstr "當螢幕保護程式起動時關閉"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:109
+#: walletconfigwidget.ui:76
 #, kde-format
 msgid ""
 "<p><b>Close wallet as soon as applications that use it have stopped.</"
@@ -161,68 +131,110 @@ msgstr ""
 "啟。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:112
-#, kde-format
-msgid "Close when last application stops using it"
+#: walletconfigwidget.ui:79
+#, fuzzy, kde-format
+#| msgid "Close when last application stops using it"
+msgid "When last application stops using it"
 msgstr "當最後一個應用程式也不再使用之後關閉"
 
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:86
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>當螢幕保護程式起動時關閉</b><br/>錢包關閉後，要再使用需要密碼。</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:89
+#, fuzzy, kde-format
+#| msgid "Close when screensaver starts"
+msgid "When screensaver starts"
+msgstr "當螢幕保護程式起動時關閉"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>當一陣子未使用之後關閉錢包</b><br/>錢包關閉後，要再使用需要密碼。</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:99
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "When unused for:"
+msgstr "多久以後關閉："
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:121
+#, kde-format
+msgid " minutes"
+msgstr " 分鐘"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:122
+#: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "自動選擇錢包"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: walletconfigwidget.ui:128
-#, kde-format
-msgid "Select wallet to use as default:"
-msgstr "選擇預設使用的錢包："
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:165
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "本地密碼使用的不同錢包："
 
-#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
-#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
 #, kde-format
 msgid "New..."
 msgstr "新增..."
 
-#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:168
+#. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
+#: walletconfigwidget.ui:211
 #, kde-format
-msgid "Different wallet for local passwords:"
-msgstr "本地密碼使用的不同錢包："
+msgid "Default wallet:"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:201
+#: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
 msgstr "錢包管理者"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:207
+#: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "在系統匣中顯示管理者"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:235
+#: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "當最後一個錢包也關閉時從系統匣中移除"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:263
+#: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
 msgstr "秘密服務"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:269
-#, kde-format
-msgid "Use KWallet for the Secret Service interface"
+#: walletconfigwidget.ui:331
+#, fuzzy, kde-format
+#| msgid "Use KWallet for the Secret Service interface"
+msgid "Use &KWallet for the Secret Service interface"
 msgstr "為秘密服務介面使用 KWallet"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: walletconfigwidget.ui:279
+#. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
+#: walletconfigwidget.ui:341
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -233,40 +245,43 @@ msgstr ""
 "錢包服務（例如 KeePassXC 或 GNOME 鑰匙圈）來管理它。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:328
+#: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
 msgstr "權限控制"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:334
+#: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "當應用程式存取錢包時提示(&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:348
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Wallet"
 msgstr "錢包"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:359
+#: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
 msgstr "應用程式"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:370
+#: walletconfigwidget.ui:418
 #, kde-format
 msgid "Policy"
 msgstr "政策"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:406
+#: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "啟動錢包管理員(&L)"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "選擇預設使用的錢包："
 
 #~ msgid "(c) 2003 George Staikos"
 #~ msgstr "(c) 2003 George Staikos"

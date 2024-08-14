@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-08-14 00:42+0000\n"
 "PO-Revision-Date: 2022-11-08 13:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -32,37 +32,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "oneugene@ukr.net"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "New Wallet"
 msgstr "Нова торбинка"
 
-#: konfigurator.cpp:100
+#: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Виберіть, будь ласка, назву для торбинки:"
 
-#: konfigurator.cpp:214 konfigurator.cpp:292
+#: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
 msgid "Always Allow"
 msgstr "Завжди дозволяти"
 
-#: konfigurator.cpp:217 konfigurator.cpp:224 konfigurator.cpp:305
+#: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
 #, kde-format
 msgid "Always Deny"
 msgstr "Завжди відмовляти"
 
-#: konfigurator.cpp:252
+#: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
 msgstr "Доступ заборонено."
 
-#: konfigurator.cpp:252 konfigurator.cpp:254
+#: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Модуль керування торбинками KDE"
 
-#: konfigurator.cpp:254
+#: konfigurator.cpp:261
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -71,19 +71,19 @@ msgstr ""
 "Помилка під час виконання дії з розпізнавання:\n"
 "%1"
 
-#: konfigurator.cpp:352
+#: konfigurator.cpp:359
 #, kde-format
 msgid "&Delete"
 msgstr "&Вилучити"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: walletconfigwidget.ui:16
+#: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
 msgstr "Параметри торбинок"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:22
+#: walletconfigwidget.ui:33
 #, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
@@ -94,13 +94,13 @@ msgstr ""
 "системою.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:25
+#: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
 msgstr "&Ввімкнути систему роботи з торбинками для KDE"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:35
+#: walletconfigwidget.ui:49
 #, kde-format
 msgid ""
 "It is best to close your wallets when you are not using them to prevent "
@@ -110,54 +110,20 @@ msgstr ""
 "будь-кому переглядати їхній вміст або використати їх."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:38
+#: walletconfigwidget.ui:52
 #, kde-format
-msgid "Close Wallet"
+msgid "Close Behavior"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
+#: walletconfigwidget.ui:69
+#, fuzzy, kde-format
+#| msgid "Close Wallet"
+msgid "Close wallet:"
 msgstr "Замикання торбинки"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:46 walletconfigwidget.ui:59
-#, kde-format
-msgid ""
-"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
-"closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>Замикати торбинку, якщо до неї не було звернень впродовж певного "
-"періоду часу</b><br>Коли торбинку замкнуто, то потрібно знову ввести пароль "
-"для отримання доступу до її змісту.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:49
-#, kde-format
-msgid "Close when unused for:"
-msgstr "Замикати, якщо не використовується більше, ніж"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:62
-#, kde-format
-msgid " minutes"
-msgstr " хв."
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:99
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>Замикати торбинку як тільки буде запущено зберігач екрана.</b><br>Коли "
-"торбинку замкнуто, то потрібно знову ввести пароль для отримання доступу до "
-"її змісту.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:102
-#, kde-format
-msgid "Close when screensaver starts"
-msgstr "Замикати при запуску зберігача екрана"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:109
+#: walletconfigwidget.ui:76
 #, kde-format
 msgid ""
 "<p><b>Close wallet as soon as applications that use it have stopped.</"
@@ -172,68 +138,114 @@ msgstr ""
 "її вмісту.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:112
-#, kde-format
-msgid "Close when last application stops using it"
+#: walletconfigwidget.ui:79
+#, fuzzy, kde-format
+#| msgid "Close when last application stops using it"
+msgid "When last application stops using it"
 msgstr "Замикати, коли остання програма припинить використання"
 
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:86
+#, kde-format
+msgid ""
+"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
+"is closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Замикати торбинку як тільки буде запущено зберігач екрана.</b><br>Коли "
+"торбинку замкнуто, то потрібно знову ввести пароль для отримання доступу до "
+"її змісту.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
+#: walletconfigwidget.ui:89
+#, fuzzy, kde-format
+#| msgid "Close when screensaver starts"
+msgid "When screensaver starts"
+msgstr "Замикати при запуску зберігача екрана"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#, kde-format
+msgid ""
+"<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+"closed the password is needed to access it again.</p>"
+msgstr ""
+"<p><b>Замикати торбинку, якщо до неї не було звернень впродовж певного "
+"періоду часу</b><br>Коли торбинку замкнуто, то потрібно знову ввести пароль "
+"для отримання доступу до її змісту.</p>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: walletconfigwidget.ui:99
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "When unused for:"
+msgstr "Замикати, якщо не використовується більше, ніж"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
+#: walletconfigwidget.ui:121
+#, kde-format
+msgid " minutes"
+msgstr " хв."
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:122
+#: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "Автоматичний вибір торбинки"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: walletconfigwidget.ui:128
-#, kde-format
-msgid "Select wallet to use as default:"
-msgstr "Типово використовувати торбинку:"
+#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
+#: walletconfigwidget.ui:165
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "Окрема торбинка для локальних паролів:"
 
-#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
-#: walletconfigwidget.ui:161 walletconfigwidget.ui:191
+#. i18n: ectx: property (text), widget (QPushButton, _newWallet)
+#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
 #, kde-format
 msgid "New..."
 msgstr "Нова..."
 
-#. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:168
+#. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
+#: walletconfigwidget.ui:211
 #, kde-format
-msgid "Different wallet for local passwords:"
-msgstr "Окрема торбинка для локальних паролів:"
+msgid "Default wallet:"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:201
+#: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Менеджер торбинок"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:207
+#: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "Відображати менеджер у системному лотку"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:235
+#: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "Ховати піктограму при замиканні останньої відкритої торбинки"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:263
+#: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
 msgstr "Секретна служба"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:269
-#, kde-format
-msgid "Use KWallet for the Secret Service interface"
+#: walletconfigwidget.ui:331
+#, fuzzy, kde-format
+#| msgid "Use KWallet for the Secret Service interface"
+msgid "Use &KWallet for the Secret Service interface"
 msgstr "Використовувати KWallet для інтерфейсу «Секретної служби»"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: walletconfigwidget.ui:279
+#. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
+#: walletconfigwidget.ui:341
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -246,40 +258,43 @@ msgstr ""
 "KeePassXC або «В'язці ключів GNOME»."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:328
+#: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
 msgstr "Керування доступом"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:334
+#: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "Прос&ити підтвердження, коли програма звертається до торбинки"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:348
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Wallet"
 msgstr "Торбинка"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:359
+#: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
 msgstr "Програма"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:370
+#: walletconfigwidget.ui:418
 #, kde-format
 msgid "Policy"
 msgstr "Поведінка"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:406
+#: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Зап&устити менеджер торбинок"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Типово використовувати торбинку:"
 
 #~ msgid "(c) 2003 George Staikos"
 #~ msgstr "© George Staikos, 2003"
