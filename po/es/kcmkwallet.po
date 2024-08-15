@@ -2,7 +2,7 @@
 # Copyright (C) 2003, 2004, 2007, 2008 Free Software Foundation, Inc.
 #
 # Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003.
-# Eloy Cuadra <eloihr2@eresmas.com>, 2003, 2004.
+# SPDX-FileCopyrightText: 2003, 2004, 2024 Eloy Cuadra <eloihr2@eresmas.com>
 # Eloy Cuadra <ecuadra@eloihr.net>, 2004, 2007, 2008, 2009, 2011, 2013, 2014, 2016, 2021, 2022.
 # Javier Viñal <fjvinal@gmail.com>, 2013.
 msgid ""
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2022-11-08 19:38+0100\n"
+"PO-Revision-Date: 2024-08-14 12:32+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -111,14 +111,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "Comportamiento de cierre"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Cerrar cartera"
+msgstr "Cerrar cartera:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -136,10 +135,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
-msgstr "Cerrar cuando la última aplicación deja de usarla"
+msgstr "Cuando la última aplicación deja de usarla"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -148,16 +146,15 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Cerrar cartera cuando se activa el protector de pantalla.</b> "
-"<br>Cuando se cierra una cartera es necesario introducir la contraseña para "
-"acceder a ella de nuevo.</p>"
+"<p><b>Cerrar cartera cuando se activa el protector de pantalla.</"
+"b><br>Cuando se cierra una cartera es necesario introducir la contraseña "
+"para acceder a ella de nuevo.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "Cerrar cuando se activa el protector de pantalla"
+msgstr "Cuando se activa el protector de pantalla"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -167,16 +164,15 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Cerrar cartera tras un periodo de inactividad</b> <br>Cuando se cierra "
-"una cartera es necesario introducir la contraseña para acceder a ella de "
-"nuevo.</p>"
+"<p><b>Cerrar la cartera tras un periodo de inactividad.</b><br>Cuando se "
+"cierra una cartera es necesario introducir la contraseña para acceder a ella "
+"de nuevo.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
-msgstr "Cerrar cuando no se use en:"
+msgstr "Cuando no se use durante:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
@@ -192,10 +188,9 @@ msgstr "Selección automática de cartera"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Cartera alternativa para las contraseñas locales:"
+msgstr "Usar distintas carteras predeterminadas para las contraseñas locales"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -208,7 +203,7 @@ msgstr "Nueva..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "Cartera predeterminada:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -236,10 +231,9 @@ msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
-#, fuzzy, kde-format
-#| msgid "Use KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "Usar KWallet para la interfaz de Secret Service"
+msgstr "Usar &KWallet para la interfaz de Secret Service"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341

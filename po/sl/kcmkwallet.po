@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2022-11-08 11:00+0100\n"
+"PO-Revision-Date: 2024-08-14 06:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -113,14 +113,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "Obnašanje ob zapiranju"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Zapri listnico"
+msgstr "Zapri listnico:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -138,8 +137,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
 msgstr "Zapri, ko jo preneha uporabljati zadnji program"
 
@@ -155,10 +153,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "Zapri, ko se zažene ohranjevalnik zaslona"
+msgstr "Ko se zažene ohranjevalnik zaslona"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -173,8 +170,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
 msgstr "Zapri, če ni uporabljena več kot:"
 
@@ -192,10 +188,9 @@ msgstr "Samodejni izbor listnice"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Druga listnica za krajevna gesla:"
+msgstr "Uporabi drugo privzeto listnico za krajevna gesla"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -208,7 +203,7 @@ msgstr "Nova ..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "Privzeta listnica:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -236,8 +231,7 @@ msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
-#, fuzzy, kde-format
-#| msgid "Use KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use &KWallet for the Secret Service interface"
 msgstr "Uporabi KWallet kot vmesnik za Secret Service"
 

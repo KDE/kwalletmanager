@@ -281,6 +281,3 @@ msgstr "Praksis"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Start lommebokhåndtering"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Velg standard lommebok:"

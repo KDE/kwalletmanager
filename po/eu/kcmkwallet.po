@@ -1,25 +1,25 @@
 # Translation for kcmkwallet.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2023 This file is copyright:
+# Copyright (C) 2003-2024 This file is copyright:
 # This file is distributed under the same license as the kwalletmanager package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003, 2005.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2004, 2005, 2008, 2009, 2014, 2017, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2004, 2005, 2008, 2009, 2014, 2017, 2021, 2022, 2023, 2024.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkwallet\n"
+"Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2022-11-08 07:13+0100\n"
+"PO-Revision-Date: 2024-08-14 09:20+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -115,14 +115,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "Itxi jokabidea"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Itxi zorroa"
+msgstr "Itxi zorroa:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -140,10 +139,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
-msgstr "Itxi, azken aplikazioak erabiltzeari uzten dionean"
+msgstr "Azken aplikazioak erabiltzeari uzten dionean"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -157,10 +155,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "Itxi, pantaila-babeslea martxan jartzen denean"
+msgstr "Pantaila-babeslea martxan jartzen denean"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -175,10 +172,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
-msgstr "Itxi denbora jakin batez erabili ez denean: "
+msgstr "Honenbestez erabiltzen ez denean:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
@@ -194,10 +190,9 @@ msgstr "Zorro-hautaketa automatikoa"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Zorro ezberdina bertako pasahitzentzako:"
+msgstr "Erabili zorro lehenetsi ezberdina pasahitz lokaletarako"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -210,7 +205,7 @@ msgstr "Berria..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "Zorro lehenetsia:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -238,10 +233,9 @@ msgstr "Zerbitzu sekretua"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
-#, fuzzy, kde-format
-#| msgid "Use KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "Erabili KWallet Zerbitzu sekretu interfazerako"
+msgstr "Erabili &KWallet Zerbitzu Sekretuaren interfazerako"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -251,10 +245,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"Zerbitzu sekretu interfazeak aplikazioei pasahitzak eta beste datu "
-"konfidentzial batzuk gordetzen uzten die. Ezgaitu hori hirugarrenen zorro "
-"zerbitzuek haiek kudeatzea baimentzeko, hala nola «KeePassXC» edo GNOMEren "
-"«Keyring»."
+"Zerbitzu sekretuaren interfazeak aplikazioei pasahitzak eta isilpeko beste "
+"datu batzuk gordetzen uzten die. Ezgaitu hori hirugarrenen zorro zerbitzuek "
+"hura kudeatzea baimentzeko, hala nola «KeePassXC» edo GNOMEren «Keyring»."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
