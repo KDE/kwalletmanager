@@ -2,7 +2,7 @@
 # Copyright (C) 2003, 2004, 2007, 2008 Free Software Foundation, Inc.
 #
 # Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003.
-# Eloy Cuadra <eloihr2@eresmas.com>, 2003, 2004.
+# SPDX-FileCopyrightText: 2003, 2004, 2024 Eloy Cuadra <eloihr2@eresmas.com>
 # Eloy Cuadra <ecuadra@eloihr.net>, 2004, 2007, 2008, 2009, 2011, 2013, 2014, 2016, 2021, 2022.
 # Javier Viñal <fjvinal@gmail.com>, 2013.
 msgid ""
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 00:41+0000\n"
-"PO-Revision-Date: 2022-11-08 19:38+0100\n"
+"PO-Revision-Date: 2024-08-14 12:32+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -121,9 +121,9 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Cerrar cartera tras un periodo de inactividad</b> <br>Cuando se cierra "
-"una cartera es necesario introducir la contraseña para acceder a ella de "
-"nuevo.</p>"
+"<p><b>Cerrar la cartera tras un periodo de inactividad.</b><br>Cuando se "
+"cierra una cartera es necesario introducir la contraseña para acceder a ella "
+"de nuevo.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:49
@@ -144,9 +144,9 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Cerrar cartera cuando se activa el protector de pantalla.</b> "
-"<br>Cuando se cierra una cartera es necesario introducir la contraseña para "
-"acceder a ella de nuevo.</p>"
+"<p><b>Cerrar cartera cuando se activa el protector de pantalla.</"
+"b><br>Cuando se cierra una cartera es necesario introducir la contraseña "
+"para acceder a ella de nuevo.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:102

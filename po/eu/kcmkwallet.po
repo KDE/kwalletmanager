@@ -1,7 +1,7 @@
 # Translation for kcmkwallet.po to Euskara/Basque (eu).
 # Copyright (C) 2003-2023 This file is copyright:
 # This file is distributed under the same license as the kwalletmanager package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003, 2005.
@@ -9,17 +9,17 @@
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkwallet\n"
+"Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 00:41+0000\n"
-"PO-Revision-Date: 2022-11-08 07:13+0100\n"
+"PO-Revision-Date: 2024-08-14 09:20+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -239,10 +239,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"Zerbitzu sekretu interfazeak aplikazioei pasahitzak eta beste datu "
-"konfidentzial batzuk gordetzen uzten die. Ezgaitu hori hirugarrenen zorro "
-"zerbitzuek haiek kudeatzea baimentzeko, hala nola «KeePassXC» edo GNOMEren "
-"«Keyring»."
+"Zerbitzu sekretuaren interfazeak aplikazioei pasahitzak eta isilpeko beste "
+"datu batzuk gordetzen uzten die. Ezgaitu hori hirugarrenen zorro zerbitzuek "
+"hura kudeatzea baimentzeko, hala nola «KeePassXC» edo GNOMEren «Keyring»."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:328
