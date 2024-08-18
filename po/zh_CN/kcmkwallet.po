@@ -105,13 +105,13 @@ msgstr "建议在不使用密码库时立即关闭它，以避免被其他人查
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "关闭行为"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
 #, kde-format
 msgid "Close wallet:"
-msgstr ""
+msgstr "关闭密码库："
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -130,7 +130,7 @@ msgstr ""
 #: walletconfigwidget.ui:79
 #, kde-format
 msgid "When last application stops using it"
-msgstr ""
+msgstr "当最后一个应用程序停止使用密码库时"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -146,7 +146,7 @@ msgstr ""
 #: walletconfigwidget.ui:89
 #, kde-format
 msgid "When screensaver starts"
-msgstr ""
+msgstr "屏幕保护程序启动时"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -163,7 +163,7 @@ msgstr ""
 #: walletconfigwidget.ui:99
 #, kde-format
 msgid "When unused for:"
-msgstr ""
+msgstr "当密码库没有被使用一段时间时："
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
@@ -181,7 +181,7 @@ msgstr "自动选择密码库"
 #: walletconfigwidget.ui:165
 #, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr ""
+msgstr "本地密码使用不同的默认密码库："
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -194,7 +194,7 @@ msgstr "新建..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "默认密码库："
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -224,7 +224,7 @@ msgstr "密码服务"
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr ""
+msgstr "使用 &KWallet 密码库作为密码服务接口"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
