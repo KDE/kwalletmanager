@@ -431,7 +431,6 @@ msgstr "Velg navn på den nye lommeboka:"
 
 #: kwalletmanager.cpp:327
 #, fuzzy, kde-format
-#| msgid "New Wallet"
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Ny lommebok"
@@ -582,20 +581,17 @@ msgstr ""
 
 #: main.cpp:35
 #, fuzzy, kde-format
-#| msgid "Valentin Rusu"
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
 
 #: main.cpp:35
 #, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
 msgid "Former Maintainer, user interface refactoring"
 msgstr "Vedlikeholder, refaktorering av brukerflaten"
 
 #: main.cpp:36
 #, fuzzy, kde-format
-#| msgid "George Staikos"
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -607,7 +603,6 @@ msgstr "Opprinnelig forfatter og tidligere vedlikeholder"
 
 #: main.cpp:37
 #, fuzzy, kde-format
-#| msgid "Michael Leupold"
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -619,7 +614,6 @@ msgstr "Utvikler og tidligere vedlikeholder"
 
 #: main.cpp:38
 #, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
@@ -656,10 +650,6 @@ msgstr "Lu&kk"
 
 #: walletcontrolwidget.cpp:73
 #, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
@@ -668,7 +658,6 @@ msgstr "Lommeboka «%1» er nå åpen"
 
 #: walletcontrolwidget.cpp:90
 #, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
 msgid "The wallet is currently closed."
 msgstr "Lommeboka  er nå lukket"
 
