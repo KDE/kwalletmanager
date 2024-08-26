@@ -115,7 +115,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
 #, fuzzy, kde-format
-#| msgid "Close Wallet"
 msgid "Close wallet:"
 msgstr "Lukk lommeboka"
 
@@ -136,7 +135,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
 #, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
 msgid "When last application stops using it"
 msgstr "Lukk når siste program er ferdig med å bruke den"
 
@@ -153,7 +151,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
 #, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
 msgid "When screensaver starts"
 msgstr "Lukk når pauseskjermen starter"
 
@@ -171,7 +168,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
 #, fuzzy, kde-format
-#| msgid "Close when unused for:"
 msgid "When unused for:"
 msgstr "Lukket når ikke i bruk i:"
 
@@ -190,7 +186,6 @@ msgstr "Automatisk valg av lommebok"
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
 #, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
 msgid "Use different default wallet for local passwords"
 msgstr " Egen lommebok for lokale passord:"
 
