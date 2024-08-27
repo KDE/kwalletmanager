@@ -71,7 +71,7 @@ add_subdirectory( src )
 install( PROGRAMS org.kde.kwalletmanager.desktop kwalletmanager5-kwalletd.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.kwalletmanager5.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ecm_generate_dbus_service_file(
-    NAME org.kde.kwalletmanager5
+    NAME org.kde.kwalletmanager
     EXECUTABLE ${KDE_INSTALL_FULL_BINDIR}/kwalletmanager5
     DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
 )
