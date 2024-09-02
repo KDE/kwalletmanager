@@ -23,13 +23,13 @@ int main(int argc, char **argv)
     a.setWindowIcon(QIcon::fromTheme(QStringLiteral("kwalletmanager")));
 
     KAboutData aboutData(QStringLiteral("kwalletmanager"),
-                 i18n("Wallet Manager"),
-                 QStringLiteral(KWALLETMANAGER_VERSION_STRING),
-                 i18n("KDE Wallet Management Tool"),
-                 KAboutLicense::GPL,
-                 i18n("Copyright ©2013–2017, KWallet Manager authors"),
-                 QString(),
-                 QStringLiteral("https://apps.kde.org/kwalletmanager5"));
+                         i18n("Wallet Manager"),
+                         QStringLiteral(KWALLETMANAGER_VERSION_STRING),
+                         i18n("KDE Wallet Management Tool"),
+                         KAboutLicense::GPL,
+                         i18n("Copyright ©2013–2017, KWallet Manager authors"),
+                         QString(),
+                         QStringLiteral("https://apps.kde.org/kwalletmanager5"));
 
     aboutData.addAuthor(i18nc("@info:credit", "Valentin Rusu"), i18n("Former Maintainer, user interface refactoring"), QStringLiteral("kde@rusu.info"));
     aboutData.addAuthor(i18nc("@info:credit", "George Staikos"), i18n("Original author and former maintainer"), QStringLiteral("staikos@kde.org"));
