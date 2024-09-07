@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 00:41+0000\n"
-"PO-Revision-Date: 2024-08-14 00:32+0330\n"
+"PO-Revision-Date: 2024-09-06 22:32+0330\n"
 "Last-Translator: Mohi Mirdamadi <mohi.pub@gmail.com>\n"
 "Language-Team: fa\n"
 "Language: fa\n"
@@ -89,15 +89,15 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>زیرسیستم Wallet راهی مناسب و امن برای مدیریت کلیه اسم رمزهایتان ارائه "
-"می‌کند. می‌توانید تصمیم بگیرید که آیا قصد استفاده از این سیستم با این گزینه را "
-"دارید یا خیر.</p>"
+"<p>زیرسامانه Wallet راهی مناسب و امن برای مدیریت کلیه اسم رمزهایتان ارائه "
+"می‌کند. می‌توانید تصمیم بگیرید که آیا قصد استفاده از این سامانه با این گزینه "
+"را دارید یا خیر.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:25
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
-msgstr "&فعال‌سازی زیرسیستم KDE Wallet‌"
+msgstr "&فعال‌سازی زیرسامانه KDE Wallet‌"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:35
@@ -211,13 +211,13 @@ msgstr "مدیر Wallet"
 #: walletconfigwidget.ui:207
 #, kde-format
 msgid "Show manager in system tray"
-msgstr "نمایش مدیر در سینی سیستم"
+msgstr "نمایش مدیر در سینی سامانه"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
 #: walletconfigwidget.ui:235
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr "مخفی کردن شمایل سینی سیستم زمانی که آخرین Wallet بسته است"
+msgstr "مخفی کردن شمایل سینی سامانه زمانی که آخرین Wallet بسته است"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:263
