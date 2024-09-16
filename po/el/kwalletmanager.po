@@ -21,8 +21,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -124,8 +124,7 @@ msgid "Search"
 msgstr "Αναζήτηση"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Εμφάνιση τιμών"
@@ -450,8 +449,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Παρακαλώ επιλέξτε ένα όνομα για το νέο πορτοφόλι:"
 
 #: kwalletmanager.cpp:327
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Νέο πορτοφόλι"
@@ -579,8 +577,7 @@ msgid "Value"
 msgstr "Τιμή"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Διαγραφή καταχώρησης"
@@ -606,8 +603,7 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright ©2013–2017, συγγραφείς διαχειριστή KWallet"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -619,8 +615,7 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr "Προγραμματιστής, αναδόμηση περιβάλλοντος χρήστη"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -631,8 +626,7 @@ msgid "Original author and former maintainer"
 msgstr "Αρχικός συγγραφέας και πρώην συντηρητής"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -643,8 +637,7 @@ msgid "Developer and former maintainer"
 msgstr "Προγραμματιστής και πρώην συντηρητής"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
@@ -680,22 +673,17 @@ msgid "&Close"
 msgstr "&Κλείσιμο"
 
 #: walletcontrolwidget.cpp:73
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Το πορτοφόλι '%1' είναι τώρα ανοιχτό"
+msgstr "Το πορτοφόλι '%1' είναι τώρα ανοιχτό."
 
 #: walletcontrolwidget.cpp:90
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Το πορτοφόλι είναι τώρα κλειστό"
+msgstr "Το πορτοφόλι είναι τώρα κλειστό."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
