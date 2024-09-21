@@ -483,7 +483,7 @@ void KWalletManager::importWallets()
 
 bool KWalletManager::hasUnsavedChanges(const QString &name) const
 {
-    return _managerWidget->hasUnsavedChanges(name);
+    return (_managerWidget ? _managerWidget->hasUnsavedChanges(name) : false);
 }
 
 bool KWalletManager::canIgnoreUnsavedChanges()
