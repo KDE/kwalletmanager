@@ -1,0 +1,806 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+
+<book id="kwallet5" lang="&language;">
+<bookinfo>
+<title
+>&kwallet5; Priročnik</title>
+
+<authorgroup>
+<author
+>&George.Staikos; &George.Staikos.mail; </author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail; </author>
+<othercredit role="developer"
+><firstname
+>George</firstname
+><surname
+>Staikos</surname
+> <affiliation
+><address
+>&George.Staikos.mail;</address
+></affiliation>
+<contrib
+>Razvijalec</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Napast</surname
+><affiliation
+><address
+><email
+>jan.napast153@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>05.07.2016</date>
+<releaseinfo
+>Applications 16.04</releaseinfo>
+
+<abstract>
+<para
+>Podsistem denarnice ponuja priročen in varen način za upravljanje vseh vaših gesel.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kwallet</keyword>
+<keyword
+>gesla</keyword>
+<keyword
+>obrazci</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>Uporabniki računalnikov imajo za upravljanje zelo veliko količino podatkov, od katerih so nekateri občutljivi. Zlasti običajno boste imeli veliko gesel za upravljanje. Zapomniti si jih je težko, zapis na papir ali besedilno datoteko pa nevaren.</para>
+
+<para
+>&kwallet5; zagotavlja varen način za shranjevanje gesel in drugih tajnih podatkov, kar uporabniku omogoča, da si zapomni samo eno geslo namesto številnih različnih gesel in poverilnic. </para>
+
+<sect1 id="kwallet-create">
+
+<title
+>Ustvarite denarnico</title>
+
+<para
+>Denarnica je shramba gesel. Običajno zadostuje, da imate samo eno denarnico, zaščiteno z enim glavnim geslom, vendar lahko svojo veliko zbirko gesel organizirate po denarnicah z &kwalletmanager5;.</para>
+
+<para
+>Privzeto bo za shranjevanje vaših gesel uporabljena denarnica z imenom <guilabel
+>kdewallet</guilabel
+>. Ta denarnica je zaščitena z vašim geslom za prijavo in se samodejno odpre ob prijavi, če je kwallet_pam nameščen in pravilno konfiguriran. V nekaterih distribucijah (&eg; Archlinux) kwallet_pam ni privzeto nameščen</para>
+
+
+<para
+>Druge denarnice je treba odpreti ročno.</para>
+
+<para
+>Novo denarnico lahko ustvarite na dva načina:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Uporabite menijski element <menuchoice
+><guimenu
+>Datoteka</guimenu
+><guimenuitem
+>Nova denarnica</guimenuitem
+></menuchoice
+> v aplikaciji &kwalletmanager5;</para
+></listitem>
+
+<listitem
+><para
+>Uporabite gumb <guibutton
+>Novo</guibutton
+> v &systemsettings; modul <guilabel
+>Denarnica KDE</guilabel
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Če še niste ustvarili denarnice, glejte razdelek <link linkend="kwallet-using"
+>Uporaba &kwallet5;</link
+>. </para>
+
+<para
+>&kwallet5; ponuja dva različna načina za shranjevanje vaših podatkov:</para>
+
+<screenshot>
+<screeninfo
+>Izberite šifriranje</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Izberite šifriranje</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+
+<varlistentry>
+<term
+>Šifriranje Blowfish</term>
+<listitem>
+<para
+>&kwallet5; shrani te občutljive podatke za vas v močno šifrirano datoteko, ki je dostopna vsem aplikacijam in je zaščitena z glavnim geslom, ki ga določite sami.</para>
+
+<screenshot>
+<screeninfo
+>Ustvarite šifrirano denarnico blowfish</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Ustvarite šifrirano denarnico blowfish</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Podatki so šifrirani z <ulink url="http://www.schneier.com/blowfish.html"
+>algoritmom simetrične blokovne šifre Blowfish</ulink
+>, ključ algoritma izhaja iz <ulink url="http: //www.ietf.org/rfc/rfc3174.txt"
+>SHA-1 hash</ulink
+> gesla z dolžino ključa 156 bitov (20 bajtov). Podatki v datoteki denarnice so tudi zgoščeni s SHA-1 in preverjeni, preden so podatki dešifrirani in dostopni aplikacijam. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>GPG šifriranje</term>
+<listitem>
+<para
+>GnuPG ponuja nekaj zelo močnih algoritmov šifriranja in uporablja dolge ključe, zaščitene z geslom.</para>
+
+<screenshot>
+<screeninfo
+>Ključ GPG ni bil najden</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Ključ GPG ni bil najden</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Zgornji posnetki zaslona prikazujejo primer, ko ključ GPG, ki je zmožen šifriranja, ni bil najden v sistemu. Uporabite programe, kot je &kgpg; ali &kleopatra; ustvarite ključ in poskusite znova.</para>
+
+<para
+>Če je bil najden ključ GPG, se prikaže naslednje pogovorno okno, v katerem lahko izberete ključ za svojo novo denarnico. </para>
+<screenshot>
+<screeninfo
+>Izberite šifrirni ključ</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Izberite šifrirni ključ</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&kwallet5; bo zdaj uporabljal GPG pri shranjevanju denarnic in pri njihovem odpiranju. Pogovorno okno gesla se prikaže samo enkrat. Tudi če je denarnica zaprta po začetnem odprtju, bo naslednje odpiranje potekalo tiho med isto sejo. </para>
+
+<para
+>Ista seja lahko obravnava obe obliki datotek hkrati. &kwallet5; bo pregledno zaznal obliko datoteke in naložil pravilno zaledje za njeno obravnavo.</para>
+
+<para
+>Če želite uporabljati občutljive podatke iz klasične denarnice z novim zaledjem, sledite tem korakom:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Ustvarite novo denarnico, ki temelji na GPG</para
+></listitem>
+<listitem
+><para
+>Zaženi &kwalletmanager5; z uporabo &krunner; (<keycombo
+>&Alt; <keycap
+>F2</keycap
+></keycombo
+>) ali drug zaganjalnik aplikacij (meni) in izberite svojo staro denarnico. Nato izberite <menuchoice
+><guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Izvozi kot šifrirano</guimenuitem
+></menuchoice
+>, da ustvarite arhivsko datoteko z občutljivimi podatki. </para
+></listitem>
+<listitem
+><para
+>Izberite novo denarnico, ki temelji na GPG, nato izberite <menuchoice
+><guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Uvozi šifrirano</guimenuitem
+></menuchoice
+> in izberite datoteko, ki ste jo pravkar shranili.</para>
+</listitem>
+
+<listitem
+><para
+>Pojdite na &systemsettings; <menuchoice
+><guimenu
+>Podrobnosti o računu</guimenu
+> <guimenuitem
+>Denarnica KDE</guimenuitem
+></menuchoice
+> in izberite novo ustvarjeno denarnico, ki temelji na GPG, v spustnem polju <guilabel
+>Izberi denarnico za uporabo kot privzeto</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>Druga možnost je, da uporabite <guimenuitem
+>Uvozi denarnico</guimenuitem
+>, vendar morate v tem primeru izbrati datoteko <filename class="extension"
+>.kwl</filename
+>, ki ustreza vaši stari denarnici in se nahaja v mapi <filename class="directory"
+>kwalletd</filename
+> v <userinput
+>qtpaths --paths GenericDataLocation</userinput
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<tip>
+<para
+>&kwallet5; podpira več denarnic, zato za najbolj varno delovanje uporabite eno denarnico za lokalna gesla in drugo za omrežna gesla in podatke obrazcev. To vedenje lahko nastavite v oknu &kwallet5; &systemsettings; vendar je privzeta nastavitev shranjevanje vsega v eno denarnico z imenom <guilabel
+>kdewallet</guilabel
+>.</para>
+</tip>
+
+<para
+>Denarnica je privzeto zaprta, kar pomeni, da morate vnesti geslo, da jo odprete. Ko je denarnica odprta, lahko vsebino prebere kateri koli uporabniški proces, zato je to lahko varnostna težava.</para>
+</sect1>
+
+<sect1 id="kwallet-using">
+<title
+>Uporaba &kwallet5;</title>
+
+<para
+>Če obiščete &eg; &kde; bugtracker in prvič vnesete podatke za prijavo, se prikaže pogovorno okno, ki ponuja shranjevanje gesla v šifrirano denarnico:</para>
+
+<screenshot>
+<screeninfo
+>Zahteva za shranjevanje podatkov za prijavo</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Zahteva za shranjevanje podatkov za prijavo</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Če želite te podatke shraniti, izberite <guibutton
+>Shrani</guibutton
+> za nadaljevanje. Če denarnice še niste ustvarili, bo naslednje pogovorno okno zahtevalo zaledje šifriranja in ustvarilo denarnico z imenom kdewallet. </para>
+
+<para
+>Naslednjič, ko ponovno obiščete isto spletno mesto, aplikacija pridobi podatke za prijavo iz odprte denarnice in vnaprej izpolni obrazce s temi skrivnostmi.</para>
+
+<screenshot>
+<screeninfo
+>Vnaprej izpolnjeni podatki za prijavo</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="prefilled-forms.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Vnaprej izpolnjeni podatki za prijavo</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Če je denarnica zaprta, aplikacija zahteva odpiranje denarnice. Vnesite geslo denarnice in kliknite gumb <guibutton
+>Odpri</guibutton
+>.</para>
+
+<screenshot>
+<screeninfo
+>Zahteva za odpiranje denarnice</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Zahteva za odpiranje denarnice</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>To poveže aplikacijo z denarnico, ji omogoči branje podatkov za prijavo iz denarnice in obnovitev podatkov za prijavo za to spletno mesto. Ko je aplikacija povezana z denarnico, lahko samodejno obnovi vse podatke za prijavo, shranjene v denarnici.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="kwalletmanager5">
+<title
+>&kwalletmanager5;</title>
+
+<para
+>&kwalletmanager5; služi številnim funkcijam. Najprej vam omogoča, da vidite, ali so odprte denarnice, katere denarnice so to in katere aplikacije uporabljajo posamezno denarnico. Dostop aplikacije do denarnice lahko prekinete znotraj &kwalletmanager5;.</para>
+
+<para
+>Prav tako lahko upravljate z denarnicami, nameščenimi v sistemu, ustvarjate in brišete denarnice ter manipulirate z njihovo vsebino (menjava ključev, ...).</para>
+
+<para
+>&kwalletmanager5; aplikacija se zažene z <menuchoice
+> <guimenu
+>Aplikacije</guimenu
+><guisubmenu
+>Sistem</guisubmenu
+> <guimenuitem
+>Orodje za upravljanje denarnice</guimenuitem
+></menuchoice
+> iz zaganjalnika aplikacij. Druga možnost je, da zaženete &krunner; z bližnjico <keycombo action="simul"
+>&Alt;<keycap
+>F2</keycap
+></keycombo
+> in vnesite <command
+>kwalletmanager5</command
+>.</para>
+
+<para
+>Enkrat kliknite ikono denarnice v sistemski vrstici, da prikažete &kwalletmanager5; okno.</para>
+<para>
+<screenshot>
+<screeninfo
+>Glavno okno z eno denarnico</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwalletmanager.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Glavno okno z eno denarnico</phrase>
+</textobject>
+<caption
+><para
+>Glavno okno z eno denarnico</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<!--FIXME
+How to get assistant "First Use"? kwalletwizardpageintro.ui
+Last code change with http://websvn.kde.org/?view=revision&revision=882694
+see also https://bugs.kde.org/show_bug.cgi?id=290309
+-->
+<sect1 id="kwalletmanager-wallet-window">
+<title
+>Okno denarnice</title>
+
+<para
+>Če imate več kot eno denarnico, so vse razpoložljive denarnice prikazane na levi.</para>
+
+<para
+>S klikom na denarnico v &kwalletmanager5; okno bo prikazalo stanje te denarnice in vsebino odprte denarnice. Denarnica lahko vsebuje poljubno število map, ki omogočajo shranjevanje podatkov o geslu. Denarnica bo privzeto vsebovala mape z imenom Podatki obrazcev in Gesla. </para>
+
+<screenshot>
+<screeninfo
+>Glavno okno z dvema denarnicama</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-edit.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Glavno okno z dvema denarnicama</phrase>
+</textobject>
+<caption
+><para
+>Glavno okno z dvema denarnicama</para
+></caption>
+</mediaobject>
+</screenshot>
+<para
+>Za prikaz vsebine zaprte denarnice uporabite <guibutton
+>Odpri</guibutton
+>. Vnesti boste morali glavno geslo.</para>
+
+<sect2>
+<title
+>Zavihek Vsebina</title>
+
+<para
+>Zavihek <guilabel
+>Vsebina</guilabel
+> ima tri razdelke:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Iskalna vrstica za filtriranje elementov trenutne denarnice</para
+></listitem>
+<listitem
+><para
+>Drevesni pogled map v denarnici. Kliknite ikoni <guiicon
+>&gt;</guiicon
+> / <guiicon
+>v</guiicon
+>, da razširite ali strnete drevesni pogled.</para
+></listitem>
+<listitem
+><para
+>Vsebina vnosa izbrane mape na desni strani. Privzeto sta geslo in vrednost skrita. Če jih želite prikazati in urediti, omogočite <guilabel
+>Pokaži vrednosti</guilabel
+> ali kliknite gumb <guilabel
+>Pokaži vsebino</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>Mape lahko dodate ali izbrišete prek kontekstnega menija, z izbiro mape pa se posodobita seznam vnosov map in prikaz povzetka. Če izberete vnos v mapo, boste posodobili podokno z vsebino vnosa in omogočili urejanje tega vnosa.</para>
+
+<para
+>Vnose lahko tudi ustvarite, preimenujete ali izbrišete prek kontekstnega menija za vsebino mape.</para>
+
+<para
+>Vse mape in vnose lahko povlečete in spustite v druge denarnice ali mape. To uporabniku omogoča enostavno pakiranje nove denarnice za prenos v drugo okolje. Na primer, lahko ustvarite novo denarnico in jo kopirate na izmenljivo bliskovno pomnilniško napravo. Tja se lahko prenesejo pomembna gesla, zato jih imate na voljo na drugih lokacijah.</para>
+
+<sect3 id="kwallet-import-export">
+<title
+>Uvoz in izvoz</title>
+<para
+>Če želite svoje skrivnosti prenesti v drugo napravo ali računalnik, uporabite dejanja v meniju <guimenu
+>Datoteka</guimenu
+>. Z <guimenuitem
+>Izvozi kot šifrirano</guimenuitem
+> lahko denarnice izvozite v šifrirano arhivsko datoteko. Pri uvozu te arhivske datoteke z <guimenuitem
+>Uvozi šifrirano</guimenuitem
+> morate zagotoviti glavno geslo denarnice. </para>
+<para
+>Druga možnost je, da za prenos denarnice uporabite datoteko <filename class="extension"
+>.xml</filename
+>. Ne pozabite, da so vse skrivnosti v tej datoteki shranjene kot golo besedilo. </para>
+</sect3>
+
+<sect3 id="kwallet-adding-entries">
+<title
+>Ročno dodajanje vnosov</title>
+<para
+>Odprite kontekstni meni z &RMB; kliknite <guilabel
+>Zemljevidi</guilabel
+> ali <guilabel
+>Gesla</guilabel
+> v drevesnem pogledu <guilabel
+>Mape</guilabel
+>. Izberite <guimenuitem
+>Novo</guimenuitem
+> ali <guimenuitem
+>Nova mapa</guimenuitem
+> in izberite ime za nov vnos.</para>
+<para
+>V podoknu z vsebino mape izberite <guilabel
+>Nova mapa</guilabel
+> v priročnem meniju <quote
+>Podatki obrazca</quote
+> ali <quote
+>Gesla</quote
+>. Za gesla kliknite gumb <guilabel
+>Pokaži vsebino</guilabel
+>, vnesite novo geslo. Za Zemljevide morate dodati <guilabel
+>Ključ</guilabel
+> in <guilabel
+>Vrednost</guilabel
+>. Kliknite gumb <guilabel
+>Shrani</guilabel
+>, da shranite nove vnose v datoteko šifrirane denarnice. </para>
+</sect3>
+</sect2>
+
+<sect2>
+<title
+>Zavihek Aplikacije</title>
+<para>
+<screenshot>
+<screeninfo
+>Zavihek Aplikacije</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-applications.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Zavihek Aplikacije</phrase>
+</textobject>
+<caption
+><para
+>Zavihek Aplikacije</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+<para
+>Prvi seznam prikazuje vse aplikacije, ki so trenutno povezane z izbrano denarnico. Za prekinitev povezave z aplikacijo uporabite gumb na desni strani vsakega vnosa.</para>
+
+<para
+>Na drugem seznamu so prikazane vse aplikacije, ki so pooblaščene za dostop do denarnice. Za preklic dostopa uporabite gumb desno od vsakega vnosa na seznamu. </para>
+<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
+</sect2>
+</sect1>
+
+</chapter>
+
+<chapter id="kwallet-kcontrol-module">
+<title
+>Konfiguriranje &kwallet5;</title>
+
+<sect1 id="wallet-preferences">
+<title
+>Nastavitve denarnice</title>
+
+<para
+>&kwallet5; vsebuje majhno konfiguracijsko ploščo z več možnostmi, ki vam omogočajo nastavitev &kwallet5; glede na vaše osebne želje. Privzete nastavitve za &kwallet5; zadostujejo za večino uporabnikov.</para>
+
+<para
+>Potrdite polje, da omogočite ali onemogočite &kde; podsistem denarnice v celoti. Če to polje ni potrjeno, &kwallet5; je v celoti onemogočen in nobena od drugih možnosti tukaj nima učinka, niti &kwallet5; beležijo kakršne koli podatke ali ponudijo izpolnjevanje obrazcev namesto vas.</para>
+
+<variablelist>
+<title
+><guilabel
+>Zapri Denarnico</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Zapri, ko se ne uporablja za:</guilabel
+></term>
+<listitem>
+<para
+>Zaprite trenutno denarnico po obdobju nedejavnosti. Če izberete to možnost, nastavite obdobje v polju, privzeto je 10 minut. Ko je denarnica zaprta, je za ponoven dostop potrebno geslo.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zapri, ko se zažene ohranjevalnik zaslona</guilabel
+></term>
+<listitem>
+<para
+>Zaprite denarnico takoj, ko se zažene ohranjevalnik zaslona. Ko je denarnica zaprta, je za ponoven dostop potrebno geslo.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zapri, ko ga zadnja aplikacija preneha uporabljati</guilabel
+></term>
+<listitem>
+<para
+>Zaprite denarnico takoj, ko se ustavijo aplikacije, ki jo uporabljajo. Upoštevajte, da bodo vaše denarnice zaprte šele, ko se ustavijo vse aplikacije, ki jih uporabljajo. Ko je denarnica zaprta, je za ponoven dostop potrebno geslo.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>Samodejna izbira denarnice</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Izberite denarnico, ki jo želite uporabiti kot privzeto:</guilabel
+></term>
+<listitem>
+<para
+>Izberite denarnico, ki jo želite uporabiti kot privzeto denarnico. Upoštevajte, da se bo samo denarnica z imenom <guilabel
+>kdewallet</guilabel
+> samodejno odprla ob prijavi, če sta ta denarnica in vaše geslo za prijavo enaka. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Druga denarnica za lokalna gesla:</guilabel
+></term>
+<listitem>
+<para
+>Če je označeno, izberite drugo denarnico za lokalna gesla.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>Upravitelj denarnice</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>Pokaži upravitelja v sistemski vrstici</guilabel
+></term>
+<listitem>
+<para
+>Omogoči upravitelju denarnice, da ima svojo ikono v sistemski vrstici.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Skrij ikono sistemske vrstice, ko se zapre zadnja denarnica</guilabel
+></term>
+<listitem>
+<para
+>Ko denarnica ni več v uporabi, odstranite ikono denarnice iz sistemske vrstice.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Končno je na voljo gumb z oznako <guibutton
+>Zaženi upravitelja denarnice</guibutton
+>, ki naredi natanko to.</para>
+<para
+>Ta gumb je viden le, če &kwalletmanager5; ne teče</para>
+</sect1>
+
+<sect1 id="wallet-access-control">
+<title
+>Nadzor dostopa</title>
+
+<para
+>Na tej strani je samo ena možnost:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Poziv, ko aplikacija dostopa do denarnice</guilabel
+></term>
+<listitem>
+<para
+>Opozori vas, ko aplikacija pridobi dostop do denarnice.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Sledi drevesni pogled nadzora dostopa do vaših denarnic.</para>
+
+<screenshot>
+<screeninfo
+>Nadzor dostopa</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-access-control.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Nadzor dostopa</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Kliknite z &LMB; na simbolu <guiicon
+>&gt;</guiicon
+> poleg imena denarnice, da razširite drevo. Videli boste ime vsake aplikacije, ki je zahtevala dostop do denarnice, in pravilnik, ki ste ga nastavili zanjo. Tukaj ne morete urejati pravilnikov ali jih dodajati, lahko pa izbrišete vnos z &RMB; kliknite nanjo in izberite <guimenuitem
+>Izbriši</guimenuitem
+> v kontekstnem meniju, ki se prikaže, ali pa jo preprosto izberite in pritisnite tipko <keysym
+>Del</keysym
+>.</para>
+
+<para
+>Aplikacija, ki ji je bil dovoljen dostop do denarnice, ima dostop do vseh gesel, shranjenih v njej.</para>
+
+<para
+>Če ste pomotoma konfigurirali aplikacijo, da ne uporablja &kwallet5; tukaj izbrišite pravilnik za to aplikacijo.</para>
+<!-- FIXME difference to Revoke Authorization in kwallermanager?-->
+<para
+>Ob naslednjem zagonu te aplikacije lahko določite nov pravilnik za dostop do denarnice. </para>
+<screenshot>
+<screeninfo
+>Zahteva za dostop za odpiranje denarnice</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="application-request-to-open-wallet.png"/>
+</imageobject>
+<textobject>
+<phrase
+>Zahteva za dostop za odpiranje denarnice</phrase>
+</textobject>
+<caption
+><para
+>Aplikacija, ki zahteva dostop do denarnice</para
+></caption>
+</mediaobject>
+</screenshot>
+
+</sect1>
+
+</chapter>
+
+<chapter id="advanced-features">
+<title
+>Napredne funkcije</title>
+
+<para
+>Denarnice lahko povlečete iz &kwalletmanager5; okno. To vam omogoča, da povlečete denarnico v okno brskalnika datotek, kjer lahko po želji kopirate, premaknete ali povežete denarnico.</para>
+
+<para
+>To lahko uporabite za shranjevanje denarnice na prenosni medij, kot je obesek za ključe USB, tako da lahko vzamete svoja gesla s seboj v službo ali na dopust in imate še vedno enostaven dostop do pomembnih mest.</para>
+
+</chapter>
+
+<chapter id="credits-and-license">
+<title
+>Zasluge in licenca</title>
+
+<para
+>&kwallet5; &copy; 2003 &George.Staikos;</para>
+<para
+>Dokumentacija &copy; &Lauri.Watts; in &George.Staikos;</para>
+
+<para
+>Prevod: Jan Napast<email
+>jan.napast153@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->
