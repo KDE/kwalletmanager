@@ -282,6 +282,3 @@ msgstr "Политика"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Стартиране на мениджъра"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Избор на портфейл, който да се използва по подразбиране:"
