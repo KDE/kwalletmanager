@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Thomas Diehl <thd@kde.org>, 2003.
 # Gregor Zumstein <zumstein@ssd.ethz.ch>, 2003, 2004, 2005.
 # Stephan Johach <hunsum@gmx.de>, 2005, 2006.
@@ -6,22 +7,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2013, 2015, 2017.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2013, 2016.
-# Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2022, 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-11 00:43+0000\n"
-"PO-Revision-Date: 2023-12-20 23:22+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-09-27 13:35+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -121,8 +121,7 @@ msgid "Search"
 msgstr "Suchen"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Werte anzeigen"
@@ -574,8 +573,7 @@ msgid "Value"
 msgstr "Wert"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Eintrag löschen"
@@ -601,8 +599,7 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Copyright ©2013–201z, KWallet Manager-Autoren"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -613,8 +610,7 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr "Ehemaliger Betreuer - Überarbeitung der Benutzeroberfläche"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -625,8 +621,7 @@ msgid "Original author and former maintainer"
 msgstr "Ursprünglicher Autor und ehemaliger Betreuer"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -637,8 +632,7 @@ msgid "Developer and former maintainer"
 msgstr "Entwickler und ehemaliger Betreuer"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
