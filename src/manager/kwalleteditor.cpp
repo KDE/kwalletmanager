@@ -951,7 +951,13 @@ void KWalletEditor::showHideMapEditorValue(bool show)
     }
 }
 
-enum MergePlan { Prompt = 0, Always = 1, Never = 2, Yes = 3, No = 4 };
+enum MergePlan {
+    Prompt = 0,
+    Always = 1,
+    Never = 2,
+    Yes = 3,
+    No = 4
+};
 
 void KWalletEditor::importWallet()
 {

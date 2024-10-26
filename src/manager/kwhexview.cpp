@@ -20,7 +20,9 @@ KWHexView::KWHexView(QWidget *parent)
     setWordWrapMode(QTextOption::NoWrap);
 }
 
-enum { hexStride = 4 };
+enum {
+    hexStride = 4
+};
 
 template<class It>
 static QString toHex(It it, It end)
