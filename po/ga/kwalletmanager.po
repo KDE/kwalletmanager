@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils/kwalletmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -304,19 +304,19 @@ msgstr "Tharla earráid gan choinne agus an iontráil á scriosadh"
 msgid "Unable to open the requested wallet."
 msgstr "Ní féidir an sparán iarrtha a oscailt."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Ní féidir an comhad XML '<b>%1</b>' a rochtain."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Ní féidir an sparán '<b>%1</b>' a rochtain."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -325,22 +325,22 @@ msgstr ""
 "Tá iontráil darb ainm '<b>%2</b>' i bhfillteán '<b>%1</b>' cheana. An bhfuil "
 "fonn ort é a fhorscríobh?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Ní féidir an comhad XML '<b>%1</b>' a rochtain."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Earráid agus comhad XML '<b>%1</b>' á léamh."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Earráid: níl sparán sa chomhad XML."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."

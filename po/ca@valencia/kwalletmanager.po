@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2024-07-30 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -302,18 +302,18 @@ msgstr "S'ha produït un error inesperat en intentar suprimir l'entrada"
 msgid "Unable to open the requested wallet."
 msgstr "No s'ha pogut obrir la cartera demanada."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "No s'ha pogut crear el fitxer temporal per a baixar «<b>%1</b>»."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "No s'ha pogut accedir a la cartera «<b>%1</b>»."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -321,22 +321,22 @@ msgid ""
 msgstr ""
 "La carpeta «<b>%1</b>» ja conté una entrada «<b>%2</b>». Voleu substituir-la?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "No s'ha pogut accedir al fitxer en XML «<b>%1</b>»."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "S'ha produït un error en llegir el fitxer en XML «<b>%1</b>»."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "S'ha produït un error: El fitxer en XML no conté cap cartera."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "No s'ha pogut emmagatzemar en «<b>%1</b>»."

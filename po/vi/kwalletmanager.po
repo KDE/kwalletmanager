@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2022-10-31 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -298,18 +298,18 @@ msgstr "Lỗi bất ngờ xảy ra khi đang xoá mục"
 msgid "Unable to open the requested wallet."
 msgstr "Không thể mở ví được yêu cầu."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Không thể tạo tệp tạm thời để tải '<b>%1</b>' về."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Không thể truy cập ví '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -318,22 +318,22 @@ msgstr ""
 "Thư mục '<b>%1</b>' đã chứa một mục '<b>%2</b>' rồi. Bạn có muốn thay thế nó "
 "không?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Không thể truy cập tệp XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Lỗi khi đọc đầu vào từ tệp XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Lỗi: tệp XML không chứa ví nào."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Không thể lưu vào '<b>%1</b>'."

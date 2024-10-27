@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2024-05-23 14:55+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -300,18 +300,18 @@ msgstr "Óvænt villa átti sér stað þegar reynt var að eyða færslunni"
 msgid "Unable to open the requested wallet."
 msgstr "Gat ekki opnað umbeðið veski."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Mistókst að búa til bráðabirgðaskrá til að sækja '<b>%1</b>'."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Gat ekki fengið aðgang að veskinu '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -320,22 +320,22 @@ msgstr ""
 "Mappan '<b>%1</b>' inniheldur þegar færsluna '<b>%2</b>'. Viltu skipta henni "
 "út?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Gat ekki fengið aðgang að XML skrá '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Villa við lestur XML skráar '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Villa XML skrá inniheldur ekki veski."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Gat ekki geymt í '<b>%1</b>'."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2019-11-11 00:05+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -300,18 +300,18 @@ msgstr "Kirje kustutamisel tekkis ootamatu viga"
 msgid "Unable to open the requested wallet."
 msgstr "Soovitud turvalaeka avamine nurjus."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Ajutise faili loomine \"<b>%1</b>\" allalaadimiseks nurjus."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Ligipääs laekale \"<b>%1</b>\" nurjus."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -320,22 +320,22 @@ msgstr ""
 "Sahtel '<b>%1</b>' sisaldab juba kirjet '<b>%2</b>'. Kas soovid selle "
 "asendada?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Ligipääs XML-failile '<b>%1</b>' nurjus."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Viga XML-faili '<b>%1</b>' lugemisel sisendina."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Viga: XML-fail ei sisalda turvalaegast."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Salvestamine asukohta \"<b>%1</b>\" nurjus."

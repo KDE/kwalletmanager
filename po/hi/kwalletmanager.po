@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -305,19 +305,19 @@ msgstr "प्रविष्टि मिटाने की कोशिश �
 msgid "Unable to open the requested wallet."
 msgstr "निवेदित बटुआ को खोलने में अक्षम."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "एक्सएमएल फ़ाइल '<b>%1</b>' पर पहुँच में अक्षम."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "बटुआ '<b>%1</b>' पर पहुँचने में अक्षम."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -326,22 +326,22 @@ msgstr ""
 "फ़ोल्डर '<b>%1</b>' में एक प्रविष्टि '<b>%2</b>' पहले से ही है. क्या आप इसे बदलना चाहते "
 "हैं?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "एक्सएमएल फ़ाइल '<b>%1</b>' पर पहुँच में अक्षम."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "इनपुट के लिए फ़ाइल '<b>%1</b>' को पढ़ने में त्रुटि."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "त्रुटि: एक्सएमएल फ़ाइल में बटुआ नहीं है."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2011-11-30 23:30+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -302,41 +302,41 @@ msgstr "ඇතුළත්කිරීම මකාදැමීමේදී න�
 msgid "Unable to open the requested wallet."
 msgstr "ඉල්ලාසිටි පසුම්බිය විවෘත කල නොහැකිවිය."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "'<b>%1</b>' XML ගොනුව වෙත පිවිසිය නොහැක. "
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "'<b>%1</b>' පසුම්බියට පිවිසිය නොහැක."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr "'<b>%1</b>' බහලුම සතුව දැනටමත් '<b>%2</b>' පවතී. ඔබට එය ප්‍රතිපිහිටුවීමට ඇවැසිද?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "'<b>%1</b>' XML ගොනුව වෙත පිවිසිය නොහැක. "
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "ආදානය සඳහා '<b>%1</b>' XML ගොනුව කියවීමේ දෝශයක්."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "දෝශය: XML ගොනුව සතුව පසුම්බියක් නොමැත."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."

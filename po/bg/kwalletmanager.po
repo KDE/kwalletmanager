@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
-"PO-Revision-Date: 2024-08-07 09:58+0200\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"PO-Revision-Date: 2024-10-26 19:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -298,18 +298,18 @@ msgstr "Грешка при изтриване на запис"
 msgid "Unable to open the requested wallet."
 msgstr "Заявеният портфейл не може да бъде отворен."
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Неуспех при създаване на временен файл за изтеглянето '<b>%1</b>'."
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Грешка при достъп до портфейла \"%1\"."
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -318,22 +318,22 @@ msgstr ""
 "Папката \"%1\" вече съдържа запис \"%2\". Сигурни ли сте, че искате да бъде "
 "заменен?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Грешка при достъп до файла XML \"%1\"."
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Грешка при четене на XML файла \"%1\" за внасяне."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Грешка: XML файлът не съдържа данни на системата портфейл."
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Невъзможно съхраняване в '<b>%1</b>'."
@@ -610,7 +610,7 @@ msgstr "Michael Leupold"
 #: main.cpp:36
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr "Разработчик и бивш поддържащ"
+msgstr "Разработчик и Предишна поддръжка"
 
 #: main.cpp:37
 #, kde-format

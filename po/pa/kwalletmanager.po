@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
 "PO-Revision-Date: 2024-01-28 19:47-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -297,19 +297,19 @@ msgstr "ਐਂਟਰੀ ਹਟਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਦੌਰ�
 msgid "Unable to open the requested wallet."
 msgstr "ਮੰਗਿਆ ਵਾਲਟ ਖੋਲ੍ਹਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
-#: kwalleteditor.cpp:966
+#: kwalleteditor.cpp:972
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "XML ਫਾਇਲ '<b>%1</b>' ਅਸੈੱਸ ਕਰਨ ਲਈ ਅਸਮੱਰਥ।"
 
-#: kwalleteditor.cpp:973
+#: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "ਵਾਲਟ '<b>%1</b>' ਅਸੈੱਸ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
 
-#: kwalleteditor.cpp:1004 kwalleteditor.cpp:1036 kwalleteditor.cpp:1072
-#: kwalleteditor.cpp:1156
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -318,22 +318,22 @@ msgstr ""
 "ਫੋਲਡਰ '<b>%1</b>' ਵਿੱਚ ਐਂਟਰੀ '<b>%2</b>' ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲਣਾ ਚਾਹੁੰਦੇ "
 "ਹੋ?"
 
-#: kwalleteditor.cpp:1114
+#: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "XML ਫਾਇਲ '<b>%1</b>' ਅਸੈੱਸ ਕਰਨ ਲਈ ਅਸਮੱਰਥ।"
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "ਇੰਪੁੱਟ ਲਈ XML ਫਾਇਲ '<b>%1</b>' ਪੜ੍ਹਨ ਲਈ ਗਲਤੀ ਹੈ।"
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1132
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "ਗਲਤੀ: XML ਫਾਇਲ ਵਿੱਚ ਵਾਲਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: kwalleteditor.cpp:1279
+#: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "'<b>%1</b>' ਲਈ ਸੰਭਾਲਣ ਵਾਸਤੇ ਅਸਮਰੱਥ ਹੈ।"
