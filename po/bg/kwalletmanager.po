@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-10-26 19:03+0200\n"
+"PO-Revision-Date: 2024-11-09 20:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -32,12 +32,12 @@ msgstr "yasen@lindeas.com,zlatkopopov@fsa-bg.org"
 #: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "Вече има запис с име \"%1\". Сигурни ли сте, че искате да продължите?"
+msgstr "Вече има запис с име „%1“. Сигурни ли сте, че искате да продължите?"
 
 #: allyourbase.cpp:240
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "Вече има папка с име \"%1\". Какво искате да бъде направено?"
+msgstr "Вече има папка с име „%1“. Какво искате да бъде направено?"
 
 #: allyourbase.cpp:243
 #, kde-format
@@ -197,7 +197,7 @@ msgstr "Непознато"
 #: kwalleteditor.cpp:404
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr "Сигурни ли сте, че искате да бъде изтрита папката \"%1\" от портфейла?"
+msgstr "Сигурни ли сте, че искате да бъде изтрита папката „%1“ от портфейла?"
 
 #: kwalleteditor.cpp:410
 #, kde-format
@@ -286,7 +286,7 @@ msgstr "Грешка при преименуване на запис"
 #: kwalleteditor.cpp:898
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr "Сигурни ли сте, че искате да бъде изтрит записът \"%1\"?"
+msgstr "Сигурни ли сте, че искате да бъде изтрит записът „%1“?"
 
 #: kwalleteditor.cpp:902
 #, kde-format
@@ -306,7 +306,7 @@ msgstr "Неуспех при създаване на временен файл 
 #: kwalleteditor.cpp:979
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr "Грешка при достъп до портфейла \"%1\"."
+msgstr "Грешка при достъп до портфейла „%1“."
 
 #: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
 #: kwalleteditor.cpp:1162
@@ -315,18 +315,18 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
-"Папката \"%1\" вече съдържа запис \"%2\". Сигурни ли сте, че искате да бъде "
+"Папката „%1“ вече съдържа запис „%2“. Сигурни ли сте, че искате да бъде "
 "заменен?"
 
 #: kwalleteditor.cpp:1120
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr "Грешка при достъп до файла XML \"%1\"."
+msgstr "Грешка при достъп до файла XML „%1“."
 
 #: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "Грешка при четене на XML файла \"%1\" за внасяне."
+msgstr "Грешка при четене на XML файла „%1“ за внасяне."
 
 #: kwalleteditor.cpp:1132
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "Нов опит"
 #: kwalletmanager.cpp:380
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr "Сигурни ли сте, че искате да бъде изтрит портфейлът \"%1\"?"
+msgstr "Сигурни ли сте, че искате да бъде изтрит портфейлът „%1“?"
 
 #: kwalletmanager.cpp:386
 #, kde-format
@@ -654,7 +654,7 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Портфейлът \"%1\" вече е отворен"
+msgstr "Портфейлът „%1“ вече е отворен"
 
 #: walletcontrolwidget.cpp:90
 #, kde-format
