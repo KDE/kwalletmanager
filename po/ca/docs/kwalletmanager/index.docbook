@@ -89,7 +89,7 @@
 >Introducció</title>
 
 <para
->Els usuaris d'ordinadors tenen una gran quantitat de dades per a gestionar, algunes de les quals són de naturalesa delicada. En concret, és habitual que hàgiu de gestionar moltes contrasenyes. Recordar-les és difícil, apuntar-les en un paper o en un fitxer de text no és gaire segur.</para>
+>Els usuaris d'ordinadors tenen una gran quantitat de dades per a gestionar, algunes de les quals són de naturalesa confidencial. En concret, és habitual que hàgiu de gestionar moltes contrasenyes. Recordar-les és difícil, apuntar-les en un paper o en un fitxer de text no és gaire segur.</para>
 
 <para
 >El &kwallet5; proporciona una forma segura d'emmagatzemar les contrasenyes i altra informació secreta, i això permet a l'usuari recordar una única contrasenya en comptes de nombroses contrasenyes i credencials diferents. </para>
