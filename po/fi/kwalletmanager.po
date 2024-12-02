@@ -4,7 +4,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005, 2006.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2015.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2017, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2011, 2017, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-02-14 18:51+0200\n"
+"PO-Revision-Date: 2024-10-16 21:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,18 +20,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:42+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Teemu Rytilahti,Ilpo Kantonen,Tommi Nieminen"
+msgstr "Teemu Rytilahti, Ilpo Kantonen, Tommi Nieminen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "teemu.rytilahti@kde-fi.org,ilpo@iki.fi,translator@legisign.org"
+msgstr "teemu.rytilahti@kde-fi.org, ilpo@iki.fi, translator@legisign.org"
 
 #: allyourbase.cpp:215
 #, kde-format
@@ -120,8 +119,7 @@ msgid "Search"
 msgstr "Etsi"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Näytä arvot"
@@ -560,8 +558,7 @@ msgid "Value"
 msgstr "Arvo"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Poista tietue"
@@ -589,8 +586,7 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "Tekijänoikeudet © 2013–17 KWallet Managerin tekijät"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -601,8 +597,7 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr "Aiempi ylläpitäjä, käyttöliittymän uudelleenjärjestely"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -613,8 +608,7 @@ msgid "Original author and former maintainer"
 msgstr "Alkuperäinen tekijä ja entinen ylläpitäjä"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -625,8 +619,7 @@ msgid "Developer and former maintainer"
 msgstr "Kehittäjä ja entinen ylläpitäjä"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"

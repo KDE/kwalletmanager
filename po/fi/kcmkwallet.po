@@ -3,7 +3,7 @@
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2013, 2014, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2023-03-07 21:49+0200\n"
+"PO-Revision-Date: 2024-10-18 18:28+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,18 +20,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:40+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Teemu Rytilahti,Ilpo Kantonen"
+msgstr "Teemu Rytilahti, Ilpo Kantonen, Tommi Nieminen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "teemu.rytilahti@kde-fi.org,ilpo@iki.fi"
+msgstr "teemu.rytilahti@kde-fi.org, ilpo@iki.fi, translator@legisign.org"
 
 #: konfigurator.cpp:107
 #, kde-format
@@ -114,14 +113,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "Toiminta suljettaessa"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Sulje lompakko"
+msgstr "Sulje lompakko:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -139,10 +137,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
-msgstr "Sulje viimeisen sovelluksen lopetettua käytön"
+msgstr "viimeisen sovelluksen lopetettua käytön"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -156,10 +153,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "Sulje näytönsäästäjän käynnistyttyä"
+msgstr "näytönsäästäjän käynnistyttyä"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -174,10 +170,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
-msgstr "Sulje kun käyttämättä:"
+msgstr "Kun käyttämättä:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
@@ -193,10 +188,9 @@ msgstr "Lompakon automaattinen valinta"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Eri lompakko paikallisille salasanoille:"
+msgstr "Käytä paikallisille salasanoille eri oletuslompakkoa"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -209,7 +203,7 @@ msgstr "Uusi…"
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "Oletuslompakko:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -233,14 +227,13 @@ msgstr "Piilota ilmoitusaluekuvake viimeisen lompakon sulkeuduttua"
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr "Secret Service"
+msgstr "Salaisuuspalvelu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
-#, fuzzy, kde-format
-#| msgid "Use KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "Käytä KWalletia Secret Service -käyttöliittymänä"
+msgstr "Käytä K&Walletia salaisuuspalvelun käyttöliittymänä"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -250,7 +243,7 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"Secret Service -käyttöliittymällä sovellukset tallentavat salasanoja ja "
+"Salaisuuspalvelun käyttöliittymällä sovellukset tallentavat salasanoja ja "
 "muuta arkaluontoista tietoa. Poista tämä käytöstä, jos haluat sen sijaan "
 "käyttää kolmannen osapuolen lompakkopalvelua kuten KeePassXC:tä tai "
 "Keyringiä."
