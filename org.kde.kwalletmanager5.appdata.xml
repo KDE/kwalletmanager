@@ -44,6 +44,7 @@
   <name xml:lang="pt-BR">KWalletManager</name>
   <name xml:lang="ro">KWalletManager</name>
   <name xml:lang="ru">KWalletManager</name>
+  <name xml:lang="sa">KWalletManager इति</name>
   <name xml:lang="sk">KWalletManager</name>
   <name xml:lang="sl">KWalletManager</name>
   <name xml:lang="sv">Plånbokshanteraren</name>
@@ -91,6 +92,7 @@
   <summary xml:lang="pt-BR">Ferramenta para gerenciamento de carteiras</summary>
   <summary xml:lang="ro">Utilitar de gestionat portofele</summary>
   <summary xml:lang="ru">Управление бумажниками</summary>
+  <summary xml:lang="sa">बटुआ प्रबन्धन साधन</summary>
   <summary xml:lang="sk">Nástroj pre správu KDE Wallet</summary>
   <summary xml:lang="sl">Upravitelj listnice</summary>
   <summary xml:lang="sv">Hanteringsverktyg för plånbok</summary>
@@ -137,6 +139,7 @@
     <p xml:lang="pt-BR">O KWalletManager é uma ferramenta para gerenciar as senhas no seu sistema. Ao usar o subsistema de carteiras do Frameworks, não só é possível manter as suas próprias senhas, mas também acessar e gerenciar as senhas de todos os aplicativos que possuem integração com a carteira.</p>
     <p xml:lang="ro">KWalletManager e o unealtă pentru gestiunea parolelor din sistem. Folosind subsistemul de portofele din KDE, acesta vă permite nu doar să păstrați propriile secrete dar și să accesați și gestionați parolele fiecărei aplicații ce se integrează cu portofelul.</p>
     <p xml:lang="ru">KWalletManager — приложение для управления паролями. KWalletManager основан на модуле Frameworks wallet и позволяет сохранять не только собственные пароли, но и управлять паролями приложений, использующих этот модуль.</p>
+    <p xml:lang="sa">KWalletManager भवतः प्रणाल्यां गुप्तशब्दानां प्रबन्धनार्थं एकं साधनम् अस्ति । Frameworks wallet उपतन्त्रस्य उपयोगेन न केवलं भवन्तं स्वस्य रहस्यं रक्षितुं अपितु बटुकेन सह एकीकृतस्य प्रत्येकस्य अनुप्रयोगस्य गुप्तशब्दान् अभिगन्तुं प्रबन्धयितुं च अनुमतिं ददाति</p>
     <p xml:lang="sk">KWalletManager je nástroj na správu hesiel vo vašom systéme. Použitím subsystému peňaženky Frameworks vám umožn nielen uchovať vaše dáta, ale aj prístup a právu hesiel každej aplikácie, ktorá sa integruje s peňaženkou.</p>
     <p xml:lang="sl">KWalletManager je orodje za upravljanje gesel v vašem sistemu. Uporaba ogrodja listnice vam omogoča ne le, da ohranite svoje lastne skrivnosti, ampak tudi dostopate do gesel vsake aplikacije, ki se integrira z listnico, in upravljate z njimi.</p>
     <p xml:lang="sv">Plånbokshanteraren är ett verktyg för att hantera lösenorden på systemet. Genom att använda Ramverkens plånboksdelsystem låter det dig behålla egna hemligheter, men också komma åt och hantera lösenord för alla program som är integrerade med plånboken.</p>
