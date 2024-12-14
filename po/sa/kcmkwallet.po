@@ -1,64 +1,60 @@
-# translation of kcmkwallet.po to galician
+# Sanskrit translations for kwalletmanager package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
+# Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
-# Xabi G. Feal <xabigf@gmx.net>, 2006.
-# mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008.
-# Marce Villarino <mvillarino@gmail.com>, 2009, 2013.
-# Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkwallet\n"
+"Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 23:27+0100\n"
-"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
-"Language: gl\n"
+"PO-Revision-Date: 2024-12-13 19:08+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Xabi García, Marce Villarino, Adrián Chaves (Gallaecio)"
+msgstr ""
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xabigf@gmx.net, mvillarino@users.sourceforge.net, adrian@chaves.io"
+msgstr ""
 
 #: konfigurator.cpp:107
 #, kde-format
 msgid "New Wallet"
-msgstr "Nova carteira"
+msgstr "नवीन बटुआ"
 
 #: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Escolla o nome para a nova carteira:"
+msgstr "कृपया नूतनबटुकस्य नाम चिनुत:"
 
 #: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
 msgid "Always Allow"
-msgstr "Permitir sempre"
+msgstr "सर्वदा अनुमन्यताम्"
 
 #: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
 #, kde-format
 msgid "Always Deny"
-msgstr "Denegar Sempre"
+msgstr "सर्वदा अङ्गीकुर्वन्तु"
 
 #: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
-msgstr "Permiso denegado."
+msgstr "अनुमतिः अङ्गीकृता।"
 
 #: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
 msgid "KDE Wallet Control Module"
-msgstr "Módulo de control da carteira de KDE"
+msgstr "KDE बटुआ नियन्त्रण मॉड्यूल"
 
 #: konfigurator.cpp:261
 #, kde-format
@@ -66,19 +62,19 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
-"Produciuse un erro ao autenticar a acción:\n"
+"क्रियायाः प्रमाणीकरणकाले त्रुटिः : १.\n"
 "%1"
 
 #: konfigurator.cpp:359
 #, kde-format
 msgid "&Delete"
-msgstr "&Eliminar"
+msgstr "&लुप्"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
 #: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
-msgstr "Preferencias da carteira"
+msgstr "बटुआ प्राथमिकता"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:33
@@ -87,15 +83,14 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>O subsistema de carteira fornece un xeito sinxelo e seguro de xestionar "
-"os seus contrasinais. Esta opción indica se quere ou non usar este "
-"subsistema.</p>"
+"<p>बटुक उपतन्त्रं भवतः सर्वेषां गुप्तशब्दानां प्रबन्धनार्थं सुलभं सुरक्षितं च मार्गं प्रदाति । एषः "
+"विकल्पः निर्दिशति यत् भवान् तस्य उपयोगं कर्तुम् इच्छति वा न वा ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
-msgstr "&Activar o subsistema de carteira de KDE."
+msgstr "&KDE बटुक उपतन्त्रं सक्षमं कुर्वन्तु"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:49
@@ -104,20 +99,20 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
-"É mellor pechar as carteiras cando non as estea a usar para previr que "
-"outros as vexan ou as usen."
+"अन्येषां दर्शनं वा उपयोगं वा निवारयितुं यदा भवन्तः बटुकानि न उपयुञ्जते तदा बटुकानि पिधातुं "
+"सर्वोत्तमम् ।"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr "Comportamento ao pechar"
+msgstr "निकट व्यवहार"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
 #, kde-format
 msgid "Close wallet:"
-msgstr "Pechar a carteira:"
+msgstr "बटुकं बन्दं कुर्वन्तु : १."
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -128,16 +123,16 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
-"<p>Pecha a carteira en canto as aplicacións que a usen se deteñan.<b></"
-"b><br>Lembre que a carteira só se pechará cando as aplicacións que a use se "
-"deteñan.<br>Cando unha carteira estea pechada precisará do contrasinal para "
-"abrila de novo.</p>"
+"<p><b>तस्य उपयोगं कुर्वन्तः अनुप्रयोगाः स्थगिताः एव बटुकं पिधाय ।</b><br> ध्यानं कुर्वन्तु "
+"यत् भवतः बटुकं तदा एव पिहितं भविष्यति यदा तस्य उपयोगं कुर्वन्तः सर्वे अनुप्रयोगाः स्थगिताः "
+"भविष्यन्ति ।<br> यदा बटुकं पिहितं भवति तदा पुनः तत् प्राप्तुं गुप्तशब्दस्य आवश्यकता भवति ।</"
+"p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
 #, kde-format
 msgid "When last application stops using it"
-msgstr "Cando a última aplicación deixe de usala."
+msgstr "यदा अन्तिमः अनुप्रयोगः तस्य उपयोगं स्थगयति"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -146,14 +141,14 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Pecha a carteira en canto o protector de pantalla comeza.</b><br>Cando "
-"unha carteira se pecha precisará de novo o contrasinal para abrila.</p>"
+"<p><b>स्क्रीनसेवर आरभ्यमाणमात्रेण बटुकं पिधायताम्।</b><br> यदा बटुकं पिहितं भवति तदा पुनः "
+"तत् प्राप्तुं गुप्तशब्दस्य आवश्यकता भवति ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
 #, kde-format
 msgid "When screensaver starts"
-msgstr "Cando o protector de pantalla se inicie."
+msgstr "यदा स्क्रीनसेवर आरभ्यते"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -163,77 +158,75 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Pechar a carteira despois dun período de inactividade</b><br>Cando "
-"unha carteira se peche o contrasinal será preciso para acceder a ela de novo."
-"</p>"
+"<p><b>निष्क्रियतायाः अवधिपर्यन्तं बटुकं बन्दं कुर्वन्तु।</b><br> यदा बटुकं पिहितं भवति तदा "
+"पुनः तत् प्राप्तुं गुप्तशब्दस्य आवश्यकता भवति ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
 #, kde-format
 msgid "When unused for:"
-msgstr "Cando non se use por máis de:"
+msgstr "यदा अप्रयुक्तं भवति तदा : १."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
 #, kde-format
 msgid " minutes"
-msgstr " minutos"
+msgstr " पन्चनिमेषः"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
 #: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
-msgstr "Escolla automática da carteira"
+msgstr "स्वचालित बटुआ चयन"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
 #, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr ""
-"Usar unha carteira predeterminada distinta para os contrasinais locais."
+msgstr "स्थानीयगुप्तशब्दानां कृते भिन्नं पूर्वनिर्धारितं बटुकं उपयुज्यताम्"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #: walletconfigwidget.ui:202 walletconfigwidget.ui:242
 #, kde-format
 msgid "New..."
-msgstr "Nova…"
+msgstr "नूतनम्‌..."
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr "Carteira predeterminada:"
+msgstr "पूर्वनिर्धारित बटुकम् : १."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
-msgstr "Xestor de carteiras"
+msgstr "बटुआ प्रबन्धक"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
 #: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
-msgstr "Amosar o xestor na área de notificación."
+msgstr "सिस्टम् ट्रे मध्ये प्रबन्धकं दर्शयतु"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
 #: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr "Agochar a icona da bandexa cando peche a última das carteiras."
+msgstr "अन्तिम बटुकं यदा बन्दं भवति तदा सिस्टम् ट्रे चिह्नं गोपयन्तु"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr "Servizo de segredos"
+msgstr "गुप्त सेवा"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "Usar &KWallet como interface do servizo de segredos."
+msgstr "Secret Service अन्तरफलकस्य कृते &KWallet इत्यस्य उपयोगं कुर्वन्तु"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -243,67 +236,42 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"A interface do servizo de segredos permite ás aplicacións almacenar "
-"contrasinais e outros datos confidenciais. Desactive isto para permitir que "
-"o xestionen no seu lugar servizos de carteira de terceiras partes como "
-"KeePassXC ou GNOME Keyring."
+"गुप्तसेवा-अन्तरफलकं अनुप्रयोगानाम् गुप्तशब्दान् अन्यगोपनीयदत्तांशं च संग्रहीतुं शक्नोति । "
+"KeePassXC अथवा GNOME Keyring इत्यादीनां तृतीयपक्षस्य बटुकसेवानां स्थाने तस्य प्रबन्धनं कर्तुं "
+"एतत् अक्षमं कुर्वन्तु ।"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
-msgstr "Control de acceso"
+msgstr "अभिगमननियन्त्रणम्"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
 #: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr "&Preguntar cando unha aplicación accede a unha carteira."
+msgstr "&यदा कश्चन अनुप्रयोगः बटुकं अभिगच्छति तदा प्रॉम्प्ट्"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:408
 #, kde-format
 msgid "Wallet"
-msgstr "Carteira"
+msgstr "लघुपुट"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
-msgstr "Aplicación"
+msgstr "अनुप्रयोगः"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:418
 #, kde-format
 msgid "Policy"
-msgstr "Política"
+msgstr "नीति"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
 #: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
-msgstr "&Iniciar o xestor de carteiras"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Escolla a carteira que se vai usar de maneira predeterminada:"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "© 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr ""
-#~ "Este módulo de configuración permítelle configurar o sistema de carteira "
-#~ "de KDE."
-
-#~ msgid "kcmkwallet"
-#~ msgstr "kcmkwallet"
-
-#~ msgid ""
-#~ "Sorry, the system security policy didn't allow you to save the changes."
-#~ msgstr ""
-#~ "Sentímolo, a política de seguridade do sistema non permite gardar os "
-#~ "cambios."
+msgstr "&Launch Wallet Manager"

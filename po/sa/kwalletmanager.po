@@ -1,0 +1,713 @@
+# Sanskrit translations for kwalletmanager package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"PO-Revision-Date: 2024-12-13 19:08+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: allyourbase.cpp:215
+#, kde-format
+msgid "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr "'%1' इति नाम्ना प्रविष्टिः पूर्वमेव अस्ति । किं भवन्तः अग्रे गन्तुं इच्छन्ति ?"
+
+#: allyourbase.cpp:240
+#, kde-format
+msgid "A folder by the name '%1' already exists.  What would you like to do?"
+msgstr "'%1' इति पुटं पूर्वमेव अस्ति ।  किं कर्तुम् इच्छसि ?"
+
+#: allyourbase.cpp:243
+#, kde-format
+msgid "Replace"
+msgstr "प्रत्याहृ"
+
+#: allyourbase.cpp:349
+#, kde-format
+msgid "Folders"
+msgstr "पुटम्"
+
+#: allyourbase.cpp:382
+#, kde-format
+msgid "An unexpected error occurred trying to drop the item"
+msgstr "द्रव्यं त्यक्तुं प्रयतमाने अप्रत्याशितदोषः अभवत्"
+
+#: allyourbase.cpp:457
+#, kde-format
+msgid "An unexpected error occurred trying to drop the entry"
+msgstr "प्रविष्टिं त्यक्तुं प्रयतमाने अप्रत्याशितदोषः अभवत्"
+
+#: allyourbase.cpp:482
+#, kde-format
+msgid ""
+"An unexpected error occurred trying to delete the original folder, but the "
+"folder has been copied successfully"
+msgstr ""
+"मूलपुटं विलोपयितुं प्रयतमाने अप्रत्याशितदोषः अभवत्, परन्तु पुटे सफलतया प्रतिलिपितः अस्ति"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: applicationsmanager.ui:17
+#, kde-format
+msgid "These applications are currently connected to this wallet:"
+msgstr "एते अनुप्रयोगाः सम्प्रति अस्मिन् बटुकेन सह सम्बद्धाः सन्ति:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: applicationsmanager.ui:64
+#, kde-format
+msgid "These applications are authorized to access this wallet:"
+msgstr "एते अनुप्रयोगाः एतत् बटुकं प्राप्तुं अधिकृताः सन्ति:"
+
+#: disconnectappbutton.cpp:17
+#, kde-format
+msgid "Disconnect"
+msgstr "विच्छेदं कुर्वन्तु"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: kbetterthankdialogbase.ui:43
+#, kde-format
+msgid "&Replace"
+msgstr "&प्रत्याहृ"
+
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: kbetterthankdialogbase.ui:53
+#, kde-format
+msgid "Replace &All"
+msgstr "प्रतिस्थापनं &All"
+
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: kbetterthankdialogbase.ui:60
+#, kde-format
+msgid "&Skip"
+msgstr "&क्षिपते"
+
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: kbetterthankdialogbase.ui:67
+#, kde-format
+msgid "Skip A&ll"
+msgstr "Skip A&ll"
+
+#: kwalleteditor.cpp:97
+#, kde-format
+msgid "Search"
+msgstr "अन्वेषण"
+
+#: kwalleteditor.cpp:107
+#, kde-format
+msgctxt "@option:check"
+msgid "&Show values"
+msgstr ""
+
+#: kwalleteditor.cpp:207
+#, kde-format
+msgid "&New Folder..."
+msgstr "&नवीन फोल्डर..."
+
+#: kwalleteditor.cpp:211
+#, kde-format
+msgid "&Delete Folder"
+msgstr "&पुटं विलोपयन्तु"
+
+#: kwalleteditor.cpp:214
+#, kde-format
+msgid "&Import a wallet..."
+msgstr "&एकं बटुकं आयातयन्तु..."
+
+#: kwalleteditor.cpp:218
+#, kde-format
+msgid "&Import XML..."
+msgstr "&XML आयात करें..."
+
+#: kwalleteditor.cpp:222
+#, kde-format
+msgid "&Export as XML..."
+msgstr "&XML रूपेण निर्यातयन्तु..."
+
+#: kwalleteditor.cpp:226
+#, kde-format
+msgid "&Copy"
+msgstr "&प्रतिलिपि"
+
+#: kwalleteditor.cpp:231
+#, kde-format
+msgid "&New..."
+msgstr "&नूतनम्‌..."
+
+#: kwalleteditor.cpp:236
+#, kde-format
+msgid "&Rename"
+msgstr "&नाम पुनर्नाम"
+
+#: kwalleteditor.cpp:241 kwalletpopup.cpp:62
+#, kde-format
+msgid "&Delete"
+msgstr "&लुप्"
+
+#: kwalleteditor.cpp:246
+#, kde-format
+msgid "Always show contents"
+msgstr "सर्वदा सामग्रीं दर्शयतु"
+
+#: kwalleteditor.cpp:250
+#, kde-format
+msgid "Always hide contents"
+msgstr "सामग्रीं सर्वदा गोपयन्तु"
+
+#: kwalleteditor.cpp:359
+#, kde-format
+msgid "Passwords"
+msgstr "गुप्तशब्दाः"
+
+#: kwalleteditor.cpp:360
+#, kde-format
+msgid "Maps"
+msgstr "मानचित्र"
+
+#: kwalleteditor.cpp:361
+#, kde-format
+msgid "Binary Data"
+msgstr "द्विचक्रीय डेटा"
+
+#: kwalleteditor.cpp:362
+#, kde-format
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#: kwalleteditor.cpp:404
+#, kde-format
+msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
+msgstr "किं भवान् निश्चयेन '%1' इति पुटं बटुकात् विलोपयितुम् इच्छति?"
+
+#: kwalleteditor.cpp:410
+#, kde-format
+msgid "Error deleting folder."
+msgstr "पुटं विलोपयन् त्रुटिः।"
+
+#: kwalleteditor.cpp:429
+#, kde-format
+msgid "New Folder"
+msgstr "नवीनं पुटम्"
+
+#: kwalleteditor.cpp:429
+#, kde-format
+msgid "Please choose a name for the new folder:"
+msgstr "कृपया नूतनपुटस्य नाम चिनुत:"
+
+#: kwalleteditor.cpp:437
+#, kde-format
+msgid "Sorry, that folder name is in use. Try again?"
+msgstr "क्षम्यतां, तत् पुटनाम प्रयुक्तम् अस्ति । पुनः प्रयासं कुरुत?"
+
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:798
+#, kde-format
+msgid "Try Again"
+msgstr "पुनः प्रयासं कुरुत"
+
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:799 kwalletmanager.cpp:355
+#, kde-format
+msgid "Do Not Try"
+msgstr "प्रयासं मा कुरुत"
+
+#: kwalleteditor.cpp:479
+#, kde-format
+msgid "Error saving entry. Error code: %1"
+msgstr "प्रविष्टिः रक्षणे त्रुटिः। त्रुटिसङ्केतः: %1"
+
+#: kwalleteditor.cpp:501
+#, kde-format
+msgid ""
+"The contents of the current item has changed.\n"
+"Do you want to save changes?"
+msgstr ""
+"वर्तमानवस्तूनाम् विषयवस्तु परिवर्तिता अस्ति ।\n"
+"परिवर्तनं रक्षितुं इच्छति वा ?"
+
+#: kwalleteditor.cpp:554 kwalleteditor.cpp:881
+#, kde-format
+msgid "Password: %1"
+msgstr "गुप्तशब्दः %1"
+
+#: kwalleteditor.cpp:570 kwalleteditor.cpp:883
+#, kde-format
+msgid "Name-Value Map: %1"
+msgstr "नाम-मूल्यं मानचित्रम् : %1"
+
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:885
+#, kde-format
+msgid "Binary Data: %1"
+msgstr "द्विचक्रीयदत्तांशः %1"
+
+#: kwalleteditor.cpp:787
+#, kde-format
+msgid "New Entry"
+msgstr "नवीन प्रविष्टि"
+
+#: kwalleteditor.cpp:787
+#, kde-format
+msgid "Please choose a name for the new entry:"
+msgstr "कृपया नूतनप्रविष्टेः नाम चिनुत:"
+
+#: kwalleteditor.cpp:796
+#, kde-format
+msgid "Sorry, that entry already exists. Try again?"
+msgstr "क्षम्यतां, सा प्रविष्टिः पूर्वमेव अस्ति । पुनः प्रयासं कुरुत?"
+
+#: kwalleteditor.cpp:816 kwalleteditor.cpp:825
+#, kde-format
+msgid "An unexpected error occurred trying to add the new entry"
+msgstr "नूतनप्रविष्टिं योजयितुं प्रयतमाने अप्रत्याशितदोषः अभवत्"
+
+#: kwalleteditor.cpp:877
+#, kde-format
+msgid "An unexpected error occurred trying to rename the entry"
+msgstr "प्रविष्टेः नामकरणं कर्तुं प्रयतमाने अप्रत्याशितदोषः अभवत्"
+
+#: kwalleteditor.cpp:898
+#, kde-format
+msgid "Are you sure you wish to delete the item '%1'?"
+msgstr "किं भवान् निश्चितः अस्ति यत् भवान् '%1' इति द्रव्यं विलोपयितुम् इच्छति?"
+
+#: kwalleteditor.cpp:902
+#, kde-format
+msgid "An unexpected error occurred trying to delete the entry"
+msgstr "प्रविष्टिं विलोपयितुं प्रयतमाने अप्रत्याशितदोषः अभवत्"
+
+#: kwalleteditor.cpp:930
+#, kde-format
+msgid "Unable to open the requested wallet."
+msgstr "अनुरोधितं बटुकं उद्घाटयितुं असमर्थः।"
+
+#: kwalleteditor.cpp:972
+#, kde-format
+msgid "Unable to create temporary file for downloading '<b>%1</b>'."
+msgstr "&#39; <b>%1</b> &#39; अवतरणं कर्तुं अस्थायीसञ्चिकां निर्मातुं असमर्थम् ।"
+
+#: kwalleteditor.cpp:979
+#, kde-format
+msgid "Unable to access wallet '<b>%1</b>'."
+msgstr "बटुकं &#39; <b>%1</b> &#39; अभिगन्तुं असमर्थम् ।"
+
+#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
+#: kwalleteditor.cpp:1162
+#, kde-format
+msgid ""
+"Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
+"replace it?"
+msgstr ""
+"&#39; <b>%1</b> &#39; पुटस्य पूर्वमेव &#39; <b>%2</b> &#39; इति प्रविष्टिः अस्ति । "
+"किं भवन्तः तस्य स्थाने अन्यं स्थापयितुम् इच्छन्ति ?"
+
+#: kwalleteditor.cpp:1120
+#, kde-format
+msgid "Unable to access XML file '<b>%1</b>'."
+msgstr "XML सञ्चिकां &#39; <b>%1</b> &#39; अभिगन्तुं असमर्थम् ।"
+
+#: kwalleteditor.cpp:1126
+#, kde-format
+msgid "Error reading XML file '<b>%1</b>' for input."
+msgstr "निवेशार्थं XML सञ्चिकां &#39; <b>%1</b> &#39; पठने त्रुटिः ।"
+
+#: kwalleteditor.cpp:1132
+#, kde-format
+msgid "Error: XML file does not contain a wallet."
+msgstr "त्रुटिः : XML सञ्चिकायां बटुकं नास्ति ।"
+
+#: kwalleteditor.cpp:1285
+#, kde-format
+msgid "Unable to store to '<b>%1</b>'."
+msgstr "&#39; <b>%1</b> &#39; इत्यत्र संग्रहीतुं असमर्थः ।"
+
+#: kwalletmanager.cpp:63
+#, kde-format
+msgid ""
+"The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
+"the KWalletManager will quit as it cannot work without reading the wallets."
+msgstr ""
+"KDE Wallet प्रणाली सक्षमा नास्ति । किं त्वं इच्छसि यत् अहं तत् सक्षमं करोमि ? यदि न, "
+"तर्हि KWalletManager त्यक्ष्यति यतः बटुकानि पठितुं विना कार्यं कर्तुं न शक्नोति ।"
+
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:222
+#: kwalletmanager.cpp:287
+#, kde-format
+msgid "Wallet"
+msgstr "लघुपुट"
+
+#: kwalletmanager.cpp:88 kwalletmanager.cpp:287
+#, kde-format
+msgid "No wallets open."
+msgstr "न बटुकाः उद्घाटिताः।"
+
+#: kwalletmanager.cpp:95 kwalletmanager.cpp:222
+#, kde-format
+msgid "A wallet is open."
+msgstr "एकं बटुकं उद्घाटितम् अस्ति।"
+
+#: kwalletmanager.cpp:139 kwalletpopup.cpp:27
+#, kde-format
+msgid "&New Wallet..."
+msgstr "&नव बटुआ..."
+
+#: kwalletmanager.cpp:144
+#, kde-format
+msgid "&Delete Wallet..."
+msgstr "&बटुआ डिलीट..."
+
+#: kwalletmanager.cpp:149
+#, kde-format
+msgid "Export as encrypted"
+msgstr "एन्क्रिप्टेड् इति निर्यातं कुर्वन्तु"
+
+#: kwalletmanager.cpp:154
+#, kde-format
+msgid "&Import encrypted"
+msgstr "&आयात एन्क्रिप्टेड"
+
+#: kwalletmanager.cpp:159
+#, kde-format
+msgid "Configure &Wallet..."
+msgstr "&Wallet विन्यस्तं कुर्वन्तु..."
+
+#: kwalletmanager.cpp:167
+#, kde-format
+msgid "Close &All Wallets"
+msgstr "&All Wallets बन्द करें"
+
+#: kwalletmanager.cpp:256 walletcontrolwidget.cpp:110
+#, kde-format
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"बटुकं स्वच्छतया बन्दं कर्तुं असमर्थः। सम्भवतः अन्यैः अनुप्रयोगैः प्रयुक्तम् अस्ति । किं त्वं तत् बलात् "
+"पिहितं कर्तुम् इच्छसि ?"
+
+#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:112
+#, kde-format
+msgid "Force Closure"
+msgstr "बल समापन"
+
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
+#, kde-format
+msgid "Do Not Force"
+msgstr "बलं मा कुरुत"
+
+#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:117
+#, kde-format
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "बटुकं बलात् बन्दं कर्तुं असमर्थः। त्रुटिसङ्केतः %1 आसीत् ।"
+
+#: kwalletmanager.cpp:279
+#, kde-format
+msgid "Error opening wallet %1."
+msgstr "बटुकं %1 उद्घाटयितुं त्रुटिः।"
+
+#: kwalletmanager.cpp:318
+#, kde-format
+msgid "Please choose a name for the new wallet:"
+msgstr "कृपया नूतनबटुकस्य नाम चिनुत:"
+
+#: kwalletmanager.cpp:327
+#, kde-format
+msgctxt "@title:window"
+msgid "New Wallet"
+msgstr ""
+
+#: kwalletmanager.cpp:346
+#, kde-format
+msgid "Empty name is not supported. Please select a new one."
+msgstr "रिक्तं नाम समर्थितं नास्ति। कृपया नूतनं चिनुत।"
+
+#: kwalletmanager.cpp:346
+#, kde-format
+msgid "Create new wallet"
+msgstr "नूतनं बटुकं रचयन्तु"
+
+#: kwalletmanager.cpp:352
+#, kde-format
+msgid "Sorry, that wallet already exists. Try a new name?"
+msgstr "क्षम्यतां, तत् बटुकं पूर्वमेव अस्ति । नूतनं नाम प्रयतस्व?"
+
+#: kwalletmanager.cpp:354
+#, kde-format
+msgid "Try New"
+msgstr "नवीनं प्रयतस्व"
+
+#: kwalletmanager.cpp:380
+#, kde-format
+msgid "Are you sure you wish to delete the wallet '%1'?"
+msgstr "किं भवान् निश्चयेन '%1' बटुकं विलोपयितुम् इच्छति?"
+
+#: kwalletmanager.cpp:386
+#, kde-format
+msgid "Unable to delete the wallet. Error code was %1."
+msgstr "बटुकं विलोपयितुं असमर्थः। त्रुटिसङ्केतः %1 आसीत् ।"
+
+#: kwalletmanager.cpp:433
+#, kde-format
+msgid "File name"
+msgstr "सञ्चिकानाम"
+
+#: kwalletmanager.cpp:440
+#, kde-format
+msgid "Failed to open file for writing"
+msgstr "लेखनार्थं सञ्चिकां उद्घाटयितुं असफलम्"
+
+#: kwalletmanager.cpp:451
+#, kde-format
+msgid "Select file"
+msgstr "सञ्चिकां चिनोतु"
+
+#: kwalletmanager.cpp:461
+#, kde-format
+msgid "Failed to open file"
+msgstr "सञ्चिकां उद्घाटयितुं असफलम्"
+
+#: kwalletmanager.cpp:473
+#, kde-format
+msgid "Wallet named %1 already exists, Operation aborted"
+msgstr "%1 इति नामकं बटुकं पूर्वमेव अस्ति, ऑपरेशनं निरस्तम्"
+
+#: kwalletmanager.cpp:479
+#, kde-format
+msgid "Failed to copy files"
+msgstr "सञ्चिकानां प्रतिलिपिं कर्तुं असफलम्"
+
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
+#, kde-format
+msgid "Ignore unsaved changes?"
+msgstr "असरक्षितपरिवर्तनानां अवहेलनां कुर्वन्तु?"
+
+#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
+#, kde-format
+msgid "Ignore"
+msgstr "उपेक्षा"
+
+#. i18n: ectx: Menu (file)
+#: kwalletmanager.rc:4
+#, kde-format
+msgid "&File"
+msgstr "&संचिका"
+
+#. i18n: ectx: Menu (settings)
+#: kwalletmanager.rc:17
+#, kde-format
+msgid "&Settings"
+msgstr "&सेटिंग्स"
+
+#. i18n: ectx: Menu (help)
+#: kwalletmanager.rc:20
+#, kde-format
+msgid "&Help"
+msgstr "&साहाय्यम्‌"
+
+#: kwalletmanagerwidget.cpp:222
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
+msgstr ""
+
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#, kde-format
+msgid "&Open..."
+msgstr "&उद्घाटित..."
+
+#: kwalletpopup.cpp:38
+#, kde-format
+msgid "Change &Password..."
+msgstr "परिवर्तन &गुप्तशब्द..."
+
+#: kwalletpopup.cpp:51
+#, kde-format
+msgid "Disconnec&t"
+msgstr "विच्छेद&t"
+
+#: kwmapeditor.cpp:133
+#, kde-format
+msgid "Key"
+msgstr "कुंजी"
+
+#: kwmapeditor.cpp:133
+#, kde-format
+msgid "Value"
+msgstr "मूल्यम्‌"
+
+#: kwmapeditor.cpp:151 kwmapeditor.cpp:200
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete Entry"
+msgstr ""
+
+#: kwmapeditor.cpp:220
+#, kde-format
+msgid "&New Entry"
+msgstr "&नवीन प्रविष्टि"
+
+#: main.cpp:26
+#, kde-format
+msgid "Wallet Manager"
+msgstr "बटुआ प्रबन्धक"
+
+#: main.cpp:28
+#, kde-format
+msgid "KDE Wallet Management Tool"
+msgstr "KDE बटुआ प्रबन्धन साधनम्"
+
+#: main.cpp:30
+#, kde-format
+msgid "Copyright ©2013–2017, KWallet Manager authors"
+msgstr "प्रतिलिपि अधिकार ©2013–2017, KWallet प्रबन्धक लेखक"
+
+#: main.cpp:34
+#, kde-format
+msgctxt "@info:credit"
+msgid "Valentin Rusu"
+msgstr ""
+
+#: main.cpp:34
+#, kde-format
+msgid "Former Maintainer, user interface refactoring"
+msgstr "पूर्व Maintainer, उपयोक्तृ-अन्तरफलक refactoring"
+
+#: main.cpp:35
+#, kde-format
+msgctxt "@info:credit"
+msgid "George Staikos"
+msgstr ""
+
+#: main.cpp:35
+#, kde-format
+msgid "Original author and former maintainer"
+msgstr "मूल लेखक एवं पूर्व परिपालक"
+
+#: main.cpp:36
+#, kde-format
+msgctxt "@info:credit"
+msgid "Michael Leupold"
+msgstr ""
+
+#: main.cpp:36
+#, kde-format
+msgid "Developer and former maintainer"
+msgstr "विकासकः पूर्वपालकः च"
+
+#: main.cpp:37
+#, kde-format
+msgctxt "@info:credit"
+msgid "Isaac Clerencia"
+msgstr ""
+
+#: main.cpp:37
+#, kde-format
+msgid "Developer"
+msgstr "विकासकः"
+
+#: main.cpp:44
+#, kde-format
+msgid "Show window on startup"
+msgstr "प्रारम्भे विण्डो दर्शयतु"
+
+#: main.cpp:45
+#, kde-format
+msgid "For use by kwalletd only"
+msgstr "केवलं kwalletd द्वारा उपयोगाय"
+
+#: main.cpp:46
+#, kde-format
+msgid "A wallet name"
+msgstr "एकं बटुकनाम"
+
+#: revokeauthbutton.cpp:16
+#, kde-format
+msgid "Revoke Authorization"
+msgstr "प्राधिकरण निरस्त करो"
+
+#: walletcontrolwidget.cpp:55
+#, kde-format
+msgid "&Close"
+msgstr "&पिधानं करोतु"
+
+#: walletcontrolwidget.cpp:73
+#, kde-format
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open."
+msgstr ""
+
+#: walletcontrolwidget.cpp:90
+#, kde-format
+msgid "The wallet is currently closed."
+msgstr "सम्प्रति बटुकं पिहितम् अस्ति।"
+
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: walletcontrolwidget.ui:31
+#, kde-format
+msgid "KSqueezedTextLabel"
+msgstr "KSqueezedTextLabel इति"
+
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: walletcontrolwidget.ui:54
+#, kde-format
+msgid "Open..."
+msgstr "उद्घाटित..."
+
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: walletcontrolwidget.ui:61
+#, kde-format
+msgid "Change Password..."
+msgstr "गुप्तशब्दं परिवर्तयन्तु..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: walletcontrolwidget.ui:80
+#, kde-format
+msgid "Contents"
+msgstr "विषयवस्तु"
+
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: walletcontrolwidget.ui:117
+#, kde-format
+msgid "Applications"
+msgstr "अनुप्रयोगाः"
+
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: walletwidget.ui:159
+#, kde-format
+msgid "Hide &Contents"
+msgstr "गोपयन्तु &सामग्री"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: walletwidget.ui:205 walletwidget.ui:253
+#, kde-format
+msgid "Show &Contents"
+msgstr "&सामग्री दर्शयतु"
+
+#. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
+#: walletwidget.ui:324
+#, kde-format
+msgid "&Undo"
+msgstr "&Undo"
+
+#. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
+#: walletwidget.ui:334
+#, kde-format
+msgid "&Save"
+msgstr "&रक्ष्"
