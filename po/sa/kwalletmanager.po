@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: allyourbase.cpp:215
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "अन्वेषण"
 #, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
-msgstr ""
+msgstr "&मूल्यानि दर्शयतु"
 
 #: kwalleteditor.cpp:207
 #, kde-format
@@ -428,7 +428,7 @@ msgstr "कृपया नूतनबटुकस्य नाम चिनु
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
-msgstr ""
+msgstr "नवीन बटुआ"
 
 #: kwalletmanager.cpp:346
 #, kde-format
@@ -522,7 +522,7 @@ msgstr "&साहाय्यम्‌"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "KWallet सेवायाः सह संयोजने त्रुटिः अभवत्:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
@@ -553,7 +553,7 @@ msgstr "मूल्यम्‌"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
-msgstr ""
+msgstr "प्रविष्टि विलोपयतु"
 
 #: kwmapeditor.cpp:220
 #, kde-format
@@ -579,7 +579,7 @@ msgstr "प्रतिलिपि अधिकार ©2013–2017, KWallet �
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
-msgstr ""
+msgstr "वैलेन्टिन रुसु"
 
 #: main.cpp:34
 #, kde-format
@@ -590,7 +590,7 @@ msgstr "पूर्व Maintainer, उपयोक्तृ-अन्तरफ�
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
-msgstr ""
+msgstr "जार्ज स्टैइकोस"
 
 #: main.cpp:35
 #, kde-format
@@ -601,7 +601,7 @@ msgstr "मूल लेखक एवं पूर्व परिपालक"
 #, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
-msgstr ""
+msgstr "माइकल ल्यूपोल्ड"
 
 #: main.cpp:36
 #, kde-format
@@ -612,7 +612,7 @@ msgstr "विकासकः पूर्वपालकः च"
 #, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
-msgstr ""
+msgstr "आइजैक क्लेरेन्सिया"
 
 #: main.cpp:37
 #, kde-format
@@ -650,7 +650,7 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr ""
+msgstr "'%1' बटुकं सम्प्रति उद्घाटितम् अस्ति ।"
 
 #: walletcontrolwidget.cpp:90
 #, kde-format
