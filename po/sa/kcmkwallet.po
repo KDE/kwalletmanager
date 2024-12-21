@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the kwalletmanager package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 19:08+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -113,7 +115,7 @@ msgstr "निकट व्यवहार"
 #: walletconfigwidget.ui:69
 #, kde-format
 msgid "Close wallet:"
-msgstr "बटुकं बन्दं कुर्वन्तु : १."
+msgstr "बटुकं बन्दं कुर्वन्तु :"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -166,7 +168,7 @@ msgstr ""
 #: walletconfigwidget.ui:99
 #, kde-format
 msgid "When unused for:"
-msgstr "यदा अप्रयुक्तं भवति तदा : १."
+msgstr "यदा अप्रयुक्तं भवति तदा :"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
@@ -197,7 +199,7 @@ msgstr "नूतनम्‌..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr "पूर्वनिर्धारित बटुकम् : १."
+msgstr "पूर्वनिर्धारित बटुकम् :"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
