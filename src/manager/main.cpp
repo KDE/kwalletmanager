@@ -41,7 +41,9 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
 
     aboutData.setupCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringLiteral("show"), i18n("Show window on startup")));
+    QCommandLineOption showOption(QStringLiteral("show"), i18n("Ignored, for compatibility"));
+    showOption.setFlags(QCommandLineOption::HiddenFromHelp);
+    parser.addOption(showOption);
     parser.addOption(QCommandLineOption(QStringLiteral("kwalletd"), i18n("For use by kwalletd only")));
     parser.addPositionalArgument(QStringLiteral("name"), i18n("A wallet name"));
     parser.process(a);

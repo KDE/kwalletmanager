@@ -49,7 +49,7 @@ KWalletManager::KWalletManager(QCommandLineParser *commandLineParser)
 
     QTimer::singleShot(0, this, &KWalletManager::beginConfiguration);
 
-    processParsedCommandLine(ProgramStart);
+    processParsedCommandLine();
 }
 
 void KWalletManager::beginConfiguration()
@@ -496,46 +496,31 @@ void KWalletManager::handleActivate(const QStringList &arguments, const QString 
 {
     Q_UNUSED(workingDirectory);
 
-    // DBus activation or KDBusService::Unique handling without cmdl arguments
-    if (arguments.isEmpty()) {
-        // app start or activation for kwalletmanager historically does not mean "show the window"
-        // just ensure the manager is running in the systray, if configured like that.
-        // In the other case KWalletManager::configUI() will ensure a window is shown on first start.
-        activateForStartLikeCall(false);
-        return;
-    }
-
     // KDBusService::Unique handling
     _commandLineParser->parse(arguments);
 
-    processParsedCommandLine(RemoteCall);
+    processParsedCommandLine();
 }
 
-void KWalletManager::processParsedCommandLine(CommandLineOrigin commandLineOrigin)
+void KWalletManager::processParsedCommandLine()
 {
-    const bool shoWWindow = _commandLineParser->isSet(QStringLiteral("show"));
-    if (commandLineOrigin == ProgramStart) {
-        if (shoWWindow)
-            show();
-    } else {
-        activateForStartLikeCall(shoWWindow);
-    }
-
     if (_commandLineParser->isSet(QStringLiteral("kwalletd"))) {
         kwalletdLaunch();
-    }
+    } else {
+        activateForStartLikeCall();
 
-    const QStringList positionalArguments = _commandLineParser->positionalArguments();
-    QStringList localFiles;
-    for (const QString &arg : positionalArguments) {
-        const QString fn = QFileInfo(arg).absoluteFilePath();
-        if (QFile::exists(fn)) {
-            localFiles.append(fn);
-        } else {
-            openWallet(arg);
+        const QStringList positionalArguments = _commandLineParser->positionalArguments();
+        QStringList localFiles;
+        for (const QString &arg : positionalArguments) {
+            const QString fn = QFileInfo(arg).absoluteFilePath();
+            if (QFile::exists(fn)) {
+                localFiles.append(fn);
+            } else {
+                openWallet(arg);
+            }
         }
+        tryOpenWalletFiles(localFiles);
     }
-    tryOpenWalletFiles(localFiles);
 }
 
 void KWalletManager::handleOpen(const QList<QUrl> &urls)
@@ -545,7 +530,7 @@ void KWalletManager::handleOpen(const QList<QUrl> &urls)
         localFiles.append(url.toLocalFile());
     }
     tryOpenWalletFiles(localFiles);
-    activateForStartLikeCall(false);
+    activateForStartLikeCall();
 }
 
 void KWalletManager::tryOpenWalletFiles(const QStringList &localFiles)
@@ -562,19 +547,16 @@ void KWalletManager::tryOpenWalletFiles(const QStringList &localFiles)
     }
 }
 
-void KWalletManager::activateForStartLikeCall(bool showWindow)
+void KWalletManager::activateForStartLikeCall()
 {
-    if (showWindow) {
-        show();
-    }
+    show();
     KWindowSystem::updateStartupId(windowHandle());
 
-    if (showWindow) {
-        if (isMinimized())
-            setWindowState(windowState() & ~Qt::WindowMinimized);
-        else if (_tray && !isVisible()) // TODO: how does this relate to show() above?
-            _tray->activate(QPoint());
-    }
+    if (isMinimized())
+        setWindowState(windowState() & ~Qt::WindowMinimized);
+    else if (_tray && !isVisible()) // TODO: how does this relate to show() above?
+        _tray->activate(QPoint());
+
     // if there is a window visible, now or before, always activate it
     if (isVisible()) {
         if (!isActiveWindow()) {
