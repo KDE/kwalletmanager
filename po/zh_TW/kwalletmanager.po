@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-08-03 14:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -621,15 +621,15 @@ msgstr "開發者"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "啟動時顯示視窗"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "只給 kwalletd 使用"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "錢包名稱"
@@ -711,3 +711,6 @@ msgstr "復原(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "儲存(&S)"
+
+#~ msgid "Show window on startup"
+#~ msgstr "啟動時顯示視窗"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-07-30 13:42+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -644,15 +644,15 @@ msgstr "Ontwikkelaar"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Venster tonen bij opstarten"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Alleen voor gebruik door kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Naam van een portefeuille"
@@ -734,6 +734,9 @@ msgstr "&Ongedaan maken"
 #, kde-format
 msgid "&Save"
 msgstr "Op&slaan"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Venster tonen bij opstarten"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Portefeuille openen..."

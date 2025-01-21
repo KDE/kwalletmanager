@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-07-30 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -629,15 +629,15 @@ msgstr "Desenvolupador"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Mostra la finestra en engegar"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Per a ser usat només pel kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Un nom de cartera"
@@ -719,3 +719,6 @@ msgstr "&Desfés"
 #, kde-format
 msgid "&Save"
 msgstr "&Desa"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Mostra la finestra en engegar"

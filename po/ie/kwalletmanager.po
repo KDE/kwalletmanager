@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -618,16 +618,16 @@ msgid "Developer"
 msgstr "Developator"
 
 #: main.cpp:44
-#, fuzzy, kde-format
-msgid "Show window on startup"
-msgstr "Centrar li fenestre al inicie."
+#, kde-format
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, fuzzy, kde-format
 msgid "For use by kwalletd only"
 msgstr "&Usar solmen li preferet clav-paroles"
 
-#: main.cpp:46
+#: main.cpp:48
 #, fuzzy, kde-format
 msgid "A wallet name"
 msgstr "Porta-papere"
@@ -709,3 +709,7 @@ msgstr "&Defar"
 #, fuzzy, kde-format
 msgid "&Save"
 msgstr "_Salvar"
+
+#, fuzzy
+#~ msgid "Show window on startup"
+#~ msgstr "Centrar li fenestre al inicie."

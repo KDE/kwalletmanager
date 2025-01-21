@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-08-12 16:03+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -625,15 +625,15 @@ msgstr "Programuotojas"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Rodyti langą paleidimo metu"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Tik kwalletd naudojimui"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Slaptažodinės pavadinimas"
@@ -715,6 +715,9 @@ msgstr "Atša&ukti"
 #, kde-format
 msgid "&Save"
 msgstr "Į&rašyti"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Rodyti langą paleidimo metu"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Atverti slaptažodinę..."

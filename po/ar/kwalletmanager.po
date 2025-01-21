@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-08-15 12:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -630,15 +630,15 @@ msgstr "مطوّر"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "أظهر النّافذة عند البدء"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "يستخدمها kwalletd فقط"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "اسم المحفظة"
@@ -720,6 +720,9 @@ msgstr "&تراجع"
 #, kde-format
 msgid "&Save"
 msgstr "ا&حفظ"
+
+#~ msgid "Show window on startup"
+#~ msgstr "أظهر النّافذة عند البدء"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "افتح محفظة..."

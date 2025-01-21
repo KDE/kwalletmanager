@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-07-31 11:51+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -627,15 +627,15 @@ msgstr "Sviluppatore"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Mostra finestra all'avvio"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Per uso solo da parte di kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Un nome di portafogli"
@@ -717,6 +717,9 @@ msgstr "&Annulla"
 #, kde-format
 msgid "&Save"
 msgstr "&Salva"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Mostra finestra all'avvio"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Apri portafogli..."

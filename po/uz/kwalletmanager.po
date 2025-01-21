@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2006-12-17 13:39+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -642,15 +642,15 @@ msgstr "Tuzuvchi"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Ishga tushganda oynani koʻrsatish"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Faqat kwalletd demoni qoʻllashi uchun"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Qopchiqning nomi"
@@ -736,6 +736,9 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#~ msgid "Show window on startup"
+#~ msgstr "Ishga tushganda oynani koʻrsatish"
 
 #, fuzzy
 #~| msgid "New Wallet"

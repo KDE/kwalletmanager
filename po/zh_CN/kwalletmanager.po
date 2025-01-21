@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -618,15 +618,15 @@ msgstr "开发者"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "启动时显示窗口"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "仅供 kwalletd 使用"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "密码库名称"
@@ -708,3 +708,6 @@ msgstr "撤销(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
+
+#~ msgid "Show window on startup"
+#~ msgstr "启动时显示窗口"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2007-04-04 17:15+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -617,16 +617,16 @@ msgid "Developer"
 msgstr "Распрацоўнік"
 
 #: main.cpp:44
-#, fuzzy, kde-format
-msgid "Show window on startup"
-msgstr "Паказваць акно пры запуску"
+#, kde-format
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, fuzzy, kde-format
 msgid "For use by kwalletd only"
 msgstr "Толькі для выкарыстання дэманам паперніка kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, fuzzy, kde-format
 msgid "A wallet name"
 msgstr "Імя паперніка"
@@ -708,6 +708,10 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Show window on startup"
+#~ msgstr "Паказваць акно пры запуску"
 
 #, fuzzy
 #~ msgid "Open Wallet..."
