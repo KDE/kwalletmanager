@@ -708,6 +708,3 @@ msgstr "撤销(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
-
-#~ msgid "Show window on startup"
-#~ msgstr "启动时显示窗口"
