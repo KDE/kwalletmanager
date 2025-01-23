@@ -619,7 +619,7 @@ msgstr "开发者"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "已忽略 (为保证兼容性)"
 
 #: main.cpp:47
 #, kde-format
