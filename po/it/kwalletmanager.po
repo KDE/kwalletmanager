@@ -3,14 +3,14 @@
 # Federico Cozzi <federicocozzi@federicocozzi.it>, 2004, 2005.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2005.
 # Nicola Ruggero <nicola@nxnt.org>, 2005, 2006, 2008, 2009, 2011, 2013.
-# SPDX-FileCopyrightText: 2015, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2015, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2024-07-31 11:51+0200\n"
+"PO-Revision-Date: 2025-01-21 18:05+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -628,7 +628,7 @@ msgstr "Sviluppatore"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "Ignorato, per compatibilità"
 
 #: main.cpp:47
 #, kde-format
