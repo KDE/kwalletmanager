@@ -6,13 +6,13 @@
 # Eugene Onischenko <oneugene@ukr.net>, 2003, 2004.
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2004, 2005, 2007, 2008.
 # Andriy Rysin <rysin@kde.org>, 2006.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2013, 2015, 2016, 2017, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2013, 2015, 2016, 2017, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 09:57+0300\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-21 22:53+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -631,15 +631,15 @@ msgstr "Розробник"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Показувати вікно при запуску"
+msgid "Ignored, for compatibility"
+msgstr "Буде проігноровано, для сумісності"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Тільки для використання kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Назва торбинки"
@@ -721,6 +721,9 @@ msgstr "&Вернути"
 #, kde-format
 msgid "&Save"
 msgstr "&Зберегти"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Показувати вікно при запуску"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Відкрити торбинку…"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-10-09 21:03+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -628,15 +628,15 @@ msgstr "Izstrādātājs"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Ieslēdzoties parādīt logu"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Tikai „kwalletd“ lietošanai"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Maka nosaukums"
@@ -718,6 +718,9 @@ msgstr "&Atsaukt"
 #, kde-format
 msgid "&Save"
 msgstr "&Saglabāt"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Ieslēdzoties parādīt logu"
 
 #, fuzzy
 #~| msgid "Open Wallet"

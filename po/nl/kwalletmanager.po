@@ -4,21 +4,21 @@
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006, 2007, 2010.
 # Kristof Bal <kristof.bal@gmail.com>, 2008.
-# SPDX-FileCopyrightText: 2009, 2023, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+# SPDX-FileCopyrightText: 2009, 2023, 2024, 2025 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2013, 2015, 2016, 2017, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 13:42+0200\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-21 14:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -26,7 +26,7 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Wilbert Berendsen - 2003; 2004,Tom Albers - 2004,Rinse de Vries - 2005 tot "
-"2007,Freek de Kruijf - 2013 tot 2017;2022 t/m 2024"
+"2007,Freek de Kruijf - 2013 tot 2017;2022 t/m 2025"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -644,15 +644,15 @@ msgstr "Ontwikkelaar"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Venster tonen bij opstarten"
+msgid "Ignored, for compatibility"
+msgstr "Genegeerd, voor compatibiliteit"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Alleen voor gebruik door kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Naam van een portefeuille"
@@ -734,6 +734,9 @@ msgstr "&Ongedaan maken"
 #, kde-format
 msgid "&Save"
 msgstr "Op&slaan"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Venster tonen bij opstarten"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Portefeuille openen..."

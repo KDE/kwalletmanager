@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2005-11-17 11:28+0800\n"
 "Last-Translator: MIMOS Open Source <opensource@mimos.my\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -633,15 +633,15 @@ msgstr ""
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Paparkan tetingkap semasa mula"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Untuk kegunaan kwalletd sahaja"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Nama wallet"
@@ -727,6 +727,9 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#~ msgid "Show window on startup"
+#~ msgstr "Paparkan tetingkap semasa mula"
 
 #, fuzzy
 #~| msgid "New Wallet"

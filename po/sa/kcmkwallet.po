@@ -1,76 +1,63 @@
-# translation of kcmkwallet.po into Russian
-# Translation of kcmkwallet.po into Russian
-# Copyright (C) 2003, KDE Team.
+# Sanskrit translations for kwalletmanager package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
+# Kali <EMAIL@ADDRESS>, 2024.
 #
-# Oleg Batalov <batalov@twiga.kz>, 2003.
-# Oleg Batalov <olegbatalov@mail.ru>, 2004.
-# Gregory Mokhin <mok@kde.ru>, 2005.
-# Andrey Cherepanov <skull@kde.ru>, 2009.
-# Artem Sereda <overmind88@gmail.com>, 2009.
-# Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Potashev <aspotashev@gmail.com>, 2014, 2018.
-# Olga Mironova <omiro@basealt.ru>, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022, 2023.
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkwallet\n"
+"Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2024-12-11 16:07+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
-"Language: ru\n"
+"PO-Revision-Date: 2024-12-24 20:39+0530\n"
+"Last-Translator: kali <shreekantkalwar@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Олег Баталов, Ольга Миронова, Олеся Герасименко"
+msgstr "श्रीकान्त् कलवार्"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "batalov@twiga.kz, omiro@basealt.ru, translation-team@basealt.ru"
+msgstr "skkalwar999@gmail.com"
 
 #: konfigurator.cpp:107
 #, kde-format
 msgid "New Wallet"
-msgstr "Новый бумажник"
+msgstr "नवीन बटुआ"
 
 #: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Укажите имя нового бумажника:"
+msgstr "कृपया नूतनबटुकस्य नाम चिनुत:"
 
 #: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
 msgid "Always Allow"
-msgstr "Разрешать всегда"
+msgstr "सर्वदा अनुमन्यताम्"
 
 #: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
 #, kde-format
 msgid "Always Deny"
-msgstr "Запрещать всегда"
+msgstr "सर्वदा अङ्गीकुर्वन्तु"
 
 #: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
-msgstr "Доступ запрещён."
+msgstr "अनुमतिः अङ्गीकृता।"
 
 #: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
 msgid "KDE Wallet Control Module"
-msgstr "Модуль управления бумажниками KDE"
+msgstr "KDE बटुआ नियन्त्रण मॉड्यूल"
 
 #: konfigurator.cpp:261
 #, kde-format
@@ -78,19 +65,19 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
-"Ошибка аутентификации:\n"
+"क्रियायाः प्रमाणीकरणकाले त्रुटिः : १.\n"
 "%1"
 
 #: konfigurator.cpp:359
 #, kde-format
 msgid "&Delete"
-msgstr "&Удалить"
+msgstr "&लुप्"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
 #: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
-msgstr "Параметры бумажника"
+msgstr "बटुआ प्राथमिकता"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:33
@@ -99,15 +86,14 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>Подсистема хранения паролей «Бумажник» позволяет легко и безопасно "
-"управлять всеми паролями пользователя. Включите этот параметр, если хотите "
-"её использовать.</p>"
+"<p>बटुक उपतन्त्रं भवतः सर्वेषां गुप्तशब्दानां प्रबन्धनार्थं सुलभं सुरक्षितं च मार्गं प्रदाति । एषः "
+"विकल्पः निर्दिशति यत् भवान् तस्य उपयोगं कर्तुम् इच्छति वा न वा ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
-msgstr "&Использовать бумажник KDE"
+msgstr "&KDE बटुक उपतन्त्रं सक्षमं कुर्वन्तु"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:49
@@ -116,20 +102,20 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
-"Закрывайте бумажник, если он не используется, чтобы никто не мог увидеть "
-"хранящуюся в нём информацию и воспользоваться ею."
+"अन्येषां दर्शनं वा उपयोगं वा निवारयितुं यदा भवन्तः बटुकानि न उपयुञ्जते तदा बटुकानि पिधातुं "
+"सर्वोत्तमम् ।"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr "Поведение при закрытии"
+msgstr "निकट व्यवहार"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
 #, kde-format
 msgid "Close wallet:"
-msgstr "Закрытие бумажника:"
+msgstr "बटुकं बन्दं कुर्वन्तु :"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -140,16 +126,16 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
-"<p><b>Закрывать бумажник после окончания работы использующих его приложений."
-"</b><br>Обратите внимание, что бумажник будет закрыт только тогда, когда все "
-"приложения, использующие его, прекратят свою работу.<br>Если бумажник "
-"закрыт, для повторного доступа к нему потребуется ввести пароль.</p>"
+"<p><b>तस्य उपयोगं कुर्वन्तः अनुप्रयोगाः स्थगिताः एव बटुकं पिधाय ।</b><br> ध्यानं कुर्वन्तु "
+"यत् भवतः बटुकं तदा एव पिहितं भविष्यति यदा तस्य उपयोगं कुर्वन्तः सर्वे अनुप्रयोगाः स्थगिताः "
+"भविष्यन्ति ।<br> यदा बटुकं पिहितं भवति तदा पुनः तत् प्राप्तुं गुप्तशब्दस्य आवश्यकता भवति ।</"
+"p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
 #, kde-format
 msgid "When last application stops using it"
-msgstr "По завершении использования всеми приложениями"
+msgstr "यदा अन्तिमः अनुप्रयोगः तस्य उपयोगं स्थगयति"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -158,14 +144,14 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Закрывать бумажник при запуске хранителя экрана.</b> <br>Если бумажник "
-"закрыт, для повторного доступа к нему потребуется ввести пароль.</p>"
+"<p><b>स्क्रीनसेवर आरभ्यमाणमात्रेण बटुकं पिधायताम्।</b><br> यदा बटुकं पिहितं भवति तदा पुनः "
+"तत् प्राप्तुं गुप्तशब्दस्य आवश्यकता भवति ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
 #, kde-format
 msgid "When screensaver starts"
-msgstr "При запуске хранителя экрана"
+msgstr "यदा स्क्रीनसेवर आरभ्यते"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -175,75 +161,75 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
-"<p><b>Закрывать бумажник при отсутствии активности.</b><br>Если бумажник "
-"закрыт, для повторного доступа к нему потребуется ввести пароль.</p>"
+"<p><b>निष्क्रियतायाः अवधिपर्यन्तं बटुकं बन्दं कुर्वन्तु।</b><br> यदा बटुकं पिहितं भवति तदा "
+"पुनः तत् प्राप्तुं गुप्तशब्दस्य आवश्यकता भवति ।</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
 #, kde-format
 msgid "When unused for:"
-msgstr "Если не используется в течение:"
+msgstr "यदा अप्रयुक्तं भवति तदा :"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
 #, kde-format
 msgid " minutes"
-msgstr " мин"
+msgstr " पन्चनिमेषः"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
 #: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
-msgstr "Автоматический выбор бумажника"
+msgstr "स्वचालित बटुआ चयन"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
 #, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Использовать другой бумажник по умолчанию для локальных паролей"
+msgstr "स्थानीयगुप्तशब्दानां कृते भिन्नं पूर्वनिर्धारितं बटुकं उपयुज्यताम्"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
 #: walletconfigwidget.ui:202 walletconfigwidget.ui:242
 #, kde-format
 msgid "New..."
-msgstr "Создать…"
+msgstr "नूतनम्‌..."
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr "Бумажник по умолчанию:"
+msgstr "पूर्वनिर्धारित बटुकम् :"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
-msgstr "Управление бумажниками"
+msgstr "बटुआ प्रबन्धक"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
 #: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
-msgstr "Показывать значок в системном лотке"
+msgstr "सिस्टम् ट्रे मध्ये प्रबन्धकं दर्शयतु"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
 #: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr "Скрывать значок из системного лотка, когда все бумажники закрыты"
+msgstr "अन्तिम बटुकं यदा बन्दं भवति तदा सिस्टम् ट्रे चिह्नं गोपयन्तु"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr "Secret Service"
+msgstr "गुप्त सेवा"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "Использовать &бумажник KDE в качестве интерфейса Secret Service"
+msgstr "Secret Service अन्तरफलकस्य कृते &KWallet इत्यस्य उपयोगं कुर्वन्तु"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -253,75 +239,42 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"Интерфейс Secret Service позволяет приложениям хранить пароли и другие "
-"конфиденциальные данные. Не включайте этот параметр, чтобы вместо бумажника "
-"KDE использовать сторонние приложения, такие как KeePassXC или GNOME Keyring."
+"गुप्तसेवा-अन्तरफलकं अनुप्रयोगानाम् गुप्तशब्दान् अन्यगोपनीयदत्तांशं च संग्रहीतुं शक्नोति । "
+"KeePassXC अथवा GNOME Keyring इत्यादीनां तृतीयपक्षस्य बटुकसेवानां स्थाने तस्य प्रबन्धनं कर्तुं "
+"एतत् अक्षमं कुर्वन्तु ।"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
-msgstr "Контроль доступа"
+msgstr "अभिगमननियन्त्रणम्"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
 #: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr "&Запрашивать подтверждение при обращении приложений к бумажнику"
+msgstr "&यदा कश्चन अनुप्रयोगः बटुकं अभिगच्छति तदा प्रॉम्प्ट्"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:408
 #, kde-format
 msgid "Wallet"
-msgstr "Бумажник"
+msgstr "लघुपुट"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
-msgstr "Приложение"
+msgstr "अनुप्रयोगः"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:418
 #, kde-format
 msgid "Policy"
-msgstr "Политика"
+msgstr "नीति"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
 #: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
-msgstr "&Запустить управление бумажниками"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Бумажник, который будет использоваться по умолчанию:"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "© George Staikos, 2003"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr "Модуль настройки позволяет настраивать систему бумажников KDE."
-
-#~ msgid "Enable Secret Service DBus API"
-#~ msgstr "Использовать DBus API для службы Secret Service"
-
-#~ msgid "kcmkwallet"
-#~ msgstr "kcmkwallet"
-
-#~ msgid ""
-#~ "Sorry, the system security policy didn't allow you to save the changes."
-#~ msgstr "У вас недостаточно прав для сохранения изменений."
-
-#~ msgid ""
-#~ "_: NAME OF TRANSLATORS\n"
-#~ "Your names"
-#~ msgstr "Олег Баталов"
-
-#~ msgid ""
-#~ "_: EMAIL OF TRANSLATORS\n"
-#~ "Your emails"
-#~ msgstr "batalov@twiga.kz"
+msgstr "&Launch Wallet Manager"

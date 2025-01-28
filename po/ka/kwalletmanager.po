@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 06:44+0200\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-21 02:45+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -626,15 +626,15 @@ msgstr "პროგრამისტი"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "გაშვებისას ფანჯრის ჩვენება"
+msgid "Ignored, for compatibility"
+msgstr "გამოტოვებულია. არსებობს თავსებადობისთვის"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "ეს მხოლოდ kwalletd-მ უნდა გამოიყენოს"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "საფულის სახელი"
@@ -716,3 +716,6 @@ msgstr "&დაბრუნება"
 #, kde-format
 msgid "&Save"
 msgstr "&შენახვა"
+
+#~ msgid "Show window on startup"
+#~ msgstr "გაშვებისას ფანჯრის ჩვენება"

@@ -4,14 +4,14 @@
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2017.
-# SPDX-FileCopyrightText: 2017, 2019, 2023, 2024 Adrián Chaves <adrian@chaves.io>
+# SPDX-FileCopyrightText: 2017, 2019, 2023, 2024, 2025 Adrián Chaves <adrian@chaves.io>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 17:31+0200\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-25 11:55+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -627,15 +627,15 @@ msgstr "Desenvolvemento."
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Amosar a xanela no inicio"
+msgid "Ignored, for compatibility"
+msgstr "Ignórase, existe por compatibilidade."
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Para usarse só con kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Un nome de carteira"
@@ -717,6 +717,9 @@ msgstr "&Desfacer"
 #, kde-format
 msgid "&Save"
 msgstr "&Gardar"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Amosar a xanela no inicio"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Abrir unha carteira…"

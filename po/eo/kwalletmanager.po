@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2024-07-30 21:06+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -623,15 +623,15 @@ msgstr "Kreinto"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Montri fenestron ĉe ekfunkciigo"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Nur por uzo de kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Nomo de monujo"
@@ -713,3 +713,6 @@ msgstr "&Malfari"
 #, kde-format
 msgid "&Save"
 msgstr "Kon&servi"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Montri fenestron ĉe ekfunkciigo"

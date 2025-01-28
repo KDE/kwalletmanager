@@ -28,6 +28,8 @@ include(ECMDeprecationSettings)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 
+option(BUILD_DOC "Whether to build the documentation" ON)
+
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED Core Gui Widgets DBus)
 
 ## Generate header with version number
@@ -46,7 +48,6 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     ConfigWidgets
     CoreAddons
     DBusAddons
-    DocTools
     I18n
     KCMUtils
     KIO
@@ -58,11 +59,18 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     Service
 )
 
+if (BUILD_DOC)
+    find_package(KF6DocTools ${KF_MIN_VERSION})
+    set_package_properties(KF6DocTools PROPERTIES
+        DESCRIPTION "Tools to generate documentation"
+        TYPE REQUIRED
+    )
+endif()
+
 ecm_set_disabled_deprecation_versions(QT 6.8.0
-    KF 6.7
+    KF 6.10
 )
 
-add_subdirectory( doc )
 add_subdirectory( icons )
 add_subdirectory( src )
 
@@ -81,8 +89,13 @@ ecm_qt_install_logging_categories(
         FILE kwalletmanager.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
+
+if (BUILD_DOC)
+    add_subdirectory(doc)
+    kdoctools_install(po)
+endif()
+
 ki18n_install(po)
-kdoctools_install(po)
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)

@@ -67,13 +67,9 @@ private Q_SLOTS:
     void configUI();
 
 private:
-    void activateForStartLikeCall(bool showWindow);
+    void activateForStartLikeCall();
     void tryOpenWalletFiles(const QStringList &localFiles);
-    enum CommandLineOrigin {
-        ProgramStart,
-        RemoteCall
-    };
-    void processParsedCommandLine(CommandLineOrigin commandLineOrigin);
+    void processParsedCommandLine();
 
 private:
     QCommandLineParser *const _commandLineParser;

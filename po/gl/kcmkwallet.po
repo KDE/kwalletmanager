@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2024-08-19 15:50+0200\n"
+"PO-Revision-Date: 2024-12-13 23:27+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -137,7 +137,7 @@ msgstr ""
 #: walletconfigwidget.ui:79
 #, kde-format
 msgid "When last application stops using it"
-msgstr "Cando a última aplicación que a use se peche."
+msgstr "Cando a última aplicación deixe de usala."
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86

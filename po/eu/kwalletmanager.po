@@ -1,25 +1,25 @@
 # Translation for kwalletmanager.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2024 This file is copyright:
+# Copyright (C) 2003-2025 This file is copyright:
 # This file is distributed under the same license as the kwalletmanager package.
-# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos <marcos@euskalgnu.org>, 2003.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2004, 2005, 2008, 2009, 2011, 2014, 2018, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2004, 2005, 2008, 2009, 2011, 2014, 2018, 2022, 2023, 2024, 2025.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-09-01 07:33+0200\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-21 06:35+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -632,15 +632,15 @@ msgstr "Garatzailea"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Erakutsi leihoa abiaraztean"
+msgid "Ignored, for compatibility"
+msgstr "Ezikusia, bateragarritasunagatik"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "kwalletd-k soilik erabiltzeko"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Zorro-izen bat"
@@ -722,6 +722,9 @@ msgstr "&Desegin"
 #, kde-format
 msgid "&Save"
 msgstr "&Gorde"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Erakutsi leihoa abiaraztean"
 
 #~ msgid "Open Wallet..."
 #~ msgstr "Ireki zorroa..."

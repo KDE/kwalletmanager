@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 09:58+0300\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-22 11:36+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -622,15 +622,15 @@ msgstr "מפתח"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "הצגת חלון בפתיחה"
+msgid "Ignored, for compatibility"
+msgstr "נפסח, לטובת תאימות"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "לשימוש kwalletd בלבד"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "שם ארנק"
@@ -712,3 +712,6 @@ msgstr "ה&חזרה"
 #, kde-format
 msgid "&Save"
 msgstr "&שמירה"
+
+#~ msgid "Show window on startup"
+#~ msgstr "הצגת חלון בפתיחה"

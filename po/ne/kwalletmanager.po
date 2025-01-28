@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2007-09-09 11:22+0545\n"
 "Last-Translator: Narayan Kumar Magar <narayan@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -642,15 +642,15 @@ msgstr "विकासकर्ता"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "सुरुआतमा सञ्झ्याल देखाउनुहोस्"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "केडीई वालेटद्वारा मात्र प्रयोग गर्नका लागि"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "वालेट नाम"
@@ -737,6 +737,9 @@ msgstr "पूर्वस्थितिमा फर्काउनुहो�
 #, kde-format
 msgid "&Save"
 msgstr "बचत गर्नुहोस्"
+
+#~ msgid "Show window on startup"
+#~ msgstr "सुरुआतमा सञ्झ्याल देखाउनुहोस्"
 
 #, fuzzy
 #~| msgid "New Wallet"

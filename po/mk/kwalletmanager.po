@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2007-02-21 11:43+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -639,15 +639,15 @@ msgstr "Развивач"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Покажи прозорец на почеток"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "За користење само од kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Име на паричник"
@@ -733,6 +733,9 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#~ msgid "Show window on startup"
+#~ msgstr "Покажи прозорец на почеток"
 
 #, fuzzy
 #~| msgid "New Wallet"

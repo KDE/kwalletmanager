@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
 "PO-Revision-Date: 2022-10-31 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -631,15 +631,15 @@ msgstr "Nhà phát triển"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Hiện cửa sổ khi khởi động"
+msgid "Ignored, for compatibility"
+msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Chỉ dùng cho kwalletd"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Tên ví"
@@ -726,3 +726,6 @@ msgstr "Đảo n&gược"
 #, kde-format
 msgid "&Save"
 msgstr "&Lưu"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Hiện cửa sổ khi khởi động"

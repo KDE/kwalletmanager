@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # Anıl Özbek <ozbekanil@gmail.com>, 2013.
 # Ayhan Yalçınsoy <dellpardus@hotmail.com>, 2008.
 # Ayşe Genç <ayse@uludag.org.tr>, 2005.
@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 18:58+0300\n"
+"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"PO-Revision-Date: 2025-01-21 10:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -636,15 +636,15 @@ msgstr "Geliştirici"
 
 #: main.cpp:44
 #, kde-format
-msgid "Show window on startup"
-msgstr "Başlangıçta pencereyi göster"
+msgid "Ignored, for compatibility"
+msgstr "Uyumluluk açısından yok sayıldı"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
 msgstr "Yalnızca kwalletd kullanımı için"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "A wallet name"
 msgstr "Bir cüzdan adı"
@@ -726,3 +726,6 @@ msgstr "&Geri Al"
 #, kde-format
 msgid "&Save"
 msgstr "&Kaydet"
+
+#~ msgid "Show window on startup"
+#~ msgstr "Başlangıçta pencereyi göster"
