@@ -3,13 +3,13 @@
 # Tamas Krutki <negusnyul@gmail.com>, 2011.
 # Balázs Úr <urbalazs@gmail.com>, 2013.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2015.
-# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2024-05-29 09:42+0200\n"
+"PO-Revision-Date: 2025-02-01 22:13+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -117,11 +117,10 @@ msgid "Search"
 msgstr "Keresés"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
-msgstr "Az ér&tékek megjelenítése"
+msgstr "Ér&tékek megjelenítése"
 
 #: kwalleteditor.cpp:207
 #, kde-format
@@ -557,8 +556,7 @@ msgid "Value"
 msgstr "Érték"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Bejegyzés törlése"
