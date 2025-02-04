@@ -717,6 +717,3 @@ msgstr "A&ngra"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagra"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Vis vindauget ved oppstart"

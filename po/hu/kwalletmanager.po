@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 22:13+0100\n"
+"PO-Revision-Date: 2025-02-03 21:15+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -628,7 +628,7 @@ msgstr "Fejlesztő"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "Kompatibilitási okokból mellőzve"
 
 #: main.cpp:47
 #, kde-format

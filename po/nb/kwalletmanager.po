@@ -717,6 +717,3 @@ msgstr "&Angre"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagre"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Vis vinduet ved oppstart"
