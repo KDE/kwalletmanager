@@ -1,7 +1,7 @@
 # Translation of kwalletmanager.po to Brazilian Portuguese
 # Copyright (C) 2003, 2004, 2005, 2008, 2009, 2010, 2011, 2013, 2014, 2015 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # Joao Emanuel <deathbird1981@brturbo.com>, 2003.
 # Lisiane Sztoltz <lisiane@conectiva.com.br>, 2003, 2004.
 # Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:43+0000\n"
-"PO-Revision-Date: 2024-08-02 01:02-0300\n"
+"PO-Revision-Date: 2025-02-04 23:18-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -119,8 +119,7 @@ msgid "Search"
 msgstr "Pesquisar"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Mo&strar valores"
@@ -559,8 +558,7 @@ msgid "Value"
 msgstr "Valor"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Excluir registro"
