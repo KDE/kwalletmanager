@@ -714,6 +714,3 @@ msgstr "&Zpět"
 #, kde-format
 msgid "&Save"
 msgstr "&Uložit"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Zobrazit okno při spuštění"
