@@ -6,20 +6,21 @@
 # Rolf Eike Beer <kde@opensource.sf-tec.de>, 2008.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2010, 2013, 2014, 2017, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2013, 2016.
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2023-12-18 15:32+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-11-14 15:45+0100\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -112,14 +113,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "Schließverhalten"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Passwortspeicher schließen"
+msgstr "Passwortspeicher schließen:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -138,8 +138,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
 msgstr "Schließen, sobald keine Anwendung mehr darauf zugreift"
 
@@ -156,8 +155,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
 msgstr "Schließen, wenn der Bildschirmschoner aktiv wird"
 
@@ -175,8 +173,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
 msgstr "Bei Nichtgebrauch schließen nach:"
 
@@ -194,10 +191,9 @@ msgstr "Automatische Wahl des Passwortspeichers"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Anderen Passwortspeicher für lokale Passwörter:"
+msgstr "Anderen Passwortspeicher für lokale Passwörter verwenden"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -210,7 +206,7 @@ msgstr "Neu ..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "Standard-Passwortspeicher:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -240,10 +236,9 @@ msgstr "Passwortdienst"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
-#, fuzzy, kde-format
-#| msgid "Use KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "KWallet für den Passwortdienst verwenden"
+msgstr "&KWallet als den Passwortdienst verwenden"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
