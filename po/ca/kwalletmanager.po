@@ -719,6 +719,3 @@ msgstr "&Desfés"
 #, kde-format
 msgid "&Save"
 msgstr "&Desa"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Mostra la finestra en engegar"
