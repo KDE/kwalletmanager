@@ -1,4 +1,5 @@
 # translation of kcmkwallet.po to Japanese
+# SPDX-FileCopyrightText: 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdeutils package.
 # Fumiaki Okushi <okushi@kde.gr.jp>, 2004, 2005, 2010, 2014.
 msgid ""
@@ -6,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2014-09-21 00:37-0700\n"
-"Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
+"PO-Revision-Date: 2025-03-25 07:09+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -21,12 +22,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Fumiaki Okushi"
+msgstr "Fumiaki Okushi, Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okushi@kde.gr.jp"
+msgstr "okushi@kde.gr.jp, ryuichi_ya220@outlook.jp"
 
 #: konfigurator.cpp:107
 #, kde-format
@@ -51,7 +52,7 @@ msgstr "常に拒否"
 #: konfigurator.cpp:259
 #, kde-format
 msgid "Permission denied."
-msgstr ""
+msgstr "許可がありません。"
 
 #: konfigurator.cpp:259 konfigurator.cpp:261
 #, kde-format
@@ -64,6 +65,8 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
+"認証中にエラーが発生しました:\n"
+"%1"
 
 #: konfigurator.cpp:359
 #, kde-format
@@ -78,11 +81,7 @@ msgstr "ウォレットの設定"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>The wallet subsystem provides a convenient and secure way to manage "
-#| "all your passwords.  This option specifies whether or not you want to use "
-#| "it.</p>"
+#, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
@@ -111,14 +110,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "閉じるときの挙動"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "ウォレットを閉じる"
+msgstr "ウォレットを閉じる:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -136,10 +134,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
-msgstr "最後のアプリケーションが使い終わったときに閉じる"
+msgstr "最後のアプリケーションが使い終わったとき"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -153,10 +150,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "スクリーンセーバーが起動するときに閉じる"
+msgstr "スクリーンセーバーが起動されたとき"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -171,15 +167,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
 msgstr "次の時間未使用であれば閉じる:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
 msgstr " 分"
 
@@ -191,10 +185,9 @@ msgstr "ウォレットの自動選択"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "ローカルのパスワードのために別のウォレットを使う:"
+msgstr "ローカルのパスワードのために別のウォレットを使う"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -207,7 +200,7 @@ msgstr "新規..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "デフォルトのウォレット:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -231,13 +224,13 @@ msgstr "最後のウォレットが閉じるときにシステムトレイのア
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr ""
+msgstr "&KWallet を Secret Service インターフェースとして使用する"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -247,6 +240,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Secret Service インターフェースはパスワードやその他の機密情報をアプリケーショ"
+"ンから保存します。KeePassXC や GNOME Keyring などのサードパーティのウォレット"
+"サービスを使用して管理する場合は、無効にしてください。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
@@ -283,6 +279,3 @@ msgstr "ポリシー"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "ウォレットマネージャを起動(&L)"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "デフォルトで使うウォレット:"
