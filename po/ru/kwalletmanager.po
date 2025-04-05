@@ -11,13 +11,13 @@
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Olga Mironova <omiro@basealt.ru>, 2018.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2023, 2024.
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2024-12-11 16:46+0300\n"
+"PO-Revision-Date: 2025-04-04 12:36+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -639,7 +639,7 @@ msgstr "Разработка"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "Игнорируется (для обеспечения совместимости)"
 
 #: main.cpp:47
 #, kde-format
