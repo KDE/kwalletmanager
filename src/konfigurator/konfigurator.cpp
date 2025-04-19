@@ -322,7 +322,7 @@ void KWalletConfig::save()
     _cfg->sync();
 
     // this restarts kwalletd if necessary
-    QDBusInterface kwalletd(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd"), QStringLiteral(KWALLETMANAGERINTERFACE));
+    QDBusInterface kwalletd(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd5"), QStringLiteral(KWALLETMANAGERINTERFACE));
     // if wallet was deactivated, then kwalletd will exit upon start so check
     // the status before invoking reconfigure
     if (kwalletd.isValid()) {
