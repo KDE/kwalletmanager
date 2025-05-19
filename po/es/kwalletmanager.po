@@ -1,15 +1,15 @@
-# Translation of kwalletmanager.po to Spanish
-# Copyright (C) 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Spanish translations for kwalletmanager.po package.
+# Copyright (C) 2003-2025 This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
 #
 # SPDX-FileCopyrightText: 2003 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
-# SPDX-FileCopyrightText: 2003, 2004, 2023, 2024, 2025 Eloy Cuadra <eloihr2@eresmas.com>
-# SPDX-FileCopyrightText: 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2022 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2025-01-21 12:14+0100\n"
+"PO-Revision-Date: 2025-05-18 14:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -123,7 +123,7 @@ msgstr "&Mostrar valores"
 #: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
-msgstr "&Nueva carpeta..."
+msgstr "&Nueva carpeta…"
 
 #: kwalleteditor.cpp:211
 #, kde-format
@@ -133,17 +133,17 @@ msgstr "&Borrar carpeta"
 #: kwalleteditor.cpp:214
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "&Importar cartera..."
+msgstr "&Importar cartera…"
 
 #: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
-msgstr "&Importar XML..."
+msgstr "&Importar XML…"
 
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Export as XML..."
-msgstr "&Exportar como XML..."
+msgstr "&Exportar como XML…"
 
 #: kwalleteditor.cpp:226
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "&Copiar"
 #: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
-msgstr "&Nueva..."
+msgstr "&Nueva…"
 
 #: kwalleteditor.cpp:236
 #, kde-format
@@ -369,12 +369,12 @@ msgstr "Una cartera está abierta."
 #: kwalletmanager.cpp:139 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Nueva cartera..."
+msgstr "&Nueva cartera…"
 
 #: kwalletmanager.cpp:144
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "&Borrar cartera..."
+msgstr "&Borrar cartera…"
 
 #: kwalletmanager.cpp:149
 #, kde-format
@@ -389,7 +389,7 @@ msgstr "&Importar cifrado"
 #: kwalletmanager.cpp:159
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "Con&figurar cartera..."
+msgstr "Con&figurar cartera…"
 
 #: kwalletmanager.cpp:167
 #, kde-format
@@ -533,12 +533,12 @@ msgstr "Ha ocurrido un error al conectarse al servicio KWallet:<nl/>%1"
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
 msgid "&Open..."
-msgstr "&Abrir..."
+msgstr "&Abrir…"
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "&Cambiar contraseña..."
+msgstr "&Cambiar contraseña…"
 
 #: kwalletpopup.cpp:51
 #, kde-format
@@ -673,13 +673,13 @@ msgstr "KSqueezedTextLabel"
 #: walletcontrolwidget.ui:54
 #, kde-format
 msgid "Open..."
-msgstr "Abrir..."
+msgstr "Abrir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
-msgstr "Cambiar contraseña..."
+msgstr "Cambiar contraseña…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80
@@ -717,25 +717,3 @@ msgstr "&Deshacer"
 #, kde-format
 msgid "&Save"
 msgstr "&Guardar"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Mostrar la ventana durante el inicio"
-
-#~ msgid "Open Wallet..."
-#~ msgstr "Abrir cartera..."
-
-#~ msgid "Error opening XML file '<b>%1</b>' for input."
-#~ msgstr "Error al abrir el archivo XML «<b>%1</b>» para importar."
-
-#~ msgid ""
-#~ "This is a binary data entry.  It cannot be edited as its format is "
-#~ "unknown and application specific."
-#~ msgstr ""
-#~ "Esta es una entrada de datos binarios. No se puede editar debido a que su "
-#~ "formato es desconocido y específico de alguna aplicación."
-
-#~ msgid "(c) 2003,2004 George Staikos"
-#~ msgstr "© 2003,2004 George Staikos"
-
-#~ msgid "Maintainer"
-#~ msgstr "Encargado"
