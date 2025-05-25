@@ -40,7 +40,7 @@ msgstr "Cartera nova"
 #: konfigurator.cpp:107
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Escolliu un nom per a la cartera nova:"
+msgstr "Trieu un nom per a la cartera nova:"
 
 #: konfigurator.cpp:221 konfigurator.cpp:299
 #, kde-format
