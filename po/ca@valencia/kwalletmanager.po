@@ -216,7 +216,7 @@ msgstr "Carpeta nova"
 #: kwalleteditor.cpp:429
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Escolliu un nom per a la carpeta nova:"
+msgstr "Trieu un nom per a la carpeta nova:"
 
 #: kwalleteditor.cpp:437
 #, kde-format
@@ -270,7 +270,7 @@ msgstr "Entrada nova"
 #: kwalleteditor.cpp:787
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr "Escolliu un nom per a l'entrada nova:"
+msgstr "Trieu un nom per a l'entrada nova:"
 
 #: kwalleteditor.cpp:796
 #, kde-format
@@ -429,7 +429,7 @@ msgstr "S'ha produït un error en obrir la cartera %1."
 #: kwalletmanager.cpp:318
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Escolliu un nom per a la cartera nova:"
+msgstr "Trieu un nom per a la cartera nova:"
 
 #: kwalletmanager.cpp:327
 #, kde-format
