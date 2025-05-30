@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=KDE Wallet Management Tool
+Name=KWalletManager
 Name[ar]=أداة لإدارة محفظة كِيدِي
 Name[az]=KDE Cüzdanı İdarəetmə Vasitəsi
 Name[bg]=Инструмент за управление на портфейла на KDE
@@ -45,7 +45,7 @@ Name[vi]=Công cụ quản lí Ví KDE
 Name[x-test]=xxKDE Wallet Management Toolxx
 Name[zh_CN]=KDE 密码库管理工具
 Name[zh_TW]=KDE 錢包管理工具
-Comment=KDE Wallet Management Tool
+Comment=Store and manage your passwords
 Comment[ar]=أداة لإدارة محفظة كِيدِي
 Comment[az]=KDE Cüzdanı İdarəetmə Vasitəsi
 Comment[bg]=Инструмент за управление на портфейла на KDE
@@ -96,6 +96,7 @@ Comment[vi]=Công cụ quản lí Ví KDE
 Comment[x-test]=xxKDE Wallet Management Toolxx
 Comment[zh_CN]=KDE 密码库管理工具
 Comment[zh_TW]=KDE 錢包管理工具
+GenericName=Password Manager
 Exec=kwalletmanager5 --kwalletd
 Icon=kwalletmanager
 Type=Application
