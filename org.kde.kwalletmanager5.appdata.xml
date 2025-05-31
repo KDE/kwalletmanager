@@ -55,53 +55,6 @@
   <name xml:lang="zh-CN">KWalletManager 密码库管理器</name>
   <name xml:lang="zh-TW">KWalletManager</name>
   <summary>Store and manage your passwords</summary>
-  <summary xml:lang="ar">1</summary>
-  <summary xml:lang="ast">Ferramienta pa la xestión de carteres</summary>
-  <summary xml:lang="az">KDE Cüzdanı İdarəetmə Vasitəsi</summary>
-  <summary xml:lang="bg">Инструмент за настройване на Портфейл</summary>
-  <summary xml:lang="ca">Eina per a la gestió de carteres</summary>
-  <summary xml:lang="ca-valencia">Eina per a la gestió de carteres</summary>
-  <summary xml:lang="cs">Nástroj pro správu úschovny</summary>
-  <summary xml:lang="da">Værktøj til håndtering af tegnebog</summary>
-  <summary xml:lang="de">Dienstprogramm zur Passwortverwaltung</summary>
-  <summary xml:lang="el">Εργαλείο διαχείρισης πορτοφολιού</summary>
-  <summary xml:lang="en-GB">Wallet Management Tool</summary>
-  <summary xml:lang="eo">Monuj-Administrilo</summary>
-  <summary xml:lang="es">Herramienta de gestión de carteras</summary>
-  <summary xml:lang="et">Turvalaegaste haldur</summary>
-  <summary xml:lang="eu">Zorroa kudeatzeko tresna</summary>
-  <summary xml:lang="fi">Lompakonhallintatyökalu</summary>
-  <summary xml:lang="fr">Outil de gestion de portefeuilles</summary>
-  <summary xml:lang="gl">Utilidade de xestión de carteiras</summary>
-  <summary xml:lang="he">כלי לניהול ארנקים</summary>
-  <summary xml:lang="hu">Jelszókezelő eszköz</summary>
-  <summary xml:lang="ia">Instrumento de gestion de portafolio</summary>
-  <summary xml:lang="id">Alat Pengelolaan Dompet</summary>
-  <summary xml:lang="ie">Gerentie del Porta-papere</summary>
-  <summary xml:lang="is">Tól til að stýra eiginleikum veskja</summary>
-  <summary xml:lang="it">Strumento per la gestione del portafogli</summary>
-  <summary xml:lang="ka">საფულის მართვის ხელსაწყო</summary>
-  <summary xml:lang="ko">지갑 관리 도구</summary>
-  <summary xml:lang="lt">Slaptažodinių tvarkymo įrankis</summary>
-  <summary xml:lang="lv">Maku pārvaldības rīks</summary>
-  <summary xml:lang="nl">Hulpmiddel voor portefeuillebeheer</summary>
-  <summary xml:lang="nn">Wallet-administrasjonsverktøy</summary>
-  <summary xml:lang="pa">ਵਾਲਟ ਇੰਤਜ਼ਾਮ ਟੂਲ</summary>
-  <summary xml:lang="pl">Zarządzania portfelem</summary>
-  <summary xml:lang="pt">Ferramenta de Gestão da Carteira</summary>
-  <summary xml:lang="pt-BR">Ferramenta para gerenciamento de carteiras</summary>
-  <summary xml:lang="ro">Utilitar de gestionat portofele</summary>
-  <summary xml:lang="ru">Управление бумажниками</summary>
-  <summary xml:lang="sa">बटुआ प्रबन्धन साधन</summary>
-  <summary xml:lang="sk">Nástroj pre správu KDE Wallet</summary>
-  <summary xml:lang="sl">Upravitelj listnice</summary>
-  <summary xml:lang="sv">Hanteringsverktyg för plånbok</summary>
-  <summary xml:lang="tr">Cüzdan Yönetimi Aracı</summary>
-  <summary xml:lang="uk">Засіб керування сховищем паролів</summary>
-  <summary xml:lang="vi">Công cụ quản lí ví</summary>
-  <summary xml:lang="x-test">xxWallet Management Toolxx</summary>
-  <summary xml:lang="zh-CN">密码库管理工具</summary>
-  <summary xml:lang="zh-TW">密碼庫管理工具</summary>
   <description>
     <p>
      KWalletManager is a tool to manage the passwords on your system. By using the Frameworks wallet subsystem it not only allows you to keep your own secrets but also to access and manage the passwords of every application that integrates with the wallet.
