@@ -55,6 +55,17 @@
   <name xml:lang="zh-CN">KWalletManager 密码库管理器</name>
   <name xml:lang="zh-TW">KWalletManager</name>
   <summary>Store and manage your passwords</summary>
+  <summary xml:lang="bg">Съхраняване и управление на пароли</summary>
+  <summary xml:lang="ca">Emmagatzema i gestiona les vostres contrasenyes</summary>
+  <summary xml:lang="es">Almacenamiento y gestión de contraseñas</summary>
+  <summary xml:lang="he">אחסון וניהול הסיסמאות שלך</summary>
+  <summary xml:lang="ka">შეინახეთ და მართეთ თქვენი პაროლები</summary>
+  <summary xml:lang="nl">Uw wachtwoorden opslaan en beheren</summary>
+  <summary xml:lang="sl">Shranjuje in upravlja vaša gesla</summary>
+  <summary xml:lang="sv">Lagra och hantera lösenord</summary>
+  <summary xml:lang="tr">Parolalarınızı depolayın ve yönetin</summary>
+  <summary xml:lang="uk">Збереження ваших паролів та керування ними</summary>
+  <summary xml:lang="x-test">xxStore and manage your passwordsxx</summary>
   <description>
     <p>
      KWalletManager is a tool to manage the passwords on your system. By using the Frameworks wallet subsystem it not only allows you to keep your own secrets but also to access and manage the passwords of every application that integrates with the wallet.
