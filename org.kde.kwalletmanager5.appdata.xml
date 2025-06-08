@@ -59,6 +59,7 @@
   <summary xml:lang="ca">Emmagatzema i gestiona les vostres contrasenyes</summary>
   <summary xml:lang="ca-valencia">Emmagatzema i gestiona les vostres contrasenyes</summary>
   <summary xml:lang="es">Almacenamiento y gestión de contraseñas</summary>
+  <summary xml:lang="eu">Zure pasahitzak gorde eta kudeatu</summary>
   <summary xml:lang="fr">Enregistrez et gérez vos mots de passe</summary>
   <summary xml:lang="he">אחסון וניהול הסיסמאות שלך</summary>
   <summary xml:lang="ka">შეინახეთ და მართეთ თქვენი პაროლები</summary>
@@ -68,6 +69,7 @@
   <summary xml:lang="tr">Parolalarınızı depolayın ve yönetin</summary>
   <summary xml:lang="uk">Збереження ваших паролів та керування ними</summary>
   <summary xml:lang="x-test">xxStore and manage your passwordsxx</summary>
+  <summary xml:lang="zh-CN">保存和管理您的密码</summary>
   <summary xml:lang="zh-TW">儲存並管理您的密碼</summary>
   <description>
     <p>
