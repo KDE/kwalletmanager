@@ -715,6 +715,3 @@ msgstr "&Отмяна"
 #, kde-format
 msgid "&Save"
 msgstr "&Запис"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Показване на прозореца при зареждане"
