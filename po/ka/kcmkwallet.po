@@ -278,7 +278,7 @@ msgid "&Launch Wallet Manager"
 msgstr "&საფულეების მმართველის გაშვება"
 
 #~ msgid "Select wallet to use as default:"
-#~ msgstr "აირჩიეთ ნაგულისხმებად გამოყენებული საფულე:"
+#~ msgstr "აირჩიეთ ნაგულისხმევად გამოყენებული საფულე:"
 
 #~ msgid "(c) 2003 George Staikos"
 #~ msgstr "(c) 2003 George Staikos"
