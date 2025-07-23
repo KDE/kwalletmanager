@@ -13,6 +13,22 @@
         "--talk-name=org.kde.kwalletd6"
     ],
     "rename-icon": "kwalletmanager",
+    "cleanup": [
+        "*.a",
+        "*.la",
+        "/doc",
+        "/docs",
+        "/include",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/lib/x86_64-linux-gnu/cmake",
+        "/lib/x86_64-linux-gnu/pkgconfig",
+        "/man",
+        "/share/cmake",
+        "/share/doc",
+        "/share/man",
+        "/share/pkgconfig"
+    ],
     "modules": [
         {
             "name": "kwalletmanager",
