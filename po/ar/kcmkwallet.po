@@ -183,7 +183,7 @@ msgstr "دقيقة"
 #: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
-msgstr "اختيار المحفظة تلقائيا"
+msgstr "اختيار المحفظة آليّا"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165

@@ -8,20 +8,21 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2013, 2016.
 # SPDX-FileCopyrightText: 2022, 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2024-09-27 13:35+0200\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2025-08-01 14:29+0200\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,8 +37,7 @@ msgstr "kde-i18n-de@kde.org"
 #: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr ""
-"Ein Eintrag mit dem Namen „%1“ existiert bereits. Möchten Sie fortfahren?"
+msgstr "Ein Eintrag namens „%1“ existiert bereits. Möchten Sie fortfahren?"
 
 #: allyourbase.cpp:240
 #, kde-format
@@ -57,12 +57,12 @@ msgstr "Ordner"
 #: allyourbase.cpp:382
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr "Beim Ablegen des Eintrags ist ein Fehler aufgetreten."
+msgstr "Beim Ablegen des Objekts ist ein unerwarteter Fehler aufgetreten."
 
 #: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
-msgstr "Beim Ablegen des Eintrags ist ein Fehler aufgetreten."
+msgstr "Beim Ablegen des Eintrags ist ein unerwarteter Fehler aufgetreten."
 
 #: allyourbase.cpp:482
 #, kde-format
@@ -70,14 +70,14 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-"Beim Löschen des Ursprungsordners ist ein Fehler aufgetreten, die Daten "
-"wurden jedoch erfolgreich kopiert."
+"Beim Löschen des Ursprungsordners ist ein unerwarteter Fehler aufgetreten, "
+"die Daten wurden jedoch erfolgreich kopiert."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr "Diese Anwendungen benutzen zurzeit diesen Passwortspeicher:"
+msgstr "Diese Anwendungen verwenden zurzeit diesen Passwortspeicher:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
@@ -129,7 +129,7 @@ msgstr "&Werte anzeigen"
 #: kwalleteditor.cpp:207
 #, kde-format
 msgid "&New Folder..."
-msgstr "Neuer &Ordner ..."
+msgstr "Neuer &Ordner …"
 
 #: kwalleteditor.cpp:211
 #, kde-format
@@ -139,17 +139,17 @@ msgstr "Ordner &löschen"
 #: kwalleteditor.cpp:214
 #, kde-format
 msgid "&Import a wallet..."
-msgstr "Passwortspeicher &importieren ..."
+msgstr "Einen Passwortspeicher &importieren …"
 
 #: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import XML..."
-msgstr "XML &importieren ..."
+msgstr "XML &importieren …"
 
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Export as XML..."
-msgstr "Als XML &exportieren ..."
+msgstr "Als XML &exportieren …"
 
 #: kwalleteditor.cpp:226
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "&Kopieren"
 #: kwalleteditor.cpp:231
 #, kde-format
 msgid "&New..."
-msgstr "&Neu ..."
+msgstr "&Neu …"
 
 #: kwalleteditor.cpp:236
 #, kde-format
@@ -174,12 +174,12 @@ msgstr "&Löschen"
 #: kwalleteditor.cpp:246
 #, kde-format
 msgid "Always show contents"
-msgstr "Inhalt immer &anzeigen"
+msgstr "Inhalt immer anzeigen"
 
 #: kwalleteditor.cpp:250
 #, kde-format
 msgid "Always hide contents"
-msgstr "&Inhalt immer ausblenden"
+msgstr "Inhalt immer ausblenden"
 
 #: kwalleteditor.cpp:359
 #, kde-format
@@ -204,8 +204,7 @@ msgstr "Unbekannt"
 #: kwalleteditor.cpp:404
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr ""
-"Soll der Ordner „%1“ wirklich aus dem Passwortspeicher gelöscht werden?"
+msgstr "Möchten Sie den Ordner „%1“ wirklich aus dem Passwortspeicher löschen?"
 
 #: kwalleteditor.cpp:410
 #, kde-format
@@ -220,12 +219,12 @@ msgstr "Neuer Ordner"
 #: kwalleteditor.cpp:429
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr "Name für den neuen Ordner:"
+msgstr "Bitte wählen Sie einen Namen für den neuen Ordner:"
 
 #: kwalleteditor.cpp:437
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr "Dieser Ordner wird bereits benutzt. Nochmals versuchen?"
+msgstr "Dieser Ordnername wird bereits verwendet. Nochmals versuchen?"
 
 #: kwalleteditor.cpp:439 kwalleteditor.cpp:798
 #, kde-format
@@ -274,7 +273,7 @@ msgstr "Neuer Eintrag"
 #: kwalleteditor.cpp:787
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr "Name für den neuen Eintrag:"
+msgstr "Bitte wählen Sie einen Namen für den neuen Eintrag:"
 
 #: kwalleteditor.cpp:796
 #, kde-format
@@ -284,22 +283,23 @@ msgstr "Der Eintrag existiert bereits. Nochmals versuchen?"
 #: kwalleteditor.cpp:816 kwalleteditor.cpp:825
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr "Beim Hinzufügen des neuen Eintrags ist ein Fehler aufgetreten"
+msgstr ""
+"Beim Hinzufügen des neuen Eintrags ist ein unerwarteter Fehler aufgetreten"
 
 #: kwalleteditor.cpp:877
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
-msgstr "Beim Umbenennen des Eintrags ist ein Fehler aufgetreten"
+msgstr "Beim Umbenennen des Eintrags ist ein unerwarteter Fehler aufgetreten"
 
 #: kwalleteditor.cpp:898
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr "Soll der Eintrag „%1“ wirklich gelöscht werden?"
+msgstr "Möchten Sie das Objekt „%1“ wirklich löschen?"
 
 #: kwalleteditor.cpp:902
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr "Beim Löschen des Eintrags ist ein Fehler aufgetreten"
+msgstr "Beim Löschen des Eintrags ist ein unerwarteter Fehler aufgetreten"
 
 #: kwalleteditor.cpp:930
 #, kde-format
@@ -310,8 +310,8 @@ msgstr "Der angeforderte Passwortspeicher kann nicht geöffnet werden."
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr ""
-"Die temporäre Datei für das Herunterladen kann nicht erstellt werden „<b>%1</"
-"b>“."
+"Die temporäre Datei für das Herunterladen von „<b>%1</b>“ kann nicht "
+"erstellt werden."
 
 #: kwalleteditor.cpp:979
 #, kde-format
@@ -336,7 +336,7 @@ msgstr "Auf die XML-Datei „<b>%1</b>“ kann nicht zugegriffen werden."
 #: kwalleteditor.cpp:1126
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "Die XML-Datei „<b>%1</b>“ kann nicht zum Lesen geöffnet werden."
+msgstr "Beim Lesen der XML-Datei „<b>%1</b>“ ist ein Fehler aufgetreten."
 
 #: kwalleteditor.cpp:1132
 #, kde-format
@@ -346,7 +346,7 @@ msgstr "Fehler: Die XML-Datei enthält keinen Passwortspeicher."
 #: kwalleteditor.cpp:1285
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "Fehler beim Speichern  nach „<b>%1</b>“."
+msgstr "Fehler beim Speichern nach „<b>%1</b>“."
 
 #: kwalletmanager.cpp:63
 #, kde-format
@@ -367,7 +367,7 @@ msgstr "Passwortspeicher"
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:287
 #, kde-format
 msgid "No wallets open."
-msgstr "Es sind keine Passwortspeicher geöffnet."
+msgstr "Keine Passwortspeicher geöffnet."
 
 #: kwalletmanager.cpp:95 kwalletmanager.cpp:222
 #, kde-format
@@ -377,12 +377,12 @@ msgstr "Es ist ein Passwortspeicher geöffnet."
 #: kwalletmanager.cpp:139 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Neuer Passwortspeicher ..."
+msgstr "&Neuer Passwortspeicher …"
 
 #: kwalletmanager.cpp:144
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "&Passwortspeicher löschen ..."
+msgstr "&Passwortspeicher löschen …"
 
 #: kwalletmanager.cpp:149
 #, kde-format
@@ -397,7 +397,7 @@ msgstr "Verschlüsselt &importieren"
 #: kwalletmanager.cpp:159
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "&Passwortspeicher einrichten ..."
+msgstr "&Passwortspeicher einrichten …"
 
 #: kwalletmanager.cpp:167
 #, kde-format
@@ -410,19 +410,19 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
-"Der Passwortspeicher lässt sich nicht korrekt schließen. Sie wird "
-"möglicherweise von einem anderen Programm verwendet. Soll er zwangsweise "
-"geschlossen werden?"
+"Der Passwortspeicher lässt sich nicht korrekt schließen. Er wird "
+"möglicherweise von anderen Programmen verwendet. Soll das Schließen "
+"erzwungen werden?"
 
 #: kwalletmanager.cpp:258 walletcontrolwidget.cpp:112
 #, kde-format
 msgid "Force Closure"
-msgstr "Zwangsweise schließen"
+msgstr "Schließen erzwingen"
 
 #: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Do Not Force"
-msgstr "Nicht schließen"
+msgstr "Schließen nicht erzwingen"
 
 #: kwalletmanager.cpp:263 walletcontrolwidget.cpp:117
 #, kde-format
@@ -439,7 +439,7 @@ msgstr "Fehler beim Öffnen des Passwortspeichers %1."
 #: kwalletmanager.cpp:318
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "Name des neuen Passwortspeichers:"
+msgstr "Bitte wählen Sie einen Namen für den neuen Passwortspeicher:"
 
 #: kwalletmanager.cpp:327
 #, kde-format
@@ -487,7 +487,7 @@ msgstr "Dateiname"
 #: kwalletmanager.cpp:440
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr "Die Datei lässt sich nicht zum Lesen öffnen"
+msgstr "Die Datei lässt sich nicht zum Schreiben öffnen"
 
 #: kwalletmanager.cpp:451
 #, kde-format
@@ -503,7 +503,7 @@ msgstr "Die Datei kann nicht geöffnet werden"
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr ""
-"Ein Passwortspeicher mit dem Namen %1 existiert bereits. Die Operation wird "
+"Ein Passwortspeicher namens %1 existiert bereits. Die Operation wird "
 "abgebrochen"
 
 #: kwalletmanager.cpp:479
@@ -550,12 +550,12 @@ msgstr ""
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
 msgid "&Open..."
-msgstr "Öff&nen ..."
+msgstr "Öff&nen …"
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "&Passwort ändern ..."
+msgstr "&Passwort ändern …"
 
 #: kwalletpopup.cpp:51
 #, kde-format
@@ -591,12 +591,12 @@ msgstr "Passwortverwaltung"
 #: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "KDE-Dienstprogramm für Passwörter"
+msgstr "KDE-Dienstprogramm zur Passwortverwaltung"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "Copyright ©2013–201z, KWallet Manager-Autoren"
+msgstr "© 2013–2017 Die Autoren von KWallet Manager"
 
 #: main.cpp:34
 #, kde-format
@@ -645,12 +645,12 @@ msgstr "Entwickler"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "Ignoriert, zu Kompatibilitätszwecken"
 
 #: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr "Nur zur Verwendung mit kwalletd"
+msgstr "Nur zur Verwendung durch kwalletd"
 
 #: main.cpp:48
 #, kde-format
@@ -690,13 +690,13 @@ msgstr "KSqueezedTextLabel"
 #: walletcontrolwidget.ui:54
 #, kde-format
 msgid "Open..."
-msgstr "Öffnen ..."
+msgstr "Öffnen …"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
-msgstr "Passwort ändern ..."
+msgstr "Passwort ändern …"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80

@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:44+0000\n"
-"PO-Revision-Date: 2025-01-23 16:35+0400\n"
+"PO-Revision-Date: 2025-08-03 23:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -350,7 +350,7 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
-"نظام «محفظة كِيدِي» غير مفعّل. أتريد منّي تفعيله؟ إن لم تفعل، فسيُنهى «مدير "
+"نظام «محفظة كِيدِي» غير ممكّن. أتريد منّي تمكينه؟ إن لم تفعل، فسيُنهى «مدير "
 "محفظتك» إذ أنّه لا يستطيع العمل دون قراءة المحفظات."
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:222
@@ -593,7 +593,7 @@ msgstr "فالنتين روسو"
 #: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "المصين السابق، إعادة هيكلة واجهة المستخدم"
+msgstr "الصائن السابق، إعادة هيكلة واجهة المستخدم"
 
 #: main.cpp:35
 #, kde-format
