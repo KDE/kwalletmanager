@@ -185,7 +185,7 @@ msgstr "أخفِ المحتويات دائمًا"
 #: kwalleteditor.cpp:359
 #, kde-format
 msgid "Passwords"
-msgstr "كلمات السّرّ"
+msgstr "كلمات السر"
 
 #: kwalleteditor.cpp:360
 #, kde-format
@@ -254,7 +254,7 @@ msgstr ""
 #: kwalleteditor.cpp:554 kwalleteditor.cpp:881
 #, kde-format
 msgid "Password: %1"
-msgstr "كلمة السّرّ: %1"
+msgstr "كلمة السر: %1"
 
 #: kwalleteditor.cpp:570 kwalleteditor.cpp:883
 #, kde-format
@@ -541,7 +541,7 @@ msgstr "ا&فتح..."
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "غيّر &كلمة السّرّ..."
+msgstr "غيّر &كلمة السر..."
 
 #: kwalletpopup.cpp:51
 #, kde-format
@@ -682,7 +682,7 @@ msgstr "افتح..."
 #: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
-msgstr "غيّر كلمة السّرّ..."
+msgstr "غيّر كلمة السر..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80
