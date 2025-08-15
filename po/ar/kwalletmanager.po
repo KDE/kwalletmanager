@@ -40,12 +40,12 @@ msgstr ""
 #: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "هناك مدخلة بالاسم ’%1‘ بالفعل. أتريد المتابعة؟"
+msgstr "هناك مدخلة بالاسم ’%1‘ فعلًا. أتريد المتابعة؟"
 
 #: allyourbase.cpp:240
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "هناك مجلّد بالاسم ’%1‘ بالفعل. ما الذي تريد فعله؟"
+msgstr "هناك مجلّد بالاسم ’%1‘ فعلًا. ما الذي تريد فعله؟"
 
 #: allyourbase.cpp:243
 #, kde-format
@@ -279,7 +279,7 @@ msgstr "رجاء اختر اسم المدخلة الجديدة:"
 #: kwalleteditor.cpp:796
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr "آسفون، المدخلة موجودة بالفعل. لربّما تجرّب مجدّدًا؟"
+msgstr "آسفون، المدخلة موجودة فعلًا. لربّما تجرّب مجدّدًا؟"
 
 #: kwalleteditor.cpp:816 kwalleteditor.cpp:825
 #, kde-format
@@ -322,7 +322,7 @@ msgstr "تعذّر الوصول إلى المحفظة ’<b>%1</b>‘."
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
-msgstr "يحتوي المجلّد ’<b>%1</b>‘ المدخلة ’<b>%2</b>‘ بالفعل. أتريد استبدالها؟"
+msgstr "يحتوي المجلّد ’<b>%1</b>‘ المدخلة ’<b>%2</b>‘ فعلًا. أتريد استبدالها؟"
 
 #: kwalleteditor.cpp:1120
 #, kde-format
@@ -452,7 +452,7 @@ msgstr "أنشئ محفظة جديدة"
 #: kwalletmanager.cpp:352
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr "آسفون، المحفظة موجودة بالفعل. لربّما تجرّب اسمًا جديدًا؟"
+msgstr "آسفون، المحفظة موجودة فعلًا. لربّما تجرّب اسمًا جديدًا؟"
 
 #: kwalletmanager.cpp:354
 #, kde-format
@@ -492,7 +492,7 @@ msgstr "فشل فتح الملفّ"
 #: kwalletmanager.cpp:473
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr "هناك محفظة لها الاسم %1 بالفعل، أُجهضت العمليّة"
+msgstr "هناك محفظة لها الاسم %1 فعلًا، أُجهضت العمليّة"
 
 #: kwalletmanager.cpp:479
 #, kde-format
