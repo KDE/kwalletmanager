@@ -84,7 +84,7 @@
     <p>
      KWalletManager is a tool to manage the passwords on your system. By using the Frameworks wallet subsystem it not only allows you to keep your own secrets but also to access and manage the passwords of every application that integrates with the wallet.
     </p>
-    <p xml:lang="ar">مدير محفظتك هي أداة لإدارة كلمات المرور على نظامك. باستخدام النظام الفرعي لمحفظة ، لا يسمح لك فقط بالحفاظ على أسرارك الخاصة ولكن أيضًا للوصول إلى كلمات مرور كل تطبيق يتكامل مع المحفظة وإدارتها.</p>
+    <p xml:lang="ar">مدير محفظتك هي أداة لإدارة كلمات المرور على نظامك. باستخدام النظام الفرعي لمحفظة، لا يسمح لك فقط بالحفاظ على أسرارك الخاصة ولكن أيضًا للوصول إلى كلمات مرور كل تطبيق يتكامل مع المحفظة وإدارتها.</p>
     <p xml:lang="az">KDE Cüzdanı İdarəetməsi sisteminizdəki şifrələri idarə etmək üçün bir vasitədir. Frameworks cüzdan alt sistemini istifadə edərək yalnız öz məxfi məlumatlarınızı qorumaqdan başqa, cüzdanla inteqrasiya olunan hər bir tətbiqin şifrələrinə giriş əldə etməyə və onları idarə etməyə imkan verir.</p>
     <p xml:lang="bg">KWalletManager е инструмент за управление на паролите на вашата система. Той ви позволява да съхранявате и управлявате паролите си във всички приложения, интегрирани с портфейла.</p>
     <p xml:lang="ca">El KWalletManager és una eina per a gestionar les contrasenyes al vostre sistema. Emprant el subsistema de carteres dels Frameworks, no només es permet mantenir els vostres propis secrets, sinó també accedir i gestionar les contrasenyes de cada aplicació que estigui integrada amb la cartera.</p>
