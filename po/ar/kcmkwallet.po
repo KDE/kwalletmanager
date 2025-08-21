@@ -5,13 +5,13 @@
 # Khaled Hosny <dr.khaled.hosny@gmail.com>, 2006.
 # Fahad Al-Saidi <fahad.alsaidi@gmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:42+0000\n"
-"PO-Revision-Date: 2024-08-15 12:04+0400\n"
+"PO-Revision-Date: 2025-08-20 20:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -69,7 +69,7 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
-"خطأ أثناء إجراء المصادقة  :\n"
+"خطأ أثناء إجراء الاستيثاق  :\n"
 "%1"
 
 #: konfigurator.cpp:359
