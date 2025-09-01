@@ -440,7 +440,7 @@ msgstr "Cartera nova"
 #: kwalletmanager.cpp:346
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr "El nom buit no està admés. Seleccioneu-ne un de nou."
+msgstr "El nom buit no està admés. Trieu-ne un de nou."
 
 #: kwalletmanager.cpp:346
 #, kde-format
@@ -480,7 +480,7 @@ msgstr "No s'ha pogut obrir el fitxer per a escriptura"
 #: kwalletmanager.cpp:451
 #, kde-format
 msgid "Select file"
-msgstr "Seleccioneu un fitxer"
+msgstr "Trieu un fitxer"
 
 #: kwalletmanager.cpp:461
 #, kde-format
