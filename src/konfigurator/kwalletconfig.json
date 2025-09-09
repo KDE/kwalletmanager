@@ -41,7 +41,6 @@
         "Description[tr]": "KDE Cüzdan Yapılandırması",
         "Description[uk]": "Налаштування KWallet",
         "Description[vi]": "Cấu hình Ví KDE",
-        "Description[x-test]": "xxKDE Wallet Configurationxx",
         "Description[zh_CN]": "KDE 密码库配置",
         "Description[zh_TW]": "KDE 錢包設定",
         "Icon": "kwalletmanager",
@@ -115,7 +114,6 @@
         "Name[uz]": "KDE qopchiq",
         "Name[vi]": "Ví KDE",
         "Name[wa]": "Poite-manoye KDE",
-        "Name[x-test]": "xxKDE Walletxx",
         "Name[zh_CN]": "KDE 密码库",
         "Name[zh_TW]": "KDE 錢包"
     },
@@ -152,7 +150,6 @@
     "X-KDE-Keywords[tr]": "cüzdan,form,doldur,parolalar,form verisi,gizli servis,kcüzdan,kwallet,kdecüzdan,kdewallet,kde cüzdan,kde wallet,keepassxc,anahtar zinciri,şifreleme,şifre çözme,blowfish,pqp,erişim denetimi,gizli,cüzdan yöneticisi",
     "X-KDE-Keywords[uk]": "wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager,кишеня,сховище,дані,заповнення форм,паролі,дані форми,секретна служба,кваллет,кдєваллет,кишеня кдє,кіпассікссі,сховище ключів,в'язка ключів,шифрування,дешифрування,блоуфіш,піджіпі,керування доступом,конфіденційність,керування кишенею",
     "X-KDE-Keywords[vi]": "ví,điền biểu mẫu,mật khẩu,dữ liệu biểu mẫu,dịch vụ bí mật,kwallet,kdewallet,ví kde,keepassxc,chùm khoá,mật mã hoá,giải mật mã,blowfish,pgp,kiểm soát truy cập,mật,trình quản lí ví",
-    "X-KDE-Keywords[x-test]": "xxwalletxx,xxform fillxx,xxpasswordsxx,xxform dataxx,xxsecret servicexx,xxkwalletxx,xxkdewalletxx,xxkde walletxx,xxkeepassxcxx,xxkeyringxx,xxencryptionxx,xxdecryptionxx,xxblowfishxx,xxpgpxx,xxaccess controlxx,xxconfidentialxx,xxwallet managerxx",
     "X-KDE-Keywords[zh_CN]": "wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager,qianbao,mimaku,biaodantianchong,biaodanshuju,simifuwu,KDE qianbao,jiami,jiemi,fangwenkongzhi,jimi,mimakuguanliqi,钱包,密码库,表单填充,表单数据,私密服务,KDE 钱包,加密,解密,访问控制,机密,密码库管理器",
     "X-KDE-Keywords[zh_TW]": "wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager,錢包,密碼,秘密,鑰匙圈",
     "X-KDE-ParentApp": "kcontrol",
