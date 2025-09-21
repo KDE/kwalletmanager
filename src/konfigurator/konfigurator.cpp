@@ -7,7 +7,6 @@
 #include "konfigurator.h"
 #include "../kwalletmanager_version.h"
 
-#include <KAuth/Action>
 #include <KAuth/ActionReply>
 #include <KAuth/ExecuteJob>
 #include <KConfigGroup>

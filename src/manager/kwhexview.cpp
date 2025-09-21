@@ -9,7 +9,6 @@
 #include "clipboardutils.h"
 
 #include <QMimeData>
-#include <QPlainTextEdit>
 #include <QTextStream>
 
 KWHexView::KWHexView(QWidget *parent)

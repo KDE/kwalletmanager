@@ -6,8 +6,6 @@
 #include "clipboardutils.h"
 #include <QApplication>
 #include <QClipboard>
-#include <QMimeData>
-#include <QString>
 #include <QStringLiteral>
 
 void setPasswordToClipboard(const QString &password)

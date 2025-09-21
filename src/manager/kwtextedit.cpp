@@ -6,8 +6,6 @@
 
 #include "kwtextedit.h"
 #include "clipboardutils.h"
-#include <QTextEdit>
-#include <QWidget>
 
 KWTextEdit::KWTextEdit(QWidget *parent)
     : QTextEdit(parent)
