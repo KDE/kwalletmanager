@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:42+0000\n"
+"POT-Creation-Date: 2025-09-23 00:47+0000\n"
 "PO-Revision-Date: 2022-11-09 22:10+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -23,37 +23,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com,morais@kde.org"
 
-#: konfigurator.cpp:107
+#: konfigurator.cpp:106
 #, kde-format
 msgid "New Wallet"
 msgstr "Nova Carteira"
 
-#: konfigurator.cpp:107
+#: konfigurator.cpp:106
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Por favor escolha um nome para a nova carteira:"
 
-#: konfigurator.cpp:221 konfigurator.cpp:299
+#: konfigurator.cpp:220 konfigurator.cpp:298
 #, kde-format
 msgid "Always Allow"
 msgstr "Permitir Sempre"
 
-#: konfigurator.cpp:224 konfigurator.cpp:231 konfigurator.cpp:312
+#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
 #, kde-format
 msgid "Always Deny"
 msgstr "Recusar Sempre"
 
-#: konfigurator.cpp:259
+#: konfigurator.cpp:258
 #, kde-format
 msgid "Permission denied."
 msgstr "A permissão foi negada."
 
-#: konfigurator.cpp:259 konfigurator.cpp:261
+#: konfigurator.cpp:258 konfigurator.cpp:260
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Módulo de Controlo da Carteira do KDE"
 
-#: konfigurator.cpp:261
+#: konfigurator.cpp:260
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -62,7 +62,7 @@ msgstr ""
 "Ocorreu um erro ao autenticar a acção:\n"
 "%1"
 
-#: konfigurator.cpp:359
+#: konfigurator.cpp:358
 #, kde-format
 msgid "&Delete"
 msgstr "&Apagar"
