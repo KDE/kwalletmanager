@@ -324,7 +324,10 @@ void KWalletEditor::disconnectActions()
 
 void KWalletEditor::walletClosed()
 {
-    _w = nullptr;
+    if (_w) {
+        _w->disconnect(this);
+        _w = nullptr;
+    }
     setEnabled(false);
     Q_EMIT enableWalletActions(false);
     Q_EMIT enableFolderActions(false);
@@ -332,6 +335,9 @@ void KWalletEditor::walletClosed()
 
 void KWalletEditor::updateFolderList(bool checkEntries)
 {
+    if (!_w) {
+        return;
+    }
     const QStringList fl = _w->folderList();
     QStack<QTreeWidgetItem *> trash;
 
@@ -652,6 +658,9 @@ void KWalletEditor::entrySelectionChanged(QTreeWidgetItem *item)
 
 void KWalletEditor::updateEntries(const QString &folder)
 {
+    if (!_w) {
+        return;
+    }
     QStack<QTreeWidgetItem *> trash;
 
     _w->setFolder(folder);
