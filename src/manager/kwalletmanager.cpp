@@ -126,7 +126,7 @@ void KWalletManager::configUI()
                 }
             });
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::allWalletsClosed, this, &KWalletManager::allWalletsClosed);
-    connect(m_kwalletdModule, SIGNAL(walletClosed(QString)), this, SLOT(updateWalletDisplay()));
+    connect(m_kwalletdModule, qOverload<const QString &>(&OrgKdeKWalletInterface::walletClosed), this, &KWalletManager::updateWalletDisplay);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletOpened, this, &KWalletManager::aWalletWasOpened);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletDeleted, this, &KWalletManager::updateWalletDisplay);
     connect(m_kwalletdModule, &OrgKdeKWalletInterface::walletListDirty, this, &KWalletManager::updateWalletDisplay);

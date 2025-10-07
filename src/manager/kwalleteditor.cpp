@@ -174,7 +174,9 @@ void KWalletEditor::setWallet(KWallet::Wallet *wallet, bool isPath)
     connect(_w, &KWallet::Wallet::walletOpened, this, &KWalletEditor::walletOpened);
     connect(_w, &KWallet::Wallet::walletClosed, this, &KWalletEditor::walletClosed);
     connect(_w, &KWallet::Wallet::folderUpdated, this, &KWalletEditor::updateEntries);
-    connect(_w, SIGNAL(folderListUpdated()), this, SLOT(updateFolderList()));
+    connect(_w, &KWallet::Wallet::folderListUpdated, this, [this] {
+        updateFolderList();
+    });
     updateFolderList();
 
     Q_EMIT enableFolderActions(true);
