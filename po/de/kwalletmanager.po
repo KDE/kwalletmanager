@@ -1,12 +1,12 @@
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
-# Thomas Diehl <thd@kde.org>, 2003.
-# Gregor Zumstein <zumstein@ssd.ethz.ch>, 2003, 2004, 2005.
-# Stephan Johach <hunsum@gmx.de>, 2005, 2006.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007.
-# Gregor Zumstein <gz@orchester-bremgarten.ch>, 2007, 2009.
-# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2013, 2015, 2017.
-# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
-# Frederik Schwarzer <schwarzer@kde.org>, 2011, 2013, 2016.
+# SPDX-FileCopyrightText: 2003 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2003, 2004, 2005 Gregor Zumstein <zumstein@ssd.ethz.ch>
+# SPDX-FileCopyrightText: 2005, 2006 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2005, 2006, 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2007, 2009 Gregor Zumstein <gz@orchester-bremgarten.ch>
+# SPDX-FileCopyrightText: 2009, 2013, 2015, 2017 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
+# SPDX-FileCopyrightText: 2011, 2013, 2016 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022, 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
