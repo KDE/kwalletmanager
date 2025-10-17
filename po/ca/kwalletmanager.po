@@ -1,11 +1,11 @@
 # Translation of kwalletmanager.po to Catalan
 # Copyright (C) 2003-2025 This_file_is_part_of_KDE
 #
-# Albert Astals Cid <aacid@kde.org>, 2003, 2004.
-# Joan Maspons <joanmaspons@gmail.com>, 2009.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2016, 2017, 2020, 2022.
-# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
-# Josep M. Ferrer <txemaq@gmail.com>, 2005, 2006, 2007, 2008, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2003, 2004 Albert Astals Cid <aacid@kde.org>
+# SPDX-FileCopyrightText: 2009 Joan Maspons <joanmaspons@gmail.com>
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
+# SPDX-FileCopyrightText: 2005, 2006, 2007, 2008, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
