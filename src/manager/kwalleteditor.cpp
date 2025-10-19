@@ -141,6 +141,8 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
     _binaryViewShow->setChecked(_alwaysShowContents);
     //    createActions();
     // TODO: remove kwalleteditor.rc file
+
+    entrySelectionChanged(nullptr);
 }
 
 KWalletEditor::~KWalletEditor()
