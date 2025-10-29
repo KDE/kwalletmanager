@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"POT-Creation-Date: 2025-10-29 02:41+0000\n"
 "PO-Revision-Date: 2010-05-01 10:15+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -121,200 +121,200 @@ msgctxt "@option:check"
 msgid "&Show values"
 msgstr "แส&ดงค่าต่าง ๆ"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:209
 #, kde-format
 msgid "&New Folder..."
 msgstr "สร้างโฟลเดอร์ใ&หม่..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:213
 #, kde-format
 msgid "&Delete Folder"
 msgstr "&ลบโฟลเดอร์"
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:216
 #, fuzzy, kde-format
 #| msgid "&Merge Wallet..."
 msgid "&Import a wallet..."
 msgstr "รวม&กระเป๋า..."
 
-#: kwalleteditor.cpp:218
+#: kwalleteditor.cpp:220
 #, kde-format
 msgid "&Import XML..."
 msgstr "&นำเข้าแฟ้ม XML..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:224
 #, fuzzy, kde-format
 #| msgid "&Import XML..."
 msgid "&Export as XML..."
 msgstr "&นำเข้าแฟ้ม XML..."
 
-#: kwalleteditor.cpp:226
+#: kwalleteditor.cpp:228
 #, kde-format
 msgid "&Copy"
 msgstr ""
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:233
 #, kde-format
 msgid "&New..."
 msgstr "สร้างใ&หม่..."
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:238
 #, kde-format
 msgid "&Rename"
 msgstr "เ&ปลี่ยนชื่อ"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:243 kwalletpopup.cpp:62
 #, kde-format
 msgid "&Delete"
 msgstr "&ลบ"
 
-#: kwalleteditor.cpp:246
+#: kwalleteditor.cpp:248
 #, fuzzy, kde-format
 #| msgid "Show &Contents"
 msgid "Always show contents"
 msgstr "แสดงเ&นื้อหา"
 
-#: kwalleteditor.cpp:250
+#: kwalleteditor.cpp:252
 #, fuzzy, kde-format
 #| msgid "Hide &Contents"
 msgid "Always hide contents"
 msgstr "ซ่อนเ&นื้อหา"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Passwords"
 msgstr "รหัสผ่าน"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Maps"
 msgstr "จับคู่ข้อมูล"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Binary Data"
 msgstr "ข้อมูลแบบไบนารี"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:364
 #, kde-format
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: kwalleteditor.cpp:404
+#: kwalleteditor.cpp:406
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "คุณแน่ใจหรือว่า ต้องการจะลบโฟลเดอร์ '%1' นี้ออกจากกระเป๋าคุมรหัสผ่าน ?"
 
-#: kwalleteditor.cpp:410
+#: kwalleteditor.cpp:412
 #, kde-format
 msgid "Error deleting folder."
 msgstr "เกิดข้อผิดพลาดระหว่างการลบโฟลเดอร์"
 
-#: kwalleteditor.cpp:429
+#: kwalleteditor.cpp:431
 #, kde-format
 msgid "New Folder"
 msgstr "สร้างโฟลเดอร์ใหม่"
 
-#: kwalleteditor.cpp:429
+#: kwalleteditor.cpp:431
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "โปรดป้อนชื่อของโฟลเดอร์ใหม่:"
 
-#: kwalleteditor.cpp:437
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "ขออภัย มีการใช้โฟลเดอร์ชื่อดังกล่าวอยู่ก่อนแล้ว จะลองใหม่อีกครั้งหรือไม่ ?"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:798
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:800
 #, kde-format
 msgid "Try Again"
 msgstr "ลองใหม่"
 
-#: kwalleteditor.cpp:440 kwalleteditor.cpp:799 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:442 kwalleteditor.cpp:801 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "ไม่ลอง"
 
-#: kwalleteditor.cpp:479
+#: kwalleteditor.cpp:481
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "เกิดข้อผิดพลาดระหว่างบันทึกรายการ รหัสผิดพลาดคือ: %1"
 
-#: kwalleteditor.cpp:501
+#: kwalleteditor.cpp:503
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
 
-#: kwalleteditor.cpp:554 kwalleteditor.cpp:881
+#: kwalleteditor.cpp:556 kwalleteditor.cpp:883
 #, kde-format
 msgid "Password: %1"
 msgstr "รหัสผ่าน: %1"
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:883
+#: kwalleteditor.cpp:572 kwalleteditor.cpp:885
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "จับคู่ ชื่อ-ค่า: %1"
 
-#: kwalleteditor.cpp:580 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:582 kwalleteditor.cpp:887
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "ข้อมูลแบบไบนารี: %1"
 
-#: kwalleteditor.cpp:787
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "New Entry"
 msgstr "เพิ่มรายการใหม่"
 
-#: kwalleteditor.cpp:787
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "โปรดป้อนชื่อของรายการใหม่:"
 
-#: kwalleteditor.cpp:796
+#: kwalleteditor.cpp:798
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "ขออภัย มีรายการดังกล่าวอยู่ก่อนแล้ว จะลองใหม่อีกครั้งหรือไม่ ?"
 
-#: kwalleteditor.cpp:816 kwalleteditor.cpp:825
+#: kwalleteditor.cpp:818 kwalleteditor.cpp:827
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการเพิ่มรายการใหม่"
 
-#: kwalleteditor.cpp:877
+#: kwalleteditor.cpp:879
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการเปลี่ยนชื่อรายการ"
 
-#: kwalleteditor.cpp:898
+#: kwalleteditor.cpp:900
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "คุณแน่ใจหรือว่า ต้องการจะลบรายการ '%1' นี้ ?"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:904
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขึ้น ระหว่างพยายามทำการลบรายการ"
 
-#: kwalleteditor.cpp:930
+#: kwalleteditor.cpp:932
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "ไม่สามารถเปิดกระเป๋าที่มีการร้องขอมาได้"
 
-#: kwalleteditor.cpp:972
+#: kwalleteditor.cpp:974
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "ไม่สามารถเข้าใช้งานแฟ้ม XML '<b>%1</b>' ได้"
 
-#: kwalleteditor.cpp:979
+#: kwalleteditor.cpp:981
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "ไม่สามารถเข้าใช้งานกระเป๋า '<b>%1</b>' ได้"
 
-#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
-#: kwalleteditor.cpp:1162
+#: kwalleteditor.cpp:1012 kwalleteditor.cpp:1044 kwalleteditor.cpp:1080
+#: kwalleteditor.cpp:1164
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -322,22 +322,22 @@ msgid ""
 msgstr ""
 "มีรายการ '<b>%2</b>' ในโฟลเดอร์ '<b>%1</b>' อยู่ก่อนแล้ว คุณต้องการจะแทนที่มันหรือไม่ ?"
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1122
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "ไม่สามารถเข้าใช้งานแฟ้ม XML '<b>%1</b>' ได้"
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1128
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "ไม่สามารถอ่านแฟ้ม XML '<b>%1</b>' เพื่อนำข้อมูลเข้าได้"
 
-#: kwalleteditor.cpp:1132
+#: kwalleteditor.cpp:1134
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "ข้อผิดพลาด: แฟ้ม XML ไม่มีส่วนกระเป๋าคุมข้อมูล"
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1287
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."

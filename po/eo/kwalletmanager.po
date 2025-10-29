@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"POT-Creation-Date: 2025-10-29 02:41+0000\n"
 "PO-Revision-Date: 2024-07-30 21:06+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -118,122 +118,122 @@ msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Montri valorojn"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:209
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Nova dosierujo..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:213
 #, kde-format
 msgid "&Delete Folder"
 msgstr "&Forviŝu dosierujon"
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:216
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "&Importi monujon..."
 
-#: kwalleteditor.cpp:218
+#: kwalleteditor.cpp:220
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Importi XML..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:224
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&Eksporti kiel XML..."
 
-#: kwalleteditor.cpp:226
+#: kwalleteditor.cpp:228
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopii"
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:233
 #, kde-format
 msgid "&New..."
 msgstr "&Nova..."
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:238
 #, kde-format
 msgid "&Rename"
 msgstr "&Renomi"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:243 kwalletpopup.cpp:62
 #, kde-format
 msgid "&Delete"
 msgstr "&Forigi"
 
-#: kwalleteditor.cpp:246
+#: kwalleteditor.cpp:248
 #, kde-format
 msgid "Always show contents"
 msgstr "Ĉiam montri enhavon"
 
-#: kwalleteditor.cpp:250
+#: kwalleteditor.cpp:252
 #, kde-format
 msgid "Always hide contents"
 msgstr "Ĉiam kaŝi enhavon"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Passwords"
 msgstr "Pasvortoj"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Maps"
 msgstr "Mapoj"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Binary Data"
 msgstr "Binaraj Datumoj"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:364
 #, kde-format
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: kwalleteditor.cpp:404
+#: kwalleteditor.cpp:406
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Ĉu vi certas, ke vi volas forigi la dosierujon '%1' el la monujo?"
 
-#: kwalleteditor.cpp:410
+#: kwalleteditor.cpp:412
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Eraro dum forigo de dosierujo."
 
-#: kwalleteditor.cpp:429
+#: kwalleteditor.cpp:431
 #, kde-format
 msgid "New Folder"
 msgstr "Nova dosierujo"
 
-#: kwalleteditor.cpp:429
+#: kwalleteditor.cpp:431
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Bonvolu elekti nomon por la nova dosierujo:"
 
-#: kwalleteditor.cpp:437
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Pardonu, tiu dosierujo nomo estas uzata. Ĉu provi denove?"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:798
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:800
 #, kde-format
 msgid "Try Again"
 msgstr "Provi denove"
 
-#: kwalleteditor.cpp:440 kwalleteditor.cpp:799 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:442 kwalleteditor.cpp:801 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ne Provi"
 
-#: kwalleteditor.cpp:479
+#: kwalleteditor.cpp:481
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Eraro dum konservado de enskribo. Erarkodo: %1"
 
-#: kwalleteditor.cpp:501
+#: kwalleteditor.cpp:503
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -242,73 +242,73 @@ msgstr ""
 "La enhavo de la nuna ero ŝanĝiĝis.\n"
 "Ĉu vi volas konservi ŝanĝojn?"
 
-#: kwalleteditor.cpp:554 kwalleteditor.cpp:881
+#: kwalleteditor.cpp:556 kwalleteditor.cpp:883
 #, kde-format
 msgid "Password: %1"
 msgstr "Pasvorto: %1"
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:883
+#: kwalleteditor.cpp:572 kwalleteditor.cpp:885
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Nomo-valora Mapo: %1"
 
-#: kwalleteditor.cpp:580 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:582 kwalleteditor.cpp:887
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binaraj Datumoj: %1"
 
-#: kwalleteditor.cpp:787
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "New Entry"
 msgstr "Nova Eniro"
 
-#: kwalleteditor.cpp:787
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Bonvolu elekti nomon por la nova eniro:"
 
-#: kwalleteditor.cpp:796
+#: kwalleteditor.cpp:798
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Pardonu, tiu eniro jam ekzistas. Ĉu provi denove?"
 
-#: kwalleteditor.cpp:816 kwalleteditor.cpp:825
+#: kwalleteditor.cpp:818 kwalleteditor.cpp:827
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Neatendita eraro okazis provante aldoni la novan enskribon"
 
-#: kwalleteditor.cpp:877
+#: kwalleteditor.cpp:879
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Neatendita eraro okazis provante renomi la eniron"
 
-#: kwalleteditor.cpp:898
+#: kwalleteditor.cpp:900
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Ĉu vi certas, ke vi volas forigi la eron '%1'?"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:904
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Neatendita eraro okazis provante forigi la enskribon"
 
-#: kwalleteditor.cpp:930
+#: kwalleteditor.cpp:932
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Ne eblas malfermi la petitan monujon."
 
-#: kwalleteditor.cpp:972
+#: kwalleteditor.cpp:974
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Ne eblas krei provizoran dosieron por elŝuti '<b>%1</b>'."
 
-#: kwalleteditor.cpp:979
+#: kwalleteditor.cpp:981
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Ne eblas aliri monujon '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
-#: kwalleteditor.cpp:1162
+#: kwalleteditor.cpp:1012 kwalleteditor.cpp:1044 kwalleteditor.cpp:1080
+#: kwalleteditor.cpp:1164
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -317,22 +317,22 @@ msgstr ""
 "Dosierujo '<b>%1</b>' jam enhavas eniron '<b>%2</b>'. Ĉu vi volas "
 "anstataŭigi ĝin?"
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1122
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Ne eblas aliri XML-dosieron '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1128
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Eraro legante XML-dosieron '<b>%1</b>' por enigo."
 
-#: kwalleteditor.cpp:1132
+#: kwalleteditor.cpp:1134
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Eraro: XML-dosiero ne enhavas monujon."
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1287
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Ne eblas konservi en '<b>%1</b>'."

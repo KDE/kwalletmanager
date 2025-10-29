@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-21 00:44+0000\n"
+"POT-Creation-Date: 2025-10-29 02:41+0000\n"
 "PO-Revision-Date: 2017-07-31 15:01+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -129,124 +129,124 @@ msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Εμφάνιση τιμών"
 
-#: kwalleteditor.cpp:207
+#: kwalleteditor.cpp:209
 #, kde-format
 msgid "&New Folder..."
 msgstr "&Νέος φάκελος..."
 
-#: kwalleteditor.cpp:211
+#: kwalleteditor.cpp:213
 #, kde-format
 msgid "&Delete Folder"
 msgstr "&Διαγραφή φακέλου"
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:216
 #, kde-format
 msgid "&Import a wallet..."
 msgstr "Ε&ισαγωγή πορτοφολιού..."
 
-#: kwalleteditor.cpp:218
+#: kwalleteditor.cpp:220
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Εισαγωγή XML..."
 
-#: kwalleteditor.cpp:222
+#: kwalleteditor.cpp:224
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&Εξαγωγή ως XML..."
 
-#: kwalleteditor.cpp:226
+#: kwalleteditor.cpp:228
 #, kde-format
 msgid "&Copy"
 msgstr "Α&ντιγραφή"
 
-#: kwalleteditor.cpp:231
+#: kwalleteditor.cpp:233
 #, kde-format
 msgid "&New..."
 msgstr "&Νέο..."
 
-#: kwalleteditor.cpp:236
+#: kwalleteditor.cpp:238
 #, kde-format
 msgid "&Rename"
 msgstr "&Μετονομασία"
 
-#: kwalleteditor.cpp:241 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:243 kwalletpopup.cpp:62
 #, kde-format
 msgid "&Delete"
 msgstr "&Διαγραφή"
 
-#: kwalleteditor.cpp:246
+#: kwalleteditor.cpp:248
 #, kde-format
 msgid "Always show contents"
 msgstr "Πάντα εμφάνιση περιεχομένων"
 
-#: kwalleteditor.cpp:250
+#: kwalleteditor.cpp:252
 #, kde-format
 msgid "Always hide contents"
 msgstr "Πάντα απόκρυψη περιεχομένων"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Passwords"
 msgstr "Κωδικοί πρόσβασης"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Maps"
 msgstr "Αντιστοιχίσεις"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Binary Data"
 msgstr "Δυαδικά δεδομένα"
 
-#: kwalleteditor.cpp:362
+#: kwalleteditor.cpp:364
 #, kde-format
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: kwalleteditor.cpp:404
+#: kwalleteditor.cpp:406
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr ""
 "Είστε σίγουρος ότι θέλετε να διαγράψετε το φάκελο '%1' από το πορτοφόλι;"
 
-#: kwalleteditor.cpp:410
+#: kwalleteditor.cpp:412
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Σφάλμα κατά τη διαγραφή του φακέλου."
 
-#: kwalleteditor.cpp:429
+#: kwalleteditor.cpp:431
 #, kde-format
 msgid "New Folder"
 msgstr "Νέος φάκελος"
 
-#: kwalleteditor.cpp:429
+#: kwalleteditor.cpp:431
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Παρακαλώ επιλέξτε ένα όνομα για το νέο φάκελο:"
 
-#: kwalleteditor.cpp:437
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr ""
 "Λυπούμαστε, αυτό το όνομα φακέλου υπάρχει ήδη. Θέλετε να προσπαθήσετε ξανά;"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:798
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:800
 #, kde-format
 msgid "Try Again"
 msgstr "Ξαναπροσπάθησε"
 
-#: kwalleteditor.cpp:440 kwalleteditor.cpp:799 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:442 kwalleteditor.cpp:801 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "Μην ξαναπροσπαθήσεις"
 
-#: kwalleteditor.cpp:479
+#: kwalleteditor.cpp:481
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Σφάλμα κατά την αποθήκευση της εγγραφής. Κωδικός σφάλματος: %1"
 
-#: kwalleteditor.cpp:501
+#: kwalleteditor.cpp:503
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -255,79 +255,79 @@ msgstr ""
 "Τα περιεχόμενα του τρέχοντος αντικειμένου έχουν αλλάξει.\n"
 "Θέλετε να αποθηκεύσετε τις αλλαγές;"
 
-#: kwalleteditor.cpp:554 kwalleteditor.cpp:881
+#: kwalleteditor.cpp:556 kwalleteditor.cpp:883
 #, kde-format
 msgid "Password: %1"
 msgstr "Κωδικός πρόσβασης: %1"
 
-#: kwalleteditor.cpp:570 kwalleteditor.cpp:883
+#: kwalleteditor.cpp:572 kwalleteditor.cpp:885
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Αντιστοίχιση Όνομα-Τιμή: %1"
 
-#: kwalleteditor.cpp:580 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:582 kwalleteditor.cpp:887
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Δυαδικά δεδομένα: %1"
 
-#: kwalleteditor.cpp:787
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "New Entry"
 msgstr "Νέα καταχώρηση"
 
-#: kwalleteditor.cpp:787
+#: kwalleteditor.cpp:789
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Παρακαλώ επιλέξτε ένα όνομα για τη νέα καταχώρηση:"
 
-#: kwalleteditor.cpp:796
+#: kwalleteditor.cpp:798
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Λυπούμαστε, η καταχώρηση αυτή υπάρχει ήδη. Προσπάθεια ξανά;"
 
-#: kwalleteditor.cpp:816 kwalleteditor.cpp:825
+#: kwalleteditor.cpp:818 kwalleteditor.cpp:827
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr ""
 "Παρουσιάστηκε ένα μη αναμενόμενο σφάλμα κατά την προσπάθεια προσθήκης μιας "
 "νέας καταχώρησης"
 
-#: kwalleteditor.cpp:877
+#: kwalleteditor.cpp:879
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr ""
 "Παρουσιάστηκε ένα μη αναμενόμενο σφάλμα κατά την προσπάθεια μετονομασίας της "
 "καταχώρησης"
 
-#: kwalleteditor.cpp:898
+#: kwalleteditor.cpp:900
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Είστε σίγουρος ότι θέλετε να διαγράψετε το αντικείμενο '%1';"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:904
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr ""
 "Παρουσιάστηκε ένα μη αναμενόμενο σφάλμα κατά την προσπάθεια διαγραφής της "
 "καταχώρησης"
 
-#: kwalleteditor.cpp:930
+#: kwalleteditor.cpp:932
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Δεν ήταν δυνατό το άνοιγμα του ζητούμενου πορτοφολιού."
 
-#: kwalleteditor.cpp:972
+#: kwalleteditor.cpp:974
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου για λήψη '<b>%1</b>'."
 
-#: kwalleteditor.cpp:979
+#: kwalleteditor.cpp:981
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Δεν ήταν δυνατή η προσπέλαση του πορτοφολιού '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1010 kwalleteditor.cpp:1042 kwalleteditor.cpp:1078
-#: kwalleteditor.cpp:1162
+#: kwalleteditor.cpp:1012 kwalleteditor.cpp:1044 kwalleteditor.cpp:1080
+#: kwalleteditor.cpp:1164
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -336,22 +336,22 @@ msgstr ""
 "Ο φάκελος '<b>%1</b>' περιέχει ήδη μια καταχώρηση '<b>%2</b>'. Θέλετε να την "
 "αντικαταστήσετε;"
 
-#: kwalleteditor.cpp:1120
+#: kwalleteditor.cpp:1122
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Δεν ήταν δυνατή η προσπέλαση του αρχείου XML '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1126
+#: kwalleteditor.cpp:1128
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Σφάλμα κατά την ανάγνωση του αρχείου XML '<b>%1</b>' σαν είσοδος."
 
-#: kwalleteditor.cpp:1132
+#: kwalleteditor.cpp:1134
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Σφάλμα: το αρχείο XML δεν περιέχει πορτοφόλι."
 
-#: kwalleteditor.cpp:1285
+#: kwalleteditor.cpp:1287
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Αδυναμία αποθήκευσης στο <b>%1</b>'."
