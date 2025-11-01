@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:47+0000\n"
+"POT-Creation-Date: 2025-11-01 00:50+0000\n"
 "PO-Revision-Date: 2013-11-16 20:49+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -179,67 +179,67 @@ msgstr "Vis alltid innhold"
 msgid "Always hide contents"
 msgstr "Skjul alltid innhold"
 
-#: kwalleteditor.cpp:363
+#: kwalleteditor.cpp:369
 #, kde-format
 msgid "Passwords"
 msgstr "Passord"
 
-#: kwalleteditor.cpp:364
+#: kwalleteditor.cpp:370
 #, kde-format
 msgid "Maps"
 msgstr "Kart"
 
-#: kwalleteditor.cpp:365
+#: kwalleteditor.cpp:371
 #, kde-format
 msgid "Binary Data"
 msgstr "Binærdata"
 
-#: kwalleteditor.cpp:366
+#: kwalleteditor.cpp:372
 #, kde-format
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: kwalleteditor.cpp:408
+#: kwalleteditor.cpp:414
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Er du sikker på at du vil slette mappa «%1» fra lommeboka?"
 
-#: kwalleteditor.cpp:414
+#: kwalleteditor.cpp:420
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Feil ved sletting av mappe."
 
-#: kwalleteditor.cpp:433
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "New Folder"
 msgstr "Ny mappe"
 
-#: kwalleteditor.cpp:433
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Velg navn på den nye mappa:"
 
-#: kwalleteditor.cpp:441
+#: kwalleteditor.cpp:447
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Det navnet er i bruk. Nytt forsøk?"
 
-#: kwalleteditor.cpp:443 kwalleteditor.cpp:802
+#: kwalleteditor.cpp:449 kwalleteditor.cpp:811
 #, kde-format
 msgid "Try Again"
 msgstr "Forsøk igjen"
 
-#: kwalleteditor.cpp:444 kwalleteditor.cpp:803 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ikke forsøk"
 
-#: kwalleteditor.cpp:483
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Feil ved lagring av post. Feilkode: %1"
 
-#: kwalleteditor.cpp:505
+#: kwalleteditor.cpp:511
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -248,73 +248,73 @@ msgstr ""
 "Innholdet i gjeldende oppføring er endret.\n"
 "Vil du lagre endringene?"
 
-#: kwalleteditor.cpp:558 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:564 kwalleteditor.cpp:894
 #, kde-format
 msgid "Password: %1"
 msgstr "Passord: %1"
 
-#: kwalleteditor.cpp:574 kwalleteditor.cpp:887
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:896
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Navn-verdi-kart: %1"
 
-#: kwalleteditor.cpp:584 kwalleteditor.cpp:889
+#: kwalleteditor.cpp:590 kwalleteditor.cpp:898
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binærdata: %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "New Entry"
 msgstr "Ny oppføring"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Velg navn på den nye oppføringa:"
 
-#: kwalleteditor.cpp:800
+#: kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Den oppføringa finnes fra før. Nytt forsøk?"
 
-#: kwalleteditor.cpp:820 kwalleteditor.cpp:829
+#: kwalleteditor.cpp:829 kwalleteditor.cpp:838
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "En uventet feil oppsto da den nye posten skulle legges til"
 
-#: kwalleteditor.cpp:881
+#: kwalleteditor.cpp:890
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "En uventet feil oppsto da posten skulle skifte navn"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:911
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Er du sikker på at du vil slette oppføringa «%1»?"
 
-#: kwalleteditor.cpp:906
+#: kwalleteditor.cpp:915
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "En uventet feil oppsto under sletting av posten"
 
-#: kwalleteditor.cpp:934
+#: kwalleteditor.cpp:943
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Klarte ikke å åpne den etterspurte lommeboka."
 
-#: kwalleteditor.cpp:976
+#: kwalleteditor.cpp:985
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr ""
 
-#: kwalleteditor.cpp:983
+#: kwalleteditor.cpp:992
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Fikk ikke tilgang til lommebok '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1014 kwalleteditor.cpp:1046 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1166
+#: kwalleteditor.cpp:1023 kwalleteditor.cpp:1055 kwalleteditor.cpp:1091
+#: kwalleteditor.cpp:1175
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -323,22 +323,22 @@ msgstr ""
 "Mappa '<b>%1</b>' inneholder allerede oppføringa '<b>%2</b>'. Vil du "
 "overskrive den?"
 
-#: kwalleteditor.cpp:1124
+#: kwalleteditor.cpp:1133
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Fikk ikke tilgang til XML-fila '<b>%1</b>'."
 
-#: kwalleteditor.cpp:1130
+#: kwalleteditor.cpp:1139
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Feil under lesing av XML-fila '<b>%1</b>' for inndata."
 
-#: kwalleteditor.cpp:1136
+#: kwalleteditor.cpp:1145
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Feil: XML-fila inneholder ikke en lommebok."
 
-#: kwalleteditor.cpp:1289
+#: kwalleteditor.cpp:1298
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr ""

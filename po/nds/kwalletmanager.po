@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:47+0000\n"
+"POT-Creation-Date: 2025-11-01 00:50+0000\n"
 "PO-Revision-Date: 2014-02-20 14:48+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -175,67 +175,67 @@ msgstr "Inholt jümmers wiesen"
 msgid "Always hide contents"
 msgstr "Inholt jümmers versteken"
 
-#: kwalleteditor.cpp:363
+#: kwalleteditor.cpp:369
 #, kde-format
 msgid "Passwords"
 msgstr "Passwöör"
 
-#: kwalleteditor.cpp:364
+#: kwalleteditor.cpp:370
 #, kde-format
 msgid "Maps"
 msgstr "Poren"
 
-#: kwalleteditor.cpp:365
+#: kwalleteditor.cpp:371
 #, kde-format
 msgid "Binary Data"
 msgstr "Bineerdaten"
 
-#: kwalleteditor.cpp:366
+#: kwalleteditor.cpp:372
 #, kde-format
 msgid "Unknown"
 msgstr "Nich begäng"
 
-#: kwalleteditor.cpp:408
+#: kwalleteditor.cpp:414
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Wullt Du den Orner \"%1\" redig ut de Knipp wegmaken?"
 
-#: kwalleteditor.cpp:414
+#: kwalleteditor.cpp:420
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Fehler bi't Wegdoon vun den Orner."
 
-#: kwalleteditor.cpp:433
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "New Folder"
 msgstr "Nieg Orner"
 
-#: kwalleteditor.cpp:433
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Söök bitte en Naam för den niegen Orner ut:"
 
-#: kwalleteditor.cpp:441
+#: kwalleteditor.cpp:447
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Deit mi leed, disse Orner warrt jüst bruukt. Nochmaal versöken?"
 
-#: kwalleteditor.cpp:443 kwalleteditor.cpp:802
+#: kwalleteditor.cpp:449 kwalleteditor.cpp:811
 #, kde-format
 msgid "Try Again"
 msgstr "Nochmaal versöken"
 
-#: kwalleteditor.cpp:444 kwalleteditor.cpp:803 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "Nich versöken"
 
-#: kwalleteditor.cpp:483
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Fehler bi't Sekern vun den Indrag. Fehlerkode: %1"
 
-#: kwalleteditor.cpp:505
+#: kwalleteditor.cpp:511
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -244,96 +244,96 @@ msgstr ""
 "Den aktuellen Indrag sien Inholt wöör ännert.\n"
 "Wullt Du de Ännern sekern?"
 
-#: kwalleteditor.cpp:558 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:564 kwalleteditor.cpp:894
 #, kde-format
 msgid "Password: %1"
 msgstr "Passwoort: %1"
 
-#: kwalleteditor.cpp:574 kwalleteditor.cpp:887
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:896
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Naam-Weert-Poor: %1"
 
-#: kwalleteditor.cpp:584 kwalleteditor.cpp:889
+#: kwalleteditor.cpp:590 kwalleteditor.cpp:898
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Bineerdaten: %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "New Entry"
 msgstr "Nieg Indrag"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Söök bitte en Naam för den niegen Indrag ut:"
 
-#: kwalleteditor.cpp:800
+#: kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Deit mi leed, dissen Indrag gifft dat al. Nochmaal versöken?"
 
-#: kwalleteditor.cpp:820 kwalleteditor.cpp:829
+#: kwalleteditor.cpp:829 kwalleteditor.cpp:838
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Bi't Tofögen vun den niegen Indrag geev dat en nich verwacht Fehler."
 
-#: kwalleteditor.cpp:881
+#: kwalleteditor.cpp:890
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Bi't Ümnömen vun den Indrag geev dat en nich verwacht Fehler."
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:911
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Wullt Du den Indrag \"%1\" redig wegdoon?"
 
-#: kwalleteditor.cpp:906
+#: kwalleteditor.cpp:915
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Bi't Wegdoon vun den Indrag geev dat en nich verwacht Fehler."
 
-#: kwalleteditor.cpp:934
+#: kwalleteditor.cpp:943
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "De angeven Knipp lett sik nich opmaken."
 
-#: kwalleteditor.cpp:976
+#: kwalleteditor.cpp:985
 #, fuzzy, kde-format
 #| msgid "Unable to access XML file '<b>%1</b>'."
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Togriepen op XML-Datei <b>%1</b> nich mööglich."
 
-#: kwalleteditor.cpp:983
+#: kwalleteditor.cpp:992
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Togriepen op de Knipp <b>%1</b> is nich mööglich."
 
-#: kwalleteditor.cpp:1014 kwalleteditor.cpp:1046 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1166
+#: kwalleteditor.cpp:1023 kwalleteditor.cpp:1055 kwalleteditor.cpp:1091
+#: kwalleteditor.cpp:1175
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr "De Orner<b>%1</b> bargt al en Indrag <b>%2</b>. Wullt Du em uttuschen?"
 
-#: kwalleteditor.cpp:1124
+#: kwalleteditor.cpp:1133
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Togriepen op XML-Datei <b>%1</b> nich mööglich."
 
-#: kwalleteditor.cpp:1130
+#: kwalleteditor.cpp:1139
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "De XML-Datei <b>%1</b> lett sik nich lesen."
 
-#: kwalleteditor.cpp:1136
+#: kwalleteditor.cpp:1145
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Fehler: De XML-Datei bargt keen Knipp."
 
-#: kwalleteditor.cpp:1289
+#: kwalleteditor.cpp:1298
 #, fuzzy, kde-format
 #| msgid "Unable to access wallet '<b>%1</b>'."
 msgid "Unable to store to '<b>%1</b>'."

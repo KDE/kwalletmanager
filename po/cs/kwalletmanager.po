@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:47+0000\n"
+"POT-Creation-Date: 2025-11-01 00:50+0000\n"
 "PO-Revision-Date: 2025-05-16 15:07+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -175,67 +175,67 @@ msgstr "Vždy zobrazit obsah"
 msgid "Always hide contents"
 msgstr "Vždy skrýt obsah"
 
-#: kwalleteditor.cpp:363
+#: kwalleteditor.cpp:369
 #, kde-format
 msgid "Passwords"
 msgstr "Hesla"
 
-#: kwalleteditor.cpp:364
+#: kwalleteditor.cpp:370
 #, kde-format
 msgid "Maps"
 msgstr "Mapy"
 
-#: kwalleteditor.cpp:365
+#: kwalleteditor.cpp:371
 #, kde-format
 msgid "Binary Data"
 msgstr "Binární data"
 
-#: kwalleteditor.cpp:366
+#: kwalleteditor.cpp:372
 #, kde-format
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: kwalleteditor.cpp:408
+#: kwalleteditor.cpp:414
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Opravdu si přejete odstranit složku '%1' z úschovny?"
 
-#: kwalleteditor.cpp:414
+#: kwalleteditor.cpp:420
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Chyba při mazání složky."
 
-#: kwalleteditor.cpp:433
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "New Folder"
 msgstr "Nová složka"
 
-#: kwalleteditor.cpp:433
+#: kwalleteditor.cpp:439
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Prosím, zvolte název pro novou složku:"
 
-#: kwalleteditor.cpp:441
+#: kwalleteditor.cpp:447
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Takový název složky je již používán. Zkusit znovu?"
 
-#: kwalleteditor.cpp:443 kwalleteditor.cpp:802
+#: kwalleteditor.cpp:449 kwalleteditor.cpp:811
 #, kde-format
 msgid "Try Again"
 msgstr "Zkusit znovu"
 
-#: kwalleteditor.cpp:444 kwalleteditor.cpp:803 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:355
 #, kde-format
 msgid "Do Not Try"
 msgstr "Nezkoušet"
 
-#: kwalleteditor.cpp:483
+#: kwalleteditor.cpp:489
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Chyba při ukládání položky. Chybový kód: %1"
 
-#: kwalleteditor.cpp:505
+#: kwalleteditor.cpp:511
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -244,73 +244,73 @@ msgstr ""
 "Obsah této položky byl změněn.\n"
 "Přejete si tyto změny uložit?"
 
-#: kwalleteditor.cpp:558 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:564 kwalleteditor.cpp:894
 #, kde-format
 msgid "Password: %1"
 msgstr "Heslo: %1"
 
-#: kwalleteditor.cpp:574 kwalleteditor.cpp:887
+#: kwalleteditor.cpp:580 kwalleteditor.cpp:896
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Mapa jméno-hodnota: %1"
 
-#: kwalleteditor.cpp:584 kwalleteditor.cpp:889
+#: kwalleteditor.cpp:590 kwalleteditor.cpp:898
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Binární Data: %1"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "New Entry"
 msgstr "Nová položka"
 
-#: kwalleteditor.cpp:791
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Prosím, zvolte název nové položky:"
 
-#: kwalleteditor.cpp:800
+#: kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Taková položka již existuje. Zkusit znovu?"
 
-#: kwalleteditor.cpp:820 kwalleteditor.cpp:829
+#: kwalleteditor.cpp:829 kwalleteditor.cpp:838
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Nastal neočekávaná chyba při pokusu o přidání nového záznamu"
 
-#: kwalleteditor.cpp:881
+#: kwalleteditor.cpp:890
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Nastal neočekávaná chyba při pokusu o přejmenování záznamu"
 
-#: kwalleteditor.cpp:902
+#: kwalleteditor.cpp:911
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Opravdu si přejete smazat položku '%1'?"
 
-#: kwalleteditor.cpp:906
+#: kwalleteditor.cpp:915
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Nastal neočekávaná chyba při pokusu o smazání záznamu"
 
-#: kwalleteditor.cpp:934
+#: kwalleteditor.cpp:943
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Nelze otevřít požadovanou úschovnu."
 
-#: kwalleteditor.cpp:976
+#: kwalleteditor.cpp:985
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 msgstr "Nelze vytvořit dočasný soubor pro stažení '<b>%1</b>'."
 
-#: kwalleteditor.cpp:983
+#: kwalleteditor.cpp:992
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
 msgstr "Nelze přistupovat k úschovně <b>%1</b>."
 
-#: kwalleteditor.cpp:1014 kwalleteditor.cpp:1046 kwalleteditor.cpp:1082
-#: kwalleteditor.cpp:1166
+#: kwalleteditor.cpp:1023 kwalleteditor.cpp:1055 kwalleteditor.cpp:1091
+#: kwalleteditor.cpp:1175
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -318,22 +318,22 @@ msgid ""
 msgstr ""
 "Složka <b>%1</b> již obsahuje položku <b>%2</b>. Přejete si ji nahradit?"
 
-#: kwalleteditor.cpp:1124
+#: kwalleteditor.cpp:1133
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Nelze přistupovat ke XML souboru <b>%1</b>."
 
-#: kwalleteditor.cpp:1130
+#: kwalleteditor.cpp:1139
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Chyba při čtení XML souboru <b>%1</b> pro vstup."
 
-#: kwalleteditor.cpp:1136
+#: kwalleteditor.cpp:1145
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Chyba: XML soubor neobsahuje úschovnu."
 
-#: kwalleteditor.cpp:1289
+#: kwalleteditor.cpp:1298
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Nelze ukládat do '<b>%1</b>'."
