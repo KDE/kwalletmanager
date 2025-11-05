@@ -183,7 +183,7 @@
 >Les copies d'écran ci-dessus montrent le cas où il a été impossible de trouver une clé capable de chiffrement « GPG » sur le système. Veuillez utiliser des applications telles que &kgpg; ou &kleopatra; pour créer une clé et réessayer.</para>
 
 <para
->Si une clé GPG a été trouvée, vous aurez la boîte de dialogue suivante qui vous permettra de choisir parmi les clés à utiliser pour votre nouveau portefeuille. </para>
+>Si une clé GPG a été trouvée, vous aurez la boite de dialogue suivante qui vous permettra de choisir parmi les clés à utiliser pour votre nouveau portefeuille. </para>
 <screenshot>
 <screeninfo
 >Sélectionnez une clé de chiffrement</screeninfo>
@@ -198,7 +198,7 @@
 </screenshot>
 
 <para
->&kwallet5; utilisera désormais « GPG » pour l'enregistrement et l'ouverture des portefeuilles. La boîte de dialogue de la phrase de passe s'affichera une seule fois. Même si le portefeuille est fermé après l'ouverture initiale, il se rouvrira successivement de manière silencieuse tout au long de la même session. </para>
+>&kwallet5; utilisera désormais « GPG » pour l'enregistrement et l'ouverture des portefeuilles. La boite de dialogue de la phrase de passe s'affichera une seule fois. Même si le portefeuille est fermé après l'ouverture initiale, il se rouvrira successivement de manière silencieuse tout au long de la même session. </para>
 
 <para
 >La même session peut gérer simultanément les deux formats de fichiers. &kwallet5; détectera de manière transparente, le format de fichier et chargera le bon moteur pour le traiter.</para>
@@ -281,7 +281,7 @@
 >Utilisation de &kwallet5;</title>
 
 <para
->Si vous visitez &pex; le traceur de bogues de &kde; et saisissez un identifiant pour la première fois, une boîte de dialogue vous donne la possibilité de stocker le mot de passe dans une portefeuille chiffré : </para>
+>Si vous visitez &pex; le traceur de bogues de &kde; et saisissez un identifiant pour la première fois, une boite de dialogue vous donne la possibilité de stocker le mot de passe dans une portefeuille chiffré : </para>
 
 <screenshot>
 <screeninfo
@@ -299,7 +299,7 @@
 <para
 >Sélectionnez le bouton <guibutton
 >Stocker</guibutton
-> si vous souhaitez enregistrer cette information. Au cas où vous n'avez pas encore créé de portefeuille, la boîte de dialogue suivante vous demandera de spécifier le moteur de traitement et créera un portefeuille nommé « kdewallet ». </para>
+> si vous souhaitez enregistrer cette information. Au cas où vous n'avez pas encore créé de portefeuille, la boite de dialogue suivante vous demandera de spécifier le moteur de traitement et créera un portefeuille nommé « kdewallet ». </para>
 
 <para
 >La prochaine fois que vous visiterez le même site Internet, l'application retrouvera les données de connexion à partir d'un portefeuille ouvert et préremplira les formulaires avec les éléments secrets.</para>
@@ -370,7 +370,7 @@
 >.</para>
 
 <para
->Veuillez cliquer une fois sur l'icône de portefeuille dans la boîte à miniatures pour afficher la fenêtre de &kwalletmanager5;.</para>
+>Veuillez cliquer une fois sur l'icône de portefeuille dans la boite à miniatures pour afficher la fenêtre de &kwalletmanager5;.</para>
 <para>
 <screenshot>
 <screeninfo
@@ -577,7 +577,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></term>
 <listitem>
 <para
->Ferme le portefeuille actuel après une période d'inactivité. Si vous cochez cette option, réglez la durée dans la boîte. La valeur par défaut est 10 minutes. Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire pour l'ouvrir de nouveau.</para>
+>Ferme le portefeuille actuel après une période d'inactivité. Si vous cochez cette option, réglez la durée dans la boite. La valeur par défaut est 10 minutes. Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire pour l'ouvrir de nouveau.</para>
 </listitem>
 </varlistentry>
 
@@ -642,22 +642,22 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <varlistentry>
 <term
 ><guilabel
->Afficher le gestionnaire dans la boîte à miniatures</guilabel
+>Afficher le gestionnaire dans la boite à miniatures</guilabel
 ></term>
 <listitem>
 <para
->Permet l'affichage de l'icône du gestionnaire de portefeuilles dans la boîte à miniatures.</para>
+>Permet l'affichage de l'icône du gestionnaire de portefeuilles dans la boite à miniatures.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Cacher l'icône de la boîte à miniatures lorsque le dernier portefeuille est fermé</guilabel
+>Cacher l'icône de la boite à miniatures lorsque le dernier portefeuille est fermé</guilabel
 ></term>
 <listitem>
 <para
->Lorsqu'il n'y a plus de portefeuille en cours d'utilisation, enlève l'icône du portefeuille dans la boîte à miniatures.</para>
+>Lorsqu'il n'y a plus de portefeuille en cours d'utilisation, enlève l'icône du portefeuille dans la boite à miniatures.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -712,7 +712,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >&gt;</guiicon
 > à côté du nom d'un portefeuille pour développer l'arborescence. Vous verrez le nom de chaque application qui a demandé l'accès au portefeuille, et la politique qui lui est affectée. Vous ne pouvez pas modifier les politiques ici, ou en ajouter, mais il est possible de supprimer une entrée en cliquant dessus avec le &BDS; et en choisissant <guimenuitem
 >Supprimer</guimenuitem
-> dans le menu contextuel qui apparaît, ou simplement en la sélectionnant et en actionnant la touche <keycap
+> dans le menu contextuel qui apparait, ou simplement en la sélectionnant et en actionnant la touche <keycap
 >Suppr</keycap
 >.</para>
 
