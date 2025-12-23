@@ -47,7 +47,7 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2016-07-05</date>
+>2016‒07‒05</date>
 <releaseinfo
 >Uygulamalar 16.04</releaseinfo>
 
@@ -227,7 +227,7 @@
 ></listitem>
 <listitem
 ><para
->&krunner;'ı veya başka bir uygulama başlatıcıyı kullanarak &kwalletmanager5;'i başlatın (<keycombo
+>&krunner;’ı veya başka bir uygulama başlatıcıyı kullanarak &kwalletmanager5;’i başlatın (<keycombo
 >&Alt; <keycap
 >F2</keycap
 ></keycombo
@@ -247,7 +247,7 @@
 > <guimenuitem
 >Şifreliyi İçe Aktar</guimenuitem
 ></menuchoice
->'a tıklayıp biraz önce kaydettiğiniz dosyayı seçin.</para>
+>’a tıklayıp biraz önce kaydettiğiniz dosyayı seçin.</para>
 </listitem>
 
 <listitem
@@ -458,7 +458,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></listitem>
 <listitem
 ><para
->Cüzdanda bulunan klasörlerin ağaç görünümü. Ağaç görünümünü açıp kapatmak için, <guiicon
+>Cüzdanda bulunan klasörlerin ağaç görünümü. Ağaç görünümünü açıp kapatmak için <guiicon
 >&gt;</guiicon
 > / <guiicon
 >v</guiicon
@@ -576,7 +576,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Cüzdan Tercihleri</title>
 
 <para
->&kwallet5; &kwallet5;'i kişisel tercihlerinize göre ayarlamanıza izin veren birkaç seçeneğe sahip küçük bir yapılandırma paneli içerir. &kwallet5; öntanımlı ayarları çoğu kullanıcı için yeterlidir.</para>
+>&kwallet5; &kwallet5;’i kişisel tercihlerinize göre ayarlamanıza izin veren birkaç seçeneğe sahip küçük bir yapılandırma paneli içerir. &kwallet5; öntanımlı ayarları çoğu kullanıcı için yeterlidir.</para>
 
 <para
 >&kde; cüzdan alt sistemini tamamen etkinleştirmek veya devre dışı bırakmak için kutuyu işaretleyin. Bu kutunun işareti kaldırılırs, &kwallet5; tümüyle devre dışı kalır ve burada diğer seçeneklerden hiçbirinin etkisi yoktur; bu durumda &kwallet5; herhangi bir bilgiyi kaydetmez veya sizin için formları doldurmayı teklif etmez.</para>
@@ -724,7 +724,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </screenshot>
 
 <para
->Ağacı genişletmek için, cüzdanın yanındaki <guiicon
+>Ağacı genişletmek için cüzdanın yanındaki <guiicon
 >&gt;</guiicon
 > sembolüne &LMB; ile tıklayın. Cüzdana erişmek isteyen her uygulamanın adını ve bunun için belirlediğiniz politikayı göreceksiniz. Buradaki politikaları düzenleyemez veya ekleyemezsiniz; ancak bir girdiye &RMB; ile tıklayarak ve bağlam menüsünde gözüken <guimenuitem
 >Sil</guimenuitem
