@@ -68,7 +68,7 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
-"S'ha produït un error en l'acció d'autenticació:\n"
+"S'ha produït un error durant l'acció d'autenticació:\n"
 "%1"
 
 #: konfigurator.cpp:358

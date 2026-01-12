@@ -206,7 +206,7 @@ msgstr "Segur que voleu suprimir la carpeta «%1» de la cartera?"
 #: kwalleteditor.cpp:420
 #, kde-format
 msgid "Error deleting folder."
-msgstr "S'ha produït un error en suprimir la carpeta."
+msgstr "S'ha produït un error mentre se suprimia la carpeta."
 
 #: kwalleteditor.cpp:439
 #, kde-format
@@ -236,7 +236,7 @@ msgstr "No ho intentes"
 #: kwalleteditor.cpp:489
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr "S'ha produït un error en guardar l'entrada. Codi d'error: %1"
+msgstr "S'ha produït un error mentre es guardava l'entrada. Codi d'error: %1"
 
 #: kwalleteditor.cpp:511
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "No s'ha pogut accedir al fitxer en XML «<b>%1</b>»."
 #: kwalleteditor.cpp:1139
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr "S'ha produït un error en llegir el fitxer en XML «<b>%1</b>»."
+msgstr "S'ha produït un error mentre es llegia el fitxer en XML «<b>%1</b>»."
 
 #: kwalleteditor.cpp:1145
 #, kde-format
@@ -424,7 +424,7 @@ msgstr ""
 #: kwalletmanager.cpp:279
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr "S'ha produït un error en obrir la cartera %1."
+msgstr "S'ha produït un error mentre s'obria la cartera %1."
 
 #: kwalletmanager.cpp:318
 #, kde-format
@@ -475,7 +475,7 @@ msgstr "Nom del fitxer"
 #: kwalletmanager.cpp:440
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr "No s'ha pogut obrir el fitxer per a escriptura"
+msgstr "Ha fallat mentre s'obria el fitxer per a escriptura"
 
 #: kwalletmanager.cpp:451
 #, kde-format
@@ -485,7 +485,7 @@ msgstr "Trieu un fitxer"
 #: kwalletmanager.cpp:461
 #, kde-format
 msgid "Failed to open file"
-msgstr "No s'ha pogut obrir el fitxer"
+msgstr "Ha fallat mentre s'obria el fitxer"
 
 #: kwalletmanager.cpp:473
 #, kde-format
@@ -495,7 +495,7 @@ msgstr "Ja existix una cartera anomenada %1. S'ha interromput l'operació"
 #: kwalletmanager.cpp:479
 #, kde-format
 msgid "Failed to copy files"
-msgstr "No s'han pogut copiar els fitxers"
+msgstr "Ha fallat mentre es copiaven els fitxers"
 
 #: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
 #, kde-format
@@ -529,7 +529,8 @@ msgstr "A&juda"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr "S'ha produït un error en connectar amb el servei de KWallet:<nl/>%1"
+msgstr ""
+"S'ha produït un error mentre es connectava amb el servei de KWallet:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
