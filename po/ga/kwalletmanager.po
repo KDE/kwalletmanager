@@ -80,10 +80,9 @@ msgid "These applications are authorized to access this wallet:"
 msgstr ""
 
 #: disconnectappbutton.cpp:17
-#, fuzzy, kde-format
-#| msgid "Disconnec&t"
+#, kde-format
 msgid "Disconnect"
-msgstr "Dí&cheangail"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -115,11 +114,10 @@ msgid "Search"
 msgstr ""
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
-msgstr "Tai&speáin luachanna"
+msgstr ""
 
 #: kwalleteditor.cpp:211
 #, kde-format
@@ -132,10 +130,9 @@ msgid "&Delete Folder"
 msgstr "&Scrios an Fillteán"
 
 #: kwalleteditor.cpp:218
-#, fuzzy, kde-format
-#| msgid "&Merge Wallet..."
+#, kde-format
 msgid "&Import a wallet..."
-msgstr "Cu&maisc Sparán..."
+msgstr ""
 
 #: kwalleteditor.cpp:222
 #, kde-format
@@ -143,10 +140,9 @@ msgid "&Import XML..."
 msgstr "&Iompórtáil XML..."
 
 #: kwalleteditor.cpp:226
-#, fuzzy, kde-format
-#| msgid "&Import XML..."
+#, kde-format
 msgid "&Export as XML..."
-msgstr "&Iompórtáil XML..."
+msgstr ""
 
 #: kwalleteditor.cpp:230
 #, kde-format
@@ -169,16 +165,14 @@ msgid "&Delete"
 msgstr "&Scrios"
 
 #: kwalleteditor.cpp:250
-#, fuzzy, kde-format
-#| msgid "Show &Contents"
+#, kde-format
 msgid "Always show contents"
-msgstr "T&aispeáin Inneachar"
+msgstr ""
 
 #: kwalleteditor.cpp:254
-#, fuzzy, kde-format
-#| msgid "Hide &Contents"
+#, kde-format
 msgid "Always hide contents"
-msgstr "Folaigh an t&Inneachar"
+msgstr ""
 
 #: kwalleteditor.cpp:369
 #, kde-format
@@ -305,10 +299,9 @@ msgid "Unable to open the requested wallet."
 msgstr "Ní féidir an sparán iarrtha a oscailt."
 
 #: kwalleteditor.cpp:985
-#, fuzzy, kde-format
-#| msgid "Unable to access XML file '<b>%1</b>'."
+#, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr "Ní féidir an comhad XML '<b>%1</b>' a rochtain."
+msgstr ""
 
 #: kwalleteditor.cpp:992
 #, kde-format
@@ -341,10 +334,9 @@ msgid "Error: XML file does not contain a wallet."
 msgstr "Earráid: níl sparán sa chomhad XML."
 
 #: kwalleteditor.cpp:1298
-#, fuzzy, kde-format
-#| msgid "Unable to access wallet '<b>%1</b>'."
+#, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr "Ní féidir an sparán '<b>%1</b>' a rochtain."
+msgstr ""
 
 #: kwalletmanager.cpp:63
 #, kde-format
@@ -355,10 +347,9 @@ msgstr ""
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:222
 #: kwalletmanager.cpp:287
-#, fuzzy, kde-format
-#| msgid "KDE Wallet"
+#, kde-format
 msgid "Wallet"
-msgstr "Sparán KDE"
+msgstr ""
 
 #: kwalletmanager.cpp:88 kwalletmanager.cpp:287
 #, kde-format
@@ -376,10 +367,9 @@ msgid "&New Wallet..."
 msgstr "Sparán &Nua..."
 
 #: kwalletmanager.cpp:144
-#, fuzzy, kde-format
-#| msgid "Delete Wallet"
+#, kde-format
 msgid "&Delete Wallet..."
-msgstr "Scrios Sparán"
+msgstr ""
 
 #: kwalletmanager.cpp:149
 #, kde-format
@@ -436,11 +426,10 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Roghnaigh ainm don sparán nua, le do thoil:"
 
 #: kwalletmanager.cpp:327
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
-msgstr "Sparán Nua"
+msgstr ""
 
 #: kwalletmanager.cpp:346
 #, kde-format
@@ -473,10 +462,9 @@ msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Ní féidir an sparán a scriosadh. Cód earráide: %1."
 
 #: kwalletmanager.cpp:433
-#, fuzzy, kde-format
-#| msgid "A wallet name"
+#, kde-format
 msgid "File name"
-msgstr "Ainm sparáin"
+msgstr ""
 
 #: kwalletmanager.cpp:440
 #, kde-format
@@ -563,11 +551,10 @@ msgid "Value"
 msgstr "Luach"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "New Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
-msgstr "Iontráil Nua"
+msgstr ""
 
 #: kwmapeditor.cpp:220
 #, kde-format
@@ -575,10 +562,9 @@ msgid "&New Entry"
 msgstr "Iontráil &Nua"
 
 #: main.cpp:26
-#, fuzzy, kde-format
-#| msgid "KDE Wallet Manager"
+#, kde-format
 msgid "Wallet Manager"
-msgstr "Bainisteoir Sparán KDE"
+msgstr ""
 
 #: main.cpp:28
 #, kde-format
@@ -602,11 +588,10 @@ msgid "Former Maintainer, user interface refactoring"
 msgstr ""
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
-msgstr "George Staikos"
+msgstr ""
 
 #: main.cpp:35
 #, kde-format
@@ -614,24 +599,21 @@ msgid "Original author and former maintainer"
 msgstr "An chéad údar agus iarchothaitheoir"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
-msgstr "Michael Leupold"
+msgstr ""
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Original author and former maintainer"
+#, kde-format
 msgid "Developer and former maintainer"
-msgstr "An chéad údar agus iarchothaitheoir"
+msgstr ""
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
-msgstr "Isaac Clerencia"
+msgstr ""
 
 #: main.cpp:37
 #, kde-format
@@ -664,19 +646,17 @@ msgid "&Close"
 msgstr ""
 
 #: walletcontrolwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "A wallet is open."
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "Tá sparán oscailte."
+msgstr ""
 
 #: walletcontrolwidget.cpp:90
-#, fuzzy, kde-format
-#| msgid "A wallet is open."
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "Tá sparán oscailte."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
@@ -686,24 +666,21 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
 #: walletcontrolwidget.ui:54
-#, fuzzy, kde-format
-#| msgid "&Open..."
+#, kde-format
 msgid "Open..."
-msgstr "&Oscail..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
-#, fuzzy, kde-format
-#| msgid "Change &Password..."
+#, kde-format
 msgid "Change Password..."
-msgstr "Athraigh &Focal Faire..."
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80
-#, fuzzy, kde-format
-#| msgid "Hide &Contents"
+#, kde-format
 msgid "Contents"
-msgstr "Folaigh an t&Inneachar"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
 #: walletcontrolwidget.ui:117
@@ -735,57 +712,3 @@ msgstr "&Cealaigh"
 #, kde-format
 msgid "&Save"
 msgstr "&Sábháil"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Taispeáin an fhuinneog ag am tosaithe"
-
-#, fuzzy
-#~| msgid "Open Wallet"
-#~ msgid "Open Wallet..."
-#~ msgstr "Oscail Sparán"
-
-#~ msgid "Error opening XML file '<b>%1</b>' for input."
-#~ msgstr "Earráid agus comhad XML '<b>%1</b>' á oscailt chun é a léamh."
-
-#, fuzzy
-#~| msgid ""
-#~| "This is a binary data entry.  It cannot be editted as its format is "
-#~| "unknown and application specific."
-#~ msgid ""
-#~ "This is a binary data entry.  It cannot be edited as its format is "
-#~ "unknown and application specific."
-#~ msgstr ""
-#~ "Iontráil dénártha sonraí í seo.  Ní féidir é a chur in eagar toisc go "
-#~ "bhfuil formáid na hiontrála sainiúil don fheidhmchlár seo."
-
-#~ msgid "(c) 2003,2004 George Staikos"
-#~ msgstr "© 2003,2004 George Staikos"
-
-#~ msgid "Maintainer"
-#~ msgstr "Cothaitheoir"
-
-#~ msgid "&Export..."
-#~ msgstr "&Easpórtáil..."
-
-#, fuzzy
-#~| msgid "Change &Password..."
-#~ msgid "Change password..."
-#~ msgstr "Athraigh &Focal Faire..."
-
-#~ msgid "That wallet file already exists.  You cannot overwrite wallets."
-#~ msgstr ""
-#~ "Tá an comhad sparáin ann cheana.  Ní féidir leat sparán a forscríobh."
-
-#~ msgid ""
-#~ "This wallet was forced closed.  You must reopen it to continue working "
-#~ "with it."
-#~ msgstr ""
-#~ "Dúnadh an sparán seo le lámh láidir.  Caithfidh tú é a oscailt arís chun "
-#~ "é a úsáid a thuilleadh. "
-
-#~ msgid "Please choose a name that contains only alphanumeric characters:"
-#~ msgstr ""
-#~ "Ba chóir duit ainm a roghnú le carachtair alfa-uimhriúla amháin ann:"
-
-#~ msgid "Overwrite"
-#~ msgstr "Forscríobh"

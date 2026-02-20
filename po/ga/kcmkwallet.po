@@ -77,17 +77,11 @@ msgstr "Sainroghanna Sparáin"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>The wallet subsystem provides a convenient and secure way to manage "
-#| "all your passwords.  This option specifies whether or not you want to use "
-#| "it.</p>"
+#, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>Is féidir d'fhocail fhaire go léir a shábháil go héasca tríd an fhochóras "
-"sparáin. Roghnaigh é seo más mian leat an córas seo a úsáid.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:36
@@ -113,10 +107,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Dún Sparán"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -134,10 +127,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
-msgstr "Dún é nuair nach bhfuil sé in úsáid ag aon fheidhmchláir"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -152,10 +144,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "Dún nuair a thosaíonn an spárálaí scáileáin"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -171,17 +162,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
-msgstr "Dún nuair nach bhfuil sé in úsáid ar feadh:"
+msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
-msgstr " nóiméad"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
 #: walletconfigwidget.ui:145
@@ -191,10 +180,9 @@ msgstr "Roghnú Uathoibríoch Sparán"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Sparán difriúil le haghaidh focal faire logánta:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -257,10 +245,9 @@ msgstr "Rialú Rochtana"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
 #: walletconfigwidget.ui:394
-#, fuzzy, kde-format
-#| msgid "&Prompt when an application accesses an open wallet"
+#, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr "Tabhair &leid nuair a dhéanann feidhmchlár rochtain ar sparán oscailte"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:408
@@ -285,20 +272,3 @@ msgstr "Polasaí"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Tosaigh Bainisteoir Sparán"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Roghnaigh sparán réamhshocraithe:"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "© 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr ""
-#~ "Ceadaíonn an modúl cumraíochta seo duit an córas sparáin KDE a chumrú."
-
-#~ msgid "kcmkwallet"
-#~ msgstr "kcmkwallet"
