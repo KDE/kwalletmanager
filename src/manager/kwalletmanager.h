@@ -33,6 +33,7 @@ public:
     bool canIgnoreUnsavedChanges();
     void handleActivate(const QStringList &arguments, const QString &workingDirectory);
     void handleOpen(const QList<QUrl> &urls);
+    QSize sizeHint() const override;
 
 public Q_SLOTS:
     void createWallet();

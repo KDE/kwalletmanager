@@ -73,7 +73,11 @@ void KWalletManager::beginConfiguration()
         }
     }
 }
-
+// if there is no saved window geometry, suggest this size
+QSize KWalletManager::sizeHint() const
+{
+    return KXmlGuiWindow::sizeHint().expandedTo(QSize(800, 600));
+}
 void KWalletManager::configUI()
 {
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KWalletManager"), this, QDBusConnection::ExportScriptableSlots);
@@ -111,6 +115,7 @@ void KWalletManager::configUI()
 
     updateWalletDisplay();
     setCentralWidget(_managerWidget);
+
     setAutoSaveSettings(QStringLiteral("MainWindow"), true);
     QFontMetrics fm = fontMetrics();
     _managerWidget->setMinimumSize(16 * fm.height(), 18 * fm.height());
@@ -181,11 +186,9 @@ void KWalletManager::configUI()
     } else {
         show();
     }
-
     _walletsExportAction->setDisabled(KWallet::Wallet::walletList().isEmpty());
     qApp->setObjectName(QStringLiteral("kwallet")); // hack to fix docs
 }
-
 KWalletManager::~KWalletManager()
 {
     _tray = nullptr;
