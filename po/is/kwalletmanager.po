@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-03-08 02:56+0000\n"
 "PO-Revision-Date: 2025-11-30 10:55+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -225,7 +225,7 @@ msgstr "Því miður, þetta möppunafn er í notkun. Reyna aftur?"
 msgid "Try Again"
 msgstr "Reyna aftur"
 
-#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ekki reyna"
@@ -348,53 +348,53 @@ msgstr ""
 "KDE-veskjakerfið er ekki virkt. Viltu að það sé virkjað? Ef ekki, þá mun "
 "KWalletManager hætta, þar sem það virkar ekki nema að geta lesið veskin."
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:222
-#: kwalletmanager.cpp:287
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
+#: kwalletmanager.cpp:290
 #, kde-format
 msgid "Wallet"
 msgstr "Veski"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:287
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:290
 #, kde-format
 msgid "No wallets open."
 msgstr "Engin veski eru opin."
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:222
+#: kwalletmanager.cpp:99 kwalletmanager.cpp:225
 #, kde-format
 msgid "A wallet is open."
 msgstr "Það er opið veski."
 
-#: kwalletmanager.cpp:139 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:144 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Nýtt veski..."
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Eyða veski..."
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Flytja út sem dulritað"
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:159
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Innflutningur dulritaður"
 
-#: kwalletmanager.cpp:159
+#: kwalletmanager.cpp:164
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Stilla &veski..."
 
-#: kwalletmanager.cpp:167
+#: kwalletmanager.cpp:172
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Lok&a öllum veskjum"
 
-#: kwalletmanager.cpp:256 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -403,103 +403,103 @@ msgstr ""
 "Gat ekki lokað veskinu eðlilega. Það er líklega í notkun af öðrum forritum. "
 "Viltu þvinga lokun þess?"
 
-#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
 #, kde-format
 msgid "Force Closure"
 msgstr "Þvinga lokun"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ekki þvinga"
 
-#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Gat ekki þvingað lokun veskisins. Villukóði var  %1."
 
-#: kwalletmanager.cpp:279
+#: kwalletmanager.cpp:282
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Villa við að opna veski %1."
 
-#: kwalletmanager.cpp:318
+#: kwalletmanager.cpp:321
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Veldu nafn á nýja veskið:"
 
-#: kwalletmanager.cpp:327
+#: kwalletmanager.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Nýtt veski"
 
-#: kwalletmanager.cpp:346
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Autt heiti er ekki leyft. Veldu nýtt heiti."
 
-#: kwalletmanager.cpp:346
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
 msgstr "Búa til nýtt veski"
 
-#: kwalletmanager.cpp:352
+#: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Því miður er þetta veski þegar til. Reyna annað nafn?"
 
-#: kwalletmanager.cpp:354
+#: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
 msgstr "Reyna annað"
 
-#: kwalletmanager.cpp:380
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Ertu viss um að þú viljir eyða veskinu '%1'?"
 
-#: kwalletmanager.cpp:386
+#: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Gat ekki eytt veskinu. Villukóði var %1."
 
-#: kwalletmanager.cpp:433
+#: kwalletmanager.cpp:436
 #, kde-format
 msgid "File name"
 msgstr "Skráarheiti"
 
-#: kwalletmanager.cpp:440
+#: kwalletmanager.cpp:443
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Mistókst að opna skrá til skrifunar"
 
-#: kwalletmanager.cpp:451
+#: kwalletmanager.cpp:454
 #, kde-format
 msgid "Select file"
 msgstr "Veldu skrá"
 
-#: kwalletmanager.cpp:461
+#: kwalletmanager.cpp:464
 #, kde-format
 msgid "Failed to open file"
 msgstr "Gat ekki opnað skrá"
 
-#: kwalletmanager.cpp:473
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Veski með heitinu %1 er þegar til staðar. Hætt við aðgerð"
 
-#: kwalletmanager.cpp:479
+#: kwalletmanager.cpp:482
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Mistókst að afrita skrár"
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Hunsa óvistaðar breytingar?"
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore"
 msgstr "Hunsa"
