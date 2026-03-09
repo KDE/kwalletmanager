@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-03-09 00:46+0000\n"
 "PO-Revision-Date: 2022-09-27 17:54+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -225,7 +225,7 @@ msgstr "Maaf, nama folder tersebut sudah digunakan. Coba lagi?"
 msgid "Try Again"
 msgstr "Coba Lagi"
 
-#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:355
+#: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:358
 #, kde-format
 msgid "Do Not Try"
 msgstr "Jangan Coba"
@@ -349,53 +349,53 @@ msgstr ""
 "tidak, KWalletManager akan berhenti karena tidak dapat bekerja tanpa membaca "
 "dompet."
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:95 kwalletmanager.cpp:222
-#: kwalletmanager.cpp:287
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
+#: kwalletmanager.cpp:290
 #, kde-format
 msgid "Wallet"
 msgstr "Dompet"
 
-#: kwalletmanager.cpp:88 kwalletmanager.cpp:287
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:290
 #, kde-format
 msgid "No wallets open."
 msgstr "Tidak ada dompet terbuka."
 
-#: kwalletmanager.cpp:95 kwalletmanager.cpp:222
+#: kwalletmanager.cpp:99 kwalletmanager.cpp:225
 #, kde-format
 msgid "A wallet is open."
 msgstr "Sebuah dompet terbuka."
 
-#: kwalletmanager.cpp:139 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:144 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr ""
 
-#: kwalletmanager.cpp:144
+#: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr ""
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:154
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Ekspor secara terenkripsi"
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:159
 #, kde-format
 msgid "&Import encrypted"
 msgstr ""
 
-#: kwalletmanager.cpp:159
+#: kwalletmanager.cpp:164
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr ""
 
-#: kwalletmanager.cpp:167
+#: kwalletmanager.cpp:172
 #, kde-format
 msgid "Close &All Wallets"
 msgstr ""
 
-#: kwalletmanager.cpp:256 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -404,104 +404,104 @@ msgstr ""
 "Tidak dapat menutup dompet dengan baik. Dompet mungkin sedang digunakan oleh "
 "aplikasi lain. Apakah Anda ingin menutup secara paksa?"
 
-#: kwalletmanager.cpp:258 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
 #, kde-format
 msgid "Force Closure"
 msgstr "Penutupan Paksa"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Do Not Force"
 msgstr "Jangan Paksa"
 
-#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Tidak dapat menutup dompet secara paksa. Coder eror %1"
 
-#: kwalletmanager.cpp:279
+#: kwalletmanager.cpp:282
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Eror membuka dompet %1"
 
-#: kwalletmanager.cpp:318
+#: kwalletmanager.cpp:321
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Silahkan pilih nama untuk dompet baru:"
 
-#: kwalletmanager.cpp:327
+#: kwalletmanager.cpp:330
 #, fuzzy, kde-format
 #| msgid "New Wallet"
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Dompet Baru"
 
-#: kwalletmanager.cpp:346
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Nama yang kosong tidak di perbolhekan. Silhkan pilih nama baru."
 
-#: kwalletmanager.cpp:346
+#: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
 msgstr "Buat Dompet Baru"
 
-#: kwalletmanager.cpp:352
+#: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Maaf, dompet sudah ada. Coba nama baru?"
 
-#: kwalletmanager.cpp:354
+#: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
 msgstr "Coba Baru"
 
-#: kwalletmanager.cpp:380
+#: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Apakah Anda yakin ingin menghapus dompet '%1'?"
 
-#: kwalletmanager.cpp:386
+#: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Tidak dapat menghapus dompet. Code eror %1"
 
-#: kwalletmanager.cpp:433
+#: kwalletmanager.cpp:436
 #, kde-format
 msgid "File name"
 msgstr "Nama file"
 
-#: kwalletmanager.cpp:440
+#: kwalletmanager.cpp:443
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Gagal membuka file untuk menulis"
 
-#: kwalletmanager.cpp:451
+#: kwalletmanager.cpp:454
 #, kde-format
 msgid "Select file"
 msgstr "Pilih file"
 
-#: kwalletmanager.cpp:461
+#: kwalletmanager.cpp:464
 #, kde-format
 msgid "Failed to open file"
 msgstr "Gagal membuka file"
 
-#: kwalletmanager.cpp:473
+#: kwalletmanager.cpp:476
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Dompet dengan nama %1 sudah ada, Operasi dibatalkan"
 
-#: kwalletmanager.cpp:479
+#: kwalletmanager.cpp:482
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Gagal menyalin file"
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Abaikan data yang belum tersimpan?"
 
-#: kwalletmanager.cpp:491 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore"
 msgstr ""
