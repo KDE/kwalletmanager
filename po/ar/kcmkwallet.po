@@ -91,7 +91,7 @@ msgid ""
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
 "<p>يوفر نظام المحفظة الفرعي طريقة آمنة و ملائمة لإدارة كلمات السر.  يمكنك أن "
-"تقرر بهذا الخيار اذا كنت تريد استخدام هذا النظام أم.</p>"
+"تقرر بهذا الخيار إذا كنت تريد استخدام هذا النظام أم.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:36
