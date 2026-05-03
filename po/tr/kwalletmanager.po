@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 # Anıl Özbek <ozbekanil@gmail.com>, 2013.
 # Ayhan Yalçınsoy <dellpardus@hotmail.com>, 2008.
 # Ayşe Genç <ayse@uludag.org.tr>, 2005.
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:46+0000\n"
-"PO-Revision-Date: 2025-01-21 10:40+0300\n"
+"PO-Revision-Date: 2026-05-02 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -27,12 +27,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Serdar Soytetir, Volkan Gezer"
+msgstr "Serdar SOYTETİR, Volkan GEZER"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -42,12 +42,12 @@ msgstr "tulliana@gmail.com, volkangezer@gmail.com"
 #: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "“%1” adlı bir girdi halihazırda var. Sürdürmek ister misiniz?"
+msgstr "“%1” adlı bir girdi hâlihazırda var. Sürdürmek ister misiniz?"
 
 #: allyourbase.cpp:240
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr "“%1” adlı bir klasör halihazırda var. Ne yapmak istersiniz?"
+msgstr "“%1” adlı bir klasör hâlihazırda var. Ne yapmak istersiniz?"
 
 #: allyourbase.cpp:243
 #, kde-format
@@ -282,7 +282,7 @@ msgstr "Yeni girdi için ad seçin:"
 #: kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr "Üzgünüm, bu girdi halihazırda var. Yeniden denensin mi?"
+msgstr "Üzgünüm, bu girdi hâlihazırda var. Yeniden denensin mi?"
 
 #: kwalleteditor.cpp:829 kwalleteditor.cpp:838
 #, kde-format
@@ -326,7 +326,7 @@ msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
 msgstr ""
-"“<b>%1</b>” klasörü halihazırda bir “<b>%2</b>” girdisi içeriyor. "
+"“<b>%1</b>” klasörü hâlihazırda bir “<b>%2</b>” girdisi içeriyor. "
 "Değiştirmek istiyor musunuz?"
 
 #: kwalleteditor.cpp:1133
@@ -458,7 +458,7 @@ msgstr "Yeni cüzdan oluştur"
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr ""
-"Üzgünüm, bu cüzdan halihazırda var. Başka bir ad denemek ister misiniz?"
+"Üzgünüm, bu cüzdan hâlihazırda var. Başka bir ad denemek ister misiniz?"
 
 #: kwalletmanager.cpp:357
 #, kde-format
@@ -498,7 +498,7 @@ msgstr "Dosya açılamadı"
 #: kwalletmanager.cpp:476
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr "%1 adlı bir cüzdan halihazırda var, işlem iptal edildi"
+msgstr "%1 adlı bir cüzdan hâlihazırda var, işlem iptal edildi"
 
 #: kwalletmanager.cpp:482
 #, kde-format
