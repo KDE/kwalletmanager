@@ -1,19 +1,19 @@
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2003, 2004, 2005 Gregor Zumstein <zumstein@ssd.ethz.ch>
+# SPDX-FileCopyrightText: 2003-2005 Gregor Zumstein <zumstein@ssd.ethz.ch>
 # SPDX-FileCopyrightText: 2005 Stephan Johach <hunsum@gmx.de>
 # SPDX-FileCopyrightText: 2005, 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
 # SPDX-FileCopyrightText: 2007 Gregor Zumstein <gz@orchester-bremgarten.ch>
 # SPDX-FileCopyrightText: 2008 Rolf Eike Beer <kde@opensource.sf-tec.de>
-# SPDX-FileCopyrightText: 2009, 2010, 2013, 2014, 2017, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2009, 2013, 2016 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2009-2010, 2013-2014, 2017, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2025-05-17 17:18+0200\n"
+"PO-Revision-Date: 2026-05-16 15:23+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,9 +90,9 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
-"<p>Das Passwortspeicher-System erlaubt die bequeme und sichere Verwaltung "
-"von Passwörtern. Diese Einstellungen bestimmt, ob dieses System benutzt wird."
-"</p>"
+"<p>Das Passwortspeicher-System bietet eine bequeme und sichere Möglichkeit, "
+"Ihre Passwörter zu verwalten. Diese Einstellung legt fest, ob dieses System "
+"verwendet wird.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:36
@@ -107,8 +107,8 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
-"Es ist ratsam, die Passwortspeicher zu schließen, sobald sie nicht mehr "
-"benötigt werden, um den unberechtigten Zugriff darauf zu verhindern."
+"Es ist ratsam, Ihre Passwortspeicher zu schließen, sobald sie nicht mehr "
+"benötigt werden. So verhindern Sie unberechtigten Zugriff darauf."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:52
@@ -141,7 +141,7 @@ msgstr ""
 #: walletconfigwidget.ui:79
 #, kde-format
 msgid "When last application stops using it"
-msgstr "Schließen, sobald keine Anwendung mehr darauf zugreift"
+msgstr "Sobald keine Anwendung mehr darauf zugreift"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -158,7 +158,7 @@ msgstr ""
 #: walletconfigwidget.ui:89
 #, kde-format
 msgid "When screensaver starts"
-msgstr "Schließen, wenn der Bildschirmschoner aktiv wird"
+msgstr "Wenn der Bildschirmschoner aktiv wird"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -233,13 +233,13 @@ msgstr ""
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr "Passwortdienst"
+msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr "&KWallet als den Passwortdienst verwenden"
+msgstr "&KWallet als Schnittstelle für „Secret Service“ verwenden"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -249,10 +249,10 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
-"Mit dem Passwortdienst können Anwendungen Passwörter oder andere "
-"vertrauliche Daten speichern. Durch das Deaktivieren können andere "
-"Passwortspeicher wie beispielsweise KeePassXC oder GNOME-Keyring für die "
-"Passwortverwaltung herangezogen werden."
+"Die „Secret Service“-Schnittstelle erlaubt Anwendungen, Passwörter oder "
+"andere vertrauliche Daten zu speichern. Deaktivieren Sie sie, wenn Sie "
+"andere Passwortspeicher wie beispielsweise KeePassXC oder GNOME Keyring für "
+"die Passwortverwaltung verwenden möchten."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
@@ -264,8 +264,7 @@ msgstr "Zugriffsüberwachung"
 #: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr ""
-"&Nachfragen, wenn eine Anwendung auf einen Passwortspeicher zugreifen will."
+msgstr "&Nachfragen, wenn eine Anwendung auf einen Passwortspeicher zugreift"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:408
