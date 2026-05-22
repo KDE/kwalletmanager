@@ -8,24 +8,25 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-11 19:48-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: konfigurator.cpp:106
 #, kde-format
@@ -35,27 +36,27 @@ msgstr "يېڭى ھەميان"
 #: konfigurator.cpp:106
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "يېڭى ھەميانغا  ئات تاللاڭ:"
+msgstr "يېڭى ھەميانغا ئات تاللاڭ:"
 
 #: konfigurator.cpp:220 konfigurator.cpp:298
 #, kde-format
 msgid "Always Allow"
-msgstr "ئىزچىل يول قوي"
+msgstr "ھەمىشە يول قوي"
 
 #: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
 #, kde-format
 msgid "Always Deny"
-msgstr ""
+msgstr "ھەمىشە رەت قىل"
 
 #: konfigurator.cpp:258
 #, kde-format
 msgid "Permission denied."
-msgstr ""
+msgstr "ئىجازەت رەت قىلىندى."
 
 #: konfigurator.cpp:258 konfigurator.cpp:260
 #, kde-format
 msgid "KDE Wallet Control Module"
-msgstr ""
+msgstr "KDE ھەميان تىزگىن بۆلىكى"
 
 #: konfigurator.cpp:260
 #, kde-format
@@ -63,6 +64,8 @@ msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
+"كىملىك دەلىللەش مەشغۇلاتى ئېلىپ بېرىۋاتقاندا خاتالىق كۆرۈلدى:\n"
+"%1"
 
 #: konfigurator.cpp:358
 #, kde-format
@@ -73,7 +76,7 @@ msgstr "ئۆچۈر(&D)"
 #: walletconfigwidget.ui:27
 #, kde-format
 msgid "Wallet Preferences"
-msgstr ""
+msgstr "ھەميان مايىللىقى"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:33
@@ -82,12 +85,15 @@ msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
 "your passwords. This option specifies whether or not you want to use it.</p>"
 msgstr ""
+"<p>ھەميان تارماق سىستېمىسى ئىم باشقۇرۇشقا قولاي ۋە بىخەتەرلىك ئۇسۇل بىلەن "
+"تەمىنلەيدۇ. بۇ تاللانما مەزكۇر سىستېمىنى ئىشلىتىش ياكى ئىشلەتمەسلىكنى "
+"بەلگىلەيدۇ.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
 #: walletconfigwidget.ui:36
 #, kde-format
 msgid "&Enable the KDE wallet subsystem"
-msgstr ""
+msgstr "KD&E ھەميان تارماق سىستېمىسىنى قوزغىتىدۇ"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:49
@@ -96,19 +102,20 @@ msgid ""
 "It is best to close your wallets when you are not using them to prevent "
 "others from viewing or using them."
 msgstr ""
+"باشقىلارنىڭ كۆرۈۋېلىشى ياكى شەخسىي ئۇچۇرلىرىڭىزنى ئىشلىتىشتىن ساقلىنىش ئۈچۈن "
+"ھەمياننى ئىشلەتمىگەندە دەرھال يېپىش تەۋسىيە قىلىنىدۇ."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "يېپىش قىلمىشى"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "يېڭى ھەميان"
+msgstr "ھەمياننى ياپ:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -119,12 +126,16 @@ msgid ""
 "use it have stopped.<br>When a wallet is closed the password is needed to "
 "access it again.</p>"
 msgstr ""
+"<p><b>پىروگرامما ھەميان ئىشلىتىشنى توختاتقاندا ھەمياننى دەرھال تاقايدۇ.</"
+"b><br>دىققەت قىلىڭكى، ھەميانىڭىز ئۇنى ئىشلەتكەن بارلىق پىروگرامما "
+"تاقالغاندىلا ئاندىن تاقىلىدۇ.<br>ھەميان تاقالغاندىن كېيىن، قايتا ئېچىشتا ئىم "
+"لازىم بولىدۇ.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
 #, kde-format
 msgid "When last application stops using it"
-msgstr ""
+msgstr "ئاخىرقى پىروگرامما ھەميان ئىشلىتىشنى توختاتقاندا"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -133,12 +144,14 @@ msgid ""
 "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
 "is closed the password is needed to access it again.</p>"
 msgstr ""
+"<p><b>ئېكران قوغدىغۇچ قوزغالسىلا ھەمياننى تاقايدۇ.</b><br>ھەميان تاقالغاندىن "
+"كېيىن، قايتا ئېچىشتا ئىم لازىم بولىدۇ.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
 #, kde-format
 msgid "When screensaver starts"
-msgstr ""
+msgstr "ئېكران قوغدىغۇچ قوزغالغاندا"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -148,17 +161,18 @@ msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
 "closed the password is needed to access it again.</p>"
 msgstr ""
+"<p><b>ھەمياننى تاقاشتىن ئىلگىرىكى كۈتۈش ۋاقتى.</b><br>ھەميان تاقالغاندىن "
+"كېيىن، ئۇنى ئېچىشتا ئىم لازىم بولىدۇ.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
 #, kde-format
 msgid "When unused for:"
-msgstr ""
+msgstr "قانچىلىك ۋاقىت ئىشلىتىلمىگەندە:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
 msgstr " مىنۇت"
 
@@ -166,13 +180,13 @@ msgstr " مىنۇت"
 #: walletconfigwidget.ui:145
 #, kde-format
 msgid "Automatic Wallet Selection"
-msgstr ""
+msgstr "ھەمياننى ئۆزلۈكىدىن تاللاش"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
 #, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr ""
+msgstr "يەرلىك ئىم ئۈچۈن پەرقلىق كۆڭۈلدىكى ھەميان ئىشلىتىدۇ"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -185,37 +199,37 @@ msgstr "يېڭى…"
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "كۆڭۈلدىكى ھەميان:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
 #, kde-format
 msgid "Wallet Manager"
-msgstr ""
+msgstr "ھەميان باشقۇرغۇچ"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
 #: walletconfigwidget.ui:270
 #, kde-format
 msgid "Show manager in system tray"
-msgstr ""
+msgstr "باشقۇرغۇچنى سىستېما قونداقتا كۆرسەت"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
 #: walletconfigwidget.ui:298
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr ""
+msgstr "ئاخىرقى ھەميان تاقالغاندا سىستېما قونداقتىكى سىنبەلگىنى يوشۇرىدۇ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "مەخپىيەتلىك مۇلازىمىتى"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr ""
+msgstr "مەخپىيەتلىك مۇلازىمىتىنىڭ ئارايۈزىگە &KWallet ئىشلىتىدۇ"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -225,18 +239,22 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"مەخپىيەتلىك مۇلازىمىتى ئارايۈزى ئەپنىڭ ئىم ۋە باشقا مەخپىي ئۇچۇرلارنى "
+"ساقلىشىغا يول قويىدۇ. بۇ تاللانما چەكلەنسە KeePassXC ياكى GNOME شىفىرلىق "
+"ئاچقۇچ ھالقىسىغا ئوخشاش ئۈچىنچى تەرەپ ھەميان مۇلازىمىتىنى ئىشلىتىشكە يول "
+"قويىدۇ."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
 #, kde-format
 msgid "Access Control"
-msgstr "زىيارەتنى كونترول قىلىش"
+msgstr "زىيارەت تىزگىنى"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
 #: walletconfigwidget.ui:394
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
-msgstr ""
+msgstr "پىروگرامما ھەمياننى زىيارەت قىلغاندا ئەسكەرتىدۇ(&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:408
@@ -248,7 +266,7 @@ msgstr "ھەميان"
 #: walletconfigwidget.ui:413
 #, kde-format
 msgid "Application"
-msgstr "پروگرامما"
+msgstr "پىروگرامما"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
 #: walletconfigwidget.ui:418
@@ -260,7 +278,7 @@ msgstr "تۈزۈم"
 #: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
-msgstr ""
+msgstr "ھەميان باشقۇرغۇچنى قوزغات (&L)"
 
 #~ msgid "George Staikos"
 #~ msgstr "George Staikos"

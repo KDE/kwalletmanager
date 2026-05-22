@@ -8,34 +8,35 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:46+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-11 19:49-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: allyourbase.cpp:215
 #, kde-format
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
-msgstr "An entry by the name '%1' already exists. Would you like to continue?"
+msgstr "«%1» ئاتلىق تۈر مەۋجۇت. داۋاملاشتۇرامسىز؟"
 
 #: allyourbase.cpp:240
 #, kde-format
 msgid "A folder by the name '%1' already exists.  What would you like to do?"
-msgstr ""
+msgstr "«%1» ئاتلىق قىسقۇچ مەۋجۇت. داۋاملاشتۇرامسىز؟"
 
 #: allyourbase.cpp:243
 #, kde-format
@@ -45,17 +46,18 @@ msgstr "ئالماشتۇر"
 #: allyourbase.cpp:349
 #, kde-format
 msgid "Folders"
-msgstr "قىسقۇچلار"
+msgstr "قىسقۇچ"
 
 #: allyourbase.cpp:382
 #, kde-format
 msgid "An unexpected error occurred trying to drop the item"
-msgstr ""
+msgstr "تۈرنى سۆرەپ تاشلاشنى سىناۋاتقاندا ئويلاشمىغان خاتالىق كۆرۈلدى"
 
 #: allyourbase.cpp:457
 #, kde-format
 msgid "An unexpected error occurred trying to drop the entry"
 msgstr ""
+"كىرگۈزگەن تۈرنى سۆرەپ تاشلاشنى سىناۋاتقاندا ئويلاشمىغان خاتالىق كۆرۈلدى"
 
 #: allyourbase.cpp:482
 #, kde-format
@@ -63,18 +65,20 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
+"ئەسلى قىسقۇچنى ئۆچۈرۈشنى سىناۋاتقاندا ئويلاشمىغان خاتالىق كۆرۈلدى ئەمما "
+"قىسقۇچ مۇۋەپپەقىيەتلىك كۆچۈرۈلدى"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr ""
+msgstr "نۆۋەتتە مەزكۇر پىروگرامما بۇ ھەميانغا باغلاندى:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: applicationsmanager.ui:64
 #, kde-format
 msgid "These applications are authorized to access this wallet:"
-msgstr ""
+msgstr "ھەميان زىيارەت ئىجازىتىگە ئېرىشكەن پىروگرامما:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -103,7 +107,7 @@ msgstr "ئاتلا(&S)"
 #: kbetterthankdialogbase.ui:67
 #, kde-format
 msgid "Skip A&ll"
-msgstr ""
+msgstr "ھەممىدىن ئاتلا(&L)"
 
 #: kwalleteditor.cpp:97
 #, kde-format
@@ -114,7 +118,7 @@ msgstr "ئىزدە"
 #, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
-msgstr ""
+msgstr "قىممەتنى كۆرسەت(&S)"
 
 #: kwalleteditor.cpp:211
 #, kde-format
@@ -129,17 +133,17 @@ msgstr "قىسقۇچ ئۆچۈر(&D)"
 #: kwalleteditor.cpp:218
 #, kde-format
 msgid "&Import a wallet..."
-msgstr ""
+msgstr "ھەميان ئەكىر(&I)…"
 
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Import XML..."
-msgstr ""
+msgstr "XML ئەكىر(&I)…"
 
 #: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Export as XML..."
-msgstr ""
+msgstr "XML چىقار…"
 
 #: kwalleteditor.cpp:230
 #, kde-format
@@ -164,12 +168,12 @@ msgstr "ئۆچۈر(&D)"
 #: kwalleteditor.cpp:250
 #, kde-format
 msgid "Always show contents"
-msgstr ""
+msgstr "مەزمۇننى ھەمىشە كۆرسەت"
 
 #: kwalleteditor.cpp:254
 #, kde-format
 msgid "Always hide contents"
-msgstr ""
+msgstr "مەزمۇننى ھەمىشە يوشۇر"
 
 #: kwalleteditor.cpp:369
 #, kde-format
@@ -184,22 +188,22 @@ msgstr "خەرىتە"
 #: kwalleteditor.cpp:371
 #, kde-format
 msgid "Binary Data"
-msgstr "ئىككىلىك سان"
+msgstr "ئىككىلىك سانلىق مەلۇمات"
 
 #: kwalleteditor.cpp:372
 #, kde-format
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #: kwalleteditor.cpp:414
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
-msgstr ""
+msgstr "ھەمياندىن «%1» قىسقۇچنى راستتىنلا ئۆچۈرەمسىز؟"
 
 #: kwalleteditor.cpp:420
 #, kde-format
 msgid "Error deleting folder."
-msgstr ""
+msgstr "قىسقۇچ ئۆچۈرۈشتە خاتالىق كۆرۈلدى."
 
 #: kwalleteditor.cpp:439
 #, kde-format
@@ -209,17 +213,17 @@ msgstr "يېڭى قىسقۇچ"
 #: kwalleteditor.cpp:439
 #, kde-format
 msgid "Please choose a name for the new folder:"
-msgstr ""
+msgstr "يېڭى قىسقۇچقا ئات تاللاڭ:"
 
 #: kwalleteditor.cpp:447
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
-msgstr ""
+msgstr "كەچۈرۈڭ، ئۇ قىسقۇچ ئاتى ئىشلىتىلىۋاتىدۇ. قايتا سىنامدۇ؟"
 
 #: kwalleteditor.cpp:449 kwalleteditor.cpp:811
 #, kde-format
 msgid "Try Again"
-msgstr "قايتا سىناش"
+msgstr "قايتا سىنا"
 
 #: kwalleteditor.cpp:450 kwalleteditor.cpp:812 kwalletmanager.cpp:358
 #, kde-format
@@ -229,7 +233,7 @@ msgstr "سىنىما"
 #: kwalleteditor.cpp:489
 #, kde-format
 msgid "Error saving entry. Error code: %1"
-msgstr ""
+msgstr "تۈرنى ساقلاشتا خاتالىق كۆرۈلدى: خاتالىق كودى: %1"
 
 #: kwalleteditor.cpp:511
 #, kde-format
@@ -237,6 +241,8 @@ msgid ""
 "The contents of the current item has changed.\n"
 "Do you want to save changes?"
 msgstr ""
+"نۆۋەتتىكى تۈرنىڭ مەزمۇنى ئۆزگەردى.\n"
+"ئۆزگىرىشنى ساقلامسىز؟"
 
 #: kwalleteditor.cpp:564 kwalleteditor.cpp:894
 #, kde-format
@@ -246,62 +252,63 @@ msgstr "ئىم: %1"
 #: kwalleteditor.cpp:580 kwalleteditor.cpp:896
 #, kde-format
 msgid "Name-Value Map: %1"
-msgstr ""
+msgstr "ئات قىممەت تەسۋىرى: %1"
 
 #: kwalleteditor.cpp:590 kwalleteditor.cpp:898
 #, kde-format
 msgid "Binary Data: %1"
-msgstr ""
+msgstr "ئىككىلىك سانلىق مەلۇمات: %1"
 
 #: kwalleteditor.cpp:800
 #, kde-format
 msgid "New Entry"
-msgstr ""
+msgstr "يېڭى تۈر"
 
 #: kwalleteditor.cpp:800
 #, kde-format
 msgid "Please choose a name for the new entry:"
-msgstr ""
+msgstr "يېڭى تۈرنىڭ ئىسمىنى تاللاڭ:"
 
 #: kwalleteditor.cpp:809
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
-msgstr ""
+msgstr "كەچۈرۈڭ، تۈر مەۋجۇت. قايتا سىنامدۇ؟"
 
 #: kwalleteditor.cpp:829 kwalleteditor.cpp:838
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
-msgstr ""
+msgstr "يېڭى تۈرنى قوشۇشنى سىناۋاتقاندا ئويلاشمىغان خاتالىق كۆرۈلدى"
 
 #: kwalleteditor.cpp:890
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr ""
+"يېڭى تۈرنىڭ ئاتىنى ئۆزگەرتىشنى سىناۋاتقاندا ئويلاشمىغان خاتالىق كۆرۈلدى"
 
 #: kwalleteditor.cpp:911
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
-msgstr ""
+msgstr "«%1» تۈرنى راستتىنلا ئۆچۈرۈۋېتەمسىز؟"
 
 #: kwalleteditor.cpp:915
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
-msgstr ""
+msgstr "يېڭى تۈرنى ئۆچۈرۈشنى سىناۋاتقاندا ئويلاشمىغان خاتالىق كۆرۈلدى"
 
 #: kwalleteditor.cpp:943
 #, kde-format
 msgid "Unable to open the requested wallet."
-msgstr ""
+msgstr "ئىلتىماس قىلغان ھەمياننى ئاچالمايدۇ."
 
 #: kwalleteditor.cpp:985
 #, kde-format
 msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-msgstr ""
+msgstr "«<b>%1</b>» نى چۈشۈرۈش ئۈچۈن ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 
 #: kwalleteditor.cpp:992
 #, kde-format
 msgid "Unable to access wallet '<b>%1</b>'."
-msgstr ""
+msgstr "«<b>%1</b>» ھەمياننى زىيارەت قىلالمايدۇ."
 
 #: kwalleteditor.cpp:1023 kwalleteditor.cpp:1055 kwalleteditor.cpp:1091
 #: kwalleteditor.cpp:1175
@@ -309,27 +316,27 @@ msgstr ""
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
 "replace it?"
-msgstr ""
+msgstr "«<b>%1</b>» قىسقۇچتا «<b>%2</b>» تۈر بار. ئۇنى ئالماشتۇرۇۋېتەمسىز؟"
 
 #: kwalleteditor.cpp:1133
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
-msgstr ""
+msgstr "«<b>%1</b>» XML ھۆججەتنى زىيارەت قىلالمايدۇ."
 
 #: kwalleteditor.cpp:1139
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
-msgstr ""
+msgstr "كىرگۈزۈش ئۈچۈن «<b>%1</b>» XML ھۆججەتنى ئوقۇشتا خاتالىق كۆرۈلدى."
 
 #: kwalleteditor.cpp:1145
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
-msgstr ""
+msgstr "خاتالىق: XML ھۆججەت ھەمياننى ئۆز ئىچىگە ئالمىغان."
 
 #: kwalleteditor.cpp:1298
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
-msgstr ""
+msgstr "«<b>%1</b>» غا ساقلىيالمايدۇ."
 
 #: kwalletmanager.cpp:63
 #, kde-format
@@ -337,53 +344,54 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
+"KDE ھەميان سىستېمىسى قوزغىتىلمىغان. ئۇنى قوزغىتامسىز؟ ئەگەر ئۇنداق بولمىسا، "
+"KWalletManager پىروگراممىسى ھەمياننى ئوقۇيالماي چېكىنىدۇ."
 
 #: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
 #: kwalletmanager.cpp:290
-#, fuzzy, kde-format
-#| msgid "KDE Wallet"
+#, kde-format
 msgid "Wallet"
-msgstr "KDE ھەميان"
+msgstr "ھەميان"
 
 #: kwalletmanager.cpp:92 kwalletmanager.cpp:290
 #, kde-format
 msgid "No wallets open."
-msgstr ""
+msgstr "ئوچۇق ھەميان يوق."
 
 #: kwalletmanager.cpp:99 kwalletmanager.cpp:225
 #, kde-format
 msgid "A wallet is open."
-msgstr ""
+msgstr "بىر ھەميان ئوچۇق."
 
 #: kwalletmanager.cpp:144 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr ""
+msgstr "يېڭى ھەميان(&N)…"
 
 #: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr ""
+msgstr "ھەميان ئۆچۈر(&D)…"
 
 #: kwalletmanager.cpp:154
 #, kde-format
 msgid "Export as encrypted"
-msgstr ""
+msgstr "شىفىرلانغان ھۆججەت چىقار"
 
 #: kwalletmanager.cpp:159
 #, kde-format
 msgid "&Import encrypted"
-msgstr ""
+msgstr "شىفىرلانغان ھۆججەتنى ئەكىر(&I)"
 
 #: kwalletmanager.cpp:164
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr ""
+msgstr "ھەميان سەپلە(&W)…"
 
 #: kwalletmanager.cpp:172
 #, kde-format
 msgid "Close &All Wallets"
-msgstr ""
+msgstr "ھەممە ھەمياننى ياپ(&A)"
 
 #: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
 #, kde-format
@@ -391,35 +399,36 @@ msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
 "Do you wish to force it closed?"
 msgstr ""
+"ھەمياننى تولۇق ياپالمايدۇ. ئۇنى باشقا پىروگرامما ئىشلىتىۋاتقان بولۇشى "
+"مۇمكىن. ئۇنى مەجبۇرىي ياپامسىز؟"
 
 #: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
 #, kde-format
 msgid "Force Closure"
-msgstr ""
+msgstr "مەجبۇرىي ياپ"
 
 #: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
 #, kde-format
 msgid "Do Not Force"
-msgstr ""
+msgstr "مەجبۇرلىما"
 
 #: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr ""
+msgstr "ھەمياننى مەجبۇرىي ياپالمايدۇ. خاتالىق كودى %1."
 
 #: kwalletmanager.cpp:282
 #, kde-format
 msgid "Error opening wallet %1."
-msgstr ""
+msgstr "ھەميان %1 نى ئاچقاندا خاتالىق كۆرۈلدى."
 
 #: kwalletmanager.cpp:321
 #, kde-format
 msgid "Please choose a name for the new wallet:"
-msgstr "يېڭى ھەميانغا  ئات تاللاڭ:"
+msgstr "يېڭى ھەميانغا ئات تاللاڭ:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "يېڭى ھەميان"
@@ -427,73 +436,72 @@ msgstr "يېڭى ھەميان"
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr ""
+msgstr "بوش ئاتنى قوللىمايدۇ. يېڭىدىن بىرنى تاللاڭ."
 
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Create new wallet"
-msgstr ""
+msgstr "يېڭى ھەميان قۇر"
 
 #: kwalletmanager.cpp:355
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
-msgstr ""
+msgstr "كەچۈرۈڭ، ھەميان مەۋجۇت. يېڭى بىر ئىسىمنى سىنامدۇ؟"
 
 #: kwalletmanager.cpp:357
 #, kde-format
 msgid "Try New"
-msgstr ""
+msgstr "يېڭىنى سىنا"
 
 #: kwalletmanager.cpp:383
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
-msgstr ""
+msgstr "«%1» ھەمياننى راستتىنلا ئۆچۈرۈۋېتەمسىز؟"
 
 #: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr ""
+msgstr "ھەمياننى ئۆچۈرەلمەيدۇ. خاتالىق كودى %1."
 
 #: kwalletmanager.cpp:436
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "File name"
-msgstr "ئات ئۆزگەرت(&R)"
+msgstr "ھۆججەت ئىسمى"
 
 #: kwalletmanager.cpp:443
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr ""
+msgstr "ھۆججەتكە يېزىش ئۈچۈن ئاچالمىدى"
 
 #: kwalletmanager.cpp:454
 #, kde-format
 msgid "Select file"
-msgstr ""
+msgstr "ھۆججەت تاللا"
 
 #: kwalletmanager.cpp:464
 #, kde-format
 msgid "Failed to open file"
-msgstr ""
+msgstr "ھۆججەتنى ئاچالمىدى"
 
 #: kwalletmanager.cpp:476
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr ""
+msgstr "%1 ئاتلىق ھەميان مەۋجۇت، مەشغۇلات توختىتىلدى"
 
 #: kwalletmanager.cpp:482
 #, kde-format
 msgid "Failed to copy files"
-msgstr ""
+msgstr "ھۆججەت كۆچۈرەلمىدى"
 
 #: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore unsaved changes?"
-msgstr ""
+msgstr "ساقلىمىغان ئۆزگەرتىشكە پەرۋا قىلمامدۇ؟"
 
 #: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "پەرۋا قىلما"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
@@ -517,7 +525,7 @@ msgstr "ياردەم(&H)"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "KWallet مۇلازىمىتىگە باغلىنىۋاتقاندا خاتالىق كۆرۈلدى:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
@@ -532,7 +540,7 @@ msgstr "ئىم ئۆزگەرت(&P)…"
 #: kwalletpopup.cpp:51
 #, kde-format
 msgid "Disconnec&t"
-msgstr ""
+msgstr "ئۈز(&T)"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -545,8 +553,7 @@ msgid "Value"
 msgstr "قىممەت"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "تۈر ئۆچۈر"
@@ -554,26 +561,25 @@ msgstr "تۈر ئۆچۈر"
 #: kwmapeditor.cpp:220
 #, kde-format
 msgid "&New Entry"
-msgstr "يېڭى كىرگۈ(&N)"
+msgstr "يېڭى تۈر(&N)"
 
 #: main.cpp:26
 #, kde-format
 msgid "Wallet Manager"
-msgstr ""
+msgstr "ھەميان باشقۇرغۇچ"
 
 #: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr ""
+msgstr "KDE ھەميان باشقۇرۇش قورالى"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr ""
+msgstr "نەشر ھوقۇقى ©2013–2017، KWallet باشقۇرغۇچى يازغۇچىلار"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valentin Rusu"
@@ -581,11 +587,10 @@ msgstr "Valentin Rusu"
 #: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr ""
+msgstr "سابىق ئاسرىغۇچى، ئىشلەتكۈچى ئارايۈزى قايتا قۇرغۇچى"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -593,51 +598,49 @@ msgstr "George Staikos"
 #: main.cpp:35
 #, kde-format
 msgid "Original author and former maintainer"
-msgstr "ئەسلى ئاپتور ۋە سابىق مەسئۇل كىشى"
+msgstr "ئەسلى ئاپتور ۋە سابىق ئاسرىغۇچى"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Original author and former maintainer"
+#, kde-format
 msgid "Developer and former maintainer"
-msgstr "ئەسلى ئاپتور ۋە سابىق مەسئۇل كىشى"
+msgstr "ئىجادكار ۋە سابىق ئاسرىغۇچى"
 
 #: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
-msgstr ""
+msgstr "Isaac Clerencia"
 
 #: main.cpp:37
 #, kde-format
 msgid "Developer"
-msgstr "ئىجادىيەتچى"
+msgstr "ئىجادكار"
 
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "پەرۋا قىلمىدى، ماسلىشىشچانلىق ئۈچۈن"
 
 #: main.cpp:47
 #, kde-format
 msgid "For use by kwalletd only"
-msgstr ""
+msgstr "kwalletd ئۈچۈنلا ئىشلىتىلىدۇ"
 
 #: main.cpp:48
 #, kde-format
 msgid "A wallet name"
-msgstr ""
+msgstr "ھەميان ئىسمى"
 
 #: revokeauthbutton.cpp:16
 #, kde-format
 msgid "Revoke Authorization"
-msgstr ""
+msgstr "دەلىللەشنى بىكار قىل"
 
 #: walletcontrolwidget.cpp:55
 #, kde-format
@@ -650,12 +653,12 @@ msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr ""
+msgstr "نۆۋەتتە «%1» ھەميان ئوچۇق."
 
 #: walletcontrolwidget.cpp:90
 #, kde-format
 msgid "The wallet is currently closed."
-msgstr ""
+msgstr "نۆۋەتتە ھەميان يېپىلغان."
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
@@ -679,26 +682,26 @@ msgstr "ئىم ئۆزگەرت…"
 #: walletcontrolwidget.ui:80
 #, kde-format
 msgid "Contents"
-msgstr "مەزمۇنلار"
+msgstr "مەزمۇن"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
 #: walletcontrolwidget.ui:117
 #, kde-format
 msgid "Applications"
-msgstr "پروگراممىلار"
+msgstr "پىروگرامما"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
 #, kde-format
 msgid "Hide &Contents"
-msgstr ""
+msgstr "مەزمۇن يوشۇر(&C)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
 #: walletwidget.ui:205 walletwidget.ui:253
 #, kde-format
 msgid "Show &Contents"
-msgstr ""
+msgstr "مەزمۇننى كۆرسەت(&C)"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
 #: walletwidget.ui:324
