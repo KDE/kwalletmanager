@@ -1,4 +1,5 @@
 # Translation of kwalletmanager into Japanese.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 # This file is distributed under the same license as the kdeutils package.
 # numberR <a28@atsuya.com>, 2004.
 # Toyohiro Asukai <toyohiro@ksmplus.com>, 2004.
@@ -12,9 +13,9 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-08 02:56+0000\n"
-"PO-Revision-Date: 2019-04-21 12:35-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-24 15:05+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,18 +23,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "numberR,Fumiaki Okushi,Ikuya Awashiro,Kenshi Muto"
+msgstr "numberR,Fumiaki Okushi,Ikuya Awashiro,Kenshi Muto,Mint"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"numberrfx@yahoo.co.jp,fumiaki@okushi.com,ikuya@oooug.jp,kmuto@debian.org"
+"numberrfx@yahoo.co.jp,fumiaki@okushi.com,ikuya@oooug.jp,kmuto@debian."
+"org,5602mint@gmail.com"
 
 #: allyourbase.cpp:215
 #, kde-format
@@ -121,8 +123,7 @@ msgid "Search"
 msgstr "検索"
 
 #: kwalleteditor.cpp:107
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "値を表示(&S)"
@@ -354,6 +355,9 @@ msgid ""
 "The KDE Wallet system is not enabled. Do you want me to enable it? If not, "
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
+"KDE ウォレットシステムが有効化されていません。有効化しますか？有効にしない場"
+"合、KWalletManager がウォレットにアクセスできないため、アプリケーションを終了"
+"します。"
 
 #: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
 #: kwalletmanager.cpp:290
@@ -389,7 +393,7 @@ msgstr "暗号化してエクスポート"
 #: kwalletmanager.cpp:159
 #, kde-format
 msgid "&Import encrypted"
-msgstr ""
+msgstr "暗号化済みウォレットをインポート(&I)"
 
 #: kwalletmanager.cpp:164
 #, kde-format
@@ -436,8 +440,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "新しいウォレットに名前を付けてください:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "新しいウォレット"
@@ -482,7 +485,7 @@ msgstr "ファイル名"
 #: kwalletmanager.cpp:443
 #, kde-format
 msgid "Failed to open file for writing"
-msgstr ""
+msgstr "書き込み用にファイルを開けませんでした"
 
 #: kwalletmanager.cpp:454
 #, kde-format
@@ -512,7 +515,7 @@ msgstr "未保存の変更を破棄しますか？"
 #: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "無視"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
@@ -536,7 +539,7 @@ msgstr "ヘルプ(&H)"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "KWallet サービスに接続する際にエラーが発生しました:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
@@ -564,8 +567,7 @@ msgid "Value"
 msgstr "値"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "エントリを削除"
@@ -588,22 +590,21 @@ msgstr "KDE ウォレット管理ツール"
 #: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr ""
+msgstr "Copyright ©2013–2017, KWallet Manager 開発者"
 
 #: main.cpp:34
 #, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
-msgstr ""
+msgstr "Valentin Rusu"
 
 #: main.cpp:34
 #, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr ""
+msgstr "元メンテナ、ユーザーインターフェースのリファクタリング"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "George Staikos"
@@ -614,8 +615,7 @@ msgid "Original author and former maintainer"
 msgstr "オリジナルの作者、以前のメンテナ"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Michael Leupold"
@@ -623,11 +623,10 @@ msgstr "Michael Leupold"
 #: main.cpp:36
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr ""
+msgstr "開発者、元メンテナ"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isaac Clerencia"
@@ -640,7 +639,7 @@ msgstr "開発者"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "互換性のため無視"
 
 #: main.cpp:47
 #, kde-format
@@ -663,28 +662,23 @@ msgid "&Close"
 msgstr "閉じる(&C)"
 
 #: walletcontrolwidget.cpp:73
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
 msgid "The '%1' wallet is currently open."
-msgstr "ウォレット'%1'が現在開かれています"
+msgstr "ウォレット \"%1\" が現在開かれています。"
 
 #: walletcontrolwidget.cpp:90
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
-msgstr "ウォレットは閉じられています"
+msgstr "ウォレットは現在開いていません。"
 
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
 #: walletcontrolwidget.ui:31
 #, kde-format
 msgid "KSqueezedTextLabel"
-msgstr ""
+msgstr "KSqueezedTextLabel"
 
 #. i18n: ectx: property (text), widget (QPushButton, _openClose)
 #: walletcontrolwidget.ui:54
@@ -734,6 +728,3 @@ msgstr "元に戻す(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
-
-#~ msgid "Show window on startup"
-#~ msgstr "起動時にウィンドウを表示"
