@@ -32,6 +32,7 @@
   <name xml:lang="ie">KWalletManager</name>
   <name xml:lang="is">KWalletManager</name>
   <name xml:lang="it">KWalletManager</name>
+  <name xml:lang="ja">KWalletManager</name>
   <name xml:lang="ka">KWalletManager</name>
   <name xml:lang="ko">KWalletManager</name>
   <name xml:lang="lt">KWalletManager</name>
@@ -70,6 +71,7 @@
   <summary xml:lang="ia">Immagazina e gere tu contrasignos</summary>
   <summary xml:lang="is">Geymdu og sýslaðu með lykilorðin þín</summary>
   <summary xml:lang="it">Salva e gestisci le tue password</summary>
+  <summary xml:lang="ja">パスワードの保存と管理</summary>
   <summary xml:lang="ka">შეინახეთ და მართეთ თქვენი პაროლები</summary>
   <summary xml:lang="ko">내 암호를 저장하고 관리</summary>
   <summary xml:lang="lt">Saugoti ir tvarkyti slaptažodžius</summary>
@@ -114,6 +116,7 @@
     <p xml:lang="id">KWalletManager adalah alat untuk mengelola kata sandi di sistem Anda. Dengan menggunakan subsistem Kerangka Kerja dompet tidak hanya memungkinkan Anda untuk menyimpan rahasia Anda sendiri tetapi juga untuk mengakses dan mengelola kata sandi setiap aplikasi yang terintegrasi dengan dompet.</p>
     <p xml:lang="is">KWalletManager er verkfæri til að sýsla með lykilorðin á kerfinu þínu. Með því að nota veskja-undirkerfi Frameworks-stoðkerfisins geturðu ekki aðeins haldið veskinu þínu leyndu heldur einnig haft aðgang að og geymt lykilorð allra forrita sem samhæfð eru veskjakerfinu.</p>
     <p xml:lang="it">KWalletManager è uno strumento per gestire le password nel tuo sistema. Usando il sottosistema del portafogli di Frameworks non solo potrai tenere i tuoi segreti, ma potrai anche accedere alle password e gestirle per qualsiasi applicazione che si integri col portafogli.</p>
+    <p xml:lang="ja">KWalletManager はシステム上のパスワードを管理するツールです。Frameworks のウォレットサブシステムを利用することにより、機密データを保管するだけでなく、ウォレットと連携するすべてのアプリケーションのパスワードをアクセス、管理できます。</p>
     <p xml:lang="ka">KWalletManager პროგრამაა, რომელიც თქვენს სისტემაში პაროლების მართვაში დაგეხმარება. საფულის ქვესისტემის გამოყენება არა მხოლოდ თქვენი პაროლების უსაფრთხოდ შენახვაზე ზრუნავს, არამედ იმაზე, ვის აქვს მასზე წვდომა.</p>
     <p xml:lang="ko">KWalletManager는 시스템에 저장된 암호를 관리하는 도구입니다. KDE 프레임워크의 지갑 하위 시스템을 사용하면 사용자 비밀 데이터를 관리할 수 있으며, 지갑 시스템을 사용하는 앱에서 사용하는 암호를 안전하게 저장할 수 있습니다.</p>
     <p xml:lang="lt">KWalletManager yra įrankis, skirtas tvarkyti slaptažodžius jūsų sistemoje. Šis įrankis, naudodamas Frameworks slaptažodinių posistemį ne tik leidžia jums saugoti savo paslaptis, bet taip pat leidžia tvarkyti ir gauti prieigą prie slaptažodžių iš kiekvienos programos, kuri integruota su slaptažodine.</p>
