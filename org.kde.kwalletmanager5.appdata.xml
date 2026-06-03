@@ -50,6 +50,7 @@
   <name xml:lang="sl">KWalletManager</name>
   <name xml:lang="sv">Plånbokshanteraren</name>
   <name xml:lang="tr">K Cüzdan Yöneticisi</name>
+  <name xml:lang="ug">KDE ھەميان باشقۇرغۇچ</name>
   <name xml:lang="uk">KWalletManager</name>
   <name xml:lang="vi">KWalletManager</name>
   <name xml:lang="zh-CN">KWalletManager 密码库管理器</name>
@@ -86,6 +87,7 @@
   <summary xml:lang="sl">Shranjuje in upravlja vaša gesla</summary>
   <summary xml:lang="sv">Lagra och hantera lösenord</summary>
   <summary xml:lang="tr">Parolalarınızı depolayın ve yönetin</summary>
+  <summary xml:lang="ug">ئىم ساقلاپ ۋە باشقۇرىدۇ</summary>
   <summary xml:lang="uk">Збереження ваших паролів та керування ними</summary>
   <summary xml:lang="zh-CN">保存和管理您的密码</summary>
   <summary xml:lang="zh-TW">儲存並管理您的密碼</summary>
