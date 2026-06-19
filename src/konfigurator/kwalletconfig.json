@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_kwalletconfig5",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_kwallet5",
         "Description": "KDE Wallet Configuration",
         "Description[ar]": "ضبط محفظة كِيدِي",
         "Description[az]": "KDE cüzdanı ayarları",
