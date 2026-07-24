@@ -81,16 +81,6 @@
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QCheckBox" name="_screensaverLock">
-              <property name="whatsThis">
-               <string>&lt;p&gt;&lt;b&gt;Close wallet as soon as the screensaver starts.&lt;/b&gt;&lt;br&gt;When a wallet is closed the password is needed to access it again.&lt;/p&gt;</string>
-              </property>
-              <property name="text">
-               <string>When screensaver starts</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
              <widget class="QCheckBox" name="_closeIdle">
               <property name="whatsThis">
                <string>&lt;p&gt;&lt;b&gt;Close wallet after a period of inactivity.&lt;/b&gt;&lt;br&gt;When a wallet is closed the password is needed to access it again.&lt;/p&gt;</string>
@@ -100,7 +90,7 @@
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="2" column="1">
              <widget class="QSpinBox" name="_idleTime">
               <property name="enabled">
                <bool>false</bool>

@@ -48,7 +48,6 @@ KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
     connect(_wcw->_autoclose, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
     connect(_wcw->_closeIdle, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
     connect(_wcw->_openPrompt, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
-    connect(_wcw->_screensaverLock, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
     connect(_wcw->_localWalletSelected, &QCheckBox::clicked, this, &KWalletConfig::configChanged);
     connect(_wcw->_idleTime, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KWalletConfig::configChanged);
     connect(_wcw->_launch, &QPushButton::clicked, this, &KWalletConfig::launchManager);
@@ -165,7 +164,6 @@ void KWalletConfig::load()
     _wcw->_openPrompt->setChecked(config.readEntry("Prompt on Open", false));
     _wcw->_launchManager->setChecked(config.readEntry("Launch Manager", false));
     _wcw->_autocloseManager->setChecked(!config.readEntry("Leave Manager Open", false));
-    _wcw->_screensaverLock->setChecked(config.readEntry("Close on Screensaver", false));
     _wcw->_autoclose->setChecked(!config.readEntry("Leave Open", true));
     _wcw->_closeIdle->setChecked(config.readEntry("Close When Idle", false));
     _wcw->_idleTime->setValue(config.readEntry("Idle Timeout", 10));
@@ -271,7 +269,6 @@ void KWalletConfig::save()
     config.writeEntry("Close When Idle", _wcw->_closeIdle->isChecked());
     config.writeEntry("Idle Timeout", _wcw->_idleTime->value());
     config.writeEntry("Prompt on Open", _wcw->_openPrompt->isChecked());
-    config.writeEntry("Close on Screensaver", _wcw->_screensaverLock->isChecked());
 
     config.writeEntry("Use One Wallet", !_wcw->_localWalletSelected->isChecked());
     if (_wcw->_localWalletSelected->isChecked()) {
@@ -337,7 +334,6 @@ void KWalletConfig::defaults()
     _wcw->_openPrompt->setChecked(false);
     _wcw->_launchManager->setChecked(true);
     _wcw->_autocloseManager->setChecked(false);
-    _wcw->_screensaverLock->setChecked(false);
     _wcw->_autoclose->setChecked(true);
     _wcw->_closeIdle->setChecked(false);
     _wcw->_idleTime->setValue(10);
