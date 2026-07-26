@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-07-26 00:48+0000\n"
 "PO-Revision-Date: 2005-11-15 03:00+0800\n"
 "Last-Translator: MIMOS Open Source <opensource@mimos.my>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -26,44 +26,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "opensource@mimos.my"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "New Wallet"
 msgstr "Wallet Baru"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Sila pilih nama untuk wallet baru:"
 
-#: konfigurator.cpp:220 konfigurator.cpp:298
+#: konfigurator.cpp:218 konfigurator.cpp:295
 #, kde-format
 msgid "Always Allow"
 msgstr "Sentiasa Benarkan"
 
-#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
+#: konfigurator.cpp:221 konfigurator.cpp:228 konfigurator.cpp:308
 #, kde-format
 msgid "Always Deny"
 msgstr "Sentiasa Nafikan"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:256
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:258 konfigurator.cpp:260
+#: konfigurator.cpp:256 konfigurator.cpp:258
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Modul Kawalan KDE Wallet "
 
-#: konfigurator.cpp:260
+#: konfigurator.cpp:258
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:358
+#: konfigurator.cpp:354
 #, kde-format
 msgid "&Delete"
 msgstr ""
@@ -144,26 +144,9 @@ msgstr ""
 msgid "When last application stops using it"
 msgstr "Tutup apabila aplikasi terakhir berhenti menggunakannya"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:86
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>Tutup wallet sebaik sahaja screen saver mula.</b><br>Apabila wallet "
-"ditutup, kata laluan diperlukan untuk mengaksesnya sekali lagi.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
-msgid "When screensaver starts"
-msgstr "Tutup apabila screen saver mula"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#: walletconfigwidget.ui:86 walletconfigwidget.ui:105
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p><b>Close wallet after a period of inactivity</b><br>When a wallet is "
@@ -176,27 +159,27 @@ msgstr ""
 "ditutup, kata laluan diperlukan untuk mengaksesnya sekali lagi.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:99
+#: walletconfigwidget.ui:89
 #, fuzzy, kde-format
 #| msgid "Close when unused for:"
 msgid "When unused for:"
 msgstr "Tutup apabila tidak menggunakannya untuk:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:121
+#: walletconfigwidget.ui:111
 #, fuzzy, kde-format
 #| msgid " min"
 msgid " minutes"
 msgstr " min"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:145
+#: walletconfigwidget.ui:135
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "Pemilihan Wallet Automatik"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:165
+#: walletconfigwidget.ui:155
 #, fuzzy, kde-format
 #| msgid "Different wallet for local passwords:"
 msgid "Use different default wallet for local passwords"
@@ -204,49 +187,49 @@ msgstr "Wallet berbeza untuk kata laluan setempat:"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
-#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
+#: walletconfigwidget.ui:192 walletconfigwidget.ui:232
 #, kde-format
 msgid "New..."
 msgstr "Baru..."
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
-#: walletconfigwidget.ui:211
+#: walletconfigwidget.ui:201
 #, kde-format
 msgid "Default wallet:"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:256
+#: walletconfigwidget.ui:246
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Pengurus Wallet"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:270
+#: walletconfigwidget.ui:260
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "Papar pengurus dalam dulang sistem"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:298
+#: walletconfigwidget.ui:288
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "Sembunyikan ikon dulang sistem apabila wallet terakhir ditutup"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:312
+#: walletconfigwidget.ui:302
 #, kde-format
 msgid "Secret Service"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:331
+#: walletconfigwidget.ui:321
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
 msgstr ""
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
-#: walletconfigwidget.ui:341
+#: walletconfigwidget.ui:331
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -255,41 +238,53 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:388
+#: walletconfigwidget.ui:378
 #, kde-format
 msgid "Access Control"
 msgstr "Kawalan Akses"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:394
+#: walletconfigwidget.ui:384
 #, fuzzy, kde-format
 #| msgid "&Prompt when an application accesses an open wallet"
 msgid "&Prompt when an application accesses a wallet"
 msgstr "&Gesa apabila aplikasi mengakses wallet yang dibuka"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:408
+#: walletconfigwidget.ui:398
 #, kde-format
 msgid "Wallet"
 msgstr "Wallet"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:413
+#: walletconfigwidget.ui:403
 #, kde-format
 msgid "Application"
 msgstr "Aplikasi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:418
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Policy"
 msgstr "Dasar"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:451
+#: walletconfigwidget.ui:441
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Lancarkan Pengurus Wallet"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Tutup wallet sebaik sahaja screen saver mula.</b><br>Apabila wallet "
+#~ "ditutup, kata laluan diperlukan untuk mengaksesnya sekali lagi.</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "Tutup apabila screen saver mula"
 
 #~ msgid "Select wallet to use as default:"
 #~ msgstr "Pilih wallet yang hendak digunakan sebagai piawai:"

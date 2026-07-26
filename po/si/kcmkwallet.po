@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-07-26 00:48+0000\n"
 "PO-Revision-Date: 2011-11-09 21:52+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -27,44 +27,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "danishka@gmail.com"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "New Wallet"
 msgstr "නව පසුම්බිය"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "නව පසුම්බියට නමක් තෝරන්න:"
 
-#: konfigurator.cpp:220 konfigurator.cpp:298
+#: konfigurator.cpp:218 konfigurator.cpp:295
 #, kde-format
 msgid "Always Allow"
 msgstr "සැමවිටම අනුතමයි"
 
-#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
+#: konfigurator.cpp:221 konfigurator.cpp:228 konfigurator.cpp:308
 #, kde-format
 msgid "Always Deny"
 msgstr "සැමවිටම අවහිරයි"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:256
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:258 konfigurator.cpp:260
+#: konfigurator.cpp:256 konfigurator.cpp:258
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE පසුම්බි පලාන මොඩියුලය"
 
-#: konfigurator.cpp:260
+#: konfigurator.cpp:258
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:358
+#: konfigurator.cpp:354
 #, kde-format
 msgid "&Delete"
 msgstr "මකන්න (&D)"
@@ -127,24 +127,9 @@ msgstr ""
 msgid "When last application stops using it"
 msgstr "අවසන් යෙදුම එය භාවිතය අවසන් කළ පසු වසන්න"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:86
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
-msgid "When screensaver starts"
-msgstr "තිරරක්නය අරඹන විට වසන්න"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#: walletconfigwidget.ui:86 walletconfigwidget.ui:105
 #, kde-format
 msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
@@ -152,27 +137,27 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:99
+#: walletconfigwidget.ui:89
 #, fuzzy, kde-format
 #| msgid "Close when unused for:"
 msgid "When unused for:"
 msgstr "භාවිත නොකරන විට වසන්න:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:121
+#: walletconfigwidget.ui:111
 #, fuzzy, kde-format
 #| msgid " min"
 msgid " minutes"
 msgstr " මිනිත්තු"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:145
+#: walletconfigwidget.ui:135
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "ස්වයංක්‍රීය පසුම්බි තේරීම"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:165
+#: walletconfigwidget.ui:155
 #, fuzzy, kde-format
 #| msgid "Different wallet for local passwords:"
 msgid "Use different default wallet for local passwords"
@@ -180,49 +165,49 @@ msgstr "ප්‍රාදේශීය මුරපද සඳහා වෙනස
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
-#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
+#: walletconfigwidget.ui:192 walletconfigwidget.ui:232
 #, kde-format
 msgid "New..."
 msgstr "නව..."
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
-#: walletconfigwidget.ui:211
+#: walletconfigwidget.ui:201
 #, kde-format
 msgid "Default wallet:"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:256
+#: walletconfigwidget.ui:246
 #, kde-format
 msgid "Wallet Manager"
 msgstr "පසුම්බි කළමණාකරු"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:270
+#: walletconfigwidget.ui:260
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "පද්ධති තැටියේ කළමණාකරු පෙන්වන්න"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:298
+#: walletconfigwidget.ui:288
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "අවසන් පසුම්බිය වසන වැසූ විට පද්ධති තැටි අයිකනය සඟවන්න"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:312
+#: walletconfigwidget.ui:302
 #, kde-format
 msgid "Secret Service"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:331
+#: walletconfigwidget.ui:321
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
 msgstr ""
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
-#: walletconfigwidget.ui:341
+#: walletconfigwidget.ui:331
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -231,41 +216,46 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:388
+#: walletconfigwidget.ui:378
 #, kde-format
 msgid "Access Control"
 msgstr "ප්‍රවේශන පාලනය"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:394
+#: walletconfigwidget.ui:384
 #, fuzzy, kde-format
 #| msgid "&Prompt when an application accesses an open wallet"
 msgid "&Prompt when an application accesses a wallet"
 msgstr "විවෘත කළ පසුම්බියකට යෙදුමක් ප්‍රවේශනය වන විට දන්වන්න (&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:408
+#: walletconfigwidget.ui:398
 #, kde-format
 msgid "Wallet"
 msgstr "පසුම්බිය"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:413
+#: walletconfigwidget.ui:403
 #, kde-format
 msgid "Application"
 msgstr "යෙදුම"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:418
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Policy"
 msgstr "ප්‍රතිපත්තිය"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:451
+#: walletconfigwidget.ui:441
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "පසුම්බි කළමණාකරු අරඹන්න (&L)"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "තිරරක්නය අරඹන විට වසන්න"
 
 #~ msgid "Select wallet to use as default:"
 #~ msgstr "පෙරනිමිය සේ භාවිත කළ යුතු පසුම්බිය තෝරන්න:"

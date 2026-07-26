@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-07-26 00:48+0000\n"
 "PO-Revision-Date: 2024-08-20 00:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,37 +28,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "New Wallet"
 msgstr "새 지갑"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "새 지갑의 이름을 선택하십시오:"
 
-#: konfigurator.cpp:220 konfigurator.cpp:298
+#: konfigurator.cpp:218 konfigurator.cpp:295
 #, kde-format
 msgid "Always Allow"
 msgstr "항상 허용"
 
-#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
+#: konfigurator.cpp:221 konfigurator.cpp:228 konfigurator.cpp:308
 #, kde-format
 msgid "Always Deny"
 msgstr "항상 거부"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:256
 #, kde-format
 msgid "Permission denied."
 msgstr "권한이 거부되었습니다."
 
-#: konfigurator.cpp:258 konfigurator.cpp:260
+#: konfigurator.cpp:256 konfigurator.cpp:258
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE 지갑 제어 모듈"
 
-#: konfigurator.cpp:260
+#: konfigurator.cpp:258
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -67,7 +67,7 @@ msgstr ""
 "동작을 인증하는 중 오류 발생:\n"
 "%1"
 
-#: konfigurator.cpp:358
+#: konfigurator.cpp:354
 #, kde-format
 msgid "&Delete"
 msgstr "삭제(&D)"
@@ -135,25 +135,9 @@ msgstr ""
 msgid "When last application stops using it"
 msgstr "마지막 앱이 사용을 중단했을 때"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:86
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>화면 보호기가 시작되면 지갑 닫기.</b><br />지갑이 닫힌 후에는 암호를 입"
-"력해야 접근할 수 있습니다.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:89
-#, kde-format
-msgid "When screensaver starts"
-msgstr "화면 보호기가 시작되었을 때"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#: walletconfigwidget.ui:86 walletconfigwidget.ui:105
 #, kde-format
 msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
@@ -163,74 +147,74 @@ msgstr ""
 "할 수 있습니다.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:99
+#: walletconfigwidget.ui:89
 #, kde-format
 msgid "When unused for:"
 msgstr "사용하지 않고 다음 시간 후:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:121
+#: walletconfigwidget.ui:111
 #, kde-format
 msgid " minutes"
 msgstr "분"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:145
+#: walletconfigwidget.ui:135
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "자동 지갑 선택"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:165
+#: walletconfigwidget.ui:155
 #, kde-format
 msgid "Use different default wallet for local passwords"
 msgstr "로컬 암호를 다른 기본 지갑에 저장"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
-#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
+#: walletconfigwidget.ui:192 walletconfigwidget.ui:232
 #, kde-format
 msgid "New..."
 msgstr "새로 만들기..."
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
-#: walletconfigwidget.ui:211
+#: walletconfigwidget.ui:201
 #, kde-format
 msgid "Default wallet:"
 msgstr "기본 지갑:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:256
+#: walletconfigwidget.ui:246
 #, kde-format
 msgid "Wallet Manager"
 msgstr "지갑 관리자"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:270
+#: walletconfigwidget.ui:260
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "시스템 트레이에 관리자 표시"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:298
+#: walletconfigwidget.ui:288
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "마지막 지갑을 닫을 때 트레이 아이콘 숨기기"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:312
+#: walletconfigwidget.ui:302
 #, kde-format
 msgid "Secret Service"
 msgstr "비밀 서비스"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:331
+#: walletconfigwidget.ui:321
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
 msgstr "비밀 서비스로 KWallet 사용(&W)"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
-#: walletconfigwidget.ui:341
+#: walletconfigwidget.ui:331
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -241,40 +225,50 @@ msgstr ""
 "키 모음과 같은 제3자 서비스가 관리하게 하려면 비활성화하십시오."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:388
+#: walletconfigwidget.ui:378
 #, kde-format
 msgid "Access Control"
 msgstr "접근 제어"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:394
+#: walletconfigwidget.ui:384
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "앱이 지갑에 접근할 때 알려 주기(&P)"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:408
+#: walletconfigwidget.ui:398
 #, kde-format
 msgid "Wallet"
 msgstr "지갑"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:413
+#: walletconfigwidget.ui:403
 #, kde-format
 msgid "Application"
 msgstr "앱"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:418
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Policy"
 msgstr "정책"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:451
+#: walletconfigwidget.ui:441
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "지갑 관리자 실행하기(&L)"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>화면 보호기가 시작되면 지갑 닫기.</b><br />지갑이 닫힌 후에는 암호"
+#~ "를 입력해야 접근할 수 있습니다.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "화면 보호기가 시작되었을 때"
 
 #~ msgid "Select wallet to use as default:"
 #~ msgstr "기본값으로 사용할지갑 선택하기:"

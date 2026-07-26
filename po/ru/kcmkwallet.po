@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-07-26 00:48+0000\n"
 "PO-Revision-Date: 2024-12-11 16:07+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -42,37 +42,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "batalov@twiga.kz, omiro@basealt.ru, translation-team@basealt.ru"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "New Wallet"
 msgstr "Новый бумажник"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:105
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Укажите имя нового бумажника:"
 
-#: konfigurator.cpp:220 konfigurator.cpp:298
+#: konfigurator.cpp:218 konfigurator.cpp:295
 #, kde-format
 msgid "Always Allow"
 msgstr "Разрешать всегда"
 
-#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
+#: konfigurator.cpp:221 konfigurator.cpp:228 konfigurator.cpp:308
 #, kde-format
 msgid "Always Deny"
 msgstr "Запрещать всегда"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:256
 #, kde-format
 msgid "Permission denied."
 msgstr "Доступ запрещён."
 
-#: konfigurator.cpp:258 konfigurator.cpp:260
+#: konfigurator.cpp:256 konfigurator.cpp:258
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Модуль управления бумажниками KDE"
 
-#: konfigurator.cpp:260
+#: konfigurator.cpp:258
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -81,7 +81,7 @@ msgstr ""
 "Ошибка аутентификации:\n"
 "%1"
 
-#: konfigurator.cpp:358
+#: konfigurator.cpp:354
 #, kde-format
 msgid "&Delete"
 msgstr "&Удалить"
@@ -151,25 +151,9 @@ msgstr ""
 msgid "When last application stops using it"
 msgstr "По завершении использования всеми приложениями"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:86
-#, kde-format
-msgid ""
-"<p><b>Close wallet as soon as the screensaver starts.</b><br>When a wallet "
-"is closed the password is needed to access it again.</p>"
-msgstr ""
-"<p><b>Закрывать бумажник при запуске хранителя экрана.</b> <br>Если бумажник "
-"закрыт, для повторного доступа к нему потребуется ввести пароль.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
-#: walletconfigwidget.ui:89
-#, kde-format
-msgid "When screensaver starts"
-msgstr "При запуске хранителя экрана"
-
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:96 walletconfigwidget.ui:115
+#: walletconfigwidget.ui:86 walletconfigwidget.ui:105
 #, kde-format
 msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
@@ -179,74 +163,74 @@ msgstr ""
 "закрыт, для повторного доступа к нему потребуется ввести пароль.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:99
+#: walletconfigwidget.ui:89
 #, kde-format
 msgid "When unused for:"
 msgstr "Если не используется в течение:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:121
+#: walletconfigwidget.ui:111
 #, kde-format
 msgid " minutes"
 msgstr " мин"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:145
+#: walletconfigwidget.ui:135
 #, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "Автоматический выбор бумажника"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:165
+#: walletconfigwidget.ui:155
 #, kde-format
 msgid "Use different default wallet for local passwords"
 msgstr "Использовать другой бумажник по умолчанию для локальных паролей"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
-#: walletconfigwidget.ui:202 walletconfigwidget.ui:242
+#: walletconfigwidget.ui:192 walletconfigwidget.ui:232
 #, kde-format
 msgid "New..."
 msgstr "Создать…"
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
-#: walletconfigwidget.ui:211
+#: walletconfigwidget.ui:201
 #, kde-format
 msgid "Default wallet:"
 msgstr "Бумажник по умолчанию:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:256
+#: walletconfigwidget.ui:246
 #, kde-format
 msgid "Wallet Manager"
 msgstr "Управление бумажниками"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:270
+#: walletconfigwidget.ui:260
 #, kde-format
 msgid "Show manager in system tray"
 msgstr "Показывать значок в системном лотке"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:298
+#: walletconfigwidget.ui:288
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "Скрывать значок из системного лотка, когда все бумажники закрыты"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:312
+#: walletconfigwidget.ui:302
 #, kde-format
 msgid "Secret Service"
 msgstr "Secret Service"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:331
+#: walletconfigwidget.ui:321
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
 msgstr "Использовать &бумажник KDE в качестве интерфейса Secret Service"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
-#: walletconfigwidget.ui:341
+#: walletconfigwidget.ui:331
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -258,40 +242,51 @@ msgstr ""
 "KDE использовать сторонние приложения, такие как KeePassXC или GNOME Keyring."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:388
+#: walletconfigwidget.ui:378
 #, kde-format
 msgid "Access Control"
 msgstr "Контроль доступа"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:394
+#: walletconfigwidget.ui:384
 #, kde-format
 msgid "&Prompt when an application accesses a wallet"
 msgstr "&Запрашивать подтверждение при обращении приложений к бумажнику"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:408
+#: walletconfigwidget.ui:398
 #, kde-format
 msgid "Wallet"
 msgstr "Бумажник"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:413
+#: walletconfigwidget.ui:403
 #, kde-format
 msgid "Application"
 msgstr "Приложение"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:418
+#: walletconfigwidget.ui:408
 #, kde-format
 msgid "Policy"
 msgstr "Политика"
 
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:451
+#: walletconfigwidget.ui:441
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Запустить управление бумажниками"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Закрывать бумажник при запуске хранителя экрана.</b> <br>Если "
+#~ "бумажник закрыт, для повторного доступа к нему потребуется ввести пароль."
+#~ "</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "При запуске хранителя экрана"
 
 #~ msgid "Select wallet to use as default:"
 #~ msgstr "Бумажник, который будет использоваться по умолчанию:"
