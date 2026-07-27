@@ -260,14 +260,3 @@ msgstr "Praksis"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Start lommebokhåndtering"
-
-#~ msgid ""
-#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
-#~ "wallet is closed the password is needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>Lukk lommeboka så snart pauseskjermen starter.</b> <br/>Når ei "
-#~ "lommebok er lukket, må det oppgis et passord for å åpne den igjen.</p>"
-
-#, fuzzy
-#~ msgid "When screensaver starts"
-#~ msgstr "Lukk når pauseskjermen starter"
