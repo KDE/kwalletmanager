@@ -257,13 +257,3 @@ msgstr "策略"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "启动密码库管理器(&L)"
-
-#~ msgid ""
-#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
-#~ "wallet is closed the password is needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>屏幕保护程序启动时立即关闭密码库。</b><br>密码库关闭后，再次打开时必"
-#~ "须重新输入密码。</p>"
-
-#~ msgid "When screensaver starts"
-#~ msgstr "屏幕保护程序启动时"
