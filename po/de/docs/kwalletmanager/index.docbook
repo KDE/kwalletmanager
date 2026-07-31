@@ -86,7 +86,7 @@
 >Einen Passwortspeicher erstellen</title>
 
 <para
->KWallet ist ein Speicher für Passwörter. Es ist normalerweise ausreichend, nur einen Passwortspeicher zu benutzen, der durch ein Hauptpasswort gesichert ist. Sie können eine große Anzahl von Passwörtern in Speichern mit &kwalletmanager5; organisieren.</para>
+>KWallet ist ein Speicher für Passwörter. Es ist normalerweise ausreichend, nur einen Passwortspeicher zu verwenden, der durch ein Hauptpasswort gesichert ist. Sie können eine große Anzahl von Passwörtern in Speichern mit &kwalletmanager5; organisieren.</para>
 
 <para
 >Als Voreinstellung wird ein Passwortspeicher mit dem Namen <guilabel
@@ -124,7 +124,7 @@
 
 <para
 >Falls Sie bisher noch keinen Passwortspeicher erstellt haben, lesen Sie den Abschnitt <link linkend="kwallet-using"
->&kwallet5; benutzen</link
+>&kwallet5; verwenden</link
 >. </para>
 
 <para
@@ -194,7 +194,7 @@
 </mediaobject>
 </screenshot>
 <para
->Das obere Bildschirmfoto zeigt die Situation, wenn kein GPG-Schlüssel gefunden im System wurde. Benutzen Sie in diesem Fall Anwendungen wie &kgpg; oder &kleopatra; zur Erzeugung eines Schlüssels und versuchen Sie es erneut.</para>
+>Das obere Bildschirmfoto zeigt die Situation, wenn kein GPG-Schlüssel gefunden im System wurde. Verwenden Sie in diesem Fall Anwendungen wie &kgpg; oder &kleopatra; zur Erzeugung eines Schlüssels und versuchen Sie es erneut.</para>
 
 <para
 >Wurde ein GPG-Schlüssel gefunden, dann können Sie im nächsten Dialog einen Schlüssel für Ihren neuen Passwortspeicher auswählen. </para>
@@ -215,10 +215,10 @@
 >&kwallet5; verwendet dann GPG beim Speichern und Öffnen eines Passwortspeichers. Der Passphrasen-Dialog erscheint nur einmal. Sogar wenn der Passwortspeicher nach dem anfänglichen Öffnen geschlossen wird, erfolgt das nachfolgende Öffnen ohne erneute Abfrage der Passphrase während derselben Sitzung.  </para>
 
 <para
->In einer Sitzung können beide Dateiformate gleichzeitig benutzt werden. &kwallet5; erkennt automatisch des Dateiformat und lädt das zugehörige Backend zur Verarbeitung.</para>
+>In einer Sitzung können beide Dateiformate gleichzeitig verwendet werden. &kwallet5; erkennt automatisch des Dateiformat und lädt das zugehörige Backend zur Verarbeitung.</para>
 
 <para
->Um Ihre sensiblen Daten aus einem klassischen Passwortspeicher mit dem neuen Backend zu benutzen, folgen Sie diesen Anweisungen:</para>
+>Um Ihre sensiblen Daten aus einem klassischen Passwortspeicher mit dem neuen Backend zu verwenden, folgen Sie diesen Anweisungen:</para>
 
 <itemizedlist>
 <listitem
@@ -267,7 +267,7 @@
 <para
 >Alternativ können Sie <guimenuitem
 >Passwortspeicher importieren</guimenuitem
-> benutzen, aber dann müssen sie die <filename class="extension"
+> verwenden, aber dann müssen sie die <filename class="extension"
 >.kwl</filename
 >-Datei zu Ihrem alten Passwortspeicher auswählen, die sich im Ordner <filename class="directory"
 >kwalletd</filename
@@ -281,7 +281,7 @@
 
 <tip>
 <para
->Für sehr sicherheitsrelevante Aktionen sollten Sie einen Passwortspeicher für Passwörter im lokalen System und einen für Netzwerk-/Internet-Passwörter sowie Formulardaten benutzen. Standardmäßig werden allerdings alle Passwörter in einer einzigen Datei gehalten. Die Einstellungen hierzu können Sie im &systemsettings;-Modul von &kwallet5; vornehmen. Als Voreinstellung wird alles in einem Passwortspeicher namens <guilabel
+>Für sehr sicherheitsrelevante Aktionen sollten Sie einen Passwortspeicher für Passwörter im lokalen System und einen für Netzwerk-/Internet-Passwörter sowie Formulardaten verwenden. Standardmäßig werden allerdings alle Passwörter in einer einzigen Datei gehalten. Die Einstellungen hierzu können Sie im &systemsettings;-Modul von &kwallet5; vornehmen. Als Voreinstellung wird alles in einem Passwortspeicher namens <guilabel
 >kdewallet</guilabel
 > gespeichert.</para>
 </tip>
@@ -292,7 +292,7 @@
 
 <sect1 id="kwallet-using">
 <title
->&kwallet5; benutzen</title>
+>&kwallet5; verwenden</title>
 
 <para
 >Wenn Sie &eg; zur Webseite des &kde;-Fehlerverfolgungssystems gehen und das erste Mal die Anmeldedaten eingegeben haben, wird ein Dialog angezeigt, in dem die Speicherung des Passwortes in einem Passwortspeicher angeboten wird:</para>
@@ -442,7 +442,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </mediaobject>
 </screenshot>
 <para
->Benutzen Sie den Knöpf <guibutton
+>Verwenden Sie den Knöpf <guibutton
 >Öffnen</guibutton
 >, um den Inhalt eines geschlossenen Passwortspeichers anzuzeigen. Dazu müssen Sie das Hauptpasswort für den Passwortspeicher eingeben.</para>
 
@@ -491,7 +491,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <title
 >Importieren und Exportieren</title>
 <para
->Wenn Sie Ihre Passwörter auf ein anderes Gerät oder einen anderen Rechner übertragen möchten, benutzen Sie die Aktionen im Menü <guimenu
+>Wenn Sie Ihre Passwörter auf ein anderes Gerät oder einen anderen Rechner übertragen möchten, verwenden Sie die Aktionen im Menü <guimenu
 >Datei</guimenu
 >. Mit <guimenuitem
 >Verschlüsselt exportieren</guimenuitem
@@ -557,10 +557,10 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </screenshot>
 </para>
 <para
->Die erste Liste zeigt alle Anwendungen, die gerade mit dem ausgewählten Passwortspeicher verbunden sind. Benutzen Sie den Knopf rechts neben jedem Eintrag, um die Verbindung der Anwendung zu trennen.</para>
+>Die erste Liste zeigt alle Anwendungen, die gerade mit dem ausgewählten Passwortspeicher verbunden sind. Verwenden Sie den Knopf rechts neben jedem Eintrag, um die Verbindung der Anwendung zu trennen.</para>
 
 <para
->In der zweiten Liste werden alle Anwendungen angezeigt, deren Zugriff auf den Passwortspeicher autorisiert ist. Benutzen Sie den Knopf rechts neben jedem Eintrag in der Liste, um die Autorisierung zurückzuziehen. </para>
+>In der zweiten Liste werden alle Anwendungen angezeigt, deren Zugriff auf den Passwortspeicher autorisiert ist. Verwenden Sie den Knopf rechts neben jedem Eintrag in der Liste, um die Autorisierung zurückzuziehen. </para>
 <!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
 </sect2>
 </sect1>
@@ -736,7 +736,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Ein Programm, das den Passwortspeicher öffnen darf, kann auch alle darin enthaltenen Passwörter lesen.</para>
 
 <para
->Wenn Sie versehentlich eine Anwendung so eingerichtet haben,&kwallet5; nicht zu benutzen, löschen Sie die Regelung für diese Anwendung hier.</para>
+>Wenn Sie versehentlich eine Anwendung so eingerichtet haben,&kwallet5; nicht zu verwenden, löschen Sie die Regelung für diese Anwendung hier.</para>
 <!-- FIXME difference to Revoke Authorization in kwallermanager?-->
 <para
 >Beim nächsten Start dieser Anwendung können Sie dann eine neue Regelung für den Zugriff auf den Passwortspeicher festlegen. </para>
@@ -770,7 +770,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Ein Passwortspeicher kann aus dem &kwalletmanager5;-Fenster auf ein Dateiverwaltungs-Fenster gezogen werden, um dort eine Kopie oder eine Verknüpfung anzulegen oder sie dorthin zu verschieben.</para>
 
 <para
->Verwenden Sie diese Möglichkeit, wenn Sie einen Passwortspeicher auf ein Wechselmedium wie einen USB-Stick kopieren wollen. So haben Sie Ihre Passwörter immer dabei, zu Hause, bei der Arbeit oder in den Ferien.</para>
+>Verwenden Sie diese Möglichkeit, wenn Sie einen Passwortspeicher auf ein Wechselmedium wie einen USB-Stick kopieren möchten. So haben Sie Ihre Passwörter immer dabei, zu Hause, bei der Arbeit oder in den Ferien.</para>
 
 </chapter>
 
