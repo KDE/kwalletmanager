@@ -69,7 +69,6 @@ private Q_SLOTS:
 
     void exportXML();
     void importXML();
-    void importWallet();
 
     void copyPassword();
 
@@ -96,7 +95,7 @@ private:
     KWalletEntryList *_entryList = nullptr;
     static RegisterCreateActionsMethod _registerCreateActionMethod;
     static QAction *_newFolderAction, *_deleteFolderAction;
-    static QAction *_exportAction, *_saveAsAction, *_mergeAction, *_importAction;
+    static QAction *_exportAction, *_saveAsAction, *_importAction;
     static QAction *_newEntryAction, *_renameEntryAction, *_deleteEntryAction;
     static QAction *_copyPassAction;
     QString _currentFolder;

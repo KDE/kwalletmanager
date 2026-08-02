@@ -53,7 +53,6 @@
 QAction *KWalletEditor::_newFolderAction = nullptr;
 QAction *KWalletEditor::_deleteFolderAction = nullptr;
 QAction *KWalletEditor::_exportAction = nullptr;
-QAction *KWalletEditor::_mergeAction = nullptr;
 QAction *KWalletEditor::_importAction = nullptr;
 QAction *KWalletEditor::_newEntryAction = nullptr;
 QAction *KWalletEditor::_renameEntryAction = nullptr;
@@ -214,10 +213,6 @@ void KWalletEditor::createActions(KActionCollection *actionCollection)
     _deleteFolderAction = actionCollection->addAction(QStringLiteral("delete_folder"));
     _deleteFolderAction->setText(i18n("&Delete Folder"));
 
-    _mergeAction = actionCollection->addAction(QStringLiteral("wallet_merge"));
-    _mergeAction->setText(i18n("&Import a wallet..."));
-    _mergeAction->setEnabled(false);
-
     _importAction = actionCollection->addAction(QStringLiteral("wallet_import"));
     _importAction->setText(i18n("&Import XML..."));
     _importAction->setEnabled(false);
@@ -264,9 +259,6 @@ void KWalletEditor::connectActions()
     connect(this, &KWalletEditor::enableContextFolderActions, _deleteFolderAction, &QAction::setEnabled);
     connect(this, &KWalletEditor::enableFolderActions, _deleteFolderAction, &QAction::setEnabled);
 
-    connect(_mergeAction, &QAction::triggered, this, &KWalletEditor::importWallet);
-    connect(this, &KWalletEditor::enableWalletActions, _mergeAction, &QAction::setEnabled);
-
     connect(_importAction, &QAction::triggered, this, &KWalletEditor::importXML);
     connect(this, &KWalletEditor::enableWalletActions, _importAction, &QAction::setEnabled);
 
@@ -299,9 +291,6 @@ void KWalletEditor::disconnectActions()
     disconnect(_deleteFolderAction, &QAction::triggered, this, &KWalletEditor::deleteFolder);
     disconnect(this, &KWalletEditor::enableContextFolderActions, _deleteFolderAction, &QAction::setEnabled);
     disconnect(this, &KWalletEditor::enableFolderActions, _deleteFolderAction, &QAction::setEnabled);
-
-    disconnect(_mergeAction, &QAction::triggered, this, &KWalletEditor::importWallet);
-    disconnect(this, &KWalletEditor::enableWalletActions, _mergeAction, &QAction::setEnabled);
 
     disconnect(_importAction, &QAction::triggered, this, &KWalletEditor::importXML);
     disconnect(this, &KWalletEditor::enableWalletActions, _importAction, &QAction::setEnabled);
@@ -971,153 +960,6 @@ enum MergePlan {
     Yes = 3,
     No = 4
 };
-
-void KWalletEditor::importWallet()
-{
-    QUrl url = QFileDialog::getOpenFileUrl(this, QString(), QUrl(), QStringLiteral("*.kwl"));
-
-    if (url.isEmpty()) {
-        return;
-    }
-
-    QTemporaryFile tmpFile;
-    if (!tmpFile.open()) {
-        KMessageBox::error(this, i18n("Unable to create temporary file for downloading '<b>%1</b>'.", url.toDisplayString()));
-        return;
-    }
-
-    KIO::StoredTransferJob *job = KIO::storedGet(url);
-    KJobWidgets::setWindow(job, this);
-    if (!job->exec()) {
-        KMessageBox::error(this, i18n("Unable to access wallet '<b>%1</b>'.", url.toDisplayString()));
-        return;
-    }
-    tmpFile.write(job->data());
-    tmpFile.flush();
-
-    KWallet::Wallet *w = KWallet::Wallet::openWallet(tmpFile.fileName(), effectiveWinId(), KWallet::Wallet::Path);
-    if (w && w->isOpen()) {
-        MergePlan mp = Prompt;
-        QStringList fl = w->folderList();
-        for (QStringList::ConstIterator f = fl.constBegin(); f != fl.constEnd(); ++f) {
-            if (!w->setFolder(*f)) {
-                continue;
-            }
-
-            if (!_w->hasFolder(*f)) {
-                _w->createFolder(*f);
-            }
-
-            _w->setFolder(*f);
-
-            bool readMap = false;
-            QMap<QString, QMap<QString, QString>> map = w->mapList(&readMap);
-            QSet<QString> mergedkeys; // prevents re-merging already merged entries.
-            if (readMap) {
-                QMap<QString, QMap<QString, QString>>::ConstIterator me;
-                for (me = map.constBegin(); me != map.constEnd(); ++me) {
-                    bool hasEntry = _w->hasEntry(me.key());
-                    if (hasEntry && mp == Prompt) {
-                        KBetterThanKDialogBase *bd;
-                        bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
-                                          f->toHtmlEscaped(),
-                                          me.key().toHtmlEscaped()));
-                        mp = static_cast<MergePlan>(bd->exec());
-                        delete bd;
-                        bool ok = false;
-                        if (mp == Always || mp == Yes) {
-                            ok = true;
-                        }
-                        if (mp == Yes || mp == No) {
-                            // reset mp
-                            mp = Prompt;
-                        }
-                        if (!ok) {
-                            continue;
-                        }
-                    } else if (hasEntry && mp == Never) {
-                        continue;
-                    }
-                    _w->writeMap(me.key(), me.value());
-                    mergedkeys.insert(me.key()); // remember this key has been merged
-                }
-            }
-
-            bool readPassList = false;
-            QMap<QString, QString> pwd = w->passwordList(&readPassList);
-            if (readPassList) {
-                QMap<QString, QString>::ConstIterator pe;
-                for (pe = pwd.constBegin(); pe != pwd.constEnd(); ++pe) {
-                    bool hasEntry = _w->hasEntry(pe.key());
-                    if (hasEntry && mp == Prompt) {
-                        auto bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
-                                          f->toHtmlEscaped(),
-                                          pe.key().toHtmlEscaped()));
-                        mp = static_cast<MergePlan>(bd->exec());
-                        delete bd;
-                        bool ok = false;
-                        if (mp == Always || mp == Yes) {
-                            ok = true;
-                        }
-                        if (mp == Yes || mp == No) {
-                            // reset mp
-                            mp = Prompt;
-                        }
-                        if (!ok) {
-                            continue;
-                        }
-                    } else if (hasEntry && mp == Never) {
-                        continue;
-                    }
-                    _w->writePassword(pe.key(), pe.value());
-                    mergedkeys.insert(pe.key()); // remember this key has been merged
-                }
-            }
-
-            bool readEntries = false;
-            QMap<QString, QByteArray> ent = w->entriesList(&readEntries);
-            if (readEntries) {
-                QMap<QString, QByteArray>::ConstIterator ee;
-                for (ee = ent.constBegin(); ee != ent.constEnd(); ++ee) {
-                    // prevent re-merging already merged entries.
-                    if (mergedkeys.contains(ee.key())) {
-                        continue;
-                    }
-                    bool hasEntry = _w->hasEntry(ee.key());
-                    if (hasEntry && mp == Prompt) {
-                        auto bd = new KBetterThanKDialogBase(this);
-                        bd->setLabel(i18n("Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to replace it?",
-                                          f->toHtmlEscaped(),
-                                          ee.key().toHtmlEscaped()));
-                        mp = static_cast<MergePlan>(bd->exec());
-                        delete bd;
-                        bool ok = false;
-                        if (mp == Always || mp == Yes) {
-                            ok = true;
-                        }
-                        if (mp == Yes || mp == No) {
-                            // reset mp
-                            mp = Prompt;
-                        }
-                        if (!ok) {
-                            continue;
-                        }
-                    } else if (hasEntry && mp == Never) {
-                        continue;
-                    }
-                    _w->writeEntry(ee.key(), ee.value());
-                }
-            }
-        }
-    }
-
-    delete w;
-
-    updateFolderList(true);
-    restoreEntry();
-}
 
 void KWalletEditor::importXML()
 {
