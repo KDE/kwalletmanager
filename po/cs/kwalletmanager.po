@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:46+0000\n"
-"PO-Revision-Date: 2025-05-16 15:07+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-08-09 23:43+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -415,7 +415,7 @@ msgstr "Nezavírat"
 #: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
-msgstr "Nelze vynutit uzavření úschovny. Chybový kód: %1"
+msgstr "Nelze vynutit uzavření úschovny. Chybový kód: %1."
 
 #: kwalletmanager.cpp:282
 #, kde-format
@@ -461,7 +461,7 @@ msgstr "Opravdu si přejete smazat úschovnu '%1'?"
 #: kwalletmanager.cpp:389
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
-msgstr "Nelze smazat úschovnu. Chybový kód: %1"
+msgstr "Nelze smazat úschovnu. Chybový kód: %1."
 
 #: kwalletmanager.cpp:436
 #, kde-format
@@ -486,7 +486,7 @@ msgstr "Soubor nelze otevřít"
 #: kwalletmanager.cpp:476
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
-msgstr "Úschovna s názvem %1 již existuje. Operace byla přerušena."
+msgstr "Úschovna s názvem %1 již existuje. Operace byla přerušena"
 
 #: kwalletmanager.cpp:482
 #, kde-format
