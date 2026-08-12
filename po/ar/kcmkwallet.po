@@ -46,12 +46,12 @@ msgstr "رجاءا أختر اسم للمحفظة الجديدة:"
 #: konfigurator.cpp:220 konfigurator.cpp:298
 #, kde-format
 msgid "Always Allow"
-msgstr "اسمح دوماً"
+msgstr "اسمح دومًا"
 
 #: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
 #, kde-format
 msgid "Always Deny"
-msgstr "امنع دوماً"
+msgstr "امنع دومًا"
 
 #: konfigurator.cpp:258
 #, kde-format
