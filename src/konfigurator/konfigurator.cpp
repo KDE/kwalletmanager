@@ -16,6 +16,7 @@
 #include <QInputDialog>
 
 #include <KAboutData>
+#include <KCoreAddons>
 
 #include <QCheckBox>
 #include <QDBusConnection>
@@ -69,6 +70,11 @@ KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
     _wcw->_accessList->setContextMenuPolicy(Qt::CustomContextMenu);
     _wcw->tabWidget2->tabBar()->setExpanding(true);
     updateWalletLists();
+
+    if (KCoreAddons::version() >= QT_VERSION_CHECK(6, 30, 0)) {
+        _wcw->tabWidget2->removeTab(1);
+        _wcw->tabWidget2->tabBar()->setVisible(false);
+    }
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kwalletmanager"))) {
         _wcw->_launch->hide();

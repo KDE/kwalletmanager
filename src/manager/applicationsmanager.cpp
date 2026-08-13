@@ -7,12 +7,18 @@
 #include "applicationsmanager.h"
 #include "authorizedappmodel.h"
 #include "connectedappmodel.h"
+#include <KCoreAddons>
 #include <KWallet>
 
 ApplicationsManager::ApplicationsManager(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this);
+
+    if (KCoreAddons::version() >= QT_VERSION_CHECK(6, 30, 0)) {
+        _authorizedApps->setVisible(false);
+        label_2->setVisible(false);
+    }
 }
 
 ApplicationsManager::~ApplicationsManager()
