@@ -15,13 +15,6 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QTabWidget" name="tabWidget2">
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <property name="documentMode">
-      <bool>true</bool>
-     </property>
      <widget class="QWidget" name="tab1">
       <attribute name="title">
        <string>Wallet Preferences</string>
@@ -373,46 +366,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab2">
-      <attribute name="title">
-       <string>Access Control</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QCheckBox" name="_openPrompt">
-         <property name="text">
-          <string>&amp;Prompt when an application accesses a wallet</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTreeWidget" name="_accessList">
-         <property name="rootIsDecorated">
-          <bool>true</bool>
-         </property>
-         <column>
-          <property name="text">
-           <string>Wallet</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Application</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Policy</string>
-          </property>
-         </column>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
    </item>
    <item>
     <widget class="KSeparator" name="kseparator2"/>

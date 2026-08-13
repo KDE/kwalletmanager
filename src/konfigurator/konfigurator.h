@@ -38,8 +38,6 @@ public Q_SLOTS:
     void newLocalWallet();
     void newNetworkWallet();
     void updateWalletLists();
-    void deleteEntry();
-    void customContextMenuRequested(const QPoint &pos);
 
 private:
     QString newWallet();

@@ -373,31 +373,6 @@ wallet file.
 </para>
 </sect3>
 </sect2>
-
-<sect2>
-<title>Applications tab</title>
-<para>
-<screenshot>
-<screeninfo>Applications tab</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="kwallet-applications.png"/>
-</imageobject>
-<textobject>
-<phrase>Applications tab</phrase>
-</textobject>
-<caption><para>Applications tab</para></caption>
-</mediaobject>
-</screenshot>
-</para>
-<para>The first list shows all applications currently connected to the selected wallet.
-Use the button at the right side of each entry to disconnect the application.</para>
-
-<para>In the second list all applications are displayed which are authorized to access the wallet.
-Use the button right of each entry in the list to revoke the access.
-</para>
-<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
-</sect2>
 </sect1>
 
 </chapter>

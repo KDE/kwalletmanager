@@ -5,7 +5,6 @@
 */
 
 #include "applicationsmanager.h"
-#include "authorizedappmodel.h"
 #include "connectedappmodel.h"
 #include <KCoreAddons>
 #include <KWallet>
@@ -14,17 +13,11 @@ ApplicationsManager::ApplicationsManager(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this);
-
-    if (KCoreAddons::version() >= QT_VERSION_CHECK(6, 30, 0)) {
-        _authorizedApps->setVisible(false);
-        label_2->setVisible(false);
-    }
 }
 
 ApplicationsManager::~ApplicationsManager()
 {
     delete _connectedAppsModel;
-    delete _authorizedAppModel;
 }
 
 void ApplicationsManager::setWallet(KWallet::Wallet *wallet)
@@ -33,16 +26,11 @@ void ApplicationsManager::setWallet(KWallet::Wallet *wallet)
     _wallet = wallet;
 
     delete _connectedAppsModel;
-    delete _authorizedAppModel;
 
     // create the disconnect widget menu
     _connectedAppsModel = new ConnectedAppModel(_wallet);
     _connectedApps->setWallet(_wallet);
     _connectedApps->setModel(_connectedAppsModel);
-
-    _authorizedAppModel = new AuthorizedAppModel(_wallet);
-    _authorizedApps->setWallet(_wallet);
-    _authorizedApps->setModel(_authorizedAppModel);
 }
 
 #include "moc_applicationsmanager.cpp"

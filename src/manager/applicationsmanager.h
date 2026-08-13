@@ -10,7 +10,6 @@
 #include "ui_applicationsmanager.h"
 #include <QWidget>
 
-class AuthorizedAppModel;
 class ConnectedAppModel;
 namespace KWallet
 {
@@ -29,7 +28,6 @@ public:
 private:
     KWallet::Wallet *_wallet = nullptr;
     ConnectedAppModel *_connectedAppsModel = nullptr;
-    AuthorizedAppModel *_authorizedAppModel = nullptr;
 };
 
 #endif // APPLICATIONSMANAGER_H

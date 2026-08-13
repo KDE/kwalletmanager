@@ -18,8 +18,6 @@ target_sources(kwalletmanager5 PRIVATE
     connectedapplicationstable.cpp
     connectedappmodel.cpp
     disconnectappbutton.cpp
-    authorizedappmodel.cpp
-    authorizedapplicationstable.cpp
     revokeauthbutton.cpp
     clipboardutils.cpp
     kwalletmanager.h
@@ -27,10 +25,8 @@ target_sources(kwalletmanager5 PRIVATE
     walletcontrolwidget.h
     allyourbase.h
     kwhexview.h
-    authorizedapplicationstable.h
     kwalletmanagerwidgetitem.h
     connectedapplicationstable.h
-    authorizedappmodel.h
     kwalleteditor.h
     connectedappmodel.h
     kwalletpopup.h
