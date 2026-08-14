@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2010-12-14 11:03+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -67,12 +67,6 @@ msgstr "កំហុស​ដែល​មិន​រំពឹង​មួយ​
 #: applicationsmanager.ui:17
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
 msgstr ""
 
 #: disconnectappbutton.cpp:17

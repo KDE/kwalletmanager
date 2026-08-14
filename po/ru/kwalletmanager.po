@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-04-04 12:36+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -86,12 +86,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "К этому бумажнику в настоящее время подключены следующие приложения:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Разрешение подключаться к этому бумажнику имеют следующие приложения:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -728,6 +722,10 @@ msgstr "&Отменить"
 #, kde-format
 msgid "&Save"
 msgstr "&Сохранить"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr ""
+#~ "Разрешение подключаться к этому бумажнику имеют следующие приложения:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Показывать окно при запуске"

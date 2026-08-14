@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:48+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2007-01-27 00:45+0100\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -28,56 +28,41 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "serzh.by@gmail.com"
 
-#: konfigurator.cpp:105
+#: konfigurator.cpp:101
 #, fuzzy, kde-format
 msgid "New Wallet"
 msgstr "Новы папернік"
 
-#: konfigurator.cpp:105
+#: konfigurator.cpp:101
 #, fuzzy, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Вылучыце імя для новага паперніка:"
 
-#: konfigurator.cpp:218 konfigurator.cpp:295
-#, fuzzy, kde-format
-msgid "Always Allow"
-msgstr "Дазваляць заўсёды"
-
-#: konfigurator.cpp:221 konfigurator.cpp:228 konfigurator.cpp:308
-#, fuzzy, kde-format
-msgid "Always Deny"
-msgstr "Забараняць заўсёды"
-
-#: konfigurator.cpp:256
+#: konfigurator.cpp:210
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:256 konfigurator.cpp:258
+#: konfigurator.cpp:210 konfigurator.cpp:212
 #, fuzzy, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Модуль кіравання папернікамі KDE"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:212
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:354
-#, kde-format
-msgid "&Delete"
-msgstr ""
-
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: walletconfigwidget.ui:27
+#: walletconfigwidget.ui:20
 #, fuzzy, kde-format
 msgid "Wallet Preferences"
 msgstr "Параметры паперніка"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:33
+#: walletconfigwidget.ui:26
 #, fuzzy, kde-format
 msgid ""
 "<p>The wallet subsystem provides a convenient and secure way to manage all "
@@ -87,13 +72,13 @@ msgstr ""
 "p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _enabled)
-#: walletconfigwidget.ui:36
+#: walletconfigwidget.ui:29
 #, fuzzy, kde-format
 msgid "&Enable the KDE wallet subsystem"
 msgstr "Выкарыстаць папернік KDE"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:49
+#: walletconfigwidget.ui:42
 #, fuzzy, kde-format
 msgid ""
 "It is best to close your wallets when you are not using them to prevent "
@@ -103,19 +88,19 @@ msgstr ""
 "зазірнуць і выкарыстаць іх."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: walletconfigwidget.ui:52
+#: walletconfigwidget.ui:45
 #, kde-format
 msgid "Close Behavior"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
-#: walletconfigwidget.ui:69
+#: walletconfigwidget.ui:62
 #, fuzzy, kde-format
 msgid "Close wallet:"
 msgstr "Зачыніць папернік"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:76
+#: walletconfigwidget.ui:69
 #, fuzzy, kde-format
 msgid ""
 "<p><b>Close wallet as soon as applications that use it have stopped.</"
@@ -129,14 +114,14 @@ msgstr ""
 "то каб атрымаць да яго доступ, неабходна будзе ўвесці пароль.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
-#: walletconfigwidget.ui:79
+#: walletconfigwidget.ui:72
 #, fuzzy, kde-format
 msgid "When last application stops using it"
 msgstr "Зачыніць папернік, калі апошняе прыкладанне перастане яго выкарыстаць"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:86 walletconfigwidget.ui:105
+#: walletconfigwidget.ui:79 walletconfigwidget.ui:98
 #, fuzzy, kde-format
 msgid ""
 "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
@@ -146,74 +131,74 @@ msgstr ""
 "зачынены, то каб атрымаць да яго доступ, неабходна будзе ўвесці пароль.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: walletconfigwidget.ui:89
+#: walletconfigwidget.ui:82
 #, fuzzy, kde-format
 msgid "When unused for:"
 msgstr "Зачыніць, калі не выкарыстоўваецца на працягу:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
-#: walletconfigwidget.ui:111
+#: walletconfigwidget.ui:104
 #, fuzzy, kde-format
 msgid " minutes"
 msgstr " мін"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: walletconfigwidget.ui:135
+#: walletconfigwidget.ui:128
 #, fuzzy, kde-format
 msgid "Automatic Wallet Selection"
 msgstr "Аўтаматычны выбар паперніка"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
-#: walletconfigwidget.ui:155
+#: walletconfigwidget.ui:148
 #, fuzzy, kde-format
 msgid "Use different default wallet for local passwords"
 msgstr "Альтэрнатыўны папернік для лакальных пароляў:"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
-#: walletconfigwidget.ui:192 walletconfigwidget.ui:232
+#: walletconfigwidget.ui:185 walletconfigwidget.ui:225
 #, fuzzy, kde-format
 msgid "New..."
 msgstr "Стварыць..."
 
 #. i18n: ectx: property (text), widget (QLabel, selectDefaultWalletLabel)
-#: walletconfigwidget.ui:201
+#: walletconfigwidget.ui:194
 #, kde-format
 msgid "Default wallet:"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: walletconfigwidget.ui:246
+#: walletconfigwidget.ui:239
 #, fuzzy, kde-format
 msgid "Wallet Manager"
 msgstr "Мэнэджэр папернікаў"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _launchManager)
-#: walletconfigwidget.ui:260
+#: walletconfigwidget.ui:253
 #, fuzzy, kde-format
 msgid "Show manager in system tray"
 msgstr "Паказаць мэнэджэр у сістэмным латку"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autocloseManager)
-#: walletconfigwidget.ui:288
+#: walletconfigwidget.ui:281
 #, fuzzy, kde-format
 msgid "Hide system tray icon when last wallet closes"
 msgstr "Схаваць значок у сістэмным латку, калі папернік зачынены"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: walletconfigwidget.ui:302
+#: walletconfigwidget.ui:295
 #, kde-format
 msgid "Secret Service"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
-#: walletconfigwidget.ui:321
+#: walletconfigwidget.ui:314
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
 msgstr ""
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
-#: walletconfigwidget.ui:331
+#: walletconfigwidget.ui:324
 #, kde-format
 msgid ""
 "The Secret Service interface lets applications store passwords and other "
@@ -221,41 +206,39 @@ msgid ""
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: walletconfigwidget.ui:378
-#, fuzzy, kde-format
-msgid "Access Control"
-msgstr "Кантроль доступу"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _openPrompt)
-#: walletconfigwidget.ui:384
-#, fuzzy, kde-format
-msgid "&Prompt when an application accesses a wallet"
-msgstr "Запыт пры адкрыцці паперніка"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:398
-#, fuzzy, kde-format
-msgid "Wallet"
-msgstr "Папернік"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:403
-#, fuzzy, kde-format
-msgid "Application"
-msgstr "Прыкладанне"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, _accessList)
-#: walletconfigwidget.ui:408
-#, fuzzy, kde-format
-msgid "Policy"
-msgstr "Палітыка"
-
 #. i18n: ectx: property (text), widget (QPushButton, _launch)
-#: walletconfigwidget.ui:441
+#: walletconfigwidget.ui:394
 #, fuzzy, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Загрузіць мэнэджэр папернікаў"
+
+#, fuzzy
+#~ msgid "Always Allow"
+#~ msgstr "Дазваляць заўсёды"
+
+#, fuzzy
+#~ msgid "Always Deny"
+#~ msgstr "Забараняць заўсёды"
+
+#, fuzzy
+#~ msgid "Access Control"
+#~ msgstr "Кантроль доступу"
+
+#, fuzzy
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "Запыт пры адкрыцці паперніка"
+
+#, fuzzy
+#~ msgid "Wallet"
+#~ msgstr "Папернік"
+
+#, fuzzy
+#~ msgid "Application"
+#~ msgstr "Прыкладанне"
+
+#, fuzzy
+#~ msgid "Policy"
+#~ msgstr "Палітыка"
 
 #, fuzzy
 #~ msgid ""

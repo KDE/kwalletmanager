@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2026-05-24 15:05+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -81,12 +81,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "現在これらのアプリケーションがこのウォレットに接続しています:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "これらのアプリケーションがウォレットへのアクセスを承認されています:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -728,3 +722,6 @@ msgstr "元に戻す(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "これらのアプリケーションがウォレットへのアクセスを承認されています:"

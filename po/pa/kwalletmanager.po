@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2024-01-28 19:47-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -70,12 +70,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "ਇਸ ਸਮੇਂ ਇਹ ਵਾਲਟ ਨਾਲ ਇਹ ਐਪਲੀਕੇਸ਼ਨਾਂ ਕੁਨੈਕਟ ਹਨ:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਇਹ ਵਾਲਟ ਵਰਤਣ ਲਈ ਪਰਮਾਣਿਤ ਕੀਤਾ ਹੈ:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -718,6 +712,9 @@ msgstr "ਵਾਪਸ(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "ਸੰਭਾਲੋ(&S)"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਇਹ ਵਾਲਟ ਵਰਤਣ ਲਈ ਪਰਮਾਣਿਤ ਕੀਤਾ ਹੈ:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਵਿੰਡੋ ਵੇਖੋ"

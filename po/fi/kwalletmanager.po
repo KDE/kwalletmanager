@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-02-14 19:38+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -76,13 +76,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Nämä sovellukset ovat tällä hetkellä yhteydessä tähän lompakkoon:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr ""
-"Näillä sovelluksilla on tällä hetkellä valtuutus käyttää tätä lompakkoa:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -721,6 +714,10 @@ msgstr "&Kumoa"
 #, kde-format
 msgid "&Save"
 msgstr "&Tallenna"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr ""
+#~ "Näillä sovelluksilla on tällä hetkellä valtuutus käyttää tätä lompakkoa:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Näytä ikkuna käynnistyksessä"

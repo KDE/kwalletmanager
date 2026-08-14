@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2026-08-09 23:43+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -73,12 +73,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Tyto aplikace jsou momentálně připojeny k této úschovně:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Tyto aplikace jsou oprávněny přistupovat k úschovně:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -714,3 +708,6 @@ msgstr "&Zpět"
 #, kde-format
 msgid "&Save"
 msgstr "&Uložit"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Tyto aplikace jsou oprávněny přistupovat k úschovně:"

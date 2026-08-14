@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2019-11-11 00:05+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -73,12 +73,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Need rakendused on praegu ühendatud selle turvalaekaga:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Neil rakendustel on õigus kasutada seda turvalaegast:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -730,6 +724,9 @@ msgstr "&Võta tagasi"
 #, kde-format
 msgid "&Save"
 msgstr "&Salvesta"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Neil rakendustel on õigus kasutada seda turvalaegast:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Käivitamisel näidatakse akent"

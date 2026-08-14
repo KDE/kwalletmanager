@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2022-10-31 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -71,12 +71,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Các ứng dụng này hiện đang được kết nối với ví này:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Các ứng dụng này được uỷ quyền để truy cập ví này:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -726,6 +720,9 @@ msgstr "Đảo n&gược"
 #, kde-format
 msgid "&Save"
 msgstr "&Lưu"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Các ứng dụng này được uỷ quyền để truy cập ví này:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Hiện cửa sổ khi khởi động"

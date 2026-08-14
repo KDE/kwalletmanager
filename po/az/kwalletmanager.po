@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2022-10-17 23:41+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -71,12 +71,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Bu tətbiqlər hal-hazırda bu cüzdana qoşulub:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Bu tətbiqlərin bu cüzdana girişinə icazə verildi:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -727,6 +721,9 @@ msgstr "&Ləğv etmək"
 #, kde-format
 msgid "&Save"
 msgstr "&Saxlayın"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Bu tətbiqlərin bu cüzdana girişinə icazə verildi:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "ƏS açıldıqda pəncərəni göstərmək"

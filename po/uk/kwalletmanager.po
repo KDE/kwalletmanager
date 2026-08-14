@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-01-21 22:53+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -77,12 +77,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "З цією торбинкою паролів зараз з’єднано такі програми:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Доступ до паролів з цієї торбинки надано таким програмам:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -721,6 +715,9 @@ msgstr "&Вернути"
 #, kde-format
 msgid "&Save"
 msgstr "&Зберегти"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Доступ до паролів з цієї торбинки надано таким програмам:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Показувати вікно при запуску"

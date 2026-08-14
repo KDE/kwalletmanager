@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2022-11-16 16:32+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -70,12 +70,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, fuzzy, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Applicationes por accesser Internet"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -709,6 +703,10 @@ msgstr "&Defar"
 #, fuzzy, kde-format
 msgid "&Save"
 msgstr "_Salvar"
+
+#, fuzzy
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Applicationes por accesser Internet"
 
 #, fuzzy
 #~ msgid "Show window on startup"

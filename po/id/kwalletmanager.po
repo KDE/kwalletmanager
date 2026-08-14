@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2022-09-27 17:54+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -73,12 +73,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Aplikasi aplikasi tersebut sedang terhubung dengan dompet ini"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Aplikasi tersebut diizinkan untuk mengakses dompet ini:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -728,6 +722,9 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Aplikasi tersebut diizinkan untuk mengakses dompet ini:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Tampilkan jendela saat startup"

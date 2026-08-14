@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-11-30 10:55+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -73,12 +73,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Þessi forrit eru núna tengd við þetta veski:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Þessi forrit hafa heimild til að nota þetta veski:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -715,6 +709,9 @@ msgstr "&Afturkalla"
 #, kde-format
 msgid "&Save"
 msgstr "&Vista"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Þessi forrit hafa heimild til að nota þetta veski:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Sýna glugga við ræsingu"

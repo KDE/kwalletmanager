@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2017-07-31 15:01+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -82,12 +82,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Οι εφαρμογές αυτές είναι τώρα συνδεδεμένες σε αυτό το πορτοφόλι:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Οι εφαρμογές αυτές έχουν εξουσιοδότηση πρόσβασης σε αυτό το πορτοφόλι:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -739,6 +733,10 @@ msgstr "Α&ναίρεση"
 #, kde-format
 msgid "&Save"
 msgstr "Απο&θήκευση"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr ""
+#~ "Οι εφαρμογές αυτές έχουν εξουσιοδότηση πρόσβασης σε αυτό το πορτοφόλι:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Εμφάνιση παραθύρου κατά την εκκίνηση"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2013-11-16 20:49+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -77,12 +77,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "For tiden er disse programmene koblet til denne lommeboka:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "DIsse programmene har lov til å se i denne lommeboka:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -717,3 +711,6 @@ msgstr "&Angre"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagre"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "DIsse programmene har lov til å se i denne lommeboka:"

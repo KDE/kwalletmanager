@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-04-28 01:32+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -72,13 +72,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Šiuo metu šios programos yra prisijungusios prie šios slaptažodinės:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr ""
-"Šiuo metu šios programos yra įgaliotos gauti prieigą prie šios slaptažodinės:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -715,6 +708,11 @@ msgstr "Atša&ukti"
 #, kde-format
 msgid "&Save"
 msgstr "Į&rašyti"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr ""
+#~ "Šiuo metu šios programos yra įgaliotos gauti prieigą prie šios "
+#~ "slaptažodinės:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Rodyti langą paleidimo metu"

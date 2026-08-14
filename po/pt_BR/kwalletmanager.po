@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-02-04 23:35-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -77,12 +77,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Estes aplicativos estão de momento conectados a esta carteira:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr "Estes aplicativos estão autorizados a acessar esta carteira:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -719,6 +713,9 @@ msgstr "&Desfazer"
 #, kde-format
 msgid "&Save"
 msgstr "&Salvar"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr "Estes aplicativos estão autorizados a acessar esta carteira:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Mostrar janela na inicialização"

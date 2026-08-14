@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:46+0000\n"
+"POT-Creation-Date: 2026-08-14 00:49+0000\n"
 "PO-Revision-Date: 2025-02-03 21:15+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -73,14 +73,6 @@ msgstr ""
 #, kde-format
 msgid "These applications are currently connected to this wallet:"
 msgstr "Ezek az alkalmazások kapcsolódnak jelenleg ehhez a tárolóhoz:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: applicationsmanager.ui:64
-#, kde-format
-msgid "These applications are authorized to access this wallet:"
-msgstr ""
-"Ezek az alkalmazások vannak felhatalmazva ehhez a tárolóhoz való "
-"hozzáférésre:"
 
 #: disconnectappbutton.cpp:17
 #, kde-format
@@ -717,6 +709,11 @@ msgstr "&Visszavonás"
 #, kde-format
 msgid "&Save"
 msgstr "Men&tés"
+
+#~ msgid "These applications are authorized to access this wallet:"
+#~ msgstr ""
+#~ "Ezek az alkalmazások vannak felhatalmazva ehhez a tárolóhoz való "
+#~ "hozzáférésre:"
 
 #~ msgid "Show window on startup"
 #~ msgstr "Az ablak jelenjen meg indításkor"
