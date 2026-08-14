@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-08-14 02:47+0000\n"
 "PO-Revision-Date: 2024-08-14 06:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -32,37 +32,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gregor.rakar@kiss.si,andrejm@ubuntu.si"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:112
 #, kde-format
 msgid "New Wallet"
 msgstr "Nova listnica"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:112
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Izberite ime za novo listnico:"
 
-#: konfigurator.cpp:220 konfigurator.cpp:298
+#: konfigurator.cpp:226 konfigurator.cpp:304
 #, kde-format
 msgid "Always Allow"
 msgstr "Vedno dovoli"
 
-#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
+#: konfigurator.cpp:229 konfigurator.cpp:236 konfigurator.cpp:317
 #, kde-format
 msgid "Always Deny"
 msgstr "Vedno zavrni"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:264
 #, kde-format
 msgid "Permission denied."
 msgstr "Nimate dovoljenja."
 
-#: konfigurator.cpp:258 konfigurator.cpp:260
+#: konfigurator.cpp:264 konfigurator.cpp:266
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Nadzorni modul Listnice za KDE"
 
-#: konfigurator.cpp:260
+#: konfigurator.cpp:266
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -71,7 +71,7 @@ msgstr ""
 "Napaka med overjanjem dejanja:\n"
 "%1"
 
-#: konfigurator.cpp:358
+#: konfigurator.cpp:364
 #, kde-format
 msgid "&Delete"
 msgstr "I&zbriši"

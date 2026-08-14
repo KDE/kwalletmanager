@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-08-14 02:47+0000\n"
 "PO-Revision-Date: 2024-08-15 11:27+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -45,37 +45,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "rjacolin@ifrance.com, bruno.patri@gmail.com"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:112
 #, kde-format
 msgid "New Wallet"
 msgstr "Nouveau portefeuille"
 
-#: konfigurator.cpp:106
+#: konfigurator.cpp:112
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Veuillez choisir un nom pour le nouveau portefeuille :"
 
-#: konfigurator.cpp:220 konfigurator.cpp:298
+#: konfigurator.cpp:226 konfigurator.cpp:304
 #, kde-format
 msgid "Always Allow"
 msgstr "Toujours accepter"
 
-#: konfigurator.cpp:223 konfigurator.cpp:230 konfigurator.cpp:311
+#: konfigurator.cpp:229 konfigurator.cpp:236 konfigurator.cpp:317
 #, kde-format
 msgid "Always Deny"
 msgstr "Toujours refuser"
 
-#: konfigurator.cpp:258
+#: konfigurator.cpp:264
 #, kde-format
 msgid "Permission denied."
 msgstr "Permission refusée."
 
-#: konfigurator.cpp:258 konfigurator.cpp:260
+#: konfigurator.cpp:264 konfigurator.cpp:266
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Module de configuration des portefeuilles de KDE"
 
-#: konfigurator.cpp:260
+#: konfigurator.cpp:266
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -84,7 +84,7 @@ msgstr ""
 "Erreur lors de l'action d'authentification :\n"
 "%1"
 
-#: konfigurator.cpp:358
+#: konfigurator.cpp:364
 #, kde-format
 msgid "&Delete"
 msgstr "&Supprimer"
