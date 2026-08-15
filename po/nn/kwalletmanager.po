@@ -712,6 +712,3 @@ msgstr "A&ngra"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagra"
-
-#~ msgid "These applications are authorized to access this wallet:"
-#~ msgstr "Desse programma har tilgangsløyve til denne lommeboka:"

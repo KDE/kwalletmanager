@@ -533,36 +533,6 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >, um die neuen Einträge verschlüsselt in den Passwortspeicher einzufügen.  </para>
 </sect3>
 </sect2>
-
-<sect2>
-<title
->Karteikarte Anwendungen</title>
-<para>
-<screenshot>
-<screeninfo
->Karteikarte Anwendungen</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="kwallet-applications.png"/>
-</imageobject>
-<textobject>
-<phrase
->Karteikarte Anwendungen</phrase>
-</textobject>
-<caption
-><para
->Karteikarte Anwendungen</para
-></caption>
-</mediaobject>
-</screenshot>
-</para>
-<para
->Die erste Liste zeigt alle Anwendungen, die gerade mit dem ausgewählten Passwortspeicher verbunden sind. Verwenden Sie den Knopf rechts neben jedem Eintrag, um die Verbindung der Anwendung zu trennen.</para>
-
-<para
->In der zweiten Liste werden alle Anwendungen angezeigt, deren Zugriff auf den Passwortspeicher autorisiert ist. Verwenden Sie den Knopf rechts neben jedem Eintrag in der Liste, um die Autorisierung zurückzuziehen. </para>
-<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
-</sect2>
 </sect1>
 
 </chapter>

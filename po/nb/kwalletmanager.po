@@ -711,6 +711,3 @@ msgstr "&Angre"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagre"
-
-#~ msgid "These applications are authorized to access this wallet:"
-#~ msgstr "DIsse programmene har lov til å se i denne lommeboka:"

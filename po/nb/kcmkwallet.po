@@ -215,27 +215,3 @@ msgstr ""
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Start lommebokhåndtering"
-
-#~ msgid "Always Allow"
-#~ msgstr "Tillat alltid"
-
-#~ msgid "Always Deny"
-#~ msgstr "Nekt alltid"
-
-#~ msgid "&Delete"
-#~ msgstr "&Slett"
-
-#~ msgid "Access Control"
-#~ msgstr "Tilgangskontroll"
-
-#~ msgid "&Prompt when an application accesses a wallet"
-#~ msgstr "&Spør når et program søker tilgang til en lommebok"
-
-#~ msgid "Wallet"
-#~ msgstr "Lommebok"
-
-#~ msgid "Application"
-#~ msgstr "Program"
-
-#~ msgid "Policy"
-#~ msgstr "Praksis"
