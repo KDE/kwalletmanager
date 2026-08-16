@@ -517,36 +517,6 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 > pour mémoriser les nouvelles entrées dans le fichier chiffré de portefeuille. </para>
 </sect3>
 </sect2>
-
-<sect2>
-<title
->L'onglet Applications</title>
-<para>
-<screenshot>
-<screeninfo
->L'onglet Applications</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="kwallet-applications.png"/>
-</imageobject>
-<textobject>
-<phrase
->L'onglet Applications</phrase>
-</textobject>
-<caption
-><para
->L'onglet Applications</para
-></caption>
-</mediaobject>
-</screenshot>
-</para>
-<para
->La première liste montre toutes les applications qui sont actuellement connectées au portefeuille sélectionné. Utilisez le bouton à droite de chaque entrée pour déconnecter l'application.</para>
-
-<para
->Dans la seconde liste, toutes les applications qui sont autorisées à accéder au portefeuille sont affichées. Utilisez le bouton à droite de chaque entrée pour révoquer l'accès. </para>
-<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
-</sect2>
 </sect1>
 
 </chapter>
