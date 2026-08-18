@@ -709,6 +709,3 @@ msgstr "&Отмяна"
 #, kde-format
 msgid "&Save"
 msgstr "&Запис"
-
-#~ msgid "These applications are authorized to access this wallet:"
-#~ msgstr "Следните приложения имат достъп до този портфейл:"

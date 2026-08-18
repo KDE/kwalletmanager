@@ -220,38 +220,3 @@ msgstr ""
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Стартиране на мениджъра"
-
-#~ msgid "Always Allow"
-#~ msgstr "Включен достъп"
-
-#~ msgid "Always Deny"
-#~ msgstr "Изключен достъп"
-
-#~ msgid "&Delete"
-#~ msgstr "&Изтриване"
-
-#~ msgid "Access Control"
-#~ msgstr "Достъп"
-
-#~ msgid "&Prompt when an application accesses a wallet"
-#~ msgstr "П&отвърждение при достъп до портфейл от приложение"
-
-#~ msgid "Wallet"
-#~ msgstr "Портфейл"
-
-#~ msgid "Application"
-#~ msgstr "Програма"
-
-#~ msgid "Policy"
-#~ msgstr "Политика"
-
-#~ msgid ""
-#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
-#~ "wallet is closed the password is needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p>Затваряне на портфейла, когато се стартира предпазителя на екрана."
-#~ "<br>Когато портфейлът се затвори, е необходимо въвеждането на паролата на "
-#~ "портфейла, за да бъде отворен и използван отново.</p>"
-
-#~ msgid "When screensaver starts"
-#~ msgstr "Затваряне при стартиране на предпазителя на екрана"
