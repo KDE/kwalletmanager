@@ -702,6 +702,3 @@ msgstr "撤销(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
-
-#~ msgid "These applications are authorized to access this wallet:"
-#~ msgstr "已获得此密码库访问权限的应用程序："

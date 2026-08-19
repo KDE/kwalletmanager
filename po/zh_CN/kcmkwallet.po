@@ -212,27 +212,3 @@ msgstr ""
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "启动密码库管理器(&L)"
-
-#~ msgid "Always Allow"
-#~ msgstr "总是允许"
-
-#~ msgid "Always Deny"
-#~ msgstr "总是拒绝"
-
-#~ msgid "&Delete"
-#~ msgstr "删除(&D)"
-
-#~ msgid "Access Control"
-#~ msgstr "访问控制"
-
-#~ msgid "&Prompt when an application accesses a wallet"
-#~ msgstr "应用程序访问密码库时提示(&P)"
-
-#~ msgid "Wallet"
-#~ msgstr "密码库"
-
-#~ msgid "Application"
-#~ msgstr "应用程序"
-
-#~ msgid "Policy"
-#~ msgstr "策略"
