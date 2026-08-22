@@ -23,7 +23,6 @@ public Q_SLOTS:
     void closeWallet();
     void createWallet();
     void changeWalletPassword();
-    void disconnectApp();
 
 Q_SIGNALS:
     void walletOpened(const QString &walletName);

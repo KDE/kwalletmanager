@@ -11,12 +11,12 @@
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <property name="margin">
+   <property name="margin" stdset="0">
     <number>0</number>
    </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="margin">
+     <property name="margin" stdset="0">
       <number>6</number>
      </property>
      <item>
@@ -35,10 +35,10 @@
      <item>
       <spacer name="topSpacer">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
+        <enum>QSizePolicy::Policy::Expanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -65,81 +65,27 @@
     </layout>
    </item>
    <item>
-    <widget class="QTabWidget" name="_tabs">
-     <property name="currentIndex">
+    <widget class="QFrame" name="_editorFrame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <property name="lineWidth">
       <number>0</number>
      </property>
-     <property name="documentMode">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="_contentsTab">
-      <attribute name="icon">
-       <iconset theme="wallet-closed"/>
-      </attribute>
-      <attribute name="title">
-       <string>Contents</string>
-      </attribute>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QFrame" name="_editorFrame">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <layout class="QVBoxLayout" name="_editorFrameLayout">
-          <property name="margin">
-           <number>0</number>
-          </property>
-         </layout>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="_appsTab">
-      <attribute name="icon">
-       <iconset theme="start-here-kde"/>
-      </attribute>
-      <attribute name="title">
-       <string>Applications</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QFrame" name="_applicationsFrame">
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <layout class="QVBoxLayout" name="_applicationsFrameLayout">
-          <property name="margin">
-           <number>0</number>
-          </property>
-         </layout>
-        </widget>
-       </item>
-      </layout>
-     </widget>
+     <layout class="QVBoxLayout" name="_editorFrameLayout">
+      <property name="margin" stdset="0">
+       <number>0</number>
+      </property>
+     </layout>
     </widget>
    </item>
   </layout>
@@ -154,7 +100,6 @@
  <tabstops>
   <tabstop>_openClose</tabstop>
   <tabstop>_changePassword</tabstop>
-  <tabstop>_tabs</tabstop>
  </tabstops>
  <resources/>
  <connections>

@@ -14,10 +14,6 @@ target_sources(kwalletmanager5 PRIVATE
     allyourbase.cpp
     kbetterthankdialogbase.cpp
     registercreateactionmethod.cpp
-    applicationsmanager.cpp
-    connectedapplicationstable.cpp
-    connectedappmodel.cpp
-    disconnectappbutton.cpp
     revokeauthbutton.cpp
     clipboardutils.cpp
     kwalletmanager.h
@@ -26,17 +22,13 @@ target_sources(kwalletmanager5 PRIVATE
     allyourbase.h
     kwhexview.h
     kwalletmanagerwidgetitem.h
-    connectedapplicationstable.h
     kwalleteditor.h
-    connectedappmodel.h
     kwalletpopup.h
     kbetterthankdialogbase.h
     revokeauthbutton.h
     registercreateactionmethod.h
-    disconnectappbutton.h
     kwmapeditor.h
     kwtextedit.h
-    applicationsmanager.h
     clipboardutils.h
 
     kwalletmanager.qrc
@@ -56,7 +48,6 @@ ki18n_wrap_ui(kwalletmanager5
     walletwidget.ui
     kbetterthankdialogbase.ui
     walletcontrolwidget.ui
-    applicationsmanager.ui
 )
 
 
