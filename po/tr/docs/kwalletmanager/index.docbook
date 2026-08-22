@@ -533,36 +533,6 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 > düğmesine basın. </para>
 </sect3>
 </sect2>
-
-<sect2>
-<title
->Uygulamalar sekmesi</title>
-<para>
-<screenshot>
-<screeninfo
->Uygulamalar sekmesi</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="kwallet-applications.png"/>
-</imageobject>
-<textobject>
-<phrase
->Uygulamalar sekmesi</phrase>
-</textobject>
-<caption
-><para
->Uygulamalar sekmesi</para
-></caption>
-</mediaobject>
-</screenshot>
-</para>
-<para
->İlk liste, o anda seçilen cüzdana bağlı olan tüm uygulamaları gösterir. Uygulamanın bağlantısını kesmek için her girişin sağ tarafındaki düğmeyi kullanın.</para>
-
-<para
->İkinci listede, cüzdana erişme yetkisi olan tüm uygulamalar görüntülenir. Erişimi iptal etmek için listedeki her girişin sağındaki düğmeyi kullanın. </para>
-<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
-</sect2>
 </sect1>
 
 </chapter>
