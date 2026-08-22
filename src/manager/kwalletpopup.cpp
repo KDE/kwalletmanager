@@ -39,18 +39,6 @@ KWalletPopup::KWalletPopup(const QString &wallet, QWidget *parent, const QString
     connect(act, &QAction::triggered, this, &KWalletPopup::changeWalletPassword);
     addAction(act);
 
-    const QStringList ul = KWallet::Wallet::users(wallet);
-    if (!ul.isEmpty()) {
-        auto pm = new QMenu(this);
-        pm->setObjectName(QStringLiteral("Disconnect Apps"));
-        for (QStringList::const_iterator it = ul.begin(), end(ul.end()); it != end; ++it) {
-            QAction *a = pm->addAction(*it, this, &KWalletPopup::disconnectApp);
-            a->setData(*it);
-        }
-        QAction *act = addMenu(pm);
-        act->setText(i18n("Disconnec&t"));
-    }
-
     act = KStandardAction::close(this, SLOT(closeWallet()), ac);
     ac->addAction(QStringLiteral("wallet_close"), act);
     // FIXME: let's track this inside the manager so we don't need a dcop
@@ -91,15 +79,6 @@ void KWalletPopup::changeWalletPassword()
 void KWalletPopup::createWallet()
 {
     Q_EMIT walletCreated();
-}
-
-void KWalletPopup::disconnectApp()
-{
-    auto a = qobject_cast<QAction *>(sender());
-    Q_ASSERT(a);
-    if (a) {
-        KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
-    }
 }
 
 #include "moc_kwalletpopup.cpp"

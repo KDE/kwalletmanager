@@ -5,7 +5,6 @@
 */
 
 #include "walletcontrolwidget.h"
-#include "applicationsmanager.h"
 #include "kwalleteditor.h"
 #include "kwalletmanager_debug.h"
 
@@ -61,17 +60,9 @@ void WalletControlWidget::onSetupWidget()
         }
         _walletEditor->setWallet(_wallet);
 
-        if (!_applicationsManager) {
-            _applicationsManager = new ApplicationsManager(_applicationsFrame);
-            _applicationsFrameLayout->addWidget(_applicationsManager);
-            _applicationsManager->setVisible(true);
-        }
-        _applicationsManager->setWallet(_wallet);
-
         _changePassword->setEnabled(true);
         _stateLabel->setText(
             i18nc("the 'kdewallet' is currently open (e.g. %1 will be replaced with current wallet name)", "The '%1' wallet is currently open.", _walletName));
-        _tabs->setTabIcon(0, QIcon::fromTheme(QLatin1String("wallet-open")).pixmap(16));
     } else {
         _openClose->setText(i18n("&Open..."));
 
@@ -81,14 +72,8 @@ void WalletControlWidget::onSetupWidget()
             _walletEditor = nullptr;
         }
 
-        if (_applicationsManager) {
-            _applicationsManager->setVisible(false);
-            delete _applicationsManager;
-            _applicationsManager = nullptr;
-        }
         _changePassword->setEnabled(false);
         _stateLabel->setText(i18n("The wallet is currently closed."));
-        _tabs->setTabIcon(0, QIcon::fromTheme(QStringLiteral("wallet-closed")).pixmap(16));
     }
 }
 
@@ -143,15 +128,6 @@ void WalletControlWidget::updateWalletDisplay()
     //         _disconnect->removeAction(*i);
     //     }
     //
-}
-
-void WalletControlWidget::onDisconnectApplication()
-{
-    auto a = qobject_cast<QAction *>(sender());
-    Q_ASSERT(a);
-    if (a) {
-        KWallet::Wallet::disconnectApplication(_walletName, a->data().toString());
-    }
 }
 
 void WalletControlWidget::onChangePassword()

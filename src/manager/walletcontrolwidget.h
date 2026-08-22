@@ -9,7 +9,6 @@
 #include "ui_walletcontrolwidget.h"
 
 class KWalletEditor;
-class ApplicationsManager;
 
 namespace KWallet
 {
@@ -30,7 +29,6 @@ public Q_SLOTS:
     void onOpenClose();
     void onWalletClosed();
     void updateWalletDisplay();
-    void onDisconnectApplication();
     void onChangePassword();
 
 protected:
@@ -41,7 +39,6 @@ private:
     const QString _walletName;
     KWallet::Wallet *_wallet = nullptr;
     KWalletEditor *_walletEditor = nullptr;
-    ApplicationsManager *_applicationsManager = nullptr;
 };
 
 #endif // WALLETCONTROLWIDGET_H
