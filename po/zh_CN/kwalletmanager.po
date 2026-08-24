@@ -686,12 +686,3 @@ msgstr "撤销(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
-
-#~ msgid "&Import a wallet..."
-#~ msgstr "导入密码库(&I)..."
-
-#~ msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-#~ msgstr "无法为下载“<b>%1</b>”创建临时文件。"
-
-#~ msgid "Unable to access wallet '<b>%1</b>'."
-#~ msgstr "无法访问密码库“<b>%1</b>”。"
