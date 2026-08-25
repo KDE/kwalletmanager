@@ -695,6 +695,3 @@ msgstr "&Angre"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagre"
-
-#~ msgid "Unable to access wallet '<b>%1</b>'."
-#~ msgstr "Fikk ikke tilgang til lommebok '<b>%1</b>'."

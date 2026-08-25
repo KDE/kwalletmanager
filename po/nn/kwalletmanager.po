@@ -696,12 +696,3 @@ msgstr "A&ngra"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagra"
-
-#~ msgid "&Import a wallet..."
-#~ msgstr "&Importer lommebok …"
-
-#~ msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-#~ msgstr "Klarte ikkje lagra mellombels fil for nedlasting «<b>%1</b>»."
-
-#~ msgid "Unable to access wallet '<b>%1</b>'."
-#~ msgstr "Fekk ikkje tilgang til lommeboka «<b>%1</b>»."
