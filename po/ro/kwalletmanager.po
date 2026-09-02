@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2025-10-19 10:31+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -68,17 +68,6 @@ msgid ""
 msgstr ""
 "A intervenit o eroare neașteptată la încercarea de a șterge dosarul "
 "original, dar dosarul a fost copiat cu succes."
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Aceste aplicații sunt conectate momentan la acest portofel:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Deconectează"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -150,7 +139,7 @@ msgstr "&Nou..."
 msgid "&Rename"
 msgstr "&Redenumește"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Ș&terge"
@@ -377,7 +366,7 @@ msgstr "Configurează &portofelul..."
 msgid "Close &All Wallets"
 msgstr "Închide &toate portofelele"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -386,17 +375,17 @@ msgstr ""
 "Nu pot închide portofelul în mod corect. Probabil este utilizat de alte "
 "aplicații. Doriți să forțez închiderea lui?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Forțează închiderea"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Nu forța"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Imposibil de închis forțat portofelul. Codul de eroare a fost %1."
@@ -477,12 +466,12 @@ msgstr "Portofelul cu denumirea %1 există deja. Operațiune abandonată."
 msgid "Failed to copy files"
 msgstr "Copierea fișierelor a eșuat"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Se ignoră modificările nesalvate?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Ignoră"
@@ -512,7 +501,7 @@ msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 "A intervenit o eroare în timpul conectării la serviciul KWallet:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Deschide..."
@@ -521,11 +510,6 @@ msgstr "&Deschide..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Schimbă &parola…"
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Deconec&tează"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -627,12 +611,12 @@ msgstr "Un nume de portofel"
 msgid "Revoke Authorization"
 msgstr "Revocă autorizarea"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "În&chide"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -640,7 +624,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Portofelul „%1” e deschis acum."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Portofelul este închis acum."
@@ -662,18 +646,6 @@ msgstr "Deschide..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Modifică parola..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Conținut"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Aplicații"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -699,6 +671,21 @@ msgstr "&Desfă"
 #, kde-format
 msgid "&Save"
 msgstr "&Salvează"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Aceste aplicații sunt conectate momentan la acest portofel:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Deconectează"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Deconec&tează"
+
+#~ msgid "Contents"
+#~ msgstr "Conținut"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicații"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "&Importă portofel..."

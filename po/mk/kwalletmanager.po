@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2007-02-21 11:43+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -65,18 +65,6 @@ msgid ""
 msgstr ""
 "Настана неочекувана грешка при обидот да се избрише оригиналната папка, но "
 "папката беше успешно копирана"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr ""
-
-#: disconnectappbutton.cpp:17
-#, fuzzy, kde-format
-#| msgid "Disconnec&t"
-msgid "Disconnect"
-msgstr "Од&врзи"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -150,7 +138,7 @@ msgstr "&Нов..."
 msgid "&Rename"
 msgstr "&Преименувај"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, fuzzy, kde-format
 msgid "&Delete"
 msgstr "&Избриши папка"
@@ -377,7 +365,7 @@ msgstr "Конфигурирај &Паричник..."
 msgid "Close &All Wallets"
 msgstr "Затвори ги сите п&аричници"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -386,17 +374,17 @@ msgstr ""
 "Не може да се затвори паричникот нормално. Веројатно е во употреба од други "
 "апликации. Дали сакате да го форсирате затворањето?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Форсирај"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Не форсирај"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Не може да се форсира затворањето на паричникот. Кодот за грешка е %1."
@@ -479,12 +467,12 @@ msgstr ""
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -513,7 +501,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, fuzzy, kde-format
 msgid "&Open..."
 msgstr "&Нов..."
@@ -522,11 +510,6 @@ msgstr "&Нов..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Смени &лозинка..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Од&врзи"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -633,12 +616,12 @@ msgstr "Име на паричник"
 msgid "Revoke Authorization"
 msgstr ""
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr ""
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, fuzzy, kde-format
 #| msgid "KDE Wallet: A wallet is open."
 msgctxt ""
@@ -647,7 +630,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "KDE-Паричник: Отворен е паричник."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, fuzzy, kde-format
 #| msgid "KDE Wallet: A wallet is open."
 msgid "The wallet is currently closed."
@@ -671,19 +654,6 @@ msgstr "&Нов..."
 #| msgid "Change &Password..."
 msgid "Change Password..."
 msgstr "Смени &лозинка..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, fuzzy, kde-format
-#| msgid "Hide &Contents"
-msgid "Contents"
-msgstr "Скриј &содржина"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -709,6 +679,19 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Disconnec&t"
+#~ msgid "Disconnect"
+#~ msgstr "Од&врзи"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Од&врзи"
+
+#, fuzzy
+#~| msgid "Hide &Contents"
+#~ msgid "Contents"
+#~ msgstr "Скриј &содржина"
 
 #, fuzzy
 #~| msgid "&Merge Wallet..."

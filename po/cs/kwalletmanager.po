@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2026-08-09 23:43+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -67,17 +67,6 @@ msgid ""
 msgstr ""
 "Nastal neočekávaná chyba při pokusu o smazání původní složky, ale složka "
 "byla úspěšně zkopírována"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Tyto aplikace jsou momentálně připojeny k této úschovně:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Odpojit"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -149,7 +138,7 @@ msgstr "&Nový..."
 msgid "&Rename"
 msgstr "&Přejmenovat"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "&Smazat"
@@ -371,7 +360,7 @@ msgstr "Nastavit ús&chovnu..."
 msgid "Close &All Wallets"
 msgstr "Z&avřít všechny úschovny"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -380,17 +369,17 @@ msgstr ""
 "Nelze normálně uzavřít úschovnu. Pravděpodobně je používána jinou aplikací. "
 "Přejete si ji přesto uzavřít?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Přesto uzavřít"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Nezavírat"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Nelze vynutit uzavření úschovny. Chybový kód: %1."
@@ -471,12 +460,12 @@ msgstr "Úschovna s názvem %1 již existuje. Operace byla přerušena"
 msgid "Failed to copy files"
 msgstr "Kopírování souborů selhalo"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorovat neuložené změny?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorovat"
@@ -505,7 +494,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "Při připojování ke službě KWallet nastala chyba:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Otevřít..."
@@ -514,11 +503,6 @@ msgstr "&Otevřít..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Změnit &heslo..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Odpoji&t"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -620,12 +604,12 @@ msgstr "Název úschovny"
 msgid "Revoke Authorization"
 msgstr "Odvolat oprávnění"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "&Zavřít"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -633,7 +617,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Úschovna '%1' je otevřena.."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Úschovna je momentálně uzavřena."
@@ -655,18 +639,6 @@ msgstr "Otevřít..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Změnit heslo..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Obsah"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Aplikace"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -692,6 +664,21 @@ msgstr "&Zpět"
 #, kde-format
 msgid "&Save"
 msgstr "&Uložit"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Tyto aplikace jsou momentálně připojeny k této úschovně:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Odpojit"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Odpoji&t"
+
+#~ msgid "Contents"
+#~ msgstr "Obsah"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikace"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "&Importovat úschovnu..."

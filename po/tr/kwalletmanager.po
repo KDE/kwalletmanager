@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2026-05-02 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -77,17 +77,6 @@ msgid ""
 msgstr ""
 "Özgün klasör silinmeye çalışılırken beklenmedik bir hata oluştu; ancak "
 "klasör başarıyla kopyalandı"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Bu uygulamalar şu anda bu cüzdana bağlı:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Bağlantıyı Kes"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -159,7 +148,7 @@ msgstr "&Yeni…"
 msgid "&Rename"
 msgstr "Yeniden Adlandı&r"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "&Sil"
@@ -382,7 +371,7 @@ msgstr "&Cüzdan’ı Yapılandır…"
 msgid "Close &All Wallets"
 msgstr "Tüm Cüzdanları Kapat"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -391,17 +380,17 @@ msgstr ""
 "Cüzdan temiz olarak kapatılamıyor. Büyük bir ihtimalle diğer programlar "
 "tarafından kullanılıyor. Kapanmaya zorlansın mı?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Kapanmaya Zorla"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Zorlamayın"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Cüzdan kapatılmaya zorlanamıyor. Hata kodu %1."
@@ -483,12 +472,12 @@ msgstr "%1 adlı bir cüzdan hâlihazırda var, işlem iptal edildi"
 msgid "Failed to copy files"
 msgstr "Dosya kopyalama başarısız oldu"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Kaydedilmemiş değişiklikleri yok sayıyor musunuz?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Yok Say"
@@ -517,7 +506,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "K Cüzdan hizmetine bağlanırken bir hata oluştu:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Aç…"
@@ -526,11 +515,6 @@ msgstr "&Aç…"
 #, kde-format
 msgid "Change &Password..."
 msgstr "&Parolayı Değiştir…"
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Bağlantıyı Kes"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -632,12 +616,12 @@ msgstr "Bir cüzdan adı"
 msgid "Revoke Authorization"
 msgstr "Yetkilendirmeyi İptal Et"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "&Kapat"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -645,7 +629,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "“%1” cüzdanı şu anda açık."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Cüzdan şu anda kapalı."
@@ -667,18 +651,6 @@ msgstr "Aç…"
 #, kde-format
 msgid "Change Password..."
 msgstr "Parolayı Değiştir…"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "İçerik"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Uygulamalar"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -704,6 +676,21 @@ msgstr "&Geri Al"
 #, kde-format
 msgid "&Save"
 msgstr "&Kaydet"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Bu uygulamalar şu anda bu cüzdana bağlı:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Bağlantıyı Kes"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Bağlantıyı Kes"
+
+#~ msgid "Contents"
+#~ msgstr "İçerik"
+
+#~ msgid "Applications"
+#~ msgstr "Uygulamalar"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "&Cüzdan İçe Aktar…"

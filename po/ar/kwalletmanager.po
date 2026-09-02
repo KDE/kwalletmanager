@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2025-08-03 23:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -74,17 +74,6 @@ msgid ""
 "folder has been copied successfully"
 msgstr ""
 "حدث خطأ غير متوقّع عند محاولة إفلات المجلّد الأصليّ، إلّا أنّ المجلّد نُسخ بنجاح"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "التّطبيقات الآتية متّصلة حاليًّا بهذه المحفظة:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "اقطع الاتّصال"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -156,7 +145,7 @@ msgstr "&جديد..."
 msgid "&Rename"
 msgstr "أ&عد التّسمية"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "ا&حذف"
@@ -377,7 +366,7 @@ msgstr "اضبط المحف&ظة..."
 msgid "Close &All Wallets"
 msgstr "أغلق &كلّ المحفظات"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -386,17 +375,17 @@ msgstr ""
 "تعذّر إغلاق المحفظة بشكل نظيف. غالبًا هناك تطبيقات أخرى تستخدمها. أتريد إجبار "
 "إغلاقها؟"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "أجبر الإغلاق"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "لا تجبر"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "تعذّر إجبار إغلاق المحفظة. رمز الخطأ هو %1."
@@ -477,12 +466,12 @@ msgstr "هناك محفظة لها الاسم %1 فعلًا، أُجهضت ال�
 msgid "Failed to copy files"
 msgstr "فشل نسخ الملفّات"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "أأتجاهل تغييرات غير محفوظة؟"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "تجاهل"
@@ -511,7 +500,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "حدث خطأ عند الاتصال بخدمة الحافظة ك:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "ا&فتح..."
@@ -520,11 +509,6 @@ msgstr "ا&فتح..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "غيّر &كلمة السر..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "اق&طع الاتّصال"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -626,12 +610,12 @@ msgstr "اسم المحفظة"
 msgid "Revoke Authorization"
 msgstr "اسحب الاستيثاق"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "أ&غلق"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -639,7 +623,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "المحفظة ’%1‘ مفتوحة حاليًّا."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "المحفظة مغلقة حاليًّا."
@@ -661,18 +645,6 @@ msgstr "افتح..."
 #, kde-format
 msgid "Change Password..."
 msgstr "غيّر كلمة السر..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "المحتويات"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "التّطبيقات"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -698,6 +670,21 @@ msgstr "&تراجع"
 #, kde-format
 msgid "&Save"
 msgstr "ا&حفظ"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "التّطبيقات الآتية متّصلة حاليًّا بهذه المحفظة:"
+
+#~ msgid "Disconnect"
+#~ msgstr "اقطع الاتّصال"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "اق&طع الاتّصال"
+
+#~ msgid "Contents"
+#~ msgstr "المحتويات"
+
+#~ msgid "Applications"
+#~ msgstr "التّطبيقات"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "ا&ستورد محفظة..."

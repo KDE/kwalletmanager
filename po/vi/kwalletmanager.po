@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2022-10-31 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -65,17 +65,6 @@ msgid ""
 msgstr ""
 "Lỗi bất ngờ xảy ra khi đang xoá thư mục ban đầu, nhưng thư mục đó đã được "
 "sao chép thành công"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Các ứng dụng này hiện đang được kết nối với ví này:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Huỷ kết nối"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -148,7 +137,7 @@ msgstr "&Mới..."
 msgid "&Rename"
 msgstr "Đổi tê&n"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "&Xoá"
@@ -371,7 +360,7 @@ msgstr "Cấu &hình ví..."
 msgid "Close &All Wallets"
 msgstr "Đóng &tất cả các ví"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -380,17 +369,17 @@ msgstr ""
 "Không thể đóng ví hoàn chỉnh. Có thể có các ứng dụng khác đang dùng nó. Bạn "
 "có muốn ép nó đóng không?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Ép đóng"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Đừng ép"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Không thể ép đóng ví. Mã lỗi là %1."
@@ -472,12 +461,12 @@ msgstr "Ví có tên %1 đã tồn tại rồi, thao tác bị huỷ"
 msgid "Failed to copy files"
 msgstr "Sao chép tệp thất bại"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Bỏ qua các thay đổi chưa lưu?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Bỏ qua"
@@ -506,7 +495,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Mở..."
@@ -515,11 +504,6 @@ msgstr "&Mở..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Đổi &mật khẩu..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Huỷ &kết nối"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -627,12 +611,12 @@ msgstr "Tên ví"
 msgid "Revoke Authorization"
 msgstr "Thu hồi uỷ quyền"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "Đón&g"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -644,7 +628,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Ví '%1' hiện đang mở"
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, fuzzy, kde-format
 #| msgid "The wallet is currently closed"
 msgid "The wallet is currently closed."
@@ -667,18 +651,6 @@ msgstr "Mở..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Đổi mật khẩu..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Nội dung"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Ứng dụng"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -704,6 +676,21 @@ msgstr "Đảo n&gược"
 #, kde-format
 msgid "&Save"
 msgstr "&Lưu"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Các ứng dụng này hiện đang được kết nối với ví này:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Huỷ kết nối"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Huỷ &kết nối"
+
+#~ msgid "Contents"
+#~ msgstr "Nội dung"
+
+#~ msgid "Applications"
+#~ msgstr "Ứng dụng"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "&Nhập khẩu ví..."

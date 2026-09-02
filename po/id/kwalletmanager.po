@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2022-09-27 17:54+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -67,17 +67,6 @@ msgid ""
 msgstr ""
 "Terjadi eror ketika mencoba menghapus folder asal, tetapi folder tersebut "
 "sudah berhasil di salin"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Aplikasi aplikasi tersebut sedang terhubung dengan dompet ini"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Terputus"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -149,7 +138,7 @@ msgstr ""
 msgid "&Rename"
 msgstr ""
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr ""
@@ -373,7 +362,7 @@ msgstr ""
 msgid "Close &All Wallets"
 msgstr ""
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -382,17 +371,17 @@ msgstr ""
 "Tidak dapat menutup dompet dengan baik. Dompet mungkin sedang digunakan oleh "
 "aplikasi lain. Apakah Anda ingin menutup secara paksa?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Penutupan Paksa"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Jangan Paksa"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Tidak dapat menutup dompet secara paksa. Coder eror %1"
@@ -474,12 +463,12 @@ msgstr "Dompet dengan nama %1 sudah ada, Operasi dibatalkan"
 msgid "Failed to copy files"
 msgstr "Gagal menyalin file"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Abaikan data yang belum tersimpan?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -508,7 +497,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr ""
@@ -516,11 +505,6 @@ msgstr ""
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr ""
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
 msgstr ""
 
 #: kwmapeditor.cpp:133
@@ -629,12 +613,12 @@ msgstr "Nama dompet"
 msgid "Revoke Authorization"
 msgstr "Cabut izin"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr ""
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -646,7 +630,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Dompet '%1' sedang terbuka"
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, fuzzy, kde-format
 #| msgid "The wallet is currently closed"
 msgid "The wallet is currently closed."
@@ -669,18 +653,6 @@ msgstr "Buka..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Ubah Kata Sandi..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Konten"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Aplikasi"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -706,6 +678,18 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Aplikasi aplikasi tersebut sedang terhubung dengan dompet ini"
+
+#~ msgid "Disconnect"
+#~ msgstr "Terputus"
+
+#~ msgid "Contents"
+#~ msgstr "Konten"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikasi"
 
 #~ msgid "Unable to create temporary file for downloading '<b>%1</b>'."
 #~ msgstr "Tidak dapat membuat file sementara untuk mengunduh '<b>%1</b>'."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2005-11-17 11:28+0800\n"
 "Last-Translator: MIMOS Open Source <opensource@mimos.my\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -62,18 +62,6 @@ msgid ""
 "An unexpected error occurred trying to delete the original folder, but the "
 "folder has been copied successfully"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr ""
-
-#: disconnectappbutton.cpp:17
-#, fuzzy, kde-format
-#| msgid "Disconnec&t"
-msgid "Disconnect"
-msgstr "&Nyahsambung"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -147,7 +135,7 @@ msgstr "&Baru..."
 msgid "&Rename"
 msgstr "&Namakan Semula"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, fuzzy, kde-format
 msgid "&Delete"
 msgstr "&Hapuskan Folder"
@@ -371,7 +359,7 @@ msgstr "Konfigur &Wallet..."
 msgid "Close &All Wallets"
 msgstr "Tutup &Semua Wallets"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -380,17 +368,17 @@ msgstr ""
 "Tidak dapat tutup wallet sepenuhnya. Ia mungkin sedang digunakan oleh "
 "aplikasi lain. Anda mahu paksa wallet ditutup?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr ""
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr ""
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Tidak dapat paksa wallet ditutup. Kod ralat adalah %1."
@@ -473,12 +461,12 @@ msgstr ""
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -507,7 +495,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, fuzzy, kde-format
 msgid "&Open..."
 msgstr "&Baru..."
@@ -516,11 +504,6 @@ msgstr "&Baru..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Ubah &Kata laluan..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "&Nyahsambung"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -627,12 +610,12 @@ msgstr "Nama wallet"
 msgid "Revoke Authorization"
 msgstr ""
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr ""
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, fuzzy, kde-format
 #| msgid "KDE Wallet: A wallet is open."
 msgctxt ""
@@ -641,7 +624,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "KDE Wallet: Wallet dibuka."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, fuzzy, kde-format
 #| msgid "KDE Wallet: A wallet is open."
 msgid "The wallet is currently closed."
@@ -665,19 +648,6 @@ msgstr "&Baru..."
 #| msgid "Change &Password..."
 msgid "Change Password..."
 msgstr "Ubah &Kata laluan..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, fuzzy, kde-format
-#| msgid "Hide &Contents"
-msgid "Contents"
-msgstr "Sembunyikan &Kandungan"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -703,6 +673,19 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Disconnec&t"
+#~ msgid "Disconnect"
+#~ msgstr "&Nyahsambung"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "&Nyahsambung"
+
+#, fuzzy
+#~| msgid "Hide &Contents"
+#~ msgid "Contents"
+#~ msgstr "Sembunyikan &Kandungan"
 
 #, fuzzy
 #~| msgid "&Merge Wallet..."

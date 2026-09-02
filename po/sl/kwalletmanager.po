@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2025-01-21 07:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -71,17 +71,6 @@ msgid ""
 msgstr ""
 "Med poskusom izbrisa izvorne mape je prišlo do nepričakovane napak, vendar "
 "je bila mapa uspešno kopirana"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Ti programi so trenutno povezani s to listnico:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Prekini povezavo"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -153,7 +142,7 @@ msgstr "&Nova..."
 msgid "&Rename"
 msgstr "P&reimenuj"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Izbriši"
@@ -374,7 +363,7 @@ msgstr "Nastavi listnico..."
 msgid "Close &All Wallets"
 msgstr "Zapri vse listnice"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -383,17 +372,17 @@ msgstr ""
 "Listnice se ne da lepo zapreti. Verjetno jo uporablja drug program. Ali jo "
 "želite prisilno zapreti?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Prisilno zapri"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ne prisili"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Listnice se ne da lepo zapreti. Koda napake je %1."
@@ -474,12 +463,12 @@ msgstr "Listnica z imenom %1 že obstaja, Opravilo prekinjeno"
 msgid "Failed to copy files"
 msgstr "Datotek ni bilo mogoče kopirati"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Prezrem neshranjene spremembe?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Prezri"
@@ -508,7 +497,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "Pri povezovanju s storitvijo KWallet je prišlo do napake:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Odpri ..."
@@ -517,11 +506,6 @@ msgstr "&Odpri ..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Spremeni geslo..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Prekini povezavo"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -623,12 +607,12 @@ msgstr "Ime listnice"
 msgid "Revoke Authorization"
 msgstr "Prekliči pooblastitev"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "&Zapri"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -636,7 +620,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Listnica '%1' je trenutno odprta."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Listnica je trenutno zaprta."
@@ -658,18 +642,6 @@ msgstr "Odpri ..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Spremeni geslo ..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Vsebina"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Programi"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -695,6 +667,21 @@ msgstr "&Razveljavi"
 #, kde-format
 msgid "&Save"
 msgstr "&Shrani"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Ti programi so trenutno povezani s to listnico:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Prekini povezavo"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Prekini povezavo"
+
+#~ msgid "Contents"
+#~ msgstr "Vsebina"
+
+#~ msgid "Applications"
+#~ msgstr "Programi"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "Uvoz&i listnico..."

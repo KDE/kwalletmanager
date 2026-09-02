@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2013-09-20 03:17+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -67,17 +67,6 @@ msgid ""
 msgstr ""
 "Бастапқы қапшықты өшіргенде күтпеген қате пайда болды, бірақ қапшық сәтті "
 "көшірмеленді"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Осы әмиянға қазір мына бағдарламалар қосылып тұр:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Ажырату"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -150,7 +139,7 @@ msgstr "&Жаңа..."
 msgid "&Rename"
 msgstr "Атауын өзге&рту"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Ө&шіру"
@@ -373,7 +362,7 @@ msgstr "Ә&миянді баптау..."
 msgid "Close &All Wallets"
 msgstr "&Барлық әмияндарды жабу"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -382,17 +371,17 @@ msgstr ""
 "Әмиян жабылмады. Бәлкім, ол басқа қолдабаның пайдалануында. Мәжбүрлеп "
 "жабасыз ба?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Мәжбүрлеп жабу"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Қалдыру"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Әмиян мәжбүрлеп те жабылмады. Қатесінің коды: %1."
@@ -475,12 +464,12 @@ msgstr ""
 msgid "Failed to copy files"
 msgstr ""
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr ""
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr ""
@@ -509,7 +498,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Ашу..."
@@ -518,11 +507,6 @@ msgstr "&Ашу..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "&Парольді өзгерту..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Ажыра&ту"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -631,12 +615,12 @@ msgstr "Әмияннің атауы"
 msgid "Revoke Authorization"
 msgstr "Авторизацияны өткізу"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "&Жабу"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -648,7 +632,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "'%1' әмиян ашық тұр"
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, fuzzy, kde-format
 #| msgid "The wallet is currently closed"
 msgid "The wallet is currently closed."
@@ -671,18 +655,6 @@ msgstr "Ашу..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Парольді өзгерту..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Мазмұны"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Қолданба"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -708,6 +680,21 @@ msgstr "А&малдан қайту"
 #, kde-format
 msgid "&Save"
 msgstr "&Сақтау"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Осы әмиянға қазір мына бағдарламалар қосылып тұр:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Ажырату"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Ажыра&ту"
+
+#~ msgid "Contents"
+#~ msgstr "Мазмұны"
+
+#~ msgid "Applications"
+#~ msgstr "Қолданба"
 
 #, fuzzy
 #~| msgid "&Import Wallet..."

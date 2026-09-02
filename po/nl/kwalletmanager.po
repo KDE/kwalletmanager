@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2025-01-21 14:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -74,17 +74,6 @@ msgid ""
 msgstr ""
 "Er deed zich een onverwachte fout voor tijdens het verwijderen van de "
 "oorspronkelijke map. De map is wel met succes gekopieerd."
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Deze toepassingen zijn momenteel verbonden met deze portefeuille:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Verbinding verbreken"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -156,7 +145,7 @@ msgstr "&Nieuw..."
 msgid "&Rename"
 msgstr "He&rnoemen"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Verwij&deren"
@@ -384,7 +373,7 @@ msgstr "Portefeuille &instellen..."
 msgid "Close &All Wallets"
 msgstr "&Alle portefeuilles sluiten"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -393,17 +382,17 @@ msgstr ""
 "De portefeuille kon niet worden gesloten. Wellicht is deze nog in gebruik "
 "bij andere toepassingen. Wilt u de portefeuille geforceerd sluiten?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Sluiten forceren"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Niet forceren"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr ""
@@ -488,12 +477,12 @@ msgstr "Portefeuille genaamd %1 bestaat al, bewerking afgebroken"
 msgid "Failed to copy files"
 msgstr "Bestanden kopiëren is mislukt"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Niet opgeslagen wijzigingen negeren?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Negeren"
@@ -523,7 +512,7 @@ msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr ""
 "Er deed zich een fout voor bij het verbinden met de KWallet-service:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Openen..."
@@ -532,11 +521,6 @@ msgstr "&Openen..."
 #, kde-format
 msgid "Change &Password..."
 msgstr "Wachtwoord wij&zigen..."
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Verbinding ver&breken"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -638,12 +622,12 @@ msgstr "Naam van een portefeuille"
 msgid "Revoke Authorization"
 msgstr "Autorisatie intrekken"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "&Sluiten"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -651,7 +635,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "De portefeuille '%1' is nu open."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "De portefeuille is nu gesloten."
@@ -673,18 +657,6 @@ msgstr "Openen..."
 #, kde-format
 msgid "Change Password..."
 msgstr "Wachtwoord wijzigen..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Inhoud"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Toepassingen"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -710,6 +682,21 @@ msgstr "&Ongedaan maken"
 #, kde-format
 msgid "&Save"
 msgstr "Op&slaan"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Deze toepassingen zijn momenteel verbonden met deze portefeuille:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Verbinding verbreken"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Verbinding ver&breken"
+
+#~ msgid "Contents"
+#~ msgstr "Inhoud"
+
+#~ msgid "Applications"
+#~ msgstr "Toepassingen"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "Een portefeuille &importeren..."

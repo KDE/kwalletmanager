@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-23 00:49+0000\n"
+"POT-Creation-Date: 2026-09-02 00:48+0000\n"
 "PO-Revision-Date: 2025-02-14 19:38+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -70,17 +70,6 @@ msgid ""
 msgstr ""
 "Sattui odottamaton virhe yritettäessä poistaa alkuperäistä kansiota mutta "
 "kansio on kopioitu onnistuneesti"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: applicationsmanager.ui:17
-#, kde-format
-msgid "These applications are currently connected to this wallet:"
-msgstr "Nämä sovellukset ovat tällä hetkellä yhteydessä tähän lompakkoon:"
-
-#: disconnectappbutton.cpp:17
-#, kde-format
-msgid "Disconnect"
-msgstr "Katkaise yhteys"
 
 #. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
 #: kbetterthankdialogbase.ui:43
@@ -152,7 +141,7 @@ msgstr "&Uusi…"
 msgid "&Rename"
 msgstr "M&uuta nimeä"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:62
+#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Poista"
@@ -375,7 +364,7 @@ msgstr "&Lompakon asetukset…"
 msgid "Close &All Wallets"
 msgstr "Sulje k&aikki lompakot"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:110
+#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -384,17 +373,17 @@ msgstr ""
 "Lompakkoa ei voitu sulkea puhtaasti. Tämä voi johtua siitä, että jokin "
 "ohjelma käyttää lompakkoa. Haluatko pakottaa lompakon sulkeutumaan?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:112
+#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Pakota sulkeutumaan"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:113
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Älä pakota"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:117
+#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ei voitu pakottaa lompakkoa sulkeutumaan. Virhekoodi oli %1."
@@ -475,12 +464,12 @@ msgstr "Lompakko nimeltä %1 on jo olemassa. Toiminto keskeytetty"
 msgid "Failed to copy files"
 msgstr "Tiedostojen kopiointi epäonnistui"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Hylätäänkö tallentamattomat muutokset?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:100
+#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Sivuuta"
@@ -509,7 +498,7 @@ msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
 msgstr "KWallet-palveluun yhdistettäessä sattui virhe:<nl/>%1"
 
-#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
+#: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
 msgid "&Open..."
 msgstr "&Avaa…"
@@ -518,11 +507,6 @@ msgstr "&Avaa…"
 #, kde-format
 msgid "Change &Password..."
 msgstr "Vaihda &salasanaa…"
-
-#: kwalletpopup.cpp:51
-#, kde-format
-msgid "Disconnec&t"
-msgstr "Katkaise &yhteys"
 
 #: kwmapeditor.cpp:133
 #, kde-format
@@ -626,12 +610,12 @@ msgstr "Lompakon nimi"
 msgid "Revoke Authorization"
 msgstr "Peru valtuutus"
 
-#: walletcontrolwidget.cpp:55
+#: walletcontrolwidget.cpp:54
 #, kde-format
 msgid "&Close"
 msgstr "&Sulje"
 
-#: walletcontrolwidget.cpp:73
+#: walletcontrolwidget.cpp:65
 #, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
@@ -639,7 +623,7 @@ msgctxt ""
 msgid "The '%1' wallet is currently open."
 msgstr "Lompakko ”%1” on tällä hetkellä auki."
 
-#: walletcontrolwidget.cpp:90
+#: walletcontrolwidget.cpp:76
 #, kde-format
 msgid "The wallet is currently closed."
 msgstr "Lompakko on tällä hetkellä kiinni."
@@ -661,18 +645,6 @@ msgstr "Avaa…"
 #, kde-format
 msgid "Change Password..."
 msgstr "Vaihda salasanaa…"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: walletcontrolwidget.ui:80
-#, kde-format
-msgid "Contents"
-msgstr "Sisältö"
-
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: walletcontrolwidget.ui:117
-#, kde-format
-msgid "Applications"
-msgstr "Sovellukset"
 
 #. i18n: ectx: property (text), widget (QToolButton, _hideContents)
 #: walletwidget.ui:159
@@ -698,6 +670,21 @@ msgstr "&Kumoa"
 #, kde-format
 msgid "&Save"
 msgstr "&Tallenna"
+
+#~ msgid "These applications are currently connected to this wallet:"
+#~ msgstr "Nämä sovellukset ovat tällä hetkellä yhteydessä tähän lompakkoon:"
+
+#~ msgid "Disconnect"
+#~ msgstr "Katkaise yhteys"
+
+#~ msgid "Disconnec&t"
+#~ msgstr "Katkaise &yhteys"
+
+#~ msgid "Contents"
+#~ msgstr "Sisältö"
+
+#~ msgid "Applications"
+#~ msgstr "Sovellukset"
 
 #~ msgid "&Import a wallet..."
 #~ msgstr "&Tuo lompakko…"
