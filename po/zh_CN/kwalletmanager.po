@@ -658,18 +658,3 @@ msgstr "撤销(&U)"
 #, kde-format
 msgid "&Save"
 msgstr "保存(&S)"
-
-#~ msgid "These applications are currently connected to this wallet:"
-#~ msgstr "已接入此密码库的应用程序："
-
-#~ msgid "Disconnect"
-#~ msgstr "断开"
-
-#~ msgid "Disconnec&t"
-#~ msgstr "断开(&T)"
-
-#~ msgid "Contents"
-#~ msgstr "内容"
-
-#~ msgid "Applications"
-#~ msgstr "应用程序"
