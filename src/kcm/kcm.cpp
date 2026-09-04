@@ -8,6 +8,7 @@
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
+#include <QDBusPendingCallWatcher>
 #include <QProcess>
 
 #include <KAuth/Action>
@@ -15,6 +16,11 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KWallet>
+
+#include "secretsprompt.h"
+#include "secretsservice.h"
+
+using namespace Qt::Literals;
 
 #define KWALLETMANAGERINTERFACE "org.kde.KWallet"
 
@@ -98,14 +104,35 @@ void KCMWallet::createWallet(const QString &name)
         return;
     }
 
-    std::unique_ptr<KWallet::Wallet> w(KWallet::Wallet::openWallet(sanitizedName, 0));
+    OrgFreedesktopSecretServiceInterface secretsService(u"org.freedesktop.secrets"_s, u"/org/freedesktop/secrets"_s, QDBusConnection::sessionBus());
 
-    if (!w) {
-        Q_EMIT error(i18n("Failed to create wallet"));
-    }
+    QDBusPendingReply<QDBusObjectPath, QDBusObjectPath> createReply =
+        secretsService.CreateCollection({{u"org.freedesktop.Secret.Collection.Label"_s, sanitizedName}}, QString());
 
-    m_walletList = KWallet::Wallet::walletList();
-    Q_EMIT walletListChanged();
+    auto watcher = new QDBusPendingCallWatcher(createReply);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+
+        QDBusPendingReply<QDBusObjectPath, QDBusObjectPath> reply = *watcher;
+
+        if (!reply.isValid()) {
+            Q_EMIT error(reply.error().message());
+            return;
+        }
+
+        OrgFreedesktopSecretPromptInterface *promp = new OrgFreedesktopSecretPromptInterface(u"org.freedesktop.secrets"_s,
+                                                                                             reply.argumentAt(1).value<QDBusObjectPath>().path(),
+                                                                                             QDBusConnection::sessionBus());
+
+        promp->Prompt(QString());
+
+        connect(promp, &OrgFreedesktopSecretPromptInterface::Completed, this, [this](bool dismissed, const QDBusVariant & /*result*/) {
+            if (!dismissed) {
+                m_walletList = KWallet::Wallet::walletList();
+                Q_EMIT walletListChanged();
+            }
+        });
+    });
 }
 
 #include "kcm.moc"

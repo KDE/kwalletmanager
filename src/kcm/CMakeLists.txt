@@ -10,6 +10,11 @@ kcmutils_generate_module_data(kcm_kwallet
 )
 kconfig_target_kcfg_file(kcm_kwallet FILE ${KWALLET_KCFG_FILE} CLASS_NAME KWalletSettings PARENT_IN_CONSTRUCTOR GENERATE_PROPERTIES GENERATE_MOC MUTATORS DEFAULT_VALUE_GETTERS)
 
+qt_add_dbus_interface(kcm_kwallet_dbus_SRCS org.freedesktop.Secrets.Prompt.xml secretsprompt)
+qt_add_dbus_interface(kcm_kwallet_dbus_SRCS org.freedesktop.Secrets.Service.xml secretsservice)
+
+target_sources(kcm_kwallet PRIVATE ${kcm_kwallet_dbus_SRCS})
+
 target_link_libraries(kcm_kwallet PRIVATE Qt::DBus KF6::CoreAddons KF6::I18n KF6::ConfigGui KF6::KCMUtilsQuick KF6::Wallet KF6::AuthCore)
 
 ########### kauth helper ################
