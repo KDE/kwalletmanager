@@ -1,8 +1,8 @@
 # Translation of kcmkwallet.po to Catalan (Valencian)
 # Copyright (C) 2003-2024 This_file_is_part_of_KDE
 #
-# SPDX-FileCopyrightText: 2003, 2004 Albert Astals Cid <aacid@kde.org>
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2013, 2014, 2015, 2016, 2018, 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2003-2004 Albert Astals Cid <aacid@kde.org>
+# SPDX-FileCopyrightText: 2007-2009, 2013-2016, 2018, 2021-2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2009 Joan Maspons <joanmaspons@gmail.com>
 # SPDX-FileCopyrightText: 2016, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
@@ -224,38 +224,3 @@ msgstr ""
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Inicia el gestor de carteres"
-
-#~ msgid "Always Allow"
-#~ msgstr "Permet sempre"
-
-#~ msgid "Always Deny"
-#~ msgstr "Denega sempre"
-
-#~ msgid "&Delete"
-#~ msgstr "Sup&rimix"
-
-#~ msgid "Access Control"
-#~ msgstr "Control d'accés"
-
-#~ msgid "&Prompt when an application accesses a wallet"
-#~ msgstr "&Pregunta quan una aplicació accedisca a una cartera"
-
-#~ msgid "Wallet"
-#~ msgstr "Cartera"
-
-#~ msgid "Application"
-#~ msgstr "Aplicació"
-
-#~ msgid "Policy"
-#~ msgstr "Política"
-
-#~ msgid ""
-#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
-#~ "wallet is closed the password is needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>Tanca la cartera tan prompte com s'inicie el salvapantalla.</"
-#~ "b><br>Quan es tanca una cartera, farà falta la contrasenya per a poder-hi "
-#~ "accedir una altra vegada.</p>"
-
-#~ msgid "When screensaver starts"
-#~ msgstr "Quan s'inicie el salvapantalla"

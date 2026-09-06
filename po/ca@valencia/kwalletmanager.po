@@ -1,11 +1,11 @@
 # Translation of kwalletmanager.po to Catalan (Valencian)
 # Copyright (C) 2003-2025 This_file_is_part_of_KDE
 #
-# SPDX-FileCopyrightText: 2003, 2004 Albert Astals Cid <aacid@kde.org>
+# SPDX-FileCopyrightText: 2003-2004 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2009 Joan Maspons <joanmaspons@gmail.com>
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2015-2017, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
-# SPDX-FileCopyrightText: 2005, 2006, 2007, 2008, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2005-2008, 2010, 2013-2018, 2021-2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
@@ -669,30 +669,3 @@ msgstr "&Desfés"
 #, kde-format
 msgid "&Save"
 msgstr "Guar&da"
-
-#~ msgid "These applications are currently connected to this wallet:"
-#~ msgstr "Estes aplicacions estan connectades actualment amb esta cartera:"
-
-#~ msgid "Disconnect"
-#~ msgstr "Desconnecta"
-
-#~ msgid "Disconnec&t"
-#~ msgstr "&Desconnecta"
-
-#~ msgid "Contents"
-#~ msgstr "Contingut"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicacions"
-
-#~ msgid "&Import a wallet..."
-#~ msgstr "&Importa una cartera…"
-
-#~ msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-#~ msgstr "No s'ha pogut crear el fitxer temporal per a baixar «<b>%1</b>»."
-
-#~ msgid "Unable to access wallet '<b>%1</b>'."
-#~ msgstr "No s'ha pogut accedir a la cartera «<b>%1</b>»."
-
-#~ msgid "These applications are authorized to access this wallet:"
-#~ msgstr "Estes aplicacions estan autoritzades a accedir a esta cartera:"
