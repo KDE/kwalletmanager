@@ -668,18 +668,3 @@ msgstr "A&ngra"
 #, kde-format
 msgid "&Save"
 msgstr "&Lagra"
-
-#~ msgid "These applications are currently connected to this wallet:"
-#~ msgstr "Desse programma er knytte til denne lommeboka:"
-
-#~ msgid "Disconnect"
-#~ msgstr "Kopla frå"
-
-#~ msgid "Disconnec&t"
-#~ msgstr "K&opla frå"
-
-#~ msgid "Contents"
-#~ msgstr "Innhald"
-
-#~ msgid "Applications"
-#~ msgstr "Program"

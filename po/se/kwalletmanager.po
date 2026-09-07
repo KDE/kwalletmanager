@@ -655,9 +655,3 @@ msgstr ""
 #, kde-format
 msgid "&Save"
 msgstr ""
-
-#~ msgid "Disconnect"
-#~ msgstr "Ii laktašuvvon"
-
-#~ msgid "Applications"
-#~ msgstr "Prográmmat"
