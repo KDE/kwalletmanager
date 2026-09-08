@@ -433,7 +433,7 @@ void KWalletManager::exportWallets()
 
     Q_ASSERT(!filesList.isEmpty());
 
-    const QString destination = QFileDialog::getSaveFileName(this, i18n("File name"));
+    const QString destination = QFileDialog::getSaveFileName(this, i18n("File name"), QString(), i18n("Tar archive (*.tar)"));
     if (destination.isEmpty()) {
         return;
     }
@@ -451,7 +451,7 @@ void KWalletManager::exportWallets()
 
 void KWalletManager::importWallets()
 {
-    const QString source = QFileDialog::getOpenFileName(this, i18n("Select file"));
+    const QString source = QFileDialog::getOpenFileName(this, i18n("Select file"), QString(), i18n("Tar archive (*.tar)"));
     const QString destinationDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kwalletd/");
     QDir().mkpath(destinationDir);
 
