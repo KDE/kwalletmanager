@@ -33,6 +33,8 @@ public:
     void save() override;
 
 private:
+    QStringList listWallets() const;
+
     KWalletData *m_data;
     QStringList m_walletList;
 };

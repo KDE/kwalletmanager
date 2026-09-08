@@ -12,6 +12,7 @@ kconfig_target_kcfg_file(kcm_kwallet FILE ${KWALLET_KCFG_FILE} CLASS_NAME KWalle
 
 qt_add_dbus_interface(kcm_kwallet_dbus_SRCS org.freedesktop.Secrets.Prompt.xml secretsprompt)
 qt_add_dbus_interface(kcm_kwallet_dbus_SRCS org.freedesktop.Secrets.Service.xml secretsservice)
+qt_add_dbus_interface(kcm_kwallet_dbus_SRCS org.freedesktop.Secrets.Collection.xml secretscollection)
 
 target_sources(kcm_kwallet PRIVATE ${kcm_kwallet_dbus_SRCS})
 
@@ -24,7 +25,6 @@ target_sources(kcm_kwallet_helper5 PRIVATE savehelper.cpp savehelper.h)
 target_link_libraries(kcm_kwallet_helper5
     Qt6::Core
     KF6::AuthCore
-    KF6::Wallet
     KF6::CoreAddons
 )
 

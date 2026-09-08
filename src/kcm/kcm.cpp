@@ -15,8 +15,8 @@
 #include <KAuth/ExecuteJob>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KWallet>
 
+#include "secretscollection.h"
 #include "secretsprompt.h"
 #include "secretsservice.h"
 
@@ -36,7 +36,7 @@ KCMWallet::KCMWallet(QObject *parent, const KPluginMetaData &metaData)
     // calculation. Since we don't use it here delete it from the skeleton
     m_data->settings()->removeItem(QStringLiteral("FirstUse"));
 
-    m_walletList = KWallet::Wallet::walletList();
+    m_walletList = listWallets();
 }
 
 KWalletSettings *KCMWallet::settings() const
@@ -128,11 +128,28 @@ void KCMWallet::createWallet(const QString &name)
 
         connect(promp, &OrgFreedesktopSecretPromptInterface::Completed, this, [this](bool dismissed, const QDBusVariant & /*result*/) {
             if (!dismissed) {
-                m_walletList = KWallet::Wallet::walletList();
+                m_walletList = listWallets();
                 Q_EMIT walletListChanged();
             }
         });
     });
+}
+
+QStringList KCMWallet::listWallets() const
+{
+    OrgFreedesktopSecretServiceInterface secretsService(u"org.freedesktop.secrets"_s, u"/org/freedesktop/secrets"_s, QDBusConnection::sessionBus());
+
+    const QList<QDBusObjectPath> collections = secretsService.collections();
+
+    QStringList result;
+    result.reserve(collections.size());
+
+    for (const auto &collectionPath : collections) {
+        OrgFreedesktopSecretCollectionInterface collection(u"org.freedesktop.secrets"_s, collectionPath.path(), QDBusConnection::sessionBus());
+        result << collection.label();
+    }
+
+    return result;
 }
 
 #include "kcm.moc"
