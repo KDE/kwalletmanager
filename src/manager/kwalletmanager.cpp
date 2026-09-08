@@ -407,7 +407,7 @@ void KWalletManager::shuttingDown()
 
 void KWalletManager::setupWallet()
 {
-    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell6"), {QStringLiteral("kcm_kwallet5")});
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell6"), {QStringLiteral("kcm_kwallet")});
     job->start();
 }
 
