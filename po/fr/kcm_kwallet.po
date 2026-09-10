@@ -1,0 +1,300 @@
+# translation of kcmkwallet.po to Français
+# translation of kcmkwallet.po to
+# traduction de kcmkwallet.po en français
+# traduction de kcmkwallet.po en Français
+# Copyright (C) 2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Robert Jacolin <rjacolin@ifrance.com>, 2003,2004.
+# Ludovic Grossard <grossard@kde.org>, 2003, 2014.
+# Matthieu Robin <kde@macolu.org>, 2003.
+# Delafond <gerard@delafond.org>, 2004.
+# Matthieu Robin <kde@macolu.org>, 2005.
+# Guillaume Pujol <guill.p@gmail.com>, 2007.
+# Jean-Jacques Finazzi <mrjay01@users.sourceforge.net>, 2008.
+# Jean-Jacques FINAZZI <mrjay01@users.sourceforge.net>, 2008.
+# Mickael Sibelle <kimael@gmail.com>, 2008.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2013, 2021, 2022, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# Bruno Patri <bruno.patri@gmail.com>, 2013.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2024-08-15 11:27+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 23.08.5\n"
+"X-Text-Markup: kde4\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Erreur lors de l'action d'authentification :\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "Activ&er le sous-système de portefeuilles de KDE"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Ferme le comportement"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Lorsque inutilisé pendant :"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Sélection automatique du portefeuille"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Portefeuille par défaut :"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr ""
+"Utiliser par défaut un portefeuille spécifique pour les mots de passe locaux"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Gestionnaire de portefeuilles"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Afficher le gestionnaire dans la boite à miniatures"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr ""
+"Masquer l'icône de la boite à miniatures lorsque le dernier portefeuille est "
+"fermé"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Services d'accès aux données confidentielles"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+"Utiliser &KWallet pour l'interface des services d'accès aux données "
+"confidentielles"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Nouveau portefeuille"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Veuillez choisir un nom pour le nouveau portefeuille :"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Robert Jacolin, Bruno Patri"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rjacolin@ifrance.com, bruno.patri@gmail.com"
+
+#~ msgid "Permission denied."
+#~ msgstr "Permission refusée."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Module de configuration des portefeuilles de KDE"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Préférences des portefeuilles de KDE"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Le sous-système de portefeuilles fournit une façon pratique et sûre de "
+#~ "gérer tous vos mots de passe. Vous pouvez décider d'utiliser ou non ce "
+#~ "système grâce à cette option.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Il est judicieux de fermer vos portefeuilles lorsque vous ne les utilisez "
+#~ "plus afin que personne ne puisse les regarder ou les utiliser."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Fermeture du portefeuille :"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Fermer le portefeuille dès que les applications qui l'utilisent "
+#~ "s'arrêtent.</b><br />Veuillez noter que vos portefeuilles seront fermés "
+#~ "uniquement lorsque toutes les applications qui l'utilisent se seront "
+#~ "arrêtées.<br />Lorsqu'un portefeuille est fermé, le mot de passe est "
+#~ "nécessaire pour y accéder à nouveau.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Lorsque la dernière application arrête de l'utiliser"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Ferme un portefeuille après une période d'inactivité</b><br /> Une "
+#~ "fois un portefeuille fermé, le mot de passe est nécessaire pour y accéder "
+#~ "à nouveau.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " minutes"
+
+#~ msgid "New..."
+#~ msgstr "Nouveau…"
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "L'interface pour les services d'accès aux données confidentielles permet "
+#~ "aux applications d'enregistrer des mots de passe et d'autres données "
+#~ "confidentielles. Désactivez cette option pour permettre aux services de "
+#~ "portefeuille tiers tels que « KeePassXC » ou « GNOME Keyring » de la "
+#~ "gérer à la place."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Lancer le gestionnaire de portefeuilles de KDE"
+
+#~ msgid "Always Allow"
+#~ msgstr "Toujours accepter"
+
+#~ msgid "Always Deny"
+#~ msgstr "Toujours refuser"
+
+#~ msgid "&Delete"
+#~ msgstr "&Supprimer"
+
+#~ msgid "Access Control"
+#~ msgstr "Contrôle d'accès"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr ""
+#~ "&Demander une confirmation lorsqu'une application accède à un portefeuille"
+
+#~ msgid "Wallet"
+#~ msgstr "Portefeuille"
+
+#~ msgid "Application"
+#~ msgstr "Application"
+
+#~ msgid "Policy"
+#~ msgstr "Politique"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Fermer le portefeuille dès que l'économiseur d'écran démarre.</"
+#~ "b><br>Lorsqu'un portefeuille est fermé, le mot de passe est nécessaire "
+#~ "pour y accéder à nouveau.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "Lorsque l'économiseur d'écran démarre"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Choisissez le portefeuille à utiliser par défaut :"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003, George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr ""
+#~ "Ce module de configuration vous permet de configurer le système de "
+#~ "portefeuilles de KDE."
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "Activer l'API « DBus » de services de secrets"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Désolé, la politique de sécurité du système ne vous autorise pas à "
+#~ "enregistrer ces modifications."

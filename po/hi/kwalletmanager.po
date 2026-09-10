@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:51+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -444,6 +444,11 @@ msgstr "बटुआ को मिटाने में अक्षम. त्
 #| msgid "A wallet name"
 msgid "File name"
 msgstr "एक बटुआ नाम"
+
+#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#, kde-format
+msgid "Tar archive (*.tar)"
+msgstr ""
 
 #: kwalletmanager.cpp:443
 #, kde-format

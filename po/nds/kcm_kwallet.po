@@ -1,0 +1,260 @@
+# translation of kcmkwallet.po to Low Saxon
+# Translation of kcmkwallet.po to Low Saxon
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2005, 2007, 2009, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2014-02-20 12:31+0100\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "KDE-Knippensysteem &aktiveren"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr ""
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Tomaken wenn nich bruukt över:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Knipp automaatsch utsöken"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgid "Default Wallet:"
+msgstr "Nieg Knipp"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "Anner Knipp för lokale Passwöör:"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Knippenpleger"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Pleger in Systeemafsnitt wiesen"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Systeemafsnitt-Lüttbild versteken, wenn leste Knipp tomaakt warrt"
+
+#: ui/main.qml:236
+#, kde-format
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr ""
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Nieg Knipp"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Bitte giff en Naam för de niege Knipp an:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern, Manfred Wiese"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Kuntrullmoduul för de KDE-Knippen"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Instellen för Knippen"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Över dat Knippensysteem kannst Du all Dien Passwöör kommodig un seker "
+#~ "plegen. Hier kannst Du utsöken, wat Du dat bruken wullt.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Dat is goot, wenn Du de Knippen tomaakst, wenn se nich bruukt warrt. "
+#~ "Anner Lüüd köönt se denn nich ankieken oder bruken."
+
+#, fuzzy
+#~| msgid "Close Wallet"
+#~ msgid "Close wallet:"
+#~ msgstr "Knipp tomaken"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>De Knipp tomaken, wenn dat leste Programm utmaakt warrt, dat ehr "
+#~ "bruukt hett.</b><br>Beacht, de Knipp warrt bloots tomaakt, wenn all "
+#~ "Programmen utmaakt sünd, de ehr bruukt hebbt.<br>Wenn en Knipp tomaakt "
+#~ "wöör, bruukst Du dat Passwoort, wenn Du ehr wedder opmaken wullt.</p>"
+
+#, fuzzy
+#~| msgid "Close when last application stops using it"
+#~ msgid "When last application stops using it"
+#~ msgstr "Tomaken, wenn keen Programm ehr mehr bruukt"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Na en Tiet, in de nix daan warrt, de Knipp tomaken</b><br>Wenn en "
+#~ "Knipp to is, warrt dat Passwoort bruukt, wenn se wedder opmaakt warrn "
+#~ "schall.</p>"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgid " minutes"
+#~ msgstr " Min"
+
+#~ msgid "New..."
+#~ msgstr "Nieg..."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Knippenpleger starten"
+
+#~ msgid "Always Allow"
+#~ msgstr "Jümmers verlöven"
+
+#~ msgid "Always Deny"
+#~ msgstr "Jümmers torüchwiesen"
+
+#~ msgid "&Delete"
+#~ msgstr "&Wegdoon"
+
+#~ msgid "Access Control"
+#~ msgstr "Togriepkuntrull"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "&Nafragen, wenn en Programm op en Knipp togriepen will"
+
+#~ msgid "Wallet"
+#~ msgstr "Knipp"
+
+#~ msgid "Application"
+#~ msgstr "Programm"
+
+#~ msgid "Policy"
+#~ msgstr "Regel"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>De Knipp fuurts tomaken, wenn de Pausschirm start</b><br>Wenn en "
+#~ "Knipp to is, warrt dat Passwoort bruukt, wenn se wedder opmaakt warrn "
+#~ "schall.</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "Tomaken, wenn de Pausschirm start"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Standardknipp utsöken:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Mit dit Kuntrullmoduul kannst Du dat KDE-Knippensysteem instellen."
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Deit mi leed, de Systeem-Sekerheitregeln verlöövt dat nich, dat Du de "
+#~ "ännern sekerst."

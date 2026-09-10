@@ -1,0 +1,125 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the kwalletmanager package.
+#
+# SPDX-FileCopyrightText: 2026 Emir SARI <emir_sari@icloud.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2026-09-09 08:53+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 26.08.0\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr "Doğrulama eylemi oluşturulamıyor."
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr "Ayarlar kaydedilemedi: İzin reddedildi."
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Eylem doğrulanırken hata:\n"
+"%1"
+
+#: ui/main.qml:21
+#, kde-format
+msgid "Enable the KDE wallet subsystem"
+msgstr "KDE Cüzdan alt sistemini etkinleştir"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Kapanma Davranışı"
+
+#: ui/main.qml:72
+#, kde-format
+msgid "Close wallet when unused for:"
+msgstr "Şu kadar kullanılmadığında cüzdanı kapat:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] "%1 dak"
+msgstr[1] "%1 dak"
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr "dak"
+
+#: ui/main.qml:108
+#, kde-format
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Kendiliğinden Cüzdan Seçimi"
+
+#: ui/main.qml:111
+#, kde-format
+msgid "Default Wallet:"
+msgstr "Öntanımlı cüzdan:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr "Yeni…"
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Yerel parolalar için farklı bir öntanımlı cüzdan kullan"
+
+#: ui/main.qml:204
+#, kde-format
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Cüzdan Yöneticisi"
+
+#: ui/main.qml:209
+#, kde-format
+msgid "Show icon in system tray"
+msgstr "Sistem tepsisinde simgeyi göster"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Son cüzdan kapatıldığında sistem tepsisi simgesini gizle"
+
+#: ui/main.qml:236
+#, kde-format
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Gizli Servis"
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr "Gizli Servis arayüzü için K Cüzdan’ı kullan"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Yeni Cüzdan"
+
+#: ui/NewWalletDialog.qml:23
+#, kde-format
+msgid "Choose a name for the new wallet:"
+msgstr "Yeni cüzdan için bir ad seçin:"

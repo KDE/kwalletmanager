@@ -1,0 +1,271 @@
+# translation of kcmkwallet.po to dansk
+# Danish translation of kcmkwallet
+# Copyright (C)
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2003, 2004.
+# Keld Simonsen <keld@dkuug.dk>, 2008.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2011, 2013, 2014, 2017, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2022-08-08 17:30+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Fejl under autentificeringshandling:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Aktivér KDE's tegnebogs-delsystem"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr ""
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Luk når den har været ubrugt i:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Automatisk tegnebogsvalg"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgid "Default Wallet:"
+msgstr "Ny tegnebog"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "En anden tegnebog til lokale adgangskoder:"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Tegnebogshåndtering"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Vis håndtering i statusområdet"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Skjul statusikon når den sidste tegnebog lukkes"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service DBus API"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "DBus-API til Secret Service"
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Ny tegnebog"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Vælg venligst et navn for den nye tegnebog:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Erik Kjær Pedersen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "erik@binghamton.edu"
+
+#~ msgid "Permission denied."
+#~ msgstr "Tilladelse nægtet."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "KDE-tegnebog kontrolmodul"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Tegnebogens indstillinger"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Tegnebogsundersystemet giver en behagelig og sikker måde at håndtere "
+#~ "alle dine adgangskoder. Denne indstilling angiver om du vil bruge den "
+#~ "eller ej.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Det er bedst at lukke dine tegnebøger når du ikke bruger dem for at "
+#~ "forhindre andre i at kigge i dem eller bruge dem."
+
+#, fuzzy
+#~| msgid "Close Wallet"
+#~ msgid "Close wallet:"
+#~ msgstr "Luk tegnebog"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Luk tegnebog så snart de programmer der brugte den er standset.</"
+#~ "b><br>Bemærk at din tegnbog kun vil blive lukket når alle de programmer "
+#~ "der bruger den er stoppet.<br>Når en tegnebog er lukket skal der bruges "
+#~ "for en adgangskode for at få adgang til den igen.</p>"
+
+#, fuzzy
+#~| msgid "Close when last application stops using it"
+#~ msgid "When last application stops using it"
+#~ msgstr "Luk når det sidste program holder op med at bruge den"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Luk tegnebog efter en periode med inaktivitet.</b><br>Når en "
+#~ "tegnebog lukkes, skal der bruges for en adgangskode for at få adgang til "
+#~ "den igen.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " minutter"
+
+#~ msgid "New..."
+#~ msgstr "Ny..."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "S&tart tegnebogshåndtering"
+
+#~ msgid "Always Allow"
+#~ msgstr "Tillad altid"
+
+#~ msgid "Always Deny"
+#~ msgstr "Afslå altid"
+
+#~ msgid "&Delete"
+#~ msgstr "&Slet"
+
+#~ msgid "Access Control"
+#~ msgstr "Adgangskontrol"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "S&pørg når et program tilgår en tegnebog"
+
+#~ msgid "Wallet"
+#~ msgstr "Tegnebog"
+
+#~ msgid "Application"
+#~ msgstr "Program"
+
+#~ msgid "Policy"
+#~ msgstr "Politik"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Luk tegnebog så snart pauseskærmen starter.</b><br>Når en tegnebog "
+#~ "er lukket skal der bruges for en adgangskode for at få adgang til den "
+#~ "igen.</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "Luk når pauseskærmen starter"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Vælg den tegnebog der skal bruges som standard:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr ""
+#~ "Dette indstillingsmodul tillader dig at indstille KDE's tegnebogssystem."
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "Aktivér DBus-API til Secret Service"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Beklager, systemets sikkerhedspolitik tillod dig ikke at gemme "
+#~ "ændringerne."

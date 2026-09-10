@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:51+0000\n"
 "PO-Revision-Date: 2022-10-17 23:41+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -436,6 +436,11 @@ msgstr "Cüzdanı silmək baş tutmadı. Xəta kodu: %1"
 #, kde-format
 msgid "File name"
 msgstr "Fayl adı"
+
+#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#, kde-format
+msgid "Tar archive (*.tar)"
+msgstr ""
 
 #: kwalletmanager.cpp:443
 #, kde-format

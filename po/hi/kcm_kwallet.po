@@ -1,0 +1,269 @@
+# translation of kcmkwallet.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2008-02-02 19:13+0530\n"
+"Last-Translator: Ravishankar Shrivastava <raviratlami@yahoo.com>\n"
+"Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "केडीई वॉलेट नियंत्रण मॉड्यूल सक्षम करें (&E)"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr ""
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "Close wallet when unused for:"
+msgstr "इतनी देर तक जब उपयोग नहीं हो तो बंद करें:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "स्वचलित बटुआ चयन"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgid "Default Wallet:"
+msgstr "नया बटुआ"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "स्थानीय पासवर्ड्स के लिए अलग बटुआ"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "बटुआ प्रबंधक"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "तंत्र तश्तरी में प्रबंधक दिखाएँ"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "जब अंतिम बटुआ बन्द हो तो तंत्र तश्तरी का प्रतीक छुपाएँ"
+
+#: ui/main.qml:236
+#, kde-format
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr ""
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "नया बटुआ"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "कृपया नया बटुआ के लिए एक नाम चुनें:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@aol.in,"
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "केडीई वॉलेट नियंत्रण मॉड्यूल"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "बटुआ वरीयताएँ"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>The wallet subsytem allows a convenient and secure way to manage all "
+#~| "your passwords. You can decide if you want to use this system with this "
+#~| "option.</p>"
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>वॉलेट उपतंत्र आपके सभी पासवर्ड को आसान तथा सुरक्षित तरीके से प्रबंधित करने देता है. "
+#~ "आपको निर्णय कर सकते हैं कि आप इस तंत्र का उपयोग इस विकल्प के साथ करना चाहते हैं.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "यह बुद्धिमानी है कि आप अपना बटुआ बन्द कर दें जब वह उपयोग में नहीं आ रहा हो ताकि कोई "
+#~ "अन्य उसे देख न पाए या उसका उपयोग न कर पाए."
+
+#, fuzzy
+#~| msgid "Close Wallet"
+#~ msgid "Close wallet:"
+#~ msgstr "वैलट बंद करें"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~| "b><br>Note that your wallets will only be closed when all applications "
+#~| "that use it have stopped.<br>When a wallet is closed the password is "
+#~| "needed to access it again.</p>"
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>जब अंतिम अनुप्रयोग इसका उपयोग करना बन्द करे तो बन्द करें.</b><br>Note that "
+#~ "your wallets will only be closed when all applications that use it have "
+#~ "stopped.<br>When a wallet is closed the password is needed to access it "
+#~ "again.</p>"
+
+#, fuzzy
+#~| msgid "Close when last application stops using it"
+#~ msgid "When last application stops using it"
+#~ msgstr "जब अंतिम अनुप्रयोग इसका उपयोग करना बन्द करे तो बन्द करें"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Close wallet after a period of inactivity</b><br>When a wallet is "
+#~| "closed the password is needed to access it again.</p>"
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>एक निर्धारित समय की निष्क्रियता के पश्चात बटुआ को बन्द करें</b><br>जब बटुआ "
+#~ "बन्द हो तो उसे फिर से एक्सेस करने के लिए पासवर्ड आवश्यक होगा.</p>"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgid " minutes"
+#~ msgstr "मि."
+
+#~ msgid "New..."
+#~ msgstr "नया..."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "बटुआ प्रबंधक चालू करें (&L)"
+
+#~ msgid "Always Allow"
+#~ msgstr "हमेशा स्वीकारें"
+
+#~ msgid "Always Deny"
+#~ msgstr "सर्वदा नकारें"
+
+#~ msgid "&Delete"
+#~ msgstr "मिटाएँ (&D)"
+
+#~ msgid "Access Control"
+#~ msgstr "पहुँच नियंत्रण"
+
+#, fuzzy
+#~| msgid "&Prompt when an application accesses an open wallet"
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "जब कोई अनुप्रयोग बटुआ खोलने की कोशिश करता है तो बताएँ (&P)"
+
+#~ msgid "Wallet"
+#~ msgstr "बटुआ"
+
+#~ msgid "Application"
+#~ msgstr "अनुप्रयोग"
+
+#~ msgid "Policy"
+#~ msgstr "पॉलिसी"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>जब स्क्रीनसेवर चालू हो तो बन्द करें</b><br>जब बटुआ बन्द हो तो उसे फिर से एक्सेस "
+#~ "करने के लिए पासवर्ड आवश्यक होगा.</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "जब स्क्रीनसेवर चालू हो तो बन्द करें"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "डिफ़ॉल्ट की तरह उपयोग के लिए बटुआ चुनें:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 जॉर्ज स्टाइकॉस"
+
+#~ msgid "George Staikos"
+#~ msgstr "जॉर्ज स्टायकॉस"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "यह कॉन्फ़िगरेशन मॉड्यूल आपको केडीई वॉलेट तंत्र को कॉन्फ़िगर करने देता है."
+
+#~ msgid "kcmkwallet"
+#~ msgstr "केसीएम-के-वॉलेट"

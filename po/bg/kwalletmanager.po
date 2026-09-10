@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:51+0000\n"
 "PO-Revision-Date: 2026-01-28 20:43+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -436,6 +436,11 @@ msgstr "Грешка при изтриване на портфейл. Код н�
 msgid "File name"
 msgstr "Име на файл"
 
+#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#, kde-format
+msgid "Tar archive (*.tar)"
+msgstr ""
+
 #: kwalletmanager.cpp:443
 #, kde-format
 msgid "Failed to open file for writing"
@@ -665,27 +670,3 @@ msgstr "&Отмяна"
 #, kde-format
 msgid "&Save"
 msgstr "&Запис"
-
-#~ msgid "These applications are currently connected to this wallet:"
-#~ msgstr "Следните приложения са свързани с този портфейл:"
-
-#~ msgid "Disconnect"
-#~ msgstr "Прекъсване на връзката"
-
-#~ msgid "Disconnec&t"
-#~ msgstr "&Изключване"
-
-#~ msgid "Contents"
-#~ msgstr "Съдържание"
-
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid "&Import a wallet..."
-#~ msgstr "Им&портиране на портфейл..."
-
-#~ msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-#~ msgstr "Неуспех при създаване на временен файл за изтеглянето '<b>%1</b>'."
-
-#~ msgid "Unable to access wallet '<b>%1</b>'."
-#~ msgstr "Грешка при достъп до портфейла „%1“."

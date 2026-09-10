@@ -1,0 +1,266 @@
+# translation of kcmkwallet.po to Slovak
+# Stanislav Visnovsky <visnovsky@kde.org>, 2004.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006.
+# Michal Sulek <misurel@gmail.com>, 2009.
+# Roman Paholík <wizzardsk@gmail.com>, 2013, 2014, 2016, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2021-11-15 17:30+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.3\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Chyba počas akcie autentifikácie:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Povoliť podsystém KDE Wallet"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Správanie pri zatvorení"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Zavrieť, ak sa nepoužíva:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Automatický výber wallet"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Predvolená peňaženka:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Iný wallet pre lokálne heslá:"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Správca Wallet"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Zobraziť správcu v systémovej lište"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Skryť ikonu systémovej lišty po zatvorení posledného walletu"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Secret Service"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "Používať &KWallet pre rozhranie Secret Service"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Nový wallet"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Prosím, vyberte názov pre nový wallet:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stanislav Višňovský,Michal Šulek"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "visnovsky@kde.org,misurel@gmail.com"
+
+#~ msgid "Permission denied."
+#~ msgstr "Prístup zamietnutý."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Modul Ovládacieho centra pre KDE Wallet"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Predvoľby Wallet"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Podsystém Wallet poskytuje pohodlný a bezpečný spôsob na spravovanie "
+#~ "všetkých vašich hesiel. Táto možnosť špecifikuje, či chcete používať "
+#~ "tento systém</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Je vhodné zatvoriť všetky wallety ak ich už nepoužívate, aby sa do nich "
+#~ "nemohol ktokoľvek pozrieť alebo ich používať."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Zavrieť Wallet"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Zavrie wallet ihneď po ukončení aplikácie, ktorá ho používala.</"
+#~ "b><br>Uvedomte si, že wallet sa zatvorí až potom, čo sa ukončia všetky "
+#~ "aplikácie, ktoré ho používajú.<br>Po zatvorení walletu je nutné znovu "
+#~ "zadať heslo pre prístup k nemu.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Zavrieť wallet ak ho posledná aplikácia prestane používať"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Zavrie wallet, ak sa nejakú dobu nepoužíva.</b><br>Po zatvorení "
+#~ "walletu je nutné znovu zadať heslo pre prístup k nemu.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " minúty"
+
+#~ msgid "New..."
+#~ msgstr "Nový..."
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "Rozhranie Secret Service umožňuje aplikáciám ukladať heslá a iné dôverné "
+#~ "údaje. Vypnite túto možnosť, ak chcete namiesto toho používať služby "
+#~ "peňaženky tretích strán, ako napríklad KeePassXC alebo GNOME Keyring."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Spustiť správcu pre Wallet"
+
+#~ msgid "Always Allow"
+#~ msgstr "Vždy povoliť"
+
+#~ msgid "Always Deny"
+#~ msgstr "Nikdy nepovoliť"
+
+#~ msgid "&Delete"
+#~ msgstr "&Odstrániť"
+
+#~ msgid "Access Control"
+#~ msgstr "Ovládanie prístupu"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "&Vyzvať pri pokuse aplikácie o otvorenie peňaženky"
+
+#~ msgid "Wallet"
+#~ msgstr "Wallet"
+
+#~ msgid "Application"
+#~ msgstr "Aplikácia"
+
+#~ msgid "Policy"
+#~ msgstr "Politika"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Zavrie wallet ihneď po spustení šetriča obrazovky.</b><br>Po "
+#~ "zatvorení walletu je nutné znovu zadať heslo pre prístup k nemu.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "Zavrieť pri spustení šetriča obrazovky"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Vyberte štandardný wallet:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Tento konfiguračný modul umožňuje nastaviť systém KDE Wallet."
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr "Prepáčte, systémová bezpečnostná politika neumožňuje ukladať zmeny."

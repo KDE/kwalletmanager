@@ -1,0 +1,251 @@
+# Uyghur translation for kcmkwallet.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2026-05-31 19:58-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"كىملىك دەلىللەش مەشغۇلاتى ئېلىپ بېرىۋاتقاندا خاتالىق كۆرۈلدى:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "KD&E ھەميان تارماق سىستېمىسىنى قوزغىتىدۇ"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "يېپىش قىلمىشى"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "قانچىلىك ۋاقىت ئىشلىتىلمىگەندە:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "ھەمياننى ئۆزلۈكىدىن تاللاش"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "كۆڭۈلدىكى ھەميان:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "يەرلىك ئىم ئۈچۈن پەرقلىق كۆڭۈلدىكى ھەميان ئىشلىتىدۇ"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "ھەميان باشقۇرغۇچ"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "باشقۇرغۇچنى سىستېما قونداقتا كۆرسەت"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "ئاخىرقى ھەميان تاقالغاندا سىستېما قونداقتىكى سىنبەلگىنى يوشۇرىدۇ"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "مەخپىيەتلىك مۇلازىمىتى"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "مەخپىيەتلىك مۇلازىمىتىنىڭ ئارايۈزىگە &KWallet ئىشلىتىدۇ"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "يېڭى ھەميان"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "يېڭى ھەميانغا ئات تاللاڭ:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
+
+#~ msgid "Permission denied."
+#~ msgstr "ئىجازەت رەت قىلىندى."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "KDE ھەميان تىزگىن بۆلىكى"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "ھەميان مايىللىقى"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>ھەميان تارماق سىستېمىسى ئىم باشقۇرۇشقا قولاي ۋە بىخەتەرلىك ئۇسۇل بىلەن "
+#~ "تەمىنلەيدۇ. بۇ تاللانما مەزكۇر سىستېمىنى ئىشلىتىش ياكى ئىشلەتمەسلىكنى "
+#~ "بەلگىلەيدۇ.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "باشقىلارنىڭ كۆرۈۋېلىشى ياكى شەخسىي ئۇچۇرلىرىڭىزنى ئىشلىتىشتىن ساقلىنىش "
+#~ "ئۈچۈن ھەمياننى ئىشلەتمىگەندە دەرھال يېپىش تەۋسىيە قىلىنىدۇ."
+
+#~ msgid "Close wallet:"
+#~ msgstr "ھەمياننى ياپ:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>پىروگرامما ھەميان ئىشلىتىشنى توختاتقاندا ھەمياننى دەرھال تاقايدۇ.</"
+#~ "b><br>دىققەت قىلىڭكى، ھەميانىڭىز ئۇنى ئىشلەتكەن بارلىق پىروگرامما "
+#~ "تاقالغاندىلا ئاندىن تاقىلىدۇ.<br>ھەميان تاقالغاندىن كېيىن، قايتا ئېچىشتا "
+#~ "ئىم لازىم بولىدۇ.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "ئاخىرقى پىروگرامما ھەميان ئىشلىتىشنى توختاتقاندا"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>ھەمياننى تاقاشتىن ئىلگىرىكى كۈتۈش ۋاقتى.</b><br>ھەميان تاقالغاندىن "
+#~ "كېيىن، ئۇنى ئېچىشتا ئىم لازىم بولىدۇ.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " مىنۇت"
+
+#~ msgid "New..."
+#~ msgstr "يېڭى…"
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "مەخپىيەتلىك مۇلازىمىتى ئارايۈزى ئەپنىڭ ئىم ۋە باشقا مەخپىي ئۇچۇرلارنى "
+#~ "ساقلىشىغا يول قويىدۇ. بۇ تاللانما چەكلەنسە KeePassXC ياكى GNOME شىفىرلىق "
+#~ "ئاچقۇچ ھالقىسىغا ئوخشاش ئۈچىنچى تەرەپ ھەميان مۇلازىمىتىنى ئىشلىتىشكە يول "
+#~ "قويىدۇ."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "ھەميان باشقۇرغۇچنى قوزغات (&L)"
+
+#~ msgid "Always Allow"
+#~ msgstr "ھەمىشە يول قوي"
+
+#~ msgid "Always Deny"
+#~ msgstr "ھەمىشە رەت قىل"
+
+#~ msgid "&Delete"
+#~ msgstr "ئۆچۈر(&D)"
+
+#~ msgid "Access Control"
+#~ msgstr "زىيارەت تىزگىنى"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "پىروگرامما ھەمياننى زىيارەت قىلغاندا ئەسكەرتىدۇ(&P)"
+
+#~ msgid "Wallet"
+#~ msgstr "ھەميان"
+
+#~ msgid "Application"
+#~ msgstr "پىروگرامما"
+
+#~ msgid "Policy"
+#~ msgstr "تۈزۈم"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>ئېكران قوغدىغۇچ قوزغالسىلا ھەمياننى تاقايدۇ.</b><br>ھەميان "
+#~ "تاقالغاندىن كېيىن، قايتا ئېچىشتا ئىم لازىم بولىدۇ.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "ئېكران قوغدىغۇچ قوزغالغاندا"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"

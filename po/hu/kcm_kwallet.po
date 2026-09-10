@@ -1,0 +1,271 @@
+#
+# Tamas Szanto <taszanto@gmail.com>, 2003.
+# Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2019.
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.3\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2025-02-01 22:14+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.12.1\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Hiba a művelet hitelesítésekor:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Jelszótárolók engedélyezése"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Viselkedés bezáráskor"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Inaktivitás után:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Automatikus tárolóválasztás"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Alapértelmezett tároló:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Külön alapértelmezett tároló használata a helyi jelszavakhoz"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Jelszókezelő"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "A jelszókezelő elérhető legyen a paneltálcából"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "A paneltálca ikon elrejtése az utolsó nyitott tároló bezárásakor"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Titkoskód-szolgáltatás"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "&KWallet használata titkoskód-szolgáltatás interfészként"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Új jelszótároló"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Adja meg az új tároló nevét:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ulysses@fsf.hu"
+
+#~ msgid "Permission denied."
+#~ msgstr "Hozzáférés megtagadva."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "KDE beállítómodul a jelszókezelőhöz"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "A jelszótárolók beállításai"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>A jelszótároló alrendszer jelszavak kényelmesen kezelhető, de "
+#~ "biztonságos módon történő eltárolására szolgál. Ezzel az opcióval lehet "
+#~ "engedélyezni az alrendszer használatát.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Érdemes bezárni azokat a tárolókat, amelyeket már egyik alkalmazás sem "
+#~ "használ, nehogy valaki illetéktelenül megtekinthesse vagy felhasználhassa "
+#~ "a bennük levő adatokat."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Tároló bezárása:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>A jelszótároló záródjon be, ha az azt használó alkalmazás már "
+#~ "bezárult.</b><br>A tároló csak akkor záródik be, ha az azt használó "
+#~ "összes alkalmazás bezárult.<br>Egy tároló bezárása után csak a tárolót "
+#~ "védő jelszó megadásával lehet újból hozzáférni a tartalmához.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Ha nem használja már egy alkalmazás sem"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>A jelszótárolók bezárása adott időtartamú inaktivitás után</b><br>A "
+#~ "tároló bezárása után csak a jelszó megadásával lehet újból hozzáférni a "
+#~ "tartalmához.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " perc"
+
+#~ msgid "New..."
+#~ msgstr "Új..."
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "A titkoskód-szolgáltató interfész lehetővé teszi az alkalmazásoknak "
+#~ "jelszavak és más bizalmas adatok tárolását. Kapcsolja ki, ha szeretné "
+#~ "lehetővé tenni harmadik féltől származó alkalmazásoknak, például a "
+#~ "KeePassXC-nek vagy a GNOME kulcstartónak azok kezelését."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "A jelszóke&zelő elindítása"
+
+#~ msgid "Always Allow"
+#~ msgstr "Engedélyezés mindig"
+
+#~ msgid "Always Deny"
+#~ msgstr "Tiltás mindig"
+
+#~ msgid "&Delete"
+#~ msgstr "&Törlés"
+
+#~ msgid "Access Control"
+#~ msgstr "Hozzáférési jogosultságok"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "&Figyelmeztessen, ha egy alkalmazás hozzáfér a tárolóhoz"
+
+#~ msgid "Wallet"
+#~ msgstr "Tároló"
+
+#~ msgid "Application"
+#~ msgstr "Alkalmazás"
+
+#~ msgid "Policy"
+#~ msgstr "Házirend"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>A képernyővédő elindulásakor automatikusan záródjanak be a tárolók."
+#~ "</b><br>Egy tároló bezárása után csak a jelszó megadásával lehet újból "
+#~ "hozzáférni a tartalmához.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "Képernyővédő indításakor"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr " Ez legyen az alapértelmezett jelszótároló:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) George Staikos, 2003."
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "KDE beállítómodul jelszótárolók kezeléséhez."
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Elnézést, a rendszer biztonsági politikája nem teszi lehetővé a "
+#~ "változtatások mentését."

@@ -1,0 +1,260 @@
+# Translation of kcmkwallet.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2005, 2009, 2010, 2013, 2014, 2016.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Slobodan Simic <slsimic@gmail.com>, 2008.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2016-11-23 19:27+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Грешка при аутентификовању радње:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Укључи КДЕ‑ов подсистем новчаника"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr ""
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Затвори ако се не користи:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Аутоматско бирање новчаника"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgid "Default Wallet:"
+msgstr "Нови новчаник"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "Одвојени новчаник за локалне лозинке:"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Менаџер новчаника"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Прикажи менаџер у системској касети"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Сакриј иконицу системске касете по затварању последњег новчаника"
+
+#: ui/main.qml:236
+#, kde-format
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr ""
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Нови новчаник"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Изаберите име за нови новчаник:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Часлав Илић"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#~ msgid "Permission denied."
+#~ msgstr "Дозвола одбијена."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "КДЕ‑ов контролни модул новчаника"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Поставке новчаника"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Подсистем новчаника пружа вам прикладан и безбедан начин за управљање "
+#~ "свим лозинкама. Ова опција одређује желите ли да користите овај систем.</"
+#~ "p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Паметно је затварати новчанике које више не користите, како нико не би "
+#~ "могао да их погледа или користи."
+
+#, fuzzy
+#~| msgid "Close Wallet"
+#~ msgid "Close wallet:"
+#~ msgstr "Затварање новчаника"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p>Новчаник се затвара чим се напусти програм који га користи. Ако га "
+#~ "користи више програма, новчаник ће бити затворен када сви они престану с "
+#~ "радом. Пошто се новчаник затвори, потребна је лозинка да би му се поново "
+#~ "приступило.</p>"
+
+#, fuzzy
+#~| msgid "Close when last application stops using it"
+#~ msgid "When last application stops using it"
+#~ msgstr "Затвори пошто програми престану да га користе"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p>Новчаник се затвара после периода неактивности. Када је новчаник "
+#~ "затворен, потребна је лозинка да би му се поново приступило.</p>"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgid " minutes"
+#~ msgstr " мин."
+
+#~ msgid "New..."
+#~ msgstr "Нови..."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "Покрени &менаџер новчаника"
+
+#~ msgid "Always Allow"
+#~ msgstr "Увек дозволи"
+
+#~ msgid "Always Deny"
+#~ msgstr "Увек одбиј"
+
+#~ msgid "&Delete"
+#~ msgstr "&Обриши"
+
+#~ msgid "Access Control"
+#~ msgstr "Управљање приступом"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "&Питај када програм приступи новчанику"
+
+#~ msgid "Wallet"
+#~ msgstr "новчаник"
+
+#~ msgid "Application"
+#~ msgstr "програм"
+
+#~ msgid "Policy"
+#~ msgstr "смерница"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p>Новчаник се затвара чим се покрене чувар екрана. Када је новчаник "
+#~ "затворен, потребна је лозинка да би му се поново приступило.</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "Затвори када се покрене чувар екрана"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Изаберите новчаник ће се подразумевано користити:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "© 2003, Џорџ Стајкос"
+
+#~ msgid "George Staikos"
+#~ msgstr "Џорџ Стајкос"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Овај модул вам омогућава да подесите КДЕ‑ов систем новчаника."

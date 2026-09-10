@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:51+0000\n"
 "PO-Revision-Date: 2024-07-30 21:06+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -433,6 +433,11 @@ msgstr "Ne eblas forigi la monujon. Erarkodo estis %1."
 #, kde-format
 msgid "File name"
 msgstr "Dosiernomo"
+
+#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#, kde-format
+msgid "Tar archive (*.tar)"
+msgstr ""
 
 #: kwalletmanager.cpp:443
 #, kde-format

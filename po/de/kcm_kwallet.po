@@ -1,0 +1,280 @@
+# SPDX-FileCopyrightText: 2003-2005 Gregor Zumstein <zumstein@ssd.ethz.ch>
+# SPDX-FileCopyrightText: 2005 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2005, 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2007 Gregor Zumstein <gz@orchester-bremgarten.ch>
+# SPDX-FileCopyrightText: 2008 Rolf Eike Beer <kde@opensource.sf-tec.de>
+# SPDX-FileCopyrightText: 2009, 2013, 2016 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2009-2010, 2013-2014, 2017, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2026-05-16 15:23+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Fehler bei der Authentifizierungs-Aktion:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "KDE-Passwortspeicher-System &aktivieren"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Schließverhalten"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Bei Nichtgebrauch schließen nach:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Automatische Wahl des Passwortspeichers"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Standard-Passwortspeicher:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Anderen Passwortspeicher für lokale Passwörter verwenden"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Passwortverwaltung"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Passwortverwaltung im Systembereich anzeigen"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr ""
+"Kontrollleistensymbol ausblenden, wenn der letzte Passwortspeicher "
+"geschlossen ist"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Secret Service"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "&KWallet als Schnittstelle für „Secret Service“ verwenden"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Neuer Passwortspeicher"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Name des neuen Passwortspeichers:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Deutsches KDE-Übersetzungsteam"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-i18n-de@kde.org"
+
+#~ msgid "Permission denied."
+#~ msgstr "Zugriff verweigert."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "KDE-Steuerungsmodul für Passwortspeicher"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Einstellungen für den Passwortspeicher"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Das Passwortspeicher-System bietet eine bequeme und sichere "
+#~ "Möglichkeit, Ihre Passwörter zu verwalten. Diese Einstellung legt fest, "
+#~ "ob dieses System verwendet wird.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Es ist ratsam, Ihre Passwortspeicher zu schließen, sobald sie nicht mehr "
+#~ "benötigt werden. So verhindern Sie unberechtigten Zugriff darauf."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Passwortspeicher schließen:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Passwortspeicher schließen, sobald keine Anwendung mehr darauf "
+#~ "zugreift.</b> <br>Der Passwortspeicher wird erst geschlossen, wenn alle "
+#~ "Anwendungen, die darauf zugegriffen haben, beendet wurden.<br>Ist ein "
+#~ "Passwortspeicher geschlossen, wird zum Öffnen erneut das Passwort "
+#~ "gebraucht.</p>>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Sobald keine Anwendung mehr darauf zugreift"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Nach einer Zeit der Nichtbenutzung des Passwortspeichers schließen."
+#~ "</b> <br>Ist ein Passwortspeicher geschlossen, wird zum Öffnen erneut das "
+#~ "Passwort benötigt.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " Minuten"
+
+#~ msgid "New..."
+#~ msgstr "Neu …"
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "Die „Secret Service“-Schnittstelle erlaubt Anwendungen, Passwörter oder "
+#~ "andere vertrauliche Daten zu speichern. Deaktivieren Sie sie, wenn Sie "
+#~ "andere Passwortspeicher wie beispielsweise KeePassXC oder GNOME Keyring "
+#~ "für die Passwortverwaltung verwenden möchten."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Passwortverwaltung starten"
+
+#~ msgid "Always Allow"
+#~ msgstr "Immer zulassen"
+
+#~ msgid "Always Deny"
+#~ msgstr "Immer verbieten"
+
+#~ msgid "&Delete"
+#~ msgstr "&Löschen"
+
+#~ msgid "Access Control"
+#~ msgstr "Zugriffsüberwachung"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr ""
+#~ "&Nachfragen, wenn eine Anwendung auf einen Passwortspeicher zugreift"
+
+#~ msgid "Wallet"
+#~ msgstr "Passwortspeicher"
+
+#~ msgid "Application"
+#~ msgstr "Anwendung"
+
+#~ msgid "Policy"
+#~ msgstr "Regelungen"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Passwortspeicher schließen, wenn der Bildschirmschoner aktiv wird.</"
+#~ "b><br>Ist ein Passwortspeicher geschlossen, wird zum Öffnen erneut das "
+#~ "Passwort benötigt.</p> "
+
+#~ msgid "When screensaver starts"
+#~ msgstr "Wenn der Bildschirmschoner aktiv wird"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Standardpasswortspeicher:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "© 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr ""
+#~ "Dieses Modul erlaubt die Einrichtung des KDE-Passwortspeicher-Systems."
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Leider erlauben es Ihnen die Sicherheitsregeln des Systems nicht, die "
+#~ "Änderungen zu speichern."

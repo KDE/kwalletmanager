@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:51+0000\n"
 "PO-Revision-Date: 2007-04-04 17:15+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -428,6 +428,11 @@ msgstr "Немагчыма выдаліць папернік. Код памыл�
 #, fuzzy, kde-format
 msgid "File name"
 msgstr "Імя паперніка"
+
+#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#, kde-format
+msgid "Tar archive (*.tar)"
+msgstr ""
 
 #: kwalletmanager.cpp:443
 #, kde-format

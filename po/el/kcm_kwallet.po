@@ -1,0 +1,273 @@
+# translation of kcmkwallet.po to greek
+# translation of kcmkwallet.po to
+#
+# Kouzinopoulos Haris <haris@mpa.gr>, 2005.
+# Elias Economakos <iliasoik@edu.teiath.gr>, 2005.
+# Spiros Georgaras <sng@hellug.gr>, 2005, 2006, 2007.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011.
+# Antonis Geralis <capoiosct@gmail.com>, 2013, 2014.
+# Petros Vidalis <pvidalis@gmail.com>, 2016.
+# Stelios <sstavra@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2021-06-30 09:58+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Σφάλμα κατά την πιστοποίηση της ενέργειας:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Ενεργοποίηση του υποσυστήματος πορτοφολιού του KDE"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr ""
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Κλείσιμο όταν παραμείνει ανενεργό για:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Αυτόματη επιλογή πορτοφολιού"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgid "Default Wallet:"
+msgstr "Νέο πορτοφόλι"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "Διαφορετικό πορτοφόλι για τους κωδικούς πρόσβασης:"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Διαχειριστής πορτοφολιού"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Εμφάνιση διαχειριστή στο πλαίσιο συστήματος"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr ""
+"Απόκρυψη εικονιδίου από το πλαίσιο συστήματος όταν το τελευταίο πορτοφόλι "
+"κλείσει"
+
+#: ui/main.qml:236
+#, kde-format
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr ""
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Νέο πορτοφόλι"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Παρακαλώ επιλέξτε ένα όνομα για το νέο πορτοφόλι:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Τούσης Μανώλης, Κουζινόπουλος Χάρης,Ηλίας Οικονομάκος"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "manolis@koppermind.homelinux.org, haris@mpa.gr, iliasoik@edu.teiath.gr"
+
+#~ msgid "Permission denied."
+#~ msgstr "Η άδεια απορρίφθηκε."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Άρθρωμα ελέγχου πορτοφολιών του KDE"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Προτιμήσεις πορτοφολιού"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Το υποσύστημα πορτοφολιού σας επιτρέπει με βολικό και ασφαλή τρόπο να "
+#~ "διαχειρίζεστε όλους τους κωδικούς σας. Μπορείτε να αποφασίσετε αν θέλετε "
+#~ "να χρησιμοποιήσετε αυτό το σύστημα με αυτή την επιλογή.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Είναι προτιμότερο να κλείνετε τα πορτοφόλια σας όταν δεν τα "
+#~ "χρησιμοποιείτε για να εμποδίσετε άλλους να τα δουν ή να τα αλλάξουν."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Κλείσιμο πορτοφολιού:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Κλείσιμο του πορτοφολιού με τον τερματισμό της εφαρμογής που το "
+#~ "χρησιμοποιεί.</b><br> Σημειώστε ότι το πορτοφόλι σας θα κλείσει όταν όλες "
+#~ "οι εφαρμογές που το χρησιμοποιούν σταματήσουν.<br>Όταν ένα πορτοφόλι "
+#~ "κλείσει ο κωδικός πρόσβασης είναι απαραίτητος για να το προσπελάσετε ξανά."
+#~ "</p>"
+
+#, fuzzy
+#~| msgid "Close when last application stops using it"
+#~ msgid "When last application stops using it"
+#~ msgstr "Κλείσιμο όταν η τελευταία εφαρμογή σταματάει να το χρησιμοποιεί"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Κλείσιμο του πορτοφολιού ύστερα από μια περίοδο αδράνειας</"
+#~ "b><br>Όταν ένα πορτοφόλι κλείνει ο κωδικός πρόσβασης είναι απαραίτητος "
+#~ "για να το προσπελάσετε ξανά.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " λεπτά"
+
+#~ msgid "New..."
+#~ msgstr "Νέο..."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Εκτέλεση διαχειριστή πορτοφολιού"
+
+#~ msgid "Always Allow"
+#~ msgstr "Αποδοχή πάντα"
+
+#~ msgid "Always Deny"
+#~ msgstr "Απόρριψη πάντα"
+
+#~ msgid "&Delete"
+#~ msgstr "&Διαγραφή"
+
+#~ msgid "Access Control"
+#~ msgstr "Έλεγχος πρόσβασης"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "&Ερώτηση όταν μία εφαρμογή προσπελάσει ένα πορτοφόλι"
+
+#~ msgid "Wallet"
+#~ msgstr "Πορτοφόλι"
+
+#~ msgid "Application"
+#~ msgstr "Εφαρμογή"
+
+#~ msgid "Policy"
+#~ msgstr "Πολιτική"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Κλείσιμο του πορτοφολιού αμέσως μόλις ξεκινήσει η προστασία οθόνης."
+#~ "</b><br>Όταν ένα πορτοφόλι κλείνει ο κωδικός πρόσβασης είναι απαραίτητος "
+#~ "για να το προσπελάσετε ξανά.</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "Κλείσιμο όταν ξεκινάει η προστασία οθόνης"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Επιλέξτε πορτοφόλι για χρήση ως προκαθορισμένο:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr ""
+#~ "Αυτό το άρθρωμα ελέγχου σας επιτρέπει την παραμετροποίηση του συστήματος "
+#~ "πορτοφολιού του KDE."
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Δυστυχώς, η πολιτική ασφάλειας του συστήματος δεν σας επιτρέπει να "
+#~ "αποθηκεύσετε τις αλλαγές."

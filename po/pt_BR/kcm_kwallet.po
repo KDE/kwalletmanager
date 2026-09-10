@@ -1,0 +1,281 @@
+# Translation of kcmkwallet.po to Brazilian Portuguese
+# Copyright (C) 2003, 2004, 2005, 2008, 2009, 2011, 2013, 2014 Free Software Foundation, Inc.
+#
+# Paulo Henrique Alkmin da Costa <phalkmin@yahoo.com.br>, 2003.
+# Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
+# Henrique Pinto <henrique.pinto@kdemail.net>, 2005.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2011, 2013, 2014.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2017, 2021, 2022.
+# SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2025-02-04 23:20-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.12.1\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Erro ao autenticar a ação:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Habilitar o subsistema de carteiras do KDE"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Comportamento ao fechar"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Quando não usada por:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Seleção automática da carteira"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Carteira padrão:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Usar carteira padrão diferente para as senhas locais:"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Gerenciador de carteiras"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Mostrar o gerenciador na área de notificação"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Ocultar o ícone da área de notificação ao fechar a última carteira"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Secret Service"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "Usar &KWallet para interface do Secret Service"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Nova carteira"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Escolha um nome para a nova carteira:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Paulo Henrique Alckmin da Costa, Lisiane Sztoltz Teixeira, André Marcelo "
+#~ "Alvarenga"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "phalkmin@yahoo.com.br, lisiane@conectiva.com.br, alvarenga@kde.org"
+
+#~ msgid "Permission denied."
+#~ msgstr "Permissão negada."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Módulo de controle de carteiras do KDE"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Preferências da carteira"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>O subsistema de carteiras permite administrar todas as suas senhas de "
+#~ "uma maneira conveniente e segura. Esta opção indica se você deseja ou não "
+#~ "usá-lo.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "É recomendável fechar suas carteiras quando você não estiver usando para "
+#~ "que ninguém possa vê-la ou usá-la."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Fechar carteira:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Fecha a carteira usada nos aplicativos quando eles forem encerrados."
+#~ "</b><br>Lembre-se de que suas carteiras só serão fechadas quando todos os "
+#~ "aplicativos que as usam forem encerrados.<br>Quando uma carteira é "
+#~ "fechada, é necessário digitar a senha para acessá-la novamente.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Quando o último aplicativo terminar de usá-la"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Fecha a carteira após um período de inatividade.</b><br>Quando uma "
+#~ "carteira é fechada, é necessário digitar a senha para acessá-la novamente."
+#~ "</p>"
+
+#~ msgid " minutes"
+#~ msgstr " minutos"
+
+#~ msgid "New..."
+#~ msgstr "Nova..."
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "A interface do Secret Service permite aos aplicativos armazenar senhas e "
+#~ "outros dados confidenciais. Desabilite isto para permitir serviços de "
+#~ "carteiras de terceiros como KeePassXC ou Chaveiro do GNOME Keyring o "
+#~ "gerenciem."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Executar o gerenciador de carteiras"
+
+#~ msgid "Always Allow"
+#~ msgstr "Sempre permitir"
+
+#~ msgid "Always Deny"
+#~ msgstr "Sempre negar"
+
+#~ msgid "&Delete"
+#~ msgstr "E&xcluir"
+
+#~ msgid "Access Control"
+#~ msgstr "Controle de acesso"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "&Avisar quando um aplicativo acessar uma carteira"
+
+#~ msgid "Wallet"
+#~ msgstr "Carteira"
+
+#~ msgid "Application"
+#~ msgstr "Aplicativo"
+
+#~ msgid "Policy"
+#~ msgstr "Política"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Fecha a carteira assim que o protetor de tela iniciar.</"
+#~ "b><br>Quando uma carteira é fechada, é necessário digitar a senha para "
+#~ "acessá-la novamente.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "Quando iniciar o protetor de tela"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Selecione a carteira a ser usada por padrão:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr ""
+#~ "Esse módulo de configuração permite-lhe configurar o sistema de carteiras "
+#~ "do KDE."
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "Habilitar Secret Service DBus API"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Desculpe, mas a política de segurança do sistema não permite salvar as "
+#~ "alterações."

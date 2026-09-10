@@ -1,0 +1,272 @@
+# translation of kcmkwallet.po to
+# Copyright (C) 2004, 2006, 2007 Free Software Foundation, Inc.
+# Ahmad M. Zawawi <azawawi@emirates.net.ae>, 2004.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# Khaled Hosny <dr.khaled.hosny@gmail.com>, 2006.
+# Fahad Al-Saidi <fahad.alsaidi@gmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2025-08-20 20:45+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"خطأ أثناء إجراء الاستيثاق  :\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "تف&عيل نظام محفظة كدى الفرعي"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "سلوك الغلق"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "عند عدم الاستخدام لمدة:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "اختيار المحفظة آليّا"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "المحفظة المبدئية:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "استخدم محفظة مختلفه لكلمات السر المحلية"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "مدير المحفظة"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "أظهر المدير في صينية النظام"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "اخف أيقونة صينية النظام عند إغلاق آخر محفظة"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "خدمة الأسرار"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "ا&ستخدم \"محفظتك\" لواجهة خدمة الأسرار"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "محفظة جديدة"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "رجاءا أختر اسم للمحفظة الجديدة:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "عبدالرحمن عبدالخالق غريب, خالد حسنى, فهد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "king_abdo@yahoo.com, dr.khaled.hosny@gmail.com, Fahad.alsaidi@gmail.com"
+
+#~ msgid "Permission denied."
+#~ msgstr "طلب الإذن مرفوض."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "وحدة التحكم في محفظة كدى"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "خصائص المحفظة"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>يوفر نظام المحفظة الفرعي طريقة آمنة و ملائمة لإدارة كلمات السر.  يمكنك "
+#~ "أن تقرر بهذا الخيار إذا كنت تريد استخدام هذا النظام أم.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "من الأفضل اغلاق الَمحَافظ عندما تتوقّف عن استخدامها حتى تمنع الآخرين من "
+#~ "الاطّلاع عليها أو استخدامها."
+
+#~ msgid "Close wallet:"
+#~ msgstr "أغلق المحفظة:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>أغلق المحفظة بمجرد توقف التطبيق المستخدم لها.</b><br>لاحظ أن "
+#~ "المحفظة سوف تغلق فقط عند توقف كل التطبيقات المستخدمة لها. <br> عند إغلاق "
+#~ "المحفظة سوف تحتاج لكلمة السر للدخول لها مرة أخرى. </p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "عند توقف آخر تطبيق يستخدمها"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>أغلق المحفظة بعد فترة من عدم النشاط</b><br>عند إغلاق المحفظة سوف "
+#~ "تحتاج لكلمة السر للدخول لها مرة أخرى.</p>"
+
+#~ msgid " minutes"
+#~ msgstr "دقيقة"
+
+#~ msgid "New..."
+#~ msgstr "جديد..."
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "تمكن واجهة خدمة الأسرار التطبيقات من تخزين كلمات السر وغيرها من المعلومات "
+#~ "السرية. تعطيلها سيسمح لخدمات الطرف الثالث مثل KeePassXC و GNOME Keyring "
+#~ "بإدارة هذه "
+#~ "الواجهة.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "أ&طلق مدير المحفظة"
+
+#~ msgid "Always Allow"
+#~ msgstr "اسمح دومًا"
+
+#~ msgid "Always Deny"
+#~ msgstr "امنع دومًا"
+
+#~ msgid "&Delete"
+#~ msgstr "اح&ذف"
+
+#~ msgid "Access Control"
+#~ msgstr "تحكم الوصول"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "إ&ظهار رسالة عند دخول تطبيق لمحفظة"
+
+#~ msgid "Wallet"
+#~ msgstr "المحفظة"
+
+#~ msgid "Application"
+#~ msgstr "التطبيق"
+
+#~ msgid "Policy"
+#~ msgstr "السياسة"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<P><b>اغلاق المحفظة بمجرد بدأ حافظة الشاشة.</b><br>عند إغلاق المحفظة سوف "
+#~ "تحتاج لكلمة السر لدخولها مره أخرى.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "عند بدأ حافظة الشاشة"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "حدد محفظة لتصبح المحفظة الافتراضية:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "الحقوق محفوظة 2003 لجورج ستايكوس"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "تسمح لك وحدة الإعداد هذه بإعداد نظام محفظة كدى."
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "مكّن دوال خدمة الأسرار لدي باص"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"

@@ -1,0 +1,219 @@
+# Translation of kcmkwallet.po to Catalan (Valencian)
+# Copyright (C) 2003-2024 This_file_is_part_of_KDE
+#
+# SPDX-FileCopyrightText: 2003-2004 Albert Astals Cid <aacid@kde.org>
+# SPDX-FileCopyrightText: 2007-2009, 2013-2016, 2018, 2021-2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2009 Joan Maspons <joanmaspons@gmail.com>
+# SPDX-FileCopyrightText: 2016, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
+msgid ""
+msgstr ""
+"Project-Id-Version: kwalletmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2024-08-14 09:41+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 24.05.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"S'ha produït un error durant l'acció d'autenticació:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Habilita el subsistema de carteres de KDE"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Comportament de tancar"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Quan no s'haja utilitzat durant:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Selecció automàtica de carteres"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Cartera predeterminada:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Utilitza una cartera diferent per a les contrasenyes locals"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Gestor de carteres"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Mostra el gestor en la safata del sistema"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr ""
+"Amaga la icona de la safata del sistema quan es tanque l'última cartera"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Servei de secrets"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "Utilitza &KWallet per a la interfície del servei de secrets"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Cartera nova"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Trieu un nom per a la cartera nova:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Empar Montoro Martín,Albert Astals Cid,Joan Maspons Ventura"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "montoro_mde@gva.es,aacid@kde.org,joanmaspons@gmail.com"
+
+#~ msgid "Permission denied."
+#~ msgstr "S'ha denegat el permís."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Mòdul de control de les carteres a KDE"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Preferències de les carteres"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>El subsistema de carteres proporciona una manera pràctica i segura de "
+#~ "gestionar totes les vostres contrasenyes. Esta opció especifica si voleu "
+#~ "utilitzar-lo o no.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "És millor tancar les carteres quan no les utilitzeu perquè ningú hi puga "
+#~ "mirar o utilitzar-les."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Tanca la cartera:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Tanca la cartera quan es tanquen totes les aplicacions que en feien "
+#~ "ús.</b><br>Cal tindre en compte que la cartera només es tancarà quan "
+#~ "totes les aplicacions que l'utilitzen s'hagen parat.<br>Quan es tanca una "
+#~ "cartera, farà falta la contrasenya per a poder-hi accedir una altra "
+#~ "vegada.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Quan es tanque l'última aplicació que l'utilitzava"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Tanca la cartera després d'un període d'inactivitat.</b><br>Quan es "
+#~ "tanca una cartera, farà falta la contrasenya per a poder accedir-hi una "
+#~ "altra vegada.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " minuts"
+
+#~ msgid "New..."
+#~ msgstr "Nova…"
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "La interfície del servei de secrets permet que les aplicacions "
+#~ "emmagatzemen contrasenyes i altres dades confidencials. Desactiveu-la per "
+#~ "a permetre que els serveis de carteres de terceres parts com KeePassXC o "
+#~ "l'anell de claus de GNOME ho gestionen en lloc seu."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Inicia el gestor de carteres"

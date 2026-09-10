@@ -1,0 +1,260 @@
+# translation of kcmkwallet.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009.
+# Auk Piseth <piseth_dv@khmeros.info>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2009-06-05 09:32+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "បើក​ប្រព័ន្ធរង​របស់​កាបូប KDE"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr ""
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Close when unused for:"
+msgid "Close wallet when unused for:"
+msgstr "បិទ​នៅ​ពេល​មិន​ប្រើ​រយៈពេល ៖"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "ការ​ជ្រើស​កាបូប​ស្វ័យប្រវត្តិ"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "New Wallet"
+msgid "Default Wallet:"
+msgstr "កាបូប​ថ្មី"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Different wallet for local passwords:"
+msgid "Use different default wallet for local passwords"
+msgstr "កាបូប​ផ្សេងៗ​គ្នា សម្រាប់​ពាក្យ​សម្ងាត់​មូលដ្ឋាន ៖"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "កម្មវិធី​គ្រប់គ្រង​កាបូប"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "បង្ហាញ​កម្មវិធី​គ្រប់គ្រង ក្នុង​ថាស​ប្រព័ន្ធ"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "លាក់​រូបតំណាង​ថាស​ប្រព័ន្ធ ពេល​កាបូប​ចុងក្រោយ​បិទ"
+
+#: ui/main.qml:236
+#, kde-format
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr ""
+
+#: ui/main.qml:240
+#, kde-format
+msgid "Use KWallet for Secret Service Interface"
+msgstr ""
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "កាបូប​ថ្មី"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "សូម​ជ្រើស​ឈ្មោះ​មួយ សម្រាប់​កាបូប​ថ្មី ៖"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, ​អេង វណ្ណៈ, អោក ពិសិដ្ឋ​"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "ម៉ូឌុល​ត្រួតពិនិត្យ​កាបូ​ប​របស់ KDE"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "ចំណូល​ចិត្ត​កាបូប"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~| "all your passwords.  This option specifies whether or not you want to "
+#~| "use it.</p>"
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>ប្រព័ន្ធ​រង​កាបូប​ផ្ដល់​នូវ​វិធី​ងាយស្រួល និង​សុវត្ថិភាព​ដើម្បី​គ្រប់គ្រង​ពាក្យ​សម្ងាត់​របស់​អ្នក​ទាំង​អស់ ។ ​ "
+#~ "ជម្រើស​នេះ​បញ្ជាក់​ថាតើ​អ្នក​ចង់​ប្រើ​វា ឬ​ក៏អត់ ។</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "ជា​ការ​ល្អបំផុត អ្នក​គួរ​តែ​បិទ​កាបូប​របស់​អ្នក ពេល​អ្នក​មិន​ប្រើ​ពួកវា ។ ធ្វើ​ដូច្នេះ ដើម្បី​មិន​ឲ្យ​អ្នក​ដទៃ​"
+#~ "មើល ឬ​ប្រើ​ពួកវា ។"
+
+#, fuzzy
+#~| msgid "Close Wallet"
+#~ msgid "Close wallet:"
+#~ msgstr "បិទ​កាបូប"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>បិទ​កាបូប​ភ្លាមៗ ពេល​ដែល​កម្មវិធី​ប្រើវា​បាន​ឈប់ ។</b><br>សូម​ចំណាំថា កាបូប​របស់អ្នកនឹង​បិទ​តែ​"
+#~ "ពេលកម្មវិធី​ទាំងអស់ដែល​ប្រើ​វា​បាន​ឈប់​ប៉ុណ្ណោះ ។<br>ពេល​កាបូប​មួយ​បិទ នោះ​វា​ត្រូវការ​ពាក្យ​សម្ងាត់​"
+#~ "ម្តងទៀត​ដើម្បី​ប្រើ​ប្រាស់​វា ។</p>"
+
+#, fuzzy
+#~| msgid "Close when last application stops using it"
+#~ msgid "When last application stops using it"
+#~ msgstr "បិទ ពេល​កម្មវិធី​ចុងក្រោយ​ឈប់​ប្រើ​វា"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>បិទ​កាបូប បន្ទាប់ពី​អសកម្ម​មួយ​រយៈពេល </b><br> ពេល​កាបូប​មួយ​បិទ ពាក្យ​សម្ងាត់​នឹង​ត្រូវការ​"
+#~ "ម្តងទៀត​ដើម្បី​ប្រើប្រាស់​វា ។</p>"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgid " minutes"
+#~ msgstr " នាទី"
+
+#~ msgid "New..."
+#~ msgstr "ថ្មី..."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "បើក​ដំណើរការ​កម្មវិធី​គ្រប់គ្រង​កាបូប"
+
+#~ msgid "Always Allow"
+#~ msgstr "អនុញ្ញាត​ជានិច្ច"
+
+#~ msgid "Always Deny"
+#~ msgstr "បដិសេធ​ជានិច្ច"
+
+#~ msgid "&Delete"
+#~ msgstr "លុប"
+
+#~ msgid "Access Control"
+#~ msgstr "ត្រួតពិនិត្យ​ការ​ដំណើរការ"
+
+#, fuzzy
+#~| msgid "&Prompt when an application accesses an open wallet"
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "ជូន​ដំណឹង ពេល​កម្មវិធី​មួយ​ប្រើ​ប្រាស់​កាបូប​ដែល​បើក"
+
+#~ msgid "Wallet"
+#~ msgstr "កាបូប"
+
+#~ msgid "Application"
+#~ msgstr "កម្មវិធី"
+
+#~ msgid "Policy"
+#~ msgstr "គោលការណ៍"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>បិទ​កាបូប​ភ្លាមៗ ពេល​ធាតុ​រក្សាអេក្រង់​ចាប់ផ្តើម ។</b><br>ពេល​កាបូប​មួយ​បិទ នោះ​វា​ត្រូវការ​"
+#~ "ពាក្យ​សម្ងាត់ ដើម្បី​អាច​ប្រើ​ប្រាស់​វា​ម្តងទៀត ។</p>"
+
+#, fuzzy
+#~| msgid "Close when screensaver starts"
+#~ msgid "When screensaver starts"
+#~ msgstr "បិទ​នៅ​ពេល​ធាតុ​រក្សា​អេក្រង់​ចាប់ផ្ដើម"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "ជ្រើស​កាបូប​ដែល​ត្រូវ​ប្រើ​ជា​លំនាំដើម ៖"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៣ ដោយ George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "ម៉ូឌុល​កំណត់​រចនា​សម្ព័ន្ធ​នេះអនុញ្ញាត​ឲ្យ​អ្នក​កំណត់​រចនា​សម្ព័ន្ធ​ប្រព័ន្ធ​កាបូប​របស់ KDE ។"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"

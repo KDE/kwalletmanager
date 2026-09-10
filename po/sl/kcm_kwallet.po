@@ -1,0 +1,275 @@
+# Translation of kcmkwallet.po to Slovenian
+# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
+#
+# Gregor Rakar <gregor.rakar@kiss.uni-lj.si>, 2003.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2004, 2005.
+# Jure Repinc <jlp@holodeck1.com>, 2008, 2009.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2016.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwallet\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-09 00:54+0000\n"
+"PO-Revision-Date: 2024-08-14 06:29+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: kcm.cpp:59
+#, kde-format
+msgid "Failed to create auth action"
+msgstr ""
+
+#: kcm.cpp:68
+#, kde-format
+msgid "Failed to save settings: Permission denied"
+msgstr ""
+
+#: kcm.cpp:70
+#, kde-format
+msgid ""
+"Error while authenticating action:\n"
+"%1"
+msgstr ""
+"Napaka med overjanjem dejanja:\n"
+"%1"
+
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "&Enable the KDE wallet subsystem"
+msgid "Enable the KDE wallet subsystem"
+msgstr "&Omogoči podsistem listnic za KDE"
+
+#: ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Close Behavior"
+msgctxt "@title:group"
+msgid "Close Behavior"
+msgstr "Obnašanje ob zapiranju"
+
+#: ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "When unused for:"
+msgid "Close wallet when unused for:"
+msgstr "Zapri, če ni uporabljena več kot:"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "short for minute(s)"
+msgid "min"
+msgstr ""
+
+#: ui/main.qml:108
+#, fuzzy, kde-format
+#| msgid "Automatic Wallet Selection"
+msgctxt "@title:group"
+msgid "Automatic Wallet Selection"
+msgstr "Samodejni izbor listnice"
+
+#: ui/main.qml:111
+#, fuzzy, kde-format
+#| msgid "Default wallet:"
+msgid "Default Wallet:"
+msgstr "Privzeta listnica:"
+
+#: ui/main.qml:133 ui/main.qml:192
+#, kde-format
+msgid "New…"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Use different default wallet for local passwords"
+msgstr "Uporabi drugo privzeto listnico za krajevna gesla"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Wallet Manager"
+msgctxt "@title:group"
+msgid "Wallet Manager"
+msgstr "Upravljalnik listnic"
+
+#: ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Show manager in system tray"
+msgid "Show icon in system tray"
+msgstr "Pokaži v sistemski vrstici"
+
+#: ui/main.qml:222
+#, kde-format
+msgid "Hide system tray icon when last wallet closes"
+msgstr "Skrij ikono v sistemski vrstici, ko se zapre zadnja listnica"
+
+#: ui/main.qml:236
+#, fuzzy, kde-format
+#| msgid "Secret Service"
+msgctxt "@title:group"
+msgid "Secret Service"
+msgstr "Secret Service"
+
+#: ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Use &KWallet for the Secret Service interface"
+msgid "Use KWallet for Secret Service Interface"
+msgstr "Uporabi KWallet kot vmesnik za Secret Service"
+
+#: ui/NewWalletDialog.qml:12
+#, kde-format
+msgid "New Wallet"
+msgstr "Nova listnica"
+
+#: ui/NewWalletDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Please choose a name for the new wallet:"
+msgid "Choose a name for the new wallet:"
+msgstr "Izberite ime za novo listnico:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Gregor Rakar,Andrej Mernik"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "gregor.rakar@kiss.si,andrejm@ubuntu.si"
+
+#~ msgid "Permission denied."
+#~ msgstr "Nimate dovoljenja."
+
+#~ msgid "KDE Wallet Control Module"
+#~ msgstr "Nadzorni modul Listnice za KDE"
+
+#~ msgid "Wallet Preferences"
+#~ msgstr "Možnosti listnice"
+
+#~ msgid ""
+#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
+#~ "all your passwords. This option specifies whether or not you want to use "
+#~ "it.</p>"
+#~ msgstr ""
+#~ "<p>Podsistem listnic vam ponuja udoben in varen način za upravljanje z "
+#~ "vsemi vašimi gesli. S to možnostjo izberete, ali bi radi ta sistem "
+#~ "uporabljali ali ne.</p>"
+
+#~ msgid ""
+#~ "It is best to close your wallets when you are not using them to prevent "
+#~ "others from viewing or using them."
+#~ msgstr ""
+#~ "Najbolje je zapreti vaše listnice, ko jih ne uporabljate več, da ne bo "
+#~ "vsak gledal vanje ali jih uporabljal."
+
+#~ msgid "Close wallet:"
+#~ msgstr "Zapri listnico:"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
+#~ "b><br>Note that your wallet will only be closed when all applications "
+#~ "that use it have stopped.<br>When a wallet is closed the password is "
+#~ "needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Zapri listnico takoj, ko se programi, ki jo uporabljajo, zaustavijo."
+#~ "</b><br>Vedite, da bodo vaše listnice zaprte le takrat, ko se bodo vsi "
+#~ "programi, ki jih uporabljajo, zaustavili.<br>Ko je listnica zaprta, je "
+#~ "potrebno geslo za dostop do nje.</p>"
+
+#~ msgid "When last application stops using it"
+#~ msgstr "Zapri, ko jo preneha uporabljati zadnji program"
+
+#~ msgid ""
+#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
+#~ "closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Zapri listnico po nekem obdobju nedejavnosti.</b><br>Ko je listnica "
+#~ "zaprta, je potrebno geslo za dostop do nje.</p>"
+
+#~ msgid " minutes"
+#~ msgstr " minut"
+
+#~ msgid "New..."
+#~ msgstr "Nova ..."
+
+#~ msgid ""
+#~ "The Secret Service interface lets applications store passwords and other "
+#~ "confidential data. Disable this to allow third-party wallet services such "
+#~ "as KeePassXC or GNOME Keyring to manage it instead."
+#~ msgstr ""
+#~ "Vmesnik za Secret Service dovoljuje aplikacijam shranjevanje gesel in "
+#~ "ostalih zaupnih podatkov. Onemogočenje tega omogoča storitvam tretjih "
+#~ "strani kot so KeePassXC ali GNOME Keyring, da skrbijo za to."
+
+#~ msgid "&Launch Wallet Manager"
+#~ msgstr "&Zaženi upravljalnika listnic"
+
+#~ msgid "Always Allow"
+#~ msgstr "Vedno dovoli"
+
+#~ msgid "Always Deny"
+#~ msgstr "Vedno zavrni"
+
+#~ msgid "&Delete"
+#~ msgstr "I&zbriši"
+
+#~ msgid "Access Control"
+#~ msgstr "Nadzor dostopa"
+
+#~ msgid "&Prompt when an application accesses a wallet"
+#~ msgstr "O&pozori, ko program dostopa do listnice"
+
+#~ msgid "Wallet"
+#~ msgstr "Listnica"
+
+#~ msgid "Application"
+#~ msgstr "Program"
+
+#~ msgid "Policy"
+#~ msgstr "Pravilnik"
+
+#~ msgid ""
+#~ "<p><b>Close wallet as soon as the screensaver starts.</b><br>When a "
+#~ "wallet is closed the password is needed to access it again.</p>"
+#~ msgstr ""
+#~ "<p><b>Zapri listnico takoj, ko se zažene ohranjevalnik zaslona.</b><br>Ko "
+#~ "je listnica zaprta, je potrebno geslo za dostop do nje.</p>"
+
+#~ msgid "When screensaver starts"
+#~ msgstr "Ko se zažene ohranjevalnik zaslona"
+
+#~ msgid "Select wallet to use as default:"
+#~ msgstr "Izberite listnico, ki jo boste privzeto uporabljali:"
+
+#~ msgid "(c) 2003 George Staikos"
+#~ msgstr "(c) 2003 George Staikos"
+
+#~ msgid "George Staikos"
+#~ msgstr "George Staikos"
+
+#~ msgid ""
+#~ "This configuration module allows you to configure the KDE wallet system."
+#~ msgstr "Ta nadzorni modul vam omogoča nastaviti sistem listnic za KDE."
+
+#~ msgid "Enable Secret Service DBus API"
+#~ msgstr "Omogoči Secret Service DBus API"
+
+#~ msgid "kcmkwallet"
+#~ msgstr "kcmkwallet"
+
+#~ msgid ""
+#~ "Sorry, the system security policy didn't allow you to save the changes."
+#~ msgstr ""
+#~ "Žal vam sistemski varnostni pravilnik ni dovolil shraniti spremembe."
