@@ -438,7 +438,7 @@ msgstr "Název souboru"
 #: kwalletmanager.cpp:436 kwalletmanager.cpp:454
 #, kde-format
 msgid "Tar archive (*.tar)"
-msgstr ""
+msgstr "Archiv tar (*.tar)"
 
 #: kwalletmanager.cpp:443
 #, kde-format

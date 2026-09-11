@@ -8,31 +8,31 @@
 # Bram Schoenmakers <bramschoenmakers@kde.nl>, 2004.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2007.
 # Kristof Bal <kristof.bal@gmail.com>, 2008.
-# SPDX-FileCopyrightText: 2009, 2013, 2014, 2016, 2021, 2022, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+# SPDX-FileCopyrightText: 2009, 2013-2014, 2016, 2021-2022, 2024, 2026 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-09 00:54+0000\n"
-"PO-Revision-Date: 2024-08-14 11:12+0200\n"
+"PO-Revision-Date: 2026-09-10 13:36+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcm.cpp:59
 #, kde-format
 msgid "Failed to create auth action"
-msgstr ""
+msgstr "Authenticatieactie aanmaken is mislukt"
 
 #: kcm.cpp:68
 #, kde-format
 msgid "Failed to save settings: Permission denied"
-msgstr ""
+msgstr "Opslaan van instellingen mislukt: Toegang geweigerd"
 
 #: kcm.cpp:70
 #, kde-format
@@ -44,55 +44,50 @@ msgstr ""
 "%1"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "&Enable the KDE wallet subsystem"
+#, kde-format
 msgid "Enable the KDE wallet subsystem"
-msgstr "Het KD&E-portefeuillesysteem inschakelen"
+msgstr "Het KD&E-portefeuille-subsysteem inschakelen"
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgid "Close Behavior"
+#, kde-format
 msgctxt "@title:group"
 msgid "Close Behavior"
 msgstr "Gedrag sluiten"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "When unused for:"
+#, kde-format
 msgid "Close wallet when unused for:"
-msgstr "Wanneer ongebruikt gedurende:"
+msgstr "Portefeuille sluiten wanneer ongebruikt gedurende:"
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
 
 #: ui/main.qml:91
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
-msgstr ""
+msgstr "min"
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Automatic Wallet Selection"
+#, kde-format
 msgctxt "@title:group"
 msgid "Automatic Wallet Selection"
 msgstr "Automatische portefeuille-selectie"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgid "Default wallet:"
+#, kde-format
 msgid "Default Wallet:"
 msgstr "Standaard portefeuille:"
 
 #: ui/main.qml:133 ui/main.qml:192
 #, kde-format
 msgid "New…"
-msgstr ""
+msgstr "Nieuw…"
 
 #: ui/main.qml:146
 #, kde-format
@@ -100,17 +95,15 @@ msgid "Use different default wallet for local passwords"
 msgstr "Andere standaard portefeuille voor lokale wachtwoorden gebruiken"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Wallet Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Wallet Manager"
-msgstr "Portefeuillebeheer"
+msgstr "Portefeuillebeheerder"
 
 #: ui/main.qml:209
-#, fuzzy, kde-format
-#| msgid "Show manager in system tray"
+#, kde-format
 msgid "Show icon in system tray"
-msgstr "Pictogram voor portefeuillebeheer in systeemvak tonen"
+msgstr "Pictogram in systeemvak tonen"
 
 #: ui/main.qml:222
 #, kde-format
@@ -118,17 +111,15 @@ msgid "Hide system tray icon when last wallet closes"
 msgstr "Systeemvakpictogram verbergen bij sluiten laatste portefeuille"
 
 #: ui/main.qml:236
-#, fuzzy, kde-format
-#| msgid "Secret Service"
+#, kde-format
 msgctxt "@title:group"
 msgid "Secret Service"
 msgstr "Service voor geheimen"
 
 #: ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Use &KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use KWallet for Secret Service Interface"
-msgstr "&KWallet gebruiken voor het interface van service voor geheimen"
+msgstr "KWallet gebruiken voor het interface van service voor geheimen"
 
 #: ui/NewWalletDialog.qml:12
 #, kde-format
@@ -136,8 +127,7 @@ msgid "New Wallet"
 msgstr "Nieuwe portefeuille"
 
 #: ui/NewWalletDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Please choose a name for the new wallet:"
+#, kde-format
 msgid "Choose a name for the new wallet:"
 msgstr "Geef een naam voor de nieuwe portefeuille:"
 
