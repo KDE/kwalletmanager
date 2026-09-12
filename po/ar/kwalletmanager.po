@@ -1,6 +1,6 @@
 # translation of kwalletmanager.po to
 # Copyright (C) 2004, 2006, 2007 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Ahmad M. Zawawi <azawawi@emirates.net.ae>, 2004.
 # Munzir Taha <munzir@kacst.edu.sa>, 2004.
 # Khaled Hosny <dr.khaled.hosny@gmail.com>, 2006.
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:51+0000\n"
-"PO-Revision-Date: 2025-08-03 23:30+0400\n"
+"PO-Revision-Date: 2026-09-11 10:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -444,7 +444,7 @@ msgstr "اسم الملفّ"
 #: kwalletmanager.cpp:436 kwalletmanager.cpp:454
 #, kde-format
 msgid "Tar archive (*.tar)"
-msgstr ""
+msgstr "أرشيف تار (*.tar)"
 
 #: kwalletmanager.cpp:443
 #, kde-format
