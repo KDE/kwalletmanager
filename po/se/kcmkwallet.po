@@ -1,4 +1,4 @@
-# Translation of kcmkwallet to Northern Sami
+# Translation of kcm_kwallet to Northern Sami
 #
 msgid ""
 msgstr ""

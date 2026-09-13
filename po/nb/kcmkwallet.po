@@ -1,4 +1,4 @@
-# Translation of kcmkwallet to Norwegian Bokmål
+# Translation of kcm_kwallet to Norwegian Bokmål
 #
 # Knut Yrvin <knut.yrvin@gmail.com>, 2003.
 # Harald Inge Børseth <haraldib@broadpark>, 2004.

@@ -1,4 +1,4 @@
-# Translation of kcmkwallet to Norwegian Nynorsk
+# Translation of kcm_kwallet to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2007, 2008, 2009, 2016, 2020, 2022, 2023, 2024.
 msgid ""
