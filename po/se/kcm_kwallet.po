@@ -1,4 +1,4 @@
-# Translation of kcmkwallet to Northern Sami
+# Translation of kcm_kwallet to Northern Sami
 #
 msgid ""
 msgstr ""
@@ -123,6 +123,3 @@ msgstr ""
 #, kde-format
 msgid "Choose a name for the new wallet:"
 msgstr ""
-
-#~ msgid "Permission denied."
-#~ msgstr "It beasa"

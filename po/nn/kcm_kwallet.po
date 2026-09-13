@@ -1,4 +1,4 @@
-# Translation of kcmkwallet to Norwegian Nynorsk
+# Translation of kcm_kwallet to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2007, 2008, 2009, 2016, 2020, 2022, 2023, 2024.
 msgid ""
@@ -135,77 +135,3 @@ msgstr "Ny lommebok"
 #| msgid "Please choose a name for the new wallet:"
 msgid "Choose a name for the new wallet:"
 msgstr "Vel namn på den nye lommeboka:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Karl Ove Hufthammer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "karl@huftis.org"
-
-#~ msgid "Permission denied."
-#~ msgstr "Nekta tilgang."
-
-#~ msgid "KDE Wallet Control Module"
-#~ msgstr "Kontrollmodul for KDE-lommeboka"
-
-#~ msgid "Wallet Preferences"
-#~ msgstr "Lommebokinnstillingar"
-
-#~ msgid ""
-#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
-#~ "all your passwords. This option specifies whether or not you want to use "
-#~ "it.</p>"
-#~ msgstr ""
-#~ "<p>KDE-lommeboksystemet gjev deg ein praktisk og sikker måte å ta vare på "
-#~ "alle passorda dine. Her kan du velja om du ønskjer å bruka det.</p>"
-
-#~ msgid ""
-#~ "It is best to close your wallets when you are not using them to prevent "
-#~ "others from viewing or using them."
-#~ msgstr ""
-#~ "Det er best å lukka lommebøkene dine når du ikkje brukar dei, for å "
-#~ "hindra at andre får tilgang til dei."
-
-#~ msgid "Close wallet:"
-#~ msgstr "Lukk lommeboka:"
-
-#~ msgid ""
-#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
-#~ "b><br>Note that your wallet will only be closed when all applications "
-#~ "that use it have stopped.<br>When a wallet is closed the password is "
-#~ "needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>Lukk lommeboka når programma som brukar ho er avslutta</b><br/>Merk "
-#~ "at lommeboka berre vert lukka når alle program som brukar ho, er avslutta."
-#~ "<br/>Når lommeboka er lukka, må du skriva inn passordet for å opna ho att."
-#~ "</p>"
-
-#~ msgid "When last application stops using it"
-#~ msgstr "Når det siste programmet sluttar å bruka ho"
-
-#~ msgid ""
-#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
-#~ "closed the password is needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>Lukk lommeboka etter ei stund utan bruk.</b><br/>Når lommeboka er "
-#~ "lukka, må du skriva inn passordet for å opna ho att.</p>"
-
-#~ msgid " minutes"
-#~ msgstr " minutt"
-
-#~ msgid "New..."
-#~ msgstr "Ny …"
-
-#~ msgid ""
-#~ "The Secret Service interface lets applications store passwords and other "
-#~ "confidential data. Disable this to allow third-party wallet services such "
-#~ "as KeePassXC or GNOME Keyring to manage it instead."
-#~ msgstr ""
-#~ "Secret Service-grensesnittet lèt program lagra passord og anna hemmeleg "
-#~ "informasjon. Slå det av dersom du heller vil at tredjeparts­program, som "
-#~ "KeePassXC eller GNOME Keyring skal handsama denne typen informasjon."
-
-#~ msgid "&Launch Wallet Manager"
-#~ msgstr "&Køyr lommebokhandsamaren"

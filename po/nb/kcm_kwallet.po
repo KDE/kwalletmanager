@@ -1,4 +1,4 @@
-# Translation of kcmkwallet to Norwegian Bokmål
+# Translation of kcm_kwallet to Norwegian Bokmål
 #
 # Knut Yrvin <knut.yrvin@gmail.com>, 2003.
 # Harald Inge Børseth <haraldib@broadpark>, 2004.
@@ -132,67 +132,3 @@ msgstr " Ny lommebok"
 #| msgid "Please choose a name for the new wallet:"
 msgid "Choose a name for the new wallet:"
 msgstr "Velg et navn på den nye lommeboka:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Knut Yrvin,Harald Inge Børseth,Nils Kristian Tomren"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "knut.yrvin@gmail.com,haraldib@broadpark.no,slx@nilsk.net"
-
-#~ msgid "Permission denied."
-#~ msgstr "Nektet tilgang."
-
-#~ msgid "KDE Wallet Control Module"
-#~ msgstr "Kontrollmodul for KDE lommebok"
-
-#~ msgid "Wallet Preferences"
-#~ msgstr "Lommebok-innstillinger"
-
-#~ msgid ""
-#~ "<p>The wallet subsystem provides a convenient and secure way to manage "
-#~ "all your passwords. This option specifies whether or not you want to use "
-#~ "it.</p>"
-#~ msgstr ""
-#~ "<p> Lommeboksystemet gir deg en enkel og sikker måte  å håndtere alle "
-#~ "dine passord. Dette valget oppgir om du vil bruke det eller ikke.</p>"
-
-#~ msgid ""
-#~ "It is best to close your wallets when you are not using them to prevent "
-#~ "others from viewing or using them."
-#~ msgstr ""
-#~ "Det er lurt å lukke lommebøkene dine når du ikke bruker dem slik at andre "
-#~ "ikke kan se i dem eller bruke dem."
-
-#, fuzzy
-#~ msgid "Close wallet:"
-#~ msgstr "Lukk lommeboka"
-
-#~ msgid ""
-#~ "<p><b>Close wallet as soon as applications that use it have stopped.</"
-#~ "b><br>Note that your wallet will only be closed when all applications "
-#~ "that use it have stopped.<br>When a wallet is closed the password is "
-#~ "needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>Lukk lommeboka så snart programmene som bruker den har stoppet.</b> "
-#~ "<br/>Merk at din lommebok bare vil lukkes når alle programmer som bruker "
-#~ "den har stoppet. <br/>Når ei lommebok er lukket, må det oppgis et passord "
-#~ "for å åpne den igjen.</p>"
-
-#, fuzzy
-#~ msgid "When last application stops using it"
-#~ msgstr "Lukk når siste program er ferdig med å bruke den"
-
-#~ msgid ""
-#~ "<p><b>Close wallet after a period of inactivity.</b><br>When a wallet is "
-#~ "closed the password is needed to access it again.</p>"
-#~ msgstr ""
-#~ "<p><b>Lukk lommeboka når den ikke har vært i bruk i en periode</b> <br/"
-#~ ">Når lommeboka er lukket, må et passord oppgis for å åpne den igjen.</p>"
-
-#~ msgid "New..."
-#~ msgstr "Ny …"
-
-#~ msgid "&Launch Wallet Manager"
-#~ msgstr "&Start lommebokhåndtering"
