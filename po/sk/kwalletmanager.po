@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:51+0000\n"
-"PO-Revision-Date: 2017-07-31 21:29+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -437,7 +437,7 @@ msgstr "Názov súboru"
 #: kwalletmanager.cpp:436 kwalletmanager.cpp:454
 #, kde-format
 msgid "Tar archive (*.tar)"
-msgstr ""
+msgstr "Archív tar (*.tar)"
 
 #: kwalletmanager.cpp:443
 #, kde-format
