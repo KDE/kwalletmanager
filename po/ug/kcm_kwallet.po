@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-09 00:54+0000\n"
-"PO-Revision-Date: 2026-05-31 19:58-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,54 +38,49 @@ msgstr ""
 "%1"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "&Enable the KDE wallet subsystem"
+#, kde-format
 msgid "Enable the KDE wallet subsystem"
-msgstr "KD&E ھەميان تارماق سىستېمىسىنى قوزغىتىدۇ"
+msgstr ""
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgid "Close Behavior"
+#, kde-format
 msgctxt "@title:group"
 msgid "Close Behavior"
 msgstr "يېپىش قىلمىشى"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "When unused for:"
+#, kde-format
 msgid "Close wallet when unused for:"
-msgstr "قانچىلىك ۋاقىت ئىشلىتىلمىگەندە:"
+msgstr ""
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] ""
+msgstr[0] "%1 مىنۇت"
 
 #: ui/main.qml:91
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
-msgstr ""
+msgstr "مىنۇت"
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Automatic Wallet Selection"
+#, kde-format
 msgctxt "@title:group"
 msgid "Automatic Wallet Selection"
 msgstr "ھەمياننى ئۆزلۈكىدىن تاللاش"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgid "Default wallet:"
+#, kde-format
 msgid "Default Wallet:"
-msgstr "كۆڭۈلدىكى ھەميان:"
+msgstr ""
 
 #: ui/main.qml:133 ui/main.qml:192
 #, kde-format
 msgid "New…"
-msgstr ""
+msgstr "يېڭى…"
 
 #: ui/main.qml:146
 #, kde-format
@@ -93,17 +88,15 @@ msgid "Use different default wallet for local passwords"
 msgstr "يەرلىك ئىم ئۈچۈن پەرقلىق كۆڭۈلدىكى ھەميان ئىشلىتىدۇ"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Wallet Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Wallet Manager"
 msgstr "ھەميان باشقۇرغۇچ"
 
 #: ui/main.qml:209
-#, fuzzy, kde-format
-#| msgid "Show manager in system tray"
+#, kde-format
 msgid "Show icon in system tray"
-msgstr "باشقۇرغۇچنى سىستېما قونداقتا كۆرسەت"
+msgstr ""
 
 #: ui/main.qml:222
 #, kde-format
@@ -111,17 +104,15 @@ msgid "Hide system tray icon when last wallet closes"
 msgstr "ئاخىرقى ھەميان تاقالغاندا سىستېما قونداقتىكى سىنبەلگىنى يوشۇرىدۇ"
 
 #: ui/main.qml:236
-#, fuzzy, kde-format
-#| msgid "Secret Service"
+#, kde-format
 msgctxt "@title:group"
 msgid "Secret Service"
 msgstr "مەخپىيەتلىك مۇلازىمىتى"
 
 #: ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Use &KWallet for the Secret Service interface"
+#, kde-format
 msgid "Use KWallet for Secret Service Interface"
-msgstr "مەخپىيەتلىك مۇلازىمىتىنىڭ ئارايۈزىگە &KWallet ئىشلىتىدۇ"
+msgstr ""
 
 #: ui/NewWalletDialog.qml:12
 #, kde-format
@@ -129,10 +120,9 @@ msgid "New Wallet"
 msgstr "يېڭى ھەميان"
 
 #: ui/NewWalletDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Please choose a name for the new wallet:"
+#, kde-format
 msgid "Choose a name for the new wallet:"
-msgstr "يېڭى ھەميانغا ئات تاللاڭ:"
+msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
