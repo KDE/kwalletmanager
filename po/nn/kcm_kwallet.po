@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-09 00:54+0000\n"
-"PO-Revision-Date: 2026-09-19 17:48+0200\n"
+"PO-Revision-Date: 2026-09-25 17:51+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: kcm.cpp:68
 #, kde-format
 msgid "Failed to save settings: Permission denied"
-msgstr ""
+msgstr "Klarte ikkje lagra innstillingar: Nekta tilgang"
 
 #: kcm.cpp:70
 #, kde-format
@@ -39,10 +39,9 @@ msgstr ""
 "%1"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "&Enable the KDE wallet subsystem"
+#, kde-format
 msgid "Enable the KDE wallet subsystem"
-msgstr "&Bruk KDE-lommeboksystemet"
+msgstr "Bruk KDE-lommeboksystemet"
 
 #: ui/main.qml:63
 #, kde-format
