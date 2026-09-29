@@ -74,6 +74,7 @@ KWalletConfig::KWalletConfig(QObject *parent, const KPluginMetaData &data)
     if (KCoreAddons::version() >= QT_VERSION_CHECK(6, 30, 0)) {
         _wcw->tabWidget2->removeTab(1);
         _wcw->tabWidget2->tabBar()->setVisible(false);
+        _wcw->tabWidget2->tabBar()->setFocusPolicy(Qt::NoFocus);
     }
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kwalletmanager"))) {
