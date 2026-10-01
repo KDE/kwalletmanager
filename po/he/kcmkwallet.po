@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 02:47+0000\n"
+"POT-Creation-Date: 2026-10-01 20:17+0000\n"
 "PO-Revision-Date: 2026-04-13 21:41+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,37 +28,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: konfigurator.cpp:112
+#: konfigurator.cpp:113
 #, kde-format
 msgid "New Wallet"
 msgstr "ארנק חדש"
 
-#: konfigurator.cpp:112
+#: konfigurator.cpp:113
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "נא לבחור שם לארנק החדש:"
 
-#: konfigurator.cpp:226 konfigurator.cpp:304
+#: konfigurator.cpp:227 konfigurator.cpp:305
 #, kde-format
 msgid "Always Allow"
 msgstr "תמיד לאשר"
 
-#: konfigurator.cpp:229 konfigurator.cpp:236 konfigurator.cpp:317
+#: konfigurator.cpp:230 konfigurator.cpp:237 konfigurator.cpp:318
 #, kde-format
 msgid "Always Deny"
 msgstr "תמיד לדחות"
 
-#: konfigurator.cpp:264
+#: konfigurator.cpp:265
 #, kde-format
 msgid "Permission denied."
 msgstr "ההרשאה נדחתה."
 
-#: konfigurator.cpp:264 konfigurator.cpp:266
+#: konfigurator.cpp:265 konfigurator.cpp:267
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "מודול שליטה בארנקי KDE"
 
-#: konfigurator.cpp:266
+#: konfigurator.cpp:267
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -67,7 +67,7 @@ msgstr ""
 "שגיאה בפעולת אימות:\n"
 "%1"
 
-#: konfigurator.cpp:364
+#: konfigurator.cpp:365
 #, kde-format
 msgid "&Delete"
 msgstr "מ&חיקה"

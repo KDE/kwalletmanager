@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 02:47+0000\n"
+"POT-Creation-Date: 2026-10-01 20:17+0000\n"
 "PO-Revision-Date: 2007-08-20 13:30+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -28,44 +28,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lipak21@gmail.com, shyamkrishna_bal@yahoo.com"
 
-#: konfigurator.cpp:112
+#: konfigurator.cpp:113
 #, kde-format
 msgid "New Wallet"
 msgstr "नयाँ वालेट"
 
-#: konfigurator.cpp:112
+#: konfigurator.cpp:113
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "नयाँ वालेटका लागि कृपया नाम छनोट गर्नुहोस्:"
 
-#: konfigurator.cpp:226 konfigurator.cpp:304
+#: konfigurator.cpp:227 konfigurator.cpp:305
 #, kde-format
 msgid "Always Allow"
 msgstr "सधै अनुमति दिनुहोस्"
 
-#: konfigurator.cpp:229 konfigurator.cpp:236 konfigurator.cpp:317
+#: konfigurator.cpp:230 konfigurator.cpp:237 konfigurator.cpp:318
 #, kde-format
 msgid "Always Deny"
 msgstr "सधै अस्वीकार गर्नुहोस्"
 
-#: konfigurator.cpp:264
+#: konfigurator.cpp:265
 #, kde-format
 msgid "Permission denied."
 msgstr ""
 
-#: konfigurator.cpp:264 konfigurator.cpp:266
+#: konfigurator.cpp:265 konfigurator.cpp:267
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "KDE वालेट नियन्त्रण मोड्युल"
 
-#: konfigurator.cpp:266
+#: konfigurator.cpp:267
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
 "%1"
 msgstr ""
 
-#: konfigurator.cpp:364
+#: konfigurator.cpp:365
 #, kde-format
 msgid "&Delete"
 msgstr "मेट्नुहोस्"

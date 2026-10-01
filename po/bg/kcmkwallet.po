@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 02:47+0000\n"
+"POT-Creation-Date: 2026-10-01 20:17+0000\n"
 "PO-Revision-Date: 2024-09-23 15:27+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -29,37 +29,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zlatkopopov@fsa-bg.org,mkondarev@yahoo.de"
 
-#: konfigurator.cpp:112
+#: konfigurator.cpp:113
 #, kde-format
 msgid "New Wallet"
 msgstr "Нов портфейл"
 
-#: konfigurator.cpp:112
+#: konfigurator.cpp:113
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Моля, въведете име на новия портфейл:"
 
-#: konfigurator.cpp:226 konfigurator.cpp:304
+#: konfigurator.cpp:227 konfigurator.cpp:305
 #, kde-format
 msgid "Always Allow"
 msgstr "Включен достъп"
 
-#: konfigurator.cpp:229 konfigurator.cpp:236 konfigurator.cpp:317
+#: konfigurator.cpp:230 konfigurator.cpp:237 konfigurator.cpp:318
 #, kde-format
 msgid "Always Deny"
 msgstr "Изключен достъп"
 
-#: konfigurator.cpp:264
+#: konfigurator.cpp:265
 #, kde-format
 msgid "Permission denied."
 msgstr "Отказан достъп."
 
-#: konfigurator.cpp:264 konfigurator.cpp:266
+#: konfigurator.cpp:265 konfigurator.cpp:267
 #, kde-format
 msgid "KDE Wallet Control Module"
 msgstr "Настройване на системата Портфейл"
 
-#: konfigurator.cpp:266
+#: konfigurator.cpp:267
 #, kde-format
 msgid ""
 "Error while authenticating action:\n"
@@ -68,7 +68,7 @@ msgstr ""
 "Грешка при удостоверяване на действието:\n"
 " %1"
 
-#: konfigurator.cpp:364
+#: konfigurator.cpp:365
 #, kde-format
 msgid "&Delete"
 msgstr "&Изтриване"
