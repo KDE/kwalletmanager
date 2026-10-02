@@ -59,7 +59,7 @@ private Q_SLOTS:
     void shuttingDown();
     void possiblyQuit();
     void editorClosed(KXmlGuiWindow *e);
-    void possiblyRescan(const QString &app, const QString &, const QString &);
+    void possiblyRescan(const QString &app);
     void setupWallet();
     void closeAllWallets();
     void exportWallets();

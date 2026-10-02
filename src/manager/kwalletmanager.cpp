@@ -121,7 +121,8 @@ void KWalletManager::configUI()
     _managerWidget->setMinimumSize(16 * fm.height(), 18 * fm.height());
 
     m_kwalletdModule = new org::kde::KWallet(QStringLiteral("org.kde.kwalletd5"), QStringLiteral("/modules/kwalletd5"), QDBusConnection::sessionBus());
-    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, &KWalletManager::possiblyRescan);
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceRegistered, this, &KWalletManager::possiblyRescan);
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceUnregistered, this, &KWalletManager::possiblyRescan);
     connect(QDBusConnection::sessionBus().interface(),
             &QDBusConnectionInterface::callWithCallbackFailed,
             this,
@@ -307,10 +308,8 @@ void KWalletManager::editorClosed(KXmlGuiWindow *e)
     _windows.removeAll(e);
 }
 
-void KWalletManager::possiblyRescan(const QString &app, const QString &oldOwner, const QString &newOwner)
+void KWalletManager::possiblyRescan(const QString &app)
 {
-    Q_UNUSED(oldOwner);
-    Q_UNUSED(newOwner);
     if (app == QLatin1String("org.kde.kwalletd5")) {
         updateWalletDisplay();
     }
