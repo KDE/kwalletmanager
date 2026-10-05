@@ -136,7 +136,7 @@ msgstr "&Показать значения"
 #: kwalleteditor.cpp:211
 #, kde-format
 msgid "&New Folder..."
-msgstr "С&оздать папку..."
+msgstr "С&оздать папку…"
 
 #: kwalleteditor.cpp:215
 #, kde-format
@@ -151,12 +151,12 @@ msgstr "&Импорт бумажника..."
 #: kwalleteditor.cpp:222
 #, kde-format
 msgid "&Import XML..."
-msgstr "И&мпорт XML..."
+msgstr "И&мпорт XML…"
 
 #: kwalleteditor.cpp:226
 #, kde-format
 msgid "&Export as XML..."
-msgstr "&Экспорт в XML..."
+msgstr "&Экспорт в XML…"
 
 #: kwalleteditor.cpp:230
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "&Копировать"
 #: kwalleteditor.cpp:235
 #, kde-format
 msgid "&New..."
-msgstr "&Создать..."
+msgstr "&Создать…"
 
 #: kwalleteditor.cpp:240
 #, kde-format
@@ -357,7 +357,7 @@ msgid ""
 "the KWalletManager will quit as it cannot work without reading the wallets."
 msgstr ""
 "Система хранения паролей «Бумажник» от KDE не запущена. Запустить её? Если "
-"нет, программа «Управление бумажниками» будет закрыта, так как она не может "
+"нет, приложение «Управление бумажниками» будет закрыто, так как оно не может "
 "работать без доступа к бумажникам."
 
 #: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
@@ -379,12 +379,12 @@ msgstr "Бумажник открыт."
 #: kwalletmanager.cpp:144 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
-msgstr "&Создать бумажник..."
+msgstr "&Создать бумажник…"
 
 #: kwalletmanager.cpp:149
 #, kde-format
 msgid "&Delete Wallet..."
-msgstr "&Удалить бумажник"
+msgstr "&Удалить бумажник…"
 
 #: kwalletmanager.cpp:154
 #, kde-format
@@ -399,7 +399,7 @@ msgstr "Им&порт в зашифрованном виде"
 #: kwalletmanager.cpp:164
 #, kde-format
 msgid "Configure &Wallet..."
-msgstr "Настроить «&Бумажник»..."
+msgstr "Настроить «&Бумажник»…"
 
 #: kwalletmanager.cpp:172
 #, kde-format
@@ -449,7 +449,7 @@ msgstr "Новый бумажник"
 #: kwalletmanager.cpp:349
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
-msgstr "Имя бумажника не может быть пустым. Пожалуйста, укажите имя."
+msgstr "Имя бумажника не может быть пустым. Укажите имя."
 
 #: kwalletmanager.cpp:349
 #, kde-format
@@ -543,12 +543,12 @@ msgstr "Не удалось подключиться к службе KWallet:<nl
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:76
 #, kde-format
 msgid "&Open..."
-msgstr "&Открыть..."
+msgstr "&Открыть…"
 
 #: kwalletpopup.cpp:38
 #, kde-format
 msgid "Change &Password..."
-msgstr "Сменить &пароль..."
+msgstr "Сменить &пароль…"
 
 #: kwalletpopup.cpp:51
 #, kde-format
@@ -584,12 +584,12 @@ msgstr "Управление бумажниками"
 #: main.cpp:28
 #, kde-format
 msgid "KDE Wallet Management Tool"
-msgstr "Программа управления бумажниками KDE"
+msgstr "Приложение для управления бумажниками KDE"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "© Авторы программы управления бумажниками KDE, 2013–2015"
+msgstr "© Авторы приложения управления бумажниками KDE, 2013–2017"
 
 #: main.cpp:34
 #, kde-format
@@ -634,7 +634,7 @@ msgstr "Isaac Clerencia"
 #: main.cpp:37
 #, kde-format
 msgid "Developer"
-msgstr "Разработка"
+msgstr "Разработчик"
 
 #: main.cpp:44
 #, kde-format
@@ -684,13 +684,13 @@ msgstr "KSqueezedTextLabel"
 #: walletcontrolwidget.ui:54
 #, kde-format
 msgid "Open..."
-msgstr "Открыть..."
+msgstr "Открыть…"
 
 #. i18n: ectx: property (text), widget (QPushButton, _changePassword)
 #: walletcontrolwidget.ui:61
 #, kde-format
 msgid "Change Password..."
-msgstr "Сменить пароль..."
+msgstr "Сменить пароль…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
 #: walletcontrolwidget.ui:80

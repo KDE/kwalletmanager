@@ -121,7 +121,7 @@
 ><guimenu
 >Файл</guimenu
 ><guimenuitem
->Создать бумажник...</guimenuitem
+>Создать бумажник…</guimenuitem
 ></menuchoice
 ></para
 ></listitem>
@@ -208,7 +208,7 @@
 </mediaobject>
 </screenshot>
 <para
->На снимках выше показан случай, когда в системе нет ключа GPG, пригодного для шифрования. Создайте ключ в программе вроде &kgpg; или &kleopatra; и повторите попытку.</para>
+>На снимках выше показан случай, когда в системе нет ключа GPG, пригодного для шифрования. Создайте ключ в приложении, например, &kgpg; или &kleopatra; и повторите попытку.</para>
 
 <para
 >Если ключ GPG найден, появится следующий диалог, в котором можно выбрать ключ для нового бумажника. </para>
@@ -453,7 +453,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </screenshot>
 <para
 >Чтобы увидеть содержимое закрытого бумажника, нажмите кнопку <guibutton
->Открыть...</guibutton
+>Открыть…</guibutton
 >. Потребуется ввести главный пароль.</para>
 
 <sect2>
@@ -525,13 +525,13 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 > в дереве <guilabel
 >Папки</guilabel
 >, чтобы открыть контекстное меню. Выберите <guimenuitem
->Создать...</guimenuitem
+>Создать…</guimenuitem
 > или <guimenuitem
->Создать папку...</guimenuitem
+>Создать папку…</guimenuitem
 > и введите имя новой записи.</para>
 <para
 >На панели содержимого папки выберите <guilabel
->Создать папку...</guilabel
+>Создать папку…</guilabel
 > в контекстном меню <quote
 >Form Data</quote
 > или <quote
@@ -603,7 +603,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <varlistentry>
 <term
 ><guilabel
->Закрыть, если не используется в течение:</guilabel
+>Закрывать бумажник, если он не используется в течение:</guilabel
 ></term>
 <listitem>
 <para
@@ -676,14 +676,14 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></term>
 <listitem>
 <para
->Отображать значок программы в системном лотке.</para>
+>Показывать значок управления бумажниками в системном лотке.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Скрыть значок в системном лотке, когда бумажник закрыт</guilabel
+>Скрывать значок в системном лотке, когда все бумажники закрыты</guilabel
 ></term>
 <listitem>
 <para
@@ -721,7 +721,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </variablelist>
 
 <para
->Затем идёт представленный как дерево вид прав доступа к вашим бумажникам.</para>
+>Ниже в виде дерева показаны права доступа к бумажникам.</para>
 
 <screenshot>
 <screeninfo

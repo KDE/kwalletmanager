@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Slobodan Simic <slsimic@gmail.com>, 2008.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 20:17+0000\n"
-"PO-Revision-Date: 2016-11-23 19:27+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +25,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић"
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: konfigurator.cpp:113
 #, kde-format
@@ -111,14 +112,13 @@ msgstr ""
 #: walletconfigwidget.ui:52
 #, kde-format
 msgid "Close Behavior"
-msgstr ""
+msgstr "Понашање при затварању"
 
 #. i18n: ectx: property (text), widget (QLabel, closeWalletLabel)
 #: walletconfigwidget.ui:69
-#, fuzzy, kde-format
-#| msgid "Close Wallet"
+#, kde-format
 msgid "Close wallet:"
-msgstr "Затварање новчаника"
+msgstr "Затвори новчаник:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:76
@@ -136,10 +136,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _autoclose)
 #: walletconfigwidget.ui:79
-#, fuzzy, kde-format
-#| msgid "Close when last application stops using it"
+#, kde-format
 msgid "When last application stops using it"
-msgstr "Затвори пошто програми престану да га користе"
+msgstr "Када последњи програм престане да га користи"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:86
@@ -153,10 +152,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _screensaverLock)
 #: walletconfigwidget.ui:89
-#, fuzzy, kde-format
-#| msgid "Close when screensaver starts"
+#, kde-format
 msgid "When screensaver starts"
-msgstr "Затвори када се покрене чувар екрана"
+msgstr "Када се покрене чувар екрана"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, _closeIdle)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, _idleTime)
@@ -171,15 +169,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
 #: walletconfigwidget.ui:99
-#, fuzzy, kde-format
-#| msgid "Close when unused for:"
+#, kde-format
 msgid "When unused for:"
-msgstr "Затвори ако се не користи:"
+msgstr "Када се не користи:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, _idleTime)
 #: walletconfigwidget.ui:121
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid " minutes"
 msgstr " мин."
 
@@ -191,10 +187,9 @@ msgstr "Аутоматско бирање новчаника"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _localWalletSelected)
 #: walletconfigwidget.ui:165
-#, fuzzy, kde-format
-#| msgid "Different wallet for local passwords:"
+#, kde-format
 msgid "Use different default wallet for local passwords"
-msgstr "Одвојени новчаник за локалне лозинке:"
+msgstr "Користи други подразумевани новчаник за локалне лозинке"
 
 #. i18n: ectx: property (text), widget (QPushButton, _newLocalWallet)
 #. i18n: ectx: property (text), widget (QPushButton, _newWallet)
@@ -207,7 +202,7 @@ msgstr "Нови..."
 #: walletconfigwidget.ui:211
 #, kde-format
 msgid "Default wallet:"
-msgstr ""
+msgstr "Подразумевани новчаник:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: walletconfigwidget.ui:256
@@ -231,13 +226,13 @@ msgstr "Сакриј иконицу системске касете по зат�
 #: walletconfigwidget.ui:312
 #, kde-format
 msgid "Secret Service"
-msgstr ""
+msgstr "Сервис тајни"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _secretServiceAPI)
 #: walletconfigwidget.ui:331
 #, kde-format
 msgid "Use &KWallet for the Secret Service interface"
-msgstr ""
+msgstr "Користи К‑новчаник за сучеље &сервиса тајни"
 
 #. i18n: ectx: property (contextualHelpText), widget (KContextualHelpButton, kcontextualhelpbutton)
 #: walletconfigwidget.ui:341
@@ -247,6 +242,9 @@ msgid ""
 "confidential data. Disable this to allow third-party wallet services such as "
 "KeePassXC or GNOME Keyring to manage it instead."
 msgstr ""
+"Сучеље сервиса тајни омогућава програмима да складиште лозинке и друге "
+"поверљиве податке. Искључите ово да бисте управљање препустили сервисима "
+"новчаника трећих страна, као што су KeePassXC или GNOME Keyring."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: walletconfigwidget.ui:388
@@ -283,16 +281,3 @@ msgstr "смерница"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "Покрени &менаџер новчаника"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Изаберите новчаник ће се подразумевано користити:"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "© 2003, Џорџ Стајкос"
-
-#~ msgid "George Staikos"
-#~ msgstr "Џорџ Стајкос"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr "Овај модул вам омогућава да подесите КДЕ‑ов систем новчаника."
