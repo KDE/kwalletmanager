@@ -65,7 +65,7 @@ msgstr "Поведение при закрытии"
 #: ui/main.qml:72
 #, kde-format
 msgid "Close wallet when unused for:"
-msgstr "Если не используется в течение:"
+msgstr "Закрывать бумажник, если он не используется в течение:"
 
 #: ui/main.qml:88
 #, kde-format
@@ -118,7 +118,7 @@ msgstr "Показывать значок в системном лотке"
 #: ui/main.qml:222
 #, kde-format
 msgid "Hide system tray icon when last wallet closes"
-msgstr "Скрывать значок из системного лотка, когда все бумажники закрыты"
+msgstr "Скрывать значок в системном лотке, когда все бумажники закрыты"
 
 #: ui/main.qml:236
 #, kde-format

@@ -3,13 +3,14 @@
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2009, 2010, 2013, 2015, 2016, 2017.
 # Slobodan Simic <slsimic@gmail.com>, 2005.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:51+0000\n"
-"PO-Revision-Date: 2017-07-16 22:55+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +25,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Toplica Tanasković,Slobodan Simić"
+msgstr "Toplica Tanasković,Slobodan Simić,Nemanja Hiršl"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "toptan@kde.org.yu,slsimic@gmail.com"
+msgstr "toptan@kde.org.yu,slsimic@gmail.com,nemhirsl@gmail.com"
 
 #: allyourbase.cpp:215
 #, kde-format
@@ -100,8 +101,7 @@ msgid "Search"
 msgstr "Pretraži"
 
 #: kwalleteditor.cpp:106
-#, fuzzy, kde-format
-#| msgid "&Show values"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Prikaži vrijednosti"
@@ -149,12 +149,12 @@ msgstr "&Obriši"
 #: kwalleteditor.cpp:245
 #, kde-format
 msgid "Always show contents"
-msgstr "Uvek prikaži sadržaj"
+msgstr "Uvijek prikaži sadržaj"
 
 #: kwalleteditor.cpp:249
 #, kde-format
 msgid "Always hide contents"
-msgstr "Uvek sakrij sadržaj"
+msgstr "Uvijek sakrij sadržaj"
 
 # >> @item:inlistbox
 #: kwalleteditor.cpp:358
@@ -403,8 +403,7 @@ msgid "Please choose a name for the new wallet:"
 msgstr "Izaberite ime za novi novčanik:"
 
 #: kwalletmanager.cpp:330
-#, fuzzy, kde-format
-#| msgid "New Wallet"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Novi novčanik"
@@ -449,7 +448,7 @@ msgstr "Ime fajla"
 #: kwalletmanager.cpp:436 kwalletmanager.cpp:454
 #, kde-format
 msgid "Tar archive (*.tar)"
-msgstr ""
+msgstr "tar arhiva (*.tar)"
 
 #: kwalletmanager.cpp:443
 #, kde-format
@@ -480,12 +479,12 @@ msgstr "Ne mogu da kopiram fajlove."
 #: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
-msgstr "Ignorisati nesačuvane izmene?"
+msgstr "Ignorisati nesačuvane izmjene?"
 
 #: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Ignoriši"
 
 #. i18n: ectx: Menu (file)
 #: kwalletmanager.rc:4
@@ -509,7 +508,7 @@ msgstr "P&omoć"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "An error occurred when connecting to the KWallet service:<nl/>%1"
-msgstr ""
+msgstr "Greška pri povezivanju sa servisom K‑novčanika:<nl/>%1"
 
 #: kwalletpopup.cpp:32 walletcontrolwidget.cpp:67
 #, kde-format
@@ -534,8 +533,7 @@ msgid "Value"
 msgstr "vrijednost"
 
 #: kwmapeditor.cpp:151 kwmapeditor.cpp:200
-#, fuzzy, kde-format
-#| msgid "Delete Entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete Entry"
 msgstr "Obriši unos"
@@ -561,21 +559,18 @@ msgid "Copyright ©2013–2017, KWallet Manager authors"
 msgstr "© 2013–2017, autori Menadžera K‑novčanika"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "Valentin Rusu"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Valentin Rusu"
 msgstr "Valanten Rizi"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "Maintainer, user interface refactoring"
+#, kde-format
 msgid "Former Maintainer, user interface refactoring"
-msgstr "Održavalac, refaktorisanje korisničkog sučelja"
+msgstr "Bivši održavalac, refaktorisanje korisničkog sučelja"
 
 #: main.cpp:35
-#, fuzzy, kde-format
-#| msgid "George Staikos"
+#, kde-format
 msgctxt "@info:credit"
 msgid "George Staikos"
 msgstr "Džordž Stajkos"
@@ -586,8 +581,7 @@ msgid "Original author and former maintainer"
 msgstr "Prvobitni autor i bivši održavalac"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Michael Leupold"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Michael Leupold"
 msgstr "Mihael Lojpold"
@@ -598,8 +592,7 @@ msgid "Developer and former maintainer"
 msgstr "Programer i bivši održavalac"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Isaac Clerencia"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Isaac Clerencia"
 msgstr "Isak Klerensija Perez"
@@ -612,7 +605,7 @@ msgstr "Programer"
 #: main.cpp:44
 #, kde-format
 msgid "Ignored, for compatibility"
-msgstr ""
+msgstr "Ignoriše se, radi saglasnosti"
 
 #: main.cpp:47
 #, kde-format
@@ -635,11 +628,7 @@ msgid "&Close"
 msgstr "&Zatvori"
 
 #: walletcontrolwidget.cpp:65
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-#| "wallet name)"
-#| msgid "The '%1' wallet is currently open"
+#, kde-format
 msgctxt ""
 "the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
 "wallet name)"
@@ -647,8 +636,7 @@ msgid "The '%1' wallet is currently open."
 msgstr "Novčanik „%1“ trenutno je otvoren."
 
 #: walletcontrolwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "The wallet is currently closed"
+#, kde-format
 msgid "The wallet is currently closed."
 msgstr "Novčanik je trenutno zatvoren."
 
@@ -694,33 +682,3 @@ msgstr "&Opozovi"
 #, kde-format
 msgid "&Save"
 msgstr "&Sačuvaj"
-
-#~ msgid "These applications are currently connected to this wallet:"
-#~ msgstr "Naredni programi su trenutno povezani sa ovim novčanikom:"
-
-#~ msgid "Disconnect"
-#~ msgstr "Prekini vezu"
-
-#~ msgid "Disconnec&t"
-#~ msgstr "&Prekini vezu"
-
-#~ msgid "Contents"
-#~ msgstr "Sadržaj"
-
-#~ msgid "Applications"
-#~ msgstr "Programi"
-
-#~ msgid "&Import a wallet..."
-#~ msgstr "&Uvezi novčanik..."
-
-#~ msgid "Unable to create temporary file for downloading '<b>%1</b>'."
-#~ msgstr "Ne mogu da napravim privremeni fajl za preuzimanje <b>%1</b>."
-
-#~ msgid "Unable to access wallet '<b>%1</b>'."
-#~ msgstr "Ne mogu da pristupim novčaniku <b>%1</b>."
-
-#~ msgid "These applications are authorized to access this wallet:"
-#~ msgstr "Naredni programi su ovlašćeni za pristup ovom novčaniku:"
-
-#~ msgid "Show window on startup"
-#~ msgstr "Prikaži prozor po pokretanju"
