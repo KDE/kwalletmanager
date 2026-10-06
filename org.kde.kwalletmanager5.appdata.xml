@@ -48,6 +48,10 @@
   <name xml:lang="sa">KWalletManager इति</name>
   <name xml:lang="sk">KWalletManager</name>
   <name xml:lang="sl">KWalletManager</name>
+  <name xml:lang="sr">Менаџер К‑новчаника</name>
+  <name xml:lang="sr-Latn">Menadžer K‑novčanika</name>
+  <name xml:lang="sr-ijekavian">Менаџер К‑новчаника</name>
+  <name xml:lang="sr-ijekavianlatin">Menadžer K‑novčanika</name>
   <name xml:lang="sv">Plånbokshanteraren</name>
   <name xml:lang="tr">K Cüzdan Yöneticisi</name>
   <name xml:lang="ug">KDE ھەميان باشقۇرغۇچ</name>
@@ -85,6 +89,10 @@
   <summary xml:lang="ru">Хранение и управление паролями</summary>
   <summary xml:lang="sk">Ukladajte a spravujte svoje heslá</summary>
   <summary xml:lang="sl">Shranjuje in upravlja vaša gesla</summary>
+  <summary xml:lang="sr">Складиштите лозинке и управљајте њима</summary>
+  <summary xml:lang="sr-Latn">Skladištite lozinke i upravljajte njima</summary>
+  <summary xml:lang="sr-ijekavian">Складиштите лозинке и управљајте њима</summary>
+  <summary xml:lang="sr-ijekavianlatin">Skladištite lozinke i upravljajte njima</summary>
   <summary xml:lang="sv">Lagra och hantera lösenord</summary>
   <summary xml:lang="tr">Parolalarınızı depolayın ve yönetin</summary>
   <summary xml:lang="ug">ئىم ساقلاپ ۋە باشقۇرىدۇ</summary>
@@ -133,6 +141,10 @@
     <p xml:lang="sa">KWalletManager भवतः प्रणाल्यां गुप्तशब्दानां प्रबन्धनार्थं एकं साधनम् अस्ति । Frameworks wallet उपतन्त्रस्य उपयोगेन न केवलं भवन्तं स्वस्य रहस्यं रक्षितुं अपितु बटुकेन सह एकीकृतस्य प्रत्येकस्य अनुप्रयोगस्य गुप्तशब्दान् अभिगन्तुं प्रबन्धयितुं च अनुमतिं ददाति</p>
     <p xml:lang="sk">KWalletManager je nástroj na správu hesiel vo vašom systéme. Použitím subsystému peňaženky Frameworks vám umožn nielen uchovať vaše dáta, ale aj prístup a právu hesiel každej aplikácie, ktorá sa integruje s peňaženkou.</p>
     <p xml:lang="sl">KWalletManager je orodje za upravljanje gesel v vašem sistemu. Uporaba ogrodja listnice vam omogoča ne le, da ohranite svoje lastne skrivnosti, ampak tudi dostopate do gesel vsake aplikacije, ki se integrira z listnico, in upravljate z njimi.</p>
+    <p xml:lang="sr">Менаџер К‑новчаника је алатка за управљање лозинкама на систему. Помоћу подсистема новчаника Радних оквира КДЕ‑а не само да можете да чувате своје тајне, већ и да приступате лозинкама сваког програма уклопљеног са новчаником и да њима управљате.</p>
+    <p xml:lang="sr-Latn">Menadžer K‑novčanika je alatka za upravljanje lozinkama na sistemu. Pomoću podsistema novčanika Radnih okvira KDE‑a ne samo da možete da čuvate svoje tajne, već i da pristupate lozinkama svakog programa uklopljenog sa novčanikom i da njima upravljate.</p>
+    <p xml:lang="sr-ijekavian">Менаџер К‑новчаника је алатка за управљање лозинкама на систему. Помоћу подсистема новчаника Радних оквира КДЕ‑а не само да можете да чувате своје тајне, већ и да приступате лозинкама сваког програма уклопљеног са новчаником и да њима управљате.</p>
+    <p xml:lang="sr-ijekavianlatin">Menadžer K‑novčanika je alatka za upravljanje lozinkama na sistemu. Pomoću podsistema novčanika Radnih okvira KDE‑a ne samo da možete da čuvate svoje tajne, već i da pristupate lozinkama svakog programa uklopljenog sa novčanikom i da njima upravljate.</p>
     <p xml:lang="sv">Plånbokshanteraren är ett verktyg för att hantera lösenorden på systemet. Genom att använda Ramverkens plånboksdelsystem låter det dig behålla egna hemligheter, men också komma åt och hantera lösenord för alla program som är integrerade med plånboken.</p>
     <p xml:lang="tr">K Cüzdan Yöneticisi, sisteminizdeki parolaları yönetmek için kullanılan bir araçtır. Frameworks cüzdan alt sistemini kullanarak hem gizlerinizi gizli tutar hem de cüzdan ile etkileşen her uygulamanın parolalarınıza erişmesine izin verir.</p>
     <p xml:lang="uk">KWalletManager — програма для керування даними паролів у вашій системі. На основі використання підсистеми сховища паролів Frameworks програма не лише надає вам змогу зберігати ваші реєстраційні дані, але і надає доступ і керує паролями у всіх програмах, у яких передбачено інтеграцію із таким сховищем.</p>
