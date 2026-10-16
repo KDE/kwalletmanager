@@ -65,6 +65,7 @@ private Q_SLOTS:
     void walletOpened(bool success);
     void hidePasswordContents();
     void showPasswordContents();
+    void copyPasswordContents();
     void showHideMapEditorValue(bool show);
 
     void exportXML();

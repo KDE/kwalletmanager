@@ -134,6 +134,8 @@ KWalletEditor::KWalletEditor(QWidget *parent, const QString &name)
 
     connect(_showContents, &QToolButton::clicked, this, &KWalletEditor::showPasswordContents);
     connect(_hideContents, &QToolButton::clicked, this, &KWalletEditor::hidePasswordContents);
+    connect(_copyHiddenContents, &QToolButton::clicked, this, &KWalletEditor::copyPasswordContents);
+    connect(_copyShownContents, &QToolButton::clicked, this, &KWalletEditor::copyPasswordContents);
 
     _passwordValue->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
 
@@ -942,6 +944,11 @@ void KWalletEditor::hidePasswordContents()
 void KWalletEditor::showPasswordContents()
 {
     _entryStack->setCurrentIndex(1);
+}
+
+void KWalletEditor::copyPasswordContents()
+{
+    setPasswordToClipboard(_passwordValue->toPlainText());
 }
 
 void KWalletEditor::showHideMapEditorValue(bool show)

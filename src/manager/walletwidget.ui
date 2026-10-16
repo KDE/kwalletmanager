@@ -170,6 +170,19 @@
                 </widget>
                </item>
                <item>
+                <widget class="QToolButton" name="_copyShownContents">
+                 <property name="text">
+                  <string comment="@action:button Copy the password to the clipboard">Co&amp;py</string>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="edit-copy"/>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextBesideIcon</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <spacer name="horizontalSpacer_5">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
@@ -257,6 +270,19 @@
                  </property>
                  <property name="arrowType">
                   <enum>Qt::NoArrow</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="_copyHiddenContents">
+                 <property name="text">
+                  <string comment="@action:button Copy the password to the clipboard">Co&amp;py</string>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="edit-copy"/>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextBesideIcon</enum>
                  </property>
                 </widget>
                </item>
