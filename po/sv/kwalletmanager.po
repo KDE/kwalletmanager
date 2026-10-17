@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:51+0000\n"
+"POT-Creation-Date: 2026-10-17 00:54+0000\n"
 "PO-Revision-Date: 2026-09-10 20:12+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -204,7 +204,7 @@ msgstr "Katalognamnet används redan. Försök igen?"
 msgid "Try Again"
 msgstr "Försök igen"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "Försök inte"
@@ -317,53 +317,53 @@ msgstr ""
 "avslutas plånbokshanteraren, eftersom den inte kan fungera utan att läsa "
 "plånböcker."
 
-#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
-#: kwalletmanager.cpp:290
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:226
+#: kwalletmanager.cpp:291
 #, kde-format
 msgid "Wallet"
 msgstr "Plånbok"
 
-#: kwalletmanager.cpp:92 kwalletmanager.cpp:290
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:291
 #, kde-format
 msgid "No wallets open."
 msgstr "Inga plånböcker öppna."
 
-#: kwalletmanager.cpp:99 kwalletmanager.cpp:225
+#: kwalletmanager.cpp:99 kwalletmanager.cpp:226
 #, kde-format
 msgid "A wallet is open."
 msgstr "En plånbok är öppen."
 
-#: kwalletmanager.cpp:144 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:145 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Ny plånbok..."
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:150
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Ta bort plånbok..."
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:155
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Exportera som krypterad"
 
-#: kwalletmanager.cpp:159
+#: kwalletmanager.cpp:160
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Importera krypterad"
 
-#: kwalletmanager.cpp:164
+#: kwalletmanager.cpp:165
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Anpassa &plånbok..."
 
-#: kwalletmanager.cpp:172
+#: kwalletmanager.cpp:173
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Stäng &alla plånböcker"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -372,108 +372,108 @@ msgstr ""
 "Kan inte stänga plånboken utan problem. Den används förmodligen av andra "
 "program. Vill du tvinga att den stängs?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Tvinga stängning"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
+#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Tvinga inte"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
+#: kwalletmanager.cpp:267 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Kan inte tvinga plånboken att stängas. Felkoden var %1."
 
-#: kwalletmanager.cpp:282
+#: kwalletmanager.cpp:283
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Fel när plånboken %1 skulle öppnas."
 
-#: kwalletmanager.cpp:321
+#: kwalletmanager.cpp:320
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Välj ett namn för den nya plånboken:"
 
-#: kwalletmanager.cpp:330
+#: kwalletmanager.cpp:329
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Ny plånbok"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Tomt namn stöds inte. Välj ett nytt."
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Create new wallet"
 msgstr "Skapa ny plånbok"
 
-#: kwalletmanager.cpp:355
+#: kwalletmanager.cpp:354
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Plånboken finns redan. Försöka med ett nytt namn?"
 
-#: kwalletmanager.cpp:357
+#: kwalletmanager.cpp:356
 #, kde-format
 msgid "Try New"
 msgstr "Försök med nytt"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Är du säker på att du vill ta bort plånboken \"%1\"?"
 
-#: kwalletmanager.cpp:389
+#: kwalletmanager.cpp:388
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Kan inte ta bort plånboken. Felkoden var %1."
 
-#: kwalletmanager.cpp:436
+#: kwalletmanager.cpp:435
 #, kde-format
 msgid "File name"
 msgstr "Filnamn"
 
-#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#: kwalletmanager.cpp:435 kwalletmanager.cpp:453
 #, kde-format
 msgid "Tar archive (*.tar)"
 msgstr "Tar-arkiv (*.tar)"
 
-#: kwalletmanager.cpp:443
+#: kwalletmanager.cpp:442
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Misslyckades öppna fil för skrivning"
 
-#: kwalletmanager.cpp:454
+#: kwalletmanager.cpp:453
 #, kde-format
 msgid "Select file"
 msgstr "Välj fil"
 
-#: kwalletmanager.cpp:464
+#: kwalletmanager.cpp:463
 #, kde-format
 msgid "Failed to open file"
 msgstr "Misslyckades öppna fil"
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:475
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "En plånbok vid namn %1 finns redan. Åtgärden avbruten."
 
-#: kwalletmanager.cpp:482
+#: kwalletmanager.cpp:481
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Misslyckades kopiera filer"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorera osparade ändringar?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorera"

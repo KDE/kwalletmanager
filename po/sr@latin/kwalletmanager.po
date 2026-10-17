@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:51+0000\n"
+"POT-Creation-Date: 2026-10-17 00:54+0000\n"
 "PO-Revision-Date: 2026-10-04 23:13+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -210,7 +210,7 @@ msgstr "To ime fascikle se već koristi. Da pokušate ponovo?"
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "Ne pokušavaj"
@@ -322,53 +322,53 @@ msgstr ""
 "Sistem KDE novčanika nije aktivan. Želite li da ga aktivirate? Ako ne, "
 "Menadžer K‑novčanika će izaći pošto ne može da radi bez čitanja novčanika."
 
-#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
-#: kwalletmanager.cpp:290
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:226
+#: kwalletmanager.cpp:291
 #, kde-format
 msgid "Wallet"
 msgstr "Novčanik"
 
-#: kwalletmanager.cpp:92 kwalletmanager.cpp:290
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:291
 #, kde-format
 msgid "No wallets open."
 msgstr "Nema otvorenih novčanika."
 
-#: kwalletmanager.cpp:99 kwalletmanager.cpp:225
+#: kwalletmanager.cpp:99 kwalletmanager.cpp:226
 #, kde-format
 msgid "A wallet is open."
 msgstr "Novčanik je otvoren."
 
-#: kwalletmanager.cpp:144 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:145 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Novi novčanik..."
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:150
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Obriši novčanik..."
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:155
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Izvezi šifrovano"
 
-#: kwalletmanager.cpp:159
+#: kwalletmanager.cpp:160
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Uvezi šifrovano"
 
-#: kwalletmanager.cpp:164
+#: kwalletmanager.cpp:165
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Podesi &novčanik..."
 
-#: kwalletmanager.cpp:172
+#: kwalletmanager.cpp:173
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Zatvori &sve novčanike"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -377,111 +377,111 @@ msgstr ""
 "Ne mogu da zatvorim novčanik čisto. Verovatno ga koriste drugi programi. "
 "Želite li da primorate zatvaranje?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Primoraj zatvaranje"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
+#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Ne primoravaj"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
+#: kwalletmanager.cpp:267 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Ne mogu ni da primoram zatvaranje novčanika. Kôd greške: %1."
 
-#: kwalletmanager.cpp:282
+#: kwalletmanager.cpp:283
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Greška pri otvaranju novčanika %1."
 
-#: kwalletmanager.cpp:321
+#: kwalletmanager.cpp:320
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Izaberite ime za novi novčanik:"
 
-#: kwalletmanager.cpp:330
+#: kwalletmanager.cpp:329
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Novi novčanik"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Prazno ime nije podržano, izaberite neko drugo."
 
 # >> @title:window
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Create new wallet"
 msgstr "Stvaranje novog novčanika"
 
-#: kwalletmanager.cpp:355
+#: kwalletmanager.cpp:354
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Taj novčanik već postoji. Da pokušate s novim imenom?"
 
-#: kwalletmanager.cpp:357
+#: kwalletmanager.cpp:356
 #, kde-format
 msgid "Try New"
 msgstr "Pokušaj novo"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Želite li zaista da obrišete novčanik „%1“?"
 
-#: kwalletmanager.cpp:389
+#: kwalletmanager.cpp:388
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Ne mogu da obrišem novčanik. Kôd greške: %1."
 
 # >> @title:window
-#: kwalletmanager.cpp:436
+#: kwalletmanager.cpp:435
 #, kde-format
 msgid "File name"
 msgstr "Ime fajla"
 
-#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#: kwalletmanager.cpp:435 kwalletmanager.cpp:453
 #, kde-format
 msgid "Tar archive (*.tar)"
 msgstr "tar arhiva (*.tar)"
 
-#: kwalletmanager.cpp:443
+#: kwalletmanager.cpp:442
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Ne mogu da otvorim fajl za upis."
 
 # >> @title:window
-#: kwalletmanager.cpp:454
+#: kwalletmanager.cpp:453
 #, kde-format
 msgid "Select file"
 msgstr "Izaberite fajl"
 
-#: kwalletmanager.cpp:464
+#: kwalletmanager.cpp:463
 #, kde-format
 msgid "Failed to open file"
 msgstr "Ne mogu da otvorim fajl."
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:475
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Novčanik po imenu %1 već postoji, postupak obustavljen."
 
-#: kwalletmanager.cpp:482
+#: kwalletmanager.cpp:481
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Ne mogu da kopiram fajlove."
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Ignorisati nesačuvane izmene?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Ignoriši"

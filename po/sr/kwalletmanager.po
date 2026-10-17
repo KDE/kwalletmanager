@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:51+0000\n"
+"POT-Creation-Date: 2026-10-17 00:54+0000\n"
 "PO-Revision-Date: 2026-10-04 23:13+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -210,7 +210,7 @@ msgstr "То име фасцикле се већ користи. Да покуш
 msgid "Try Again"
 msgstr "Покушај поново"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:358
+#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "Не покушавај"
@@ -322,53 +322,53 @@ msgstr ""
 "Систем КДЕ новчаника није активан. Желите ли да га активирате? Ако не, "
 "Менаџер К‑новчаника ће изаћи пошто не може да ради без читања новчаника."
 
-#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:225
-#: kwalletmanager.cpp:290
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:99 kwalletmanager.cpp:226
+#: kwalletmanager.cpp:291
 #, kde-format
 msgid "Wallet"
 msgstr "Новчаник"
 
-#: kwalletmanager.cpp:92 kwalletmanager.cpp:290
+#: kwalletmanager.cpp:92 kwalletmanager.cpp:291
 #, kde-format
 msgid "No wallets open."
 msgstr "Нема отворених новчаника."
 
-#: kwalletmanager.cpp:99 kwalletmanager.cpp:225
+#: kwalletmanager.cpp:99 kwalletmanager.cpp:226
 #, kde-format
 msgid "A wallet is open."
 msgstr "Новчаник је отворен."
 
-#: kwalletmanager.cpp:144 kwalletpopup.cpp:27
+#: kwalletmanager.cpp:145 kwalletpopup.cpp:27
 #, kde-format
 msgid "&New Wallet..."
 msgstr "&Нови новчаник..."
 
-#: kwalletmanager.cpp:149
+#: kwalletmanager.cpp:150
 #, kde-format
 msgid "&Delete Wallet..."
 msgstr "&Обриши новчаник..."
 
-#: kwalletmanager.cpp:154
+#: kwalletmanager.cpp:155
 #, kde-format
 msgid "Export as encrypted"
 msgstr "Извези шифровано"
 
-#: kwalletmanager.cpp:159
+#: kwalletmanager.cpp:160
 #, kde-format
 msgid "&Import encrypted"
 msgstr "&Увези шифровано"
 
-#: kwalletmanager.cpp:164
+#: kwalletmanager.cpp:165
 #, kde-format
 msgid "Configure &Wallet..."
 msgstr "Подеси &новчаник..."
 
-#: kwalletmanager.cpp:172
+#: kwalletmanager.cpp:173
 #, kde-format
 msgid "Close &All Wallets"
 msgstr "Затвори &све новчанике"
 
-#: kwalletmanager.cpp:259 walletcontrolwidget.cpp:95
+#: kwalletmanager.cpp:260 walletcontrolwidget.cpp:95
 #, kde-format
 msgid ""
 "Unable to close wallet cleanly. It is probably in use by other applications. "
@@ -377,111 +377,111 @@ msgstr ""
 "Не могу да затворим новчаник чисто. Вероватно га користе други програми. "
 "Желите ли да приморате затварање?"
 
-#: kwalletmanager.cpp:261 walletcontrolwidget.cpp:97
+#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:97
 #, kde-format
 msgid "Force Closure"
 msgstr "Приморај затварање"
 
-#: kwalletmanager.cpp:262 walletcontrolwidget.cpp:98
+#: kwalletmanager.cpp:263 walletcontrolwidget.cpp:98
 #, kde-format
 msgid "Do Not Force"
 msgstr "Не приморавај"
 
-#: kwalletmanager.cpp:266 walletcontrolwidget.cpp:102
+#: kwalletmanager.cpp:267 walletcontrolwidget.cpp:102
 #, kde-format
 msgid "Unable to force the wallet closed. Error code was %1."
 msgstr "Не могу ни да приморам затварање новчаника. Кôд грешке: %1."
 
-#: kwalletmanager.cpp:282
+#: kwalletmanager.cpp:283
 #, kde-format
 msgid "Error opening wallet %1."
 msgstr "Грешка при отварању новчаника %1."
 
-#: kwalletmanager.cpp:321
+#: kwalletmanager.cpp:320
 #, kde-format
 msgid "Please choose a name for the new wallet:"
 msgstr "Изаберите име за нови новчаник:"
 
-#: kwalletmanager.cpp:330
+#: kwalletmanager.cpp:329
 #, kde-format
 msgctxt "@title:window"
 msgid "New Wallet"
 msgstr "Нови новчаник"
 
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Empty name is not supported. Please select a new one."
 msgstr "Празно име није подржано, изаберите неко друго."
 
 # >> @title:window
-#: kwalletmanager.cpp:349
+#: kwalletmanager.cpp:348
 #, kde-format
 msgid "Create new wallet"
 msgstr "Стварање новог новчаника"
 
-#: kwalletmanager.cpp:355
+#: kwalletmanager.cpp:354
 #, kde-format
 msgid "Sorry, that wallet already exists. Try a new name?"
 msgstr "Тај новчаник већ постоји. Да покушате с новим именом?"
 
-#: kwalletmanager.cpp:357
+#: kwalletmanager.cpp:356
 #, kde-format
 msgid "Try New"
 msgstr "Покушај ново"
 
-#: kwalletmanager.cpp:383
+#: kwalletmanager.cpp:382
 #, kde-format
 msgid "Are you sure you wish to delete the wallet '%1'?"
 msgstr "Желите ли заиста да обришете новчаник „%1“?"
 
-#: kwalletmanager.cpp:389
+#: kwalletmanager.cpp:388
 #, kde-format
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "Не могу да обришем новчаник. Кôд грешке: %1."
 
 # >> @title:window
-#: kwalletmanager.cpp:436
+#: kwalletmanager.cpp:435
 #, kde-format
 msgid "File name"
 msgstr "Име фајла"
 
-#: kwalletmanager.cpp:436 kwalletmanager.cpp:454
+#: kwalletmanager.cpp:435 kwalletmanager.cpp:453
 #, kde-format
 msgid "Tar archive (*.tar)"
 msgstr "тар архива (*.tar)"
 
-#: kwalletmanager.cpp:443
+#: kwalletmanager.cpp:442
 #, kde-format
 msgid "Failed to open file for writing"
 msgstr "Не могу да отворим фајл за упис."
 
 # >> @title:window
-#: kwalletmanager.cpp:454
+#: kwalletmanager.cpp:453
 #, kde-format
 msgid "Select file"
 msgstr "Изаберите фајл"
 
-#: kwalletmanager.cpp:464
+#: kwalletmanager.cpp:463
 #, kde-format
 msgid "Failed to open file"
 msgstr "Не могу да отворим фајл."
 
-#: kwalletmanager.cpp:476
+#: kwalletmanager.cpp:475
 #, kde-format
 msgid "Wallet named %1 already exists, Operation aborted"
 msgstr "Новчаник по имену %1 већ постоји, поступак обустављен."
 
-#: kwalletmanager.cpp:482
+#: kwalletmanager.cpp:481
 #, kde-format
 msgid "Failed to copy files"
 msgstr "Не могу да копирам фајлове."
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore unsaved changes?"
 msgstr "Игнорисати несачуване измене?"
 
-#: kwalletmanager.cpp:494 walletcontrolwidget.cpp:85
+#: kwalletmanager.cpp:493 walletcontrolwidget.cpp:85
 #, kde-format
 msgid "Ignore"
 msgstr "Игнориши"
