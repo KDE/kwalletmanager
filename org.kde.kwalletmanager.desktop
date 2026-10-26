@@ -149,5 +149,5 @@ InitialPreference=6
 Icon=kwalletmanager
 Type=Application
 Categories=Qt;KDE;System;Security;
-X-DocPath=kwallet5/index.html
+X-DocPath=kwalletmanager/index.html
 DBusActivatable=true

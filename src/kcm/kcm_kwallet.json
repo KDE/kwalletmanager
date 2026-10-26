@@ -124,7 +124,7 @@
         "Name[zh_CN]": "KDE 密码库",
         "Name[zh_TW]": "KDE 錢包"
     },
-    "X-DocPath": "kwallet5/kwallet-kcontrol-module.html",
+    "X-DocPath": "kwalletmanager/kwallet-kcontrol-module.html",
     "X-KDE-Keywords": "wallet,form fill,passwords,form data,secret service,kwallet,kdewallet,kde wallet,keepassxc,keyring,encryption,decryption,blowfish,pgp,access control,confidential,wallet manager",
     "X-KDE-Keywords[ar]": "محفظة,مدير محفظة,أسرار,خدمة الأسرار,محفظتك,تعمية,تعمية,فك التعمية,تحكم,الوصول,كلمة السر,كلمة مرور,سرية",
     "X-KDE-Keywords[bg]": "портфейл, попълване на формуляр, пароли, данни от формуляр, тайна служба, kwallet, kdewallet, kde портфейл,keepassxc,ключодържател,шифроване,декриптиране,blowfish,pgp,контрол на достъпа,поверително, мениджър на портфейла",

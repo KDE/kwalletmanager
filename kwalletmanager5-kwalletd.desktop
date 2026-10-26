@@ -148,4 +148,4 @@ Icon=kwalletmanager
 Type=Application
 StartupNotify=false
 NoDisplay=true
-X-DocPath=help:/kwallet5/index.html
+X-DocPath=kwalletmanager/index.html
