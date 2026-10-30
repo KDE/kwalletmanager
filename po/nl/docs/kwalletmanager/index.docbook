@@ -517,36 +517,6 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 > om de nieuwe items op te slaan in het versleutelde portefeuillebestand. </para>
 </sect3>
 </sect2>
-
-<sect2>
-<title
->Tabblad Toepassingen</title>
-<para>
-<screenshot>
-<screeninfo
->Tabblad Toepassingen</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="kwallet-applications.png"/>
-</imageobject>
-<textobject>
-<phrase
->Tabblad Toepassingen</phrase>
-</textobject>
-<caption
-><para
->Tabblad Toepassingen</para
-></caption>
-</mediaobject>
-</screenshot>
-</para>
-<para
->De eerste lijst toont alle toepassingen die nu verbonden zijn met de geselecteerde portefeuille. Gebruik de knop rechts van elk item om de verbinding met de toepassing te verbreken.</para>
-
-<para
->In de tweede lijst worden alle toepassingen getoond die geautoriseerd zijn voor toegang tot de portefeuille. Gebruik de knop rechts van elk item in de lijst om toegang in te trekken. </para>
-<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
-</sect2>
 </sect1>
 
 </chapter>
