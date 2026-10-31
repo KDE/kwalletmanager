@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:54+0000\n"
+"POT-Creation-Date: 2026-10-31 00:55+0000\n"
 "PO-Revision-Date: 2025-10-19 10:31+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -104,117 +104,117 @@ msgctxt "@option:check"
 msgid "&Show values"
 msgstr "&Arată valorile"
 
-#: kwalleteditor.cpp:210
+#: kwalleteditor.cpp:212
 #, kde-format
 msgid "&New Folder..."
 msgstr "Dosar &nou..."
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:216
 #, kde-format
 msgid "&Delete Folder"
 msgstr "Șterge &dosarul"
 
-#: kwalleteditor.cpp:217
+#: kwalleteditor.cpp:219
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Importă XML..."
 
-#: kwalleteditor.cpp:221
+#: kwalleteditor.cpp:223
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&Exportă ca XML..."
 
-#: kwalleteditor.cpp:225
+#: kwalleteditor.cpp:227
 #, kde-format
 msgid "&Copy"
 msgstr "&Copiază"
 
-#: kwalleteditor.cpp:230
+#: kwalleteditor.cpp:232
 #, kde-format
 msgid "&New..."
 msgstr "&Nou..."
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:237
 #, kde-format
 msgid "&Rename"
 msgstr "&Redenumește"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
+#: kwalleteditor.cpp:242 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Ș&terge"
 
-#: kwalleteditor.cpp:245
+#: kwalleteditor.cpp:247
 #, kde-format
 msgid "Always show contents"
 msgstr "Arată conținutul întotdeauna"
 
-#: kwalleteditor.cpp:249
+#: kwalleteditor.cpp:251
 #, kde-format
 msgid "Always hide contents"
 msgstr "Ascunde conținutul întotdeauna"
 
-#: kwalleteditor.cpp:358
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Passwords"
 msgstr "Parole"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Maps"
 msgstr "Mapări"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Binary Data"
 msgstr "Date binare"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: kwalleteditor.cpp:403
+#: kwalleteditor.cpp:405
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Sunteți sigur că doriți să ștergeți dosarul '%1' din portofel?"
 
-#: kwalleteditor.cpp:409
+#: kwalleteditor.cpp:411
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Eroare la ștergerea dosarului."
 
-#: kwalleteditor.cpp:428
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "New Folder"
 msgstr "Dosar nou"
 
-#: kwalleteditor.cpp:428
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Vă rog să alegeți un nume pentru noul dosar:"
 
-#: kwalleteditor.cpp:436
+#: kwalleteditor.cpp:438
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Acest nume de dosar este deja utilizat. Încercați din nou?"
 
-#: kwalleteditor.cpp:438 kwalleteditor.cpp:800
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:802
 #, kde-format
 msgid "Try Again"
 msgstr "Reîncearcă"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:357
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:803 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "Nu încerca"
 
-#: kwalleteditor.cpp:478
+#: kwalleteditor.cpp:480
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Eroare la salvarea înregistrării. Cod de eroare: %1"
 
-#: kwalleteditor.cpp:500
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -223,80 +223,80 @@ msgstr ""
 "Conținutul elementului curent a fost modificat.\n"
 "Doriți să salvați modificările?"
 
-#: kwalleteditor.cpp:553 kwalleteditor.cpp:883
+#: kwalleteditor.cpp:555 kwalleteditor.cpp:885
 #, kde-format
 msgid "Password: %1"
 msgstr "Parolă: %1"
 
-#: kwalleteditor.cpp:569 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:887
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Mapare nume-valoare: %1"
 
-#: kwalleteditor.cpp:579 kwalleteditor.cpp:887
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:889
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Date binare: %1"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:791
 #, kde-format
 msgid "New Entry"
 msgstr "Înregistrare nouă"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:791
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Alegeți un nume pentru noua înregistrare:"
 
-#: kwalleteditor.cpp:798
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "Această înregistrare există deja. Încercați din nou?"
 
-#: kwalleteditor.cpp:818 kwalleteditor.cpp:827
+#: kwalleteditor.cpp:820 kwalleteditor.cpp:829
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr ""
 "A intervenit o eroare neașteptată la încercarea de a adăuga noua înregistrare"
 
-#: kwalleteditor.cpp:879
+#: kwalleteditor.cpp:881
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr ""
 "A intervenit o eroare neașteptată la încercarea de a redenumi înregistrarea"
 
-#: kwalleteditor.cpp:900
+#: kwalleteditor.cpp:902
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Sigur doriți să ștergeți elementul „%1”?"
 
-#: kwalleteditor.cpp:904
+#: kwalleteditor.cpp:906
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr ""
 "A intervenit o eroare neașteptată la încercarea de a șterge înregistrarea"
 
-#: kwalleteditor.cpp:932
+#: kwalleteditor.cpp:934
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "Nu pot să deschid portofelul pe care l-ați cerut."
 
-#: kwalleteditor.cpp:975
+#: kwalleteditor.cpp:982
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "Fișierul XML „<b>%1</b>” nu poate fi accesat."
 
-#: kwalleteditor.cpp:981
+#: kwalleteditor.cpp:988
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Eroare la citirea fișierului XML „<b>%1</b>” pentru intrare."
 
-#: kwalleteditor.cpp:987
+#: kwalleteditor.cpp:994
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Eroare: Fișierul XML nu conține un portofel."
 
-#: kwalleteditor.cpp:1017
+#: kwalleteditor.cpp:1024
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -305,7 +305,7 @@ msgstr ""
 "Dosarul „<b>%1</b>” conține deja o înregistrare „<b>%2</b>”.  Doriți să o "
 "înlocuiți?"
 
-#: kwalleteditor.cpp:1140
+#: kwalleteditor.cpp:1147
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "Nu s-a putut stoca în „<b>%1</b>”"
@@ -658,21 +658,29 @@ msgstr "Modifică parola..."
 msgid "Hide &Contents"
 msgstr "Ascunde &conținutul"
 
+#. i18n: ectx: property (text), widget (QToolButton, _copyShownContents)
+#. i18n: ectx: property (text), widget (QToolButton, _copyHiddenContents)
+#: walletwidget.ui:175 walletwidget.ui:279
+#, kde-format
+msgctxt "@action:button Copy the password to the clipboard"
+msgid "Co&py"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:205 walletwidget.ui:253
+#: walletwidget.ui:218 walletwidget.ui:266
 #, kde-format
 msgid "Show &Contents"
 msgstr "Afișează &conținutul"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:324
+#: walletwidget.ui:350
 #, kde-format
 msgid "&Undo"
 msgstr "&Desfă"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:334
+#: walletwidget.ui:360
 #, kde-format
 msgid "&Save"
 msgstr "&Salvează"

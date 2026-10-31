@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:54+0000\n"
+"POT-Creation-Date: 2026-10-31 00:55+0000\n"
 "PO-Revision-Date: 2026-09-10 12:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -106,117 +106,117 @@ msgctxt "@option:check"
 msgid "&Show values"
 msgstr "Mo&stra els valors"
 
-#: kwalleteditor.cpp:210
+#: kwalleteditor.cpp:212
 #, kde-format
 msgid "&New Folder..."
 msgstr "Carpeta &nova..."
 
-#: kwalleteditor.cpp:214
+#: kwalleteditor.cpp:216
 #, kde-format
 msgid "&Delete Folder"
 msgstr "Su&primeix la carpeta"
 
-#: kwalleteditor.cpp:217
+#: kwalleteditor.cpp:219
 #, kde-format
 msgid "&Import XML..."
 msgstr "&Importa XML..."
 
-#: kwalleteditor.cpp:221
+#: kwalleteditor.cpp:223
 #, kde-format
 msgid "&Export as XML..."
 msgstr "&Exporta com a XML..."
 
-#: kwalleteditor.cpp:225
+#: kwalleteditor.cpp:227
 #, kde-format
 msgid "&Copy"
 msgstr "&Copia"
 
-#: kwalleteditor.cpp:230
+#: kwalleteditor.cpp:232
 #, kde-format
 msgid "&New..."
 msgstr "&Nova..."
 
-#: kwalleteditor.cpp:235
+#: kwalleteditor.cpp:237
 #, kde-format
 msgid "&Rename"
 msgstr "&Reanomena"
 
-#: kwalleteditor.cpp:240 kwalletpopup.cpp:50
+#: kwalleteditor.cpp:242 kwalletpopup.cpp:50
 #, kde-format
 msgid "&Delete"
 msgstr "Su&primeix"
 
-#: kwalleteditor.cpp:245
+#: kwalleteditor.cpp:247
 #, kde-format
 msgid "Always show contents"
 msgstr "Mostra sempre el contingut"
 
-#: kwalleteditor.cpp:249
+#: kwalleteditor.cpp:251
 #, kde-format
 msgid "Always hide contents"
 msgstr "Oculta sempre el contingut"
 
-#: kwalleteditor.cpp:358
+#: kwalleteditor.cpp:360
 #, kde-format
 msgid "Passwords"
 msgstr "Contrasenyes"
 
-#: kwalleteditor.cpp:359
+#: kwalleteditor.cpp:361
 #, kde-format
 msgid "Maps"
 msgstr "Correspondències"
 
-#: kwalleteditor.cpp:360
+#: kwalleteditor.cpp:362
 #, kde-format
 msgid "Binary Data"
 msgstr "Dades binàries"
 
-#: kwalleteditor.cpp:361
+#: kwalleteditor.cpp:363
 #, kde-format
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: kwalleteditor.cpp:403
+#: kwalleteditor.cpp:405
 #, kde-format
 msgid "Are you sure you wish to delete the folder '%1' from the wallet?"
 msgstr "Segur que voleu suprimir la carpeta «%1» de la cartera?"
 
-#: kwalleteditor.cpp:409
+#: kwalleteditor.cpp:411
 #, kde-format
 msgid "Error deleting folder."
 msgstr "Error en suprimir la carpeta."
 
-#: kwalleteditor.cpp:428
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "New Folder"
 msgstr "Carpeta nova"
 
-#: kwalleteditor.cpp:428
+#: kwalleteditor.cpp:430
 #, kde-format
 msgid "Please choose a name for the new folder:"
 msgstr "Escolliu un nom per a la carpeta nova:"
 
-#: kwalleteditor.cpp:436
+#: kwalleteditor.cpp:438
 #, kde-format
 msgid "Sorry, that folder name is in use. Try again?"
 msgstr "Aquest nom de directori ja s'usa. Voleu tornar-ho a intentar?"
 
-#: kwalleteditor.cpp:438 kwalleteditor.cpp:800
+#: kwalleteditor.cpp:440 kwalleteditor.cpp:802
 #, kde-format
 msgid "Try Again"
 msgstr "Torneu-ho a intentar"
 
-#: kwalleteditor.cpp:439 kwalleteditor.cpp:801 kwalletmanager.cpp:357
+#: kwalleteditor.cpp:441 kwalleteditor.cpp:803 kwalletmanager.cpp:357
 #, kde-format
 msgid "Do Not Try"
 msgstr "No ho intentis"
 
-#: kwalleteditor.cpp:478
+#: kwalleteditor.cpp:480
 #, kde-format
 msgid "Error saving entry. Error code: %1"
 msgstr "Error en desar l'entrada. Codi d'error: %1"
 
-#: kwalleteditor.cpp:500
+#: kwalleteditor.cpp:502
 #, kde-format
 msgid ""
 "The contents of the current item has changed.\n"
@@ -225,77 +225,77 @@ msgstr ""
 "El contingut de l'element actual ha canviat.\n"
 "Voleu desar els canvis?"
 
-#: kwalleteditor.cpp:553 kwalleteditor.cpp:883
+#: kwalleteditor.cpp:555 kwalleteditor.cpp:885
 #, kde-format
 msgid "Password: %1"
 msgstr "Contrasenya: %1"
 
-#: kwalleteditor.cpp:569 kwalleteditor.cpp:885
+#: kwalleteditor.cpp:571 kwalleteditor.cpp:887
 #, kde-format
 msgid "Name-Value Map: %1"
 msgstr "Correspondència nom-valor: %1"
 
-#: kwalleteditor.cpp:579 kwalleteditor.cpp:887
+#: kwalleteditor.cpp:581 kwalleteditor.cpp:889
 #, kde-format
 msgid "Binary Data: %1"
 msgstr "Dades binàries: %1"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:791
 #, kde-format
 msgid "New Entry"
 msgstr "Entrada nova"
 
-#: kwalleteditor.cpp:789
+#: kwalleteditor.cpp:791
 #, kde-format
 msgid "Please choose a name for the new entry:"
 msgstr "Si us plau, escolliu un nom per a l'entrada nova:"
 
-#: kwalleteditor.cpp:798
+#: kwalleteditor.cpp:800
 #, kde-format
 msgid "Sorry, that entry already exists. Try again?"
 msgstr "L'entrada ja existeix. Voleu tornar-ho a intentar?"
 
-#: kwalleteditor.cpp:818 kwalleteditor.cpp:827
+#: kwalleteditor.cpp:820 kwalleteditor.cpp:829
 #, kde-format
 msgid "An unexpected error occurred trying to add the new entry"
 msgstr "Hi ha hagut un error inesperat en intentar afegir l'entrada nova"
 
-#: kwalleteditor.cpp:879
+#: kwalleteditor.cpp:881
 #, kde-format
 msgid "An unexpected error occurred trying to rename the entry"
 msgstr "Hi ha hagut un error inesperat en intentar reanomenar l'entrada"
 
-#: kwalleteditor.cpp:900
+#: kwalleteditor.cpp:902
 #, kde-format
 msgid "Are you sure you wish to delete the item '%1'?"
 msgstr "Segur que voleu suprimir l'element «%1»?"
 
-#: kwalleteditor.cpp:904
+#: kwalleteditor.cpp:906
 #, kde-format
 msgid "An unexpected error occurred trying to delete the entry"
 msgstr "Hi ha hagut un error inesperat en intentar suprimir l'entrada"
 
-#: kwalleteditor.cpp:932
+#: kwalleteditor.cpp:934
 #, kde-format
 msgid "Unable to open the requested wallet."
 msgstr "No s'ha pogut obrir la cartera demanada."
 
-#: kwalleteditor.cpp:975
+#: kwalleteditor.cpp:982
 #, kde-format
 msgid "Unable to access XML file '<b>%1</b>'."
 msgstr "No s'ha pogut accedir al fitxer XML «<b>%1</b>»."
 
-#: kwalleteditor.cpp:981
+#: kwalleteditor.cpp:988
 #, kde-format
 msgid "Error reading XML file '<b>%1</b>' for input."
 msgstr "Error en llegir el fitxer XML «<b>%1</b>»."
 
-#: kwalleteditor.cpp:987
+#: kwalleteditor.cpp:994
 #, kde-format
 msgid "Error: XML file does not contain a wallet."
 msgstr "Error: El fitxer XML no conté cap cartera."
 
-#: kwalleteditor.cpp:1017
+#: kwalleteditor.cpp:1024
 #, kde-format
 msgid ""
 "Folder '<b>%1</b>' already contains an entry '<b>%2</b>'.  Do you wish to "
@@ -303,7 +303,7 @@ msgid ""
 msgstr ""
 "La carpeta «<b>%1</b>» ja conté una entrada «<b>%2</b>». Voleu substituir-la?"
 
-#: kwalleteditor.cpp:1140
+#: kwalleteditor.cpp:1147
 #, kde-format
 msgid "Unable to store to '<b>%1</b>'."
 msgstr "No s'ha pogut emmagatzemar a «<b>%1</b>»."
@@ -656,21 +656,29 @@ msgstr "Canvia la contrasenya..."
 msgid "Hide &Contents"
 msgstr "Oculta el &contingut"
 
+#. i18n: ectx: property (text), widget (QToolButton, _copyShownContents)
+#. i18n: ectx: property (text), widget (QToolButton, _copyHiddenContents)
+#: walletwidget.ui:175 walletwidget.ui:279
+#, kde-format
+msgctxt "@action:button Copy the password to the clipboard"
+msgid "Co&py"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: walletwidget.ui:205 walletwidget.ui:253
+#: walletwidget.ui:218 walletwidget.ui:266
 #, kde-format
 msgid "Show &Contents"
 msgstr "Mostra el &contingut"
 
 #. i18n: ectx: property (text), widget (QPushButton, _undoChanges)
-#: walletwidget.ui:324
+#: walletwidget.ui:350
 #, kde-format
 msgid "&Undo"
 msgstr "&Desfés"
 
 #. i18n: ectx: property (text), widget (QPushButton, _saveChanges)
-#: walletwidget.ui:334
+#: walletwidget.ui:360
 #, kde-format
 msgid "&Save"
 msgstr "&Desa"
