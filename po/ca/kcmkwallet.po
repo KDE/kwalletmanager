@@ -286,18 +286,3 @@ msgstr "Política"
 #, kde-format
 msgid "&Launch Wallet Manager"
 msgstr "&Llança el gestor de carteres"
-
-#~ msgid "Select wallet to use as default:"
-#~ msgstr "Seleccioneu la cartera a usar per defecte:"
-
-#~ msgid "(c) 2003 George Staikos"
-#~ msgstr "(c) 2003 George Staikos"
-
-#~ msgid "George Staikos"
-#~ msgstr "George Staikos"
-
-#~ msgid ""
-#~ "This configuration module allows you to configure the KDE wallet system."
-#~ msgstr ""
-#~ "Aquest mòdul de configuració permet configurar el sistema de carteres del "
-#~ "KDE."

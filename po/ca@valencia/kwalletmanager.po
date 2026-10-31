@@ -581,7 +581,7 @@ msgstr "Eina per a la gestió de carteres de KDE"
 #: main.cpp:30
 #, kde-format
 msgid "Copyright ©2013–2017, KWallet Manager authors"
-msgstr "Copyright © 2013–2017, els autors de KWallet Manager"
+msgstr "Drets d'autoria © 2013–2017, els autors de KWallet Manager"
 
 #: main.cpp:34
 #, kde-format
