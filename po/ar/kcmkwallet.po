@@ -5,13 +5,13 @@
 # Khaled Hosny <dr.khaled.hosny@gmail.com>, 2006.
 # Fahad Al-Saidi <fahad.alsaidi@gmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021-2022, 2024-2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwallet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 20:17+0000\n"
-"PO-Revision-Date: 2025-08-20 20:45+0400\n"
+"PO-Revision-Date: 2026-11-01 18:55+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -281,7 +281,7 @@ msgstr "السياسة"
 #: walletconfigwidget.ui:451
 #, kde-format
 msgid "&Launch Wallet Manager"
-msgstr "أ&طلق مدير المحفظة"
+msgstr "&شغّل مدير المحفظة"
 
 #~ msgid "Select wallet to use as default:"
 #~ msgstr "حدد محفظة لتصبح المحفظة الافتراضية:"
