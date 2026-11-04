@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-31 00:55+0000\n"
-"PO-Revision-Date: 2026-09-15 17:40+0900\n"
+"PO-Revision-Date: 2026-11-03 19:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -654,7 +654,7 @@ msgstr "隱藏內容(&C)"
 #, kde-format
 msgctxt "@action:button Copy the password to the clipboard"
 msgid "Co&py"
-msgstr ""
+msgstr "複製(&P)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)

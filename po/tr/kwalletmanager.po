@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-31 00:55+0000\n"
-"PO-Revision-Date: 2026-09-10 19:15+0300\n"
+"PO-Revision-Date: 2026-11-03 22:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -669,7 +669,7 @@ msgstr "İçeriği &Gizle"
 #, kde-format
 msgctxt "@action:button Copy the password to the clipboard"
 msgid "Co&py"
-msgstr ""
+msgstr "Ko&pyala"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
