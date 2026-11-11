@@ -549,36 +549,6 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 > para armazenar os novos itens no arquivo de carteira criptografado. </para>
 </sect3>
 </sect2>
-
-<sect2>
-<title
->Aba Aplicativos</title>
-<para>
-<screenshot>
-<screeninfo
->Aba Aplicativos</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="kwallet-applications.png"/>
-</imageobject>
-<textobject>
-<phrase
->Aba Aplicativos</phrase>
-</textobject>
-<caption
-><para
->Aba Aplicativos</para
-></caption>
-</mediaobject>
-</screenshot>
-</para>
-<para
->A primeira lista mostra todos os aplicativos conectados no momento à carteira selecionada. Use o botão do lado direito de cada item para desconectar o aplicativo.</para>
-
-<para
->Na segunda lista, todos os aplicativos que estão autorizados a acessar à carteira são apresentados. Use o botão à direita de cada item da lista para revogar o acesso. </para>
-<!-- FIXME difference to remove the policy in kwallermanager settings dialog?-->
-</sect2>
 </sect1>
 
 </chapter>
