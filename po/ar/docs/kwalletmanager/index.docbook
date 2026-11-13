@@ -1,0 +1,776 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE">
+]>
+
+<book id="kwallet5" lang="&language;">
+<bookinfo>
+<title
+>دليل محفظةك 5</title>
+
+<authorgroup>
+<author
+>&George.Staikos; &George.Staikos.mail; </author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail; </author>
+<othercredit role="developer"
+><firstname
+>George</firstname
+><surname
+>Staikos</surname
+> <affiliation
+><address
+>&George.Staikos.mail;</address
+></affiliation>
+<contrib
+>مطوّر</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-07-05</date>
+<releaseinfo
+>تطبيقات 16.04</releaseinfo>
+
+<abstract>
+<para
+>يوفر نظام المحفظة الفرعي طريقة آمنة و ملائمة لإدارة كلمات السر.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>محفظة ك</keyword>
+<keyword
+>كلمات السر</keyword>
+<keyword
+>نماذج</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>يواجه مستخدمو الحواسيب كمية هائلة من البيانات لإدارتها، بعضها حساس. على وجه الخصوص، سيكون لديك عادةً العديد من كلمات السر لإدارتها. تذكرها صعب وتدوينها على ورق أو في ملف نصي غير آمن.</para>
+
+<para
+>يوفر محفظة ك طريقة آمنة لتخزين كلمات السر والمعلومات السرية الأخرى، مما يسمح للمستخدم بتذكر كلمة سر واحدة فقط بدلًا من العديد من كلمات السر وبيانات الاعتماد المختلفة. </para>
+
+<sect1 id="kwallet-create">
+
+<title
+>أنشئ محفظة</title>
+
+<para
+>المحفظة هي مخزن كلمات سر. عادةً ما يكفي وجود محفظة واحدة فقط مؤمنة بكلمة سر رئيسية واحدة، لكن يمكنك تنظيم مجموعتك الكبيرة من كلمات السر عبر المحافظ باستخدام &kwalletmanager5;.</para>
+
+<para
+>افتراضيًا، ستُستخدم محفظة باسم <guilabel
+>kdewallet</guilabel
+> لتخزين كلمات سرك. هذه المحفظة مؤمنة بكلمة سر تسجيل الدخول الخاصة بك وسيُفتح آليًا عند تسجيل الدخول، إذا كان kwallet_pam مثبتًا ومضبوطًا بشكل صحيح. على بعض التوزيعات (مثل Archlinux) لا يُثبت kwallet_pam مبدئيًا.</para>
+
+
+<para
+>يجب فتح المحافظ الأخرى يدويًا.</para>
+
+<para
+>هناك طريقتان لإنشاء محفظة جديدة:</para>
+
+<itemizedlist>
+<listitem
+><para
+>استخدم عنصر القائمة <menuchoice
+><guimenu
+>ملف</guimenu
+><guimenuitem
+>محفظة جديدة</guimenuitem
+></menuchoice
+> في &kwalletmanager5;</para
+></listitem>
+
+<listitem
+><para
+>استخدم زر <guibutton
+>جديد</guibutton
+> في وحدة &systemsettings; <guilabel
+>محفظة كيدي</guilabel
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>إذا لم تكن قد أنشأت محفظة بعد، راجع القسم <link linkend="kwallet-using"
+>استخدام محفظة ك</link
+>. </para>
+
+<para
+>يقدم محفظة ك طريقتين مختلفتين لتخزين بياناتك:</para>
+
+<screenshot>
+<screeninfo
+>اختر التعمية</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="wallet-encryption-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>اختر التعمية</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+
+<varlistentry>
+<term
+>تعمية Blowfish</term>
+<listitem>
+<para
+>يحفظ محفظة ك هذه البيانات الحساسة لك في ملف معمّى بشدة، يمكن الوصول إليه من قبل جميع التطبيقات، ومحمي بكلمة سر رئيسية تحددها.</para>
+
+<screenshot>
+<screeninfo
+>أنشئ محفظة معمّاة بـ Blowfish</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="first-open-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>أنشئ محفظة معمّاة بـ Blowfish</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>تُعمّى البيانات باستخدام <ulink url="http://www.schneier.com/blowfish.html"
+>خوارزمية التعمية الكتلية المتناظرة Blowfish</ulink
+>، ويُشتق مفتاح الخوارزمية من <ulink url="http://www.ietf.org/rfc/rfc3174.txt"
+>تجزئة SHA-1</ulink
+> لكلمة السر، بطول مفتاح 156 بت (20 بايت). كما تُجزّأ البيانات في ملف المحفظة بـ SHA-1 وتُفحص قبل فك تعمية البيانات وجعلها قابلة للوصول من قبل التطبيقات. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>تعمية GPG</term>
+<listitem>
+<para
+>يقدم GnuPG بعض خوارزميات التعمية القوية جدًا ويستخدم مفاتيح طويلة محمية بعبارة سر.</para>
+
+<screenshot>
+<screeninfo
+>لم يُعثر على مفتاح GPG</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="error-nokey.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>لم يُعثر على مفتاح GPG</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>تُظهر لقطات الشاشة أعلاه الحالة التي لم يُعثر فيها على مفتاح GPG قادر على التعمية على النظام. يُرجى استخدام تطبيقات مثل &kgpg; أو &kleopatra; لإنشاء مفتاح وحاول مرة أخرى.</para>
+
+<para
+>إذا عُثر على مفتاح GPG، ستحصل على الحوار التالي حيث يمكنك اختيار مفتاح لاستخدامه لمحفظتك الجديدة. </para>
+<screenshot>
+<screeninfo
+>اختر مفتاح تعمية</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="key-selection.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>اختر مفتاح تعمية</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>سيستخدم محفظة ك الآن GPG عند تخزين المحافظ وعند فتحها. يظهر حوار عبارة السر مرة واحدة فقط. حتى إذا أُغلقت المحفظة بعد الفتح الأولي، سيحدث الفتح اللاحق بصمت خلال نفس الجلسة. </para>
+
+<para
+>يمكن لنفس الجلسة التعامل في وقت واحد مع كلا تنسيقي الملفات. سيكتشف محفظة ك تنسيق الملف بشفافية ويحمل الخلفية الخلفية الصحيحة للتعامل معه.</para>
+
+<para
+>لاستخدام بياناتك الحساسة من محفظتك التقليدية مع الخلفية الجديدة، اتبع هذه الخطوات:</para>
+
+<itemizedlist>
+<listitem
+><para
+>أنشئ محفظة جديدة قائمة على GPG</para
+></listitem>
+<listitem
+><para
+>شغّل &kwalletmanager5; باستخدام &krunner; (<keycombo
+>&Alt; <keycap
+>F2</keycap
+></keycombo
+>) أو مشغل تطبيقات آخر (قائمة) واختر محفظتك القديمة. ثم اختر <menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>صدّر كمعمّى</guimenuitem
+></menuchoice
+> لإنشاء ملف أرشيف ببياناتك الحساسة. </para
+></listitem>
+<listitem
+><para
+>اختر المحفظة الجديدة المعتمدة على GPG ثم اختر <menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>استيراد مشفر</guimenuitem
+></menuchoice
+> وحدد الملف الذي حفظته للتو.</para>
+</listitem>
+
+<listitem
+><para
+>اذهب إلى &systemsettings; <menuchoice
+><guimenu
+>تفاصيل الحساب</guimenu
+> <guimenuitem
+>محفظة كيدي</guimenuitem
+></menuchoice
+> واختر المحفظة المعتمدة على GPG المنشأة حديثًا من مربع القائمة المنسدلة <guilabel
+>اختر المحفظة لاستخدامها كمبدئية</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>بدلًا من ذلك استخدم <guimenuitem
+>استيراد محفظة</guimenuitem
+> لكن في هذه الحالة عليك تحديد ملف <filename class="extension"
+>.kwl</filename
+> المطابق لمحفظتك القديمة، الموجود في المجلد <filename class="directory"
+>kwalletd</filename
+> في <userinput
+>qtpaths --paths GenericDataLocation</userinput
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<tip>
+<para
+>تدعم محفظة ك محافظ متعددة، لذا للتشغيل الأكثر أمانًا، يجب عليك استخدام محفظة واحدة لكلمات السر المحلية، وأخرى لكلمات سر الشبكة وبيانات النماذج. يمكنك ضبط هذا السلوك في وحدة محفظة ك في &systemsettings;، لكن الإعداد المبدئي هو تخزين كل شيء في محفظة واحدة اسمها <guilabel
+>kdewallet</guilabel
+>.</para>
+</tip>
+
+<para
+>المحفظة مغلقة مبدئيًا، مما يعني أنه يجب عليك تقديم كلمة سر لفتحها. بمجرد فتح المحفظة، يمكن لأي عملية مستخدم قراءة المحتويات، لذا قد تكون هذه مشكلة أمنية.</para>
+</sect1>
+
+<sect1 id="kwallet-using">
+<title
+>استخدام محفظة ك</title>
+
+<para
+>إذا زرت &eg; متتبع الأخطاء في &kde; وأدخلت بيانات تسجيل الدخول لأول مرة، يظهر حوار يعرض تخزين كلمة السر في محفظة مشفرة:</para>
+
+<screenshot>
+<screeninfo
+>طلب حفظ معلومات تسجيل الدخول</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="save-login-information.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>طلب حفظ معلومات تسجيل الدخول</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>إذا أردت تخزين هذه المعلومات، اختر <guibutton
+>خزّن</guibutton
+> للمتابعة. في حال لم تنشئ محفظة حتى الآن، يطلب الحوار التالي الواجهة الخلفية للتشفير وينشئ محفظة اسمها kdewallet. </para>
+
+<para
+>في المرة التالية التي تزور فيها نفس الموقع مرة أخرى، يسترجع التطبيق بيانات تسجيل الدخول من محفظة مفتوحة ويملأ النماذج مسبقًا بهذه الأسرار.</para>
+
+<screenshot>
+<screeninfo
+>معلومات تسجيل دخول مملوءة مسبقًا</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="prefilled-forms.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>معلومات تسجيل دخول مملوءة مسبقًا</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>إذا كانت المحفظة مغلقة، يطلب التطبيق فتح المحفظة. أدخل كلمة سر المحفظة وانقر على الزر <guibutton
+>افتح</guibutton
+>.</para>
+
+<screenshot>
+<screeninfo
+>طلب فتح محفظة</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="openwallet-request.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>طلب فتح محفظة</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>يصل هذا التطبيق بالمحفظة، ويمكنه من قراءة بيانات تسجيل الدخول من المحفظة واستعادة معلومات تسجيل الدخول لهذا الموقع. بمجرد اتصال تطبيق بالمحفظة، يمكنه آليًا استعادة أي معلومات تسجيل دخول مخزنة في المحفظة.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="kwalletmanager5">
+<title
+>&kwalletmanager5;</title>
+
+<para
+>يخدم &kwalletmanager5; عددًا من الوظائف. أولًا يسمح لك برؤية ما إذا كانت أي محافظ مفتوحة، وما هي تلك المحافظ، وأي التطبيقات تستخدم كل محفظة. يمكنك فصل وصول تطبيق إلى محفظة من داخل &kwalletmanager5;.</para>
+
+<para
+>يمكنك أيضًا إدارة المحافظ المثبتة على النظام، وإنشاء وحذف المحافظ ومعالجة محتوياتها (تغيير المفاتيح، ...).</para>
+
+<para
+>يُطلق تطبيق &kwalletmanager5; بـ <menuchoice
+> <guimenu
+>التطبيقات</guimenu
+><guisubmenu
+>النظام</guisubmenu
+> <guimenuitem
+>أداة إدارة المحافظ</guimenuitem
+></menuchoice
+> من مشغل التطبيقات. بدلًا من ذلك ابدأ &krunner; بالاختصار <keycombo action="simul"
+>&Alt;<keycap
+>F2</keycap
+></keycombo
+> وأدخل <command
+>kwalletmanager5</command
+>.</para>
+
+<para
+>انقر مرة واحدة على أيقونة المحفظة في علبة النظام لعرض نافذة &kwalletmanager5;.</para>
+<para>
+<screenshot>
+<screeninfo
+>النافذة الرئيسة بمحفظة واحدة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwalletmanager.png"/>
+</imageobject>
+<textobject>
+<phrase
+>النافذة الرئيسة بمحفظة واحدة</phrase>
+</textobject>
+<caption
+><para
+>النافذة الرئيسة بمحفظة واحدة</para
+></caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<!--FIXME
+How to get assistant "First Use"? kwalletwizardpageintro.ui
+Last code change with http://websvn.kde.org/?view=revision&revision=882694
+see also https://bugs.kde.org/show_bug.cgi?id=290309
+-->
+<sect1 id="kwalletmanager-wallet-window">
+<title
+>نافذة المحفظة</title>
+
+<para
+>إذا كان لديك أكثر من محفظة، تُعرض جميع المحافظ المتاحة على اليسار.</para>
+
+<para
+>النقر على محفظة في نافذة &kwalletmanager5; يعرض حالة تلك المحفظة ومحتويات محفظة مفتوحة. قد تحتوي المحفظة على أي عدد من المجلدات، التي تسمح بتخزين معلومات كلمات السر. مبدئيًا تحتوي المحفظة على مجلدين اسميهما بيانات النماذج وكلمات السر. </para>
+
+<screenshot>
+<screeninfo
+>النافذة الرئيسة بمحفظتين</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-edit.png"/>
+</imageobject>
+<textobject>
+<phrase
+>النافذة الرئيسة بمحفظتين</phrase>
+</textobject>
+<caption
+><para
+>النافذة الرئيسة مع محفظتين</para
+></caption>
+</mediaobject>
+</screenshot>
+<para
+>استخدم <guibutton
+>فتح</guibutton
+> لعرض محتوى محفظة مغلقة. سيُطلب منك إدخال كلمة السر الرئيسة.</para>
+
+<sect2>
+<title
+>لسان المحتويات</title>
+
+<para
+>لسان <guilabel
+>المحتويات</guilabel
+> يحتوي على ثلاثة أقسام:</para>
+
+<itemizedlist>
+<listitem
+><para
+>سطر بحث لتصفية عناصر المحفظة الحالية</para
+></listitem>
+<listitem
+><para
+>عرض شجري للمجلدات الموجودة في المحفظة. انقر على أيقونات <guiicon
+>&gt;</guiicon
+> / <guiicon
+>v</guiicon
+> لتوسيع أو طي العرض الشجري.</para
+></listitem>
+<listitem
+><para
+>محتويات مدخل المجلد المحدد على الجانب الأيمن. افتراضيًا، تكون كلمة السر والقيمة مخفيتين. لعرضها وتحريرها، فعّل <guilabel
+>إظهار القيم</guilabel
+> أو انقر على زر <guilabel
+>إظهار المحتويات</guilabel
+>. </para
+></listitem>
+</itemizedlist>
+
+<para
+>يمكن إضافة المجلدات أو حذفها عبر قائمة السياق، وسيؤدي تحديد مجلد إلى تحديث قائمة مدخلات المجلد وعرض الملخص. سيؤدي تحديد مدخل مجلد إلى تحديث جزء محتويات المدخل، ويتيح لك تحرير ذلك المدخل.</para>
+
+<para
+>يمكن أيضًا إنشاء المدخلات أو إعادة تسميتها أو حذفها عبر قائمة السياق لمحتويات المجلد.</para>
+
+<para
+>يمكن سحب وإفلات جميع المجلدات والمدخلات إلى محافظ أو مجلدات أخرى على التوالي. يتيح هذا للمستخدم تجميع محفظة جديدة بسهولة لنقلها إلى بيئة أخرى. على سبيل المثال، يمكن إنشاء محفظة جديدة ونسخها على جهاز ذاكرة وميضية قابلة للإزالة. يمكن نقل كلمات السر المهمة إليها، لتكون متاحة في مواقع أخرى.</para>
+
+<sect3 id="kwallet-import-export">
+<title
+>استورد وصدّر</title>
+<para
+>إذا أردت نقل أسرارك إلى جهاز أو حاسوب آخر، استخدم الإجراءات في قائمة <guimenu
+>ملف</guimenu
+>. باستخدام <guimenuitem
+>تصدير مشفر</guimenuitem
+>، يمكن تصدير المحافظ إلى ملف أرشيف مشفر. لاستيراد ملف الأرشيف هذا باستخدام <guimenuitem
+>استيراد مشفر</guimenuitem
+>، يجب عليك توفير كلمة السر الرئيسة للمحفظة. </para>
+<para
+>بدلًا من ذلك، يمكن استخدام ملف <filename class="extension"
+>.xml</filename
+> لنقل محفظة. ضع في اعتبارك أن جميع الأسرار تُخزن كنص عادي في هذا الملف. </para>
+</sect3>
+
+<sect3 id="kwallet-adding-entries">
+<title
+>إضافة مدخلات يدويًا</title>
+<para
+>افتح قائمة السياق بالنقر بزر الفأرة الأيمن على <guilabel
+>خرائط</guilabel
+> أو <guilabel
+>كلمات سر</guilabel
+> في العرض الشجري <guilabel
+>مجلد</guilabel
+>. اختر <guimenuitem
+>جديد</guimenuitem
+> أو <guimenuitem
+>مجلد جديد</guimenuitem
+> واختر اسمًا للمدخل الجديد.</para>
+<para
+>في جزء محتويات المجلد، اختر <guilabel
+>مجلد جديد</guilabel
+> من قائمة السياق لـ <quote
+>بيانات النموذج</quote
+> أو <quote
+>كلمات السر</quote
+>. بالنسبة لكلمات السر، انقر على زر <guilabel
+>إظهار المحتويات</guilabel
+>، وأدخل كلمة السر الجديدة. بالنسبة للخرائط، يجب عليك إضافة <guilabel
+>مفتاح</guilabel
+> و<guilabel
+>قيمة</guilabel
+>. انقر على زر <guilabel
+>حفظ</guilabel
+> لتخزين المدخلات الجديدة في ملف المحفظة المشفر. </para>
+</sect3>
+</sect2>
+</sect1>
+
+</chapter>
+
+<chapter id="kwallet-kcontrol-module">
+<title
+>ضبط محفظة ك</title>
+
+<sect1 id="wallet-preferences">
+<title
+>خصائص المحفظة</title>
+
+<para
+>يحتوي محفظة ك على لوحة ضبط صغيرة مع عدة خيارات تتيح لك تخصيص محفظة ك حسب تفضيلاتك الشخصية. الإعدادات المبدئية لـ محفظة ك كافية لمعظم المستخدمين.</para>
+
+<para
+>حدد المربع لتفعيل أو تعطيل نظام محفظة &kde; بالكامل. إذا كان هذا المربع غير محدد، فسيُعطل محفظة ك بالكامل ولن يكون لأي من الخيارات الأخرى هنا أي تأثير، ولن يسجل محفظة ك أي معلومات، أو يعرض ملء النماذج لك.</para>
+
+<variablelist>
+<title
+><guilabel
+>أغلق المحفظة</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>الاغلاق عند عدم الاستخدام لمدة:</guilabel
+></term>
+<listitem>
+<para
+>أغلق المحفظة الحالية بعد فترة من عدم النشاط. إذا حددت هذا الخيار، فاضبط الفترة في المربع، المبدئي هو 10 دقائق. عند إغلاق المحفظة، تحتاج إلى كلمة السر للوصول إليها مرة أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>أغلق عندما تبدأ حافظة الشاشة</guilabel
+></term>
+<listitem>
+<para
+>أغلق المحفظة بمجرد بدء شاشة التوقف. عند إغلاق المحفظة، تحتاج إلى كلمة السر للوصول إليها مرة أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>أغلق عند توقف آخر تطبيق يستخدمها</guilabel
+></term>
+<listitem>
+<para
+>أغلق المحفظة بمجرد توقف التطبيقات التي تستخدمها. لاحظ أن محافظك ستُغلق فقط عندما تتوقف جميع التطبيقات التي تستخدمها. عند إغلاق المحفظة، تحتاج إلى كلمة السر للوصول إليها مرة أخرى.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>اختيار المحفظة آليّا</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>حدد محفظة لتصبح المحفظة الافتراضية:</guilabel
+></term>
+<listitem>
+<para
+>اختر المحفظة التي تريد استخدامها كمحفظة مبدئية. ضع في اعتبارك أن المحفظة المسماة <guilabel
+>kdewallet</guilabel
+> فقط هي التي ستُفتح آليًا عند تسجيل الدخول، إذا كانت هذه المحفظة وكلمة سر تسجيل الدخول متطابقتين. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>محفظة مختلفه لكلمات السر المحلية:</guilabel
+></term>
+<listitem>
+<para
+>إذا كان محددًا، فاختر محفظة مختلفة لكلمات السر المحلية.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+><guilabel
+>مدير المحفظة</guilabel
+></title>
+<varlistentry>
+<term
+><guilabel
+>أظهر المدير في صينية النظام</guilabel
+></term>
+<listitem>
+<para
+>فعّل مدير المحفظة ليكون له أيقونة في علبة النظام.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>اخف أيقونة صينية النظام عند إغلاق آخر محفظة</guilabel
+></term>
+<listitem>
+<para
+>عند عدم وجود محفظة قيد الاستخدام، أزل أيقونة المحفظة من علبة النظام.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>أخيرًا، يوجد زر معنون <guibutton
+>تشغيل مدير المحافظ</guibutton
+>، والذي يفعل ذلك تحديدًا.</para>
+<para
+>هذا الزر مرئي فقط إذا لم يكن &kwalletmanager5; قيد التشغيل</para>
+</sect1>
+
+<sect1 id="wallet-access-control">
+<title
+>التّحكّم بالنّفاذ</title>
+
+<para
+>يوجد خيار واحد فقط في هذه الصفحة:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>إظهار رسالة عند دخول تطبيق لمحفظة</guilabel
+></term>
+<listitem>
+<para
+>نبّهك عندما يكتسب تطبيق ما حق الوصول إلى محفظة.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>بعد ذلك يوجد عرض شجري لضوابط الوصول إلى محافظك.</para>
+
+<screenshot>
+<screeninfo
+>التّحكّم بالنّفاذ</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kwallet-access-control.png"/>
+</imageobject>
+<textobject>
+<phrase
+>التّحكّم بالنّفاذ</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>انقر بزر الفأرة الأيسر (&LMB;) على رمز <guiicon
+>&gt;</guiicon
+> بجانب اسم محفظة لتوسيع الشجرة. سترى اسم كل تطبيق طلب الوصول إلى المحفظة، والسياسة التي حددتها له. لا يمكنك تعديل السياسات هنا أو إضافتها، لكن يمكن حذف مدخلة بالنقر بزر الفأرة الأيمن (&RMB;) عليها واختيار <guimenuitem
+>حذف</guimenuitem
+> من القائمة السياقية التي تظهر، أو ببساطة بتحديدها والضغط على المفتاح <keysym
+>Del</keysym
+>.</para>
+
+<para
+>التطبيق الذي سُمح له بالوصول إلى محفظة يُمنح حق الوصول إلى جميع كلمات السر المخزنة داخلها.</para>
+
+<para
+>إذا ضبطت تطبيقًا خطأً على عدم استخدام محفظة ك، فاحذف سياسة هذا التطبيق هنا.</para>
+<!-- FIXME difference to Revoke Authorization in kwallermanager?-->
+<para
+>عند بدء التشغيل التالي لهذا التطبيق، يمكنك تعريف سياسة جديدة للوصول إلى المحفظة. </para>
+<screenshot>
+<screeninfo
+>طلب وصول لفتح محفظة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="application-request-to-open-wallet.png"/>
+</imageobject>
+<textobject>
+<phrase
+>طلب وصول لفتح محفظة</phrase>
+</textobject>
+<caption
+><para
+>تطبيق يطلب الوصول إلى محفظة</para
+></caption>
+</mediaobject>
+</screenshot>
+
+</sect1>
+
+</chapter>
+
+<chapter id="advanced-features">
+<title
+>الميزات المتقدمة</title>
+
+<para
+>يمكن سحب المحافظ من نافذة &kwalletmanager5;. يتيح لك ذلك سحب المحفظة إلى نافذة مستعرض ملفات، حيث يمكنك اختيار نسخ المحفظة أو نقلها أو ربطها، حسب الرغبة.</para>
+
+<para
+>قد تستخدم هذا لحفظ محفظة على وسائط محمولة، مثل سلسلة مفاتيح USB، لتتمكن من أخذ كلمات سرك معك إلى العمل أو في عطلة، مع سهولة الوصول إلى المواقع المهمة.</para>
+
+</chapter>
+
+<chapter id="credits-and-license">
+<title
+>الحقوق والترخيص</title>
+
+<para
+>محفظة ك &copy; 2003 &George.Staikos;</para>
+<para
+>الوثائق &copy; &Lauri.Watts; و &George.Staikos;</para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->
