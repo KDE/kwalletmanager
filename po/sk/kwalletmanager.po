@@ -656,7 +656,7 @@ msgstr "Skryť &obsah"
 #, kde-format
 msgctxt "@action:button Copy the password to the clipboard"
 msgid "Co&py"
-msgstr ""
+msgstr "&Kopírovať"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _binaryViewShow)
 #. i18n: ectx: property (text), widget (QToolButton, _showContents)
