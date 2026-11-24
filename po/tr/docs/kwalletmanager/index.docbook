@@ -89,9 +89,9 @@
 >Cüzdan bir şifre deposudur. Bir cüzdanın tek bir ana parola ile güvence altına alınması genellikle yeterlidir; ancak büyük parola koleksiyonunuzu &kwalletmanager5; kullanarak cüzdanlara göre düzenleyebilirsiniz.</para>
 
 <para
->Öntanımlı olarak, parolalarınızı depolamak için <guilabel
+>Varsayılan olarak, parolalarınızı depolamak için <guilabel
 >kdewallet</guilabel
-> adlı bir cüzdan kullanılacaktır. Bu cüzdan, oturum açma parolanız tarafından güvence altına alınmıştır ve kwallet_pam yüklenmiş ve doğru şekilde yapılandırılmışsa oturum açma sırasında kendiliğinden açılacaktır. Belirli dağıtımlarda (örn. Archlinux) kwallet_pam öntanımlı olarak kurulu değildir</para>
+> adlı bir cüzdan kullanılacaktır. Bu cüzdan, oturum açma parolanız tarafından güvence altına alınmıştır ve kwallet_pam yüklenmiş ve doğru şekilde yapılandırılmışsa oturum açma sırasında kendiliğinden açılacaktır. Belirli dağıtımlarda (örn. Archlinux) kwallet_pam varsayılan olarak kurulu değildir</para>
 
 
 <para
@@ -259,7 +259,7 @@
 >KDE Cüzdan</guimenuitem
 ></menuchoice
 > yolunu izleyin ve <guilabel
->Öntanımlı olarak kullanılacak cüzdanı seç</guilabel
+>Varsayılan olarak kullanılacak cüzdanı seç</guilabel
 > çoklu kutusundan yeni oluşturulan GPG tabanlı cüzdanı seçin. </para
 ></listitem>
 </itemizedlist>
@@ -281,13 +281,13 @@
 
 <tip>
 <para
->&kwallet5; birden çok cüzdanı destekler, bu nedenle en güvenli işlem için yerel parolalar için bir cüzdan, ağ parolaları ve form verileri için başka bir cüzdan kullanmaktır. Bu davranışı &kwallet5; &systemsettings; modülünden yapılandırabilirsiniz; ancak öntanımlı ayar, her şeyi <guilabel
+>&kwallet5; birden çok cüzdanı destekler, bu nedenle en güvenli işlem için yerel parolalar için bir cüzdan, ağ parolaları ve form verileri için başka bir cüzdan kullanmaktır. Bu davranışı &kwallet5; &systemsettings; modülünden yapılandırabilirsiniz; ancak varsayılan ayar, her şeyi <guilabel
 >kdewallet</guilabel
 > adlı tek bir cüzdanda saklamaktır.</para>
 </tip>
 
 <para
->Bir cüzdan öntanımlı olarak kapalıdır, bu da onu açmak için bir parola sağlamanız gerektiği anlamına gelir. Cüzdan açıldıktan sonra içerik herhangi bir kullanıcı işlemi tarafından okunabilir, dolayısıyla bu bir güvenlik sorunu olabilir.</para>
+>Bir cüzdan varsayılan olarak kapalıdır, bu da onu açmak için bir parola sağlamanız gerektiği anlamına gelir. Cüzdan açıldıktan sonra içerik herhangi bir kullanıcı işlemi tarafından okunabilir, dolayısıyla bu bir güvenlik sorunu olabilir.</para>
 </sect1>
 
 <sect1 id="kwallet-using">
@@ -418,7 +418,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Birden fazla cüzdanınız varsa tüm kullanılabilir cüzdanlar solda gösterilir.</para>
 
 <para
->&kwalletmanager5; içinde bir cüzdana tıklamak penceresi o cüzdanın durumunu ve açılmış bir cüzdanın içeriğini gösterecektir. Bir cüzdan, şifre bilgilerinin saklanmasına izin veren herhangi bir sayıda klasör içerebilir. Öntanımlı olarak bir cüzdan, Form Verileri ve Parolalar adlı klasörler içerecektir. </para>
+>&kwalletmanager5; içinde bir cüzdana tıklamak penceresi o cüzdanın durumunu ve açılmış bir cüzdanın içeriğini gösterecektir. Bir cüzdan, şifre bilgilerinin saklanmasına izin veren herhangi bir sayıda klasör içerebilir. Varsayılan olarak bir cüzdan, Form Verileri ve Parolalar adlı klasörler içerecektir. </para>
 
 <screenshot>
 <screeninfo
@@ -466,7 +466,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></listitem>
 <listitem
 ><para
->Seçilen klasör girdisinin içeriği sağ taraftadır. Öntanımlı olarak parola ve değeri gizlidir. Bunları görüntülemek ve düzenlemek için <guilabel
+>Seçilen klasör girdisinin içeriği sağ taraftadır. Varsayılan olarak parola ve değeri gizlidir. Bunları görüntülemek ve düzenlemek için <guilabel
 >Değerleri göster</guilabel
 > seçeneğini etkinleştirin veya <guilabel
 >İçeriği Göster</guilabel
@@ -546,7 +546,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 >Cüzdan Tercihleri</title>
 
 <para
->&kwallet5; &kwallet5;’i kişisel tercihlerinize göre ayarlamanıza izin veren birkaç seçeneğe sahip küçük bir yapılandırma paneli içerir. &kwallet5; öntanımlı ayarları çoğu kullanıcı için yeterlidir.</para>
+>&kwallet5; &kwallet5;’i kişisel tercihlerinize göre ayarlamanıza izin veren birkaç seçeneğe sahip küçük bir yapılandırma paneli içerir. &kwallet5; varsayılan ayarları çoğu kullanıcı için yeterlidir.</para>
 
 <para
 >&kde; cüzdan alt sistemini tamamen etkinleştirmek veya devre dışı bırakmak için kutuyu işaretleyin. Bu kutunun işareti kaldırılırs, &kwallet5; tümüyle devre dışı kalır ve burada diğer seçeneklerden hiçbirinin etkisi yoktur; bu durumda &kwallet5; herhangi bir bilgiyi kaydetmez veya sizin için formları doldurmayı teklif etmez.</para>
@@ -563,7 +563,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 ></term>
 <listitem>
 <para
->Bir süre işlem yapılmadığında geçerli cüzdanı kapat. Bu seçeneği işaretlerseniz kutuda süreyi ayarlayın, öntanımlı olarak 10 dakikadır. Bir cüzdan kapatıldığında, ona yeniden erişmek için parola gerekir.</para>
+>Bir süre işlem yapılmadığında geçerli cüzdanı kapat. Bu seçeneği işaretlerseniz kutuda süreyi ayarlayın, varsayılan olarak 10 dakikadır. Bir cüzdan kapatıldığında, ona yeniden erişmek için parola gerekir.</para>
 </listitem>
 </varlistentry>
 
@@ -598,11 +598,11 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 <varlistentry>
 <term
 ><guilabel
->Öntanımlı olarak kullanılacak cüzdanı seç:</guilabel
+>Varsayılan olarak kullanılacak cüzdanı seç:</guilabel
 ></term>
 <listitem>
 <para
->Hangi cüzdanı öntanımlı cüzdan olarak kullanmak istediğinizi seçin. Yalnızca <guilabel
+>Hangi cüzdanı varsayılan cüzdan olarak kullanmak istediğinizi seçin. Yalnızca <guilabel
 >kdewallet</guilabel
 > adlı cüzdanın oturum açma sırasında bu cüzdan ve oturum açma şifreniz aynı ise.kendiliğinden açılacağını unutmayın. </para>
 </listitem>
@@ -677,7 +677,7 @@ see also https://bugs.kde.org/show_bug.cgi?id=290309
 </variablelist>
 
 <para
->Ardından, cüzdanlarınız için erişim denetimlerinin ağaç biçemli görünümü vardır.</para>
+>Ardından, cüzdanlarınız için erişim denetimlerinin ağaç stilli görünümü vardır.</para>
 
 <screenshot>
 <screeninfo
